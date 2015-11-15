@@ -45,9 +45,13 @@ download.file(sedlac_link, "data-raw/sedlac.xls")
 sedlac_pc <- format_sedlac(path = "data-raw/sedlac.xls",
                            sheet = "intervals pci", 
                            link = sedlac_link,
-                           es = "hpc") 
+                           es = "hhpc") 
 
-sedlac_ei
+sedlac_ei <- format_sedlac(path = "data-raw/sedlac.xls",
+                          sheet = "intervals ei", 
+                          link = sedlac_link,
+                          es = "hh eq, ad eq")
+
 sedlac_hh #sheet gini1, col H; no s.e.s
 
 # Eurostat (no flags for series breaks)
