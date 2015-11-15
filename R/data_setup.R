@@ -4,18 +4,51 @@ library(readxl)
 library(reshape2)
 library(eurostat)
 library(tidyr)
+library(stringr)
+library(magrittr)
 
 ###NEITHER OF THESE IS DONE
 
-# Sedlac
-download.file("http://sedlac.econo.unlp.edu.ar/download.php?file=archivos_estadistica/inequality_LAC_2015-06.xls", "data-raw/sedlac.xls")
-sedlac_pc <- read_excel("data-raw/sedlac.xls", sheet = "intervals pci", skip = 8)
-countries_sedlac <- c("Argentina", "Bolivia", "Brazil", "Chile", "Colombia",
-                      "Costa Rica", "Dominican Rep.", "Ecuador", "El Salvador",
-                      "Guatemala", "Honduras", "Mexico", "Nicaragua", "Panama",
-                      "Paraguay", "Peru", "Uruguay", "Venezuela", "The Caribbean",
-                      "Guyana", "Haiti", "Jamaica", "Suriname")
+# Socio-Economic Database for Latin America and the Caribbean (SEDLAC)
+format_sedlac <- function(path, sheet, link, es) {
+  x <- read_excel(path = path, sheet = sheet, skip = 8)[1:3]
+  names(x) <- c("heading", "gini", "se")
+  x %<>% filter(!is.na(heading))
+  countries_sedlac <- "Argentina|Bolivia|Brazil|Chile|Colombia|Costa|Dominican|Ecuador|El Salvador|Guatemala|Honduras|Mexico|Nicaragua|Panama|Paraguay|Peru|Uruguay|Venezuela|Guyana|Haiti|Jamaica|Suriname|Caribbean"
+  x$h_co <- str_detect(x$heading, countries_sedlac)
+  x$country <- ifelse(x$h_co, x$heading, NA)
+  x$country <- c(NA, zoo::na.locf(x$country))
+  
+  x$year <- ifelse(str_detect(x$heading, ".*(\\d{4}).*"),
+                           str_replace(x$heading, "(\\d{4}).*", "\\1"), NA)
+  
+  x$series <- ifelse(!x$h_co & is.na(x$year), x$heading, NA)
+  s <- do.call(rbind, by(x, x$country, zoo::na.locf))
+  x$series <- c(NA, s$series)
+  
+  x %<>% filter(!is.na(gini)) %>% transmute(country = country,
+                                         year = year,
+                                         gini = gini * 100,
+                                         se = se * 100,
+                                         equiv_scale = es,
+                                         welfare_def = "Monetary Income, Disposable",
+                                         series = series,
+                                         source1 = "SEDLAC",
+                                         page = sheet, 
+                                         link = link)
+  x
+}
 
+sedlac_link <- "http://sedlac.econo.unlp.edu.ar/download.php?file=archivos_estadistica/inequality_LAC_2015-06.xls"
+download.file(sedlac_link, "data-raw/sedlac.xls")
+
+sedlac_pc <- format_sedlac(path = "data-raw/sedlac.xls",
+                           sheet = "intervals pci", 
+                           link = sedlac_link,
+                           es = "hpc") 
+
+sedlac_ei
+sedlac_hh #sheet gini1, col H; no s.e.s
 
 # Eurostat (no flags for series breaks)
 eurostat <- get_eurostat("ilc_di12", time_format = "num") %>% label_eurostat()
