@@ -10,11 +10,14 @@ library(magrittr)
 ###NEITHER OF THESE IS DONE
 
 # Socio-Economic Database for Latin America and the Caribbean (SEDLAC)
-format_sedlac <- function(path, sheet, link, es) {
-  x <- read_excel(path = path, sheet = sheet, skip = 8)[1:3]
+format_sedlac <- function(df, sheet, link, es) {
+  x <- df
+  if(ncol(x)==2) {
+    x$se <- NA
+  }
   names(x) <- c("heading", "gini", "se")
   x %<>% filter(!is.na(heading))
-  countries_sedlac <- "Argentina|Bolivia|Brazil|Chile|Colombia|Costa|Dominican|Ecuador|El Salvador|Guatemala|Honduras|Mexico|Nicaragua|Panama|Paraguay|Peru|Uruguay|Venezuela|Guyana|Haiti|Jamaica|Suriname|Caribbean"
+  countries_sedlac <- "Argentina|Bolivia|Brazil|Chile|Colombia|Costa|Dominican|Ecuador|El Salvador|Guatemala|Honduras|Mexico|Nicaragua|Panama|Paraguay|Peru|Uruguay|Venezuela|Caribbean|Belice|Guyana|Haiti|Jamaica|Suriname"
   x$h_co <- str_detect(x$heading, countries_sedlac)
   x$country <- ifelse(x$h_co, x$heading, NA)
   x$country <- c(NA, zoo::na.locf(x$country))
@@ -42,17 +45,26 @@ format_sedlac <- function(path, sheet, link, es) {
 sedlac_link <- "http://sedlac.econo.unlp.edu.ar/download.php?file=archivos_estadistica/inequality_LAC_2015-06.xls"
 download.file(sedlac_link, "data-raw/sedlac.xls")
 
-sedlac_pc <- format_sedlac(path = "data-raw/sedlac.xls",
-                           sheet = "intervals pci", 
-                           link = sedlac_link,
-                           es = "hhpc") 
+sedlac_pc <- read_excel(path = "data-raw/sedlac.xls", 
+                        sheet = "intervals pci",
+                        skip = 8)[1:3] %>%
+  format_sedlac(sheet = "intervals pci",
+                link = sedlac_link,
+                es = "hhpc") 
 
-sedlac_ei <- format_sedlac(path = "data-raw/sedlac.xls",
-                          sheet = "intervals ei", 
-                          link = sedlac_link,
-                          es = "hh eq, ad eq")
+sedlac_ei <- read_excel(path = "data-raw/sedlac.xls",
+                        sheet = "intervals ei",
+                        skip = 8)[1:3] %>%
+  format_sedlac(sheet = "intervals ei",
+                link = sedlac_link,
+                es = "hh eq, ad eq")
 
-sedlac_hh #sheet gini1, col H; no s.e.s
+sedlac_hh <- read_excel(path = "data-raw/sedlac.xls",
+                        sheet = "gini1",
+                        skip = 7)[c(1,8)] %>%
+  format_sedlac(sheet = "gini1",
+                link = sedlac_link,
+                es = "hh")
 
 # Eurostat (no flags for series breaks)
 eurostat <- get_eurostat("ilc_di12", time_format = "num") %>% label_eurostat()
