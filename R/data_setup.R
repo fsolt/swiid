@@ -1,13 +1,12 @@
 library(dplyr)
 library(readr)
 library(readxl)
-library(reshape2)
 library(eurostat)
 library(tidyr)
 library(stringr)
 library(magrittr)
 
-###NEITHER OF THESE IS DONE
+# LIS
 
 # Socio-Economic Database for Latin America and the Caribbean (SEDLAC)
 format_sedlac <- function(df, sheet, link, es) {
@@ -66,5 +65,20 @@ sedlac_hh <- read_excel(path = "data-raw/sedlac.xls",
                 link = sedlac_link,
                 es = "hh")
 
-# Eurostat (no flags for series breaks)
+sedlac <- rbind(sedlac_ei, sedlac_hh, sedlac_pc)
+sedlac$country <- car::recode(sedlac$country, 
+                              "'Dominican Rep. ' = 'Dominican Republic';
+                              'Belice' = 'Belize'")
+
+# CEPALStat
+# http://interwp.cepal.org/sisgen/ConsultaIntegrada.asp?idIndicador=250&idioma=e
+# Customization: countries only, all years, national only; area and países in rows, years in columns; resave as .xlsx
+
+
+# OECD Income Distribution Database
+# http://stats.oecd.org > Data by Theme: search "income distribution"; Customize: all countries, ginis only, total pop only, 1974 to latest
+
+
+# Eurostat 
+# but this includes no flags for series breaks, so isn't done
 eurostat <- get_eurostat("ilc_di12", time_format = "num") %>% label_eurostat()
