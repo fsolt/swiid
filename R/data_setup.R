@@ -80,5 +80,11 @@ sedlac$country <- car::recode(sedlac$country,
 
 
 # Eurostat 
-# but this includes no flags for series breaks, so isn't done
-eurostat <- get_eurostat("ilc_di12", time_format = "num") %>% label_eurostat()
+eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = TRUE) %>% 
+  label_eurostat(code = "geo") %>% 
+  left_join(get_eurostat("ilc_di12", time_format = "num", keepFlags = TRUE) %>%
+              rename(geo_code = geo), by = c("geo_code", "time", "values")) %>% 
+  transmute(country = as.character(geo),
+         year = time,
+         gini = values,
+         break_yr = (flags=="b"))
