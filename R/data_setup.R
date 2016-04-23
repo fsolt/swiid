@@ -2,6 +2,7 @@ library(dplyr)
 library(readr)
 library(readxl)
 library(eurostat)
+library(OECD)
 library(tidyr)
 library(stringr)
 library(magrittr)
@@ -77,9 +78,11 @@ sedlac$country <- car::recode(sedlac$country,
 
 # OECD Income Distribution Database
 # http://stats.oecd.org > Data by Theme: search "income distribution"; Customize: all countries, ginis only, total pop only, 1974 to latest
+oecd <- get_dataset("PATS_REGION",
+                    filter = "PCT_A.INVENTORS.BEL+BE10.TOTAL+BIOTECH",
+                    pre_formatted = TRUE)
 
-
-# Eurostat 
+# Eurostat (break years in break_yr, but individual series not identified yet)
 eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = TRUE) %>% 
   label_eurostat(code = "geo") %>% 
   left_join(get_eurostat("ilc_di12", time_format = "num", keepFlags = TRUE) %>%
