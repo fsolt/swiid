@@ -78,16 +78,20 @@ sedlac$country <- car::recode(sedlac$country,
 
 # OECD Income Distribution Database
 # http://stats.oecd.org > Data by Theme: search "income distribution"; Customize: all countries, ginis only, total pop only, 1974 to latest
+# use countrycode::countrycode
 oecd_link <- "http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT.METH2012+METH2011/all?startTime=1974&endTime=2014"
 oecd <- oecd_link %>% readSDMX() %>% as.data.frame()
 
 
 # Eurostat (break years in break_yr, but individual series not identified yet)
-eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = TRUE) %>% 
-  label_eurostat(code = "geo") %>% 
+eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = F) %>% 
+  label_eurostat(code = "geo")  %>% 
   left_join(get_eurostat("ilc_di12", time_format = "num", keepFlags = TRUE) %>%
               rename(geo_code = geo), by = c("geo_code", "time", "values")) %>% 
-  transmute(country = as.character(geo),
+  transmute(country = countrycode(as.character(geo), "country.name", "country.name"),
          year = time,
          gini = values,
-         break_yr = (flags=="b"))
+         break_yr = (flags=="b"),
+         geo = geo) %>% 
+  mutate(country = ifelse(is.na(country), as.character(geo), country)) %>% 
+  select(-geo)
