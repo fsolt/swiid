@@ -34,7 +34,8 @@ format_sedlac <- function(df, sheet, link, es) {
                                          gini = gini * 100,
                                          se = se * 100,
                                          equiv_scale = es,
-                                         welfare_def = "Monetary Income, Disposable",
+                                         welfare_def = "disposable",
+                                         monetary = TRUE,
                                          series = series,
                                          source1 = "SEDLAC",
                                          page = sheet, 
@@ -57,7 +58,7 @@ sedlac_ei <- read_excel(path = "data-raw/sedlac.xls",
                         skip = 8)[1:3] %>%
   format_sedlac(sheet = "intervals ei",
                 link = sedlac_link,
-                es = "hh eq, ad eq")
+                es = "adeq")
 
 sedlac_hh <- read_excel(path = "data-raw/sedlac.xls",
                         sheet = "gini1",
@@ -78,11 +79,34 @@ sedlac$country <- car::recode(sedlac$country,
 
 # OECD Income Distribution Database
 # http://stats.oecd.org > Data by Theme: search "income distribution"; Customize: all countries, ginis only, total pop only, 1974 to latest
-# use countrycode::countrycode
-oecd_link <- "http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT.METH2012+METH2011/all?startTime=1974&endTime=2014"
-oecd <- oecd_link %>% readSDMX() %>% as.data.frame()
+oecd_link <- "http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all"
+oecd0 <- oecd_link %>% readSDMX() %>% as.data.frame() %>% 
+  mutate(country = countrycode(LOCATION, "iso3c", "country.name"),
+         year = as.numeric(obsTime),
+         gini = obsValue * 100,
+         equiv_scale = "sqrt",   
+         welfare_def = MEASURE,
+         monetary = FALSE,
+         series = tolower(paste(DEFINITION, "definition,", 
+                        str_replace(METHODO, "METH", ""), "method")),
+         source1 = "OECD",
+         page = NA, 
+         link = oecd_link)
 
-
+oecd_se <- oecd0 %>% filter(MEASURE=="STDG") %>% 
+  select(country:series) %>% 
+  mutate(gini_se = gini,
+         welfare_def = "GINI") %>% 
+  select(-gini)
+oecd <- oecd0 %>% filter(MEASURE!="STDG") %>% 
+  select(country:series) %>% 
+  left_join(oecd_se, by = c("country", "year", "equiv_scale", "welfare_def", "monetary", "series"))
+oecd$welfare_def <- car::recode(oecd$welfare_def, 
+              "'GINI' = 'disposable';
+              'GINIB' = 'market';
+              'GINIG' = 'gross'")
+rm(oecd0, oecd_se)         
+         
 # Eurostat (break years in break_yr, but individual series not identified yet)
 eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = F) %>% 
   label_eurostat(code = "geo")  %>% 
@@ -95,3 +119,13 @@ eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = F) %>%
          geo = geo) %>% 
   mutate(country = ifelse(is.na(country), as.character(geo), country)) %>% 
   select(-geo)
+
+,
+equiv_scale = "sqrt",   
+welfare_def = MEASURE,
+monetary = FALSE,
+series = tolower(paste(DEFINITION, "definition,", 
+                       str_replace(METHODO, "METH", ""), "method")),
+source1 = "OECD",
+page = NA, 
+link = oecd_link
