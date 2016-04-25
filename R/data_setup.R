@@ -108,6 +108,7 @@ oecd$welfare_def <- car::recode(oecd$welfare_def,
 rm(oecd0, oecd_se)         
          
 # Eurostat (break years in break_yr, but individual series not identified yet)
+# http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en; Customization: all years
 eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = F) %>% 
   label_eurostat(code = "geo")  %>% 
   left_join(get_eurostat("ilc_di12", time_format = "num", keepFlags = TRUE) %>%
@@ -115,17 +116,14 @@ eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = F) %>%
   transmute(country = countrycode(as.character(geo), "country.name", "country.name"),
          year = time,
          gini = values,
+         equiv_scale = "OECDmod",   
+         welfare_def = "disposable",
+         monetary = TRUE,
          break_yr = (flags=="b"),
+         source1 = "Eurostat",
+         page = NA,
+         link = "http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en",
          geo = geo) %>% 
   mutate(country = ifelse(is.na(country), as.character(geo), country)) %>% 
   select(-geo)
 
-,
-equiv_scale = "sqrt",   
-welfare_def = MEASURE,
-monetary = FALSE,
-series = tolower(paste(DEFINITION, "definition,", 
-                       str_replace(METHODO, "METH", ""), "method")),
-source1 = "OECD",
-page = NA, 
-link = oecd_link
