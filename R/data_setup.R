@@ -6,6 +6,7 @@ library(rsdmx)
 library(tidyr)
 library(stringr)
 library(magrittr)
+library(xml2)
 
 # LIS
 
@@ -74,7 +75,17 @@ sedlac$country <- car::recode(sedlac$country,
 
 # CEPALStat
 # http://interwp.cepal.org/sisgen/ConsultaIntegrada.asp?idIndicador=250&idioma=e
-# Customization: countries only, all years, national only; area and países in rows, years in columns; resave as .xlsx
+# Customization: countries only, all years, national only; area in heading, países in rows, years in columns; download as .xls
+cepal_link <- "http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250"
+cepal0 <- cepal_link %>% read_xml() 
+cepal_raw <- cepal0 %>% xml_find_all("//dato") %>% xml_attrs()
+cepal_labels <- cepal0 %>% xml_find_all("//des") %>% xml_attrs()
+
+#named vectors to dataframe?
+cepal_vals <- cepal_raw
+
+
+
 
 
 # OECD Income Distribution Database
