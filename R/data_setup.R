@@ -34,7 +34,7 @@ format_sedlac <- function(df, sheet, link, es) {
                                          gini = gini * 100,
                                          se = se * 100,
                                          equiv_scale = es,
-                                         welfare_def = "disposable",
+                                         welfare_def = "net",
                                          monetary = TRUE,
                                          series = series,
                                          source1 = "SEDLAC",
@@ -102,7 +102,7 @@ oecd <- oecd0 %>% filter(MEASURE!="STDG") %>%
   select(country:series) %>% 
   left_join(oecd_se, by = c("country", "year", "equiv_scale", "welfare_def", "monetary", "series"))
 oecd$welfare_def <- car::recode(oecd$welfare_def, 
-              "'GINI' = 'disposable';
+              "'GINI' = 'net';
               'GINIB' = 'market';
               'GINIG' = 'gross'")
 rm(oecd0, oecd_se)         
@@ -117,13 +117,17 @@ eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = F) %>%
          year = time,
          gini = values,
          equiv_scale = "OECDmod",   
-         welfare_def = "disposable",
+         welfare_def = "net",
          monetary = TRUE,
-         break_yr = (flags=="b"),
+         break_yr = ifelse(is.na(flags) | flags!="b", 0, 1),
          source1 = "Eurostat",
          page = NA,
          link = "http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en",
          geo = geo) %>% 
   mutate(country = ifelse(is.na(country), as.character(geo), country)) %>% 
-  select(-geo)
-
+  select(-geo) %>% 
+  filter(!is.na(gini)) %>% 
+  group_by(country) %>% 
+  arrange(country, year) %>% 
+  mutate(series = paste(country, "series", cumsum(break_yr) + 1)) %>%  # No word from Eurostat which obs cross-nationally comparable
+  ungroup()
