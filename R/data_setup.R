@@ -6,11 +6,17 @@ library(rsdmx)
 library(tidyr)
 library(stringr)
 library(magrittr)
+library(countrycode)
 library(xml2)
+devtools::source_gist(4676064) # as.data.frame.list for CEPALStat
+
+
+# check if WB gini info is now available and library(wbstats) or library(WDI)
 
 # LIS
 
 # Socio-Economic Database for Latin America and the Caribbean (SEDLAC)
+# still needs series var
 format_sedlac <- function(df, sheet, link, es) {
   x <- df
   if(ncol(x)==2) {
@@ -73,19 +79,50 @@ sedlac$country <- car::recode(sedlac$country,
                               "'Dominican Rep. ' = 'Dominican Republic';
                               'Belice' = 'Belize'")
 
+rm(sedlac_ei, sedlac_hh, sedlac_pc)
+
 # CEPALStat
 # http://interwp.cepal.org/sisgen/ConsultaIntegrada.asp?idIndicador=250&idioma=e
-# Customization: countries only, all years, national only; area in heading, países in rows, years in columns; download as .xls
+# consider informative series var
 cepal_link <- "http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250"
 cepal0 <- cepal_link %>% read_xml() 
-cepal_raw <- cepal0 %>% xml_find_all("//dato") %>% xml_attrs()
-cepal_labels <- cepal0 %>% xml_find_all("//des") %>% xml_attrs()
+cepal_raw <- cepal0 %>% xml_find_all("//dato") %>% xml_attrs() %>% as.data.frame()
 
-#named vectors to dataframe?
-cepal_vals <- cepal_raw
+cepal_labels <- cepal0 %>% xml_find_all("//des") %>% 
+  xml_attrs() %>% 
+  as.data.frame() %>% 
+  select(one_of(c("name", "id")))
 
+cepal_notes <- cepal0 %>% xml_find_all("//nota") %>% 
+  xml_attrs() %>% 
+  as.data.frame()
 
+cepal <- left_join(cepal_raw, cepal_labels, by = c("dim_208" = "id")) %>%
+  mutate(country = countrycode(as.character(name), "country.name", "country.name") %>% 
+           str_replace(",.*", "")) %>% 
+  filter(!is.na(country)) %>%
+  select(-name) %>% 
+  left_join(cepal_labels, by = c("dim_29117" = "id")) %>%
+  mutate(year = as.numeric(levels(name))[name]) %>% 
+  select(-name) %>% 
+  left_join(cepal_labels, by = c("dim_326" = "id")) %>%
+  mutate(area = as.character(name)) %>%
+  filter(area == "National" | (area == "Urban" & (country == "Argentina" | country == "Uruguay"))) %>% 
+  select(-name) %>% 
+  left_join(cepal_notes, by = c("ids_notas" = "id")) %>%
+  group_by(country, area) %>% 
+  transmute(year = year,
+            gini = as.numeric(as.character(valor)) * 100,
+            equiv_scale = "hpc",
+            welfare_def = "net",
+            monetary = TRUE,
+            notes = ifelse(is.na(descripcion), "", as.character(descripcion)),
+            series = paste("CEPAL", country, "series", as.numeric(factor(notes, levels = unique(notes)))),
+            source1 = "CEPALStat",
+            link = cepal_link) %>% 
+  ungroup()
 
+rm(cepal0, cepal_raw, cepal_labels, cepal_notes)
 
 
 # OECD Income Distribution Database
@@ -98,8 +135,8 @@ oecd0 <- oecd_link %>% readSDMX() %>% as.data.frame() %>%
          equiv_scale = "sqrt",   
          welfare_def = MEASURE,
          monetary = FALSE,
-         series = tolower(paste(DEFINITION, "definition,", 
-                        str_replace(METHODO, "METH", ""), "method")),
+         series = paste("OECD", tolower(DEFINITION), "definition,", 
+                        tolower(str_replace(METHODO, "METH", "")), "method"),
          source1 = "OECD",
          page = NA, 
          link = oecd_link)
@@ -109,6 +146,7 @@ oecd_se <- oecd0 %>% filter(MEASURE=="STDG") %>%
   mutate(gini_se = gini,
          welfare_def = "GINI") %>% 
   select(-gini)
+
 oecd <- oecd0 %>% filter(MEASURE!="STDG") %>% 
   select(country:series) %>% 
   left_join(oecd_se, by = c("country", "year", "equiv_scale", "welfare_def", "monetary", "series"))
@@ -116,9 +154,11 @@ oecd$welfare_def <- car::recode(oecd$welfare_def,
               "'GINI' = 'net';
               'GINIB' = 'market';
               'GINIG' = 'gross'")
+
 rm(oecd0, oecd_se)         
-         
-# Eurostat (break years in break_yr, but individual series not identified yet)
+
+       
+# Eurostat
 # http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en; Customization: all years
 eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = F) %>% 
   label_eurostat(code = "geo")  %>% 
@@ -140,5 +180,5 @@ eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = F) %>%
   filter(!is.na(gini)) %>% 
   group_by(country) %>% 
   arrange(country, year) %>% 
-  mutate(series = paste(country, "series", cumsum(break_yr) + 1)) %>%  # No word from Eurostat which obs cross-nationally comparable
+  mutate(series = paste("Eurostat", country, "series", cumsum(break_yr) + 1)) %>%  # No word from Eurostat which obs cross-nationally comparable
   ungroup()
