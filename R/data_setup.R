@@ -14,6 +14,7 @@ devtools::source_gist(4676064) # as.data.frame.list for CEPALStat
 # check if WB gini info is now available and library(wbstats) or library(WDI)
 
 # LIS
+kf_link <- "http://www.lisdatacenter.org/wp-content/uploads/data-key-inequality-workbook.xlsx"
 
 # Socio-Economic Database for Latin America and the Caribbean (SEDLAC)
 # still needs series var
