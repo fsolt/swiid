@@ -1,13 +1,8 @@
-library(dplyr)
-library(readr)
-library(readxl)
-library(eurostat)
-library(rsdmx)
-library(tidyr)
-library(stringr)
-library(magrittr)
-library(countrycode)
-library(xml2)
+if (!require(pacman)) install.packages("pacman")
+p_load(readr, readxl, 
+       eurostat, rsdmx, xml2, 
+       tidyr, stringr, magrittr, dplyr, purrr,
+       countrycode)
 devtools::source_gist(4676064) # as.data.frame.list for CEPALStat
 
 
@@ -16,8 +11,8 @@ devtools::source_gist(4676064) # as.data.frame.list for CEPALStat
 # LIS
 kf_link <- "http://www.lisdatacenter.org/wp-content/uploads/data-key-inequality-workbook.xlsx"
 
+
 # Socio-Economic Database for Latin America and the Caribbean (SEDLAC)
-# still needs series var
 format_sedlac <- function(df, sheet, link, es) {
   x <- df
   if(ncol(x)==2) {
@@ -34,7 +29,7 @@ format_sedlac <- function(df, sheet, link, es) {
                            str_replace(x$heading, "(\\d{4}).*", "\\1"), NA)
   
   x$series <- ifelse(!x$h_co & is.na(x$year), x$heading, NA)
-  s <- do.call(rbind, by(x, x$country, zoo::na.locf))
+  s <- x %>% split(.$country) %>% map_df(zoo::na.locf)
   x$series <- c(NA, s$series)
   
   x %<>% filter(!is.na(gini)) %>% transmute(country = country,
@@ -48,7 +43,7 @@ format_sedlac <- function(df, sheet, link, es) {
                                          source1 = "SEDLAC",
                                          page = sheet, 
                                          link = link)
-  x
+  return(x)
 }
 
 sedlac_link <- "http://sedlac.econo.unlp.edu.ar/download.php?file=archivos_estadistica/inequality_LAC_2015-06.xls"
