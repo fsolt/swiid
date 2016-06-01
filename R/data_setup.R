@@ -11,10 +11,20 @@ devtools::source_gist(4676064) # as.data.frame.list for CEPALStat
 # LIS
 kf_link <- "http://www.lisdatacenter.org/wp-content/uploads/data-key-inequality-workbook.xlsx"
 download.file(kf_link, "data-raw/data-key-inequality-workbook.xlsx") 
-kf <- read_excel("data-raw/data-key-inequality-workbook.xlsx") %>% 
+kf <- suppressWarnings(read_excel("data-raw/data-key-inequality-workbook.xlsx")) %>% 
   select(cy = `LIS Dataset\r\r\n`, gini = `Gini Coefficient`) %>% 
-  mutate(country = str_extract(cy, "(?<=- )\\D*") %>% str_trim() %>% str_to_title(),
-         year = str_extract(cy, "\\d{4}") %>% as.numeric())
+  filter(!is.na(gini)) %>% 
+  transmute(country = str_extract(cy, "(?<=- )\\D*") %>% str_trim() %>% str_to_title(),
+         year = str_extract(cy, "\\d{4}") %>% as.numeric(),
+         gini = gini*100,
+         equiv_scale = "sqrt",
+         welfare_def = "net",
+         monetary = FALSE,
+         series = paste("LIS Key Figures"),
+         source1 = "LIS",
+         page = NA, 
+         link = kf_link)
+  
 
 
 
