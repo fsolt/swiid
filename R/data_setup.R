@@ -9,7 +9,14 @@ devtools::source_gist(4676064) # as.data.frame.list for CEPALStat
 # check if WB gini info is now available and library(wbstats) or library(WDI)
 
 # LIS
+tf <- tempfile(fileext = ".xlsx")
 kf_link <- "http://www.lisdatacenter.org/wp-content/uploads/data-key-inequality-workbook.xlsx"
+download.file(kf_link, destfile = tf, mode = "wb") 
+kf <- read_excel(tf) %>% 
+  select(cy = `LIS Dataset\r\r\n`, gini = `Gini Coefficient`) %>% 
+  mutate(country = str_extract(cy, "(?<=- )\\D*") %>% str_trim() %>% str_to_title(),
+         year = str_extract(cy, "\\d{4}") %>% as.numeric())
+
 
 
 # Socio-Economic Database for Latin America and the Caribbean (SEDLAC)
