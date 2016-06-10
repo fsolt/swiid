@@ -10,9 +10,18 @@ devtools::source_gist(4676064) # as.data.frame.list for CEPALStat
 
 # LIS
 kf_link <- "http://www.lisdatacenter.org/wp-content/uploads/data-key-inequality-workbook.xlsx"
-download.file(kf_link, "data-raw/data-key-inequality-workbook.xlsx") 
-kf <- suppressWarnings(read_excel("data-raw/data-key-inequality-workbook.xlsx")) %>% 
+download.file(kf_link, "data-raw/data-key-inequality-workbook.xlsx")
+
+old_kf_link <- "https://web.archive.org/web/20100804001129/http://www.lisproject.org/key-figures/kf-workbook.xls"
+download.file(old_kf_link, "data-raw/kf-workbook_2010-08-04.xls") 
+old_kf <- read_excel("data-raw/kf-workbook_2010-08-04.xls") # get old key figures (for Russia)
+
+kf <- suppressWarnings(read_excel("data-raw/data-key-inequality-workbook.xlsx")) %>%
   select(cy = `LIS Dataset\r\r\n`, gini = `Gini Coefficient`) %>% 
+  filter(!str_detect(cy, "Russia")) %>% # Recent data on Russia increasingly implausible; use old version instead
+  rbind(old_kf %>% 
+          filter(str_detect(`Dataset(s)`, "Russia")) %>% 
+          select(cy = `Dataset(s)`, gini = `Gini Coefficient`)) %>% 
   filter(!is.na(gini)) %>% 
   transmute(country = str_extract(cy, "(?<=- )\\D*") %>% str_trim() %>% str_to_title(),
          year = str_extract(cy, "\\d{4}") %>% as.numeric(),
@@ -23,9 +32,10 @@ kf <- suppressWarnings(read_excel("data-raw/data-key-inequality-workbook.xlsx"))
          series = paste("LIS Key Figures"),
          source1 = "LIS",
          page = NA, 
-         link = kf_link)
-  
-
+         link = ifelse(!country=="Russia", kf_link, old_kf_link)) %>% 
+  arrange(country, year)
+kf$country <- str_replace(kf$country, "Russia", "Russian Federation")
+kf$country <- str_replace(kf$country, "South Korea", "Korea, Republic of")
 
 
 # Socio-Economic Database for Latin America and the Caribbean (SEDLAC)
@@ -92,6 +102,7 @@ sedlac$country <- car::recode(sedlac$country,
                               'Belice' = 'Belize'")
 
 rm(sedlac_ei, sedlac_hh, sedlac_pc)
+
 
 # CEPALStat
 # http://interwp.cepal.org/sisgen/ConsultaIntegrada.asp?idIndicador=250&idioma=e
