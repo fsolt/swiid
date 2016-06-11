@@ -1,3 +1,16 @@
+ccn <- 47
+
+cc <- tolower(c("AU", "AT", "BE", "BR", "CA", "CL", "CN", "CO",
+                "CZ", "DK", "DO", "EG", "EE", "FI", "FR", "DE",
+                "GE", "GR", "GT", "HU", "IS", "IN", "IE", "IL",
+                "IT", "JP", "LU", "MX", "NL", "NO", "PA", "PY",
+                "PE", "PL", "RO", "RU", "RS", "SK", "SI", "ZA",
+                "KR", "ES", "SE", "CH", "TW", "UK", "US", "UY"))
+yy <- as.character(c(c(67, 69, 71, 73:75, 78:99), paste0("0", 1:9), c(11:14)))
+
+datasets <- paste0(cc[ccn], yy, "h")
+
+## Define functions
 gini <- function(x, weight) {
   ox <- order(x)
   x <- as.vector(x)[ox]
@@ -27,10 +40,7 @@ topBottom <- function(var, botline, topline) {
   return(tb)
 }
 
-setups <- function(data_file) {
-  vars <- c("dhi", "factor", "hitp", "hpopwgt", "nhhmem", "grossnet")
-  subset <- "complete.cases(dhi, factor, hitp)"
-  df <- read.LIS(data_file, labels = FALSE, vars = vars, subset = subset) 
+setups <- function(df) {
   botline <- 0
   topline <- 10 * wNtile(df$dhi, df$hpopwgt, 0.5)
   df$dhi <- topBottom(df$dhi, botline, topline)
@@ -49,25 +59,41 @@ boot_gini_se <- function(data, reps=1000) {
   return(std_err)   
 }
 
+# For testing at home:
+# read.LIS <- function(data_file, labels, vars, subset) {
+#   require(dplyr)
+#   data_file <- str_replace(data_file, "h", "ih.dta")
+#   df <- haven::read_dta(data_file)[, vars] %>% 
+#     filter(eval(parse(text = subset), .)) 
+#   if (!labels) {
+#     df <- df %>% mutate_each(funs(as.numeric))
+#   }
+#   return(df)
+# }
 
 
-datasets <- c('gt06', 'us04', 'dk04', 'pl04', 'hu05', 'il05') 
-
+vars <- c("dhi", "factor", "hitp", "hpopwgt", "nhhmem", "grossnet")
+subset <- "complete.cases(dhi, factor, hitp)"
 for (ccyy in datasets) {
-  df <- setups(paste0(ccyy, 'h'))
-  for (var in c("emi", "edhi", "cmi", "cdhi", "mi", "dhi")) {
-    if (var == "mi" | var == "dhi") {
-      wt <- df$hpopwgt
-    } else {
-      wt <- df$hpopwgt * df$nhhmem
+  df <- try(read.LIS(ccyy, labels = FALSE, vars = vars, subset = subset), silent = TRUE)
+  if (class(df)[1] != "try-error") {
+    df <- setups(df)
+    for (var in c("emi", "edhi", "cmi", "cdhi", "mi", "dhi")) {
+      if (var == "mi" | var == "dhi") {
+        wt <- df$hpopwgt
+      } else {
+        wt <- df$hpopwgt * df$nhhmem
+      }
+      cat(paste(ccyy, 
+                  var, 
+                  gini(df[[var]], wt),
+                  boot_gini_se(df),
+                  df$grossnet[1],
+                
+                  sep = ","), sep = "\n")
+  
     }
-    cat(paste(ccyy, 
-                var, 
-                gini(df[[var]], wt),
-                boot_gini_se(df),
-                df$grossnet[1],
-              
-                sep = ","), sep = "\n")
-
   }
 }
+
+
