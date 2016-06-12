@@ -77,23 +77,25 @@ subset <- "complete.cases(dhi, factor, hitp)"
 for (ccyy in datasets) {
   df <- try(read.LIS(ccyy, labels = FALSE, vars = vars, subset = subset), silent = TRUE)
   if (class(df)[1] != "try-error") {
-    df <- setups(df)
-    for (var in c("emi", "edhi", "cmi", "cdhi", "mi", "dhi")) {
-      if (var == "mi" | var == "dhi") {
-        wt <- df$hpopwgt
-      } else {
-        wt <- df$hpopwgt * df$nhhmem
+    if (!is.nan(mean(df$dhi)) & mean(df$dhi)!= 0) {
+      df <- setups(df)
+      var <- c("emi", "edhi", "cmi", "cdhi", "mi", "dhi")
+      for (var in c("emi", "edhi", "cmi", "cdhi", "mi", "dhi")) {
+        if (var == "mi" | var == "dhi") {
+          wt <- df$hpopwgt
+        } else {
+          wt <- df$hpopwgt * df$nhhmem
+        }
+        cat(paste(ccyy, 
+                    var, 
+                    gini(df[[var]], wt),
+                    boot_gini_se(df),
+                    df$grossnet[1],
+                  
+                    sep = ","), sep = "\n")
+    
       }
-      cat(paste(ccyy, 
-                  var, 
-                  gini(df[[var]], wt),
-                  boot_gini_se(df),
-                  df$grossnet[1],
-                
-                  sep = ","), sep = "\n")
-  
     }
   }
 }
-
 
