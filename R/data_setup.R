@@ -3,6 +3,7 @@ p_load(readr, readxl,
        eurostat, rsdmx, xml2, 
        tidyr, stringr, magrittr, dplyr, purrr,
        countrycode)
+p_load_gh("leeper/tabulizerjars", "leeper/tabulizer") # read PDF tables
 devtools::source_gist(4676064) # as.data.frame.list for CEPALStat
 
 
@@ -183,7 +184,7 @@ rm(oecd0, oecd_se)
        
 # Eurostat
 # http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en; Customization: all years
-eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = F) %>% 
+eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = FALSE) %>% 
   label_eurostat(code = "geo")  %>% 
   left_join(get_eurostat("ilc_di12", time_format = "num", keepFlags = TRUE) %>%
               rename(geo_code = geo), by = c("geo_code", "time", "values")) %>% 
@@ -205,3 +206,10 @@ eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = F) %>%
   arrange(country, year) %>% 
   mutate(series = paste("Eurostat", country, "series", cumsum(break_yr) + 1)) %>%  # No word from Eurostat which obs cross-nationally comparable
   ungroup()
+
+#Commitment to Equity
+ceq_link1 <- "http://www.commitmentoequity.org/publications_files/Comparative/CEQWPNo30%20RedisImpactGovntSpendEducHealth%20March%202015.pdf"
+download.file(ceq_link1, "data-raw/CEQWPNo30.pdf")
+ceq1_area <- locate_areas("data-raw/CEQWPNo30.pdf", pages=16)
+ceq1 <- extract_tables("data-raw/CEQWPNo30.pdf", pages=16, 
+                       area = list(c(110, 64, 140, 740)))
