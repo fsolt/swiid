@@ -30,13 +30,71 @@ kf <- suppressWarnings(read_excel("data-raw/data-key-inequality-workbook.xlsx"))
          equiv_scale = "sqrt",
          welfare_def = "net",
          monetary = FALSE,
-         series = paste("LIS Key Figures"),
+         series = "LIS Key Figures",
          source1 = "LIS",
-         page = NA, 
+         page = "Key Figures", 
          link = ifelse(!country=="Russia", kf_link, old_kf_link)) %>% 
   arrange(country, year)
 kf$country <- str_replace(kf$country, "Russia", "Russian Federation")
 kf$country <- str_replace(kf$country, "South Korea", "Korea, Republic of")
+
+lis_net_sqrt_raw <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/job_396844_dhi-sqrt.txt",
+                       col_names = FALSE, skip = 80)
+lis_nc_raw <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/job_396995_dhi-pc.txt",
+                       col_names = FALSE, skip = 80)
+# lis_nh_raw <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/job_.txt",
+#                        col_names = FALSE, skip = )
+lis_me_raw <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/job_396882_mi-sqrt.txt",
+                       col_names = FALSE, skip = 71)
+lis_mc_raw <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/job_396886_mi-pc.txt",
+                       col_names = FALSE, skip = 71)
+lis_mh_raw <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/job_396952_mi-hh.txt",
+                       col_names = FALSE, skip = 69)
+
+lis_ne <-  lis_ne_raw %>%  
+  filter(!is.na(X2)) %>% 
+  transmute(country = str_extract(X1, "\\D{2}") %>%
+              toupper() %>% 
+              countrycode("iso2c", "country.name"),
+            year = ifelse(str_extract(X1, "\\d{2}") %>% as.numeric() > 66,
+                          str_extract(X1, "\\d{2}") %>% as.numeric() + 1900,
+                          str_extract(X1, "\\d{2}") %>% as.numeric() + 2000),
+            gini = (str_trim(X2) %>% as.numeric())*100,
+            gini_se = (str_trim(X3) %>% as.numeric())*100,
+            equiv_scale = "sqrt",
+            welfare_def = "net",
+            monetary = FALSE,
+            series = "LIS",
+            source1 = "LISSY",
+            page = "", 
+            link = "https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/job_396844_dhi-sqrt.txt") %>% 
+  arrange(country, year)
+
+
+format_lis <- function(x) {
+  paste0("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/", 
+         x, ".txt") %>%
+    read_csv(col_names = FALSE, skip = 80) %>% 
+  filter(!is.na(X2)) %>% 
+  transmute(country = str_extract(X1, "\\D{2}") %>%
+              toupper() %>% 
+              countrycode("iso2c", "country.name"),
+            year = ifelse(str_extract(X1, "\\d{2}") %>% as.numeric() > 66,
+                          str_extract(X1, "\\d{2}") %>% as.numeric() + 1900,
+                          str_extract(X1, "\\d{2}") %>% as.numeric() + 2000),
+            gini = (str_trim(X2) %>% as.numeric())*100,
+            gini_se = (str_trim(X3) %>% as.numeric())*100,
+            equiv_scale = str_extract(x, "[^_]*"),
+            welfare_def = str_extract(x, "(?<=_).*"),
+            monetary = FALSE,
+            series = "LIS",
+            source1 = "LISSY",
+            page = "",
+            link = paste0("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/",
+                          welfare_def[1],"-", equiv_scale[1], ".txt")
+            ) %>% 
+  arrange(country, year)
+}
 
 
 # Socio-Economic Database for Latin America and the Caribbean (SEDLAC)
@@ -60,9 +118,9 @@ format_sedlac <- function(df, sheet, link, es) {
   x$series <- c(NA, s$series)
   
   x %<>% filter(!is.na(gini)) %>% transmute(country = country,
-                                         year = year,
+                                         year = as.numeric(year),
                                          gini = gini * 100,
-                                         se = se * 100,
+                                         gini_se = se * 100,
                                          equiv_scale = es,
                                          welfare_def = "net",
                                          monetary = TRUE,
@@ -208,8 +266,6 @@ eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = FALSE) 
   ungroup()
 
 #Commitment to Equity
-ceq_link1 <- "http://www.commitmentoequity.org/publications_files/Comparative/CEQWPNo30%20RedisImpactGovntSpendEducHealth%20March%202015.pdf"
-download.file(ceq_link1, "data-raw/CEQWPNo30.pdf")
-ceq1_area <- locate_areas("data-raw/CEQWPNo30.pdf", pages=16)
-ceq1 <- extract_tables("data-raw/CEQWPNo30.pdf", pages=16, 
-                       area = list(c(110, 64, 140, 740)))
+ceq <- read_csv("data-raw/ceq.csv")
+
+
