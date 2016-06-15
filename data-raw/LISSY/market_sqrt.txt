@@ -1,7 +1,16 @@
+
+
+
+
+
+
+
+
+
 From: postbox@lisdatacenter.org
-Subject: job 396886 all mi - pc
-Date: June 13, 2016 at 1:28:31 AM CDT
-To: fsolt@mac.com
+Subject: job 396882 all mi - sqrt
+Date: June 12, 2016 at 6:30:04 PM CDT
+To: frederick-solt@uiowa.edu
 
 ############################### NOTICE TO USERS ###############################
                                                                         
@@ -44,8 +53,8 @@ To: fsolt@mac.com
   7.  qui sum mi [w=hpopwgt], de 
   8.  qui replace mi_tb = 0 if mi<0 
   9.  qui replace mi_tb = 10*r(p50) if mi>10*r(p50) 
- 10.  // Calculate pc income 
-.  qui gen cmi_tb = mi_tb/nhhmem^0.5 
+ 10.  // Calculate equivalized income 
+.  qui gen emi_tb = mi_tb/(nhhmem^0.5) 
  11.  // Calculate weights 
 .  qui gen lisw = hpopwgt*nhhmem 
  12. end 
@@ -58,10 +67,10 @@ To: fsolt@mac.com
   5.  if !_rc { 
   6.  qui use factor hitp hpopwgt nhhmem using $`file', clear 
   7.  qui make_variables 
-  8.  qui sum cmi_tb 
+  8.  qui sum emi_tb 
   9.  if r(N)>0 & r(mean)!=0 { 
  10.  set seed 324 
- 11.  version 7 : quietly bs "ineqdec0 cmi_tb [aw=lisw]" "S_gini", reps(500) nowarn 
+ 11.  version 7 : quietly bs "ineqdec0 emi_tb [aw=lisw]" "S_gini", reps(500) nowarn 
  12.  local gini = round(r(stat), .001) 
  13.  local se = round(r(se), .001) 
  14.  display "`c'`year', `gini', `se'" 
