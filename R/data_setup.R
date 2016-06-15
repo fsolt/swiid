@@ -76,12 +76,13 @@ format_lis <- function(x) {
          x, ".txt") %>%
     readLines() %>% 
     str_subset("^\\D{2}\\d{2},.*") %>%
-    paste(sep = "\n") %>% 
+    paste(collapse = "\n") %>% 
     read_csv(col_names = FALSE) %>%
-    filter(!is.na(X2)) %>% 
     transmute(country = str_extract(X1, "\\D{2}") %>%
                 toupper() %>% 
-                countrycode("iso2c", "country.name"),
+                str_replace("UK", "GB") %>% 
+                countrycode("iso2c", "country.name") %>% 
+                str_replace(", Province of China", ""),
               year = ifelse(str_extract(X1, "\\d{2}") %>% as.numeric() > 66,
                             str_extract(X1, "\\d{2}") %>% as.numeric() + 1900,
                             str_extract(X1, "\\d{2}") %>% as.numeric() + 2000),
@@ -94,11 +95,13 @@ format_lis <- function(x) {
               source1 = "LISSY",
               page = "",
               link = paste0("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/",
-                            x, ".txt")
-    ) %>% 
+                            x, ".txt")) %>% 
     arrange(country, year)
 }
 
+lis_files <- c("net_sqrt", "net_pc", "net_hh", "market_sqrt", "market_pc", "market_hh")
+
+lis <- lis_files %>% map_df(format_lis)
 
 # Socio-Economic Database for Latin America and the Caribbean (SEDLAC)
 format_sedlac <- function(df, sheet, link, es) {

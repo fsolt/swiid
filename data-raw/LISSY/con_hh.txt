@@ -1,0 +1,140 @@
+From: postbox@lisdatacenter.org
+Subject: job 397501 hc-hh
+Date: June 15, 2016 at 11:44:05 AM CDT
+To: frederick-solt@uiowa.edu
+
+############################### NOTICE TO USERS ###############################
+                                                                        
+  Use of the data in the LUXEMBOURG INCOME STUDY DATABASE is governed by
+  regulations which do not allow copying or further distribution of the 
+  survey microdata.                                                     
+
+  Anyone violating these regulations will lose all privileges to the    
+  databases and may be subject to prosecution under the law. In addition,
+  any attempt to circumvent the LIS processing system or unauthorized entry
+  into the LIS computing system will result in prosecution.             
+
+  All papers written using the LUXEMBOURG INCOME STUDY DATABASE must be 
+  submitted for entry into the Working Papers Series.                   
+  Please consult our web site for more information at WWW.LISDATACENTER.ORG
+                                                                        
+############################### NOTICE TO USERS ###############################
+
+
+. local country "au at be br ca cl cn co cz dk do eg ee fi fr de ge gr gt hu in ie il it is jp lu mx nl no pa py pe pl ro ru rs sk s
+> i za kr es se ch tw uk us uy"  
+
+. local yr1 "67 69 71 73 74 75 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 00 01 02 03 04 05 06 07 08 09 10 11
+>  12 13 14"  
+
+.   
+. program define setups  
+  1.  
+. * Select only records if hc filled  
+. drop if hc==. | hc==0  
+  2.   
+. * Select only if there is a weight  
+. drop if hpopwgt==. | hpopwgt==0  
+  3.   
+. * Set equivalence scale to household 
+. gen hc_tb=hc 
+  4.   
+. * Create household weight as hpopwgt  
+. gen wt=hpopwgt 
+  5.   
+. end  
+
+.   
+. ***************************  
+. * Bottom and Top Coding *  
+. ***************************  
+. program define bottop  
+  1. setups  
+  2. quietly sum hc_tb [w=wt]  
+  3. gen botlin=0.01*_result(3)  
+  4. replace hc_tb=botlin if hc
+  5. quietly sum hc [w=wt], de  
+  6. gen toplin=10*_result(10)  
+  7. replace hc_tb=toplin if hc>toplin  
+  8. end  
+
+.   
+. foreach c of local country {  
+  2.  foreach year of local yr1 {  
+  3.  local file "`c'`year'h"  
+  4.  capture confirm file $`file'  
+  5.  if !_rc {  
+  6.  qui use did hid hpopwgt svyunit hc region_c using $`file', clear  
+  7.  qui bottop  
+  8.  qui sum hc_tb  
+  9.  if r(N)>0 & r(mean)!=0 {  
+ 10.  set seed 324  
+ 11.  version 7: quietly bs "ineqdeco hc_tb [w=wt]" "S_gini", reps(500) nowarn  
+ 12.  local gini = round(r(stat), .001)  
+ 13.  local se = round(r(se), .00000001)  
+ 14.  display "`c'`year', `gini', `se'"  
+ 15.   }  
+ 16.  }  
+ 17.  }  
+ 18. }  
+au10, .318, .00347128
+do07, .427, .00842895
+ee00, .414, .00508392
+fr00, .377, .00362527
+fr05, .334, .00246906
+fr10, .312, .00245581
+gt06, .52, .00440305
+hu91, .317, .00614006
+hu94, .324, .00590896
+il92, .364, .00359256
+il97, .373, .00418455
+il01, .329, .00335849
+il05, .339, .00359993
+il07, .328, .00365361
+il10, .332, .00381751
+il12, .316, .00300695
+mx84, .431, .0081179
+mx89, .431, .00516869
+mx92, .44, .00516156
+mx94, .444, .0047305
+mx96, .417, .00438184
+mx98, .441, .00445353
+mx00, .457, .00843036
+mx02, .443, .00552747
+mx04, .43, .00336904
+mx08, .406, .00275197
+mx10, .406, .00283585
+mx12, .399, .00537722
+pe04, .441, .00467047
+pe07, .433, .0032044
+pe10, .397, .00312114
+pe13, .387, .002523
+rs06, .319, .00421591
+rs10, .326, .00373157
+rs13, .311, .00368561
+si07, .299, .00427138
+si10, .291, .00420789
+si12, .295, .00420715
+za08, .5690000000000001, .00383026
+za10, .5720000000000001, .00475934
+za12, .55, .00589274
+es85, .326, .00519919
+es90, .367, .00273521
+tw81, .251, .00173907
+tw86, .266, .00190891
+tw91, .281, .00172383
+tw95, .296, .00188412
+tw97, .287, .00195427
+tw00, .292, .001956
+tw05, .289, .00181833
+tw07, .281, .0018627
+tw10, .288, .00178874
+tw13, .29, .00177743
+uk86, .374, .00292331
+uk91, .396, .00338991
+
+.   
+. 
+end of do-file
+
+
