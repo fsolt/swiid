@@ -10,67 +10,6 @@ devtools::source_gist(4676064) # as.data.frame.list for CEPALStat
 # check if WB gini info is now available and library(wbstats) or library(WDI)
 
 # LIS
-kf_link <- "http://www.lisdatacenter.org/wp-content/uploads/data-key-inequality-workbook.xlsx"
-download.file(kf_link, "data-raw/data-key-inequality-workbook.xlsx")
-
-old_kf_link <- "https://web.archive.org/web/20100804001129/http://www.lisproject.org/key-figures/kf-workbook.xls"
-download.file(old_kf_link, "data-raw/kf-workbook_2010-08-04.xls") 
-old_kf <- read_excel("data-raw/kf-workbook_2010-08-04.xls") # get old key figures (for Russia)
-
-kf <- suppressWarnings(read_excel("data-raw/data-key-inequality-workbook.xlsx")) %>%
-  select(cy = `LIS Dataset\r\r\n`, gini = `Gini Coefficient`) %>% 
-  filter(!str_detect(cy, "Russia")) %>% # Recent data on Russia increasingly implausible; use old version instead
-  rbind(old_kf %>% 
-          filter(str_detect(`Dataset(s)`, "Russia")) %>% 
-          select(cy = `Dataset(s)`, gini = `Gini Coefficient`)) %>% 
-  filter(!is.na(gini)) %>% 
-  transmute(country = str_extract(cy, "(?<=- )\\D*") %>% str_trim() %>% str_to_title(),
-         year = str_extract(cy, "\\d{4}") %>% as.numeric(),
-         gini = gini*100,
-         equiv_scale = "sqrt",
-         welfare_def = "net",
-         monetary = FALSE,
-         series = "LIS Key Figures",
-         source1 = "LIS",
-         page = "Key Figures", 
-         link = ifelse(!country=="Russia", kf_link, old_kf_link)) %>% 
-  arrange(country, year)
-kf$country <- str_replace(kf$country, "Russia", "Russian Federation")
-kf$country <- str_replace(kf$country, "South Korea", "Korea, Republic of")
-
-lis_net_sqrt_raw <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/job_396844_dhi-sqrt.txt",
-                       col_names = FALSE, skip = 80)
-lis_nc_raw <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/job_396995_dhi-pc.txt",
-                       col_names = FALSE, skip = 80)
-# lis_nh_raw <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/job_.txt",
-#                        col_names = FALSE, skip = )
-lis_me_raw <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/job_396882_mi-sqrt.txt",
-                       col_names = FALSE, skip = 71)
-lis_mc_raw <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/job_396886_mi-pc.txt",
-                       col_names = FALSE, skip = 71)
-lis_mh_raw <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/job_396952_mi-hh.txt",
-                       col_names = FALSE, skip = 69)
-
-lis_ne <-  lis_ne_raw %>%  
-  filter(!is.na(X2)) %>% 
-  transmute(country = str_extract(X1, "\\D{2}") %>%
-              toupper() %>% 
-              countrycode("iso2c", "country.name"),
-            year = ifelse(str_extract(X1, "\\d{2}") %>% as.numeric() > 66,
-                          str_extract(X1, "\\d{2}") %>% as.numeric() + 1900,
-                          str_extract(X1, "\\d{2}") %>% as.numeric() + 2000),
-            gini = (str_trim(X2) %>% as.numeric())*100,
-            gini_se = (str_trim(X3) %>% as.numeric())*100,
-            equiv_scale = "sqrt",
-            welfare_def = "net",
-            monetary = FALSE,
-            series = "LIS",
-            source1 = "LISSY",
-            page = "", 
-            link = "https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/job_396844_dhi-sqrt.txt") %>% 
-  arrange(country, year)
-
-
 format_lis <- function(x) {
   paste0("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/", 
          x, ".txt") %>%
@@ -88,8 +27,8 @@ format_lis <- function(x) {
                             str_extract(X1, "\\d{2}") %>% as.numeric() + 2000),
               gini = (str_trim(X2) %>% as.numeric())*100,
               gini_se = (str_trim(X3) %>% as.numeric())*100,
-              equiv_scale = str_extract(x, "[^_]*"),
-              welfare_def = str_extract(x, "(?<=_).*"),
+              equiv_scale = str_extract(x, "(?<=_).*"),
+              welfare_def = str_extract(x, "[^_]*"),
               monetary = FALSE,
               series = "LIS",
               source1 = "LISSY",
@@ -99,9 +38,43 @@ format_lis <- function(x) {
     arrange(country, year)
 }
 
-lis_files <- c("net_sqrt", "net_pc", "net_hh", "market_sqrt", "market_pc", "market_hh")
+format_lis_xtra <- function(x) {
+  paste0("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/", 
+         x, ".txt") %>%
+    readLines() %>% 
+    str_subset("^\\D{2}\\d{2},.*") %>%
+    paste(collapse = "\n") %>% 
+    read_csv(col_names = FALSE) %>%
+    transmute(country = str_extract(X1, "\\D{2}") %>% 
+                toupper() %>% 
+                countrycode("iso2c", "country.name"),
+              year = ifelse(str_extract(X1, "\\d{2}") %>% as.numeric() > 66,
+                            str_extract(X1, "\\d{2}") %>% as.numeric() + 1900,
+                            str_extract(X1, "\\d{2}") %>% as.numeric() + 2000),
+              gini = (str_trim(X2) %>% as.numeric())*100,
+              gini_se = (str_trim(X3) %>% as.numeric())*100,
+              equiv_scale = "sqrt",
+              welfare_def = "net",
+              monetary = FALSE,
+              series = "LIS",
+              source1 = ifelse(country=="New Zealand", "Statistics New Zealand 1999", "LISSY"),
+              page = ifelse(country=="New Zealand", "73", ""),
+              link = ifelse(country=="New Zealand", 
+                            "http://www2.stats.govt.nz/domino/external/PASFull/pasfull.nsf/173371ce38d7627b4c25680900046f25/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf", 
+                            "https://web.archive.org/web/20100804001129/http://www.lisproject.org/key-figures/kf-workbook.xls")) %>% 
+    arrange(country, year)
+}
 
-lis <- lis_files %>% map_df(format_lis)
+lis_files <- c("net_sqrt", "net_pc", "net_hh", 
+               "market_sqrt", "market_pc", "market_hh",
+               "con_sqrt", "con_pc", "con_hh")
+
+lis <- lis_files %>% 
+  map_df(format_lis) %>% 
+  filter(!country=="Russian Federation") %>% 
+  rbind(format_lis_xtra("net_sqrt_nz"), format_lis_xtra("net_sqrt_ru")) %>% 
+  arrange(country, year, welfare_def, equiv_scale)
+
 
 # Socio-Economic Database for Latin America and the Caribbean (SEDLAC)
 format_sedlac <- function(df, sheet, link, es) {
@@ -202,14 +175,17 @@ cepal <- left_join(cepal_raw, cepal_labels, by = c("dim_208" = "id")) %>%
   group_by(country, area) %>% 
   transmute(year = year,
             gini = as.numeric(as.character(valor)) * 100,
+            gini_se = NA,
             equiv_scale = "hpc",
             welfare_def = "net",
             monetary = TRUE,
             notes = ifelse(is.na(descripcion), "", as.character(descripcion)),
             series = paste("CEPAL", country, "series", as.numeric(factor(notes, levels = unique(notes)))),
             source1 = "CEPALStat",
+            page = "",
             link = cepal_link) %>% 
-  ungroup()
+  ungroup() %>% 
+  select(-notes, -area)
 
 rm(cepal0, cepal_raw, cepal_labels, cepal_notes)
 
@@ -237,7 +213,7 @@ oecd_se <- oecd0 %>% filter(MEASURE=="STDG") %>%
   select(-gini)
 
 oecd <- oecd0 %>% filter(MEASURE!="STDG") %>% 
-  select(country:series) %>% 
+  select(country:link) %>% 
   left_join(oecd_se, by = c("country", "year", "equiv_scale", "welfare_def", "monetary", "series"))
 oecd$welfare_def <- car::recode(oecd$welfare_def, 
               "'GINI' = 'net';
@@ -256,12 +232,14 @@ eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = FALSE) 
   transmute(country = countrycode(as.character(geo), "country.name", "country.name"),
          year = time,
          gini = values,
+         gini_se = NA,
          equiv_scale = "OECDmod",   
          welfare_def = "net",
          monetary = TRUE,
          break_yr = ifelse(is.na(flags) | flags!="b", 0, 1),
+         series = "",
          source1 = "Eurostat",
-         page = NA,
+         page = "",
          link = "http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en",
          geo = geo) %>% 
   mutate(country = ifelse(is.na(country), as.character(geo), country)) %>% 
@@ -270,9 +248,14 @@ eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = FALSE) 
   group_by(country) %>% 
   arrange(country, year) %>% 
   mutate(series = paste("Eurostat", country, "series", cumsum(break_yr) + 1)) %>%  # No word from Eurostat which obs cross-nationally comparable
-  ungroup()
-
-#Commitment to Equity
-ceq <- read_csv("data-raw/ceq.csv")
+  ungroup() %>% 
+  select(-break_yr)
 
 
+# Commitment to Equity
+ceq <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/ceq.csv", col_types = "cnnncclcccc")
+
+
+# Combine
+ineq_data <- list(lis, sedlac, cepal, oecd, eurostat, ceq)
+ineq <- bind_rows(ineq_data)
