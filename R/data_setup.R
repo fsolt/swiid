@@ -74,26 +74,29 @@ lis_ne <-  lis_ne_raw %>%
 format_lis <- function(x) {
   paste0("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/", 
          x, ".txt") %>%
-    read_csv(col_names = FALSE, skip = 80) %>% 
-  filter(!is.na(X2)) %>% 
-  transmute(country = str_extract(X1, "\\D{2}") %>%
-              toupper() %>% 
-              countrycode("iso2c", "country.name"),
-            year = ifelse(str_extract(X1, "\\d{2}") %>% as.numeric() > 66,
-                          str_extract(X1, "\\d{2}") %>% as.numeric() + 1900,
-                          str_extract(X1, "\\d{2}") %>% as.numeric() + 2000),
-            gini = (str_trim(X2) %>% as.numeric())*100,
-            gini_se = (str_trim(X3) %>% as.numeric())*100,
-            equiv_scale = str_extract(x, "[^_]*"),
-            welfare_def = str_extract(x, "(?<=_).*"),
-            monetary = FALSE,
-            series = "LIS",
-            source1 = "LISSY",
-            page = "",
-            link = paste0("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/",
-                          welfare_def[1],"-", equiv_scale[1], ".txt")
-            ) %>% 
-  arrange(country, year)
+    readLines() %>% 
+    str_subset("^\\D{2}\\d{2},.*") %>%
+    paste(sep = "\n") %>% 
+    read_csv(col_names = FALSE) %>%
+    filter(!is.na(X2)) %>% 
+    transmute(country = str_extract(X1, "\\D{2}") %>%
+                toupper() %>% 
+                countrycode("iso2c", "country.name"),
+              year = ifelse(str_extract(X1, "\\d{2}") %>% as.numeric() > 66,
+                            str_extract(X1, "\\d{2}") %>% as.numeric() + 1900,
+                            str_extract(X1, "\\d{2}") %>% as.numeric() + 2000),
+              gini = (str_trim(X2) %>% as.numeric())*100,
+              gini_se = (str_trim(X3) %>% as.numeric())*100,
+              equiv_scale = str_extract(x, "[^_]*"),
+              welfare_def = str_extract(x, "(?<=_).*"),
+              monetary = FALSE,
+              series = "LIS",
+              source1 = "LISSY",
+              page = "",
+              link = paste0("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/",
+                            x, ".txt")
+    ) %>% 
+    arrange(country, year)
 }
 
 
@@ -111,23 +114,24 @@ format_sedlac <- function(df, sheet, link, es) {
   x$country <- c(NA, zoo::na.locf(x$country))
   
   x$year <- ifelse(str_detect(x$heading, ".*(\\d{4}).*"),
-                           str_replace(x$heading, "(\\d{4}).*", "\\1"), NA)
+                   str_replace(x$heading, "(\\d{4}).*", "\\1"), NA)
   
   x$series <- ifelse(!x$h_co & is.na(x$year), x$heading, NA)
   s <- x %>% split(.$country) %>% map_df(zoo::na.locf)
   x$series <- c(NA, s$series)
   
-  x %<>% filter(!is.na(gini)) %>% transmute(country = country,
-                                         year = as.numeric(year),
-                                         gini = gini * 100,
-                                         gini_se = se * 100,
-                                         equiv_scale = es,
-                                         welfare_def = "net",
-                                         monetary = TRUE,
-                                         series = series,
-                                         source1 = "SEDLAC",
-                                         page = sheet, 
-                                         link = link)
+  x %<>% filter(!is.na(gini)) %>%
+    transmute(country = country,
+              year = as.numeric(year),
+              gini = gini * 100,
+              gini_se = se * 100,
+              equiv_scale = es,
+              welfare_def = "net",
+              monetary = TRUE,
+              series = series,
+              source1 = "SEDLAC",
+              page = sheet, 
+              link = link)
   return(x)
 }
 
