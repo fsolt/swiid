@@ -1,0 +1,126 @@
+From: postbox@lisdatacenter.org
+Subject: job 397532 hc-sqrt
+Date: June 15, 2016 at 12:26:04 PM CDT
+To: frederick-solt@uiowa.edu
+
+############################### NOTICE TO USERS ###############################
+                                                                        
+  Use of the data in the LUXEMBOURG INCOME STUDY DATABASE is governed by
+  regulations which do not allow copying or further distribution of the 
+  survey microdata.                                                     
+
+  Anyone violating these regulations will lose all privileges to the    
+  databases and may be subject to prosecution under the law. In addition,
+  any attempt to circumvent the LIS processing system or unauthorized entry
+  into the LIS computing system will result in prosecution.             
+
+  All papers written using the LUXEMBOURG INCOME STUDY DATABASE must be 
+  submitted for entry into the Working Papers Series.                   
+  Please consult our web site for more information at WWW.LISDATACENTER.ORG
+                                                                        
+############################### NOTICE TO USERS ###############################
+
+
+. local country "au at be br ca cl cn co cz dk do eg ee fi fr de ge gr gt hu in ie il it is jp lu mx nl no pa py pe pl ro ru rs sk s
+> i za kr es se ch tw uk us uy"   
+
+. local yr1 "67 69 71 73 74 75 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 00 01 02 03 04 05 06 07 08 09 10 11
+>  12 13 14"   
+
+.   
+. capture program drop make_variables  
+
+. program define make_variables  
+  1.  qui drop if hc==.  
+  2.   
+.  // Apply top and bottom codes  
+.  qui gen hc_tb = hc  
+  3.  qui sum hc [w=hpopwgt], de  
+  4.  qui replace hc_tb = 0 if hc<0  
+  5.  qui replace hc_tb = 10*r(p50) if hc>10*r(p50)  
+  6.  // Calculate equivalized income  
+.  qui gen ehc_tb = hc_tb/(nhhmem^0.5)  
+  7.  // Calculate weights  
+.  qui gen lisw = hpopwgt*nhhmem  
+  8. end  
+
+.   
+. foreach c of local country {  
+  2.  foreach year of local yr1 {  
+  3.  local file "`c'`year'h"  
+  4.  capture confirm file $`file'  
+  5.  if !_rc {  
+  6.  qui use hc hpopwgt nhhmem using $`file', clear  
+  7.  qui make_variables  
+  8.  qui sum ehc_tb  
+  9.  if r(N)>0 & r(mean)!=0 {  
+ 10.  set seed 324  
+ 11.  version 7 : quietly bs "ineqdec0 ehc_tb [aw=lisw]" "S_gini", reps(500) nowarn  
+ 12.  local gini = round(r(stat), .001)  
+ 13.  local se = round(r(se), .001)  
+ 14.  display "`c'`year', `gini', `se'"  
+ 15.  }  
+ 16.  }  
+ 17.  }  
+ 18. }  
+au10, .274, .004
+do07, .401, .009
+ee00, .355, .005
+fr00, .326, .004
+fr05, .285, .002
+fr10, .266, .002
+gt06, .526, .005
+hu91, .273, .006
+hu94, .259, .006
+il92, .324, .004
+il97, .336, .004
+il01, .295, .003
+il05, .308, .004
+il07, .305, .004
+il10, .304, .004
+il12, .291, .003
+mx84, .425, .009
+mx89, .431, .005
+mx92, .443, .005
+mx94, .447, .005
+mx96, .423, .005
+mx98, .444, .005
+mx00, .459, .008
+mx02, .439, .006
+mx04, .425, .004
+mx08, .391, .003
+mx10, .395, .003
+mx12, .393, .006
+pe04, .414, .005
+pe07, .407, .003
+pe10, .367, .003
+pe13, .352, .003
+rs06, .272, .004
+rs10, .275, .004
+rs13, .257, .004
+si07, .243, .004
+si10, .235, .004
+si12, .23, .004
+za08, .579, .004
+za10, .583, .005
+za12, .5670000000000001, .007
+es85, .288, .005
+es90, .315, .003
+tw81, .225, .002
+tw86, .229, .002
+tw91, .242, .002
+tw95, .245, .002
+tw97, .229, .002
+tw00, .226, .002
+tw05, .221, .002
+tw07, .21, .002
+tw10, .218, .002
+tw13, .217, .002
+uk86, .318, .003
+uk91, .341, .004
+
+.   
+. 
+end of do-file
+
+
