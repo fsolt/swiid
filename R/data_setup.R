@@ -4,8 +4,6 @@ p_load(readr, readxl,
        tidyr, stringr, magrittr, dplyr, purrr,
        countrycode)
 p_load_gh("leeper/tabulizerjars", "leeper/tabulizer") # read PDF tables
-devtools::source_gist(4676064) # as.data.frame.list for CEPALStat
-
 
 # check if WB gini info is now available and library(wbstats) or library(WDI)
 
@@ -27,10 +25,10 @@ format_lis <- function(x) {
                             str_extract(X1, "\\d{2}") %>% as.numeric() + 2000),
               gini = (str_trim(X2) %>% as.numeric())*100,
               gini_se = (str_trim(X3) %>% as.numeric())*100,
-              equiv_scale = str_extract(x, "(?<=_).*"),
               welfare_def = str_extract(x, "[^_]*"),
+              equiv_scale = str_extract(x, "(?<=_).*"),
               monetary = FALSE,
-              series = "LIS",
+              series = paste("LIS", welfare_def, equiv_scale),
               source1 = "LISSY",
               page = "",
               link = paste0("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/",
@@ -56,7 +54,7 @@ format_lis_xtra <- function(x) {
               equiv_scale = "sqrt",
               welfare_def = "net",
               monetary = FALSE,
-              series = "LIS",
+              series = "LIS net sqrt",
               source1 = ifelse(country=="New Zealand", "Statistics New Zealand 1999", "LISSY"),
               page = ifelse(country=="New Zealand", "73", ""),
               link = ifelse(country=="New Zealand", 
@@ -76,6 +74,7 @@ lis <- lis_files %>%
   arrange(country, year, welfare_def, equiv_scale)
 
 
+
 # Socio-Economic Database for Latin America and the Caribbean (SEDLAC)
 format_sedlac <- function(df, sheet, link, es) {
   x <- df
@@ -86,23 +85,30 @@ format_sedlac <- function(df, sheet, link, es) {
   x %<>% filter(!is.na(heading))
   countries_sedlac <- "Argentina|Bolivia|Brazil|Chile|Colombia|Costa|Dominican|Ecuador|El Salvador|Guatemala|Honduras|Mexico|Nicaragua|Panama|Paraguay|Peru|Uruguay|Venezuela|Caribbean|Belice|Guyana|Haiti|Jamaica|Suriname"
   x$h_co <- str_detect(x$heading, countries_sedlac)
-  x$country <- ifelse(x$h_co, x$heading, NA)
-  x$country <- c(NA, zoo::na.locf(x$country))
-  
+  x$country <- ifelse(x$h_co, str_trim(x$heading), NA)
+  x$country <- c(NA, zoo::na.locf(x$country)) 
+  x$country <- x$country %>% 
+    str_replace("Dominican Rep.", "Dominican Republic") %>% 
+    str_replace("Belice", "Belize")
+    
   x$year <- ifelse(str_detect(x$heading, ".*(\\d{4}).*"),
                    str_replace(x$heading, "(\\d{4}).*", "\\1"), NA)
   
+  x$h_ser <- ((!x$h_co) && is.na(x$year))
   x$series <- ifelse(!x$h_co & is.na(x$year), x$heading, NA)
-  s <- x %>% split(.$country) %>% map_df(zoo::na.locf)
-  x$series <- c(NA, s$series)
-  
-  x %<>% filter(!is.na(gini)) %>%
+  x %<>% group_by(country) %>%
+    mutate(series0 = zoo::na.locf(series, na.rm = FALSE),
+           series = paste("SEDLAC", country, "net", es,
+                   as.numeric(factor(series0, levels = unique(series0)))) %>% 
+             str_replace("NA", "1")) %>% 
+    ungroup() %>% 
+    filter(!is.na(gini)) %>%
     transmute(country = country,
               year = as.numeric(year),
               gini = gini * 100,
               gini_se = se * 100,
-              equiv_scale = es,
               welfare_def = "net",
+              equiv_scale = es,
               monetary = TRUE,
               series = series,
               source1 = "SEDLAC",
@@ -119,7 +125,7 @@ sedlac_pc <- read_excel(path = "data-raw/sedlac.xls",
                         skip = 8)[1:3] %>%
   format_sedlac(sheet = "intervals pci",
                 link = sedlac_link,
-                es = "hhpc") 
+                es = "pc") 
 
 sedlac_ei <- read_excel(path = "data-raw/sedlac.xls",
                         sheet = "intervals ei",
@@ -136,9 +142,6 @@ sedlac_hh <- read_excel(path = "data-raw/sedlac.xls",
                 es = "hh")
 
 sedlac <- rbind(sedlac_ei, sedlac_hh, sedlac_pc)
-sedlac$country <- car::recode(sedlac$country, 
-                              "'Dominican Rep. ' = 'Dominican Republic';
-                              'Belice' = 'Belize'")
 
 rm(sedlac_ei, sedlac_hh, sedlac_pc)
 
@@ -148,16 +151,17 @@ rm(sedlac_ei, sedlac_hh, sedlac_pc)
 # consider informative series var
 cepal_link <- "http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250"
 cepal0 <- cepal_link %>% read_xml() 
-cepal_raw <- cepal0 %>% xml_find_all("//dato") %>% xml_attrs() %>% as.data.frame()
+cepal_extract <- function(x) {
+  cepal0 %>% xml_find_all(x) %>% 
+    xml_attrs() %>% 
+    map_df(function(y) data.frame(as.list(y), stringsAsFactors = FALSE)) %>% 
+    return()
+}
 
-cepal_labels <- cepal0 %>% xml_find_all("//des") %>% 
-  xml_attrs() %>% 
-  as.data.frame() %>% 
-  select(one_of(c("name", "id")))
-
-cepal_notes <- cepal0 %>% xml_find_all("//nota") %>% 
-  xml_attrs() %>% 
-  as.data.frame()
+cepal_raw <- cepal_extract("//dato")
+cepal_labels <- cepal_extract("//des") %>% 
+  select(-`in.`)
+cepal_notes <- cepal_extract("//nota")
 
 cepal <- left_join(cepal_raw, cepal_labels, by = c("dim_208" = "id")) %>%
   mutate(country = countrycode(as.character(name), "country.name", "country.name") %>% 
@@ -165,7 +169,7 @@ cepal <- left_join(cepal_raw, cepal_labels, by = c("dim_208" = "id")) %>%
   filter(!is.na(country)) %>%
   select(-name) %>% 
   left_join(cepal_labels, by = c("dim_29117" = "id")) %>%
-  mutate(year = as.numeric(levels(name))[name]) %>% 
+  mutate(year = as.numeric(name)) %>% 
   select(-name) %>% 
   left_join(cepal_labels, by = c("dim_326" = "id")) %>%
   mutate(area = as.character(name)) %>%
@@ -176,11 +180,11 @@ cepal <- left_join(cepal_raw, cepal_labels, by = c("dim_208" = "id")) %>%
   transmute(year = year,
             gini = as.numeric(as.character(valor)) * 100,
             gini_se = NA,
-            equiv_scale = "hpc",
             welfare_def = "net",
+            equiv_scale = "pc",
             monetary = TRUE,
             notes = ifelse(is.na(descripcion), "", as.character(descripcion)),
-            series = paste("CEPAL", country, "series", as.numeric(factor(notes, levels = unique(notes)))),
+            series = paste("CEPAL", country, "net pc", as.numeric(factor(notes, levels = unique(notes)))),
             source1 = "CEPALStat",
             page = "",
             link = cepal_link) %>% 
@@ -193,32 +197,30 @@ rm(cepal0, cepal_raw, cepal_labels, cepal_notes)
 # OECD Income Distribution Database
 # http://stats.oecd.org > Data by Theme: search "income distribution"; Customize: all countries, ginis only, total pop only, 1974 to latest
 oecd_link <- "http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all"
-oecd0 <- oecd_link %>% readSDMX() %>% as.data.frame() %>% 
-  mutate(country = countrycode(LOCATION, "iso3c", "country.name"),
+oecd0 <- oecd_link %>% 
+  readSDMX() %>% 
+  as.data.frame() %>% 
+  transmute(country = countrycode(LOCATION, "iso3c", "country.name"),
          year = as.numeric(obsTime),
          gini = obsValue * 100,
+         welfare_def = ifelse((MEASURE=="GINI" | MEASURE=="STDG"), "net", 
+                              ifelse(MEASURE=="GINIB", "market", "gross")),
          equiv_scale = "sqrt",   
-         welfare_def = MEASURE,
          monetary = FALSE,
-         series = paste("OECD", tolower(DEFINITION), "definition,", 
+         series = paste("OECD", welfare_def, "sqrt,", tolower(DEFINITION), "def,", 
                         tolower(str_replace(METHODO, "METH", "")), "method"),
          source1 = "OECD",
          page = NA, 
-         link = oecd_link)
+         link = oecd_link,
+         measure = MEASURE)
 
-oecd_se <- oecd0 %>% filter(MEASURE=="STDG") %>% 
-  select(country:series) %>% 
-  mutate(gini_se = gini,
-         welfare_def = "GINI") %>% 
-  select(-gini)
+oecd_se <- oecd0 %>% filter(measure=="STDG" & gini!=0) %>% 
+  mutate(gini_se = gini) %>% 
+  select(-gini, -measure)
 
-oecd <- oecd0 %>% filter(MEASURE!="STDG") %>% 
-  select(country:link) %>% 
-  left_join(oecd_se, by = c("country", "year", "equiv_scale", "welfare_def", "monetary", "series"))
-oecd$welfare_def <- car::recode(oecd$welfare_def, 
-              "'GINI' = 'net';
-              'GINIB' = 'market';
-              'GINIG' = 'gross'")
+oecd <- oecd0 %>% filter(measure!="STDG") %>% 
+  left_join(oecd_se, by = c("country", "year", "equiv_scale", "welfare_def", "monetary", "series", "source1", "page", "link")) %>% 
+  select(-measure)
 
 rm(oecd0, oecd_se)         
 
@@ -233,29 +235,28 @@ eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = FALSE) 
          year = time,
          gini = values,
          gini_se = NA,
-         equiv_scale = "OECDmod",   
          welfare_def = "net",
+         equiv_scale = "OECDmod",   
          monetary = TRUE,
          break_yr = ifelse(is.na(flags) | flags!="b", 0, 1),
          series = "",
          source1 = "Eurostat",
          page = "",
-         link = "http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en",
-         geo = geo) %>% 
-  mutate(country = ifelse(is.na(country), as.character(geo), country)) %>% 
-  select(-geo) %>% 
-  filter(!is.na(gini)) %>% 
+         link = "http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en") %>% 
+  filter(!(is.na(country) | is.na(gini))) %>% 
   group_by(country) %>% 
   arrange(country, year) %>% 
-  mutate(series = paste("Eurostat", country, "series", cumsum(break_yr) + 1)) %>%  # No word from Eurostat which obs cross-nationally comparable
+  mutate(series = paste("Eurostat", country, "net OECDmod", cumsum(break_yr) + 1)) %>%  # No word from Eurostat which obs cross-nationally comparable
   ungroup() %>% 
   select(-break_yr)
 
 
 # Commitment to Equity
-ceq <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/ceq.csv", col_types = "cnnncclcccc")
+ceq <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/ceq.csv", col_types = "cnnncclcccc") %>% 
+  mutate(series = paste("CEQ", welfare_def, equiv_scale))
 
 
 # Combine
-ineq_data <- list(lis, sedlac, cepal, oecd, eurostat, ceq)
-ineq <- bind_rows(ineq_data)
+ineq <- bind_rows(lis, sedlac, cepal, oecd, eurostat, ceq)
+
+
