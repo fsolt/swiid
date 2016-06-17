@@ -1,7 +1,7 @@
 if (!require(pacman)) install.packages("pacman")
 p_load(readr, readxl, 
        eurostat, rsdmx, xml2, 
-       tidyr, stringr, magrittr, dplyr, purrr,
+       tidyr, stringr, magrittr, dplyr, purrr, reshape2,
        countrycode)
 p_load_gh("leeper/tabulizerjars", "leeper/tabulizer") # read PDF tables
 
@@ -256,7 +256,39 @@ ceq <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/c
   mutate(series = paste("CEQ", welfare_def, equiv_scale))
 
 
+# Congressional Budget Office
+cbo_link <- "https://www.cbo.gov/sites/default/files/114th-congress-2015-2016/reports/51361-SupplementalData.xlsx"
+download.file(cbo_link, "data-raw/cbo.xlsx")
+
+cbo <- read_excel("data-raw/cbo.xlsx", sheet = 9, col_names = FALSE, skip = 10) %>% 
+  select(X0:X3) %>% 
+  filter(!is.na(X1)) %>% 
+  transmute(year = as.numeric(X0),
+            market = X1*100,
+            gross = X2*100,
+            net = X3*100) %>% 
+  melt(id.vars = "year", 
+       variable.name = "welfare_def", 
+       value.name = "gini") %>% 
+  mutate(country = "United States",
+         gini_se = NA,
+         equiv_scale = "sqrt",
+         monetary = TRUE,
+         series = paste("CBO", welfare_def, "sqrt"),
+         source1 = "U.S. Congressional Budget Office",
+         page = "",
+         link = cbo_link)
+
 # Combine
-ineq <- bind_rows(lis, sedlac, cepal, oecd, eurostat, ceq)
+
+baseline_series <- "LIS net sqrt"
+baseline <- lis %>% filter(series==baseline_series) %>% 
+  arrange()
+
+ineq <- bind_rows(lis %>% filter(series!=baseline_series),
+                  sedlac, cepal, oecd, eurostat, ceq, cbo) %>% 
+  mutate(ccode = as.numeric(factor(country, levels = unique(country))),
+         tcode = as.integer(year - min(year) + 1),
+         mcode = as.numeric(factor(series, levels = unique(series))))
 
 
