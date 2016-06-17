@@ -1,6 +1,6 @@
 if (!require(pacman)) install.packages("pacman")
 p_load(readr, readxl, 
-       eurostat, rsdmx, xml2, 
+       eurostat, rsdmx, xml2, CANSIM2R,
        tidyr, stringr, magrittr, dplyr, purrr, reshape2,
        countrycode)
 p_load_gh("leeper/tabulizerjars", "leeper/tabulizer") # read PDF tables
@@ -255,8 +255,58 @@ eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = FALSE) 
 ceq <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/ceq.csv", col_types = "cnnncclcccc") %>% 
   mutate(series = paste("CEQ", welfare_def, equiv_scale))
 
+## National Statistics Offices
 
-# Congressional Budget Office
+# Statistics Canada
+statcan <- CANSIM2R:::downloadCANSIM(2060033) %>% 
+  filter(GEO=="Canada") %>% 
+  mutate(equiv_scale = "sqrt",
+         link = "http://www5.statcan.gc.ca/cansim/a26?id=2060033") %>% 
+  bind_rows(CANSIM2R:::downloadCANSIM(2020709) %>% 
+              filter(GEO=="Canada" & FAMILYTYPE=="All family units") %>% 
+              mutate(equiv_scale = "pc",
+                     link = "http://www5.statcan.gc.ca/cansim/a26?id=2020709")) %>% 
+  bind_rows(CANSIM2R:::downloadCANSIM(2020705) %>% 
+              filter(GEO=="Canada" & FAMILYTYPE=="All family units") %>% 
+              mutate(equiv_scale = "hh",
+                     link = "http://www5.statcan.gc.ca/cansim/a26?id=2020705")) %>% 
+  transmute(country = "Canada",
+            year = Ref_Date,
+            gini = Value,
+            gini_se = gini*.02, # StatCan indicates CV < .02
+            welfare_def = tolower(INCOMECONCEPT) %>% 
+              str_extract("market|after-tax|total") %>% 
+              str_replace("after-tax", "net") %>% 
+              str_replace("total", "gross"),
+            equiv_scale = equiv_scale,
+            monetary = TRUE,
+            series = paste("Statistics Canada", welfare_def, equiv_scale),
+            source1 = "Statistics Canada",
+            page = "",
+            link = link)
+
+# U.K. Institute for Fiscal Studies
+ifs_link <- "http://www.ifs.org.uk/uploads/publications/bns/bn19figs_update2015.xlsx"
+download.file(ifs_link, "data-raw/ifs.xlsx")
+
+ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3) %>%
+  select(X1, X2, X3) %>% 
+  melt(id.vars = c(1,2),
+       value.name = "gini",
+       na.rm = TRUE) %>% 
+  transmute(country = "United Kingdom",
+            year = X1,
+            gini = gini,
+            gini_se = NA,
+            welfare_def = "net",
+            equiv_scale = "adeq",
+            monetary = TRUE,
+            series = paste("IFS", X2, "net adeq"),
+            source1 = "Institute for Fiscal Studies",
+            page = "",
+            link = ifs_link)
+
+# U.S. Congressional Budget Office
 cbo_link <- "https://www.cbo.gov/sites/default/files/114th-congress-2015-2016/reports/51361-SupplementalData.xlsx"
 download.file(cbo_link, "data-raw/cbo.xlsx")
 
@@ -279,8 +329,8 @@ cbo <- read_excel("data-raw/cbo.xlsx", sheet = 9, col_names = FALSE, skip = 10) 
          page = "",
          link = cbo_link)
 
-# Combine
-
+## Combine
+# first, get baseline series and order by data-richness
 baseline_series <- "LIS net sqrt"
 baseline <- lis %>% filter(series==baseline_series) %>%
   group_by(country) %>% 
@@ -289,14 +339,16 @@ baseline <- lis %>% filter(series==baseline_series) %>%
   arrange(desc(lis_count)) %>% 
   select(-lis_count)
 
-ineq <- bind_rows(lis %>% filter(series!=baseline_series),
-                  sedlac, cepal, oecd, eurostat, ceq, cbo) %>%
+# then combine with other series ordered by data-richness
+ineq <- bind_rows(#lis %>% filter(series!=baseline_series), ###temporarily!
+                  sedlac, cepal, oecd, eurostat, ceq, statcan, ifs, cbo) %>%
   group_by(country) %>% 
   mutate(oth_count = n()) %>% 
   ungroup() %>% 
   arrange(desc(oth_count)) %>% 
   select(-oth_count) %>% 
   bind_rows(baseline, .) %>% 
+  filter(!is.na(gini_se)) %>%  ### temporarily!!!
   mutate(ccode = as.numeric(factor(country, levels = unique(country))),
          tcode = as.integer(year - min(year) + 1),
          mcode = as.numeric(factor(series, levels = unique(series))))
