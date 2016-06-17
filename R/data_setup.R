@@ -23,8 +23,8 @@ format_lis <- function(x) {
               year = ifelse(str_extract(X1, "\\d{2}") %>% as.numeric() > 66,
                             str_extract(X1, "\\d{2}") %>% as.numeric() + 1900,
                             str_extract(X1, "\\d{2}") %>% as.numeric() + 2000),
-              gini = (str_trim(X2) %>% as.numeric())*100,
-              gini_se = (str_trim(X3) %>% as.numeric())*100,
+              gini = (str_trim(X2) %>% as.numeric()),
+              gini_se = (str_trim(X3) %>% as.numeric()),
               welfare_def = str_extract(x, "[^_]*"),
               equiv_scale = str_extract(x, "(?<=_).*"),
               monetary = FALSE,
@@ -49,8 +49,8 @@ format_lis_xtra <- function(x) {
               year = ifelse(str_extract(X1, "\\d{2}") %>% as.numeric() > 66,
                             str_extract(X1, "\\d{2}") %>% as.numeric() + 1900,
                             str_extract(X1, "\\d{2}") %>% as.numeric() + 2000),
-              gini = (str_trim(X2) %>% as.numeric())*100,
-              gini_se = (str_trim(X3) %>% as.numeric())*100,
+              gini = (str_trim(X2) %>% as.numeric()),
+              gini_se = (str_trim(X3) %>% as.numeric()),
               equiv_scale = "sqrt",
               welfare_def = "net",
               monetary = FALSE,
@@ -105,8 +105,8 @@ format_sedlac <- function(df, sheet, link, es) {
     filter(!is.na(gini)) %>%
     transmute(country = country,
               year = as.numeric(year),
-              gini = gini * 100,
-              gini_se = se * 100,
+              gini = gini,
+              gini_se = se,
               welfare_def = "net",
               equiv_scale = es,
               monetary = TRUE,
@@ -178,7 +178,7 @@ cepal <- left_join(cepal_raw, cepal_labels, by = c("dim_208" = "id")) %>%
   left_join(cepal_notes, by = c("ids_notas" = "id")) %>%
   group_by(country, area) %>% 
   transmute(year = year,
-            gini = as.numeric(as.character(valor)) * 100,
+            gini = as.numeric(as.character(valor)),
             gini_se = NA,
             welfare_def = "net",
             equiv_scale = "pc",
@@ -202,7 +202,7 @@ oecd0 <- oecd_link %>%
   as.data.frame() %>% 
   transmute(country = countrycode(LOCATION, "iso3c", "country.name"),
          year = as.numeric(obsTime),
-         gini = obsValue * 100,
+         gini = obsValue,
          welfare_def = ifelse((MEASURE=="GINI" | MEASURE=="STDG"), "net", 
                               ifelse(MEASURE=="GINIB", "market", "gross")),
          equiv_scale = "sqrt",   
@@ -233,7 +233,7 @@ eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = FALSE) 
               rename(geo_code = geo), by = c("geo_code", "time", "values")) %>% 
   transmute(country = countrycode(as.character(geo), "country.name", "country.name"),
          year = time,
-         gini = values,
+         gini = values/100,
          gini_se = NA,
          welfare_def = "net",
          equiv_scale = "OECDmod",   
@@ -264,9 +264,9 @@ cbo <- read_excel("data-raw/cbo.xlsx", sheet = 9, col_names = FALSE, skip = 10) 
   select(X0:X3) %>% 
   filter(!is.na(X1)) %>% 
   transmute(year = as.numeric(X0),
-            market = X1*100,
-            gross = X2*100,
-            net = X3*100) %>% 
+            market = X1,
+            gross = X2,
+            net = X3) %>% 
   melt(id.vars = "year", 
        variable.name = "welfare_def", 
        value.name = "gini") %>% 
@@ -282,11 +282,21 @@ cbo <- read_excel("data-raw/cbo.xlsx", sheet = 9, col_names = FALSE, skip = 10) 
 # Combine
 
 baseline_series <- "LIS net sqrt"
-baseline <- lis %>% filter(series==baseline_series) %>% 
-  arrange()
+baseline <- lis %>% filter(series==baseline_series) %>%
+  group_by(country) %>% 
+  mutate(lis_count = n()) %>% 
+  ungroup() %>% 
+  arrange(desc(lis_count)) %>% 
+  select(-lis_count)
 
 ineq <- bind_rows(lis %>% filter(series!=baseline_series),
-                  sedlac, cepal, oecd, eurostat, ceq, cbo) %>% 
+                  sedlac, cepal, oecd, eurostat, ceq, cbo) %>%
+  group_by(country) %>% 
+  mutate(oth_count = n()) %>% 
+  ungroup() %>% 
+  arrange(desc(oth_count)) %>% 
+  select(-oth_count) %>% 
+  bind_rows(baseline, .) %>% 
   mutate(ccode = as.numeric(factor(country, levels = unique(country))),
          tcode = as.integer(year - min(year) + 1),
          mcode = as.numeric(factor(series, levels = unique(series))))
