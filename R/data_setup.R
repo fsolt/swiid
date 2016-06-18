@@ -285,6 +285,7 @@ statcan <- CANSIM2R:::downloadCANSIM(2060033) %>%
             page = "",
             link = link)
 
+
 # U.K. Institute for Fiscal Studies
 ifs_link <- "http://www.ifs.org.uk/uploads/publications/bns/bn19figs_update2015.xlsx"
 download.file(ifs_link, "data-raw/ifs.xlsx")
@@ -295,7 +296,7 @@ ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3) %
        value.name = "gini",
        na.rm = TRUE) %>% 
   transmute(country = "United Kingdom",
-            year = X1,
+            year = as.numeric(X1),
             gini = gini,
             gini_se = NA,
             welfare_def = "net",

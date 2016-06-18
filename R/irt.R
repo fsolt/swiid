@@ -49,8 +49,8 @@ irt_code <- '
   }
   parameters {
     real<lower=0, upper=1> gini[K, T]; // SWIID gini estimate for baseline in country k at time t
-    real<lower=0> gamma[M]; // discrimination of series m (see Stan Development Team 2015, 61; Gelman and Hill 2007, 314-320; McGann 2014, 118-120 (using 1/alpha))
-    real<lower=0> sigma_gamma;  // scale of series discriminations (see Stan Development Team 2015, 61)
+    real<lower=0> rho[M]; // discrimination of series m (see Stan Development Team 2015, 61; Gelman and Hill 2007, 314-320; McGann 2014, 118-120 (using 1/alpha))
+    real<lower=0> sigma_rho;  // scale of series discriminations (see Stan Development Team 2015, 61)
     real<lower=0, upper=1> sigma_gini[K]; 	// country variance parameter (see Linzer and Stanton 2012, 12)
   }
   transformed parameters {
@@ -59,16 +59,19 @@ irt_code <- '
       if (mm[n]==1) 
         gini_t[n] <- 1;
       else
-        gini_t[n] <- inv_logit(gamma[mm[n]] * gini[kk[n], tt[n]]);
+        
     }
   }
   model {
-    gamma ~ lognormal(0, sigma_gamma);
-    sigma_gamma ~ cauchy(0, 1);
+    rho ~ lognormal(0, sigma_rho);
+    sigma_rho ~ cauchy(0, 1);
 
+    gini_t ~ normal(gini_m, gini_se)
     for (n in 1:N) {
       if (mm[n]==1)
         gini[kk[n], tt[n]] ~ normal(gini_m[n], gini_se[n]); // use baseline series where observed
+      else
+        gini[n] <- normal(rho[mm[n]] * gini_t[kk[n], tt[n]], sigma_rho[mm[n]]);
       // prior for gini for the next observed year by country as well as for all intervening missing years
       if (n < N) {
         if (tt[n] < T) {
