@@ -335,12 +335,13 @@ cbo <- read_excel("data-raw/cbo.xlsx", sheet = 9, col_names = FALSE, skip = 10) 
 ## Combine
 # first, get baseline series and order by data-richness
 baseline_series <- "LIS net sqrt"
-baseline <- lis %>% filter(series==baseline_series) %>%
+baseline <- lis %>% filter(series==baseline_series) %>% 
+  rename(gini_b = gini,
+         gini_b_se = gini_se) %>%
   group_by(country) %>% 
   mutate(lis_count = n()) %>% 
   ungroup() %>% 
-  arrange(desc(lis_count)) %>% 
-  select(-lis_count)
+  arrange(desc(lis_count)) 
 
 # then combine with other series ordered by data-richness
 ineq0 <- bind_rows(lis %>% filter(series!=baseline_series), 
@@ -354,12 +355,16 @@ ineq0 <- bind_rows(lis %>% filter(series!=baseline_series),
   select(-oth_count) 
 
 # obs with baseline data
-ineq_bl <- ineq0 %>% right_join(baseline %>% select(country, year, gini, gini_se),
-                               by = c("country", "year")) %>% 
-  filter(!is.na(gini_m))
+ineq_bl <- ineq0 %>% 
+  right_join(baseline %>% 
+               select(country, year, gini_b, gini_b_se, lis_count),
+             by = c("country", "year")) %>% 
+  filter(!is.na(gini_m)) %>% 
+  arrange(desc(lis_count)) %>% 
+  select(-lis_count)
 
 # obs with no baseline data
-ineq_nbl <- ineq0 %>% anti_join(ineq_bl %>% select(-gini, -gini_se), 
+ineq_nbl <- ineq0 %>% anti_join(ineq_bl %>% select(-gini_b, -gini_b_se), 
              by = c("country", "year"))
 
 ineq <- bind_rows(ineq_bl, ineq_nbl) %>% 
