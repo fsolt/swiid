@@ -51,8 +51,6 @@ irt_code <- '
     real<lower=0, upper=1> gini[K, T]; // SWIID gini estimate for baseline in country k at time t
     real<lower=0> gamma[M]; // discrimination of series m (see Stan Development Team 2015, 61; Gelman and Hill 2007, 314-320; McGann 2014, 118-120 (using 1/alpha))
     real<lower=0> sigma_gamma;  // scale of series discriminations (see Stan Development Team 2015, 61)
-    real<lower=0, upper=1> beta[M]; // position ("difficulty") of series m (see Stan Development Team 2015, 61; Gelman and Hill 2007, 314-320; McGann 2014, 118-120 (using lambda))
-    real<lower=0> sigma_beta;   // scale of series positions (cf. Stan Development Team 2015, 61)
     real<lower=0, upper=1> sigma_gini[K]; 	// country variance parameter (see Linzer and Stanton 2012, 12)
   }
   transformed parameters {
@@ -61,14 +59,12 @@ irt_code <- '
       if (mm[n]==1) 
         gini_t[n] <- 1;
       else
-        gini_t[n] <- inv_logit(gamma[mm[n]] * (gini[kk[n], tt[n]] - beta[mm[n]]));
+        gini_t[n] <- inv_logit(gamma[mm[n]] * gini[kk[n], tt[n]]);
     }
   }
   model {
-    beta ~ normal(0, sigma_beta);
     gamma ~ lognormal(0, sigma_gamma);
-    sigma_beta ~ cauchy(0, 5);
-    sigma_gamma ~ cauchy(0, 5);
+    sigma_gamma ~ cauchy(0, 1);
 
     for (n in 1:N) {
       if (mm[n]==1)
