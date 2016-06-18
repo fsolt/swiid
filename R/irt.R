@@ -1,74 +1,72 @@
-library(rstan)
-library(beepr)
+p_load(rstan, beepr)
 
-# dcpo <- function(x,
-#                  model_code = NULL,
-#                  seed = 324,
-#                  iter = 100,
-#                  cores = 1,
-#                  chains = 4)
-
-### Delete these when turning into a function
 seed <- 324
 iter <- 1000
 chains <- 4
 cores <- chains
-x <- ineq
-###
+
+x <- ineq %>% filter(country=="Canada" & !is.na(gini_m_se)) %>% 
+  mutate(tcode = tcode - min(tcode) + 1,
+         mcode = mcode %>% factor %>% as.numeric)
 
 
 source_data <- list(  K=max(x$ccode),
                       T=max(x$tcode),
                       M=max(x$mcode),
-                      N=length(x$gini),
+                      N=length(x$gini_m),
+                      N_b=length(x$gini_b[!is.na(x$gini_b)]),
                       kk=x$ccode,
                       tt=x$tcode,
                       mm=x$mcode,
-                      gini_m=x$gini,
-                      gini_se=x$gini_se
+                      gini_m=x$gini_m,
+                      gini_m_se=x$gini_m_se,
+                      gini_b=x$gini_b[!is.na(x$gini_b)],
+                      gini_b_se=x$gini_b_se[!is.na(x$gini_b_se)]
 )
 
-irt_code <- '
-  data {
-    int<lower=1> K;     		// number of countries
-    int<lower=1> T; 				// number of years
-    int<lower=1> M; 				// number of series
-    int<lower=1> N; 				// number of KTM observations
-    int<lower=1, upper=K> kk[N]; 	// country for observation n
-    int<lower=1, upper=T> tt[N]; 	// year for observation n
-    int<lower=1, upper=M> mm[N];  // series for observation n
-    real<lower=0, upper=1> gini_m[N]; 	// measured gini for observation n
-    real<lower=0, upper=1> gini_se[N];  // standard error of measured gini for observation n
-
-  }
+model_code <- '
+  data{
+    int<lower=1> K;     		                // number of countries
+    int<lower=1> T; 				                // number of years
+    int<lower=1> M; 				                // number of series
+    int<lower=0> N;                         // total number of observations
+    int<lower=0> N_b;                       // number of observations with baseline
+    int<lower=1, upper=K> kk[N]; 	          // country for observation n
+    int<lower=1, upper=T> tt[N]; 	          // year for observation n
+    int<lower=1, upper=M> mm[N];            // series for observation n
+    real<lower=0, upper=1> gini_m[N]; 	    // measured gini for observation n
+    real<lower=0, upper=1> gini_m_se[N];    // std error of measured gini for obs n
+    real<lower=0, upper=1> gini_b[N_b];     // baseline gini for obs n
+    real<lower=0, upper=1> gini_b_se[N_b];  // baseline gini for obs n
+  }  
   transformed data {
     int G[N-1];				// number of missing years until next observed country-year (G for "gap")
     for (n in 1:N-1) {
-        G[n] <- tt[n+1] - tt[n] - 1;
+      G[n] <- tt[n+1] - tt[n] - 1;
     }
   }
   parameters {
     real<lower=0, upper=1> gini[K, T]; // SWIID gini estimate for baseline in country k at time t
-    real<lower=0, upper=1> gini_t[N]; // unknown "true" gini for obs n given gini_m and gini_se
+    real<lower=0, upper=1> gini_t[N]; // unknown "true" gini for obs n given gini_m and gini_m_se
     real<lower=0> rho[M]; // discrimination of series m (see Stan Development Team 2015, 61; Gelman and Hill 2007, 314-320; McGann 2014, 118-120 (using 1/alpha))
     real<lower=0> sigma_rho[M];  // scale of series discriminations (see Stan Development Team 2015, 61)
     real<lower=0, upper=1> sigma_gini[K]; 	// country variance parameter (see Linzer and Stanton 2012, 12)
   }
   model {
-    rho ~ lognormal(0, sigma_rho);
-    sigma_rho ~ cauchy(0, 1);
-
-    gini_t ~ normal(gini_m, gini_se);
+    rho ~ lognormal(1, sigma_rho);
+    sigma_rho ~ cauchy(0, .5);
+    
+    gini_t ~ normal(gini_m, gini_m_se);
     for (n in 1:N) {
-      if (mm[n]==1)
-        gini[kk[n], tt[n]] ~ normal(gini_m[n], gini_se[n]); // use baseline series where observed
+      if (n<=N_b)
+        gini[kk[n], tt[n]] ~ normal(gini_b[n], gini_b_se[n]); // use baseline series where observed
       else
         gini[kk[n], tt[n]] ~ normal(rho[mm[n]] * gini_t[n], sigma_rho[mm[n]]);
       // prior for gini for the next observed year by country as well as for all intervening missing years
       if (n < N) {
         if (tt[n] < T) {
           for (g in 0:G[n]) {
-              gini[kk[n], tt[n]+g+1] ~ normal(gini[kk[n], tt[n]+g], sigma_gini[kk[n]]);
+            gini[kk[n], tt[n]+g+1] ~ normal(gini[kk[n], tt[n]+g], sigma_gini[kk[n]]);
           }
         }
       }
@@ -77,10 +75,10 @@ irt_code <- '
 '
 
 start <- proc.time()
-out1 <- stan(model_code = irt_code,
+out1 <- stan(model_code = model_code,
              data = source_data,
              seed = seed,
-             iter = 120,
+             iter = 10000,
              cores = cores,
              chains = chains,
              control = list(max_treedepth = 20,
