@@ -49,29 +49,21 @@ irt_code <- '
   }
   parameters {
     real<lower=0, upper=1> gini[K, T]; // SWIID gini estimate for baseline in country k at time t
-    real<lower=0> rho[M]; // discrimination of series m (see Stan Development Team 2015, 61; Gelman and Hill 2007, 314-320; McGann 2014, 118-120 (using 1/alpha))
-    real<lower=0> sigma_rho;  // scale of series discriminations (see Stan Development Team 2015, 61)
-    real<lower=0, upper=1> sigma_gini[K]; 	// country variance parameter (see Linzer and Stanton 2012, 12)
-  }
-  transformed parameters {
     real<lower=0, upper=1> gini_t[N]; // unknown "true" gini for obs n given gini_m and gini_se
-    for (n in 1:N) {
-      if (mm[n]==1) 
-        gini_t[n] <- 1;
-      else
-        
-    }
+    real<lower=0> rho[M]; // discrimination of series m (see Stan Development Team 2015, 61; Gelman and Hill 2007, 314-320; McGann 2014, 118-120 (using 1/alpha))
+    real<lower=0> sigma_rho[M];  // scale of series discriminations (see Stan Development Team 2015, 61)
+    real<lower=0, upper=1> sigma_gini[K]; 	// country variance parameter (see Linzer and Stanton 2012, 12)
   }
   model {
     rho ~ lognormal(0, sigma_rho);
     sigma_rho ~ cauchy(0, 1);
 
-    gini_t ~ normal(gini_m, gini_se)
+    gini_t ~ normal(gini_m, gini_se);
     for (n in 1:N) {
       if (mm[n]==1)
         gini[kk[n], tt[n]] ~ normal(gini_m[n], gini_se[n]); // use baseline series where observed
       else
-        gini[n] <- normal(rho[mm[n]] * gini_t[kk[n], tt[n]], sigma_rho[mm[n]]);
+        gini[kk[n], tt[n]] ~ normal(rho[mm[n]] * gini_t[n], sigma_rho[mm[n]]);
       // prior for gini for the next observed year by country as well as for all intervening missing years
       if (n < N) {
         if (tt[n] < T) {
@@ -88,9 +80,9 @@ start <- proc.time()
 out1 <- stan(model_code = irt_code,
              data = source_data,
              seed = seed,
-             iter = 100,
+             iter = 120,
              cores = cores,
-             chains = 3,
+             chains = chains,
              control = list(max_treedepth = 20,
                             adapt_delta = .8))
 runtime <- proc.time() - start
