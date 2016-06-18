@@ -53,7 +53,7 @@ model_code <- '
     real<lower=0, upper=1> sigma_gini[K]; 	// country variance parameter (see Linzer and Stanton 2012, 12)
   }
   model {
-    rho ~ lognormal(1, sigma_rho);
+    rho ~ normal(1, sigma_rho);
     sigma_rho ~ cauchy(0, .5);
     
     gini_t ~ normal(gini_m, gini_m_se);
