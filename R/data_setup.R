@@ -236,7 +236,7 @@ eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = FALSE) 
          gini = values/100,
          gini_se = NA,
          welfare_def = "net",
-         equiv_scale = "OECDmod",   
+         equiv_scale = "oecd",   
          monetary = TRUE,
          break_yr = ifelse(is.na(flags) | flags!="b", 0, 1),
          series = "",
@@ -246,7 +246,7 @@ eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = FALSE) 
   filter(!(is.na(country) | is.na(gini))) %>% 
   group_by(country) %>% 
   arrange(country, year) %>% 
-  mutate(series = paste("Eurostat", country, "net OECDmod", cumsum(break_yr) + 1)) %>%  # No word from Eurostat which obs cross-nationally comparable
+  mutate(series = paste("Eurostat", country, "net oecd", cumsum(break_yr) + 1)) %>%  # No word from Eurostat which obs cross-nationally comparable
   ungroup() %>% 
   select(-break_yr)
 
@@ -296,11 +296,11 @@ ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3) %
        value.name = "gini",
        na.rm = TRUE) %>% 
   transmute(country = "United Kingdom",
-            year = as.numeric(X1),
+            year = str_replace(X1, "(\\d{2})\\d{2}-(\\d{2})", "\\1\\2") %>% as.numeric(),
             gini = gini,
             gini_se = NA,
             welfare_def = "net",
-            equiv_scale = "adeq",
+            equiv_scale = "oecd",
             monetary = TRUE,
             series = paste("IFS", X2, "net adeq"),
             source1 = "Institute for Fiscal Studies",
@@ -341,17 +341,26 @@ baseline <- lis %>% filter(series==baseline_series) %>%
   select(-lis_count)
 
 # then combine with other series ordered by data-richness
-ineq <- bind_rows(#lis %>% filter(series!=baseline_series), ###temporarily!
-                  sedlac, cepal, oecd, eurostat, ceq, statcan, ifs, cbo) %>%
+ineq0 <- bind_rows(lis %>% filter(series!=baseline_series), 
+                  sedlac, cepal, oecd, eurostat, ceq, statcan, ifs, cbo) %>% 
+  rename(gini_m = gini,
+         gini_m_se = gini_se) %>%
   group_by(country) %>% 
   mutate(oth_count = n()) %>% 
   ungroup() %>% 
   arrange(desc(oth_count)) %>% 
-  select(-oth_count) %>% 
-  bind_rows(baseline, .) %>% 
-  filter(!is.na(gini_se)) %>%  ### temporarily!!!
+  select(-oth_count) 
+
+# obs with baseline data
+ineq_bl <- ineq0 %>% right_join(baseline %>% select(country, year, gini, gini_se),
+                               by = c("country", "year")) %>% 
+  filter(!is.na(gini_m))
+
+# obs with no baseline data
+ineq_nbl <- ineq0 %>% anti_join(ineq_bl %>% select(-gini, -gini_se), 
+             by = c("country", "year"))
+
+ineq <- bind_rows(ineq_bl, ineq_nbl) %>% 
   mutate(ccode = as.numeric(factor(country, levels = unique(country))),
          tcode = as.integer(year - min(year) + 1),
          mcode = as.numeric(factor(series, levels = unique(series))))
-
-
