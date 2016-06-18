@@ -20,7 +20,7 @@ format_lis <- function(x) {
                 str_replace("UK", "GB") %>% 
                 countrycode("iso2c", "country.name") %>% 
                 str_replace(", Province of China", ""),
-              year = ifelse(str_extract(X1, "\\d{2}") %>% as.numeric() > 66,
+              year = ifelse(str_extract(X1, "\\d{2}") %>% as.numeric() > 50,
                             str_extract(X1, "\\d{2}") %>% as.numeric() + 1900,
                             str_extract(X1, "\\d{2}") %>% as.numeric() + 2000),
               gini = (str_trim(X2) %>% as.numeric()),
@@ -296,7 +296,9 @@ ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3) %
        value.name = "gini",
        na.rm = TRUE) %>% 
   transmute(country = "United Kingdom",
-            year = str_replace(X1, "(\\d{2})\\d{2}-(\\d{2})", "\\1\\2") %>% as.numeric(),
+            year = ifelse(str_extract(X1, "\\d{2}$") %>% as.numeric() > 50,
+                   str_extract(X1, "\\d{2}$") %>% as.numeric() + 1900,
+                   str_extract(X1, "\\d{2}$") %>% as.numeric() + 2000),
             gini = gini,
             gini_se = NA,
             welfare_def = "net",
