@@ -369,7 +369,7 @@ ineq_nbl <- ineq0 %>% anti_join(ineq_bl %>% select(-gini_b, -gini_b_se),
 
 ineq <- bind_rows(ineq_bl, ineq_nbl) %>% 
   mutate(gini_m_se = ifelse(!is.na(gini_m_se), gini_m_se,
-                            quantile(gini_m_se, .99, na.rm = TRUE)),
+                            quantile(gini_m_se/gini_m, .99, na.rm = TRUE)*gini_m),
          ccode = as.numeric(factor(country, levels = unique(country))),
          tcode = as.integer(year - min(year) + 1),
          mcode = as.numeric(factor(series, levels = unique(series))))
