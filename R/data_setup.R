@@ -1,7 +1,7 @@
 if (!require(pacman)) install.packages("pacman")
 p_load(readr, readxl, 
        eurostat, rsdmx, xml2, CANSIM2R,
-       tidyr, stringr, magrittr, dplyr, purrr, reshape2,
+       tidyr, stringr, magrittr, dplyr, purrr,
        countrycode)
 p_load_gh("leeper/tabulizerjars", "leeper/tabulizer") # read PDF tables
 
@@ -176,20 +176,20 @@ cepal <- left_join(cepal_raw, cepal_labels, by = c("dim_208" = "id")) %>%
   filter(area == "National" | (area == "Urban" & (country == "Argentina" | country == "Uruguay"))) %>% 
   select(-name) %>% 
   left_join(cepal_notes, by = c("ids_notas" = "id")) %>%
-  group_by(country, area) %>% 
+  group_by(country) %>% 
   transmute(year = year,
             gini = as.numeric(as.character(valor)),
             gini_se = NA,
             welfare_def = "net",
             equiv_scale = "pc",
             monetary = TRUE,
-            notes = ifelse(is.na(descripcion), "", as.character(descripcion)),
+            notes = paste(area, ifelse(is.na(descripcion), "", as.character(descripcion))),
             series = paste("CEPAL", country, "net pc", as.numeric(factor(notes, levels = unique(notes)))),
             source1 = "CEPALStat",
-            page = "",
+            page = area,
             link = cepal_link) %>% 
   ungroup() %>% 
-  select(-notes, -area)
+  select(-notes)
 
 rm(cepal0, cepal_raw, cepal_labels, cepal_notes)
 
@@ -304,7 +304,7 @@ ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3) %
             welfare_def = "net",
             equiv_scale = "oecd",
             monetary = TRUE,
-            series = paste("IFS", X2, "net adeq"),
+            series = paste("IFS", X2, welfare_def, equiv_scale),
             source1 = "Institute for Fiscal Studies",
             page = "",
             link = ifs_link)
@@ -363,9 +363,15 @@ ineq_bl <- ineq0 %>%
   arrange(desc(lis_count)) %>% 
   select(-lis_count)
 
-# obs with no baseline data
+# obs with no baseline data from series with some baseline data
 ineq_nbl <- ineq0 %>% anti_join(ineq_bl %>% select(-gini_b, -gini_b_se), 
              by = c("country", "year"))
+
+
+
+# obs from series with no baseline data
+
+
 
 ineq <- bind_rows(ineq_bl, ineq_nbl) %>% 
   mutate(gini_m_se = ifelse(!is.na(gini_m_se), gini_m_se,
@@ -373,3 +379,11 @@ ineq <- bind_rows(ineq_bl, ineq_nbl) %>%
          ccode = as.numeric(factor(country, levels = unique(country))),
          tcode = as.integer(year - min(year) + 1),
          mcode = as.numeric(factor(series, levels = unique(series))))
+
+
+##
+ineq_l <- bind_rows(lis, 
+          sedlac, cepal, oecd, eurostat, ceq, statcan, ifs, cbo)
+
+ineq_w <- ineq_l %>% spread(key = series, value = gini)
+
