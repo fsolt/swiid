@@ -5,8 +5,9 @@ iter <- 1000
 chains <- 4
 cores <- chains
 
-x <- ineq %>% filter(country=="Canada" & !is.na(gini_m_se)) %>% 
-  mutate(tcode = tcode - min(tcode) + 1,
+x <- ineq %>% filter(country=="United Kingdom") %>% 
+  mutate(ccode = ccode %>% factor %>% as.numeric,
+         tcode = tcode - min(tcode) + 1,
          mcode = mcode %>% factor %>% as.numeric)
 
 
@@ -78,7 +79,7 @@ start <- proc.time()
 out1 <- stan(model_code = model_code,
              data = source_data,
              seed = seed,
-             iter = 10000,
+             iter = 1000,
              cores = cores,
              chains = chains,
              control = list(max_treedepth = 20,
