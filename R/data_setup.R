@@ -232,7 +232,7 @@ eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = FALSE) 
   left_join(get_eurostat("ilc_di12", time_format = "num", keepFlags = TRUE) %>%
               rename(geo_code = geo), by = c("geo_code", "time", "values")) %>% 
   transmute(country = countrycode(as.character(geo), "country.name", "country.name"),
-         year = time,
+         year = time - (!(country=="United Kingdom" | country=="Ireland")), #eurostat data is survey year not ref year except in UK and IE <http://ec.europa.eu/eurostat/cache/metadata/en/ilc_esms.htm#ref_period>
          gini = values/100,
          gini_se = NA,
          welfare_def = "net",
