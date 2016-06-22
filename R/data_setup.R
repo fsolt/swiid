@@ -257,6 +257,45 @@ ceq <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/c
 
 ## National Statistics Offices
 
+# Australian Bureau of Statistics
+abs_link <- "http://www.abs.gov.au/AUSSTATS/subscriber.nsf/log?openagent&6523DO00001_201314.zip&6523.0&Data%20Cubes&4F00682720AFA825CA257EB5001B77B9&0&2013-14&16.12.2015&Latest"
+download.file(abs_link, "data-raw/abs.zip")
+abs <- unzip("data-raw/abs.zip") %>% read_csv()
+
+abs_link <- "http://www.abs.gov.au/AUSSTATS/subscriber.nsf/log?openagent&6523DO00001_201314.xls&6523.0&Data%20Cubes&4F00682720AFA825CA257EB5001B77B9&0&2013-14&16.12.2015&Latest"
+download.file(abs_link, "data-raw/abs.xls")
+
+abs_format <- function(sheet, wd, es) {
+  x <- read_excel("data-raw/abs.xls",
+                  sheet = sheet,
+                  skip = 4) %>% `[`(c(38, 90), 3:15) %>%
+    mutate(var = c("gini", "gini_se")) %>% 
+    gather(year, value, -var) %>% 
+    spread(var, value) %>% 
+    separate(year, into = c("year", "series"), sep = "\\(", fill = "right") %>% 
+    transmute(country = "Australia",
+              year = ifelse(str_extract(year, "\\d{2}$") %>% as.numeric() > 50,
+                            str_extract(year, "\\d{2}$") %>% as.numeric() + 1900,
+                            str_extract(year, "\\d{2}$") %>% as.numeric() + 2000),
+              gini = as.numeric(gini),
+              gini_se = as.numeric(gini_se)/100 * gini,
+              welfare_def = wd,
+              equiv_scale = es,
+              monetary = FALSE,
+              series = paste("ABS", welfare_def, equiv_scale,
+                             as.numeric(factor(str_replace_na(series), levels = unique(str_replace_na(series))))),
+              source1 = "Australian Bureau of Statistics",
+              page = sheet,
+              link = abs_link)
+  return(x)
+}
+       
+abs_ne <- abs_format("Table 1.1", "net", "oecd")
+
+abs_gh <- abs_format("Table 1.2", "gross", "hh")
+
+abs <- bind_rows(abs_ne, abs_gh)
+  
 # Statistics Canada
 statcan <- CANSIM2R:::downloadCANSIM(2060033) %>% 
   filter(GEO=="Canada") %>% 
@@ -284,6 +323,9 @@ statcan <- CANSIM2R:::downloadCANSIM(2060033) %>%
             source1 = "Statistics Canada",
             page = "",
             link = link)
+
+# Statistics New Zealand
+statnz_link <- "http://www.stats.govt.nz/~/media/Statistics/Sub-sites/Progress/Content/CSV%20downloads/Income%20inequality%20source%20data%202015.csv"
 
 
 # U.K. Institute for Fiscal Studies
@@ -351,28 +393,29 @@ ineq0 <- bind_rows(lis %>% filter(series!=baseline_series),
   group_by(country) %>% 
   mutate(oth_count = n()) %>% 
   ungroup() %>% 
-  arrange(desc(oth_count)) %>% 
-  select(-oth_count) 
+  group_by(country, series) %>% 
+  mutate(s_count = n()) %>%
+  ungroup() %>% 
+  arrange(desc(oth_count), desc(s_count))  
+  
 
 # obs with baseline data
 ineq_bl <- ineq0 %>% 
   right_join(baseline %>% 
                select(country, year, gini_b, gini_b_se, lis_count),
              by = c("country", "year")) %>% 
-  filter(!is.na(gini_m)) %>% 
+  filter(!is.na(gini_m)) %>% # drop obs _added_ by merge with baseline
   arrange(desc(lis_count)) %>% 
   select(-lis_count)
 
-# obs with no baseline data from series with some baseline data
+# obs with no baseline data [from series with some baseline data?]
 ineq_nbl <- ineq0 %>% anti_join(ineq_bl %>% select(-gini_b, -gini_b_se), 
              by = c("country", "year"))
-
-
 
 # obs from series with no baseline data
 
 
-
+# combine all
 ineq <- bind_rows(ineq_bl, ineq_nbl) %>% 
   mutate(gini_m_se = ifelse(!is.na(gini_m_se), gini_m_se,
                             quantile(gini_m_se/gini_m, .99, na.rm = TRUE)*gini_m),
@@ -381,9 +424,12 @@ ineq <- bind_rows(ineq_bl, ineq_nbl) %>%
          mcode = as.numeric(factor(series, levels = unique(series))))
 
 
+
+
+
 ##
 ineq_l <- bind_rows(lis, 
-          sedlac, cepal, oecd, eurostat, ceq, statcan, ifs, cbo)
+          sedlac, cepal, oecd, eurostat, ceq, abs, statcan, ifs, cbo)
 
 ineq_w <- ineq_l %>% spread(key = series, value = gini)
 
