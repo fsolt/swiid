@@ -236,7 +236,7 @@ eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = FALSE) 
          gini = values/100,
          gini_se = NA,
          welfare_def = "net",
-         equiv_scale = "oecd",   
+         equiv_scale = "oecdm",   
          monetary = TRUE,
          break_yr = ifelse(is.na(flags) | flags!="b", 0, 1),
          series = "",
@@ -246,7 +246,7 @@ eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = FALSE) 
   filter(!(is.na(country) | is.na(gini))) %>% 
   group_by(country) %>% 
   arrange(country, year) %>% 
-  mutate(series = paste("Eurostat", country, "net oecd", cumsum(break_yr) + 1)) %>%  # No word from Eurostat which obs cross-nationally comparable
+  mutate(series = paste("Eurostat", country, "net oecdm", cumsum(break_yr) + 1)) %>%  # No word from Eurostat which obs cross-nationally comparable
   ungroup() %>% 
   select(-break_yr)
 
@@ -290,7 +290,7 @@ abs_format <- function(sheet, wd, es) {
   return(x)
 }
        
-abs_ne <- abs_format("Table 1.1", "net", "oecd")
+abs_ne <- abs_format("Table 1.1", "net", "oecdm")
 
 abs_gh <- abs_format("Table 1.2", "gross", "hh")
 
@@ -344,7 +344,7 @@ ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3) %
             gini = gini,
             gini_se = NA,
             welfare_def = "net",
-            equiv_scale = "oecd",
+            equiv_scale = "oecdm",
             monetary = TRUE,
             series = paste("IFS", X2, welfare_def, equiv_scale),
             source1 = "Institute for Fiscal Studies",
@@ -374,6 +374,13 @@ cbo <- read_excel("data-raw/cbo.xlsx", sheet = 9, col_names = FALSE, skip = 10) 
          page = "",
          link = cbo_link)
 
+
+## Added data
+added_data <- read_csv("data-raw/fs_added_data.csv",
+                       col_types = "cnnncclcccc")
+
+
+
 ## Combine
 # first, get baseline series and order by data-richness
 baseline_series <- "LIS net sqrt"
@@ -387,7 +394,9 @@ baseline <- lis %>% filter(series==baseline_series) %>%
 
 # then combine with other series ordered by data-richness
 ineq0 <- bind_rows(lis %>% filter(series!=baseline_series), 
-                  sedlac, cepal, oecd, eurostat, ceq, statcan, ifs, cbo) %>% 
+                  sedlac, cepal, oecd, eurostat, ceq,
+                  abs, statcan, ifs, cbo,
+                  added_data) %>% 
   rename(gini_m = gini,
          gini_m_se = gini_se) %>%
   group_by(country) %>% 
