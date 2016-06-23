@@ -39,7 +39,7 @@ k <- x %>% group_by(country) %>% summarize(
 
 
 gini_res2 <- merge(gini_res, k, all=T) %>% 
-  mutate(year = firstyr + tcode - 1) %>% 
+  mutate(year = min(firstyr) + tcode - 1) %>% 
   filter(year <= lastyr & year >= firstyr) %>%
   transmute(country = country,
             term = country,
