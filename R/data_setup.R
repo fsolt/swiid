@@ -405,7 +405,7 @@ ceq <- ceq %>%
                          series))
 
 # then combine with other series ordered by data-richness
-ineq0 <- bind_rows(lis %>% filter(series!=baseline_series), 
+ineq0 <- bind_rows(lis, 
                   sedlac, cepal, oecd, eurostat, ceq,
                   abs, statcan, ifs, cbo,
                   added_data) %>% 
@@ -425,8 +425,6 @@ ineq_bl <- ineq0 %>%
   right_join(baseline %>% 
                select(country, year, gini_b, gini_b_se, lis_count),
              by = c("country", "year")) %>% 
-  filter(!is.na(gini_m) &  # drop obs _added_ by merge with baseline
-           !(source1=="LISSY")) %>% # drop other LIS series
   arrange(desc(lis_count)) %>% 
   select(-lis_count)
 
