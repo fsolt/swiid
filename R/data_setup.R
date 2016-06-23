@@ -232,7 +232,7 @@ eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = FALSE) 
   left_join(get_eurostat("ilc_di12", time_format = "num", keepFlags = TRUE) %>%
               rename(geo_code = geo), by = c("geo_code", "time", "values")) %>% 
   transmute(country = countrycode(as.character(geo), "country.name", "country.name"),
-         year = time - (!(country=="United Kingdom" | country=="Ireland")), #eurostat data is survey year not ref year except in UK and IE <http://ec.europa.eu/eurostat/cache/metadata/en/ilc_esms.htm#ref_period>
+         year = time - (!(country=="United Kingdom" | country=="Ireland")), #eurostat reports survey year not ref year except in UK and IE <http://ec.europa.eu/eurostat/cache/metadata/en/ilc_esms.htm#ref_period>
          gini = values/100,
          gini_se = NA,
          welfare_def = "net",
@@ -254,6 +254,8 @@ eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = FALSE) 
 # Commitment to Equity
 ceq <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/ceq.csv", col_types = "cnnncclcccc") %>% 
   mutate(series = paste("CEQ", welfare_def, equiv_scale))
+
+
 
 ## National Statistics Offices
 
@@ -392,6 +394,16 @@ baseline <- lis %>% filter(series==baseline_series) %>%
   ungroup() %>% 
   arrange(desc(lis_count)) 
 
+# turn cross-country series that do not have baseline's welfare_def into within-country series
+oecd <- oecd %>% 
+  mutate(series = ifelse(welfare_def!=str_extract(baseline_series, "market|net"),
+                         paste("OECD", country, str_replace(series, "OECD ", "")),
+                         series))
+ceq <- ceq %>% 
+  mutate(series = ifelse(welfare_def!=str_extract(baseline_series, "market|net"),
+                         paste("CEQ", country, str_replace(series, "CEQ ", "")),
+                         series))
+
 # then combine with other series ordered by data-richness
 ineq0 <- bind_rows(lis %>% filter(series!=baseline_series), 
                   sedlac, cepal, oecd, eurostat, ceq,
@@ -413,7 +425,8 @@ ineq_bl <- ineq0 %>%
   right_join(baseline %>% 
                select(country, year, gini_b, gini_b_se, lis_count),
              by = c("country", "year")) %>% 
-  filter(!is.na(gini_m)) %>% # drop obs _added_ by merge with baseline
+  filter(!is.na(gini_m) &  # drop obs _added_ by merge with baseline
+           !(source1=="LISSY")) %>% # drop other LIS series
   arrange(desc(lis_count)) %>% 
   select(-lis_count)
 
@@ -434,6 +447,8 @@ ineq <- bind_rows(ineq_bl, ineq_nbl) %>%
 
 
 
+# Should flag series that *only* share obs with baseline (done
+# clumsily above)
 
 
 ##
