@@ -197,7 +197,7 @@ rm(cepal0, cepal_raw, cepal_labels, cepal_notes)
 cepal_sdi <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/repositorio_cepal.tsv") %>% 
   transmute(country = country,
             year = year,
-            gini = gini,
+            gini = gini/100,
             gini_se = NA,
             monetary = str_detect(welfare_def, "Monetary"),
             welfare_def = ifelse(str_detect(welfare_def, "Disposable"), "net",
@@ -494,7 +494,8 @@ ineq <- bind_rows(ineq_bl, ineq_nbl) %>%
 
 
 # Should flag series that *only* share obs with baseline?
-
+# weird: Canada, Finland (a little), 
+# not enough data: China, DR, Egypt
 
 ##
 # ineq_l <- bind_rows(lis, 
