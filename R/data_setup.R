@@ -193,6 +193,22 @@ cepal <- left_join(cepal_raw, cepal_labels, by = c("dim_208" = "id")) %>%
 
 rm(cepal0, cepal_raw, cepal_labels, cepal_notes)
 
+# CEPAL Serie Distribución del Ingreso
+cepal_sdi <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/repositorio_cepal.tsv") %>% 
+  transmute(country = country,
+            year = year,
+            gini = gini,
+            gini_se = NA,
+            monetary = str_detect(welfare_def, "Monetary"),
+            welfare_def = ifelse(str_detect(welfare_def, "Disposable"), "net",
+                                 ifelse(str_detect(welfare_def, "Gross"), "gross",
+                                        "market")),
+            equiv_scale = equiv_scale,
+            series = paste("CEPAL SDI", country, welfare_def, equiv_scale, survey),
+            source1 = source,
+            page = NA,
+            link = link)
+
 
 # OECD Income Distribution Database
 # http://stats.oecd.org > Data by Theme: search "income distribution"; Customize: all countries, ginis only, total pop only, 1974 to latest
@@ -255,6 +271,8 @@ eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = FALSE) 
 ceq <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/ceq.csv", col_types = "cnnncclcccc") %>% 
   mutate(series = paste("CEQ", welfare_def, equiv_scale))
 
+
+# CEPAL
 
 
 ## National Statistics Offices
@@ -345,8 +363,8 @@ statfi <- get_pxweb_data(url = "http://pxwebapi2.stat.fi/PXWeb/api/v1/en/StatFin
                                      Tiedot = c("Gini")),
                          clean = TRUE) %>% 
   transmute(country = "Finland",
-            year = Year,
-            gini = values,
+            year = as.numeric(as.character(Year)),
+            gini = values/100,
             gini_se = NA,
             welfare_def = ifelse(str_detect(`Income concept`, "Disposable"), "net",
                                  ifelse(str_detect(`Income concept`, "Gross"), "gross",
@@ -437,7 +455,7 @@ ceq <- ceq %>%
 
 # then combine with other series ordered by data-richness
 ineq0 <- bind_rows(lis, 
-                  sedlac, cepal, oecd, eurostat, ceq,
+                  sedlac, cepal, cepal_sdi, oecd, eurostat, ceq,
                   abs, statcan, statee, statfi, ifs, cbo,
                   added_data) %>% 
   rename(gini_m = gini,
