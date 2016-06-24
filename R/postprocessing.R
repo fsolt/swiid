@@ -9,7 +9,7 @@ x1_sum$parameter <- rownames(x1_sum)
 # x1_sum <- read_csv("x1.csv")
 # names(x1_sum)[2] <- "mean"
 x1_sum$parameter_type <- gsub("([^[]*).*", "\\1", x1_sum$parameter)
-View(x1_sum)
+# View(x1_sum)
 # View(x1_sum[x1_sum$Rhat>1.1,])
 # View(x1_sum[x1_sum$Rhat>1.2,])
 
