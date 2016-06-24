@@ -1,7 +1,7 @@
 if (!require(pacman)) install.packages("pacman")
 p_load(readr, readxl, 
        eurostat, rsdmx, xml2, CANSIM2R,
-       tidyr, stringr, magrittr, dplyr, purrr,
+       tidyr, stringr, magrittr, dplyr, purrr, 
        countrycode)
 p_load_gh("leeper/tabulizerjars", "leeper/tabulizer") # read PDF tables
 
@@ -260,10 +260,6 @@ ceq <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/c
 ## National Statistics Offices
 
 # Australian Bureau of Statistics
-abs_link <- "http://www.abs.gov.au/AUSSTATS/subscriber.nsf/log?openagent&6523DO00001_201314.zip&6523.0&Data%20Cubes&4F00682720AFA825CA257EB5001B77B9&0&2013-14&16.12.2015&Latest"
-download.file(abs_link, "data-raw/abs.zip")
-abs <- unzip("data-raw/abs.zip") %>% read_csv()
-
 abs_link <- "http://www.abs.gov.au/AUSSTATS/subscriber.nsf/log?openagent&6523DO00001_201314.xls&6523.0&Data%20Cubes&4F00682720AFA825CA257EB5001B77B9&0&2013-14&16.12.2015&Latest"
 download.file(abs_link, "data-raw/abs.xls")
 
@@ -335,15 +331,13 @@ ifs_link <- "http://www.ifs.org.uk/uploads/publications/bns/bn19figs_update2015.
 download.file(ifs_link, "data-raw/ifs.xlsx")
 
 ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3) %>%
-  select(X1, X2, X3) %>% 
-  melt(id.vars = c(1,2),
-       value.name = "gini",
-       na.rm = TRUE) %>% 
+  select(X1, X2, X3) %>%
+  filter(!is.na(X3)) %>% 
   transmute(country = "United Kingdom",
             year = ifelse(str_extract(X1, "\\d{2}$") %>% as.numeric() > 50,
                    str_extract(X1, "\\d{2}$") %>% as.numeric() + 1900,
                    str_extract(X1, "\\d{2}$") %>% as.numeric() + 2000),
-            gini = gini,
+            gini = X3,
             gini_se = NA,
             welfare_def = "net",
             equiv_scale = "oecdm",
@@ -364,9 +358,9 @@ cbo <- read_excel("data-raw/cbo.xlsx", sheet = 9, col_names = FALSE, skip = 10) 
             market = X1,
             gross = X2,
             net = X3) %>% 
-  melt(id.vars = "year", 
-       variable.name = "welfare_def", 
-       value.name = "gini") %>% 
+  gather(key = "welfare_def", 
+         value = "gini",
+         market:net) %>% 
   mutate(country = "United States",
          gini_se = NA,
          equiv_scale = "sqrt",
@@ -419,7 +413,6 @@ ineq0 <- bind_rows(lis,
   ungroup() %>% 
   arrange(desc(oth_count), desc(s_count))  
   
-
 # obs with baseline data
 ineq_bl <- ineq0 %>% 
   right_join(baseline %>% 
@@ -445,13 +438,12 @@ ineq <- bind_rows(ineq_bl, ineq_nbl) %>%
 
 
 
-# Should flag series that *only* share obs with baseline (done
-# clumsily above)
+# Should flag series that *only* share obs with baseline?
 
 
 ##
-ineq_l <- bind_rows(lis, 
-          sedlac, cepal, oecd, eurostat, ceq, abs, statcan, ifs, cbo)
-
-ineq_w <- ineq_l %>% spread(key = series, value = gini)
+# ineq_l <- bind_rows(lis, 
+#           sedlac, cepal, oecd, eurostat, ceq, abs, statcan, ifs, cbo)
+# 
+# ineq_w <- ineq_l %>% spread(key = series, value = gini)
 
