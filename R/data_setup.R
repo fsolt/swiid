@@ -272,8 +272,6 @@ ceq <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/c
   mutate(series = paste("CEQ", welfare_def, equiv_scale))
 
 
-# CEPAL
-
 
 ## National Statistics Offices
 
@@ -376,6 +374,24 @@ statfi <- get_pxweb_data(url = "http://pxwebapi2.stat.fi/PXWeb/api/v1/en/StatFin
             page = "",
             link = "http://pxnet2.stat.fi/PXWeb/pxweb/en/StatFin/StatFin__tul__tjt/270_tjt_tau_117.px")
 
+# Insee
+insee_link <- "http://www.bdm.insee.fr/bdm2/exporterSeries.action?idbank=001687249&periode=toutes&liste_formats=xls"
+download.file(insee_link, "data-raw/insee.xls")
+
+insee <- read_excel("data-raw/insee.xls", skip = 3, col_names = c("year", "gini")) %>% 
+  filter(!is.na(gini)) %>% 
+  transmute(country = "France",
+            year = year,
+            gini = gini,
+            gini_se = NA,
+            welfare_def = "net",
+            equiv_scale = "oecdm",
+            monetary = FALSE,
+            series = paste("Insee", welfare_def, equiv_scale),
+            source1 = "Insee",
+            page = "",
+            link = insee_link)
+
   
 # Statistics New Zealand
 # statnz_link <- data in .doc file!
@@ -456,7 +472,7 @@ ceq <- ceq %>%
 # then combine with other series ordered by data-richness
 ineq0 <- bind_rows(lis, 
                   sedlac, cepal, cepal_sdi, oecd, eurostat, ceq,
-                  abs, statcan, statee, statfi, ifs, cbo,
+                  abs, statcan, statee, statfi, insee, ifs, cbo,
                   added_data) %>% 
   rename(gini_m = gini,
          gini_m_se = gini_se) %>%
