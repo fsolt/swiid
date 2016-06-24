@@ -322,8 +322,45 @@ statcan <- CANSIM2R:::downloadCANSIM(2060033) %>%
             page = "",
             link = link)
 
+# Statistics Estonia
+statee <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/statistics_estonia.tsv", col_names = FALSE) %>% 
+  rename(year = X1, pc = X2, oecdm = X3) %>% 
+  gather(key = equiv_scale, value = gini, pc:oecdm) %>% 
+  transmute(country = "Estonia",
+          year = year,
+          gini = gini,
+          gini_se = NA,
+          welfare_def = "con",
+          equiv_scale = equiv_scale,
+          monetary = FALSE,
+          series = paste("Statistics Estonia", welfare_def, equiv_scale),
+          source1 = "Statistics Estonia",
+          page = "",
+          link = "http://pub.stat.ee/px-web.2001/dialog/varval.asp?ma=HH30")
+
+# Statistics Finland
+statfi <- get_pxweb_data(url = "http://pxwebapi2.stat.fi/PXWeb/api/v1/en/StatFin/tul/tjt/270_tjt_tau_117.px",
+                         dims = list(Tulokäsite = c("SL2", "4L2", "6L2"),
+                                     Vuosi = c("*"),
+                                     Tiedot = c("Gini")),
+                         clean = TRUE) %>% 
+  transmute(country = "Finland",
+            year = Year,
+            gini = values,
+            gini_se = NA,
+            welfare_def = ifelse(str_detect(`Income concept`, "Disposable"), "net",
+                                 ifelse(str_detect(`Income concept`, "Gross"), "gross",
+                                        "market")),
+            equiv_scale = "oecdm",
+            monetary = FALSE,
+            series = paste("Statistics Finland", welfare_def, equiv_scale),
+            source1 = "Statistics Finland",
+            page = "",
+            link = "http://pxnet2.stat.fi/PXWeb/pxweb/en/StatFin/StatFin__tul__tjt/270_tjt_tau_117.px")
+
+  
 # Statistics New Zealand
-statnz_link <- "http://www.stats.govt.nz/~/media/Statistics/Sub-sites/Progress/Content/CSV%20downloads/Income%20inequality%20source%20data%202015.csv"
+# statnz_link <- data in .doc file!
 
 
 # U.K. Institute for Fiscal Studies
@@ -401,7 +438,7 @@ ceq <- ceq %>%
 # then combine with other series ordered by data-richness
 ineq0 <- bind_rows(lis, 
                   sedlac, cepal, oecd, eurostat, ceq,
-                  abs, statcan, ifs, cbo,
+                  abs, statcan, statee, statfi, ifs, cbo,
                   added_data) %>% 
   rename(gini_m = gini,
          gini_m_se = gini_se) %>%
