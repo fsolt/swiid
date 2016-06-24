@@ -1,0 +1,12 @@
+.Rproj.user
+.Rhistory
+.RData
+*.Rproj
+data-raw/sedlac.xls
+data-raw/abs.xls
+data-raw/ifs.xlsx
+data-raw/cbo.xlsx
+data-raw/from_Hu.csv
+dev/*
+R/dcpo.R
+SWIIDv5_0.RData
