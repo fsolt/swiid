@@ -5,7 +5,7 @@ iter <- 1000
 chains <- 4
 cores <- chains
 
-x <- ineq %>% filter(country=="United Kingdom") %>% 
+x <- ineq %>% filter(country==names(table(lis$country)[13])) %>% 
   mutate(ccode = ccode %>% factor %>% as.numeric,
          tcode = tcode - min(tcode) + 1,
          mcode = mcode %>% factor %>% as.numeric)
@@ -51,7 +51,7 @@ model_code <- '
     real<lower=0, upper=1> gini_t[N]; // unknown "true" gini for obs n given gini_m and gini_m_se
     real<lower=0> rho[M]; // discrimination of series m (see Stan Development Team 2015, 61; Gelman and Hill 2007, 314-320; McGann 2014, 118-120 (using 1/alpha))
     real<lower=0> sigma_rho[M];  // scale of series discriminations (see Stan Development Team 2015, 61)
-    real<lower=0, upper=1> sigma_gini[K]; 	// country variance parameter (see Linzer and Stanton 2012, 12)
+    real<lower=0, upper=.1> sigma_gini[K]; 	// country variance parameter (see Linzer and Stanton 2012, 12)
   }
   model {
     rho ~ normal(1, sigma_rho);
@@ -59,7 +59,7 @@ model_code <- '
     
     gini_t ~ normal(gini_m, gini_m_se);
     for (n in 1:N) {
-      if (n<=N_b)
+      if (n <= N_b)
         gini[kk[n], tt[n]] ~ normal(gini_b[n], gini_b_se[n]); // use baseline series where observed
       else
         gini[kk[n], tt[n]] ~ normal(rho[mm[n]] * gini_t[n], sigma_rho[mm[n]]);
