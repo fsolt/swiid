@@ -5,7 +5,7 @@ iter <- 1000
 chains <- 4
 cores <- chains
 
-x <- ineq %>% filter(country==names(table(lis$country)[13])) %>% 
+x <- ineq %>% filter(country==names(table(lis$country)[15])) %>% 
   mutate(ccode = ccode %>% factor %>% as.numeric,
          tcode = tcode - min(tcode) + 1,
          mcode = mcode %>% factor %>% as.numeric)
