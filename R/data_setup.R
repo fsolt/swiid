@@ -1,6 +1,6 @@
 if (!require(pacman)) install.packages("pacman")
 p_load(readr, readxl, 
-       eurostat, rsdmx, xml2, CANSIM2R,
+       eurostat, rsdmx, xml2, CANSIM2R, pxweb,
        tidyr, stringr, magrittr, dplyr, purrr, 
        countrycode)
 p_load_gh("leeper/tabulizerjars", "leeper/tabulizer") # read PDF tables
@@ -392,6 +392,21 @@ insee <- read_excel("data-raw/insee.xls", skip = 3, col_names = c("year", "gini"
             page = "",
             link = insee_link)
 
+# Statistics Georgia
+geostat <- read_csv("data-raw/geostat.csv", skip = 3, col_names = c("year", "gross", "con")) %>% 
+  filter(!is.na(gross)) %>% 
+  gather(key = "welfare_def", value = "gini", gross:con) %>% 
+  transmute(country = "Georgia",
+            year = as.numeric(year),
+            gini = gini,
+            gini_se = NA,
+            welfare_def = welfare_def,
+            equiv_scale = "pc",
+            monetary = FALSE,
+            series = paste("Geostat", welfare_def, equiv_scale),
+            source1 = "Geostat",
+            page = "",
+            link = "http://pc-axis.geostat.ge")
   
 # Statistics New Zealand
 # statnz_link <- data in .doc file!
@@ -472,7 +487,7 @@ ceq <- ceq %>%
 # then combine with other series ordered by data-richness
 ineq0 <- bind_rows(lis, 
                   sedlac, cepal, cepal_sdi, oecd, eurostat, ceq,
-                  abs, statcan, statee, statfi, insee, ifs, cbo,
+                  abs, statcan, statee, statfi, insee, geostat, ifs, cbo,
                   added_data) %>% 
   rename(gini_m = gini,
          gini_m_se = gini_se) %>%
@@ -503,14 +518,16 @@ ineq_nbl <- ineq0 %>% anti_join(ineq_bl %>% select(-gini_b, -gini_b_se),
 ineq <- bind_rows(ineq_bl, ineq_nbl) %>% 
   mutate(gini_m_se = ifelse(!is.na(gini_m_se), gini_m_se,
                             quantile(gini_m_se/gini_m, .99, na.rm = TRUE)*gini_m),
-         ccode = as.numeric(factor(country, levels = unique(country))),
+         ccode = as.integer(factor(country, levels = unique(country))),
          tcode = as.integer(year - min(year) + 1),
-         mcode = as.numeric(factor(series, levels = unique(series))))
+         wcode = as.integer(factor(welfare_def), levels = unique(welfare_def)),
+         ecode = as.integer(factor(equiv_scale), levels = unique(equiv_scale)),
+         scode = as.integer(factor(series, levels = unique(series))))
 
 
 
 # Should flag series that *only* share obs with baseline?
-# weird: Canada, Finland (a little), 
+# weird: Finland 
 # not enough data: China, DR, Egypt
 
 ##
