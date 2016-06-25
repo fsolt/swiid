@@ -1,4 +1,3 @@
-deal with missing gini_se
 allow rho to vary over time
 
 hierarchical model for rho components
