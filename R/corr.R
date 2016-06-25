@@ -18,7 +18,7 @@ source_data <- list(  K=max(x$ccode),
                       N_b=length(x$gini_b[!is.na(x$gini_b)]),
                       kk=x$ccode,
                       tt=x$tcode,
-                      mm=x$mcode,
+                      ss=x$scode,
                       gini_m=x$gini_m,
                       gini_m_se=x$gini_m_se,
                       gini_b=x$gini_b[!is.na(x$gini_b)],
@@ -34,7 +34,7 @@ model_code <- '
     int<lower=0> N_b;                       // number of observations with baseline
     int<lower=1, upper=K> kk[N]; 	          // country for observation n
     int<lower=1, upper=T> tt[N]; 	          // year for observation n
-    int<lower=1, upper=M> mm[N];            // series for observation n
+    int<lower=1, upper=M> ss[N];            // series for observation n
     real<lower=0, upper=1> gini_m[N]; 	    // measured gini for observation n
     real<lower=0, upper=1> gini_m_se[N];    // std error of measured gini for obs n
     real<lower=0, upper=1> gini_b[N_b];     // baseline gini for obs n
@@ -61,10 +61,10 @@ model_code <- '
     for (n in 1:N) {
       if (n <= N_b) {
         gini[kk[n], tt[n]] ~ normal(gini_b[n], gini_b_se[n]); // use baseline series where observed
-        rho[mm[n]] ~ normal(gini_b[n]/gini_t[n], sigma_rho[mm[n]]);
+        rho[ss[n]] ~ normal(gini_b[n]/gini_t[n], sigma_rho[ss[n]]);
       }
       else {
-        gini[kk[n], tt[n]] ~ normal(rho[mm[n]] * gini_t[n], sigma_rho[mm[n]]);
+        gini[kk[n], tt[n]] ~ normal(rho[ss[n]] * gini_t[n], sigma_rho[ss[n]]);
       }
       // prior for gini for the next observed year by country as well as for all intervening missing years
       if (n < N) {
