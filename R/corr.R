@@ -5,7 +5,7 @@ iter <- 1000
 chains <- 4
 cores <- chains
 
-x <- ineq %>% filter(country==names(table(lis$country)[15])) %>% 
+x <- ineq %>% filter(country==names(table(lis$country)[5])) %>% 
   mutate(ccode = ccode %>% factor %>% as.numeric,
          tcode = tcode - min(tcode) + 1,
          mcode = mcode %>% factor %>% as.numeric)
@@ -59,10 +59,13 @@ model_code <- '
     
     gini_t ~ normal(gini_m, gini_m_se);
     for (n in 1:N) {
-      if (n <= N_b)
+      if (n <= N_b) {
         gini[kk[n], tt[n]] ~ normal(gini_b[n], gini_b_se[n]); // use baseline series where observed
-      else
+        rho[mm[n]] ~ normal(gini_b[n]/gini_t[n], sigma_rho[mm[n]]);
+      }
+      else {
         gini[kk[n], tt[n]] ~ normal(rho[mm[n]] * gini_t[n], sigma_rho[mm[n]]);
+      }
       // prior for gini for the next observed year by country as well as for all intervening missing years
       if (n < N) {
         if (tt[n] < T) {
