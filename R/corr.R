@@ -1,19 +1,19 @@
 p_load(rstan, beepr)
 
-seed <- 324
+seed <- 3034
 iter <- 1000
 chains <- 4
 cores <- chains
 
-x <- ineq %>% filter(country==names(table(lis$country)[5])) %>% 
+x <- ineq %>% filter(country==names(table(lis$country)[13])) %>% 
   mutate(ccode = ccode %>% factor %>% as.numeric,
          tcode = tcode - min(tcode) + 1,
-         mcode = mcode %>% factor %>% as.numeric)
+         scode = scode %>% factor %>% as.numeric)
 
 
 source_data <- list(  K=max(x$ccode),
                       T=max(x$tcode),
-                      M=max(x$mcode),
+                      S=max(x$scode),
                       N=length(x$gini_m),
                       N_b=length(x$gini_b[!is.na(x$gini_b)]),
                       kk=x$ccode,
@@ -29,12 +29,12 @@ model_code <- '
   data{
     int<lower=1> K;     		                // number of countries
     int<lower=1> T; 				                // number of years
-    int<lower=1> M; 				                // number of series
+    int<lower=1> S; 				                // number of series
     int<lower=0> N;                         // total number of observations
     int<lower=0> N_b;                       // number of observations with baseline
     int<lower=1, upper=K> kk[N]; 	          // country for observation n
     int<lower=1, upper=T> tt[N]; 	          // year for observation n
-    int<lower=1, upper=M> ss[N];            // series for observation n
+    int<lower=1, upper=S> ss[N];            // series for observation n
     real<lower=0, upper=1> gini_m[N]; 	    // measured gini for observation n
     real<lower=0, upper=1> gini_m_se[N];    // std error of measured gini for obs n
     real<lower=0, upper=1> gini_b[N_b];     // baseline gini for obs n
@@ -49,8 +49,8 @@ model_code <- '
   parameters {
     real<lower=0, upper=1> gini[K, T]; // SWIID gini estimate for baseline in country k at time t
     real<lower=0, upper=1> gini_t[N]; // unknown "true" gini for obs n given gini_m and gini_m_se
-    real<lower=0> rho[M]; // discrimination of series m (see Stan Development Team 2015, 61; Gelman and Hill 2007, 314-320; McGann 2014, 118-120 (using 1/alpha))
-    real<lower=0> sigma_rho[M];  // scale of series discriminations (see Stan Development Team 2015, 61)
+    real<lower=0> rho[S]; // discrimination of series m (see Stan Development Team 2015, 61; Gelman and Hill 2007, 314-320; McGann 2014, 118-120 (using 1/alpha))
+    real<lower=0> sigma_rho[S];  // scale of series discriminations (see Stan Development Team 2015, 61)
     real<lower=0, upper=.1> sigma_gini[K]; 	// country variance parameter (see Linzer and Stanton 2012, 12)
   }
   model {
