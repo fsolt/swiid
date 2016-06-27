@@ -13,12 +13,14 @@ x1_sum$parameter_type <- gsub("([^[]*).*", "\\1", x1_sum$parameter)
 # View(x1_sum[x1_sum$Rhat>1.1,])
 # View(x1_sum[x1_sum$Rhat>1.2,])
 
-mcodes <- x %>% group_by(series) %>%
-  summarize(mcode = first(mcode),
+scodes <- x %>% group_by(series) %>%
+  summarize(scode = first(scode),
             r_n = n()) %>%
-  arrange(mcode)
+  arrange(scode)
 
-rho_res <- x1_sum %>% filter(parameter_type=="rho") %>% select(parameter, mean, `2.5%`, `97.5%`, Rhat)  %>% mutate(mcode = as.numeric(str_extract(parameter, "\\d+"))) %>% left_join(mcodes, by="mcode")
+rho_res <- x1_sum %>% filter(parameter_type=="rho") %>% select(parameter, mean, `2.5%`, `97.5%`, Rhat)  %>% mutate(scode = as.numeric(str_extract(parameter, "\\d+"))) %>% left_join(scodes, by="scode")
+
+sigma_series <- x1_sum %>% filter(parameter_type=="sigma_series") %>% select(parameter, mean, `2.5%`, `97.5%`, Rhat)  %>% mutate(scode = as.numeric(str_extract(parameter, "\\d+"))) %>% left_join(scodes, by="scode")
 
 
 # b_res <- x1_sum %>% filter(parameter_type=="beta") %>% select(parameter, mean, `2.5%`, `97.5%`)  %>% mutate(mcode = as.numeric(str_extract(parameter, "\\d+"))) %>% left_join(mcodes, by="mcode")
@@ -31,25 +33,25 @@ gini_res <- as.data.frame(gini_res$summary)
 gini_res$ccode <- as.numeric(gsub("gini\\[([0-9]*),[0-9]*\\]", "\\1", row.names(gini_res)))
 gini_res$tcode <- as.numeric(gsub("gini\\[[0-9]*,([0-9]*)\\]", "\\1", row.names(gini_res)))
 
-k <- x %>% group_by(country) %>% summarize(
+c <- x %>% group_by(country) %>% summarize(
   ccode = first(ccode),
   firstyr = min(year),
   lastyr = max(year)) %>%
   ungroup()
 
 
-gini_res2 <- merge(gini_res, k, all=T) %>% 
+gini_res2 <- merge(gini_res, c, all=T) %>% 
   mutate(year = min(firstyr) + tcode - 1) %>% 
   filter(year <= lastyr & year >= firstyr) %>%
   transmute(country = country,
             term = country,
-            kk = ccode,
+            cc = ccode,
             year = year,
             estimate = mean*100,
             lb = `2.5%`*100,
             ub = `97.5%`*100,
             Rhat = Rhat) %>%
-  arrange(kk, year)
+  arrange(cc, year)
 
 ggplot(data=gini_res2, aes(x=year, y=estimate)) +
   geom_line() + theme_bw() +
