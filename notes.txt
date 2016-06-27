@@ -6,6 +6,9 @@ Find which three, say, series have the most overlap with this series.  Can figur
 > Still going to have to go through long-wide format to figure out which series have most overlap
 
 
+need to follow basic model from 2008.  will need long-wide data, I think.
+
+
 Problems with long-wide:
 multiple 'identical' cy obs in SEDLAC Arg 2003:end net hh; CR 2010 net hh
   
