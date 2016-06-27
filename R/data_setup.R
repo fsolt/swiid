@@ -519,7 +519,7 @@ ineq <- bind_rows(ineq_bl, ineq_nbl) %>%
   mutate(gini_m_se = ifelse(!is.na(gini_m_se), gini_m_se,
                             quantile(gini_m_se/gini_m, .99, na.rm = TRUE)*gini_m),
          ccode = as.integer(factor(country, levels = unique(country))),
-         tcode = as.integer(year - min(year) + 1),
+         ycode = as.integer(year - min(year) + 1),
          wcode = as.integer(factor(welfare_def), levels = unique(welfare_def)),
          ecode = as.integer(factor(equiv_scale), levels = unique(equiv_scale)),
          scode = as.integer(factor(series, levels = unique(series))))
