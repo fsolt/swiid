@@ -15,12 +15,12 @@ x <- ineq %>% filter(country=="United States") %>%
 
 source_data <- list(  C=max(x$ccode),
                       Y=max(x$ycode),
-                      K=max(x$scode),
+                      S=max(x$scode),
                       N=length(x$gini_m),
                       N_b=length(x$gini_b[!is.na(x$gini_b)]),
                       cc=x$ccode,
                       yy=x$ycode,
-                      kk=x$scode,
+                      ss=x$scode,
                       gini_m=x$gini_m,
                       gini_m_se=x$gini_m_se,
                       gini_b=x$gini_b[!is.na(x$gini_b)],
@@ -31,12 +31,12 @@ model_code <- '
   data{
     int<lower=1> C;     		                // number of countries
     int<lower=1> Y; 				                // number of years
-    int<lower=1> K; 				                // number of series
+    int<lower=1> S; 				                // number of series
     int<lower=0> N;                         // total number of observations
     int<lower=0> N_b;                       // number of observations with baseline
     int<lower=1, upper=C> cc[N]; 	          // country for observation n
     int<lower=1, upper=Y> yy[N]; 	          // year for observation n
-    int<lower=1, upper=K> kk[N];            // series for observation n
+    int<lower=1, upper=S> ss[N];            // series for observation n
     real<lower=0, upper=1> gini_m[N]; 	    // measured gini for observation n
     real<lower=0, upper=1> gini_m_se[N];    // std error of measured gini for obs n
     real<lower=0, upper=1> gini_b[N_b];     // baseline gini for obs n
@@ -51,9 +51,9 @@ model_code <- '
   parameters {
     real<lower=0, upper=1> gini[C, Y];      // SWIID gini estimate for baseline in country k at time t
     real<lower=0, upper=1> gini_t[N];       // unknown "true" gini for obs n given gini_m and gini_m_se
-    real<lower=0> rho[K];                   // discrimination of series m (see Stan Development Team 2015, 61; Gelman and Hill 2007, 314-320; McGann 2014, 118-120 (using 1/alpha))
-    real<lower=0> sigma_rho[K];             // scale of series discriminations (see Stan Development Team 2015, 61)
-    real<lower=0, upper=.1> sigma_k[K]; 	// series noise  
+    real<lower=0> rho[S];                   // ratio of series s (see Stan Development Team 2015, 61; Gelman and Hill 2007, 314-320; McGann 2014, 118-120 (using 1/alpha))
+    real<lower=0> sigma_rho[S];             // scale for ratios (see Stan Development Team 2015, 61)
+    real<lower=0, upper=.1> sigma_series[S]; 	// series noise  
     real<lower=0, upper=.1> sigma_country[C]; 	// country variance parameter (see Linzer and Stanton 2012, 12)
   }
   model {
@@ -64,10 +64,10 @@ model_code <- '
     for (n in 1:N) {
       if (n <= N_b) {
         gini[cc[n], yy[n]] ~ normal(gini_b[n], gini_b_se[n]); // use baseline series where observed
-        gini_b[n] ~ normal(rho[kk[n]] * gini_t[n], sigma_k[kk[n]]);
+        gini_b[n] ~ normal(rho[ss[n]] * gini_t[n], sigma_series[ss[n]]);
       }
       else {
-        gini[cc[n], yy[n]] ~ normal(rho[kk[n]] * gini_t[n], sigma_k[kk[n]]);
+        gini[cc[n], yy[n]] ~ normal(rho[ss[n]] * gini_t[n], sigma_series[ss[n]]);
       }
       // prior for gini for the next observed year by country as well as for all intervening missing years
       if (n < N) {
