@@ -407,9 +407,25 @@ geostat <- read_csv("data-raw/geostat.csv", skip = 3, col_names = c("year", "gro
             source1 = "Geostat",
             page = "",
             link = "http://pc-axis.geostat.ge")
-  
-# Statistics New Zealand
-# statnz_link <- data in .doc file!
+ 
+# Statistics Norway
+ssb_link <- "http://www.ssb.no/eksport/tabell.csv?key=211301"
+download.file(ssb_link, "data-raw/ssb.csv")
+
+ssb <- read_delim("data-raw/ssb.csv", ";", col_names = FALSE, skip = 3) %>%
+  select(X1, X2, X3) %>%
+  transmute(country = "Norway",
+            year = as.numeric(X1),
+            gini = as.numeric(X2),
+            gini_se = suppressWarnings(as.numeric(X3)),
+            welfare_def = "net",
+            equiv_scale = "oecdm",
+            monetary = TRUE,
+            series = paste("SSB", welfare_def, equiv_scale),
+            source1 = "Statistics Norway",
+            page = "",
+            link = ssb_link)
+
 
 
 # U.K. Institute for Fiscal Studies
@@ -466,7 +482,9 @@ added_data <- read_csv("data-raw/fs_added_data.csv",
 ## Combine
 # first, get baseline series and order by data-richness
 baseline_series <- "LIS net sqrt"
-baseline <- lis %>% filter(series==baseline_series) %>% 
+baseline_wd <- "net"
+baseline_es <- "sqrt"
+baseline <- lis %>% filter(welfare_def==baseline_wd & equiv_scale==baseline_es) %>% 
   rename(gini_b = gini,
          gini_b_se = gini_se) %>%
   group_by(country) %>% 
