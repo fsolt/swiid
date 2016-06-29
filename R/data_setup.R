@@ -243,11 +243,12 @@ rm(oecd0, oecd_se)
        
 # Eurostat
 # http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en; Customization: all years
-eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = FALSE) %>% 
-  label_eurostat(code = "geo")  %>% 
-  left_join(get_eurostat("ilc_di12", time_format = "num", keepFlags = TRUE) %>%
-              rename(geo_code = geo), by = c("geo_code", "time", "values")) %>% 
-  transmute(country = countrycode(as.character(geo), "country.name", "country.name"),
+eurostat <- get_eurostat("ilc_di12", 
+                         time_format = "num", 
+                         update_cache = TRUE,
+                         keepFlags = TRUE) %>%
+  mutate(geo = as.character(geo) %>% recode("UK" = "GB", "EL" = "GR")) %>% 
+  transmute(country = countrycode(as.character(geo), "iso2c", "country.name"),
          year = time - (!(country=="United Kingdom" | country=="Ireland")), #eurostat reports survey year not ref year except in UK and IE <http://ec.europa.eu/eurostat/cache/metadata/en/ilc_esms.htm#ref_period>
          gini = values/100,
          gini_se = NA,
@@ -262,7 +263,7 @@ eurostat <- get_eurostat("ilc_di12", time_format = "num", update_cache = FALSE) 
   filter(!(is.na(country) | is.na(gini))) %>% 
   group_by(country) %>% 
   arrange(country, year) %>% 
-  mutate(series = paste("Eurostat", country, "net oecdm", cumsum(break_yr) + 1)) %>%  # No word from Eurostat which obs cross-nationally comparable
+  mutate(series = paste("Eurostat", country, welfare_def, equiv_scale, cumsum(break_yr) + 1)) %>%  # No word from Eurostat which obs cross-nationally comparable
   ungroup() %>% 
   select(-break_yr)
 
@@ -426,6 +427,28 @@ ssb <- read_delim("data-raw/ssb.csv", ";", col_names = FALSE, skip = 3) %>%
             page = "",
             link = ssb_link)
 
+# DGEEC Paraguay
+dgeec_link <- "http://www.dgeec.gov.py/Publicaciones/Biblioteca/eph2015/Boletin%20de%20pobreza%202015.pdf"
+download.file(dgeec_link, "data-raw/dgeec.pdf")
+
+dgeec <- extract_tables("data-raw/dgeec.pdf", pages = 15)[[1]][-1, ] %>%
+  as.data.frame(stringsAsFactors=FALSE) %>% 
+  transmute(country = "Paraguay",
+            year = ifelse(str_trim(V1) %>% str_extract("\\d{2}$") %>% as.numeric() > 50,
+                          str_trim(V1) %>% str_extract("\\d{2}$") %>% as.numeric() + 1900,
+                          str_trim(V1) %>% str_extract("\\d{2}$") %>% as.numeric() + 2000),
+            gini = as.numeric(sub(",", ".", V4, fixed = TRUE)),
+            gini_se = NA,
+            welfare_def = "gross",
+            equiv_scale = "pc",
+            monetary = TRUE,
+            series = paste("DGEEC", welfare_def, equiv_scale),
+            source1 = "Dirección General de Estadística, Encuestas y Censos 2016",
+            page = "14",
+            link = dgeec_link)
+
+
+
 
 
 # U.K. Institute for Fiscal Studies
@@ -505,7 +528,9 @@ ceq <- ceq %>%
 # then combine with other series ordered by data-richness
 ineq0 <- bind_rows(lis, 
                   sedlac, cepal, cepal_sdi, oecd, eurostat, ceq,
-                  abs, statcan, statee, statfi, insee, geostat, ifs, cbo,
+                  abs, statcan, statee, statfi, insee, geostat,
+                  ssb, gus,
+                  ifs, cbo,
                   added_data) %>% 
   rename(gini_m = gini,
          gini_m_se = gini_se) %>%
