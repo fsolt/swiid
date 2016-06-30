@@ -468,8 +468,8 @@ rosstat <- read_excel("data-raw/rosstat.xls", sheet = "Sec.5", skip = 1) %>%
             page = "Sec.5",
             link = rosstat_link) 
   
-
-               
+# Statistics South Africa
+statssa_link <- "http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-06March2014.pdf"
 
 
 
@@ -519,10 +519,7 @@ cbo <- read_excel("data-raw/cbo.xlsx", sheet = 9, col_names = FALSE, skip = 10) 
 
 
 ## Added data
-added_data <- read_csv("data-raw/fs_added_data.csv",
-                       col_types = "cnnncclcccc")
-
-
+added_data <- read_csv("data-raw/fs_added_data.csv")
 
 ## Combine
 # first, get baseline series and order by data-richness
@@ -551,7 +548,7 @@ ceq <- ceq %>%
 ineq0 <- bind_rows(lis, 
                   sedlac, cepal, cepal_sdi, oecd, eurostat, ceq,
                   abs, statcan, statee, statfi, insee, geostat,
-                  ssb,
+                  ssb, dgeec, rosstat, 
                   ifs, cbo,
                   added_data) %>% 
   rename(gini_m = gini,
