@@ -447,7 +447,29 @@ dgeec <- extract_tables("data-raw/dgeec.pdf", pages = 15)[[1]][-1, ] %>%
             page = "14",
             link = dgeec_link)
 
+# Russian Federal State Statistics Service
+rosstat_link <- "http://www.gks.ru/free_doc/doc_2015/year/pril_year15-eng.xls"
+download.file(rosstat_link, "data-raw/rosstat.xls")
 
+rosstat <- read_excel("data-raw/rosstat.xls", sheet = "Sec.5", skip = 1) %>% 
+  filter(str_detect(`  INDICATORS `, "Gini")) %>% 
+  gather(key = year, value = gini) %>% 
+  mutate_all(as.numeric) %>% 
+  filter(!is.na(gini)) %>% 
+  transmute(country = "Russian Federation",
+            year = year,
+            gini = gini,
+            gini_se = ifelse(year<1993, .03, NA),
+            welfare_def = "gross",
+            equiv_scale = "pc",
+            monetary = TRUE,
+            series = paste("Rosstat", welfare_def, equiv_scale),
+            source1 = "Russian Federal State Statistics Service 2015",
+            page = "Sec.5",
+            link = rosstat_link) 
+  
+
+               
 
 
 
@@ -529,7 +551,7 @@ ceq <- ceq %>%
 ineq0 <- bind_rows(lis, 
                   sedlac, cepal, cepal_sdi, oecd, eurostat, ceq,
                   abs, statcan, statee, statfi, insee, geostat,
-                  ssb, gus,
+                  ssb,
                   ifs, cbo,
                   added_data) %>% 
   rename(gini_m = gini,
