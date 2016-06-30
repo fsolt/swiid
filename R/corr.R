@@ -79,7 +79,7 @@ model_code <- '
         gini[cc[n], yy[n]] ~ normal(gini_b[n], gini_b_se[n]); // use baseline series where observed
 //        gini_c[cc[n], yy[n]] ~ normal(gini_b[n], gini_b_se[n]); // use baseline series where observed
         gini_b[n] ~ normal(rho_s[ss[n]] * gini_t[n], sigma_s[ss[n]]);
-//        gini_c[n] ~ normal(rho_c[kk[n], cc[n]] * gini_t[n], sigma_c[kk[n], cc[n]]);
+//        gini_c[cc[n], yy[n]] ~ normal(rho_c[kk[n], cc[n]] * gini_t[n], sigma_c[kk[n], cc[n]]);
       }
       else {
         gini[cc[n], yy[n]] ~ normal(rho_s[ss[n]] * gini_t[n], sigma_s[ss[n]]);
