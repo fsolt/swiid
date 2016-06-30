@@ -132,7 +132,7 @@ sedlac_ei <- read_excel(path = "data-raw/sedlac.xls",
                         skip = 8)[1:3] %>%
   format_sedlac(sheet = "intervals ei",
                 link = sedlac_link,
-                es = "adeq")
+                es = "ae")
 
 sedlac_hh <- read_excel(path = "data-raw/sedlac.xls",
                         sheet = "gini1",
@@ -467,9 +467,26 @@ rosstat <- read_excel("data-raw/rosstat.xls", sheet = "Sec.5", skip = 1) %>%
             source1 = "Russian Federal State Statistics Service 2015",
             page = "Sec.5",
             link = rosstat_link) 
-  
-# Statistics South Africa
-statssa_link <- "http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-06March2014.pdf"
+
+# Statistics Sweden
+scb <- get_pxweb_data(url = "http://api.scb.se/OV0104/v1/doris/sv/ssd/HE/HE0103/HE0103A/DispInk8",
+                      dims = list(Hushallsdef = c('FAME'),
+                                  InkomstTyp = c('*'),
+                                  ContentsCode = c('HE0103AD'),
+                                  Tid = c('*')),
+                      clean = TRUE) %>% 
+  transmute(country = "Sweden",
+            year = as.numeric(as.character(år)),
+            gini = values,
+            gini_se = NA,
+            welfare_def = ifelse(str_detect(inkomstslay, "disponibel"), "net",
+                                 "market"),
+            equiv_scale = "ae",
+            monetary = FALSE,
+            series = paste("Statistics Sweden", welfare_def, equiv_scale),
+            source1 = "Statistics Sweden",
+            page = "",
+            link = "http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550")
 
 
 
