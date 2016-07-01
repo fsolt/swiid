@@ -474,21 +474,74 @@ scb <- get_pxweb_data(url = "http://api.scb.se/OV0104/v1/doris/sv/ssd/HE/HE0103/
                                   InkomstTyp = c('*'),
                                   ContentsCode = c('HE0103AD'),
                                   Tid = c('*')),
-                      clean = TRUE) %>% 
+                      clean = TRUE)
+names(scb) <- paste0("v", 1:6)
+scb <- scb %>%
   transmute(country = "Sweden",
-            year = as.numeric(as.character(år)),
-            gini = values,
+            year = as.numeric(as.character(v4)),
+            gini = v6,
             gini_se = NA,
-            welfare_def = ifelse(str_detect(inkomstslay, "disponibel"), "net",
+            welfare_def = ifelse(str_detect(v2, "disponibel"), "net",
                                  "market"),
             equiv_scale = "ae",
             monetary = FALSE,
-            series = paste("Statistics Sweden", welfare_def, equiv_scale),
+            series = paste("Statistics Sweden", welfare_def, equiv_scale, ifelse(year<1991, 1, 2)),
             source1 = "Statistics Sweden",
             page = "",
             link = "http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550")
 
+# Taiwan Directorate General of Budget, Accounting, and Statistics
+tdgbas_link <- "http://win.dgbas.gov.tw/fies/doc/result/103/a11/Year05.xls"
+download.file(tdgbas_link, "data-raw/tdgbas1.xls")
 
+tdgbas <- read_excel("data-raw/tdgbas1.xls", col_names = FALSE, skip = 9) %>% 
+  transmute(year = X2,
+            pc = X4,
+            sqrt = X6) %>% 
+  gather(key = equiv_scale, value = gini, -year) %>% 
+  filter(!is.na(year)) %>% 
+  mutate(link = tdgbas_link) %>% 
+  bind_rows(suppressWarnings(read_csv("data-raw/tdgbas2.csv", col_names = FALSE, skip = 4)) %>% 
+              filter(!is.na(X1)) %>% 
+              transmute(year = X1, 
+                        gini = X2,
+                        equiv_scale = "hh",
+                        link = "http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L")) %>% 
+  transmute(country = "Taiwan",
+            year = year,
+            gini = gini,
+            gini_se = NA,
+            welfare_def = "net",
+            equiv_scale = equiv_scale,
+            monetary = FALSE,
+            series = paste("DGBAS", welfare_def, equiv_scale),
+            source1 = "Taiwan Directorate General of Budget, Accounting, and Statistics",
+            page = "",
+            link = link)
+
+# U.K. Office for National Statistics
+ons_link <- "http://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2015/e93b0b06&format=csv"
+download.file(ons_link, "data-raw/ons.csv")
+
+ons <- read_csv("data-raw/ons.csv", skip = 6) %>% 
+  transmute(year = Year,
+            market = `Equivalised original income`,
+            gross = `Equivalised gross income`,
+            net = `Equivalised disposable income`) %>% 
+  gather(key = welfare_def, value = gini, -year) %>% 
+  transmute(country = "United Kingdom",
+            year = ifelse(str_extract(year, "\\d{2}$") %>% as.numeric() > 50,
+                          str_extract(year, "\\d{2}$") %>% as.numeric() + 1900,
+                          str_extract(year, "\\d{2}$") %>% as.numeric() + 2000),
+            gini = gini/100,
+            gini_se = NA,
+            welfare_def = welfare_def,
+            equiv_scale = "oecdm",
+            monetary = FALSE,
+            series = paste("ONS", welfare_def, equiv_scale),
+            source1 = "UK Office for National Statistics",
+            page = "",
+            link = ons_link)  
 
 # U.K. Institute for Fiscal Studies
 ifs_link <- "http://www.ifs.org.uk/uploads/publications/bns/bn19figs_update2015.xlsx"
@@ -534,6 +587,39 @@ cbo <- read_excel("data-raw/cbo.xlsx", sheet = 9, col_names = FALSE, skip = 10) 
          page = "",
          link = cbo_link)
 
+#U.S. Census Bureau
+uscb_link <- "https://www2.census.gov/programs-surveys/demo/tables/p60/252/table4.pdf"
+download.file(uscb_link, "data-raw/uscb.pdf")
+
+uscb <- extract_tables("data-raw/uscb.pdf") %>% 
+  discard(function(x) dim(x)[2]==1) %>%
+  map_df(function(x) {
+    years <- x[2, ] %>% str_extract("\\d{4}")
+    x1 <- x[str_detect(x[ , 1], "Gini"), ] %>%
+      t() %>% 
+      as_data_frame() %>% 
+      mutate(year = years) %>% 
+      filter(!is.na(year)) %>% 
+      transmute(year = year,
+                gini = str_replace_all(V1, fixed(" "), "") %>% as.numeric(),
+                gini_se = str_replace_all(V2, fixed(" "), "") %>% as.numeric(),
+                break_yr = (year == 1993 | (year == 2013 & gini_se > .003)))
+    return(x1)}) %>%
+  arrange(year, break_yr) %>% 
+  transmute(country = "United States",
+            year = year,
+            gini = gini,
+            gini_se = gini_se,
+            welfare_def = "gross",
+            equiv_scale = "hh",
+            monetary = TRUE,
+            series = paste("US Census Bureau", welfare_def, equiv_scale, cumsum(break_yr) + 1),
+            source1 = "U.S. Census Bureau",
+            page = "",
+            link = uscb_link)
+
+
+
 
 ## Added data
 added_data <- read_csv("data-raw/fs_added_data.csv")
@@ -563,11 +649,11 @@ ceq <- ceq %>%
 
 # then combine with other series ordered by data-richness
 ineq0 <- bind_rows(lis, 
-                  sedlac, cepal, cepal_sdi, oecd, eurostat, ceq,
-                  abs, statcan, statee, statfi, insee, geostat,
-                  ssb, dgeec, rosstat, 
-                  ifs, cbo,
-                  added_data) %>% 
+                   sedlac, cepal, cepal_sdi, oecd, eurostat, ceq,
+                   abs, statcan, statee, statfi, insee, geostat,
+                   ssb, dgeec, rosstat, scb, tdgbas, ons, ifs,
+                   cbo, uscb,
+                   added_data) %>% 
   rename(gini_m = gini,
          gini_m_se = gini_se) %>%
   group_by(country) %>% 
