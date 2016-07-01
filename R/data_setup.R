@@ -600,7 +600,7 @@ uscb <- extract_tables("data-raw/uscb.pdf") %>%
       as_data_frame() %>% 
       mutate(year = years) %>% 
       filter(!is.na(year)) %>% 
-      transmute(year = year,
+      transmute(year = as.numeric(year),
                 gini = str_replace_all(V1, fixed(" "), "") %>% as.numeric(),
                 gini_se = str_replace_all(V2, fixed(" "), "") %>% as.numeric(),
                 break_yr = (year == 1993 | (year == 2013 & gini_se > .003)))
