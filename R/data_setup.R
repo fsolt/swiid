@@ -690,6 +690,26 @@ ineq <- bind_rows(ineq_bl, ineq_nbl) %>%
          scode = as.integer(factor(series, levels = unique(series))))
 
 
+# for v5.1
+ineq1 <- ineq %>%
+  transmute(country = country,
+            year = year,
+            gini = gini_m*100,
+            incdefn = welfare_def,
+            equivsc = equiv_scale,
+            source1 = source1,
+            link = link)
+write_csv(ineq1, "../Global Inequality/ SWIID v5.1/Data/ionso.csv")
+
+g_1_se <- ineq %>% 
+  filter(source1=="LISSY" & equiv_scale=="sqrt" & 
+           (welfare_def=="net" | welfare_def=="market")) %>% 
+  select(country, year, gini_m_se, welfare_def) %>% 
+  mutate(gini_m_se = gini_m_se*100) %>% 
+  spread(key = welfare_def, value = gini_m_se) %>% 
+  rename(g_1se = net, g_2se = market)
+write_csv(g_1_se, "../Global Inequality/ SWIID v5.1/Data/g_1_se.csv", na = "")
+  
 
 # Should flag series that *only* share obs with baseline?
 # weird: Finland 
