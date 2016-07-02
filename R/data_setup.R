@@ -408,6 +408,20 @@ geostat <- read_csv("data-raw/geostat.csv", skip = 3, col_names = c("year", "gro
             source1 = "Geostat",
             page = "",
             link = "http://pc-axis.geostat.ge")
+
+# Istat
+istat <- read_csv("data-raw/istat.csv") %>% 
+  transmute(country = "Italy",
+            year = Year,
+            gini = `0`,
+            gini_se = NA,
+            welfare_def = "con",
+            equiv_scale = "hh",
+            monetary = FALSE,
+            series = paste("Istat", welfare_def, equiv_scale),
+            source1 = "Istat",
+            page = "",
+            link = "http://dati.istat.it/Index.aspx?DataSetCode=DCCV_INDCONSUMI&Lang=en")
  
 # Statistics Norway
 ssb_link <- "http://www.ssb.no/eksport/tabell.csv?key=211301"
