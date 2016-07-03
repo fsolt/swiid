@@ -654,7 +654,23 @@ uscb <- extract_tables("data-raw/uscb.pdf") %>%
             page = "",
             link = uscb_link)
 
+# Uruguay Instituto Nacional de Estadística
+uine_link <- "http://www.ine.gub.uy/documents/10181/364159/Estimación+de+la+pobreza+por+el+Método+del+Ingreso+2015/321a0edb-d97e-4ab0-aa88-e31ce7a22307"
+download.file(uine_link, "data-raw/uine.pdf")
 
+uine <- extract_tables("data-raw/uine.pdf", pages = 44)[[4]][5:14, 1:2] %>% 
+  as_data_frame() %>% 
+  transmute(country = "Uruguay",
+            year = V1 %>% str_trim() %>% as.numeric(),
+            gini = as.numeric(sub(",", ".", V2, fixed = TRUE)),
+            gini_se = NA,
+            welfare_def = "net",
+            equiv_scale = "pc",
+            monetary = TRUE,
+            series = paste("Instituto Nacional de Estadistica", welfare_def, equiv_scale),
+            source1 = "Instituto Nacional de Estadistica",
+            page = "",
+            link = uine_link)
 
 
 ## Added data
@@ -687,8 +703,8 @@ ceq <- ceq %>%
 ineq0 <- bind_rows(lis, 
                    sedlac, cepal, cepal_sdi, oecd, eurostat, ceq,
                    abs, statcan, statee, statfi, insee, geostat,
-                   ssb, dgeec, rosstat, scb, tdgbas, ons, ifs,
-                   cbo, uscb,
+                   ssb, dgeec, rosstat, scb, tdgbas, turkstat, 
+                   ons, ifs, cbo, uscb, uine,
                    added_data) %>% 
   rename(gini_m = gini,
          gini_m_se = gini_se) %>%
