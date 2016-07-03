@@ -533,6 +533,28 @@ tdgbas <- read_excel("data-raw/tdgbas1.xls", col_names = FALSE, skip = 9) %>%
             page = "",
             link = link)
 
+# Statistics Turkey
+turkstat_link <- "http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=1601"
+download.file(turkstat_link, "data-raw/turkstat.xls")
+
+turkstat <- read_excel("data-raw/turkstat.xls", skip = 5) 
+names(turkstat)[1] <- "var" 
+turkstat <- turkstat %>% 
+  filter(str_detect(var, "Gini")) %>% 
+  gather(key = year, value = gini) %>% 
+  filter(year!="var") %>% 
+  transmute(country = "Turkey",
+            year = as.numeric(year),
+            gini = as.numeric(gini),
+            gini_se = NA,
+            welfare_def = "net",
+            equiv_scale = "oecdm",
+            monetary = FALSE,
+            series = paste("Turkstat", welfare_def, equiv_scale),
+            source1 = "Turkish Statistical Institute",
+            page = "",
+            link = turkstat_link) 
+
 # U.K. Office for National Statistics
 ons_link <- "http://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2015/e93b0b06&format=csv"
 download.file(ons_link, "data-raw/ons.csv")
