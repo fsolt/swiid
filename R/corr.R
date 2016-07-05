@@ -7,11 +7,11 @@ cores <- chains
 
 #names(table(lis$country)[5])
 
-x <- ineq %>% filter(country=="Netherlands") %>% 
+x <- ineq %>% filter(country=="Italy") %>%  
   mutate(ccode = ccode %>% factor() %>% as.numeric(),
          ycode = ycode - min(ycode) + 1,
          scode = scode %>% factor() %>% as.numeric())
-#         kcode = paste0(welfare_def, equiv_scale) %>% factor() %>% as.numeric())
+#         kcode = paste0(welfare_def, equiv_scale) %>% factor() %>% as.numeric()) 
 
 
 source_data <- list(  C=max(x$ccode),
@@ -89,6 +89,8 @@ model_code <- '
       if (n < N) {
         if (yy[n] < Y) {
           for (g in 0:G[n]) {
+            // this is no longer right because n are not now in c-y order;
+            // now G probably needs to be calculated in R rather than Stan
             gini[cc[n], yy[n]+g+1] ~ normal(gini[cc[n], yy[n]+g], sigma_country[cc[n]]);
           }
         }
@@ -101,7 +103,7 @@ start <- proc.time()
 out1 <- stan(model_code = model_code,
              data = source_data,
              seed = seed,
-             iter = 1000,
+             iter = iter,
              cores = cores,
              chains = chains,
              control = list(max_treedepth = 20,
