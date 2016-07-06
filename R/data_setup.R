@@ -69,7 +69,6 @@ lis_files <- c("net_sqrt", "net_pc", "net_hh",
 
 lis <- lis_files %>% 
   map_df(format_lis) %>% 
-  filter(!country=="Russian Federation") %>% 
   rbind(format_lis_xtra("net_sqrt_nz"), format_lis_xtra("net_sqrt_ru")) %>% 
   arrange(country, year, welfare_def, equiv_scale)
 
@@ -82,7 +81,7 @@ format_sedlac <- function(df, sheet, link, es) {
     x$se <- NA
   }
   names(x) <- c("heading", "gini", "se")
-  x %<>% filter(!is.na(heading))
+  x %<>% filter(!is.na(heading) & !str_detect(heading, "-II"))
   countries_sedlac <- "Argentina|Bolivia|Brazil|Chile|Colombia|Costa|Dominican|Ecuador|El Salvador|Guatemala|Honduras|Mexico|Nicaragua|Panama|Paraguay|Peru|Uruguay|Venezuela|Caribbean|Belice|Guyana|Haiti|Jamaica|Suriname"
   x$h_co <- str_detect(x$heading, countries_sedlac)
   x$country <- ifelse(x$h_co, str_trim(x$heading), NA)
@@ -268,10 +267,41 @@ eurostat <- get_eurostat("ilc_di12",
   select(-break_yr)
 
 
+# Transmonee 2012 (2012 is the last database that includes inequality data)
+transmonee_link <- "https://web.archive.org/web/20130401075747/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls"
+download.file(transmonee_link, "data-raw/transmonee.xls")
+
+transmonee <- suppressWarnings(read_excel("data-raw/transmonee.xls", 
+                                          sheet = "10. Economy",
+                                          skip = 398,
+                                          na = "-")[1:34, ]) %>% 
+  mutate(country = c("Czech Republic", "Hungary", "Poland",
+                     "Slovakia", "Slovenia", "", "Estonia", "Latvia",
+                     "Lithuania", "", "Bulgaria", "Romania", "",
+                     "Albania", "Bosnia and Herzegovina", "Croatia",
+                     "Montenegro", "Serbia", "Macedonia, Former Yugoslav Republic of", "",
+                     "Belarus", "Moldova", "Russian Federation", 
+                     "Ukraine", "", "Armenia", "Azerbaijan", "Georgia",
+                     "", "Kazakhstan", "Kyrgyzstan", "Tajikistan",
+                     "Turkmenistan", "Uzbekistan")) %>% 
+  filter(country!="") %>% 
+  gather(key = year, value = gini, -country) %>% 
+  filter(!is.na(gini)) %>% 
+  transmute(country = country,
+            year = as.numeric(year),
+            gini = gini,
+            gini_se = NA,
+            welfare_def = "net",
+            equiv_scale = "pc",
+            monetary = FALSE,
+            series = paste("Transmonee", country, welfare_def, equiv_scale),
+            source1 = "Transmonee 2012",
+            page = "",
+            link = transmonee_link)
+
 # Commitment to Equity
 ceq <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/ceq.csv", col_types = "cnnncclcccc") %>% 
   mutate(series = paste("CEQ", welfare_def, equiv_scale))
-
 
 
 ## National Statistics Offices
@@ -701,7 +731,8 @@ ceq <- ceq %>%
 
 # then combine with other series ordered by data-richness
 ineq0 <- bind_rows(lis, 
-                   sedlac, cepal, cepal_sdi, oecd, eurostat, ceq,
+                   sedlac, cepal, cepal_sdi, oecd, eurostat,
+                   transmonee, ceq,
                    abs, statcan, statee, statfi, insee, geostat,
                    ssb, dgeec, rosstat, scb, tdgbas, turkstat, 
                    ons, ifs, cbo, uscb, uine,
@@ -764,7 +795,7 @@ write_csv(g_1_se, "../Global Inequality/ SWIID v5.1/Data/g_1_se.csv", na = "")
   
 
 # Should flag series that *only* share obs with baseline?
-# weird: Finland 
+# weird: Finland, Italy -- in year w missing, est goes to 50 
 # not enough data: China, DR, Egypt
 
 ##
@@ -773,3 +804,13 @@ write_csv(g_1_se, "../Global Inequality/ SWIID v5.1/Data/g_1_se.csv", na = "")
 # 
 # ineq_w <- ineq_l %>% spread(key = series, value = gini)
 
+
+t <- ineq %>%
+  select(country, year, gini_m, scode) %>%
+  mutate(scode = paste0("s", scode)) %>%
+  split(.$country) 
+%>% 
+  map(function(x) {
+    spread(., key = scode, value = gini_m) %>% 
+      select(-country, -year) %>%
+      cor(use = "pairwise.complete.obs")})
