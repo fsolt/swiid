@@ -279,7 +279,7 @@ transmonee <- suppressWarnings(read_excel("data-raw/transmonee.xls",
                      "Slovakia", "Slovenia", "", "Estonia", "Latvia",
                      "Lithuania", "", "Bulgaria", "Romania", "",
                      "Albania", "Bosnia and Herzegovina", "Croatia",
-                     "Montenegro", "Serbia", "Macedonia, Former Yugoslav Republic of", "",
+                     "Montenegro", "Serbia", "Macedonia, the former Yugoslav Republic of", "",
                      "Belarus", "Moldova", "Russian Federation", 
                      "Ukraine", "", "Armenia", "Azerbaijan", "Georgia",
                      "", "Kazakhstan", "Kyrgyzstan", "Tajikistan",
@@ -519,13 +519,12 @@ scb <- get_pxweb_data(url = "http://api.scb.se/OV0104/v1/doris/sv/ssd/HE/HE0103/
                                   ContentsCode = c('HE0103AD'),
                                   Tid = c('*')),
                       clean = TRUE)
-names(scb) <- paste0("v", 1:6)
 scb <- scb %>%
   transmute(country = "Sweden",
-            year = as.numeric(as.character(v4)),
-            gini = v6,
+            year = as.numeric(as.character(år)),
+            gini = values,
             gini_se = NA,
-            welfare_def = ifelse(str_detect(v2, "disponibel"), "net",
+            welfare_def = ifelse(str_detect(inkomstslag, "disponibel"), "net",
                                  "market"),
             equiv_scale = "ae",
             monetary = FALSE,
@@ -720,19 +719,19 @@ baseline <- lis %>% filter(welfare_def==baseline_wd & equiv_scale==baseline_es) 
   arrange(desc(lis_count)) 
 
 # turn cross-country series that do not have baseline's welfare_def into within-country series
-oecd <- oecd %>% 
+oecd1 <- oecd %>% 
   mutate(series = ifelse(welfare_def!=str_extract(baseline_series, "market|net"),
                          paste("OECD", country, str_replace(series, "OECD ", "")),
                          series))
-ceq <- ceq %>% 
+ceq1 <- ceq %>% 
   mutate(series = ifelse(welfare_def!=str_extract(baseline_series, "market|net"),
                          paste("CEQ", country, str_replace(series, "CEQ ", "")),
                          series))
 
 # then combine with other series ordered by data-richness
 ineq0 <- bind_rows(lis, 
-                   sedlac, cepal, cepal_sdi, oecd, eurostat,
-                   transmonee, ceq,
+                   sedlac, cepal, cepal_sdi, oecd1, eurostat,
+                   transmonee, ceq1,
                    abs, statcan, statee, statfi, insee, geostat,
                    ssb, dgeec, rosstat, scb, tdgbas, turkstat, 
                    ons, ifs, cbo, uscb, uine,
@@ -772,6 +771,7 @@ ineq <- bind_rows(ineq_bl, ineq_nbl) %>%
          ecode = as.integer(factor(equiv_scale), levels = unique(equiv_scale)),
          scode = as.integer(factor(series, levels = unique(series))))
 
+save(ineq, file = "data/ineq.Rda")
 
 # for v5.1
 ineq1 <- ineq %>%
@@ -805,12 +805,12 @@ write_csv(g_1_se, "../Global Inequality/ SWIID v5.1/Data/g_1_se.csv", na = "")
 # ineq_w <- ineq_l %>% spread(key = series, value = gini)
 
 
-t <- ineq %>%
-  select(country, year, gini_m, scode) %>%
-  mutate(scode = paste0("s", scode)) %>%
-  split(.$country) 
-%>% 
-  map(function(x) {
-    spread(., key = scode, value = gini_m) %>% 
-      select(-country, -year) %>%
-      cor(use = "pairwise.complete.obs")})
+# t <- ineq %>%
+#   select(country, year, gini_m, scode) %>%
+#   mutate(scode = paste0("s", scode)) %>%
+#   split(.$country) 
+# %>% 
+#   map(function(x) {
+#     spread(., key = scode, value = gini_m) %>% 
+#       select(-country, -year) %>%
+#       cor(use = "pairwise.complete.obs")})
