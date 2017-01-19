@@ -1,0 +1,59 @@
+Instructions
+
+Use Google Scholar to find articles: this link works off campus <http://scholar-google-com.proxy.lib.uiowa.edu>.  If they don't show up in GS, try just straight Google.
+
+country: Please use the name as it appears in the added1 file.  For example, "United States," not "USA"
+
+year: If data for a two-year range, rather than a calendar year, is reported (for example, 2013/14), please enter the range.
+
+gini: I only want Gini data if it covers the whole population of the whole country--data on certain age categories or urban areas or married people, etc., aren't interesting to me.  But I *do* want every piece of information available for the whole population.  If there are more than one combination of equivalence scale and welfare definition for the whole population, I want them all to be included.  If a source has additional data that meet this criteria that was not recorded before, please add it.
+
+gini_se: If the source gives a standard error for the statistics it reports, please record it
+
+equiv_scale: One of the following
+		
+		Household (hh)			this means there's no size adjustment
+		
+		Household per capita (pc)	dividing by the number of members
+		
+		Household eq, sq rt (sqrt)	dividing by square root of members
+		
+		Household eq, OECDmod (oecd)	dividing by the OECD ("modified") scale
+		
+		Household eq, adult eq (ae)	dividing by some unidentified adult equivalence scale
+		
+		Household eq, [something]	dividing by a specific national scale
+
+		Family (households of two-or-more)	^ can be further adjusted as are households
+
+
+
+welfare_def: Please enter one of the following,
+		
+		Market income* (market)		pre-tax, pre-government-transfers
+		
+		Gross income* (gross)		pre-tax, post-(cash & cash-like-)transfers
+		
+		Net income* (net)		post-(direct-)tax, post-transfers; "disposable income" (usually)
+
+		Final income? 			post-(indirect-)tax (maybe with in-kind transfers)? make note
+		
+		Consumption (con)		"consumption expenditures"
+
+		Expenditure (exp)		"expenditures"
+
+		
+		*If the statistic is for "monetary" income, please note that as well: "Market income, monetary"	
+
+monetary: TRUE if the source specifies it is calculated only on the basis of monetary income
+
+break: If you happen to notice that the source indicates a 'break in series' in a particular year's gini--usually with a discussion of a change in methodology or survey--please put an x in this column. Do this in lieu of the "series" variable in fs_added_data
+
+
+source1: author and year (may need to be fixed)
+
+unsure?: Put an "x" in one of these columns if you couldn't find confirmation of the information in the column to its left
+
+link: link to the source
+
+citation?: Put an "x" in this column when you've added the source to the group Zotero library at https://www.zotero.org/groups/394473 
