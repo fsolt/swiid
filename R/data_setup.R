@@ -1,11 +1,8 @@
 if (!require(pacman)) install.packages("pacman")
-p_load(readr, readxl, 
+p_load(tidyverse, readxl, 
        eurostat, rsdmx, xml2, CANSIM2R, pxweb,
-       tidyr, stringr, magrittr, dplyr, purrr, 
-       countrycode)
-p_load_gh("leeper/tabulizerjars", "leeper/tabulizer") # read PDF tables
-
-# check if WB gini info is now available and library(wbstats) or library(WDI)
+       stringr, magrittr, countrycode)
+p_load_gh("ropensci/tabulizerjars", "ropensci/tabulizer") # read PDF tables
 
 # LIS
 format_lis <- function(x) {
@@ -303,6 +300,42 @@ transmonee <- suppressWarnings(read_excel("data-raw/transmonee.xls",
 ceq <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/ceq.csv", col_types = "cnnncclcccc") %>% 
   mutate(series = paste("CEQ", welfare_def, equiv_scale))
 
+# World Bank Africa Poverty Database (carefully vetted subset of WDI)
+afr_wb3c <- countrycode::countrycode_data %>% 
+  filter(continent=="Africa" & !is.na(wb_api3c)) %>% 
+  `[[`("wb_api3c") %>% 
+  setdiff(c("DZA", "DJI", "EGY", "LBY", "MAR", "TUN"))
+
+afr_gini_pc <- wbstats::wb(indicator = "SI.POV.GINI",
+               startdate = 1960, 
+               enddate = 2017, 
+               country = afr_wb3c) %>% 
+  transmute(country = country,
+            year = as.numeric(date),
+            gini = value,
+            gini_se = NA,
+            welfare_def = "con",
+            equiv_scale = "pc",
+            monetary = FALSE,
+            series = paste("World Bank Africa Poverty Database", country, welfare_def, equiv_scale),
+            source1 = "Beegle et al. 2016",
+            page = "121-126",
+            link = "http://databank.worldbank.org/data/reports.aspx?source=2&series=SI.POV.GINI")
+
+afr_gini_sqrt <- read_csv("data-raw/AFR_gini_sqrt") %>% 
+  transmute(country = country,
+            year = as.numeric(surveyr),
+            gini = gini_sqrthhs,
+            gini_se = NA,
+            welfare_def = "con",
+            equiv_scale = "sqrt",
+            monetary = FALSE,
+            series = paste("World Bank Africa Poverty Database", country, welfare_def, equiv_scale),
+            source1 = "Personal communication, K. Beegle, 2016-08-01",
+            page = "",
+            link = "https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv")
+
+
 
 ## National Statistics Offices
 
@@ -405,23 +438,23 @@ statfi <- get_pxweb_data(url = "http://pxwebapi2.stat.fi/PXWeb/api/v1/en/StatFin
             page = "",
             link = "http://pxnet2.stat.fi/PXWeb/pxweb/en/StatFin/StatFin__tul__tjt/270_tjt_tau_117.px")
 
-# Insee
-insee_link <- "http://www.bdm.insee.fr/bdm2/exporterSeries.action?idbank=001687249&periode=toutes&liste_formats=xls"
-download.file(insee_link, "data-raw/insee.xls")
-
-insee <- read_excel("data-raw/insee.xls", skip = 3, col_names = c("year", "gini")) %>% 
-  filter(!is.na(gini)) %>% 
-  transmute(country = "France",
-            year = year,
-            gini = gini,
-            gini_se = NA,
-            welfare_def = "net",
-            equiv_scale = "oecdm",
-            monetary = FALSE,
-            series = paste("Insee", welfare_def, equiv_scale),
-            source1 = "Insee",
-            page = "",
-            link = insee_link)
+# Insee (not available 2017-05-05)
+# insee_link <- "http://www.bdm.insee.fr/bdm2/exporterSeries.action?idbank=001687249&periode=toutes&liste_formats=xls"
+# download.file(insee_link, "data-raw/insee.xls")
+# 
+# insee <- read_excel("data-raw/insee.xls", skip = 3, col_names = c("year", "gini")) %>% 
+#   filter(!is.na(gini)) %>% 
+#   transmute(country = "France",
+#             year = year,
+#             gini = gini,
+#             gini_se = NA,
+#             welfare_def = "net",
+#             equiv_scale = "oecdm",
+#             monetary = FALSE,
+#             series = paste("Insee", welfare_def, equiv_scale),
+#             source1 = "Insee",
+#             page = "",
+#             link = insee_link)
 
 # Statistics Georgia
 geostat <- read_csv("data-raw/geostat.csv", skip = 3, col_names = c("year", "gross", "con")) %>% 
@@ -687,7 +720,7 @@ uscb <- extract_tables("data-raw/uscb.pdf") %>%
 uine_link <- "http://www.ine.gub.uy/documents/10181/364159/Estimación+de+la+pobreza+por+el+Método+del+Ingreso+2015/321a0edb-d97e-4ab0-aa88-e31ce7a22307"
 download.file(uine_link, "data-raw/uine.pdf")
 
-uine <- extract_tables("data-raw/uine.pdf", pages = 44)[[4]][5:14, 1:2] %>% 
+uine <- extract_tables("data-raw/uine.pdf", pages = 44)[[2]][4:13, 1:2] %>% 
   as_data_frame() %>% 
   transmute(country = "Uruguay",
             year = V1 %>% str_trim() %>% as.numeric(),
@@ -698,12 +731,12 @@ uine <- extract_tables("data-raw/uine.pdf", pages = 44)[[4]][5:14, 1:2] %>%
             monetary = TRUE,
             series = paste("Instituto Nacional de Estadistica", welfare_def, equiv_scale),
             source1 = "Instituto Nacional de Estadistica",
-            page = "",
+            page = "42",
             link = uine_link)
 
 
 ## Added data
-added_data <- read_csv("data-raw/fs_added_data.csv")
+added_data <- read_csv("data-raw/article_data/fs_added_data.csv")
 
 ## Combine
 # first, get baseline series and order by data-richness
@@ -732,7 +765,7 @@ ceq1 <- ceq %>%
 ineq0 <- bind_rows(lis, 
                    sedlac, cepal, cepal_sdi, oecd1, eurostat,
                    transmonee, ceq1,
-                   abs, statcan, statee, statfi, insee, geostat,
+                   abs, statcan, statee, statfi, geostat,
                    ssb, dgeec, rosstat, scb, tdgbas, turkstat, 
                    ons, ifs, cbo, uscb, uine,
                    added_data) %>% 
