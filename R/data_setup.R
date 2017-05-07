@@ -308,7 +308,7 @@ afr_wb3c <- countrycode::countrycode_data %>%
 
 afr_gini_pc <- wbstats::wb(indicator = "SI.POV.GINI",
                startdate = 1960, 
-               enddate = 2017, 
+               enddate = 2016, 
                country = afr_wb3c) %>% 
   transmute(country = country,
             year = as.numeric(date),
@@ -322,7 +322,7 @@ afr_gini_pc <- wbstats::wb(indicator = "SI.POV.GINI",
             page = "121-126",
             link = "http://databank.worldbank.org/data/reports.aspx?source=2&series=SI.POV.GINI")
 
-afr_gini_sqrt <- read_csv("data-raw/AFR_gini_sqrt") %>% 
+afr_gini_sqrt <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv") %>% 
   transmute(country = country,
             year = as.numeric(surveyr),
             gini = gini_sqrthhs,
@@ -335,6 +335,7 @@ afr_gini_sqrt <- read_csv("data-raw/AFR_gini_sqrt") %>%
             page = "",
             link = "https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv")
 
+afr_gini <- bind_rows(afr_gini_pc, afr_gini_sqrt)
 
 
 ## National Statistics Offices
@@ -764,7 +765,7 @@ ceq1 <- ceq %>%
 # then combine with other series ordered by data-richness
 ineq0 <- bind_rows(lis, 
                    sedlac, cepal, cepal_sdi, oecd1, eurostat,
-                   transmonee, ceq1,
+                   transmonee, ceq1, afr_gini,
                    abs, statcan, statee, statfi, geostat,
                    ssb, dgeec, rosstat, scb, tdgbas, turkstat, 
                    ons, ifs, cbo, uscb, uine,
