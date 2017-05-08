@@ -71,7 +71,7 @@ lis <- lis_files %>%
 
 
 
-# Socio-Economic Database for Latin America and the Caribbean (SEDLAC)
+# Socio-Economic Database for Latin America and the Caribbean (SEDLAC) (automated)
 format_sedlac <- function(df, sheet, link, es) {
   x <- df
   if(ncol(x)==2) {
@@ -146,9 +146,7 @@ sedlac <- rbind(sedlac_ei, sedlac_hh, sedlac_pc)
 rm(sedlac_ei, sedlac_hh, sedlac_pc)
 
 
-# CEPALStat
-# http://interwp.cepal.org/sisgen/ConsultaIntegrada.asp?idIndicador=250&idioma=e
-# consider informative series var
+# CEPALStat (automated)
 cepal_link <- "http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250"
 cepal0 <- cepal_link %>% read_xml() 
 cepal_extract <- function(x) {
@@ -193,7 +191,8 @@ cepal <- left_join(cepal_raw, cepal_labels, by = c("dim_208" = "id")) %>%
 
 rm(cepal0, cepal_raw, cepal_labels, cepal_notes)
 
-# CEPAL Serie Distribución del Ingreso
+
+# CEPAL Serie Distribución del Ingreso (archived)
 cepal_sdi <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/repositorio_cepal.tsv") %>% 
   transmute(country = country,
             year = year,
@@ -210,8 +209,7 @@ cepal_sdi <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data
             link = link)
 
 
-# OECD Income Distribution Database
-# http://stats.oecd.org > Data by Theme: search "income distribution"; Customize: all countries, ginis only, total pop only, 1974 to latest
+# OECD Income Distribution Database (automated)
 oecd_link <- "http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all"
 oecd0 <- oecd_link %>% 
   readSDMX() %>% 
@@ -241,8 +239,7 @@ oecd <- oecd0 %>% filter(measure!="STDG") %>%
 rm(oecd0, oecd_se)         
 
        
-# Eurostat
-# http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en; Customization: all years
+# Eurostat (automated)
 eurostat <- get_eurostat("ilc_di12", 
                          time_format = "num", 
                          update_cache = TRUE,
@@ -300,7 +297,7 @@ transmonee <- suppressWarnings(read_excel("data-raw/transmonee.xls",
             page = "",
             link = transmonee_link)
 
-# Commitment to Equity
+# Commitment to Equity (updated by hand; see http://www.commitmentoequity.org/publications-ceqworkingpapers/ and http://www.commitmentoequity.org/data/ )
 ceq <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/ceq.csv", col_types = "cnnncclcccc") %>% 
   mutate(series = paste("CEQ", welfare_def, equiv_scale))
 
@@ -344,7 +341,10 @@ afr_gini <- bind_rows(afr_gini_pc, afr_gini_sqrt)
 
 ## National Statistics Offices
 
-# Australian Bureau of Statistics
+# Australian Bureau of Statistics (not included in api 2017-05)
+# confirm latest release at: http://www.abs.gov.au/AUSSTATS/abs@.nsf/second+level+view?ReadForm&prodno=6523.0&viewtitle=Household%20Income%20and%20Wealth,%20Australia~2013-14~Latest~04/09/2015&&tabname=Past%20Future%20Issues&prodno=6523.0&issue=2013-14&num=&view=&
+# update abs_link
+
 abs_link <- "http://www.abs.gov.au/AUSSTATS/subscriber.nsf/log?openagent&6523DO00001_201314.xls&6523.0&Data%20Cubes&4F00682720AFA825CA257EB5001B77B9&0&2013-14&16.12.2015&Latest"
 download.file(abs_link, "data-raw/abs.xls")
 
@@ -407,7 +407,7 @@ statcan <- CANSIM2R:::downloadCANSIM(2060033) %>%
             page = "",
             link = link)
 
-# Statistics Estonia (not likely to be updated)
+# Statistics Estonia (archived)
 statee <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/statistics_estonia.tsv", col_names = FALSE) %>% 
   rename(year = X1, pc = X2, oecdm = X3) %>% 
   gather(key = equiv_scale, value = gini, pc:oecdm) %>% 
@@ -423,7 +423,7 @@ statee <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data-ra
           page = "",
           link = "http://pub.stat.ee/px-web.2001/dialog/varval.asp?ma=HH30")
 
-# Statistics Finland
+# Statistics Finland (automated)
 statfi <- get_pxweb_data(url = "http://pxwebapi2.stat.fi/PXWeb/api/v1/en/StatFin/tul/tjt/270_tjt_tau_117.px",
                          dims = list(Tulokäsite = c("SL2", "4L2", "6L2"),
                                      Vuosi = c("*"),
@@ -461,7 +461,11 @@ statfi <- get_pxweb_data(url = "http://pxwebapi2.stat.fi/PXWeb/api/v1/en/StatFin
 #             page = "",
 #             link = insee_link)
 
-# Statistics Georgia
+# Statistics Georgia (update file)
+# http://91.208.144.188/Menu.aspx?rxid=c8ca81e9-2824-4c5b-a46a-c80202913531&px_db=Database&px_type=PX&px_language=en
+# Social Statistics > Standard of Living, Subsistance Minimum > Gini Coefficients by Year and Indicator
+# All years, "By total incomes" and "By total expenditures"
+
 geostat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/geostat.csv", skip = 3, col_names = c("year", "gross", "con")) %>% 
   filter(!is.na(gross)) %>% 
   gather(key = "welfare_def", value = "gini", gross:con) %>% 
@@ -477,7 +481,10 @@ geostat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-r
             page = "",
             link = "http://pc-axis.geostat.ge")
 
-# Istat
+# Istat (update file)
+# http://dati.istat.it/Index.aspx?DataSetCode=DCCV_INDCONSUMI&Lang=en#
+# Customize > Territory: Italy > Data Type: Gini
+
 istat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/istat.csv") %>% 
   transmute(country = "Italy",
             year = Year,
@@ -492,7 +499,7 @@ istat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw
             link = "http://dati.istat.it/Index.aspx?DataSetCode=DCCV_INDCONSUMI&Lang=en")
 
  
-# Statistics Norway
+# Statistics Norway (automated)
 ssb_link <- "https://www.ssb.no/en/inntekt-og-forbruk/statistikker/ifhus/aar/2016-12-16?fane=tabell&sort=nummer&tabell=288299"
 
 ssb <- get_pxweb_data(url = "http://data.ssb.no/api/v0/en/table/if/if02/ifhus/SBMENU2486/InntUlikhet",
@@ -513,11 +520,12 @@ ssb <- get_pxweb_data(url = "http://data.ssb.no/api/v0/en/table/if/if02/ifhus/SB
             page = "",
             link = ssb_link)
 
-# DGEEC Paraguay
+# DGEEC Paraguay (update link)
+# http://www.dgeec.gov.py > Publicaciones > Pobreza
 dgeec_link <- "http://www.dgeec.gov.py/Publicaciones/Biblioteca/eph2015/Boletin%20de%20pobreza%202015.pdf"
 download.file(dgeec_link, "data-raw/dgeec.pdf")
 
-dgeec <- extract_tables("data-raw/dgeec.pdf", pages = 15)[[1]][-1, ] %>%
+dgeec <- tabulizer::extract_tables("data-raw/dgeec.pdf", pages = 15)[[1]][-1, ] %>%
   as.data.frame(stringsAsFactors=FALSE) %>% 
   transmute(country = "Paraguay",
             year = ifelse(str_trim(V1) %>% str_extract("\\d{2}$") %>% as.numeric() > 50,
@@ -533,8 +541,11 @@ dgeec <- extract_tables("data-raw/dgeec.pdf", pages = 15)[[1]][-1, ] %>%
             page = "14",
             link = dgeec_link)
 
-# Russian Federal State Statistics Service
-rosstat_link <- "http://www.gks.ru/free_doc/doc_2015/year/pril_year15-eng.xls"
+# Russian Federal State Statistics Service (update link)
+# http://www.gks.ru/wps/wcm/connect/rosstat_main/rosstat/en/main/
+# Social and Economic Indicators of the Russian Federation (Appendix to the 'Statistical Yearbook of Russia')
+
+rosstat_link <- "http://www.gks.ru/free_doc/doc_2016/year/pril-year_2016_eng.xls"
 download.file(rosstat_link, "data-raw/rosstat.xls")
 
 rosstat <- read_excel("data-raw/rosstat.xls", sheet = "Sec.5", skip = 1) %>% 
@@ -554,7 +565,7 @@ rosstat <- read_excel("data-raw/rosstat.xls", sheet = "Sec.5", skip = 1) %>%
             page = "Sec.5",
             link = rosstat_link) 
 
-# Statistics Sweden
+# Statistics Sweden (automated)
 scb <- get_pxweb_data(url = "http://api.scb.se/OV0104/v1/doris/sv/ssd/HE/HE0103/HE0103A/DispInk8",
                       dims = list(Hushallsdef = c('FAME'),
                                   InkomstTyp = c('*'),
@@ -575,9 +586,12 @@ scb <- scb %>%
             page = "",
             link = "http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550")
 
-# Taiwan Directorate General of Budget, Accounting, and Statistics
-tdgbas_link <- "http://win.dgbas.gov.tw/fies/doc/result/103/a11/Year05.xls"
+# Taiwan Directorate General of Budget, Accounting, and Statistics (update tdfbas_link [add 1 after 'doc/result/']; update file from tdfbas_link2)
+
+tdgbas_link <- "http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls"
 download.file(tdgbas_link, "data-raw/tdgbas1.xls")
+
+tdgbas_link2 <- "http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L"
 
 tdgbas <- read_excel("data-raw/tdgbas1.xls", col_names = FALSE, skip = 9) %>% 
   transmute(year = X2,
@@ -605,12 +619,19 @@ tdgbas <- read_excel("data-raw/tdgbas1.xls", col_names = FALSE, skip = 9) %>%
             link = link)
 
 # Statistics Turkey
-turkstat_link <- "http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=1601"
-download.file(turkstat_link, "data-raw/turkstat.xls")
+turkstat_links <- paste0("http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=", c(1601, 2354))
+download.file(turkstat_links[1], "data-raw/turkstat_oecdm.xls")
+download.file(turkstat_links[2], "data-raw/turkstat_hh.xls")
 
-turkstat <- read_excel("data-raw/turkstat.xls", skip = 5) 
-names(turkstat)[1] <- "var" 
-turkstat <- turkstat %>% 
+turkstat_oecdm <- read_excel("data-raw/turkstat_oecdm.xls", skip = 5) 
+turkstat_hh <- read_excel("data-raw/turkstat_hh.xls", skip = 5) 
+turkstat_list <- list(turkstat_oecdm = turkstat_oecdm, turkstat_hh = turkstat_hh)
+
+turkstat <- pmap_df(list(turkstat_list, names(turkstat_list), turkstat_links),
+                    function(x, name_x, link_x) {
+  names(x)[1] <- "var" 
+  es <- str_extract(name_x, "[^_]*$")
+  x %>% 
   filter(str_detect(var, "Gini")) %>% 
   gather(key = year, value = gini) %>% 
   filter(year!="var") %>% 
@@ -619,22 +640,24 @@ turkstat <- turkstat %>%
             gini = as.numeric(gini),
             gini_se = NA,
             welfare_def = "disp",
-            equiv_scale = "oecdm",
+            equiv_scale = es,
             monetary = FALSE,
             series = paste("Turkstat", welfare_def, equiv_scale),
             source1 = "Turkish Statistical Institute",
             page = "",
-            link = turkstat_link) 
+            link = link_x) })
 
-# U.K. Office for National Statistics
-ons_link <- "http://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2015/e93b0b06&format=csv"
+# U.K. Office for National Statistics (update link)
+# https://www.ons.gov.uk/atoz?query=effects+taxes+benefits (new releases in April)
+
+ons_link <- "https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv"
 download.file(ons_link, "data-raw/ons.csv")
 
-ons <- read_csv("data-raw/ons.csv", skip = 6) %>% 
-  transmute(year = Year,
-            market = `Equivalised original income`,
-            gross = `Equivalised gross income`,
-            disp = `Equivalised disposable income`) %>% 
+ons <- read_csv("data-raw/ons.csv", skip = 7) %>% 
+  transmute(year = X1,
+            market = Original,
+            gross = Gross,
+            disp = Disposable) %>% 
   gather(key = welfare_def, value = gini, -year) %>% 
   transmute(country = "United Kingdom",
             year = ifelse(str_extract(year, "\\d{2}$") %>% as.numeric() > 50,
