@@ -458,7 +458,7 @@ statfi <- get_pxweb_data(url = "http://pxwebapi2.stat.fi/PXWeb/api/v1/en/StatFin
 #             link = insee_link)
 
 # Statistics Georgia
-geostat <- read_csv("data-raw/geostat.csv", skip = 3, col_names = c("year", "gross", "con")) %>% 
+geostat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/geostat.csv", skip = 3, col_names = c("year", "gross", "con")) %>% 
   filter(!is.na(gross)) %>% 
   gather(key = "welfare_def", value = "gini", gross:con) %>% 
   transmute(country = "Georgia",
@@ -474,7 +474,7 @@ geostat <- read_csv("data-raw/geostat.csv", skip = 3, col_names = c("year", "gro
             link = "http://pc-axis.geostat.ge")
 
 # Istat
-istat <- read_csv("data-raw/istat.csv") %>% 
+istat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/istat.csv") %>% 
   transmute(country = "Italy",
             year = Year,
             gini = `0`,
@@ -486,17 +486,21 @@ istat <- read_csv("data-raw/istat.csv") %>%
             source1 = "Istat",
             page = "",
             link = "http://dati.istat.it/Index.aspx?DataSetCode=DCCV_INDCONSUMI&Lang=en")
+
  
 # Statistics Norway
-ssb_link <- "http://www.ssb.no/eksport/tabell.csv?key=211301"
-download.file(ssb_link, "data-raw/ssb.csv")
+ssb_link <- "https://www.ssb.no/en/inntekt-og-forbruk/statistikker/ifhus/aar/2016-12-16?fane=tabell&sort=nummer&tabell=288299"
 
-ssb <- read_delim("data-raw/ssb.csv", ";", col_names = FALSE, skip = 3) %>%
-  select(X1, X2, X3) %>%
+ssb <- get_pxweb_data(url = "http://data.ssb.no/api/v0/en/table/if/if02/ifhus/SBMENU2486/InntUlikhet",
+                       dims = list(Forbruksenhet2 = c('01'),
+                                   ContentsCode = c('Ginikoeffisient', 'StandardavvikGini'),
+                                   Tid = c('*')),
+                       clean = TRUE) %>%
+  spread(contents, values) %>% 
   transmute(country = "Norway",
-            year = as.numeric(X1),
-            gini = as.numeric(X2),
-            gini_se = suppressWarnings(as.numeric(X3)),
+            year = as.numeric(as.character(year)),
+            gini = `Gini coefficient`,
+            gini_se = `Standard error of the Gini coefficient`,
             welfare_def = "net",
             equiv_scale = "oecdm",
             monetary = TRUE,
