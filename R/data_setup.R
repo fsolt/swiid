@@ -1,6 +1,6 @@
 if (!require(pacman)) install.packages("pacman")
 p_load(tidyverse, readxl, 
-       eurostat, rsdmx, xml2, CANSIM2R, pxweb,
+       eurostat, rsdmx, xml2, CANSIM2R, pxweb, rvest,
        stringr, magrittr, countrycode)
 p_load_gh("ropensci/tabulizerjars", "ropensci/tabulizer") # read PDF tables
 
@@ -49,9 +49,9 @@ format_lis_xtra <- function(x) {
               gini = (str_trim(X2) %>% as.numeric()),
               gini_se = (str_trim(X3) %>% as.numeric()),
               equiv_scale = "sqrt",
-              welfare_def = "net",
+              welfare_def = "disp",
               monetary = FALSE,
-              series = "LIS net sqrt",
+              series = "LIS dispsqrt",
               source1 = ifelse(country=="New Zealand", "Statistics New Zealand 1999", "LISSY"),
               page = ifelse(country=="New Zealand", "73", ""),
               link = ifelse(country=="New Zealand", 
@@ -60,13 +60,13 @@ format_lis_xtra <- function(x) {
     arrange(country, year)
 }
 
-lis_files <- c("net_sqrt", "net_pc", "net_hh", 
+lis_files <- c("disp_sqrt", "disp_pc", "disp_hh", 
                "market_sqrt", "market_pc", "market_hh",
                "con_sqrt", "con_pc", "con_hh")
 
 lis <- lis_files %>% 
   map_df(format_lis) %>% 
-  rbind(format_lis_xtra("net_sqrt_nz"), format_lis_xtra("net_sqrt_ru")) %>% 
+  rbind(format_lis_xtra("disp_sqrt_nz"), format_lis_xtra("disp_sqrt_ru")) %>% 
   arrange(country, year, welfare_def, equiv_scale)
 
 
@@ -94,7 +94,7 @@ format_sedlac <- function(df, sheet, link, es) {
   x$series <- ifelse(!x$h_co & is.na(x$year), x$heading, NA)
   x %<>% group_by(country) %>%
     mutate(series0 = zoo::na.locf(series, na.rm = FALSE),
-           series = paste("SEDLAC", country, "net", es,
+           series = paste("SEDLAC", country, "disp", es,
                    as.numeric(factor(series0, levels = unique(series0)))) %>% 
              str_replace("NA", "1")) %>% 
     ungroup() %>% 
@@ -103,7 +103,7 @@ format_sedlac <- function(df, sheet, link, es) {
               year = as.numeric(year),
               gini = gini,
               gini_se = se,
-              welfare_def = "net",
+              welfare_def = "disp",
               equiv_scale = es,
               monetary = TRUE,
               series = series,
@@ -113,8 +113,12 @@ format_sedlac <- function(df, sheet, link, es) {
   return(x)
 }
 
-sedlac_link <- "http://sedlac.econo.unlp.edu.ar/download.php?file=archivos_estadistica/inequality_LAC_2015-06.xls"
-download.file(sedlac_link, "data-raw/sedlac.xls")
+sedlac <- "http://sedlac.econo.unlp.edu.ar/eng/statistics.php" %>% 
+  rvest::html_session() %>% 
+  follow_link("Inequality") %>% 
+  follow_link("Inequality")
+writeBin(httr::content(sedlac$response, "raw"), "data-raw/sedlac.xls")
+sedlac_link <- sedlac$response$url
 
 sedlac_pc <- read_excel(path = "data-raw/sedlac.xls", 
                         sheet = "intervals pci",
@@ -176,11 +180,11 @@ cepal <- left_join(cepal_raw, cepal_labels, by = c("dim_208" = "id")) %>%
   transmute(year = year,
             gini = as.numeric(as.character(valor)),
             gini_se = NA,
-            welfare_def = "net",
+            welfare_def = "disp",
             equiv_scale = "pc",
             monetary = TRUE,
             notes = paste(area, ifelse(is.na(descripcion), "", as.character(descripcion))),
-            series = paste("CEPAL", country, "net pc", as.numeric(factor(notes, levels = unique(notes)))),
+            series = paste("CEPAL", country, "disp pc", as.numeric(factor(notes, levels = unique(notes)))),
             source1 = "CEPALStat",
             page = area,
             link = cepal_link) %>% 
@@ -196,7 +200,7 @@ cepal_sdi <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data
             gini = gini/100,
             gini_se = NA,
             monetary = str_detect(welfare_def, "Monetary"),
-            welfare_def = ifelse(str_detect(welfare_def, "Disposable"), "net",
+            welfare_def = ifelse(str_detect(welfare_def, "Disposable"), "disp",
                                  ifelse(str_detect(welfare_def, "Gross"), "gross",
                                         "market")),
             equiv_scale = equiv_scale,
@@ -215,7 +219,7 @@ oecd0 <- oecd_link %>%
   transmute(country = countrycode(LOCATION, "iso3c", "country.name"),
          year = as.numeric(obsTime),
          gini = obsValue,
-         welfare_def = ifelse((MEASURE=="GINI" | MEASURE=="STDG"), "net", 
+         welfare_def = ifelse((MEASURE=="GINI" | MEASURE=="STDG"), "disp", 
                               ifelse(MEASURE=="GINIB", "market", "gross")),
          equiv_scale = "sqrt",   
          monetary = FALSE,
@@ -248,7 +252,7 @@ eurostat <- get_eurostat("ilc_di12",
          year = time - (!(country=="United Kingdom" | country=="Ireland")), #eurostat reports survey year not ref year except in UK and IE <http://ec.europa.eu/eurostat/cache/metadata/en/ilc_esms.htm#ref_period>
          gini = values/100,
          gini_se = NA,
-         welfare_def = "net",
+         welfare_def = "disp",
          equiv_scale = "oecdm",   
          monetary = TRUE,
          break_yr = ifelse(is.na(flags) | flags!="b", 0, 1),
@@ -288,7 +292,7 @@ transmonee <- suppressWarnings(read_excel("data-raw/transmonee.xls",
             year = as.numeric(year),
             gini = gini,
             gini_se = NA,
-            welfare_def = "net",
+            welfare_def = "disp",
             equiv_scale = "pc",
             monetary = FALSE,
             series = paste("Transmonee", country, welfare_def, equiv_scale),
@@ -369,7 +373,7 @@ abs_format <- function(sheet, wd, es) {
   return(x)
 }
        
-abs_ne <- abs_format("Table 1.1", "net", "oecdm")
+abs_ne <- abs_format("Table 1.1", "disp", "oecdm")
 
 abs_gh <- abs_format("Table 1.2", "gross", "hh")
 
@@ -394,7 +398,7 @@ statcan <- CANSIM2R:::downloadCANSIM(2060033) %>%
             gini_se = gini*.02, # StatCan indicates CV < .02
             welfare_def = tolower(INCOMECONCEPT) %>% 
               str_extract("market|after-tax|total") %>% 
-              str_replace("after-tax", "net") %>% 
+              str_replace("after-tax", "disp") %>% 
               str_replace("total", "gross"),
             equiv_scale = equiv_scale,
             monetary = TRUE,
@@ -403,7 +407,7 @@ statcan <- CANSIM2R:::downloadCANSIM(2060033) %>%
             page = "",
             link = link)
 
-# Statistics Estonia
+# Statistics Estonia (not likely to be updated)
 statee <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/statistics_estonia.tsv", col_names = FALSE) %>% 
   rename(year = X1, pc = X2, oecdm = X3) %>% 
   gather(key = equiv_scale, value = gini, pc:oecdm) %>% 
@@ -429,7 +433,7 @@ statfi <- get_pxweb_data(url = "http://pxwebapi2.stat.fi/PXWeb/api/v1/en/StatFin
             year = as.numeric(as.character(Year)),
             gini = values/100,
             gini_se = NA,
-            welfare_def = ifelse(str_detect(`Income concept`, "Disposable"), "net",
+            welfare_def = ifelse(str_detect(`Income concept`, "Disposable"), "disp",
                                  ifelse(str_detect(`Income concept`, "Gross"), "gross",
                                         "market")),
             equiv_scale = "oecdm",
@@ -449,7 +453,7 @@ statfi <- get_pxweb_data(url = "http://pxwebapi2.stat.fi/PXWeb/api/v1/en/StatFin
 #             year = year,
 #             gini = gini,
 #             gini_se = NA,
-#             welfare_def = "net",
+#             welfare_def = "disp",
 #             equiv_scale = "oecdm",
 #             monetary = FALSE,
 #             series = paste("Insee", welfare_def, equiv_scale),
@@ -501,7 +505,7 @@ ssb <- get_pxweb_data(url = "http://data.ssb.no/api/v0/en/table/if/if02/ifhus/SB
             year = as.numeric(as.character(year)),
             gini = `Gini coefficient`,
             gini_se = `Standard error of the Gini coefficient`,
-            welfare_def = "net",
+            welfare_def = "disp",
             equiv_scale = "oecdm",
             monetary = TRUE,
             series = paste("SSB", welfare_def, equiv_scale),
@@ -562,7 +566,7 @@ scb <- scb %>%
             year = as.numeric(as.character(år)),
             gini = values,
             gini_se = NA,
-            welfare_def = ifelse(str_detect(inkomstslag, "disponibel"), "net",
+            welfare_def = ifelse(str_detect(inkomstslag, "disponibel"), "disp",
                                  "market"),
             equiv_scale = "ae",
             monetary = FALSE,
@@ -592,7 +596,7 @@ tdgbas <- read_excel("data-raw/tdgbas1.xls", col_names = FALSE, skip = 9) %>%
             year = year,
             gini = gini,
             gini_se = NA,
-            welfare_def = "net",
+            welfare_def = "disp",
             equiv_scale = equiv_scale,
             monetary = FALSE,
             series = paste("DGBAS", welfare_def, equiv_scale),
@@ -614,7 +618,7 @@ turkstat <- turkstat %>%
             year = as.numeric(year),
             gini = as.numeric(gini),
             gini_se = NA,
-            welfare_def = "net",
+            welfare_def = "disp",
             equiv_scale = "oecdm",
             monetary = FALSE,
             series = paste("Turkstat", welfare_def, equiv_scale),
@@ -630,7 +634,7 @@ ons <- read_csv("data-raw/ons.csv", skip = 6) %>%
   transmute(year = Year,
             market = `Equivalised original income`,
             gross = `Equivalised gross income`,
-            net = `Equivalised disposable income`) %>% 
+            disp = `Equivalised disposable income`) %>% 
   gather(key = welfare_def, value = gini, -year) %>% 
   transmute(country = "United Kingdom",
             year = ifelse(str_extract(year, "\\d{2}$") %>% as.numeric() > 50,
@@ -659,7 +663,7 @@ ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3) %
                    str_extract(X1, "\\d{2}$") %>% as.numeric() + 2000),
             gini = X3,
             gini_se = NA,
-            welfare_def = "net",
+            welfare_def = "disp",
             equiv_scale = "oecdm",
             monetary = TRUE,
             series = paste("IFS", X2, welfare_def, equiv_scale),
@@ -677,10 +681,10 @@ cbo <- read_excel("data-raw/cbo.xlsx", sheet = 9, col_names = FALSE, skip = 10) 
   transmute(year = as.numeric(X0),
             market = X1,
             gross = X2,
-            net = X3) %>% 
+            disp = X3) %>% 
   gather(key = "welfare_def", 
          value = "gini",
-         market:net) %>% 
+         market:disp) %>% 
   mutate(country = "United States",
          gini_se = NA,
          equiv_scale = "sqrt",
@@ -731,7 +735,7 @@ uine <- extract_tables("data-raw/uine.pdf", pages = 44)[[2]][4:13, 1:2] %>%
             year = V1 %>% str_trim() %>% as.numeric(),
             gini = as.numeric(sub(",", ".", V2, fixed = TRUE)),
             gini_se = NA,
-            welfare_def = "net",
+            welfare_def = "disp",
             equiv_scale = "pc",
             monetary = TRUE,
             series = paste("Instituto Nacional de Estadistica", welfare_def, equiv_scale),
@@ -745,8 +749,8 @@ added_data <- read_csv("data-raw/article_data/fs_added_data.csv")
 
 ## Combine
 # first, get baseline series and order by data-richness
-baseline_series <- "LIS net sqrt"
-baseline_wd <- "net"
+baseline_series <- "LIS disp sqrt"
+baseline_wd <- "disp"
 baseline_es <- "sqrt"
 baseline <- lis %>% filter(welfare_def==baseline_wd & equiv_scale==baseline_es) %>% 
   rename(gini_b = gini,
@@ -758,11 +762,11 @@ baseline <- lis %>% filter(welfare_def==baseline_wd & equiv_scale==baseline_es) 
 
 # turn cross-country series that do not have baseline's welfare_def into within-country series
 oecd1 <- oecd %>% 
-  mutate(series = ifelse(welfare_def!=str_extract(baseline_series, "market|net"),
+  mutate(series = ifelse(welfare_def!=str_extract(baseline_series, "market|disp"),
                          paste("OECD", country, str_replace(series, "OECD ", "")),
                          series))
 ceq1 <- ceq %>% 
-  mutate(series = ifelse(welfare_def!=str_extract(baseline_series, "market|net"),
+  mutate(series = ifelse(welfare_def!=str_extract(baseline_series, "market|disp"),
                          paste("CEQ", country, str_replace(series, "CEQ ", "")),
                          series))
 
@@ -824,11 +828,11 @@ write_csv(ineq1, "../Global Inequality/ SWIID v5.1/Data/ionso.csv")
 
 g_1_se <- ineq %>% 
   filter(source1=="LISSY" & equiv_scale=="sqrt" & 
-           (welfare_def=="net" | welfare_def=="market")) %>% 
+           (welfare_def=="disp" | welfare_def=="market")) %>% 
   select(country, year, gini_m_se, welfare_def) %>% 
   mutate(gini_m_se = gini_m_se*100) %>% 
   spread(key = welfare_def, value = gini_m_se) %>% 
-  rename(g_1se = net, g_2se = market)
+  rename(g_1se = disp, g_2se = market)
 write_csv(g_1_se, "../Global Inequality/ SWIID v5.1/Data/g_1_se.csv", na = "")
   
 
