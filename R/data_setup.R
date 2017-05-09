@@ -70,7 +70,6 @@ lis <- lis_files %>%
   arrange(country, year, welfare_def, equiv_scale)
 
 
-
 # Socio-Economic Database for Latin America and the Caribbean (SEDLAC) (automated)
 format_sedlac <- function(df, sheet, link, es) {
   x <- df
@@ -114,7 +113,7 @@ format_sedlac <- function(df, sheet, link, es) {
 }
 
 sedlac <- "http://sedlac.econo.unlp.edu.ar/eng/statistics.php" %>% 
-  rvest::html_session() %>% 
+  html_session() %>% 
   follow_link("Inequality") %>% 
   follow_link("Inequality")
 writeBin(httr::content(sedlac$response, "raw"), "data-raw/sedlac.xls")
@@ -265,7 +264,7 @@ eurostat <- get_eurostat("ilc_di12",
   select(-break_yr)
 
 
-# Transmonee 2012 (2012 is the last database that includes inequality data)
+# Transmonee 2012 (2012 is the last database that includes inequality data; archived)
 transmonee_link <- "https://web.archive.org/web/20130401075747/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls"
 download.file(transmonee_link, "data-raw/transmonee.xls")
 
@@ -301,7 +300,7 @@ transmonee <- suppressWarnings(read_excel("data-raw/transmonee.xls",
 ceq <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/ceq.csv", col_types = "cnnncclcccc") %>% 
   mutate(series = paste("CEQ", welfare_def, equiv_scale))
 
-# World Bank Africa Poverty Database (carefully vetted subset of WDI)
+# World Bank Africa Poverty Database (carefully vetted subset of WDI; automated/archived)
 afr_wb3c <- countrycode::countrycode_data %>% 
   filter(continent=="Africa" & !is.na(wb_api3c)) %>% 
   `[[`("wb_api3c") %>% 
@@ -337,7 +336,7 @@ afr_gini_sqrt <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/
             link = "https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv")
 
 afr_gini <- bind_rows(afr_gini_pc, afr_gini_sqrt)
-
+rm(afr_gini_pc, afr_gini_sqrt)
 
 ## National Statistics Offices
 
@@ -374,12 +373,10 @@ abs_format <- function(sheet, wd, es) {
 }
        
 abs_ne <- abs_format("Table 1.1", "disp", "oecdm")
-
 abs_gh <- abs_format("Table 1.2", "gross", "hh")
-
 abs <- bind_rows(abs_ne, abs_gh)
   
-# Statistics Canada
+# Statistics Canada (automated)
 statcan <- CANSIM2R:::downloadCANSIM(2060033) %>% 
   filter(GEO=="Canada") %>% 
   mutate(equiv_scale = "sqrt",
@@ -520,12 +517,14 @@ ssb <- get_pxweb_data(url = "http://data.ssb.no/api/v0/en/table/if/if02/ifhus/SB
             page = "",
             link = ssb_link)
 
-# DGEEC Paraguay (update link)
+
+# DGEEC Paraguay (update link and wrangle)
 # http://www.dgeec.gov.py > Publicaciones > Pobreza
+
 dgeec_link <- "http://www.dgeec.gov.py/Publicaciones/Biblioteca/eph2015/Boletin%20de%20pobreza%202015.pdf"
 download.file(dgeec_link, "data-raw/dgeec.pdf")
 
-dgeec <- tabulizer::extract_tables("data-raw/dgeec.pdf", pages = 15)[[1]][-1, ] %>%
+dgeec <- extract_tables("data-raw/dgeec.pdf", pages = 15)[[1]][-1, ] %>%
   as.data.frame(stringsAsFactors=FALSE) %>% 
   transmute(country = "Paraguay",
             year = ifelse(str_trim(V1) %>% str_extract("\\d{2}$") %>% as.numeric() > 50,
@@ -540,6 +539,7 @@ dgeec <- tabulizer::extract_tables("data-raw/dgeec.pdf", pages = 15)[[1]][-1, ] 
             source1 = "Dirección General de Estadística, Encuestas y Censos 2016",
             page = "14",
             link = dgeec_link)
+
 
 # Russian Federal State Statistics Service (update link)
 # http://www.gks.ru/wps/wcm/connect/rosstat_main/rosstat/en/main/
@@ -565,6 +565,7 @@ rosstat <- read_excel("data-raw/rosstat.xls", sheet = "Sec.5", skip = 1) %>%
             page = "Sec.5",
             link = rosstat_link) 
 
+
 # Statistics Sweden (automated)
 scb <- get_pxweb_data(url = "http://api.scb.se/OV0104/v1/doris/sv/ssd/HE/HE0103/HE0103A/DispInk8",
                       dims = list(Hushallsdef = c('FAME'),
@@ -585,6 +586,7 @@ scb <- scb %>%
             source1 = "Statistics Sweden",
             page = "",
             link = "http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550")
+
 
 # Taiwan Directorate General of Budget, Accounting, and Statistics (update tdfbas_link [add 1 after 'doc/result/']; update file from tdfbas_link2)
 
@@ -618,7 +620,8 @@ tdgbas <- read_excel("data-raw/tdgbas1.xls", col_names = FALSE, skip = 9) %>%
             page = "",
             link = link)
 
-# Statistics Turkey
+
+# Statistics Turkey (automated)
 turkstat_links <- paste0("http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=", c(1601, 2354))
 download.file(turkstat_links[1], "data-raw/turkstat_oecdm.xls")
 download.file(turkstat_links[2], "data-raw/turkstat_hh.xls")
@@ -647,6 +650,7 @@ turkstat <- pmap_df(list(turkstat_list, names(turkstat_list), turkstat_links),
             page = "",
             link = link_x) })
 
+
 # U.K. Office for National Statistics (update link)
 # https://www.ons.gov.uk/atoz?query=effects+taxes+benefits (new releases in April)
 
@@ -673,9 +677,12 @@ ons <- read_csv("data-raw/ons.csv", skip = 7) %>%
             page = "",
             link = ons_link)  
 
-# U.K. Institute for Fiscal Studies
-ifs_link <- "http://www.ifs.org.uk/uploads/publications/bns/bn19figs_update2015.xlsx"
-download.file(ifs_link, "data-raw/ifs.xlsx")
+# U.K. Institute for Fiscal Studies (automated)
+ifs <- "https://www.ifs.org.uk/tools_and_resources/incomes_in_uk" %>% 
+  html_session() %>% 
+  follow_link("spreadsheet")
+writeBin(httr::content(ifs$response, "raw"), "data-raw/ifs.xlsx")
+ifs_link <- ifs$response$url
 
 ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3) %>%
   select(X1, X2, X3) %>%
@@ -694,7 +701,9 @@ ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3) %
             page = "",
             link = ifs_link)
 
-# U.S. Congressional Budget Office
+
+# U.S. Congressional Budget Office (update link)
+# https://www.cbo.gov/search?search=gini
 cbo_link <- "https://www.cbo.gov/sites/default/files/114th-congress-2015-2016/reports/51361-SupplementalData.xlsx"
 download.file(cbo_link, "data-raw/cbo.xlsx")
 
@@ -717,24 +726,24 @@ cbo <- read_excel("data-raw/cbo.xlsx", sheet = 9, col_names = FALSE, skip = 10) 
          page = "",
          link = cbo_link)
 
-#U.S. Census Bureau
-uscb_link <- "https://www2.census.gov/programs-surveys/demo/tables/p60/252/table4.pdf"
-download.file(uscb_link, "data-raw/uscb.pdf")
 
-uscb <- extract_tables("data-raw/uscb.pdf") %>% 
-  discard(function(x) dim(x)[2]==1) %>%
-  map_df(function(x) {
-    years <- x[2, ] %>% str_extract("\\d{4}")
-    x1 <- x[str_detect(x[ , 1], "Gini"), ] %>%
-      t() %>% 
-      as_data_frame() %>% 
-      mutate(year = years) %>% 
-      filter(!is.na(year)) %>% 
-      transmute(year = as.numeric(year),
-                gini = str_replace_all(V1, fixed(" "), "") %>% as.numeric(),
-                gini_se = str_replace_all(V2, fixed(" "), "") %>% as.numeric(),
-                break_yr = (year == 1993 | (year == 2013 & gini_se > .003)))
-    return(x1)}) %>%
+# U.S. Census Bureau (update link and wrangle)
+# https://www.census.gov/topics/income-poverty/income-inequality/data/data-tables.html
+
+uscb_links <- paste0("https://www2.census.gov/programs-surveys/demo/tables/p60/256/table", c(4, "A3"), ".xls")
+download.file(uscb_links[1], "data-raw/uscb_hh.xls")
+download.file(uscb_links[2], "data-raw/uscb_ae.xls")
+
+uscb_hh <- read_excel("data-raw/uscb_hh.xls", skip = 5) %>% 
+  filter(str_detect(`Measures of income dispersion`, "Gini")) %>% 
+  mutate(var = c("gini", "gini_se")) %>% 
+  select(-`Measures of income dispersion`) %>% 
+  gather(key = year, value = value, -var) %>% 
+  spread(key = var, value = value) %>% 
+      mutate(year = as.numeric(str_extract(year, "\\d{4}")),
+                gini = as.numeric(gini),
+                gini_se = as.numeric(gini_se),
+                break_yr = (year == 1993 | (year == 2013 & gini_se > .003))) %>%
   arrange(year, break_yr) %>% 
   transmute(country = "United States",
             year = year,
@@ -746,14 +755,43 @@ uscb <- extract_tables("data-raw/uscb.pdf") %>%
             series = paste("US Census Bureau", welfare_def, equiv_scale, cumsum(break_yr) + 1),
             source1 = "U.S. Census Bureau",
             page = "",
-            link = uscb_link)
+            link = uscb_links[1])
 
-# Uruguay Instituto Nacional de Estadística
-uine_link <- "http://www.ine.gub.uy/documents/10181/364159/Estimación+de+la+pobreza+por+el+Método+del+Ingreso+2015/321a0edb-d97e-4ab0-aa88-e31ce7a22307"
+uscb_ae <- read_excel("data-raw/uscb_ae.xls", skip = 6) %>% 
+  filter(str_detect(dispersion, "Gini")) %>% 
+  mutate(var = c("gini", "gini_se")) %>% 
+  select(-dispersion) %>% 
+  gather(key = year, value = value, -var) %>% 
+  spread(key = var, value = value) %>% 
+  mutate(year = as.numeric(str_extract(year, "\\d{4}")),
+         gini = as.numeric(gini),
+         gini_se = as.numeric(gini_se),
+         break_yr = (year == 1993 | (year == 2013 & gini_se > .003))) %>%
+  arrange(year, break_yr) %>% 
+  transmute(country = "United States",
+            year = year,
+            gini = gini,
+            gini_se = gini_se,
+            welfare_def = "gross",
+            equiv_scale = "ae",
+            monetary = TRUE,
+            series = paste("US Census Bureau", welfare_def, equiv_scale, cumsum(break_yr) + 1),
+            source1 = "U.S. Census Bureau",
+            page = "",
+            link = uscb_links[2])
+
+uscb <- bind_rows(uscb_ae, uscb_hh)
+rm(uscb_ae, uscb_hh)
+
+
+# Uruguay Instituto Nacional de Estadística (update link and wrangle)
+
+uine_link <- "http://www.ine.gub.uy/documents/10181/364159/Estimación+de+la+pobreza+por+el+Método+del+Ingreso+2016/4b1eabd2-ac77-48ac-95c2-fc5b92f3ade8"
 download.file(uine_link, "data-raw/uine.pdf")
 
-uine <- extract_tables("data-raw/uine.pdf", pages = 44)[[2]][4:13, 1:2] %>% 
+uine <- extract_tables("data-raw/uine.pdf", pages = 45)[[2]][5:15, 1] %>% 
   as_data_frame() %>% 
+  separate(value, into = paste0("V", 1:7), sep = "\\s") %>% 
   transmute(country = "Uruguay",
             year = V1 %>% str_trim() %>% as.numeric(),
             gini = as.numeric(sub(",", ".", V2, fixed = TRUE)),
@@ -763,7 +801,7 @@ uine <- extract_tables("data-raw/uine.pdf", pages = 44)[[2]][4:13, 1:2] %>%
             monetary = TRUE,
             series = paste("Instituto Nacional de Estadistica", welfare_def, equiv_scale),
             source1 = "Instituto Nacional de Estadistica",
-            page = "42",
+            page = "43",
             link = uine_link)
 
 
