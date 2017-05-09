@@ -691,7 +691,7 @@ ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3) %
             year = ifelse(str_extract(X1, "\\d{2}$") %>% as.numeric() > 50,
                    str_extract(X1, "\\d{2}$") %>% as.numeric() + 1900,
                    str_extract(X1, "\\d{2}$") %>% as.numeric() + 2000),
-            gini = X3,
+            gini = as.numeric(X3) %>% round(4),
             gini_se = NA,
             welfare_def = "disp",
             equiv_scale = "oecdm",
@@ -806,14 +806,15 @@ uine <- extract_tables("data-raw/uine.pdf", pages = 45)[[2]][5:15, 1] %>%
 
 
 ## Added data
-added_data <- read_csv("data-raw/article_data/fs_added_data.csv")
+added_data <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/article_data/fs_added_data.csv")
 
 ## Combine
 # first, get baseline series and order by data-richness
 baseline_series <- "LIS disp sqrt"
 baseline_wd <- "disp"
 baseline_es <- "sqrt"
-baseline <- lis %>% filter(welfare_def==baseline_wd & equiv_scale==baseline_es) %>% 
+baseline <- lis %>% 
+  filter(welfare_def==baseline_wd & equiv_scale==baseline_es) %>% 
   rename(gini_b = gini,
          gini_b_se = gini_se) %>%
   group_by(country) %>% 
