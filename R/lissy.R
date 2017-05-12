@@ -1,14 +1,17 @@
-ccn <- 47
-
+* user = lis_user
+* password = lis_password
+* package = R
+* project = LIS
+  
 cc <- tolower(c("AU", "AT", "BE", "BR", "CA", "CL", "CN", "CO",
                 "CZ", "DK", "DO", "EG", "EE", "FI", "FR", "DE",
                 "GE", "GR", "GT", "HU", "IS", "IN", "IE", "IL",
                 "IT", "JP", "LU", "MX", "NL", "NO", "PA", "PY",
                 "PE", "PL", "RO", "RU", "RS", "SK", "SI", "ZA",
                 "KR", "ES", "SE", "CH", "TW", "UK", "US", "UY"))
-yy <- as.character(c(c(67, 69, 71, 73:75, 78:99), paste0("0", 1:9), c(11:14)))
+yy <- as.character(c(c(67, 69, 71, 73:75, 78:99), paste0("0", 1:9), c(11:17)))
 
-datasets <- paste0(cc[ccn], yy, "h")
+datasets <- paste0(cc, yy, "h")
 
 ## Define functions
 gini <- function(x, weight) {
@@ -35,20 +38,23 @@ wNtile <- function(var, wgt, split) {
 }
 
 topBottom <- function(var, botline, topline) {
-  tb               <- ifelse(var < botline, botline, var)
-  tb[tb > topline] <- topline
+  tb <- ifelse(var < botline, botline, var)
+  tb <- ifelse(var > topline, topline, var)
   return(tb)
 }
 
 setups <- function(df) {
   botline <- 0
   topline <- 10 * wNtile(df$dhi, df$hpopwgt, 0.5)
-  df$dhi <- topBottom(df$dhi, botline, topline)
-  df$edhi <- df$dhi / (df$nhhmem ^ 0.5)
-  df$cdhi <- df$dhi / df$nhhmem
-  df$mi <- topBottom((df$factor + df$hitp), botline, topline)
-  df$emi <- df$mi / (df$nhhmem ^ 0.5)
-  df$cmi <- df$mi / df$nhhmem
+  df$disp_hh <- topBottom(df$dhi, botline, topline)
+  df$disp_sqrt <- df$disp_hh / (df$nhhmem ^ 0.5)
+  df$disp_pc <- df$disp_hh / df$nhhmem
+  df$market_hh <- topBottom((df$factor + df$hitp), botline, topline)
+  df$market_sqrt <- df$market_hh / (df$nhhmem ^ 0.5)
+  df$market_pc <- df$market_hh / df$nhhmem
+  df$con_hh <- topBottom(df$hc, botline, topline)
+  df$con_sqrt <- df$con_hh / (df$nhhmem ^ 0.5)
+  df$con_pc <- df$con_hh / df$nhhmem  
   return(df)
 }
 
@@ -59,43 +65,47 @@ boot_gini_se <- function(data, reps=1000) {
   return(std_err)   
 }
 
-# For testing at home:
+# # For testing at home:
 # read.LIS <- function(data_file, labels, vars, subset) {
 #   require(dplyr)
 #   data_file <- str_replace(data_file, "h", "ih.dta")
-#   df <- haven::read_dta(data_file)[, vars] %>% 
-#     filter(eval(parse(text = subset), .)) 
+#   df <- haven::read_dta(data_file)[, vars] %>%
+#     filter(eval(parse(text = subset), .))
 #   if (!labels) {
 #     df <- df %>% mutate_each(funs(as.numeric))
 #   }
 #   return(df)
 # }
 
-
-vars <- c("dhi", "factor", "hitp", "hpopwgt", "nhhmem", "grossnet")
-subset <- "complete.cases(dhi, factor, hitp)"
-for (ccyy in datasets) {
-  df <- try(read.LIS(ccyy, labels = FALSE, vars = vars, subset = subset), silent = TRUE)
-  if (class(df)[1] != "try-error") {
-    if (!is.nan(mean(df$dhi)) & mean(df$dhi)!= 0) {
-      df <- setups(df)
-      var <- c("emi", "edhi", "cmi", "cdhi", "mi", "dhi")
-      for (var in c("emi", "edhi", "cmi", "cdhi", "mi", "dhi")) {
-        if (var == "mi" | var == "dhi") {
-          wt <- df$hpopwgt
-        } else {
-          wt <- df$hpopwgt * df$nhhmem
+get_ginis <- function(v = c("market_hh", "market_sqrt", "market_pc",
+                            "disp_hh", "disp_sqrt", "disp_pc",
+                            "con_hh", "con_sqrt", "con_pc")) {
+  vars <- c("dhi", "factor", "hitp", "hpopwgt", "nhhmem", "grossnet", "hc")
+  subset <- "complete.cases(dhi, factor, hitp)"
+  for (ccyy in datasets) {
+    cat("")
+    df <- try(read.LIS(ccyy, labels = FALSE, vars = vars, subset = subset), silent = TRUE)
+    if (class(df)[1] != "try-error") {
+      if (!is.nan(mean(df$dhi)) & !mean(df$dhi) == 0) {
+        df <- setups(df)
+        for (var in v) {
+          if (var == "market_hh" | var == "disp_hh" | var == "con_hh") {
+            wt <- df$hpopwgt
+          } else {
+            wt <- df$hpopwgt * df$nhhmem
+          }
+          if (!is.na(mean(df[[var]]))) {
+            cat(paste(ccyy, 
+                      var, 
+                      gini(df[[var]], wt),
+                      boot_gini_se(df),
+                      df$grossnet[1],
+                      sep = ","), sep = "\n")
+          }
         }
-        cat(paste(ccyy, 
-                    var, 
-                    gini(df[[var]], wt),
-                    boot_gini_se(df),
-                    df$grossnet[1],
-                  
-                    sep = ","), sep = "\n")
-    
       }
     }
   }
 }
 
+get_ginis("wd_es")
