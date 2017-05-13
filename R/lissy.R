@@ -108,4 +108,4 @@ get_ginis <- function(v = c("market_hh", "market_sqrt", "market_pc",
   }
 }
 
-get_ginis("wd_es")
+get_ginis("WD_ES")

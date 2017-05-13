@@ -20,7 +20,7 @@ for (wd_es in weldef_eqsc) {
     paste(collapse = "\n") %>% 
     str_replace("lis_user", lis_user) %>% 
     str_replace("lis_password", lis_password) %>% 
-    str_replace("wd_es", wd_es) 
+    str_replace("WD_ES", wd_es) 
   
   mailR::send.mail(from = sender,
                    to = "postbox@lisdatacenter.org",
