@@ -1,0 +1,62 @@
+* user = lis_user
+* password = lis_password
+* package = stata
+* project = lis
+
+local country "au at be br ca cl cn co cz dk do eg ee fi fr de ge gr gt hu in ie il it is jp lu mx nl no pa py pe pl ro ru rs sk si za kr es se ch tw uk us uy"   
+
+local yr1 "67 69 71 73 74 75 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 00 01 02 03 04 05 06 07 08 09 10 11 12 13 14"   
+
+capture program drop make_variables  
+
+program define make_variables  
+	sum dhi [w=hpopwgt], de
+	local topline = 10*r(p50)
+
+	gen dhi_tb = dhi  
+	replace dhi_tb = 0 if dhi<0  
+	replace dhi_tb = 10*r(p50) if dhi>`topline' 
+	gen disp_hh = dhi_tb
+	gen disp_sqrt = dhi_tb/(nhhmem^0.5)
+	gen disp_pc = dhi_tb/nhhmem  
+
+	gen mi_tb = factor + hitp
+	replace mi_tb = 0 if mi<0  
+	replace mi_tb = 10*r(p50) if mi>`topline' 
+	gen market_hh = mi_tb
+	gen market_sqrt = mi_tb/(nhhmem^0.5)
+	gen market_pc = mi_tb/nhhmem 
+	
+	gen hc_tb = hc  
+	sum hc [w=hpopwgt], de  
+	replace hc_tb = 0 if hc<0  
+	replace hc_tb = 10*r(p50) if hc>10*r(p50) 
+	gen con_hh = hc_tb
+	gen con_sqrt = hc_tb/(nhhmem^0.5)
+	gen con_pc = hc_tb/nhhmem  
+
+	gen target = WD_ES
+	
+	gen wt = WT  
+end  
+
+foreach c of local country {  
+  foreach year of local yr1 {  
+    local file "`c'`year'h"  
+    capture confirm file $`file'  
+    if !_rc {  
+      qui use dhi factor hitp hc hpopwgt nhhmem grossnet using $`file', clear  
+      qui make_variables  
+      qui sum dhi 
+      if r(N)>0 & r(mean)!=0 {  
+        set seed 324  
+        version 7 : quietly bs "ineqdec0 target [aw=wt]" "S_gini", reps(500) nowarn  
+        local gini = round(r(stat), .001)  
+        local se = round(r(se), .001)
+		    qui sum grossnet
+		    local gn = r(mean)
+        display "`c'`year', WD_ES, `gini', `se', `gn'"  
+      }  
+    }  
+  }  
+} 

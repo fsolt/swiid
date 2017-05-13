@@ -16,20 +16,23 @@ weldef_eqsc <- "market_hh"
                  "con_hh", "con_sqrt", "con_pc")
 
 for (wd_es in weldef_eqsc) {
-  lissy <- readLines("R/lissy.R") %>% 
+  wt <- ifelse(str_detect(wd_es, "hh"), "hpopwgt", "hpopwgt*nhhmem")
+  
+  lissy <- readLines("R/lissy_stata.txt") %>% 
     paste(collapse = "\n") %>% 
     str_replace("lis_user", lis_user) %>% 
     str_replace("lis_password", lis_password) %>% 
-    str_replace("WD_ES", wd_es) 
+    str_replace_all("WD_ES", wd_es) %>% 
+    str_replace("WT", wt)
   
-  mailR::send.mail(from = sender,
-                   to = "postbox@lisdatacenter.org",
+  mailR::send.mail(from = gmail_user,
+                   to = c("postbox@lisdatacenter.org", gmail_user),
                    subject = wd_es,
                    body = lissy,
                    smtp = list(host.name = "smtp.gmail.com",
                                port = 465, 
-                               user.name = sender, 
-                               passwd = password,
+                               user.name = gmail_user, 
+                               passwd = gmail_password,
                                ssl=TRUE),
                    authenticate = TRUE,
                    send = TRUE)
