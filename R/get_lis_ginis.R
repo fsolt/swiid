@@ -7,11 +7,7 @@ gmail_password <- getOption("gmail_password") # options("gmail_user" = "juanita_
 lis_user <- getOption("lis_user")             #         "gmail_password" = "my_password")
 lis_password <- getOption("lis_password")
 
-weldef_eqsc <- "market_hh"
-  c("market_sqrt", "market_pc",
-                 "disp_hh", "disp_sqrt", "disp_pc",
-                 "con_hh", "con_sqrt", "con_pc")
-  c("market_hh", "market_sqrt", "market_pc",
+weldef_eqsc <- c("market_hh", "market_sqrt", "market_pc",
                  "disp_hh", "disp_sqrt", "disp_pc",
                  "con_hh", "con_sqrt", "con_pc")
 
