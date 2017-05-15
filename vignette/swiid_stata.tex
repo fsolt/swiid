@@ -1,0 +1,155 @@
+\documentclass[11pt,]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}  % Math
+
+\usepackage[utf8]{inputenc}
+
+
+
+%\setcounter{secnumdepth}{0}
+
+\usepackage{longtable,booktabs}
+
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+
+
+\title{Using the SWIID in Stata  }
+
+\usepackage{fullpage}
+\usepackage{setspace}
+\usepackage{lscape}
+\usepackage{hanging}
+\setlength{\tabcolsep}{1pt}
+
+\def\urltilda{\kern -.15em\lower .7ex\hbox{\~{}}\kern .04em}
+
+%\setlength{\textwidth}{6.5in}
+%\renewcommand{\footnotesize}{\normalsize}
+
+
+\renewcommand\floatpagefraction{.9}
+\renewcommand\topfraction{.9}
+\renewcommand\bottomfraction{.9}
+\renewcommand\textfraction{.1}
+\setcounter{totalnumber}{50}
+\setcounter{topnumber}{50}
+\setcounter{bottomnumber}{50}
+
+\def\urltilda{\kern -.15em\lower .7ex\hbox{\~{}}\kern .04em}
+
+
+\usepackage{natbib}
+\bibliographystyle{ajps}
+
+
+
+\makeatletter
+\@ifpackageloaded{hyperref}{}{%
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex, colorlinks=true, urlcolor=blue, linkcolor=black, citecolor=black]{hyperref}
+\else
+  \usepackage[unicode=true, colorlinks=true, urlcolor=blue, linkcolor=black, citecolor=black]{hyperref}
+\fi
+}
+\@ifpackageloaded{color}{
+    \PassOptionsToPackage{usenames,dvipsnames}{color}
+}{%
+    \usepackage[usenames,dvipsnames]{color}
+}
+\makeatother
+
+
+\bibpunct{(}{)}{;}{a}{}{,}
+
+
+
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{proposition}{Proposition}[section]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[section]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\begin{document}
+	
+% \pagenumbering{arabic}% resets `page` counter to 1 
+%
+% \maketitle
+
+{\title{Using the SWIID in Stata}
+	\author{
+		Frederick Solt\\
+		Associate Professor of Political Science\\
+		University of Iowa\\
+		\href{mailto:frederick-solt@uiowa.edu}{frederick-solt@uiowa.edu}}
+	\date{}
+	\maketitle}
+
+
+
+
+\noindent \singlespacing Test. \citet{johnson_trends_1997}
+
+\subsubsection{Descriptive Statistics}\label{descriptive-statistics}
+
+A simple example.
+
+\begin{verbatim}
+
+
+. sysuse auto
+(1978 Automobile Data)
+
+. generate gpm = 1/mpg
+
+. summarize price gpm
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+       price |         74    6165.257    2949.496       3291      15906
+         gpm |         74    .0501928    .0127986   .0243902   .0833333
+\end{verbatim}
+
+\begin{verbatim}
+
+>  . regress price gpm
+
+      Source |       SS           df       MS      Number of obs   =        74
+-------------+----------------------------------   F(1, 72)        =     35.95
+       Model |   211486574         1   211486574   Prob > F        =    0.0000
+    Residual |   423578822        72  5883039.19   R-squared       =    0.3330
+-------------+----------------------------------   Adj R-squared   =    0.3238
+       Total |   635065396        73  8699525.97   Root MSE        =    2425.5
+
+------------------------------------------------------------------------------
+       price |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         gpm |     132990   22180.86     6.00   0.000     88773.24    177206.7
+       _cons |  -509.8827   1148.469    -0.44   0.658    -2799.314    1779.548
+------------------------------------------------------------------------------
+\end{verbatim}
+
+\newpage
+\singlespacing 
+\bibliography{../bib/swiid}
+
+
+
+
+\end{document}

@@ -1,0 +1,56 @@
+---
+title: "Using the SWIID in Stata"
+author: "Frederick Solt\\Associate Professor of Political Science, University of Iowa, [frederick-solt@uiowa.edu](mailto:frederick-solt@uiowa.edu)"
+output:
+  bookdown::pdf_document2:
+    citation_package: natbib
+    fig_caption: yes
+    keep_tex: yes
+    latex_engine: pdflatex
+    template: template_swiid.tex
+biblio-style: ajps
+fontsize: 11pt
+spacing: single
+bibliography: ../bib/swiid.bib
+---
+
+Test.
+@johnson_trends_1997
+
+```{r setup, include=FALSE}
+# Source: http://www.ssc.wisc.edu/~hemken/Stataworkshops/Stata%20and%20R%20Markdown/StataMarkdown.html and http://www.ssc.wisc.edu/~hemken/Stataworkshops/Stata%20and%20R%20Markdown/StataProfile.html
+statapath <- "D:/Program Files (x86)/Stata14/StataMP-64.exe"
+require(knitr)
+knitr::opts_chunk$set(engine="stata", engine.path=statapath, comment="", echo = FALSE, message = FALSE, warning = FALSE)
+
+
+# How the hook works: tells knitr to treat all subsequent chunks as Stata code, and sets some configuration options. This same code chunk is where I would define my collectcode (you could name it something else) chunk option. Include this in your document anywhere before your first Stata code chunk.
+knitr::knit_hooks$set(saveForLater = function(before, options, envir) {
+  if (!before) {
+    profile <- file("profile.do", open="at")
+    writeLines(options$code, profile)
+    close(profile)
+  }
+})
+```
+
+
+
+
+### Descriptive Statistics
+A simple example.
+```{r first-Stata, saveForLater = TRUE}
+sysuse auto
+generate gpm = 1/mpg
+summarize price gpm
+```
+
+```{r second-Stata}
+regress price gpm
+```
+
+
+```{r cleanup, engine='R'}
+# Delete the profile.do used for storing the codes.
+unlink("profile.do")
+```
