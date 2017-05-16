@@ -272,18 +272,21 @@ To merge the SWIID and additional data, simply merge the other dataset
 should be the `master' file in the merge, the other data should be the
 `using' file.
 
-Suppose we wanted to do a (simplified) replication of Solt, Habel, and
-Grant's analysis \citeyearpar{Solt2011} of
-\href{http://worldvaluessurvey.org}{World Values Survey} data on
-religiosity. As our measure of religiosity, we will use the WVS item on
-respondents' self-report of the importance of God to their lives, which
-is measured on a ten-point scale. Given secularization theory, we will
-need to control for GDP per capita, which we will calculate from
-information from the \href{http://www.ggdc.net/pwt}{Penn World Tables}
-\citep{Feenstra2015}. Below we first load the PWT dataset and use it to
-generate a dataset of GDP per capita (in thousands of dollars). Then we
-load the WVS data, generate our variables of interest, and merge in our
-PWT data. Finally, we merge these data into the SWIID.
+Suppose we wanted replicate Solt, Habel, and Grant's analysis
+\citeyearpar{Solt2011} of \href{http://worldvaluessurvey.org}{World
+Values Survey} data on religiosity.\\
+It requires variables from three datasets: as our measure of
+religiosity, we will use the WVS item on respondents' self-report of the
+importance of God to their lives, which is measured on a ten-point
+scale. Given secularization theory, we will need to control for GDP per
+capita, which we will calculate from information from the
+\href{http://www.ggdc.net/pwt}{Penn World Tables}
+\citep{Feenstra2015}.\\
+To combine them into a dataset that STATA can analyze, we first need to
+load the PWT dataset and use it to generate a dataset of GDP per capita
+(in thousands of dollars).Then we load the WVS data, generate our
+variables of interest, and merge in our PWT data.\\
+Finally, we merge these data into the SWIID.
 
 \begin{verbatim}
 
@@ -325,16 +328,10 @@ The new variable is named NAMES_STD.
 . gen religiosity = F063 if F063>0
 (22,287 missing values generated)
 
-. gen age = X003 if X003>0
-(4,213 missing values generated)
-
 . gen educ = X025 if X025>0
 (45,129 missing values generated)
 
-. gen male = (X001 == 1) if X001>0
-(4,740 missing values generated)
-
-. keep country year religiosity male educ age
+. keep country year religiosity educ
 
 . 
 . merge m:1 country year using pwt90_gdppc.dta
@@ -387,32 +384,111 @@ file wvs_pwt.dta saved
 \section{Analyzing}\label{analyzing}
 
 Once any additional variables are created or merged in, we may proceed
-to analysis. Continuing with our example, we estimate a three-level
-linear mixed-effects model of individual responses nested in
-country-years nested in countries using \texttt{mixed}. To take the
-uncertainty in the SWIID estimates into account, we construct our model
-comman as usual, but precede it with the \texttt{mi\ estimate:} prefix
-to perform it on each of the 100 variables that report the uncertainty
-in the SWIID estimates. Note that performing an analysis 100 times can
-be time-consuming.
+to analysis. The original paper includes a three-level linear
+mixed-effect model of individual responses nested in country-years
+nested in countries. For illustration, we specify an over-simplified
+version of model at the individual level including only three variables:
+\texttt{religiosity} as the DV, \texttt{gini\_net} as IV, and
+\texttt{educ} as control. To further reduce the computing time, we use
+the data only from 2014.
 
 \begin{verbatim}
 
 >  ...
 NAMES_STD
 
-. mi estimate: mixed religiosity gini_net gdppc age educ male || country: || co
-> untry_year:
-variable c1 not found
-    Your mi data are xtset and some of the variables previously declared by
-    xtset are not in the dataset.  mi verifies that none of the xtset
-    variables are also registered as imputed or passive.  Type mi xtset,
-    clear to clear old no-longer-valid settings.
-r(111);
+. keep if year == 2014
+(240,272 observations deleted)
 
-end of do-file
-r(111);
+. mi xtset, clear // clean the board
 \end{verbatim}
+
+To take the uncertainty in the SWIID estimates into account, we
+construct our model comman as usual, but precede it with the
+\texttt{mi\ estimate:} prefix to perform it on each of the 100 variables
+that report the uncertainty in the SWIID estimates. Note that performing
+an analysis 100 times can be time-consuming.
+
+\begin{verbatim}
+
+>  ...
+NAMES_STD
+
+. mi estimate: reg religiosity gini_net educ
+
+Multiple-imputation estimates                   Imputations       =        100
+Linear regression                               Number of obs     =      2,666
+                                                Average RVI       =     0.3083
+                                                Largest FMI       =     0.1354
+                                                Complete DF       =       2663
+DF adjustment:   Small sample                   DF:     min       =   1,617.27
+                                                        avg       =   2,001.62
+                                                        max       =   2,661.00
+Model F test:       Equal FMI                   F(   2, 2405.9)   =      24.62
+Within VCE type:          OLS                   Prob > F          =     0.0000
+
+------------------------------------------------------------------------------
+ religiosity |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+    gini_net |    .036713   .0101112     3.63   0.000     .0168806    .0565455
+        educ |  -.0531121   .0133782    -3.97   0.000    -.0793449   -.0268794
+       _cons |   8.064514   .4652991    17.33   0.000     7.151904    8.977123
+------------------------------------------------------------------------------
+\end{verbatim}
+
+\section{\texorpdfstring{Working with Unsupported Commands by
+\texttt{mi\ estimate}}{Working with Unsupported Commands by mi estimate}}\label{working-with-unsupported-commands-by-mi-estimate}
+
+Unfortunately, the \texttt{mi\ estimate} does not support all estimation
+commands.\footnote{See the full list the prefix supports in the STATA
+  document,
+  \href{http://www.stata.com/manuals14/miestimation.pdf\#miestimationDescriptionestimation_command}{mi
+  estimation}.} However, users can apply the \texttt{cmdok} option to
+get around such problem. Here's an example: Let's replicate the
+preceding example with the \texttt{gmm} command (for general method of
+moments), a build-in command in STATA yet unsupported by the
+\texttt{mi\ estimate} prefix. Instead of specifying the model right
+after \texttt{mi\ estimate:}, we need to specify it after the
+\texttt{mi\ estimate,\ cmdok:} as following.
+
+\begin{verbatim}
+
+>  ...
+NAMES_STD
+
+. mi estimate, cmdok:gmm (religiosity - {b1}*gini_net - {b2}*educ - {b0}), inst
+> ruments(gini_net educ)
+
+Multiple-imputation estimates                   Imputations       =        100
+                                                Number of obs     =      2,666
+                                                Average RVI       =     0.3354
+                                                Largest FMI       =     0.1200
+DF adjustment:   Large sample                   DF:     min       =   6,899.68
+                                                        avg       =   4.50e+58
+Within VCE type:       Robust                           max       =   1.35e+59
+
+------------------------------------------------------------------------------
+             |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         /b1 |    .036713   .0107316     3.42   0.001     .0156759    .0577502
+         /b2 |  -.0531121   .0135038    -3.93   0.000    -.0795791   -.0266452
+         /b0 |   8.064514   .4961315    16.25   0.000     7.091976    9.037051
+------------------------------------------------------------------------------
+\end{verbatim}
+
+As shown above, we successfully replicated the results in the OLS
+estimation with an \texttt{mi\ estimate} unsupported command.
+
+There is a noteworthy point for applying this method, though. Be aware
+that, for applying the Rubin's combination rules, STATA needs at least
+four parts of information: the global macro \texttt{e(cmd)}, the
+coefficients matrix \texttt{e(b)}, the variance--covariance matrix
+matrix \texttt{e(V)}, and the residual degrees of freedom
+\texttt{e(df\_r)}. Therefore, one cannot apply the above methods when
+the output of a command does not store these matrices. See more techical
+discussion about this situation in the STATA
+\href{http://www.stata.com/support/faqs/statistics/cmdok-option/\#tech}{FAQ
+document for \texttt{cmdok}}.
 
 \section{Citing the SWIID}\label{citing-the-swiid}
 

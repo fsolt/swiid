@@ -97,9 +97,14 @@ The result is a placeholder variable for the new measure `ln(gini_net)`, plus 10
 
 To merge the SWIID and additional data, simply merge the other dataset *into* the SWIID dataset.  Note that this means that the SWIID should be the 'master' file in the merge, the other data should be the 'using' file. 
 
-Suppose we wanted to do a (simplified) replication of Solt, Habel, and Grant's  analysis [-@Solt2011] of [World Values Survey](http://worldvaluessurvey.org) data on religiosity.  As our measure of religiosity, we will use the WVS item on respondents' self-report of the importance of God to their lives, which is measured on a ten-point scale.  Given secularization theory, we will need to control for GDP per capita, which we will calculate from information from the [Penn World Tables](http://www.ggdc.net/pwt) [@Feenstra2015].  Below we first load the PWT dataset and use it to generate a dataset of GDP per capita (in thousands of dollars).  Then we load the WVS data, generate our variables of interest, and merge in our PWT data.  Finally, we merge these data into the SWIID.
+Suppose we wanted replicate Solt, Habel, and Grant's  analysis [-@Solt2011] of [World Values Survey](http://worldvaluessurvey.org) data on religiosity.  
+It requires variables from three datasets: 
+as our measure of religiosity, we will use the WVS item on respondents' self-report of the importance of God to their lives, which is measured on a ten-point scale.
+Given secularization theory, we will need to control for GDP per capita, which we will calculate from information from the [Penn World Tables](http://www.ggdc.net/pwt) [@Feenstra2015].  
+To combine them into a dataset that STATA can analyze, we first need to load the PWT dataset and use it to generate a dataset of GDP per capita (in thousands of dollars).Then we load the WVS data, generate our variables of interest, and merge in our PWT data.  
+Finally, we merge these data into the SWIID.
 
-```{r eval=FALSE, echo=TRUE}
+```{r dataMining, saveForLater = TRUE}
 // Get GDP per capita data from the Penn World Tables, Version 9.0 (Feenstra et al. 2015)
 // download from http://www.rug.nl/ggdc/docs/pwt90.dta
 
@@ -117,10 +122,8 @@ kountry S003, from(iso3n)
 rename NAMES_STD country
 gen year = S020
 gen religiosity = F063 if F063>0
-gen age = X003 if X003>0
 gen educ = X025 if X025>0
-gen male = (X001 == 1) if X001>0
-keep country year religiosity male educ age
+keep country year religiosity educ
 
 merge m:1 country year using pwt90_gdppc.dta
 drop if _merge!=3
@@ -135,16 +138,42 @@ drop _merge
 ```
 
 # Analyzing
-Once any additional variables are created or merged in, we may proceed to analysis.  Continuing with our example, we estimate a three-level linear mixed-effects model of individual responses nested in country-years nested in countries using `mixed`.  To take the uncertainty in the SWIID estimates into account, we construct our model comman as usual, but precede it with the `mi estimate:` prefix to perform it on each of the 100 variables that report the uncertainty in the SWIID estimates. Note that performing an analysis 100 times can be time-consuming.
+Once any additional variables are created or merged in, we may proceed to analysis.
+The original paper includes a three-level linear mixed-effect model of individual responses nested in country-years nested in countries.
+For illustration, we specify an over-simplified version of model at the individual level including only three variables: `religiosity` as the DV, `gini_net` as IV, and `educ` as control.
+To further reduce the computing time, we use the data only from 2014. 
 
-```{r eval=FALSE, echo=TRUE}
-mi xtset, clear
-mi estimate: mixed religiosity gini_net gdppc age educ male || country: 
+```{r saveForLater = TRUE}
+keep if year == 2014
+mi xtset, clear // clean the board
 ```
 
 
-# Working with User-Written or Unsupported Commands by `mi estimate`
+To take the uncertainty in the SWIID estimates into account, we construct our model comman as usual, but precede it with the `mi estimate:` prefix to perform it on each of the 100 variables that report the uncertainty in the SWIID estimates. 
+Note that performing an analysis 100 times can be time-consuming.
 
+```{r mlm, cache=TRUE}
+mi estimate: reg religiosity gini_net educ
+```
+
+
+# Working with Unsupported Commands by `mi estimate`
+Unfortunately, the `mi estimate` does not support all estimation commands.^[See the full list the prefix supports in the STATA document, [mi estimation](http://www.stata.com/manuals14/miestimation.pdf#miestimationDescriptionestimation_command).]
+However, users can apply the `cmdok` option to get around such problem.
+Here's an example:
+Let's replicate the preceding example with the `gmm` command (for general method of moments), a build-in command in STATA yet unsupported by the `mi estimate` prefix.
+Instead of specifying the model right after `mi estimate:`, we need to specify it after the `mi estimate, cmdok:` as following.
+
+```{r gmm, cache=TRUE}
+mi estimate, cmdok:gmm (religiosity - {b1}*gini_net - {b2}*educ - {b0}), instruments(gini_net educ)
+```
+
+As shown above, we successfully replicated the results in the OLS estimation with an `mi estimate` unsupported command.
+
+There is a noteworthy point for applying this method, though. 
+Be aware that, for applying the Rubin's combination rules, STATA needs at least four parts of information: the global macro `e(cmd)`, the coefficients matrix `e(b)`, the variance–covariance matrix matrix `e(V)`, and the residual degrees of freedom `e(df_r)`.
+Therefore, one cannot apply the above methods when the output of a command does not store these matrices.
+See more techical discussion about this situation in the STATA [FAQ document for `cmdok`](http://www.stata.com/support/faqs/statistics/cmdok-option/#tech).
 
 # Citing the SWIID
 Please cite to the SWIID by referring to its article of record and including the version number and date of release:
