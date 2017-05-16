@@ -99,12 +99,11 @@ To merge the SWIID and additional data, simply merge the other dataset *into* th
 
 Suppose we wanted to do a (simplified) replication of Solt, Habel, and Grant's  analysis [-@Solt2011] of [World Values Survey](http://worldvaluessurvey.org) data on religiosity.  As our measure of religiosity, we will use the WVS item on respondents' self-report of the importance of God to their lives, which is measured on a ten-point scale.  Given secularization theory, we will need to control for GDP per capita, which we will calculate from information from the [Penn World Tables](http://www.ggdc.net/pwt) [@Feenstra2015].  Below we first load the PWT dataset and use it to generate a dataset of GDP per capita (in thousands of dollars).  Then we load the WVS data, generate our variables of interest, and merge in our PWT data.  Finally, we merge these data into the SWIID.
 
-```{r eval = FALSE, echo = TRUE}
+```{r eval=FALSE, echo=TRUE}
 // Get GDP per capita data from the Penn World Tables, Version 9.0 (Feenstra et al. 2015)
-// download from http://www.rug.nl/research/ggdc/data/pwt/v90/pwt90.xlsx
-// create gdppc and save as .dta
+// download from http://www.rug.nl/ggdc/docs/pwt90.dta
 
-import excel using pwt90.xlsx, sheet("Data") firstrow clear
+use pwt90.dta, clear
 gen gdppc = rgdpe/pop/1000
 drop if gdppc==.
 keep country year gdppc
@@ -138,9 +137,14 @@ drop _merge
 # Analyzing
 Once any additional variables are created or merged in, we may proceed to analysis.  Continuing with our example, we estimate a three-level linear mixed-effects model of individual responses nested in country-years nested in countries using `mixed`.  To take the uncertainty in the SWIID estimates into account, we construct our model comman as usual, but precede it with the `mi estimate:` prefix to perform it on each of the 100 variables that report the uncertainty in the SWIID estimates. Note that performing an analysis 100 times can be time-consuming.
 
-```{r eval = FALSE, echo = TRUE}
-mi estimate: mixed religiosity gini_net gdppc age educ male || country: || country_year:
+```{r eval=FALSE, echo=TRUE}
+mi xtset, clear
+mi estimate: mixed religiosity gini_net gdppc age educ male || country: 
 ```
+
+
+# Working with User-Written or Unsupported Commands by `mi estimate`
+
 
 # Citing the SWIID
 Please cite to the SWIID by referring to its article of record and including the version number and date of release:

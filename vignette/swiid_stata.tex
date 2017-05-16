@@ -286,39 +286,102 @@ load the WVS data, generate our variables of interest, and merge in our
 PWT data. Finally, we merge these data into the SWIID.
 
 \begin{verbatim}
-// Get GDP per capita data from the Penn World Tables, Version 9.0 (Feenstra et al. 2015)
-// download from http://www.rug.nl/research/ggdc/data/pwt/v90/pwt90.xlsx
-// create gdppc and save as .dta
 
-import excel using pwt90.xlsx, sheet("Data") firstrow clear
-gen gdppc = rgdpe/pop/1000
-drop if gdppc==.
-keep country year gdppc
-save pwt90_gdppc.dta, replace
 
-// Get World Values Survey 6-wave data 
-// from http://www.worldvaluessurvey.org/WVSDocumentationWVL.jsp
-// generate variables of interest, merge in the PWT data, and save
-use WVS_Longitudinal_1981_2014_stata_v2015_04_18.dta, clear
-kountry S003, from(iso3n)
-rename NAMES_STD country
-gen year = S020
-gen religiosity = F063 if F063>0
-gen age = X003 if X003>0
-gen educ = X025 if X025>0
-gen male = (X001 == 1) if X001>0
-keep country year religiosity male educ age
+. // Get GDP per capita data from the Penn World Tables, Version 9.0 (Feenstra 
+> et al. 2015)
+. // download from http://www.rug.nl/ggdc/docs/pwt90.dta
+. 
+. use pwt90.dta, clear
 
-merge m:1 country year using pwt90_gdppc.dta
-drop if _merge!=3
-drop _merge
-save wvs_pwt.dta, replace
+. gen gdppc = rgdpe/pop/1000
+(2,391 missing values generated)
 
-// Now merge these data *into* the SWIID
-use SWIIDv5_1.dta, clear
-merge 1:m country year using wvs_pwt.dta
-drop if _merge!=3
-drop _merge
+. drop if gdppc==.
+(2,391 observations deleted)
+
+. keep country year gdppc
+
+. save pwt90_gdppc.dta, replace
+file pwt90_gdppc.dta saved
+
+. 
+. // Get World Values Survey 6-wave data 
+. // from http://www.worldvaluessurvey.org/WVSDocumentationWVL.jsp
+. // generate variables of interest, merge in the PWT data, and save
+. use WVS_Longitudinal_1981_2014_stata_v2015_04_18.dta, clear
+
+. kountry S003, from(iso3n)
+
+----------------------------------------
+The command has finished.
+The new variable is named NAMES_STD.
+----------------------------------------
+
+. rename NAMES_STD country
+
+. gen year = S020
+
+. gen religiosity = F063 if F063>0
+(22,287 missing values generated)
+
+. gen age = X003 if X003>0
+(4,213 missing values generated)
+
+. gen educ = X025 if X025>0
+(45,129 missing values generated)
+
+. gen male = (X001 == 1) if X001>0
+(4,740 missing values generated)
+
+. keep country year religiosity male educ age
+
+. 
+. merge m:1 country year using pwt90_gdppc.dta
+(note: variable country was str22, now str34 to accommodate using data's
+       values)
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                        62,617
+        from master                    53,376  (_merge==1)
+        from using                      9,241  (_merge==2)
+
+    matched                           287,895  (_merge==3)
+    -----------------------------------------
+
+. drop if _merge!=3
+(62,617 observations deleted)
+
+. drop _merge
+
+. save wvs_pwt.dta, replace
+file wvs_pwt.dta saved
+
+. 
+. // Now merge these data *into* the SWIID
+. use SWIIDv5_1.dta, clear
+(SWIID v5.1, July 2016. Refer to the stata_swiid.pdf file for usage instruction
+> s.)
+
+. merge 1:m country year using wvs_pwt.dta
+(note: variable country was str30, now str34 to accommodate using data's
+       values)
+(note: variable year was int, now float to accommodate using data's values)
+
+    Result                           # of obs.
+    -----------------------------------------
+    not matched                        48,849
+        from master                     3,914  (_merge==1)
+        from using                     44,935  (_merge==2)
+
+    matched                           242,960  (_merge==3)
+    -----------------------------------------
+
+. drop if _merge!=3
+(48,849 observations deleted)
+
+. drop _merge
 \end{verbatim}
 
 \section{Analyzing}\label{analyzing}
@@ -334,7 +397,21 @@ in the SWIID estimates. Note that performing an analysis 100 times can
 be time-consuming.
 
 \begin{verbatim}
-mi estimate: mixed religiosity gini_net gdppc age educ male || country: || country_year:
+
+>  ...
+NAMES_STD
+
+. mi estimate: mixed religiosity gini_net gdppc age educ male || country: || co
+> untry_year:
+variable c1 not found
+    Your mi data are xtset and some of the variables previously declared by
+    xtset are not in the dataset.  mi verifies that none of the xtset
+    variables are also registered as imputed or passive.  Type mi xtset,
+    clear to clear old no-longer-valid settings.
+r(111);
+
+end of do-file
+r(111);
 \end{verbatim}
 
 \section{Citing the SWIID}\label{citing-the-swiid}
