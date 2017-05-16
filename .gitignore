@@ -8,3 +8,4 @@ dev/*
 R/dcpo.R
 SWIIDv5_0.RData
 vignette/reference/*
+vignette/*.dta
