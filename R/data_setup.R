@@ -843,6 +843,12 @@ ineq0 <- bind_rows(lis,
                    added_data) %>% 
   rename(gini_m = gini,
          gini_m_se = gini_se) %>%
+  mutate(country = countrycode(country, "country.name", "country.name") %>% 
+           str_replace(" \\(.*", "") %>% 
+           str_replace(",.*", "") %>% 
+           str_replace("^(United )?Republic of", "") %>% 
+           str_replace("^The former Yugoslav Republic of", "") %>% 
+           str_replace(" of [GA].*", "")) %>% 
   group_by(country) %>% 
   mutate(oth_count = n()) %>% 
   ungroup() %>% 
