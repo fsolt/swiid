@@ -47,7 +47,7 @@ foreach c of local country {
     if !_rc {  
       qui use dhi factor hitp hc hpopwgt nhhmem grossnet using $`file', clear  
       qui make_variables  
-      qui sum dhi 
+      qui sum target 
       if r(N)>0 & r(mean)!=0 {  
         set seed 324  
         version 7 : quietly bs "ineqdec0 target [aw=wt]" "S_gini", reps(500) nowarn  
