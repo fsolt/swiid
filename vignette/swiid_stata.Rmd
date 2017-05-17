@@ -104,7 +104,7 @@ Given secularization theory, we will need to control for GDP per capita, which w
 To combine them into a dataset that STATA can analyze, we first need to load the PWT dataset and use it to generate a dataset of GDP per capita (in thousands of dollars).Then we load the WVS data, generate our variables of interest, and merge in our PWT data.  
 Finally, we merge these data into the SWIID.
 
-```{r dataMining, saveForLater = TRUE}
+```{r dataMining}
 // Get GDP per capita data from the Penn World Tables, Version 9.0 (Feenstra et al. 2015)
 // download from http://www.rug.nl/ggdc/docs/pwt90.dta
 
@@ -135,6 +135,8 @@ use SWIIDv5_1.dta, clear
 merge 1:m country year using wvs_pwt.dta
 drop if _merge!=3
 drop _merge
+
+save swiid_wvs_pwt.dta, replace
 ```
 
 # Analyzing
@@ -144,6 +146,7 @@ For illustration, we specify an over-simplified version of model at the individu
 To further reduce the computing time, we use the data only from 2014. 
 
 ```{r saveForLater = TRUE}
+use swiid_wvs_pwt.dta, clear
 keep if year == 2014
 mi xtset, clear // clean the board
 ```
