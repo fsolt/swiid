@@ -340,9 +340,8 @@ rm(afr_gini_pc, afr_gini_sqrt)
 
 ## National Statistics Offices
 
-# Australian Bureau of Statistics (not included in api 2017-05)
+# Australian Bureau of Statistics (update abs_link; not included in abs api as of 2017-05)
 # confirm latest release at: http://www.abs.gov.au/AUSSTATS/abs@.nsf/second+level+view?ReadForm&prodno=6523.0&viewtitle=Household%20Income%20and%20Wealth,%20Australia~2013-14~Latest~04/09/2015&&tabname=Past%20Future%20Issues&prodno=6523.0&issue=2013-14&num=&view=&
-# update abs_link
 
 abs_link <- "http://www.abs.gov.au/AUSSTATS/subscriber.nsf/log?openagent&6523DO00001_201314.xls&6523.0&Data%20Cubes&4F00682720AFA825CA257EB5001B77B9&0&2013-14&16.12.2015&Latest"
 download.file(abs_link, "data-raw/abs.xls")
@@ -421,7 +420,7 @@ statee <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data-ra
           link = "http://pub.stat.ee/px-web.2001/dialog/varval.asp?ma=HH30")
 
 # Statistics Finland (automated)
-statfi <- get_pxweb_data(url = "http://pxwebapi2.stat.fi/PXWeb/api/v1/en/StatFin/tul/tjt/270_tjt_tau_117.px",
+statfi <- get_pxweb_data(url = "http://pxnet2.stat.fi/PXWeb/api/v1/en/StatFin/tul/tjt/270_tjt_tau_117.px",
                          dims = list(Tulokäsite = c("SL2", "4L2", "6L2"),
                                      Vuosi = c("*"),
                                      Tiedot = c("Gini")),
@@ -438,7 +437,7 @@ statfi <- get_pxweb_data(url = "http://pxwebapi2.stat.fi/PXWeb/api/v1/en/StatFin
             series = paste("Statistics Finland", welfare_def, equiv_scale),
             source1 = "Statistics Finland",
             page = "",
-            link = "http://pxnet2.stat.fi/PXWeb/pxweb/en/StatFin/StatFin__tul__tjt/270_tjt_tau_117.px")
+            link = "http://pxnet2.stat.fi/PXWeb/api/v1/en/StatFin/tul/tjt/270_tjt_tau_117.px")
 
 # Insee (not available 2017-05-05)
 # insee_link <- "http://www.bdm.insee.fr/bdm2/exporterSeries.action?idbank=001687249&periode=toutes&liste_formats=xls"
@@ -588,7 +587,7 @@ scb <- scb %>%
             link = "http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550")
 
 
-# Taiwan Directorate General of Budget, Accounting, and Statistics (update tdfbas_link [add 1 after 'doc/result/']; update file from tdfbas_link2)
+# Taiwan Directorate General of Budget, Accounting, and Statistics (update tdfbas_link [add 1 to number after 'doc/result/']; update file from tdfbas_link2)
 
 tdgbas_link <- "http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls"
 download.file(tdgbas_link, "data-raw/tdgbas1.xls")
@@ -704,6 +703,7 @@ ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3) %
 
 # U.S. Congressional Budget Office (update link)
 # https://www.cbo.gov/search?search=gini
+
 cbo_link <- "https://www.cbo.gov/sites/default/files/114th-congress-2015-2016/reports/51361-SupplementalData.xlsx"
 download.file(cbo_link, "data-raw/cbo.xlsx")
 
@@ -875,7 +875,7 @@ ineq <- bind_rows(ineq_bl, ineq_nbl) %>%
          ecode = as.integer(factor(equiv_scale), levels = unique(equiv_scale)),
          scode = as.integer(factor(series, levels = unique(series))))
 
-save(ineq, file = "data/ineq.Rda")
+save("data/ineq.Rda")
 
 # for v5.1
 ineq1 <- ineq %>%
