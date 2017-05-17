@@ -323,7 +323,7 @@ afr_gini_pc <- wbstats::wb(indicator = "SI.POV.GINI",
             link = "http://databank.worldbank.org/data/reports.aspx?source=2&series=SI.POV.GINI")
 
 afr_gini_sqrt <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv") %>% 
-  transmute(country = country,
+  transmute(country = countrycode(country, origin = "wb_api3c", "country.name"),
             year = as.numeric(surveyr),
             gini = gini_sqrthhs,
             gini_se = NA,
@@ -875,7 +875,7 @@ ineq <- bind_rows(ineq_bl, ineq_nbl) %>%
          ecode = as.integer(factor(equiv_scale), levels = unique(equiv_scale)),
          scode = as.integer(factor(series, levels = unique(series))))
 
-save("data/ineq.Rda")
+save.image(file = "data/ineq.Rda")
 
 # for v5.1
 ineq1 <- ineq %>%
