@@ -1,7 +1,7 @@
 From: postbox@lisdatacenter.org
-Subject: job 396952 all mi - hh
-Date: June 13, 2016 at 12:00:56 PM CDT
-To: frederick-solt@uiowa.edu
+Subject: job 459568 market_hh
+Date: May 14, 2017 at 2:03:29 PM CDT
+To: fsolt@mac.com
 
 ############################### NOTICE TO USERS ###############################
                                                                         
@@ -22,323 +22,360 @@ To: frederick-solt@uiowa.edu
 
 
 . local country "au at be br ca cl cn co cz dk do eg ee fi fr de ge gr gt hu in ie il it is jp lu mx nl no pa py pe pl ro ru rs sk s
-> i za kr es se ch tw uk us uy"  
+> i za kr es se ch tw uk us uy"    
 
+.  
 . local yr1 "67 69 71 73 74 75 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 00 01 02 03 04 05 06 07 08 09 10 11
->  12 13 14"  
+>  12 13 14"    
 
 .  
-. capture program drop make_variables 
-
-. program define make_variables 
-  1.  qui gen miss_comp = 0 
-  2.   
-.  qui gen mi = factor + hitp 
-  3.  qui replace mi = factor if factor!=. & hitp==. 
-  4.  
-.  qui replace miss_comp=1 if mi==. 
-  5.  qui drop if miss_comp==1 
-  6.  
-.  // Apply top and bottom codes 
-.  qui gen mi_tb = mi 
-  7.  qui sum mi [w=hpopwgt], de 
-  8.  qui replace mi_tb = 0 if mi<0 
-  9.  qui replace mi_tb = 10*r(p50) if mi>10*r(p50) 
- 10.  // Calculate weights 
-.  qui gen lisw = hpopwgt 
- 11. end 
+. capture program drop make_variables   
 
 .  
-. foreach c of local country { 
-  2.  foreach year of local yr1 { 
-  3.  local file "`c'`year'h" 
-  4.  capture confirm file $`file' 
-  5.  if !_rc { 
-  6.  qui use factor hitp hpopwgt nhhmem using $`file', clear 
-  7.  qui make_variables 
-  8.  qui sum mi_tb 
-  9.  if r(N)>0 & r(mean)!=0 { 
- 10.  set seed 324 
- 11.  version 7 : quietly bs "ineqdec0 mi_tb [aw=lisw]" "S_gini", reps(500) nowarn 
- 12.  local gini = round(r(stat), .001) 
- 13.  local se = round(r(se), .001) 
- 14.  display "`c'`year', `gini', `se'" 
- 15.  } 
- 16.  } 
- 17.  } 
- 18. } 
-au81, .464, .003
-au85, .494, .005
-au89, .492, .003
-au95, .54, .005
-au01, .55, .005
-au03, .539, .004
-au08, .532, .005
-au10, .537, .004
-at94, .53, .008
-at97, .521, .008
-at00, .519, .009
-at04, .543, .006
-be85, .499, .005
-be88, .508, .007
-be92, .539, .006
-be95, .577, .009
-be97, .5680000000000001, .006
-be00, .588, .009
-br06, .5740000000000001, .001
-br09, .5660000000000001, .001
-br11, .5680000000000001, .001
-br13, .5690000000000001, .001
-ca71, .482, .003
-ca75, .459, .002
-ca81, .446, .003
-ca87, .467, .005
-ca91, .491, .004
-ca94, .515, .002
-ca97, .522, .003
-ca98, .547, .003
-ca00, .537, .003
-ca04, .545, .003
-ca07, .54, .003
-ca10, .55, .003
-cn02, .493, .003
-co04, .537, .006
-co07, .549, .004
-co10, .521, .004
-co13, .534, .004
-cz92, .504, .003
-cz96, .524, .002
-cz02, .543, .004
-cz04, .545, .006
-cz07, .535, .004
-cz10, .53, .004
-dk87, .529, .003
-dk92, .5550000000000001, .003
-dk95, .5510000000000001, .001
-dk00, .544, .001
-dk04, .5540000000000001, .001
-dk07, .544, .001
-dk10, .5730000000000001, .001
-do07, .517, .006
-eg12, .527, .004
-ee00, .5700000000000001, .005
-ee04, .58, .007
-ee07, .542, .006
-ee10, .5730000000000001, .006
-fi87, .494, .004
-fi91, .512, .004
-fi95, .5720000000000001, .005
-fi00, .5580000000000001, .004
-fi04, .5640000000000001, .004
-fi07, .5610000000000001, .005
-fi10, .5720000000000001, .005
-fr78, .515, .005
-fr84, .5570000000000001, .004
-fr89, .5550000000000001, .004
-fr94, .5570000000000001, .003
-fr00, .5520000000000001, .004
-fr05, .5540000000000001, .004
-fr10, .5620000000000001, .004
-de73, .472, .002
-de78, .513, .002
-de81, .505, .009
-de83, .508, .002
-de84, .538, .006
-de89, .534, .007
-de94, .542, .006
-de00, .55, .004
-de04, .5680000000000001, .004
-de07, .584, .005
-de10, .592, .004
-ge10, .5700000000000001, .005
-ge13, .528, .007
-gr95, .549, .006
-gr00, .549, .007
-gr04, .534, .006
-gr07, .548, .005
-gr10, .58, .006
-gt06, .517, .005
-hu91, .5510000000000001, .008
-hu94, .613, .008
-hu99, .591, .009
-hu05, .613, .008
-hu07, .633, .011
-hu09, .586, .012
-hu12, .5560000000000001, .012
-in04, .5, .002
-in11, .515, .002
-ie87, .5700000000000001, .008
-ie94, .5680000000000001, .009
-ie95, .5610000000000001, .011
-ie96, .5540000000000001, .011
-ie00, .542, .013
-ie04, .5700000000000001, .005
-ie07, .5680000000000001, .007
-ie10, .616, .007
-il79, .47, .008
-il86, .518, .005
-il92, .522, .005
-il97, .547, .005
-il01, .5750000000000001, .005
-il05, .5570000000000001, .004
-il07, .5550000000000001, .004
-il10, .5510000000000001, .005
-il12, .537, .004
-it86, .495, .006
-it87, .528, .007
-it89, .507, .006
-it91, .495, .007
-it93, .547, .006
-it95, .55, .006
-it98, .5600000000000001, .007
-it00, .5560000000000001, .005
-it04, .5670000000000001, .006
-it08, .5550000000000001, .006
-it10, .5720000000000001, .006
-is04, .456, .007
-is07, .455, .007
-is10, .49, .007
-jp08, .484, .006
-lu85, .467, .009
-lu91, .458, .012
-lu94, .467, .01
-lu97, .506, .008
-lu00, .491, .008
-lu04, .516, .008
-lu07, .515, .009
-lu10, .518, .007
-lu13, .535, .006
-mx84, .449, .008
-mx89, .469, .005
-mx92, .492, .005
-mx94, .504, .004
-mx96, .484, .004
-mx98, .505, .004
-mx00, .502, .006
-mx02, .5, .005
-mx04, .494, .003
-mx08, .51, .003
-mx10, .505, .003
-mx12, .502, .005
-nl83, .5550000000000001, .009
-nl87, .5620000000000001, .007
-nl90, .539, .006
-nl93, .538, .006
-nl99, .515, .006
-nl04, .5530000000000001, .005
-nl07, .5600000000000001, .005
-nl10, .5580000000000001, .005
-no79, .476, .004
-no86, .474, .005
-no91, .502, .006
-no95, .529, .005
-no00, .53, .004
-no04, .55, .004
-no07, .539, .001
-no10, .55, .001
-pa07, .533, .004
-pa10, .532, .003
-pa13, .53, .004
-py10, .493, .006
-py13, .5, .005
-pe04, .5610000000000001, .004
-pe07, .5540000000000001, .003
-pe10, .533, .003
-pe13, .528, .003
-pl86, .459, .004
-pl92, .478, .005
-pl95, .593, .002
-pl99, .547, .002
-pl04, .598, .002
-pl07, .5660000000000001, .002
-pl10, .5550000000000001, .002
-pl13, .5590000000000001, .002
-ro95, .451, .002
-ro97, .447, .002
-ru00, .577, .006
-ru04, .578, .006
-ru07, .546, .006
-ru10, .539, .004
-ru13, .5610000000000001, .004
-rs06, .5580000000000001, .005
-rs10, .609, .005
-rs13, .609, .006
-sk92, .502, .003
-sk96, .517, .004
-sk04, .5620000000000001, .005
-sk07, .531, .005
-sk10, .532, .005
-si97, .472, .008
-si99, .479, .006
-si04, .51, .007
-si07, .507, .006
-si10, .532, .007
-si12, .5550000000000001, .006
-za08, .644, .005
-za10, .649, .006
-za12, .636, .005
-kr06, .398, .003
-es80, .474, .003
-es85, .489, .006
-es90, .491, .003
-es95, .5670000000000001, .005
-es00, .548, .006
-es04, .514, .004
-es07, .509, .004
-es10, .5660000000000001, .004
-es13, .5760000000000001, .004
-se67, .521, .005
-se75, .494, .006
-se81, .51, .006
-se87, .526, .006
-se92, .5520000000000001, .004
-se95, .5760000000000001, .003
-se00, .5630000000000001, .003
-se05, .5550000000000001, .003
-ch82, .478, .005
-ch92, .474, .006
-ch00, .448, .007
-ch02, .456, .006
-ch04, .458, .007
-tw81, .29, .002
-tw86, .305, .002
-tw91, .315, .002
-tw95, .37, .002
-tw97, .354, .003
-tw00, .366, .003
-tw05, .384, .002
-tw07, .391, .002
-tw10, .394, .002
-tw13, .402, .002
-uk69, .422, .004
-uk74, .448, .004
-uk79, .489, .004
-uk86, .5680000000000001, .004
-uk91, .5620000000000001, .004
-uk94, .598, .002
-uk95, .594, .005
-uk99, .591, .002
-uk04, .586, .002
-uk07, .586, .002
-uk10, .603, .002
-uk13, .596, .003
-us74, .471, .003
-us79, .484, .002
-us86, .507, .002
-us91, .514, .002
-us94, .533, .002
-us97, .528, .002
-us00, .525, .001
-us04, .538, .002
-us07, .533, .002
-us10, .5570000000000001, .001
-us13, .5600000000000001, .002
-uy04, .5670000000000001, .003
-uy07, .5550000000000001, .002
-uy10, .541, .002
-uy13, .511, .002
+. program define make_variables   
+  1.  sum dhi [w=hpopwgt], de 
+  2.  local topline = 10*r(p50) 
+  3.  
+.  gen dhi_tb = dhi   
+  4.  replace dhi_tb = 0 if dhi<0   
+  5.  replace dhi_tb = 10*r(p50) if dhi>`topline'  
+  6.  gen disp_hh = dhi_tb 
+  7.  gen disp_sqrt = dhi_tb/(nhhmem^0.5) 
+  8.  gen disp_pc = dhi_tb/nhhmem   
+  9.  
+.  gen mi_tb = factor + hitp 
+ 10.  replace mi_tb = 0 if mi<0   
+ 11.  replace mi_tb = 10*r(p50) if mi>`topline'  
+ 12.  gen market_hh = mi_tb 
+ 13.  gen market_sqrt = mi_tb/(nhhmem^0.5) 
+ 14.  gen market_pc = mi_tb/nhhmem  
+ 15.   
+.  gen hc_tb = hc   
+ 16.  sum hc [w=hpopwgt], de   
+ 17.  replace hc_tb = 0 if hc<0   
+ 18.  replace hc_tb = 10*r(p50) if hc>10*r(p50)  
+ 19.  gen con_hh = hc_tb 
+ 20.  gen con_sqrt = hc_tb/(nhhmem^0.5) 
+ 21.  gen con_pc = hc_tb/nhhmem   
+ 22.  
+.  gen target = market_hh 
+ 23.   
+.  gen wt = hpopwgt   
+ 24. end   
 
 .  
+. foreach c of local country {   
+  2.   foreach year of local yr1 {   
+  3.     local file "`c'`year'h"   
+  4.     capture confirm file $`file'   
+  5.     if !_rc {   
+  6.       qui use dhi factor hitp hc hpopwgt nhhmem grossnet using $`file', clear   
+  7.       qui make_variables   
+  8.       qui sum dhi  
+  9.       if r(N)>0 & r(mean)!=0 {   
+ 10.         set seed 324   
+ 11.         version 7 : quietly bs "ineqdec0 target [aw=wt]" "S_gini", reps(500) nowarn   
+ 12.         local gini = round(r(stat), .001)   
+ 13.         local se = round(r(se), .001) 
+ 14.      qui sum grossnet 
+ 15.      local gn = r(mean) 
+ 16.         display "`c'`year', market_hh, `gini', `se', `gn'"   
+ 17.       }   
+ 18.     }   
+ 19.   }   
+ 20. }  
+au81, market_hh, .463, .003, 120
+au85, market_hh, .494, .005, 120
+au89, market_hh, .492, .003, 120
+au95, market_hh, .54, .005, 120
+au01, market_hh, .55, .005, 120
+au03, market_hh, .539, .004, 120
+au08, market_hh, .532, .005, 120
+au10, market_hh, .543, .004, 120
+at87, market_hh, 0, 0, 320
+at94, market_hh, .644, .008, 200
+at95, market_hh, 0, 0, 320
+at97, market_hh, .608, .01, 200
+at00, market_hh, .649, .009, 200
+at04, market_hh, .544, .006, 110
+at07, market_hh, .5700000000000001, .005, 110
+at10, market_hh, .5760000000000001, .005, 110
+at13, market_hh, .578, .005, 110
+be85, market_hh, .499, .005, 200
+be88, market_hh, .509, .007, 200
+be92, market_hh, .539, .006, 120
+be95, market_hh, .6970000000000001, .006, 200
+be97, market_hh, .5680000000000001, .006, 120
+be00, market_hh, .675, .006, 200
+br06, market_hh, .613, .001, 120
+br09, market_hh, .613, .001, 120
+br11, market_hh, .63, .001, 120
+br13, market_hh, .63, .001, 120
+ca71, market_hh, 0, 0, 100
+ca75, market_hh, 0, 0, 100
+ca81, market_hh, 0, 0, 100
+ca87, market_hh, 0, 0, 100
+ca91, market_hh, 0, 0, 100
+ca94, market_hh, 0, 0, 100
+ca97, market_hh, 0, 0, 100
+ca98, market_hh, .548, .003, 100
+ca00, market_hh, .537, .003, 100
+ca04, market_hh, .546, .003, 100
+ca07, market_hh, .541, .003, 110
+ca10, market_hh, .5520000000000001, .003, 110
+cn02, market_hh, .5760000000000001, .003, 300
+co04, market_hh, .54, .005, 100
+co07, market_hh, .586, .003, 310
+co10, market_hh, .583, .002, 310
+co13, market_hh, .584, .003, 310
+cz92, market_hh, 0, 0, 100
+cz96, market_hh, 0, 0, 100
+cz02, market_hh, .544, .004, 120
+cz04, market_hh, .546, .006, 100
+cz07, market_hh, .536, .004, 100
+cz10, market_hh, .531, .004, 100
+cz13, market_hh, .545, .004, 100
+dk87, market_hh, .528, .003, 110
+dk92, market_hh, .5550000000000001, .003, 110
+dk95, market_hh, .5510000000000001, .001, 110
+dk00, market_hh, .544, .001, 110
+dk04, market_hh, .5530000000000001, .001, 110
+dk07, market_hh, .543, .001, 110
+dk10, market_hh, .5730000000000001, .001, 110
+dk13, market_hh, .584, .001, 110
+do07, market_hh, .519, .006, 110
+eg12, market_hh, .536, .004, 200
+ee00, market_hh, .5750000000000001, .006, 320
+ee04, market_hh, .584, .007, 100
+ee07, market_hh, .5640000000000001, .006, 120
+ee10, market_hh, .589, .007, 120
+ee13, market_hh, .634, .005, 120
+fi87, market_hh, .494, .004, 110
+fi91, market_hh, .512, .004, 110
+fi95, market_hh, .5730000000000001, .005, 110
+fi00, market_hh, .5580000000000001, .004, 110
+fi04, market_hh, .5640000000000001, .004, 110
+fi07, market_hh, .5620000000000001, .005, 110
+fi10, market_hh, .5730000000000001, .005, 110
+fi13, market_hh, .586, .004, 110
+fr78, market_hh, .65, .003, 320
+fr84, market_hh, .628, .004, 320
+fr89, market_hh, .642, .004, 320
+fr94, market_hh, .5600000000000001, .004, 320
+fr00, market_hh, .5550000000000001, .004, 320
+fr05, market_hh, .5550000000000001, .004, 320
+fr10, market_hh, .5680000000000001, .004, 320
+de73, market_hh, .471, .002, 100
+de78, market_hh, .513, .002, 100
+de81, market_hh, .505, .009, 100
+de83, market_hh, .508, .002, 100
+de84, market_hh, .537, .006, 120
+de89, market_hh, .533, .007, 120
+de94, market_hh, .541, .006, 120
+de00, market_hh, .55, .004, 120
+de04, market_hh, .5690000000000001, .004, 120
+de07, market_hh, .589, .005, 120
+de10, market_hh, .595, .004, 120
+de13, market_hh, .597, .004, 120
+ge10, market_hh, .61, .005, 200
+ge13, market_hh, .5750000000000001, .008, 200
+gr95, market_hh, .5730000000000001, .007, 200
+gr00, market_hh, .5690000000000001, .008, 200
+gr04, market_hh, .536, .006, 200
+gr07, market_hh, .5750000000000001, .005, 120
+gr10, market_hh, .627, .007, 120
+gr13, market_hh, .637, .005, 120
+gt06, market_hh, .523, .005, 110
+hu91, market_hh, .5550000000000001, .009, 200
+hu94, market_hh, .636, .009, 200
+hu99, market_hh, .6880000000000001, .006, 200
+hu05, market_hh, .638, .009, 200
+hu07, market_hh, .664, .008, 200
+hu09, market_hh, .6950000000000001, .008, 200
+hu12, market_hh, .716, .007, 200
+in04, market_hh, .504, .002, 200
+in11, market_hh, .521, .002, 200
+ie87, market_hh, .5700000000000001, .008, 100
+ie94, market_hh, .578, .01, 200
+ie95, market_hh, .5730000000000001, .011, 200
+ie96, market_hh, .5610000000000001, .012, 200
+ie00, market_hh, .656, .007, 200
+ie04, market_hh, .5740000000000001, .006, 110
+ie07, market_hh, .5730000000000001, .007, 110
+ie10, market_hh, .626, .007, 110
+il79, market_hh, .469, .008, 100
+il86, market_hh, .518, .005, 100
+il92, market_hh, .523, .005, 100
+il97, market_hh, .548, .005, 100
+il01, market_hh, .577, .005, 100
+il05, market_hh, .5590000000000001, .004, 100
+il07, market_hh, .5570000000000001, .005, 120
+il10, market_hh, .5540000000000001, .005, 120
+il12, market_hh, .539, .004, 120
+it86, market_hh, 0, 0, 200
+it87, market_hh, .528, .007, 200
+it89, market_hh, .508, .006, 200
+it91, market_hh, .495, .007, 200
+it93, market_hh, .548, .006, 200
+it95, market_hh, .5520000000000001, .006, 200
+it98, market_hh, .5640000000000001, .008, 200
+it00, market_hh, .5580000000000001, .006, 200
+it04, market_hh, .5720000000000001, .006, 310
+it08, market_hh, .5560000000000001, .006, 310
+it10, market_hh, .5740000000000001, .007, 310
+it14, market_hh, .5760000000000001, .006, 310
+is04, market_hh, .461, .008, 110
+is07, market_hh, .455, .007, 110
+is10, market_hh, .493, .007, 110
+jp08, market_hh, .485, .006, 120
+lu85, market_hh, .467, .009, 200
+lu91, market_hh, .458, .012, 200
+lu94, market_hh, .467, .01, 200
+lu97, market_hh, .506, .008, 200
+lu00, market_hh, .521, .011, 200
+lu04, market_hh, .516, .008, 110
+lu07, market_hh, .525, .01, 100
+lu10, market_hh, .523, .007, 100
+lu13, market_hh, .539, .007, 100
+mx84, market_hh, .45, .009, 200
+mx89, market_hh, .47, .005, 200
+mx92, market_hh, .493, .005, 200
+mx94, market_hh, .506, .005, 200
+mx96, market_hh, .485, .004, 200
+mx98, market_hh, .507, .005, 200
+mx00, market_hh, .505, .006, 200
+mx02, market_hh, .502, .005, 200
+mx04, market_hh, .496, .003, 200
+mx08, market_hh, .514, .003, 200
+mx10, market_hh, .508, .003, 200
+mx12, market_hh, .505, .005, 200
+nl83, market_hh, .5550000000000001, .009, 100
+nl87, market_hh, .5620000000000001, .007, 100
+nl90, market_hh, .539, .006, 100
+nl93, market_hh, .538, .006, 100
+nl99, market_hh, .635, .004, 100
+nl04, market_hh, .5520000000000001, .005, 100
+nl07, market_hh, .5590000000000001, .005, 110
+nl10, market_hh, .5580000000000001, .005, 110
+nl13, market_hh, .5750000000000001, .005, 110
+no79, market_hh, .476, .004, 110
+no86, market_hh, .474, .005, 110
+no91, market_hh, .502, .006, 110
+no95, market_hh, .529, .005, 110
+no00, market_hh, .53, .004, 110
+no04, market_hh, .55, .004, 110
+no07, market_hh, 0, 0, 110
+no10, market_hh, 0, 0, 110
+no13, market_hh, 0, 0, 110
+pa07, market_hh, .546, .004, 120
+pa10, market_hh, .541, .004, 120
+pa13, market_hh, .5510000000000001, .004, 120
+py10, market_hh, .495, .005, 200
+py13, market_hh, .502, .006, 200
+pe04, market_hh, .612, .003, 110
+pe07, market_hh, .5760000000000001, .003, 110
+pe10, market_hh, .5690000000000001, .003, 110
+pe13, market_hh, .5530000000000001, .003, 110
+pl86, market_hh, 0, 0, 200
+pl92, market_hh, .478, .005, 200
+pl95, market_hh, .6, .002, 320
+pl99, market_hh, .549, .002, 100
+pl04, market_hh, .603, .002, 100
+pl07, market_hh, .5700000000000001, .002, 110
+pl10, market_hh, .5580000000000001, .002, 110
+pl13, market_hh, .5620000000000001, .002, 110
+ro95, market_hh, 0, 0, 100
+ro97, market_hh, 0, 0, 100
+ru00, market_hh, .651, .005, 200
+ru04, market_hh, .649, .005, 200
+ru07, market_hh, .652, .004, 200
+ru10, market_hh, .645, .004, 200
+ru13, market_hh, .657, .004, 200
+rs06, market_hh, .5590000000000001, .006, 200
+rs10, market_hh, .619, .006, 200
+rs13, market_hh, .624, .006, 200
+sk92, market_hh, 0, 0, 100
+sk96, market_hh, .518, .004, 200
+sk04, market_hh, .577, .006, 110
+sk07, market_hh, .585, .006, 110
+sk10, market_hh, .534, .005, 110
+sk13, market_hh, .527, .006, 110
+si97, market_hh, .472, .008, 200
+si99, market_hh, .479, .006, 200
+si04, market_hh, .51, .007, 200
+si07, market_hh, .507, .006, 200
+si10, market_hh, .533, .007, 200
+si12, market_hh, .5560000000000001, .007, 200
+za08, market_hh, .656, .005, 120
+za10, market_hh, .629, .006, 120
+za12, market_hh, .638, .005, 120
+kr06, market_hh, .39, .003, 110
+kr08, market_hh, .41, .003, 110
+kr10, market_hh, .413, .004, 110
+kr12, market_hh, .415, .004, 110
+es80, market_hh, 0, 0, 200
+es85, market_hh, 0, 0, 200
+es90, market_hh, .492, .003, 200
+es95, market_hh, .594, .006, 200
+es00, market_hh, .627, .006, 200
+es04, market_hh, .514, .004, 200
+es07, market_hh, .531, .005, 110
+es10, market_hh, .604, .004, 110
+es13, market_hh, .578, .004, 110
+se67, market_hh, 0, 0, 110
+se75, market_hh, .494, .006, 110
+se81, market_hh, 0, 0, 110
+se87, market_hh, .526, .006, 110
+se92, market_hh, .5520000000000001, .004, 110
+se95, market_hh, .577, .003, 110
+se00, market_hh, .5630000000000001, .003, 110
+se05, market_hh, .5560000000000001, .003, 110
+ch82, market_hh, .476, .005, 100
+ch92, market_hh, .471, .006, 100
+ch00, market_hh, .443, .007, 100
+ch02, market_hh, .451, .006, 100
+ch04, market_hh, .456, .007, 100
+ch07, market_hh, .474, .005, 110
+ch10, market_hh, .478, .005, 110
+ch13, market_hh, .492, .005, 110
+tw81, market_hh, .29, .002, 100
+tw86, market_hh, .305, .002, 100
+tw91, market_hh, .315, .002, 100
+tw95, market_hh, 0, 0, 100
+tw97, market_hh, .354, .003, 100
+tw00, market_hh, .366, .003, 100
+tw05, market_hh, .385, .002, 100
+tw07, market_hh, .391, .002, 110
+tw10, market_hh, .394, .002, 110
+tw13, market_hh, .401, .002, 110
+uk69, market_hh, .422, .004, 100
+uk74, market_hh, .448, .004, 100
+uk79, market_hh, .489, .004, 100
+uk86, market_hh, .5680000000000001, .004, 100
+uk91, market_hh, .5620000000000001, .004, 100
+uk94, market_hh, .6, .002, 100
+uk95, market_hh, .595, .005, 100
+uk99, market_hh, .593, .002, 100
+uk04, market_hh, .604, .002, 100
+uk07, market_hh, .588, .002, 110
+uk10, market_hh, .608, .002, 110
+uk13, market_hh, .602, .003, 110
+us74, market_hh, .471, .003, 120
+us79, market_hh, .484, .002, 120
+us86, market_hh, .507, .002, 120
+us91, market_hh, .514, .002, 120
+us94, market_hh, .534, .002, 120
+us97, market_hh, .528, .002, 120
+us00, market_hh, .525, .001, 120
+us04, market_hh, .539, .002, 120
+us07, market_hh, .533, .002, 120
+us10, market_hh, .5580000000000001, .002, 120
+us13, market_hh, .5620000000000001, .002, 120
+uy04, market_hh, .577, .003, 200
+uy07, market_hh, .5620000000000001, .002, 200
+uy10, market_hh, .547, .002, 200
+uy13, market_hh, .513, .002, 200
+
 . 
 end of do-file
 

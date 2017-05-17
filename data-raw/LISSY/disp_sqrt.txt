@@ -1,7 +1,7 @@
 From: postbox@lisdatacenter.org
-Subject: job 396844 all dhi - Stata
-Date: June 12, 2016 at 8:03:14 AM CDT
-To: frederick-solt@uiowa.edu
+Subject: job 459638 disp_sqrt
+Date: May 15, 2017 at 1:55:15 AM CDT
+To: fsolt@mac.com
 
 ############################### NOTICE TO USERS ###############################
                                                                         
@@ -22,336 +22,360 @@ To: frederick-solt@uiowa.edu
 
 
 . local country "au at be br ca cl cn co cz dk do eg ee fi fr de ge gr gt hu in ie il it is jp lu mx nl no pa py pe pl ro ru rs sk s
-> i za kr es se ch tw uk us uy" 
+> i za kr es se ch tw uk us uy"    
 
+.  
 . local yr1 "67 69 71 73 74 75 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 00 01 02 03 04 05 06 07 08 09 10 11
->  12 13 14" 
+>  12 13 14"    
 
 .  
-. program define setups 
-  1.  
-. * Select only records if dhi filled 
-. drop if dhi==. | dhi==0 
-  2.  
+. capture program drop make_variables   
+
 .  
-. * Select only if there is a weight 
-. drop if hpopwgt==. | hpopwgt==0 
+. program define make_variables   
+  1.  sum dhi [w=hpopwgt], de 
+  2.  local topline = 10*r(p50) 
   3.  
-. * Set equivalence scale as square root of household member 
-. gen ey=(dhi/(nhhmem^0.5)) 
-  4.  
-. * Createperson weight as hpopwgt times number of household member 
-. gen wt=hpopwgt*nhhmem 
-  5.  
-. end 
+.  gen dhi_tb = dhi   
+  4.  replace dhi_tb = 0 if dhi<0   
+  5.  replace dhi_tb = 10*r(p50) if dhi>`topline'  
+  6.  gen disp_hh = dhi_tb 
+  7.  gen disp_sqrt = dhi_tb/(nhhmem^0.5) 
+  8.  gen disp_pc = dhi_tb/nhhmem   
+  9.  
+.  gen mi_tb = factor + hitp 
+ 10.  replace mi_tb = 0 if mi<0   
+ 11.  replace mi_tb = 10*r(p50) if mi>`topline'  
+ 12.  gen market_hh = mi_tb 
+ 13.  gen market_sqrt = mi_tb/(nhhmem^0.5) 
+ 14.  gen market_pc = mi_tb/nhhmem  
+ 15.   
+.  gen hc_tb = hc   
+ 16.  sum hc [w=hpopwgt], de   
+ 17.  replace hc_tb = 0 if hc<0   
+ 18.  replace hc_tb = 10*r(p50) if hc>10*r(p50)  
+ 19.  gen con_hh = hc_tb 
+ 20.  gen con_sqrt = hc_tb/(nhhmem^0.5) 
+ 21.  gen con_pc = hc_tb/nhhmem   
+ 22.  
+.  gen target = disp_sqrt 
+ 23.   
+.  gen wt = hpopwgt*nhhmem   
+ 24. end   
 
 .  
-. *************************** 
-. * Bottom and Top Coding * 
-. *************************** 
-. program define bottop 
-  1. setups 
-  2. quietly sum ey [w=wt] 
-  3. gen botlin=0.01*_result(3) 
-  4. replace ey=botlin if ey
-  5. quietly sum dhi [w=wt], de 
-  6. gen toplin=10*_result(10) 
-  7. replace ey=(toplin/(nhhmem^0.5)) if dhi>toplin 
-  8. end 
+. foreach c of local country {   
+  2.   foreach year of local yr1 {   
+  3.     local file "`c'`year'h"   
+  4.     capture confirm file $`file'   
+  5.     if !_rc {   
+  6.       qui use dhi factor hitp hc hpopwgt nhhmem grossnet using $`file', clear   
+  7.       qui make_variables   
+  8.       qui sum dhi  
+  9.       if r(N)>0 & r(mean)!=0 {   
+ 10.         set seed 324   
+ 11.         version 7 : quietly bs "ineqdec0 target [aw=wt]" "S_gini", reps(500) nowarn   
+ 12.         local gini = round(r(stat), .001)   
+ 13.         local se = round(r(se), .001) 
+ 14.      qui sum grossnet 
+ 15.      local gn = r(mean) 
+ 16.         display "`c'`year', disp_sqrt, `gini', `se', `gn'"   
+ 17.       }   
+ 18.     }   
+ 19.   }   
+ 20. }  
+au81, disp_sqrt, .282, .002, 120
+au85, disp_sqrt, .293, .003, 120
+au89, disp_sqrt, .304, .002, 120
+au95, disp_sqrt, .311, .004, 120
+au01, disp_sqrt, .319, .004, 120
+au03, disp_sqrt, .315, .003, 120
+au08, disp_sqrt, .333, .004, 120
+au10, disp_sqrt, .342, .004, 120
+at87, disp_sqrt, .227, .003, 320
+at94, disp_sqrt, .523, .005, 200
+at95, disp_sqrt, .521, .002, 320
+at97, disp_sqrt, .491, .008, 200
+at00, disp_sqrt, .468, .01, 200
+at04, disp_sqrt, .269, .004, 110
+at07, disp_sqrt, .284, .004, 110
+at10, disp_sqrt, .28, .004, 110
+at13, disp_sqrt, .278, .004, 110
+be85, disp_sqrt, .228, .003, 200
+be88, disp_sqrt, .235, .004, 200
+be92, disp_sqrt, .229, .003, 120
+be95, disp_sqrt, .518, .005, 200
+be97, disp_sqrt, .251, .003, 120
+be00, disp_sqrt, .514, .004, 200
+br06, disp_sqrt, .521, .001, 120
+br09, disp_sqrt, .515, .001, 120
+br11, disp_sqrt, .534, .001, 120
+br13, disp_sqrt, .528, .001, 120
+ca71, disp_sqrt, .323, .002, 100
+ca75, disp_sqrt, .293, .002, 100
+ca81, disp_sqrt, .286, .002, 100
+ca87, disp_sqrt, .283, .003, 100
+ca91, disp_sqrt, .282, .003, 100
+ca94, disp_sqrt, .285, .002, 100
+ca97, disp_sqrt, .291, .002, 100
+ca98, disp_sqrt, .31, .003, 100
+ca00, disp_sqrt, .313, .003, 100
+ca04, disp_sqrt, .318, .003, 100
+ca07, disp_sqrt, .314, .003, 110
+ca10, disp_sqrt, .316, .003, 110
+cn02, disp_sqrt, .508, .003, 300
+co04, disp_sqrt, .544, .005, 100
+co07, disp_sqrt, .592, .003, 310
+co10, disp_sqrt, .5730000000000001, .003, 310
+co13, disp_sqrt, .5600000000000001, .003, 310
+cz92, disp_sqrt, .205, .002, 100
+cz96, disp_sqrt, .255, .002, 100
+cz02, disp_sqrt, .255, .004, 120
+cz04, disp_sqrt, .264, .006, 100
+cz07, disp_sqrt, .251, .004, 100
+cz10, disp_sqrt, .256, .004, 100
+cz13, disp_sqrt, .257, .004, 100
+dk87, disp_sqrt, .257, .002, 110
+dk92, disp_sqrt, .239, .002, 110
+dk95, disp_sqrt, .217, .001, 110
+dk00, disp_sqrt, .224, .001, 110
+dk04, disp_sqrt, .232, .001, 110
+dk07, disp_sqrt, .237, .001, 110
+dk10, disp_sqrt, .246, .001, 110
+dk13, disp_sqrt, .247, .001, 110
+do07, disp_sqrt, .489, .006, 110
+eg12, disp_sqrt, .473, .004, 200
+ee00, disp_sqrt, .36, .005, 320
+ee04, disp_sqrt, .353, .006, 100
+ee07, disp_sqrt, .312, .005, 120
+ee10, disp_sqrt, .32, .005, 120
+ee13, disp_sqrt, .406, .006, 120
+fi87, disp_sqrt, .207, .002, 110
+fi91, disp_sqrt, .209, .002, 110
+fi95, disp_sqrt, .216, .003, 110
+fi00, disp_sqrt, .25, .003, 110
+fi04, disp_sqrt, .256, .003, 110
+fi07, disp_sqrt, .262, .003, 110
+fi10, disp_sqrt, .259, .003, 110
+fi13, disp_sqrt, .258, .002, 110
+fr78, disp_sqrt, .36, .005, 320
+fr84, disp_sqrt, .436, .005, 320
+fr89, disp_sqrt, .422, .005, 320
+fr94, disp_sqrt, .288, .003, 320
+fr00, disp_sqrt, .278, .003, 320
+fr05, disp_sqrt, .279, .003, 320
+fr10, disp_sqrt, .289, .003, 320
+de73, disp_sqrt, .272, .001, 100
+de78, disp_sqrt, .262, .002, 100
+de81, disp_sqrt, .244, .005, 100
+de83, disp_sqrt, .26, .002, 100
+de84, disp_sqrt, .265, .004, 120
+de89, disp_sqrt, .258, .005, 120
+de94, disp_sqrt, .27, .004, 120
+de00, disp_sqrt, .266, .003, 120
+de04, disp_sqrt, .278, .003, 120
+de07, disp_sqrt, .289, .004, 120
+de10, disp_sqrt, .287, .004, 120
+de13, disp_sqrt, .29, .003, 120
+ge10, disp_sqrt, .473, .005, 200
+ge13, disp_sqrt, .443, .008, 200
+gr95, disp_sqrt, .386, .007, 200
+gr00, disp_sqrt, .351, .006, 200
+gr04, disp_sqrt, .328, .005, 200
+gr07, disp_sqrt, .321, .005, 120
+gr10, disp_sqrt, .331, .006, 120
+gr13, disp_sqrt, .334, .005, 120
+gt06, disp_sqrt, .493, .005, 110
+hu91, disp_sqrt, .289, .007, 200
+hu94, disp_sqrt, .409, .011, 200
+hu99, disp_sqrt, .54, .004, 200
+hu05, disp_sqrt, .333, .01, 200
+hu07, disp_sqrt, .281, .009, 200
+hu09, disp_sqrt, .286, .008, 200
+hu12, disp_sqrt, .289, .006, 200
+in04, disp_sqrt, .471, .002, 200
+in11, disp_sqrt, .477, .002, 200
+ie87, disp_sqrt, .328, .006, 100
+ie94, disp_sqrt, .357, .009, 200
+ie95, disp_sqrt, .388, .013, 200
+ie96, disp_sqrt, .356, .011, 200
+ie00, disp_sqrt, .535, .005, 200
+ie04, disp_sqrt, .319, .006, 110
+ie07, disp_sqrt, .3, .006, 110
+ie10, disp_sqrt, .304, .006, 110
+il79, disp_sqrt, .302, .005, 100
+il86, disp_sqrt, .309, .004, 100
+il92, disp_sqrt, .305, .004, 100
+il97, disp_sqrt, .335, .004, 100
+il01, disp_sqrt, .346, .004, 100
+il05, disp_sqrt, .369, .004, 100
+il07, disp_sqrt, .369, .004, 120
+il10, disp_sqrt, .376, .004, 120
+il12, disp_sqrt, .371, .004, 120
+it86, disp_sqrt, .306, .004, 200
+it87, disp_sqrt, .334, .005, 200
+it89, disp_sqrt, .303, .004, 200
+it91, disp_sqrt, .292, .004, 200
+it93, disp_sqrt, .341, .004, 200
+it95, disp_sqrt, .34, .005, 200
+it98, disp_sqrt, .351, .007, 200
+it00, disp_sqrt, .339, .005, 200
+it04, disp_sqrt, .339, .005, 310
+it08, disp_sqrt, .328, .005, 310
+it10, disp_sqrt, .331, .006, 310
+it14, disp_sqrt, .338, .005, 310
+is04, disp_sqrt, .261, .008, 110
+is07, disp_sqrt, .276, .007, 110
+is10, disp_sqrt, .248, .006, 110
+jp08, disp_sqrt, .548, .002, 120
+lu85, disp_sqrt, .236, .004, 200
+lu91, disp_sqrt, .239, .006, 200
+lu94, disp_sqrt, .235, .005, 200
+lu97, disp_sqrt, .261, .005, 200
+lu00, disp_sqrt, .296, .01, 200
+lu04, disp_sqrt, .269, .005, 110
+lu07, disp_sqrt, .293, .008, 100
+lu10, disp_sqrt, .28, .007, 100
+lu13, disp_sqrt, .29, .006, 100
+mx84, disp_sqrt, .43, .008, 200
+mx89, disp_sqrt, .45, .005, 200
+mx92, disp_sqrt, .474, .006, 200
+mx94, disp_sqrt, .482, .005, 200
+mx96, disp_sqrt, .469, .004, 200
+mx98, disp_sqrt, .486, .005, 200
+mx00, disp_sqrt, .485, .006, 200
+mx02, disp_sqrt, .466, .005, 200
+mx04, disp_sqrt, .455, .003, 200
+mx08, disp_sqrt, .467, .003, 200
+mx10, disp_sqrt, .454, .003, 200
+mx12, disp_sqrt, .457, .005, 200
+nl83, disp_sqrt, .255, .008, 100
+nl87, disp_sqrt, .238, .004, 100
+nl90, disp_sqrt, .268, .005, 100
+nl93, disp_sqrt, .262, .003, 100
+nl99, disp_sqrt, .521, .003, 100
+nl04, disp_sqrt, .264, .005, 100
+nl07, disp_sqrt, .273, .004, 110
+nl10, disp_sqrt, .256, .003, 110
+nl13, disp_sqrt, .263, .004, 110
+no79, disp_sqrt, .225, .002, 110
+no86, disp_sqrt, .235, .003, 110
+no91, disp_sqrt, .232, .004, 110
+no95, disp_sqrt, .238, .003, 110
+no00, disp_sqrt, .247, .003, 110
+no04, disp_sqrt, .253, .003, 110
+no07, disp_sqrt, .244, .001, 110
+no10, disp_sqrt, .244, .001, 110
+no13, disp_sqrt, .25, .001, 110
+pa07, disp_sqrt, .494, .004, 120
+pa10, disp_sqrt, .477, .004, 120
+pa13, disp_sqrt, .489, .005, 120
+py10, disp_sqrt, .469, .006, 200
+py13, disp_sqrt, .463, .006, 200
+pe04, disp_sqrt, .5640000000000001, .003, 110
+pe07, disp_sqrt, .519, .003, 110
+pe10, disp_sqrt, .506, .003, 110
+pe13, disp_sqrt, .483, .003, 110
+pl86, disp_sqrt, .271, .003, 200
+pl92, disp_sqrt, .262, .004, 200
+pl95, disp_sqrt, .317, .002, 320
+pl99, disp_sqrt, .287, .002, 100
+pl04, disp_sqrt, .315, .002, 100
+pl07, disp_sqrt, .31, .002, 110
+pl10, disp_sqrt, .31, .002, 110
+pl13, disp_sqrt, .317, .002, 110
+ro95, disp_sqrt, .278, .002, 100
+ro97, disp_sqrt, .279, .002, 100
+ru00, disp_sqrt, .508, .005, 200
+ru04, disp_sqrt, .508, .005, 200
+ru07, disp_sqrt, .534, .004, 200
+ru10, disp_sqrt, .503, .004, 200
+ru13, disp_sqrt, .483, .005, 200
+rs06, disp_sqrt, .347, .005, 200
+rs10, disp_sqrt, .329, .005, 200
+rs13, disp_sqrt, .341, .005, 200
+sk92, disp_sqrt, .189, .002, 100
+sk96, disp_sqrt, .249, .004, 200
+sk04, disp_sqrt, .268, .004, 110
+sk07, disp_sqrt, .249, .003, 110
+sk10, disp_sqrt, .264, .004, 110
+sk13, disp_sqrt, .269, .005, 110
+si97, disp_sqrt, .229, .004, 200
+si99, disp_sqrt, .232, .004, 200
+si04, disp_sqrt, .231, .003, 200
+si07, disp_sqrt, .23, .003, 200
+si10, disp_sqrt, .253, .004, 200
+si12, disp_sqrt, .27, .004, 200
+za08, disp_sqrt, .595, .005, 120
+za10, disp_sqrt, .579, .006, 120
+za12, disp_sqrt, .5680000000000001, .007, 120
+kr06, disp_sqrt, .306, .003, 110
+kr08, disp_sqrt, .314, .003, 110
+kr10, disp_sqrt, .309, .003, 110
+kr12, disp_sqrt, .307, .003, 110
+es80, disp_sqrt, .322, .002, 200
+es85, disp_sqrt, .314, .006, 200
+es90, disp_sqrt, .303, .003, 200
+es95, disp_sqrt, .396, .006, 200
+es00, disp_sqrt, .443, .007, 200
+es04, disp_sqrt, .321, .003, 200
+es07, disp_sqrt, .308, .003, 110
+es10, disp_sqrt, .337, .003, 110
+es13, disp_sqrt, .345, .003, 110
+se67, disp_sqrt, .304, .004, 110
+se75, disp_sqrt, .217, .002, 110
+se81, disp_sqrt, .198, .002, 110
+se87, disp_sqrt, .211, .002, 110
+se92, disp_sqrt, .229, .002, 110
+se95, disp_sqrt, .221, .002, 110
+se00, disp_sqrt, .25, .002, 110
+se05, disp_sqrt, .236, .002, 110
+ch82, disp_sqrt, .309, .005, 100
+ch92, disp_sqrt, .309, .005, 100
+ch00, disp_sqrt, .28, .005, 100
+ch02, disp_sqrt, .272, .005, 100
+ch04, disp_sqrt, .267, .005, 100
+ch07, disp_sqrt, .31, .004, 110
+ch10, disp_sqrt, .293, .004, 110
+ch13, disp_sqrt, .294, .005, 110
+tw81, disp_sqrt, .267, .002, 100
+tw86, disp_sqrt, .268, .002, 100
+tw91, disp_sqrt, .271, .002, 100
+tw95, disp_sqrt, .284, .002, 100
+tw97, disp_sqrt, .287, .002, 100
+tw00, disp_sqrt, .289, .002, 100
+tw05, disp_sqrt, .305, .002, 100
+tw07, disp_sqrt, .307, .002, 110
+tw10, disp_sqrt, .317, .002, 110
+tw13, disp_sqrt, .307, .002, 110
+uk69, disp_sqrt, .267, .003, 100
+uk74, disp_sqrt, .268, .003, 100
+uk79, disp_sqrt, .267, .003, 100
+uk86, disp_sqrt, .304, .003, 100
+uk91, disp_sqrt, .335, .004, 100
+uk94, disp_sqrt, .338, .002, 100
+uk95, disp_sqrt, .343, .004, 100
+uk99, disp_sqrt, .345, .002, 100
+uk04, disp_sqrt, .379, .003, 100
+uk07, disp_sqrt, .337, .002, 110
+uk10, disp_sqrt, .333, .002, 110
+uk13, disp_sqrt, .329, .003, 110
+us74, disp_sqrt, .317, .003, 120
+us79, disp_sqrt, .311, .001, 120
+us86, disp_sqrt, .342, .001, 120
+us91, disp_sqrt, .347, .001, 120
+us94, disp_sqrt, .361, .002, 120
+us97, disp_sqrt, .36, .002, 120
+us00, disp_sqrt, .356, .002, 120
+us04, disp_sqrt, .364, .001, 120
+us07, disp_sqrt, .372, .001, 120
+us10, disp_sqrt, .369, .001, 120
+us13, disp_sqrt, .379, .002, 120
+uy04, disp_sqrt, .423, .002, 200
+uy07, disp_sqrt, .421, .002, 200
+uy10, disp_sqrt, .404, .002, 200
+uy13, disp_sqrt, .371, .002, 200
 
-.  
-. foreach c of local country { 
-  2.  foreach year of local yr1 { 
-  3.  local file "`c'`year'h" 
-  4.  capture confirm file $`file' 
-  5.  if !_rc { 
-  6.  qui use did hid hpopwgt nhhmem svyunit dhi region_c using $`file', clear 
-  7.  qui bottop 
-  8.  qui sum ey 
-  9.  if r(N)>0 & r(mean)!=0 { 
- 10.  set seed 324 
- 11.  version 7: quietly bs "ineqdeco ey [w=wt]" "S_gini", reps(500) nowarn 
- 12.  local gini = round(r(stat), .001) 
- 13.  local se = round(r(se), .00000001) 
- 14.  display "`c'`year', `gini', `se'" 
- 15.   } 
- 16.  } 
- 17.  } 
- 18. } 
-au81, .281, .00196205
-au85, .292, .00319038
-au89, .302, .00230947
-au95, .308, .0037734
-au01, .317, .00427092
-au03, .312, .00314336
-au08, .333, .00452246
-au10, .33, .00350384
-at87, .227, .002516
-at94, .28, .00666058
-at95, .277, .00193752
-at97, .266, .00493747
-at00, .257, .00556509
-at04, .269, .00422656
-be85, .227, .00251345
-be88, .232, .00402393
-be92, .222, .00297886
-be95, .266, .00678692
-be97, .25, .0034376
-be00, .279, .00874249
-br06, .487, .00109253
-br09, .467, .00111582
-br11, .46, .00129648
-br13, .45, .00124572
-ca71, .316, .001978
-ca75, .289, .00183569
-ca81, .284, .00235786
-ca87, .283, .003412
-ca91, .281, .00281769
-ca94, .284, .00161702
-ca97, .291, .00184107
-ca98, .311, .00303965
-ca00, .315, .00339497
-ca04, .318, .00294749
-ca07, .315, .00276941
-ca10, .317, .0035333
-cn02, .505, .00250318
-co04, .506, .00679572
-co07, .523, .0048888
-co10, .482, .00495026
-co13, .491, .00638904
-cz92, .205, .00232218
-cz96, .256, .00221398
-cz02, .255, .00360874
-cz04, .266, .00620892
-cz07, .251, .00380978
-cz10, .256, .00366381
-dk87, .255, .0024796
-dk92, .238, .00260322
-dk95, .218, .00085567
-dk00, .225, .00096612
-dk04, .228, .00088014
-dk07, .238, .00108871
-dk10, .248, .00110943
-do07, .49, .00612523
-eg12, .464, .00430218
-ee00, .361, .00494243
-ee04, .347, .00606526
-ee07, .315, .00551174
-ee10, .325, .0050264
-fi87, .207, .0016097
-fi91, .209, .00160994
-fi95, .216, .00272822
-fi00, .252, .00290563
-fi04, .257, .00314052
-fi07, .264, .00327257
-fi10, .261, .00346122
-fr78, .312, .00376664
-fr84, .338, .00478119
-fr89, .287, .00331962
-fr94, .288, .00290995
-fr00, .278, .00280422
-fr05, .28, .0028576
-fr10, .289, .00327041
-de73, .271, .00144191
-de78, .263, .00165985
-de81, .244, .0047281
-de83, .26, .00167784
-de84, .265, .00452172
-de89, .258, .0049486
-de94, .27, .00439124
-de00, .266, .00301591
-de04, .278, .00319446
-de07, .288, .00398343
-de10, .286, .00348608
-ge10, .437, .00547778
-ge13, .394, .00829463
-gr95, .349, .00501927
-gr00, .333, .0058245
-gr04, .327, .00514941
-gr07, .318, .0051876
-gr10, .333, .00678706
-gt06, .49, .00541273
-hu91, .283, .00725443
-hu94, .319, .00728565
-hu99, .292, .00810552
-hu05, .289, .00722342
-hu07, .274, .00783769
-hu09, .278, .00615563
-hu12, .289, .00711007
-in04, .472, .00205038
-in11, .479, .00200475
-ie87, .328, .00567229
-ie94, .333, .00762747
-ie95, .336, .00888895
-ie96, .325, .00822059
-ie00, .313, .00964433
-ie04, .317, .00645973
-ie07, .297, .00648219
-ie10, .294, .00527491
-il79, .303, .0055185
-il86, .309, .00334353
-il92, .305, .00379822
-il97, .336, .0039108
-il01, .347, .00441281
-il05, .37, .00418585
-il07, .369, .00373911
-il10, .377, .00461748
-il12, .371, .00363503
-it86, .306, .00459368
-it87, .332, .00483558
-it89, .304, .00423447
-it91, .291, .00446319
-it93, .339, .00461278
-it95, .339, .005191
-it98, .347, .00700203
-it00, .334, .00498078
-it04, .34, .00607445
-it08, .324, .00528857
-it10, .327, .00510879
-is04, .255, .00619197
-is07, .276, .00694739
-is10, .245, .00553366
-jp08, .302, .00510266
-lu85, .236, .00420925
-lu91, .239, .00605512
-lu94, .235, .00489416
-lu97, .261, .0048581
-lu00, .262, .00490517
-lu04, .269, .00558694
-lu07, .276, .00673016
-lu10, .271, .00613924
-lu13, .283, .00502126
-mx84, .43, .00803813
-mx89, .452, .00551083
-mx92, .475, .00567181
-mx94, .485, .00526065
-mx96, .47, .00430101
-mx98, .486, .00448851
-mx00, .486, .00654291
-mx02, .468, .00548036
-mx04, .457, .0037102
-mx08, .469, .00274102
-mx10, .455, .00301173
-mx12, .459, .00532018
-nl83, .252, .00811967
-nl87, .236, .00356204
-nl90, .266, .00490807
-nl93, .257, .00339135
-nl99, .231, .00345545
-nl04, .266, .00501309
-nl07, .274, .00441139
-nl10, .257, .00306637
-no79, .224, .00237116
-no86, .234, .00293741
-no91, .231, .00430316
-no95, .239, .00333387
-no00, .25, .00335132
-no04, .256, .00341187
-no07, .244, .00071528
-no10, .243, .00064385
-pa07, .481, .00387098
-pa10, .471, .00399806
-pa13, .467, .0053691
-py10, .469, .00584528
-py13, .463, .00616637
-pe04, .519, .00399162
-pe07, .5, .00333138
-pe10, .47, .00359099
-pe13, .455, .00277795
-pl86, .271, .0026639
-pl92, .262, .00347074
-pl95, .318, .0020889
-pl99, .286, .00176743
-pl04, .315, .00183501
-pl07, .31, .00172868
-pl10, .31, .00188516
-pl13, .316, .00186683
-ro95, .279, .00190984
-ro97, .28, .00228134
-ru00, .408, .00631612
-ru04, .388, .00587511
-ru07, .35, .00455877
-ru10, .338, .00435649
-ru13, .331, .00436702
-rs06, .343, .00501084
-rs10, .324, .00492438
-rs13, .332, .00563546
-sk92, .189, .00186116
-sk96, .25, .00398688
-sk04, .269, .00457637
-sk07, .248, .00336026
-sk10, .263, .00412254
-si97, .229, .00415615
-si99, .232, .00380025
-si04, .231, .00325443
-si07, .23, .00334313
-si10, .252, .00330933
-si12, .271, .0040935
-za08, .596, .00552156
-za10, .585, .00743273
-za12, .5720000000000001, .00760427
-kr06, .311, .00267435
-es80, .318, .00244362
-es85, .314, .00569096
-es90, .302, .00269002
-es95, .353, .00462676
-es00, .336, .00533412
-es04, .316, .00281874
-es07, .307, .00315047
-es10, .333, .0027962
-es13, .343, .00317347
-se67, .26, .003673
-se75, .215, .00209206
-se81, .197, .00215492
-se87, .212, .00224235
-se92, .229, .00210562
-se95, .221, .00206024
-se00, .252, .00261919
-se05, .237, .00200733
-ch82, .309, .00484741
-ch92, .307, .00505233
-ch00, .28, .00518072
-ch02, .273, .0054452
-ch04, .268, .0049145
-tw81, .267, .00198504
-tw86, .269, .00207176
-tw91, .271, .00189983
-tw95, .284, .00214947
-tw97, .287, .00220466
-tw00, .289, .00222215
-tw05, .305, .0024312
-tw07, .307, .00214011
-tw10, .317, .00216969
-tw13, .308, .00223999
-uk69, .267, .00310665
-uk74, .268, .00336637
-uk79, .267, .00297396
-uk86, .303, .00323897
-uk91, .336, .00412013
-uk94, .339, .00237072
-uk95, .344, .0041193
-uk99, .346, .00234374
-uk04, .344, .00244085
-uk07, .339, .00284691
-uk10, .334, .00269519
-uk13, .33, .00323185
-us74, .316, .00279783
-us79, .31, .00124867
-us86, .34, .00136989
-us91, .346, .00138314
-us94, .361, .00168665
-us97, .36, .00193751
-us00, .357, .00169243
-us04, .364, .00161157
-us07, .371, .00161793
-us10, .367, .0013985
-us13, .377, .00183455
-uy04, .424, .00255108
-uy07, .423, .00151028
-uy10, .405, .00183054
-uy13, .372, .00166735
-
-.  
 . 
 end of do-file
 

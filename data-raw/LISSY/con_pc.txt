@@ -1,6 +1,6 @@
 From: postbox@lisdatacenter.org
-Subject: job 397580 hc-pc
-Date: June 15, 2016 at 1:49:36 PM CDT
+Subject: job 460195 con_pc
+Date: May 17, 2017 at 6:52:32 AM CDT
 To: fsolt@mac.com
 
 ############################### NOTICE TO USERS ###############################
@@ -22,104 +22,124 @@ To: fsolt@mac.com
 
 
 . local country "au at be br ca cl cn co cz dk do eg ee fi fr de ge gr gt hu in ie il it is jp lu mx nl no pa py pe pl ro ru rs sk s
-> i za kr es se ch tw uk us uy"   
+> i za kr es se ch tw uk us uy"    
 
+.  
 . local yr1 "67 69 71 73 74 75 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 00 01 02 03 04 05 06 07 08 09 10 11
->  12 13 14"   
+>  12 13 14"    
 
-.   
-. capture program drop make_variables  
+.  
+. capture program drop make_variables   
 
-. program define make_variables  
-  1.  qui drop if hc==.  
-  2.   
-.  // Apply top and bottom codes  
-.  qui gen hc_tb = hc  
-  3.  qui sum hc [w=hpopwgt], de  
-  4.  qui replace hc_tb = 0 if hc<0  
-  5.  qui replace hc_tb = 10*r(p50) if hc>10*r(p50)  
-  6.  // Calculate per capita income  
-.  qui gen chc_tb = hc_tb/nhhmem  
-  7.  // Calculate weights  
-.  qui gen lisw = hpopwgt*nhhmem  
-  8. end  
+.  
+. program define make_variables   
+  1.  sum dhi [w=hpopwgt], de 
+  2.  local topline = 10*r(p50) 
+  3.  
+.  gen dhi_tb = dhi   
+  4.  replace dhi_tb = 0 if dhi<0   
+  5.  replace dhi_tb = 10*r(p50) if dhi>`topline'  
+  6.  gen disp_hh = dhi_tb 
+  7.  gen disp_sqrt = dhi_tb/(nhhmem^0.5) 
+  8.  gen disp_pc = dhi_tb/nhhmem   
+  9.  
+.  gen mi_tb = factor + hitp 
+ 10.  replace mi_tb = 0 if mi<0   
+ 11.  replace mi_tb = 10*r(p50) if mi>`topline'  
+ 12.  gen market_hh = mi_tb 
+ 13.  gen market_sqrt = mi_tb/(nhhmem^0.5) 
+ 14.  gen market_pc = mi_tb/nhhmem  
+ 15.   
+.  gen hc_tb = hc   
+ 16.  sum hc [w=hpopwgt], de   
+ 17.  replace hc_tb = 0 if hc<0   
+ 18.  replace hc_tb = 10*r(p50) if hc>10*r(p50)  
+ 19.  gen con_hh = hc_tb 
+ 20.  gen con_sqrt = hc_tb/(nhhmem^0.5) 
+ 21.  gen con_pc = hc_tb/nhhmem   
+ 22.  
+.  gen target = con_pc 
+ 23.   
+.  gen wt = hpopwgt*nhhmem   
+ 24. end   
 
-.   
-. foreach c of local country {  
-  2.  foreach year of local yr1 {  
-  3.  local file "`c'`year'h"  
-  4.  capture confirm file $`file'  
-  5.  if !_rc {  
-  6.  qui use hc hpopwgt nhhmem using $`file', clear  
-  7.  qui make_variables  
-  8.  qui sum chc_tb  
-  9.  if r(N)>0 & r(mean)!=0 {  
- 10.  set seed 324  
- 11.  version 7 : quietly bs "ineqdec0 chc_tb [aw=lisw]" "S_gini", reps(500) nowarn  
- 12.  local gini = round(r(stat), .001)  
- 13.  local se = round(r(se), .001)  
- 14.  display "`c'`year', `gini', `se'"  
- 15.  }  
- 16.  }  
- 17.  }  
- 18. }  
-au10, .303, .004
-do07, .443, .009
-ee00, .36, .006
-fr00, .345, .004
-fr05, .317, .003
-fr10, .302, .002
-gt06, .5690000000000001, .005
-hu91, .293, .007
-hu94, .279, .006
-il92, .366, .004
-il97, .378, .004
-il01, .347, .004
-il05, .36, .004
-il07, .363, .004
-il10, .357, .004
-il12, .352, .003
-mx84, .463, .007
-mx89, .478, .005
-mx92, .486, .005
-mx94, .494, .005
-mx96, .471, .005
-mx98, .486, .005
-mx00, .501, .008
-mx02, .479, .006
-mx04, .465, .004
-mx08, .431, .003
-mx10, .436, .003
-mx12, .437, .006
-pe04, .445, .005
-pe07, .435, .004
-pe10, .396, .003
-pe13, .385, .003
-rs06, .307, .004
-rs10, .31, .004
-rs13, .295, .004
-si07, .275, .005
-si10, .269, .004
-si12, .262, .005
-za08, .627, .005
-za10, .638, .007
-za12, .632, .009
-es85, .312, .005
-es90, .326, .003
-tw81, .258, .002
-tw86, .257, .002
-tw91, .269, .002
-tw95, .267, .002
-tw97, .252, .002
-tw00, .248, .002
-tw05, .238, .002
-tw07, .224, .002
-tw10, .231, .002
-tw13, .229, .002
-uk86, .335, .004
-uk91, .357, .004
+.  
+. foreach c of local country {   
+  2.   foreach year of local yr1 {   
+  3.     local file "`c'`year'h"   
+  4.     capture confirm file $`file'   
+  5.     if !_rc {   
+  6.       qui use dhi factor hitp hc hpopwgt nhhmem grossnet using $`file', clear   
+  7.       qui make_variables   
+  8.       qui sum target  
+  9.       if r(N)>0 & r(mean)!=0 {   
+ 10.         set seed 324   
+ 11.         version 7 : quietly bs "ineqdec0 target [aw=wt]" "S_gini", reps(500) nowarn   
+ 12.         local gini = round(r(stat), .001)   
+ 13.         local se = round(r(se), .001) 
+ 14.      qui sum grossnet 
+ 15.      local gn = r(mean) 
+ 16.         display "`c'`year', con_pc, `gini', `se', `gn'"   
+ 17.       }   
+ 18.     }   
+ 19.   }   
+ 20. }  
+au10, con_pc, .5600000000000001, .003, 120
+do07, con_pc, .622, .003, 110
+ee00, con_pc, .524, .007, 320
+fr00, con_pc, .345, .004, 320
+fr05, con_pc, .317, .003, 320
+fr10, con_pc, .532, .005, 320
+gt06, con_pc, .5700000000000001, .005, 110
+hu91, con_pc, .293, .007, 200
+hu94, con_pc, .388, .015, 200
+il92, con_pc, .366, .004, 100
+il97, con_pc, .378, .004, 100
+il01, con_pc, .347, .004, 100
+il05, con_pc, .36, .004, 100
+il07, con_pc, .416, .007, 120
+il10, con_pc, .411, .007, 120
+il12, con_pc, .409, .006, 120
+mx84, con_pc, .463, .007, 200
+mx89, con_pc, .478, .005, 200
+mx92, con_pc, .486, .005, 200
+mx94, con_pc, .494, .005, 200
+mx96, con_pc, .471, .005, 200
+mx98, con_pc, .486, .005, 200
+mx00, con_pc, .501, .008, 200
+mx02, con_pc, .479, .006, 200
+mx04, con_pc, .465, .004, 200
+mx08, con_pc, .431, .003, 200
+mx10, con_pc, .437, .003, 200
+mx12, con_pc, .437, .006, 200
+pe04, con_pc, .445, .005, 110
+pe07, con_pc, .435, .004, 110
+pe10, con_pc, .396, .003, 110
+pe13, con_pc, .385, .003, 110
+rs06, con_pc, .546, .006, 200
+rs10, con_pc, .489, .007, 200
+rs13, con_pc, .476, .008, 200
+si07, con_pc, .463, .012, 200
+si10, con_pc, .462, .012, 200
+si12, con_pc, .262, .005, 200
+za08, con_pc, .627, .005, 120
+za10, con_pc, .664, .006, 120
+za12, con_pc, .635, .009, 120
+es85, con_pc, .342, .008, 200
+es90, con_pc, .326, .003, 200
+tw81, con_pc, .258, .002, 100
+tw86, con_pc, .258, .002, 100
+tw91, con_pc, .269, .002, 100
+tw95, con_pc, .267, .002, 100
+tw97, con_pc, .252, .002, 100
+tw00, con_pc, .248, .002, 100
+tw05, con_pc, .238, .002, 100
+tw07, con_pc, .224, .002, 110
+tw10, con_pc, .232, .002, 110
+tw13, con_pc, .23, .002, 110
+uk86, con_pc, .335, .004, 100
+uk91, con_pc, .357, .004, 100
 
-.   
 . 
 end of do-file
 
