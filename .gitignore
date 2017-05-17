@@ -7,3 +7,5 @@ data-raw/LISSY/net_sqrt_ru_all.txt
 dev/*
 R/dcpo.R
 SWIIDv5_0.RData
+vignette/reference/*
+vignette/*.dta

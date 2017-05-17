@@ -1,0 +1,13 @@
+
+
+running D:\MEGAsync\Dropbox\01_Instruction\Employment\swiid\vignette\profile.do
+>  ...
+NAMES_STD
+
+. keep if year == 2014
+(240,272 observations deleted)
+
+. mi xtset, clear // clean the board
+
+. 
+end of do-file
