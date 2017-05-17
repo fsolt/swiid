@@ -314,13 +314,8 @@ file pwt90_gdppc.dta saved
 . // generate variables of interest, merge in the PWT data, and save
 . use WVS_Longitudinal_1981_2014_stata_v2015_04_18.dta, clear
 
-. kountry S003, from(iso3n)
-
-----------------------------------------
-The command has finished.
-The new variable is named NAMES_STD.
-----------------------------------------
-
+. quiet kountry S003, from(iso3n)
+NAMES_STD
 . rename NAMES_STD country
 
 . gen year = S020
@@ -379,6 +374,10 @@ file wvs_pwt.dta saved
 (48,849 observations deleted)
 
 . drop _merge
+
+. 
+. save swiid_wvs_pwt.dta, replace
+file swiid_wvs_pwt.dta saved
 \end{verbatim}
 
 \section{Analyzing}\label{analyzing}
@@ -394,8 +393,10 @@ the data only from 2014.
 
 \begin{verbatim}
 
->  ...
-NAMES_STD
+
+. use swiid_wvs_pwt.dta, clear
+(SWIID v5.1, July 2016. Refer to the stata_swiid.pdf file for usage instruction
+> s.)
 
 . keep if year == 2014
 (240,272 observations deleted)
@@ -411,10 +412,7 @@ an analysis 100 times can be time-consuming.
 
 \begin{verbatim}
 
->  ...
-NAMES_STD
-
-. mi estimate: reg religiosity gini_net educ
+>  . mi estimate: reg religiosity gini_net educ
 
 Multiple-imputation estimates                   Imputations       =        100
 Linear regression                               Number of obs     =      2,666
@@ -453,10 +451,7 @@ after \texttt{mi\ estimate:}, we need to specify it after the
 
 \begin{verbatim}
 
->  ...
-NAMES_STD
-
-. mi estimate, cmdok:gmm (religiosity - {b1}*gini_net - {b2}*educ - {b0}), inst
+>  . mi estimate, cmdok:gmm (religiosity - {b1}*gini_net - {b2}*educ - {b0}), inst
 > ruments(gini_net educ)
 
 Multiple-imputation estimates                   Imputations       =        100
