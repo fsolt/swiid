@@ -20,12 +20,12 @@ format_lis <- function(x) {
               year = ifelse(str_extract(X1, "\\d{2}") %>% as.numeric() > 50,
                             str_extract(X1, "\\d{2}") %>% as.numeric() + 1900,
                             str_extract(X1, "\\d{2}") %>% as.numeric() + 2000),
-              gini = (str_trim(X2) %>% as.numeric()),
-              gini_se = (str_trim(X3) %>% as.numeric()),
+              gini = (str_trim(X3) %>% as.numeric()),
+              gini_se = (str_trim(X4) %>% as.numeric()),
               welfare_def = str_extract(x, "[^_]*"),
               equiv_scale = str_extract(x, "(?<=_).*"),
               monetary = FALSE,
-              series = paste("LIS", welfare_def, equiv_scale),
+              series = paste("LIS", x),
               source1 = "LISSY",
               page = "",
               link = paste0("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/",
@@ -46,12 +46,12 @@ format_lis_xtra <- function(x) {
               year = ifelse(str_extract(X1, "\\d{2}") %>% as.numeric() > 66,
                             str_extract(X1, "\\d{2}") %>% as.numeric() + 1900,
                             str_extract(X1, "\\d{2}") %>% as.numeric() + 2000),
-              gini = (str_trim(X2) %>% as.numeric()),
-              gini_se = (str_trim(X3) %>% as.numeric()),
+              gini = (str_trim(X3) %>% as.numeric()),
+              gini_se = (str_trim(X4) %>% as.numeric()),
               equiv_scale = "sqrt",
               welfare_def = "disp",
               monetary = FALSE,
-              series = "LIS dispsqrt",
+              series = "LIS disp_sqrt",
               source1 = ifelse(country=="New Zealand", "Statistics New Zealand 1999", "LISSY"),
               page = ifelse(country=="New Zealand", "73", ""),
               link = ifelse(country=="New Zealand", 
@@ -162,7 +162,8 @@ cepal_notes <- cepal_extract("//nota")
 
 cepal <- left_join(cepal_raw, cepal_labels, by = c("dim_208" = "id")) %>%
   mutate(country = countrycode(as.character(name), "country.name", "country.name") %>% 
-           str_replace(",.*", "")) %>% 
+           str_replace(",.*", "") %>% 
+           str_replace("Bolivia \\(Plurinational State of\\)", "Bolivia")) %>% 
   filter(!is.na(country)) %>%
   select(-name) %>% 
   left_join(cepal_labels, by = c("dim_29117" = "id")) %>%
