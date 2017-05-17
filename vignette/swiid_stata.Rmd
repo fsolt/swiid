@@ -118,7 +118,7 @@ save pwt90_gdppc.dta, replace
 // from http://www.worldvaluessurvey.org/WVSDocumentationWVL.jsp
 // generate variables of interest, merge in the PWT data, and save
 use WVS_Longitudinal_1981_2014_stata_v2015_04_18.dta, clear
-kountry S003, from(iso3n)
+quiet kountry S003, from(iso3n)
 rename NAMES_STD country
 gen year = S020
 gen religiosity = F063 if F063>0

@@ -315,12 +315,7 @@ file pwt90_gdppc.dta saved
 . use WVS_Longitudinal_1981_2014_stata_v2015_04_18.dta, clear
 
 . kountry S003, from(iso3n)
-
-----------------------------------------
-The command has finished.
-The new variable is named NAMES_STD.
-----------------------------------------
-
+NAMES_STD
 . rename NAMES_STD country
 
 . gen year = S020
@@ -394,9 +389,6 @@ the data only from 2014.
 
 \begin{verbatim}
 
->  ...
-NAMES_STD
-
 . keep if year == 2014
 (240,272 observations deleted)
 
@@ -410,9 +402,6 @@ that report the uncertainty in the SWIID estimates. Note that performing
 an analysis 100 times can be time-consuming.
 
 \begin{verbatim}
-
->  ...
-NAMES_STD
 
 . mi estimate: reg religiosity gini_net educ
 
@@ -452,9 +441,6 @@ after \texttt{mi\ estimate:}, we need to specify it after the
 \texttt{mi\ estimate,\ cmdok:} as following.
 
 \begin{verbatim}
-
->  ...
-NAMES_STD
 
 . mi estimate, cmdok:gmm (religiosity - {b1}*gini_net - {b2}*educ - {b0}), inst
 > ruments(gini_net educ)
