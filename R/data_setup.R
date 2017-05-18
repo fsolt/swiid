@@ -3,6 +3,7 @@ p_load(tidyverse, readxl,
        eurostat, rsdmx, xml2, CANSIM2R, pxweb, rvest,
        stringr, magrittr, countrycode)
 p_load_gh("ropensci/tabulizerjars", "ropensci/tabulizer") # read PDF tables
+p_load_gh("ropengov/dkstat")
 
 # LIS
 format_lis <- function(x) {
@@ -339,6 +340,7 @@ afr_gini_sqrt <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/
 afr_gini <- bind_rows(afr_gini_pc, afr_gini_sqrt)
 rm(afr_gini_pc, afr_gini_sqrt)
 
+
 ## National Statistics Offices
 
 # Australian Bureau of Statistics (update abs_link; not included in abs api as of 2017-05)
@@ -376,6 +378,7 @@ abs_ne <- abs_format("Table 1.1", "disp", "oecdm")
 abs_gh <- abs_format("Table 1.2", "gross", "hh")
 abs <- bind_rows(abs_ne, abs_gh)
   
+
 # Statistics Canada (automated)
 statcan <- CANSIM2R:::downloadCANSIM(2060033) %>% 
   filter(GEO=="Canada") %>% 
@@ -426,6 +429,25 @@ dane <- read_excel("data-raw/dane.xls", sheet = "Gini", skip = 9) %>%
             source1 = "DANE",
             page = "",
             link = dane_link)
+
+
+# Statistics Denmark (automated)
+dkstat <- dst_get_data(table = "IFOR41", 
+                       ULLIG = "Gini coefficient", 
+                       KOMMUNEDK = "All Denmark",
+                       Tid = "*",
+                       lang = "en") %>% 
+  transmute(country = "Denmark",
+            year = lubridate::year(TID),
+            gini = value,
+            gini_se = NA,
+            welfare_def = "disp",
+            equiv_scale = "oecdm",
+            monetary = FALSE,
+            series = paste("Statistics Denmark", welfare_def, equiv_scale),
+            source1 = "Statistics Denmark",
+            page = "",
+            link = "http://www.statbank.dk/IFOR41") 
 
 
 # Statistics Estonia (archived)
@@ -861,7 +883,7 @@ ceq1 <- ceq %>%
 ineq0 <- bind_rows(lis, 
                    sedlac, cepal, cepal_sdi, oecd1, eurostat,
                    transmonee, ceq1, afr_gini,
-                   abs, statcan, dane, statee, statfi, geostat,
+                   abs, statcan, dane, dkstat, statee, statfi, geostat,
                    ssb, dgeec, rosstat, scb, tdgbas, turkstat, 
                    ons, ifs, cbo, uscb, uine,
                    added_data) %>% 
