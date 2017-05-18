@@ -510,23 +510,23 @@ statfi <- get_pxweb_data(url = "http://pxnet2.stat.fi/PXWeb/api/v1/en/StatFin/tu
             link = "http://pxnet2.stat.fi/PXWeb/api/v1/en/StatFin/tul/tjt/270_tjt_tau_117.px")
 
 
-# Insee (not available 2017-05-05)
-# insee_link <- "http://www.bdm.insee.fr/bdm2/exporterSeries.action?idbank=001687249&periode=toutes&liste_formats=xls"
-# download.file(insee_link, "data-raw/insee.xls")
-# 
-# insee <- read_excel("data-raw/insee.xls", skip = 3, col_names = c("year", "gini")) %>% 
-#   filter(!is.na(gini)) %>% 
-#   transmute(country = "France",
-#             year = year,
-#             gini = gini,
-#             gini_se = NA,
-#             welfare_def = "disp",
-#             equiv_scale = "oecdm",
-#             monetary = FALSE,
-#             series = paste("Insee", welfare_def, equiv_scale),
-#             source1 = "Insee",
-#             page = "",
-#             link = insee_link)
+# Insee France (archived; formerly at http://www.bdm.insee.fr/bdm2/exporterSeries.action?idbank=001687249&periode=toutes&liste_formats=xls)
+insee_link <- "https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/insee.xls"
+download.file(insee_link, "data-raw/insee.xls")
+
+insee <- read_excel("data-raw/insee.xls", skip = 3, col_names = c("year", "gini")) %>%
+  filter(!is.na(gini)) %>%
+  transmute(country = "France",
+            year = year,
+            gini = gini,
+            gini_se = NA,
+            welfare_def = "disp",
+            equiv_scale = "oecdm",
+            monetary = FALSE,
+            series = paste("Insee", welfare_def, equiv_scale),
+            source1 = "Insee",
+            page = "",
+            link = insee_link)
 
 # Statistics Georgia (update file)
 # http://91.208.144.188/Menu.aspx?rxid=c8ca81e9-2824-4c5b-a46a-c80202913531&px_db=Database&px_type=PX&px_language=en
@@ -909,7 +909,7 @@ ineq0 <- bind_rows(lis,
                    sedlac, cepal, cepal_sdi, oecd1, eurostat,
                    transmonee, ceq1, afr_gini,
                    abs, statcan, dane, dkstat, capmas, statee, 
-                   statfi, geostat,
+                   statfi, insee, geostat,
                    ssb, dgeec, rosstat, scb, tdgbas, turkstat, 
                    ons, ifs, cbo, uscb, uine,
                    added_data) %>% 
