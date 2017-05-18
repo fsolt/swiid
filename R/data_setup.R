@@ -450,6 +450,28 @@ dkstat <- dst_get_data(table = "IFOR41",
             link = "http://www.statbank.dk/IFOR41") 
 
 
+# CAPMAS Egypt (archived)
+capmas_link <- "http://www.msrintranet.capmas.gov.eg/pdf/studies/inds/EG-LIV-E-I.xls" # this file isn't regularly updated
+download.file(capmas_link, "data-raw/capmas.xls") 
+
+capmas <- read_excel("data-raw/capmas.xls", skip = 7) %>% 
+  filter(Indicator == "Inequality of income or expenditure distribution (Gini coefficient), Total") %>% 
+  select(contains("20")) %>% 
+  gather(key = year, value = gini) %>% 
+  filter(!is.na(gini)) %>% 
+  transmute(country = "Egypt",
+            year = as.numeric(year),
+            gini = gini,
+            gini_se = NA,
+            welfare_def = "con",
+            equiv_scale = "pc",
+            monetary = FALSE,
+            series = paste("CAPMAS", welfare_def, equiv_scale),
+            source1 = "CAPMAS",
+            page = "",
+            link = capmas_link) 
+
+
 # Statistics Estonia (archived)
 statee <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/statistics_estonia.tsv", col_names = FALSE) %>% 
   rename(year = X1, pc = X2, oecdm = X3) %>% 
@@ -465,6 +487,7 @@ statee <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data-ra
           source1 = "Statistics Estonia",
           page = "",
           link = "http://pub.stat.ee/px-web.2001/dialog/varval.asp?ma=HH30")
+
 
 # Statistics Finland (automated)
 statfi <- get_pxweb_data(url = "http://pxnet2.stat.fi/PXWeb/api/v1/en/StatFin/tul/tjt/270_tjt_tau_117.px",
@@ -485,6 +508,7 @@ statfi <- get_pxweb_data(url = "http://pxnet2.stat.fi/PXWeb/api/v1/en/StatFin/tu
             source1 = "Statistics Finland",
             page = "",
             link = "http://pxnet2.stat.fi/PXWeb/api/v1/en/StatFin/tul/tjt/270_tjt_tau_117.px")
+
 
 # Insee (not available 2017-05-05)
 # insee_link <- "http://www.bdm.insee.fr/bdm2/exporterSeries.action?idbank=001687249&periode=toutes&liste_formats=xls"
@@ -523,6 +547,7 @@ geostat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-r
             source1 = "Geostat",
             page = "",
             link = "http://pc-axis.geostat.ge")
+
 
 # Istat (update file)
 # http://dati.istat.it/Index.aspx?DataSetCode=DCCV_INDCONSUMI&Lang=en#
@@ -883,7 +908,8 @@ ceq1 <- ceq %>%
 ineq0 <- bind_rows(lis, 
                    sedlac, cepal, cepal_sdi, oecd1, eurostat,
                    transmonee, ceq1, afr_gini,
-                   abs, statcan, dane, dkstat, statee, statfi, geostat,
+                   abs, statcan, dane, dkstat, capmas, statee, 
+                   statfi, geostat,
                    ssb, dgeec, rosstat, scb, tdgbas, turkstat, 
                    ons, ifs, cbo, uscb, uine,
                    added_data) %>% 
