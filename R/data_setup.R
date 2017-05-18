@@ -404,6 +404,30 @@ statcan <- CANSIM2R:::downloadCANSIM(2060033) %>%
             page = "",
             link = link)
 
+
+# DANE Colombia (update link)
+# http://www.dane.gov.co/index.php/estadisticas-por-tema/pobreza-y-condiciones-de-vida/pobreza-y-desigualdad/
+# CLick most recent Investigación > copy link from Anexos tab
+
+dane_link <- "http://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2016.xls"
+download.file(dane_link, "data-raw/dane.xls")
+
+dane <- read_excel("data-raw/dane.xls", sheet = "Gini", skip = 9) %>% 
+  filter(Dominio == "Nacional") %>% 
+  gather(key = year, value = gini, -Dominio) %>% 
+  transmute(country = "Colombia",
+            year = year,
+            gini = gini,
+            gini_se = NA,
+            welfare_def = "gross",
+            equiv_scale = "pc",
+            monetary = FALSE,
+            series = paste("DANE", welfare_def, equiv_scale),
+            source1 = "DANE",
+            page = "",
+            link = dane_link)
+
+
 # Statistics Estonia (archived)
 statee <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/statistics_estonia.tsv", col_names = FALSE) %>% 
   rename(year = X1, pc = X2, oecdm = X3) %>% 
@@ -837,7 +861,7 @@ ceq1 <- ceq %>%
 ineq0 <- bind_rows(lis, 
                    sedlac, cepal, cepal_sdi, oecd1, eurostat,
                    transmonee, ceq1, afr_gini,
-                   abs, statcan, statee, statfi, geostat,
+                   abs, statcan, dane, statee, statfi, geostat,
                    ssb, dgeec, rosstat, scb, tdgbas, turkstat, 
                    ons, ifs, cbo, uscb, uine,
                    added_data) %>% 
@@ -846,8 +870,8 @@ ineq0 <- bind_rows(lis,
   mutate(country = countrycode(country, "country.name", "country.name") %>% 
            str_replace(" \\(.*", "") %>% 
            str_replace(",.*", "") %>% 
-           str_replace("^(United )?Republic of", "") %>% 
-           str_replace("^The former Yugoslav Republic of", "") %>% 
+           str_replace("^(United )?Republic of ", "") %>% 
+           str_replace("^The former Yugoslav Republic of ", "") %>% 
            str_replace(" of [GA].*", "")) %>% 
   group_by(country) %>% 
   mutate(oth_count = n()) %>% 
