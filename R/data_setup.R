@@ -451,7 +451,7 @@ dkstat <- dst_get_data(table = "IFOR41",
 
 
 # CAPMAS Egypt (archived)
-capmas_link <- "http://www.msrintranet.capmas.gov.eg/pdf/studies/inds/EG-LIV-E-I.xls" # this file isn't regularly updated
+capmas_link <- "http://www.msrintranet.capmas.gov.eg/pdf/studies/inds/EG-LIV-E-I.xls" # this file isn't updated anymore
 download.file(capmas_link, "data-raw/capmas.xls") 
 
 capmas <- read_excel("data-raw/capmas.xls", skip = 7) %>% 
@@ -510,11 +510,17 @@ statfi <- get_pxweb_data(url = "http://pxnet2.stat.fi/PXWeb/api/v1/en/StatFin/tu
             link = "http://pxnet2.stat.fi/PXWeb/api/v1/en/StatFin/tul/tjt/270_tjt_tau_117.px")
 
 
-# Insee France (archived; formerly at http://www.bdm.insee.fr/bdm2/exporterSeries.action?idbank=001687249&periode=toutes&liste_formats=xls)
-insee_link <- "https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/insee.xls"
-download.file(insee_link, "data-raw/insee.xls")
+# Insee France (archived)
+insee_link <- "https://web-beta.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie"
 
-insee <- read_excel("data-raw/insee.xls", skip = 3, col_names = c("year", "gini")) %>%
+insee <- readLines(insee_link) %>%              # kickin' it old skool . . .
+  str_subset("etendue-ligne|tab-chiffre") %>% 
+  str_replace(".*>([\\d,]*)<.*", "\\1") %>% 
+  str_replace(",", ".") %>% 
+  matrix(ncol = 2, byrow = TRUE) %>% 
+  as_tibble() %>% 
+  transmute(year = as.numeric(V1),
+            gini = as.numeric(V2)) %>%
   filter(!is.na(gini)) %>%
   transmute(country = "France",
             year = year,
