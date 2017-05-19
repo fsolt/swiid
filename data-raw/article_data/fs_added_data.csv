@@ -194,6 +194,18 @@ Croatia,2006,0.29,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2009
 Croatia,2007,0.3,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2009,,http://www.dzs.hr/Eng/publication/2009/14-1-2_1e2009.htm
 Croatia,2008,0.3,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2009,,http://www.dzs.hr/Eng/publication/2009/14-1-2_1e2009.htm
 Croatia,2009,0.29,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2010,,http://www.dzs.hr/Hrv_Eng/publication/2010/14-01-02_01_2010.htm
+Germany,1992,0.249,,net,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
+Germany,1995,0.265,,net,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
+Germany,2000,0.251,,net,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
+Germany,2005,0.278,,net,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
+Germany,2010,0.285,,net,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
+Germany,2011,0.282,,net,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
+Germany,1992,0.243,,net,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
+Germany,1995,0.255,,net,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
+Germany,2000,0.241,,net,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
+Germany,2005,0.262,,net,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
+Germany,2010,0.272,,net,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
+Germany,2011,0.272,,net,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
 Guatemala,2000,0.476,,con,pc,,INE2002 con pc,Instituto Nacional de Estadi_stica de Guatemala 2002 ,20,https://www.ine.gob.gt/sistema/uploads/2014/01/15/v8ukWQ78M4VJrnYqyN2oCumMy1GiBzaf.pdf
 Guatemala,2000,0.57,,gross,pc,,INE2002 gross pc,Instituto Nacional de Estadi_stica de Guatemala 2002 ,20,https://www.ine.gob.gt/sistema/uploads/2014/01/15/v8ukWQ78M4VJrnYqyN2oCumMy1GiBzaf.pdf
 Iceland,1992,0.28,,disp,sqrt,TRUE,OK disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422
