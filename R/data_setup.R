@@ -26,7 +26,7 @@ format_lis <- function(x) {
               welfare_def = str_extract(x, "[^_]*"),
               equiv_scale = str_extract(x, "(?<=_).*"),
               monetary = FALSE,
-              series = paste("LIS", x),
+              series = paste("LIS", welfare_def, equiv_scale),
               source1 = "LISSY",
               page = "",
               link = paste0("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/",
@@ -419,7 +419,7 @@ dane <- read_excel("data-raw/dane.xls", sheet = "Gini", skip = 9) %>%
   filter(Dominio == "Nacional") %>% 
   gather(key = year, value = gini, -Dominio) %>% 
   transmute(country = "Colombia",
-            year = year,
+            year = as.numeric(year),
             gini = gini,
             gini_se = NA,
             welfare_def = "gross",
@@ -534,6 +534,7 @@ insee <- readLines(insee_link) %>%              # kickin' it old skool . . .
             page = "",
             link = insee_link)
 
+
 # Statistics Georgia (update file)
 # http://91.208.144.188/Menu.aspx?rxid=c8ca81e9-2824-4c5b-a46a-c80202913531&px_db=Database&px_type=PX&px_language=en
 # Social Statistics > Standard of Living, Subsistance Minimum > Gini Coefficients by Year and Indicator
@@ -555,6 +556,32 @@ geostat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-r
             link = "http://pc-axis.geostat.ge")
 
 
+# CSO Ireland (automated)
+cso_ie_link <- "http://www.cso.ie/en/statistics/socialconditions/surveyofincomeandlivingconditionssilcmainresults/"
+
+cso_ie <- read_html(cso_ie_link) %>%
+  html_node("table") %>% 
+  html_table(header = TRUE) 
+
+names(cso_ie)[1] <- "var"
+
+cso_ie <- cso_ie %>% 
+  filter(var == "Gini coefficient") %>% 
+  select(-var) %>% 
+  gather(key = year, value = gini) %>%
+  transmute(country = "Ireland",
+            year = as.numeric(year),
+            gini = as.numeric(gini),
+            gini_se = NA,
+            welfare_def = "disp",
+            equiv_scale = "pc",
+            monetary = FALSE,
+            series = paste("CSO Ireland", welfare_def, equiv_scale),
+            source1 = "CSO Ireland",
+            page = "",
+            link = cso_ie_link)
+  
+
 # Istat (update file)
 # http://dati.istat.it/Index.aspx?DataSetCode=DCCV_INDCONSUMI&Lang=en#
 # Customize > Territory: Italy > Data Type: Gini
@@ -572,7 +599,44 @@ istat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw
             page = "",
             link = "http://dati.istat.it/Index.aspx?DataSetCode=DCCV_INDCONSUMI&Lang=en")
 
- 
+# Statistics Korea (update link)
+kostat_link <- "http://kostat.go.kr/portal/eng/pressReleases/1/index.board?bmode=read&aSeq=355172"
+kostat_page <- html_session(kostat_link) %>% 
+  follow_link(".pdf")
+writeBin(kostat_page$response$content, paste0("data-raw/kostat2016.pdf"))  
+
+kr <- extract_tables("data-raw/statistics_korea.pdf", pages = 4)[[1]] %>% 
+  as_tibble()
+
+kostat0 <- bind_cols(kr[1:7,], kr[8:14,]) %>% 
+  janitor::clean_names() %>% 
+  filter(str_detect(v1, "Classification|Total|^Market")) %>% 
+  mutate_all(funs(str_replace(., "—", "") %>% str_trim())) %>% 
+  separate(v3, c("v3", "v3a"), sep = "\\s+")
+
+names(kostat0) <- kostat0[1,]
+
+kostat <- kostat0 %>% 
+  janitor::clean_names() %>% 
+  filter(classification != "Classification") %>% 
+  select(-classification_2, -x_2, -x) %>% 
+  gather(key = year, value = gini, -classification) %>% 
+  transmute(country = "Korea",
+            year = as.numeric(str_replace(year, "x", "")),
+            gini = as.numeric(gini),
+            gini_se = NA,
+            welfare_def = if_else(str_detect(classification, "Disposable"), "disp", "market"),
+            equiv_scale = "ae",
+            monetary = NA,
+            series = paste("Kostat", welfare_def, equiv_scale),
+            source1 = "Kostat 2016",
+            page = "",
+            link = kostat_link) %>% 
+  filter(!is.na(gini))
+
+rm(kr, kostat0)
+
+
 # Statistics Norway (automated)
 ssb_link <- "https://www.ssb.no/en/inntekt-og-forbruk/statistikker/ifhus/aar/2016-12-16?fane=tabell&sort=nummer&tabell=288299"
 
@@ -595,7 +659,7 @@ ssb <- get_pxweb_data(url = "http://data.ssb.no/api/v0/en/table/if/if02/ifhus/SB
             link = ssb_link)
 
 
-# DGEEC Paraguay (update link and wrangle)
+# DGEEC Paraguay (update link and, probably, wrangle)
 # http://www.dgeec.gov.py > Publicaciones > Pobreza
 
 dgeec_link <- "http://www.dgeec.gov.py/Publicaciones/Biblioteca/eph2015/Boletin%20de%20pobreza%202015.pdf"
@@ -665,7 +729,9 @@ scb <- scb %>%
             link = "http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550")
 
 
-# Taiwan Directorate General of Budget, Accounting, and Statistics (update tdfbas_link [add 1 to number after 'doc/result/']; update file from tdfbas_link2)
+# Taiwan Directorate General of Budget, Accounting, and Statistics 
+# update tdfbas_link [adding 1 to number after 'doc/result/' should work]
+# update file from tdfbas_link2
 
 tdgbas_link <- "http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls"
 download.file(tdgbas_link, "data-raw/tdgbas1.xls")
@@ -915,7 +981,7 @@ ineq0 <- bind_rows(lis,
                    sedlac, cepal, cepal_sdi, oecd1, eurostat,
                    transmonee, ceq1, afr_gini,
                    abs, statcan, dane, dkstat, capmas, statee, 
-                   statfi, insee, geostat,
+                   statfi, insee, geostat, cso_ie, istat,
                    ssb, dgeec, rosstat, scb, tdgbas, turkstat, 
                    ons, ifs, cbo, uscb, uine,
                    added_data) %>% 
