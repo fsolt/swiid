@@ -439,7 +439,7 @@ dkstat <- dst_get_data(table = "IFOR41",
                        lang = "en") %>% 
   transmute(country = "Denmark",
             year = lubridate::year(TID),
-            gini = value,
+            gini = value/100,
             gini_se = NA,
             welfare_def = "disp",
             equiv_scale = "oecdm",
@@ -559,19 +559,19 @@ geostat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-r
 # CSO Ireland (automated)
 cso_ie_link <- "http://www.cso.ie/en/statistics/socialconditions/surveyofincomeandlivingconditionssilcmainresults/"
 
-cso_ie <- read_html(cso_ie_link) %>%
+cso_ie0 <- read_html(cso_ie_link) %>%
   html_node("table") %>% 
   html_table(header = TRUE) 
 
-names(cso_ie)[1] <- "var"
+names(cso_ie0)[1] <- "var"
 
-cso_ie <- cso_ie %>% 
+cso_ie <- cso_ie0 %>% 
   filter(var == "Gini coefficient") %>% 
   select(-var) %>% 
   gather(key = year, value = gini) %>%
   transmute(country = "Ireland",
             year = as.numeric(year),
-            gini = as.numeric(gini),
+            gini = as.numeric(gini)/100,
             gini_se = NA,
             welfare_def = "disp",
             equiv_scale = "pc",
@@ -580,6 +580,8 @@ cso_ie <- cso_ie %>%
             source1 = "CSO Ireland",
             page = "",
             link = cso_ie_link)
+
+rm(cso_ie0)
   
 
 # Istat (update file)
