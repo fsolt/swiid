@@ -709,6 +709,102 @@ rosstat <- read_excel("data-raw/rosstat.xls", sheet = "Sec.5", skip = 1) %>%
             link = rosstat_link) 
 
 
+# Slovenia (archived; automated)
+read_px <- function(px_file_path) {
+  px_vector <- readLines(px_file_path)
+  px_heading <- str_subset(px_vector, "^HEADING=") %>% 
+    str_replace("^HEADING=(.*);", "\\1")
+  px_names <- str_subset(px_vector, paste0("^VALUES\\(",px_heading,"\\)=")) %>% 
+    str_replace(paste0("^VALUES\\(",px_heading,"\\)=(.*);"), "\\1") %>% 
+    str_split(",") %>% 
+    first() %>% 
+    str_replace_all('\\"', "")
+  if (any(str_detect(px_vector, "^STUB"))) {
+    px_measure <- str_subset(px_vector, "^STUB") %>% 
+      str_replace('^STUB="(.*)";', "\\1")
+    px_vals <- which(str_detect(px_vector, '^VALUES\\("'))
+    px_vars <- px_vector[px_vals[1]:(px_vals[2]-1)] %>% 
+      str_replace(paste0('^VALUES\\("', px_measure, '"\\)=(.*)[;,]'), "\\1") %>% 
+      str_replace_all('\\"|,|;', "")
+  } else {
+    px_vars <- str_subset(px_vector, paste0('^VALUES\\("MEASURE"\\)=')) %>% 
+      str_replace(paste0('^VALUES\\("', px_measure, '"\\)=(.*);'), "\\1") %>% 
+      str_split(",") %>% 
+      first() %>% 
+      str_replace_all('\\"', "")
+  }
+  px_data <- px_vector[(which(str_detect(px_vector, "DATA="))+1):length(px_vector)] %>% 
+    str_replace(";", "") %>%
+    str_trim() %>% 
+    as_tibble() %>% 
+    separate(value, px_names, sep = " ") %>% 
+    mutate(var_name = px_vars) %>% 
+    gather(key = year, value = value, -var_name)
+  return(px_data)
+}
+
+ssi1_link <- "https://www.stat.si/doc/vsebina/08/kazalniki_soc_povezanosti_Laekens_97_03.xls"
+download.file(ssi1_link, "data-raw/ssi.xls", method = "curl", extra = "-k")
+
+ssi1 <- read_excel("data-raw/ssi.xls", sheet = "Laekens kazalniki 1997-2003", skip = 4) %>% 
+  janitor::clean_names() %>% 
+  filter(str_detect(x, "Gini")) %>% 
+  select(-na, -x) %>% 
+  gather(key = year0, value = gini) %>% 
+  transmute(country = "Slovenia",
+            year = as.numeric(str_extract(year0, "\\d{4}")),
+            gini = as.numeric(gini),
+            gini_se = NA,
+            welfare_def = "disp",
+            equiv_scale = "oecdm",
+            monetary = !str_detect(year0, "_2"),
+            series = paste("Statsi 2005", welfare_def, equiv_scale),
+            source1 = "Slovenia Statistics Office 2005",
+            page = "Laekens kazalniki 1997-2003",
+            link = ssi1_link) 
+
+ssi2_link <- "http://pxweb.stat.si/pxweb/Database/Demographics/08_level_living/08_silc_poverty_indic/15_08673_income_distribution/0867312E.px"
+download.file(ssi2_link, "data-raw/ssi2.px")
+
+ssi2 <- read_px("data-raw/ssi2.px") %>% 
+  filter(str_detect(var_name, "pensions are included")) %>% 
+  transmute(country = "Slovenia",
+            year = as.numeric(year) - 1,
+            gini = as.numeric(value)/100,
+            gini_se = NA,
+            welfare_def = "market",
+            equiv_scale = "oecdm",
+            monetary = TRUE,
+            series = paste("Statsi", welfare_def, equiv_scale),
+            source1 = "Slovenia Statistics Office",
+            page = "",
+            link = ssi2_link)
+
+ssi <- bind_rows(ssi1, ssi2)
+rm(ssi1, ssi2)
+
+
+# Istituto Nacional de Estadística Spain (automated)
+ine_link <- "http://www.ine.es/jaxiT3/files/t/es/csv_c/9966.csv?nocab=1"
+download.file(ine_link, "data-raw/ine.csv")
+
+ine <- read_csv("data-raw/ine.csv", skip = 4) %>% 
+  filter(str_detect(X1, "con alquiler imputado")) %>% 
+  gather(key = year, value = gini) %>% 
+  filter(str_detect(year, "\\d{4}")) %>% 
+  transmute(country = "Spain",
+            year = as.numeric(year) - 1,
+            gini = as.numeric(gini)/100,
+            gini_se = NA,
+            welfare_def = "disp",
+            equiv_scale = "oecdm",
+            monetary = FALSE,
+            series = paste("Istituto Nacional de Estadística", welfare_def, equiv_scale),
+            source1 = "Istituto Nacional de Estadística",
+            page = "",
+            link = ine_link)
+
+
 # Statistics Sweden (automated)
 scb <- get_pxweb_data(url = "http://api.scb.se/OV0104/v1/doris/sv/ssd/HE/HE0103/HE0103A/DispInk8",
                       dims = list(Hushallsdef = c('FAME'),
@@ -984,7 +1080,7 @@ ineq0 <- bind_rows(lis,
                    transmonee, ceq1, afr_gini,
                    abs, statcan, dane, dkstat, capmas, statee, 
                    statfi, insee, geostat, cso_ie, istat,
-                   ssb, dgeec, rosstat, scb, tdgbas, turkstat, 
+                   ssb, dgeec, rosstat, ssi, ine, scb, tdgbas, turkstat, 
                    ons, ifs, cbo, uscb, uine,
                    added_data) %>% 
   rename(gini_m = gini,
