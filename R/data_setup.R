@@ -709,7 +709,7 @@ rosstat <- read_excel("data-raw/rosstat.xls", sheet = "Sec.5", skip = 1) %>%
             link = rosstat_link) 
 
 
-# Slovenia (archived; automated)
+# Statistics Slovenia (archived; automated)
 read_px <- function(px_file_path) {
   px_vector <- readLines(px_file_path)
   px_heading <- str_subset(px_vector, "^HEADING=") %>% 
@@ -1046,6 +1046,27 @@ uine <- extract_tables("data-raw/uine.pdf", pages = 45)[[2]][5:15, 1] %>%
             page = "43",
             link = uine_link)
 
+# Venezuela Istituto Nacional de Estadística (update link)
+inev_link <- "http://www.ine.gov.ve/documentos/Social/Pobreza/xls/Serie_%20GINI_1s1997-1s2015.xls"
+download.file(inev_link, "data-raw/inev.xls")
+
+inev <- read_excel("data-raw/inev.xls", skip = 3) %>% 
+  janitor::clean_names() %>% 
+  filter(coeficiente_gini_y_quintiles == "Coeficiente de Gini") %>% 
+  select(-coeficiente_gini_y_quintiles, -x) %>% 
+  gather(key = year, value = gini) %>% 
+  transmute(country = "Venezuela",
+            year = str_extract(year, "\\d{4}"),
+            gini = gini,
+            gini_se = NA,
+            welfare_def = "disp",
+            equiv_scale = "pc",
+            monetary = TRUE,
+            series = paste("Instituto Nacional de Estadistica", welfare_def, equiv_scale),
+            source1 = "Instituto Nacional de Estadistica",
+            page = "",
+            link = inev_link)
+
 
 ## Added data
 added_data <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/article_data/fs_added_data.csv")
@@ -1081,7 +1102,7 @@ ineq0 <- bind_rows(lis,
                    abs, statcan, dane, dkstat, capmas, statee, 
                    statfi, insee, geostat, cso_ie, istat,
                    ssb, dgeec, rosstat, ssi, ine, scb, tdgbas, turkstat, 
-                   ons, ifs, cbo, uscb, uine,
+                   ons, ifs, cbo, uscb, uine, inev, 
                    added_data) %>% 
   rename(gini_m = gini,
          gini_m_se = gini_se) %>%
