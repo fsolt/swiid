@@ -704,9 +704,36 @@ rosstat <- read_excel("data-raw/rosstat.xls", sheet = "Sec.5", skip = 1) %>%
             equiv_scale = "pc",
             monetary = TRUE,
             series = paste("Rosstat", welfare_def, equiv_scale),
-            source1 = "Russian Federal State Statistics Service 2015",
+            source1 = "Russian Federal State Statistics Service",
             page = "Sec.5",
-            link = rosstat_link) 
+            link = rosstat_link)
+
+
+# Singapore Department of Statistics (update file)
+# Note: Population covered is only resident households with at least one worker 
+#  and so excludes 8-11% of resident households (which, from other data, appear
+#  to be among the poorest), plus all non-resident households (surely poor).
+# Note also that income definition excludes income from capital.
+# These data therefore should be considered a lower bound.  Blech.
+# http://www.tablebuilder.singstat.gov.sg/publicfacing/createSpecialTable.action?refId=12356
+# Export > CSV
+
+singstat <- read_csv("data-raw/singstat.csv", skip = 4) %>% 
+  filter(!is.na(`2000`)) %>% 
+  gather(key = year, value = gini, -`Gini Coefficient`) %>% 
+  transmute(country = "Singapore",
+            year = as.numeric(year),
+            gini = as.numeric(gini),
+            gini_se = NA,
+            welfare_def = if_else(str_detect(`Gini Coefficient`, "Taxes"), "disp", "market")
+            equiv_scale = "pc",
+            monetary = TRUE,
+            series = paste("Singstat", welfare_def, equiv_scale),
+            source1 = "Singapore Department of Statistics",
+            page = "",
+            link = "http://www.tablebuilder.singstat.gov.sg/publicfacing/createSpecialTable.action?refId=12356")
+
+
 
 
 # Statistics Slovenia (archived; automated)
