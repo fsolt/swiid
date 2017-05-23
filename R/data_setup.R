@@ -394,6 +394,7 @@ belstat_file <- list.files(belstat_dir) %>%
   file.path(belstat_dir, .)
 file.rename(belstat_file, "data-raw/belstat.pdf")
 unlink(c(belstat_temp, belstat_dir))
+rm(belstat_zip)
 
 first_row_to_names <- function(x) {
   names(x) <- x[1, ]
@@ -449,12 +450,14 @@ statcan <- CANSIM2R:::downloadCANSIM(2060033) %>%
             link = link)
 
 
-# DANE Colombia (update link)
-# http://www.dane.gov.co/index.php/estadisticas-por-tema/pobreza-y-condiciones-de-vida/pobreza-y-desigualdad/
-# CLick most recent Investigación > copy link from Anexos tab
-
-dane_link <- "http://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2016.xls"
-download.file(dane_link, "data-raw/dane.xls")
+# DANE Colombia (automated)
+dane_file <- "http://www.dane.gov.co/index.php/estadisticas-por-tema/pobreza-y-condiciones-de-vida/pobreza-y-desigualdad/" %>% 
+  html_session() %>% 
+  follow_link("Pobreza Monetaria") %>%
+  follow_link("Anexos")
+dane_link <- dane_file$url
+writeBin(dane_file$response$content, "data-raw/dane.xls")
+rm(dane_file)
 
 dane <- read_excel("data-raw/dane.xls", sheet = "Gini", skip = 9) %>% 
   filter(Dominio == "Nacional") %>% 
@@ -650,6 +653,7 @@ kostat_page <- "http://kostat.go.kr/portal/eng/pressReleases/6/1/index.board" %>
   follow_link(".pdf")
 writeBin(kostat_page$response$content, paste0("data-raw/kostat.pdf"))  
 kostat_link <- kostat_page$back[1]
+rm(kostat_page)
 
 kr <- extract_tables("data-raw/statistics_korea.pdf", pages = 4)[[1]] %>% 
   as_tibble()
@@ -959,6 +963,7 @@ turkstat <- pmap_df(list(turkstat_list, names(turkstat_list), turkstat_links),
             page = "",
             link = link_x) })
 
+rm(turkstat_list)
 
 # U.K. Office for National Statistics (update link)
 # https://www.ons.gov.uk/atoz?query=effects+taxes+benefits (new releases in April)
