@@ -475,6 +475,29 @@ dane <- read_excel("data-raw/dane.xls", sheet = "Gini", skip = 9) %>%
             link = dane_link)
 
 
+# Costa Rica (update file; as of 2017-05 page not sufficiently responsive to automate)
+# http://www.inec.go.cr/pobreza-y-desigualdad/desigualdad
+ineccr_link <- "http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2016.01.xlsx"
+
+ineccr <- read_excel("data-raw/ineccr.xlsx", skip = 5) %>%
+  janitor::clean_names() %>% 
+  select(año, total) %>% 
+  filter(!is.na(año)) %>% 
+  mutate(es = if_else(cumsum(str_detect(año, "por persona")) == 1, "pc", "hh")) %>% 
+  filter(str_detect(año, "^\\d{4}$")) %>% 
+  transmute(country = "Costa Rica",
+            year = as.numeric(año),
+            gini = total,
+            gini_se = NA,
+            welfare_def = "gross",
+            equiv_scale = es,
+            monetary = NA,
+            series = paste("INEC", welfare_def, equiv_scale),
+            source1 = "Instituto Naciónal de Estadística y Censos de Costa Rica",
+            page = "",
+            link = ineccr_link)
+
+
 # Statistics Denmark (automated)
 dkstat <- dst_get_data(table = "IFOR41", 
                        ULLIG = "Gini coefficient", 
@@ -1129,7 +1152,7 @@ inev <- read_excel("data-raw/inev.xls", skip = 3) %>%
   select(-coeficiente_gini_y_quintiles, -x) %>% 
   gather(key = year, value = gini) %>% 
   transmute(country = "Venezuela",
-            year = str_extract(year, "\\d{4}"),
+            year = as.numeric(str_extract(year, "\\d{4}")),
             gini = gini,
             gini_se = NA,
             welfare_def = "disp",
@@ -1172,7 +1195,7 @@ ceq1 <- ceq %>%
 ineq0 <- bind_rows(lis, 
                    sedlac, cepal, cepal_sdi, oecd1, eurostat,
                    transmonee, ceq1, afr_gini,
-                   abs, belstat, statcan, dane, dkstat,
+                   abs, belstat, statcan, dane, ineccr, dkstat,
                    capmas, statee, statfi, insee, geostat,
                    cso_ie, istat, kostat,
                    ssb, dgeec, 
