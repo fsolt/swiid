@@ -643,7 +643,7 @@ istat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw
             link = "http://dati.istat.it/Index.aspx?DataSetCode=DCCV_INDCONSUMI&Lang=en")
 
 
-# Statistics Korea (update link)
+# Statistics Korea (automated, but will probably have to update wrangle)
 kostat_page <- "http://kostat.go.kr/portal/eng/pressReleases/6/1/index.board" %>% 
   html_session() %>% 
   follow_link("First Quarter") %>% 
@@ -672,7 +672,7 @@ kostat <- bind_cols(kr[1:7,], kr[8:14,]) %>%
             equiv_scale = "ae",
             monetary = NA,
             series = paste("Kostat", welfare_def, equiv_scale),
-            source1 = "Kostat 2016",
+            source1 = "Statistics Korea",
             page = "",
             link = kostat_link) %>% 
   filter(!is.na(gini))
@@ -1167,11 +1167,12 @@ ceq1 <- ceq %>%
 ineq0 <- bind_rows(lis, 
                    sedlac, cepal, cepal_sdi, oecd1, eurostat,
                    transmonee, ceq1, afr_gini,
-                   abs, statcan, dane, dkstat, capmas, statee, 
-                   statfi, insee, geostat, cso_ie, istat,
-                   ssb, dgeec, rosstat, singstat, ssi,
-                   ine, scb, tdgbas, turkstat, 
-                   ons, ifs, cbo, uscb, uine, inev, 
+                   abs, belstat, statcan, dane, dkstat,
+                   capmas, statee, statfi, insee, geostat,
+                   cso_ie, istat, kostat,
+                   ssb, dgeec, 
+                   rosstat, singstat, ssi, ine, scb, 
+                   tdgbas, turkstat, ons, ifs, cbo, uscb, uine, inev, 
                    added_data) %>% 
   rename(gini_m = gini,
          gini_m_se = gini_se) %>%
