@@ -377,7 +377,48 @@ abs_format <- function(sheet, wd, es) {
 abs_ne <- abs_format("Table 1.1", "disp", "oecdm")
 abs_gh <- abs_format("Table 1.2", "gross", "hh")
 abs <- bind_rows(abs_ne, abs_gh)
-  
+
+
+# Belarus National Statistical Committee (automated, but will probably need to update wrangle)
+belstat_page <- "http://www.belstat.gov.by/en/ofitsialnaya-statistika/social-sector/uroven-zhizni-naseleniya/publikatsii__1/"
+belstat_zip <- html_session(belstat_page) %>% 
+  follow_link("Social Conditions and Standard of Living") %>% 
+  follow_link("Download")
+belstat_link <- belstat_zip$back[1]
+belstat_temp <- tempfile(fileext = ".zip")
+writeBin(belstat_zip$response$content, belstat_temp)
+belstat_dir <- tempdir()
+unzip(belstat_temp, exdir = belstat_dir) 
+belstat_file <- list.files(belstat_dir) %>% 
+  str_subset(".pdf") %>% 
+  file.path(belstat_dir, .)
+file.rename(belstat_file, "data-raw/belstat.pdf")
+unlink(c(belstat_temp, belstat_dir))
+
+first_row_to_names <- function(x) {
+  names(x) <- x[1, ]
+  x <- x[-1, ]
+  return(x)
+}
+
+belstat <- extract_tables("data-raw/belstat.pdf", pages = 76)[[1]] %>%
+  as_data_frame() %>% 
+  filter(V1 == ""| V1 == "concentration)") %>% 
+  select(-V1) %>% 
+  first_row_to_names() %>% 
+  gather(key = year, value = gini) %>% 
+  transmute(country = "Belarus",
+            year = as.numeric(year),
+            gini = as.numeric(gini),
+            gini_se = NA,
+            welfare_def = "disp",
+            equiv_scale = "pc",
+            monetary = FALSE,
+            series = paste("Belstat", welfare_def, equiv_scale),
+            source1 = "Belarus National Committee of Statistics",
+            page = "",
+            link = belstat_link)
+
 
 # Statistics Canada (automated)
 statcan <- CANSIM2R:::downloadCANSIM(2060033) %>% 
@@ -601,24 +642,24 @@ istat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw
             page = "",
             link = "http://dati.istat.it/Index.aspx?DataSetCode=DCCV_INDCONSUMI&Lang=en")
 
+
 # Statistics Korea (update link)
-kostat_link <- "http://kostat.go.kr/portal/eng/pressReleases/1/index.board?bmode=read&aSeq=355172"
-kostat_page <- html_session(kostat_link) %>% 
+kostat_page <- "http://kostat.go.kr/portal/eng/pressReleases/6/1/index.board" %>% 
+  html_session() %>% 
+  follow_link("First Quarter") %>% 
   follow_link(".pdf")
-writeBin(kostat_page$response$content, paste0("data-raw/kostat2016.pdf"))  
+writeBin(kostat_page$response$content, paste0("data-raw/kostat.pdf"))  
+kostat_link <- kostat_page$back[1]
 
 kr <- extract_tables("data-raw/statistics_korea.pdf", pages = 4)[[1]] %>% 
   as_tibble()
 
-kostat0 <- bind_cols(kr[1:7,], kr[8:14,]) %>% 
+kostat <- bind_cols(kr[1:7,], kr[8:14,]) %>% 
   janitor::clean_names() %>% 
   filter(str_detect(v1, "Classification|Total|^Market")) %>% 
   mutate_all(funs(str_replace(., "—", "") %>% str_trim())) %>% 
-  separate(v3, c("v3", "v3a"), sep = "\\s+")
-
-names(kostat0) <- kostat0[1,]
-
-kostat <- kostat0 %>% 
+  separate(v3, c("v3", "v3a"), sep = "\\s+") %>% 
+  first_row_to_names() %>% 
   janitor::clean_names() %>% 
   filter(classification != "Classification") %>% 
   select(-classification_2, -x_2, -x) %>% 
@@ -636,7 +677,7 @@ kostat <- kostat0 %>%
             link = kostat_link) %>% 
   filter(!is.na(gini))
 
-rm(kr, kostat0)
+rm(kr)
 
 
 # Statistics Norway (automated)
@@ -668,7 +709,7 @@ dgeec_link <- "http://www.dgeec.gov.py/Publicaciones/Biblioteca/eph2015/Boletin%
 download.file(dgeec_link, "data-raw/dgeec.pdf")
 
 dgeec <- extract_tables("data-raw/dgeec.pdf", pages = 15)[[1]][-1, ] %>%
-  as.data.frame(stringsAsFactors=FALSE) %>% 
+  as_data_frame() %>% 
   transmute(country = "Paraguay",
             year = ifelse(str_trim(V1) %>% str_extract("\\d{2}$") %>% as.numeric() > 50,
                           str_trim(V1) %>% str_extract("\\d{2}$") %>% as.numeric() + 1900,
@@ -725,7 +766,7 @@ singstat <- read_csv("data-raw/singstat.csv", skip = 4) %>%
             year = as.numeric(year),
             gini = as.numeric(gini),
             gini_se = NA,
-            welfare_def = if_else(str_detect(`Gini Coefficient`, "Taxes"), "disp", "market")
+            welfare_def = if_else(str_detect(`Gini Coefficient`, "Taxes"), "disp", "market"),
             equiv_scale = "pc",
             monetary = TRUE,
             series = paste("Singstat", welfare_def, equiv_scale),
@@ -811,7 +852,7 @@ ssi <- bind_rows(ssi1, ssi2)
 rm(ssi1, ssi2)
 
 
-# Istituto Nacional de Estadística Spain (automated)
+# Instituto Nacional de Estadística Spain (automated)
 ine_link <- "http://www.ine.es/jaxiT3/files/t/es/csv_c/9966.csv?nocab=1"
 download.file(ine_link, "data-raw/ine.csv")
 
@@ -826,8 +867,8 @@ ine <- read_csv("data-raw/ine.csv", skip = 4) %>%
             welfare_def = "disp",
             equiv_scale = "oecdm",
             monetary = FALSE,
-            series = paste("Istituto Nacional de Estadística", welfare_def, equiv_scale),
-            source1 = "Istituto Nacional de Estadística",
+            series = paste("Instituto Nacional de Estadística", welfare_def, equiv_scale),
+            source1 = "Instituto Nacional de Estadística",
             page = "",
             link = ine_link)
 
@@ -1073,7 +1114,7 @@ uine <- extract_tables("data-raw/uine.pdf", pages = 45)[[2]][5:15, 1] %>%
             page = "43",
             link = uine_link)
 
-# Venezuela Istituto Nacional de Estadística (update link)
+# Venezuela Instituto Nacional de Estadística (update link)
 inev_link <- "http://www.ine.gov.ve/documentos/Social/Pobreza/xls/Serie_%20GINI_1s1997-1s2015.xls"
 download.file(inev_link, "data-raw/inev.xls")
 
@@ -1128,7 +1169,8 @@ ineq0 <- bind_rows(lis,
                    transmonee, ceq1, afr_gini,
                    abs, statcan, dane, dkstat, capmas, statee, 
                    statfi, insee, geostat, cso_ie, istat,
-                   ssb, dgeec, rosstat, ssi, ine, scb, tdgbas, turkstat, 
+                   ssb, dgeec, rosstat, singstat, ssi,
+                   ine, scb, tdgbas, turkstat, 
                    ons, ifs, cbo, uscb, uine, inev, 
                    added_data) %>% 
   rename(gini_m = gini,
