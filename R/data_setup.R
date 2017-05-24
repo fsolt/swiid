@@ -736,6 +736,28 @@ bpsid <- bind_rows(bpsid1, bpsid2)
 rm(bpsid1, bpsid2)
 
 
+# Statistical Center of Iran (update link--search site with Google)
+amar_link <- "https://www.amar.org.ir/english/Latest-Releases-Page/articleType/ArticleView/articleId/475"
+
+amar <- read_html(amar_link) %>% 
+  html_node(".articleEntry table") %>% 
+  html_table(header = TRUE) %>% 
+  filter(Description == "Gini coefficient") %>% 
+  select(-Description) %>% 
+  gather(key = year, value = gini) %>% 
+  transmute(country = "Iran",
+            year = as.numeric(year) + 621,
+            gini = gini,
+            gini_se = NA,
+            welfare_def = "con",
+            equiv_scale = "pc",
+            monetary = NA,
+            series = paste("Statistical Center of Iran", welfare_def, equiv_scale),
+            source1 = "Statistical Center of Iran",
+            page = "",
+            link = amar_link)
+
+
 # CSO Ireland (automated)
 cso_ie_link <- "http://www.cso.ie/en/statistics/socialconditions/surveyofincomeandlivingconditionssilcmainresults/"
 
@@ -1310,7 +1332,7 @@ ineq0 <- bind_rows(lis,
                    transmonee, ceq1, afr_gini,
                    abs, belstat, statcan, dane, ineccr, dkstat,
                    capmas, statee, statfi, insee, geostat,
-                   stathk, bpsid, cso_ie, istat, kostat,
+                   stathk, bpsid, amar, cso_ie, istat, kostat,
                    ssb, dgeec, 
                    rosstat, singstat, ssi, ine, scb, 
                    tdgbas, turkstat, ons, ifs, cbo, uscb, uine, inev, 
