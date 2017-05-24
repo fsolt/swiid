@@ -12,14 +12,14 @@ Australia,1984,0.47,,market,hh,,ABS1997 market hh 1,Australian Bureau of Statist
 Australia,1989,0.472,,market,hh,,ABS1997 market hh 1,Australian Bureau of Statistics 1997,191,http://www.ausstats.abs.gov.au/ausstats/free.nsf/0/F32D0E6724DAF08FCA257AFA00120B12/$File/13010_1997_chapter7.pdf
 Australia,1994,0.511,,market,hh,,ABS1997 market hh 1,Australian Bureau of Statistics 1997,191,http://www.ausstats.abs.gov.au/ausstats/free.nsf/0/F32D0E6724DAF08FCA257AFA00120B12/$File/13010_1997_chapter7.pdf
 Australia,1975,0.206,,con,hh,TRUE,BCW2000 con hh 1,"Barrett, Crossley, and Worswick 2000",133,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
-Australia,1975,0.218,,con,oecd,TRUE,BCW2000 con oecd 1,"Barrett, Crossley, and Worswick 2000",133,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
+Australia,1975,0.218,,con,oecdm,TRUE,BCW2000 con oecd 1,"Barrett, Crossley, and Worswick 2000",133,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
 Australia,1975,0.259,,con,pc,TRUE,BCW2000 con pc 1,"Barrett, Crossley, and Worswick 2000",133,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
 Australia,1975,0.202,0.003,con,sqrt,TRUE,BCW2000 con sqrt 1,"Barrett, Crossley, and Worswick 2000",127,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
 Australia,1984,0.221,0.003,con,sqrt,TRUE,BCW2000 con sqrt 1,"Barrett, Crossley, and Worswick 2000",127,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
 Australia,1989,0.214,0.003,con,sqrt,TRUE,BCW2000 con sqrt 1,"Barrett, Crossley, and Worswick 2000",127,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
 Australia,1994,0.221,0.002,con,sqrt,TRUE,BCW2000 con sqrt 1,"Barrett, Crossley, and Worswick 2000",127,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
 Australia,1975,0.242,,gross,hh,TRUE,BCW2000 gross hh 1,"Barrett, Crossley, and Worswick 2000",133,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
-Australia,1975,0.279,,gross,oecd,TRUE,BCW2000 gross oecd 1,"Barrett, Crossley, and Worswick 2000",133,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
+Australia,1975,0.279,,gross,oecdm,TRUE,BCW2000 gross oecd 1,"Barrett, Crossley, and Worswick 2000",133,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
 Australia,1975,0.321,,gross,pc,TRUE,BCW2000 gross pc 1,"Barrett, Crossley, and Worswick 2000",133,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
 Australia,1975,0.259,0.004,gross,sqrt,TRUE,BCW2000 gross sqrt 1,"Barrett, Crossley, and Worswick 2000",121,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
 Australia,1984,0.28,0.004,gross,sqrt,TRUE,BCW2000 gross sqrt 1,"Barrett, Crossley, and Worswick 2000",121,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
@@ -201,18 +201,18 @@ Croatia,2006,0.29,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2009
 Croatia,2007,0.3,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2009,,http://www.dzs.hr/Eng/publication/2009/14-1-2_1e2009.htm
 Croatia,2008,0.3,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2009,,http://www.dzs.hr/Eng/publication/2009/14-1-2_1e2009.htm
 Croatia,2009,0.29,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2010,,http://www.dzs.hr/Hrv_Eng/publication/2010/14-01-02_01_2010.htm
-Germany,1992,0.249,,net,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
-Germany,1995,0.265,,net,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
-Germany,2000,0.251,,net,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
-Germany,2005,0.278,,net,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
-Germany,2010,0.285,,net,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
-Germany,2011,0.282,,net,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
-Germany,1992,0.243,,net,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
-Germany,1995,0.255,,net,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
-Germany,2000,0.241,,net,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
-Germany,2005,0.262,,net,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
-Germany,2010,0.272,,net,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
-Germany,2011,0.272,,net,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
+Germany,1992,0.249,,disp,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
+Germany,1995,0.265,,disp,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
+Germany,2000,0.251,,disp,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
+Germany,2005,0.278,,disp,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
+Germany,2010,0.285,,disp,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
+Germany,2011,0.282,,disp,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
+Germany,1992,0.243,,disp,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
+Germany,1995,0.255,,disp,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
+Germany,2000,0.241,,disp,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
+Germany,2005,0.262,,disp,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
+Germany,2010,0.272,,disp,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
+Germany,2011,0.272,,disp,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
 Guatemala,2000,0.476,,con,pc,,INE2002 con pc,Instituto Nacional de Estadi_stica de Guatemala 2002 ,20,https://www.ine.gob.gt/sistema/uploads/2014/01/15/v8ukWQ78M4VJrnYqyN2oCumMy1GiBzaf.pdf
 Guatemala,2000,0.57,,gross,pc,,INE2002 gross pc,Instituto Nacional de Estadi_stica de Guatemala 2002 ,20,https://www.ine.gob.gt/sistema/uploads/2014/01/15/v8ukWQ78M4VJrnYqyN2oCumMy1GiBzaf.pdf
 Ecuador,1998,0.443,,con,pc,,INEC con pc,Instituto Nacional de Estadistica y Censos 2015,98,http://www.ecuadorencifras.gob.ec//documentos/web-inec/Bibliotecas/Libros/reportePobreza.pdf
@@ -395,6 +395,8 @@ Japan,2002,0.498,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlin
 Japan,2002,0.381,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
 Japan,2005,0.526,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
 Japan,2005,0.387,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
+Macedonia,2009,0.409,,disp,oecdm,TRUE,Eurostat The former Yugoslav Republic of Macedonia disp oecdm 1,Statistics Macedonia,,http://makstat.stat.gov.mk/PXWeb/pxweb/en/MakStat/MakStat__ZivotenStandard__LaekenIndikatorSiromastija/125_ZivStd_Mk_LaekenGENERAL_en.px/?rxid=46ee0f64-2992-4b45-a2d9-cb4e5f7ec5ef
+Macedonia,2010,0.385,,disp,oecdm,TRUE,Eurostat The former Yugoslav Republic of Macedonia disp oecdm 1,Statistics Macedonia,,http://makstat.stat.gov.mk/PXWeb/pxweb/en/MakStat/MakStat__ZivotenStandard__LaekenIndikatorSiromastija/125_ZivStd_Mk_LaekenGENERAL_en.px/?rxid=46ee0f64-2992-4b45-a2d9-cb4e5f7ec5ef
 Netherlands,2005,0.33,,disp,hh,,AK2013 disp hh,Arts and Kessels 2013,13,https://www.cbs.nl/NR/rdonlyres/EF9281B6-850E-4485-9058-B6BEC91ED0F0/0/2013miljonairsupdate.pdf
 Netherlands,2006,0.335,,disp,hh,,AK2013 disp hh,Arts and Kessels 2013,13,https://www.cbs.nl/NR/rdonlyres/EF9281B6-850E-4485-9058-B6BEC91ED0F0/0/2013miljonairsupdate.pdf
 Netherlands,2007,0.352,,disp,hh,,AK2013 disp hh,Arts and Kessels 2013,13,https://www.cbs.nl/NR/rdonlyres/EF9281B6-850E-4485-9058-B6BEC91ED0F0/0/2013miljonairsupdate.pdf
