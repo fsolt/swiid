@@ -846,7 +846,7 @@ rm(kr)
 nbs_link <- "http://www.statistica.md/public/files/serii_de_timp/venituri_cheltuieli/veniturile_gospodariilor/4.2.4.xls"
 download.file(nbs_link, "data-raw/nbs.xls")
 
-nbs <- read_excel("data-raw/nbs.xls", skip = 2) %>%
+nbs <- read_excel("data-raw/nbs.xls", skip = 2, sheet = "Лист1") %>%
   first_row_to_names() %>% 
   filter(str_detect(v1, "coeficientul Gini")) %>% 
   select(-v1) %>% 
@@ -860,7 +860,7 @@ nbs <- read_excel("data-raw/nbs.xls", skip = 2) %>%
             monetary = NA,
             series = paste("NBS Moldova", welfare_def, equiv_scale),
             source1 = "National Bureau of Statistics of Moldova",
-            page = "",
+            page = "Лист1",
             link = nbs_link)
 
 
@@ -944,8 +944,9 @@ rosstat <- read_excel("data-raw/rosstat.xls", sheet = "Sec.5", skip = 1) %>%
 # Export > CSV
 
 singstat <- read_csv("data-raw/singstat.csv", skip = 4) %>% 
-  filter(!is.na(`2000`)) %>% 
-  gather(key = year, value = gini, -`Gini Coefficient`) %>% 
+  filter(!is.na(`2000`)) %>%
+  select(-X19, -`Gini Coefficient`) %>% 
+  gather(key = year, value = gini) %>% 
   transmute(country = "Singapore",
             year = as.numeric(year),
             gini = as.numeric(gini),
@@ -1180,7 +1181,7 @@ ifs_link <- ifs$response$url
 
 ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3) %>%
   select(X1, X2, X3) %>%
-  filter(!is.na(X3)) %>% 
+  filter(!is.na(X1)) %>% 
   transmute(country = "United Kingdom",
             year = ifelse(str_extract(X1, "\\d{2}$") %>% as.numeric() > 50,
                    str_extract(X1, "\\d{2}$") %>% as.numeric() + 1900,
