@@ -398,7 +398,7 @@ rm(belstat_zip)
 
 first_row_to_names <- function(x) {
   names(x) <- x[1, ]
-  names(x)[which(names(x) == "")] <- paste0("v", 1:length(which(names(x) == "")))
+  names(x)[which(names(x) == "" | is.na(names(x)))] <- paste0("v", 1:length(which(names(x) == "" | is.na(names(x)))))
   x <- x[-1, ]
   return(x)
 }
@@ -840,6 +840,28 @@ kostat <- bind_cols(kr[1:7,], kr[8:14,]) %>%
   filter(!is.na(gini))
 
 rm(kr)
+
+
+# National Bureau of Statistics Moldova
+nbs_link <- "http://www.statistica.md/public/files/serii_de_timp/venituri_cheltuieli/veniturile_gospodariilor/4.2.4.xls"
+download.file(nbs_link, "data-raw/nbs.xls")
+
+nbs <- read_excel("data-raw/nbs.xls", skip = 2) %>%
+  first_row_to_names() %>% 
+  filter(str_detect(v1, "coeficientul Gini")) %>% 
+  select(-v1) %>% 
+  gather(key = year, value = gini) %>% 
+  transmute(country = "Moldova",
+            year = as.numeric(year),
+            gini = gini,
+            gini_se = NA,
+            welfare_def = "disp",
+            equiv_scale = "pc",
+            monetary = NA,
+            series = paste("NBS Moldova", welfare_def, equiv_scale),
+            source1 = "National Bureau of Statistics of Moldova",
+            page = "",
+            link = nbs_link)
 
 
 # Statistics Norway (automated)
@@ -1333,7 +1355,7 @@ ineq0 <- bind_rows(lis,
                    abs, belstat, statcan, dane, ineccr, dkstat,
                    capmas, statee, statfi, insee, geostat,
                    stathk, bpsid, amar, cso_ie, istat, kostat,
-                   ssb, dgeec, 
+                   nbs, ssb, dgeec, 
                    rosstat, singstat, ssi, ine, scb, 
                    tdgbas, turkstat, ons, ifs, cbo, uscb, uine, inev, 
                    added_data) %>% 
