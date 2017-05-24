@@ -17,7 +17,9 @@ format_lis <- function(x) {
                 toupper() %>% 
                 str_replace("UK", "GB") %>% 
                 countrycode("iso2c", "country.name") %>% 
-                str_replace(", Province of China", ""),
+                str_replace(", Province of China", "") %>% 
+                str_replace(" of [GA].*", "") %>% 
+                str_replace("^Republic of ", ""),
               year = ifelse(str_extract(X1, "\\d{2}") %>% as.numeric() > 50,
                             str_extract(X1, "\\d{2}") %>% as.numeric() + 1900,
                             str_extract(X1, "\\d{2}") %>% as.numeric() + 2000),
