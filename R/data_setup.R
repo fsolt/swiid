@@ -947,8 +947,8 @@ rosstat <- read_excel("data-raw/rosstat.xls", sheet = "Sec.5", skip = 1) %>%
 
 singstat <- read_csv("data-raw/singstat.csv", skip = 4) %>% 
   filter(!is.na(`2000`)) %>%
-  select(-X19, -`Gini Coefficient`) %>% 
-  gather(key = year, value = gini) %>% 
+  select(-X19) %>% 
+  gather(key = year, value = gini, -`Gini Coefficient`) %>% 
   transmute(country = "Singapore",
             year = as.numeric(year),
             gini = as.numeric(gini),
@@ -960,8 +960,6 @@ singstat <- read_csv("data-raw/singstat.csv", skip = 4) %>%
             source1 = "Singapore Department of Statistics",
             page = "",
             link = "http://www.tablebuilder.singstat.gov.sg/publicfacing/createSpecialTable.action?refId=12356")
-
-
 
 
 # Statistics Slovenia (archived; automated)
@@ -1325,7 +1323,8 @@ inev <- read_excel("data-raw/inev.xls", skip = 3) %>%
 
 
 ## Added data
-added_data <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/article_data/fs_added_data.csv")
+added_data <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/article_data/fs_added_data.csv") %>% 
+  mutate(page = as.character(page))
 
 ## Combine
 # first, get baseline series and order by data-richness
@@ -1405,26 +1404,7 @@ ineq <- bind_rows(ineq_bl, ineq_nbl) %>%
 
 save.image(file = "data/ineq.Rda")
 
-# for v5.1
-ineq1 <- ineq %>%
-  transmute(country = country,
-            year = year,
-            gini = gini_m*100,
-            incdefn = welfare_def,
-            equivsc = equiv_scale,
-            source1 = source1,
-            link = link)
-write_csv(ineq1, "../Global Inequality/ SWIID v5.1/Data/ionso.csv")
 
-g_1_se <- ineq %>% 
-  filter(source1=="LISSY" & equiv_scale=="sqrt" & 
-           (welfare_def=="disp" | welfare_def=="market")) %>% 
-  select(country, year, gini_m_se, welfare_def) %>% 
-  mutate(gini_m_se = gini_m_se*100) %>% 
-  spread(key = welfare_def, value = gini_m_se) %>% 
-  rename(g_1se = disp, g_2se = market)
-write_csv(g_1_se, "../Global Inequality/ SWIID v5.1/Data/g_1_se.csv", na = "")
-  
 
 # Should flag series that *only* share obs with baseline?
 # weird: Finland, Italy -- in year w missing, est goes to 50 
