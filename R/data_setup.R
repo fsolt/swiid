@@ -398,6 +398,7 @@ rm(belstat_zip)
 
 first_row_to_names <- function(x) {
   names(x) <- x[1, ]
+  names(x)[which(names(x) == "")] <- paste0("v", 1:length(which(names(x) == "")))
   x <- x[-1, ]
   return(x)
 }
@@ -623,6 +624,71 @@ geostat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-r
             link = "http://pc-axis.geostat.ge")
 
 
+# Statistics Hong Kong (update link--on 2017-06-18?; see http://www.censtatd.gov.hk/hkstat/sub/sp440.jsp?productCode=B1120057)
+hk2011_link <- "http://www.statistics.gov.hk/pub/B11200572012XXXXB0100.pdf"
+hk2006_link <- "http://www.censtatd.gov.hk/fd.jsp?file=B11200452006XXXXB0400.pdf"
+download.file(hk2011_link, "data-raw/hk2011.pdf")
+download.file(hk2006_link, "data-raw/hk2006.pdf")
+
+hk2011 <- extract_tables("data-raw/hk2011.pdf", pages = 123)[[1]] %>% 
+  as_tibble() %>% 
+  mutate(wd = if_else(cumsum(str_detect(V1, "Post-tax Post-social Transfer Household Income")) == 1,
+                      "disp",
+                    if_else(cumsum(str_detect(V1, "Post-tax Household Income")) == 1, 
+                            "posttax",
+                            "market")),
+         es = if_else(V1 == "合計堅尼系數", "hh", "pc")) %>% 
+  filter(wd != "posttax" & str_detect(V2, "^\\d")) %>% 
+  select(-V1, -V3) %>% 
+  separate(V2, into = paste0("v", 1:3), sep = " ") %>% 
+  first_row_to_names() %>%
+  rename(wd = market, es = pc) %>% 
+  gather(key = year, value = gini, -wd, -es) %>%
+  transmute(country = "Hong Kong",
+            year = as.numeric(year),
+            gini = as.numeric(gini),
+            gini_se = NA,
+            welfare_def = wd,
+            equiv_scale = es,
+            monetary = FALSE,
+            series = paste("Statistics Hong Kong", welfare_def, equiv_scale),
+            source1 = "Statistics Hong Kong 2012",
+            page = "107",
+            link = hk2011_link)
+
+hk2006 <- extract_tables("data-raw/hk2006.pdf", pages = 105)[[1]] %>% 
+  as_tibble() %>% 
+  mutate(keep = cumsum(str_detect(V1, "Gini")) >= 1) %>% 
+  mutate(wd = if_else(cumsum(str_detect(V1, "Post-tax Post-social Transfer Household Income")) == 1,
+                      "disp",
+                      if_else(cumsum(str_detect(V1, "Post-tax Household Income")) == 1, 
+                              "posttax",
+                              "market")),
+         es = if_else(V1 == "合計堅尼系數", "hh", "pc")) %>% 
+  filter(keep & wd != "posttax" & str_detect(V2, "^\\d")) %>% 
+  select(-V1, - keep) %>% 
+  separate(V2, into = paste0("v", 1:3), sep = " ") %>% 
+  first_row_to_names() %>%
+  rename(wd = market, es = pc) %>% 
+  gather(key = year, value = gini, -wd, -es) %>%
+  filter(year == 1996) %>% 
+  transmute(country = "Hong Kong",
+            year = as.numeric(year),
+            gini = as.numeric(gini),
+            gini_se = NA,
+            welfare_def = wd,
+            equiv_scale = es,
+            monetary = FALSE,
+            series = paste("Statistics Hong Kong", welfare_def, equiv_scale),
+            source1 = "Statistics Hong Kong 2007",
+            page = "107",
+            link = hk2006_link)
+
+stathk <- bind_rows(hk2006, hk2011)
+
+rm(hk2006, hk2011)
+
+
 # CSO Ireland (automated)
 cso_ie_link <- "http://www.cso.ie/en/statistics/socialconditions/surveyofincomeandlivingconditionssilcmainresults/"
 
@@ -674,11 +740,11 @@ kostat_page <- "http://kostat.go.kr/portal/eng/pressReleases/6/1/index.board" %>
   html_session() %>% 
   follow_link("First Quarter") %>% 
   follow_link(".pdf")
-writeBin(kostat_page$response$content, paste0("data-raw/kostat.pdf"))  
+writeBin(kostat_page$response$content, "data-raw/kostat.pdf")  
 kostat_link <- kostat_page$back[1]
 rm(kostat_page)
 
-kr <- extract_tables("data-raw/statistics_korea.pdf", pages = 4)[[1]] %>% 
+kr <- extract_tables("data-raw/kostat.pdf", pages = 4)[[1]] %>% 
   as_tibble()
 
 kostat <- bind_cols(kr[1:7,], kr[8:14,]) %>% 
@@ -1197,7 +1263,7 @@ ineq0 <- bind_rows(lis,
                    transmonee, ceq1, afr_gini,
                    abs, belstat, statcan, dane, ineccr, dkstat,
                    capmas, statee, statfi, insee, geostat,
-                   cso_ie, istat, kostat,
+                   stathk, cso_ie, istat, kostat,
                    ssb, dgeec, 
                    rosstat, singstat, ssi, ine, scb, 
                    tdgbas, turkstat, ons, ifs, cbo, uscb, uine, inev, 
