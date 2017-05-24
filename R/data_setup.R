@@ -859,7 +859,7 @@ nbs <- read_excel("data-raw/nbs.xls", skip = 2, sheet = "Лист1") %>%
             gini_se = NA,
             welfare_def = "disp",
             equiv_scale = "pc",
-            monetary = NA,
+            monetary = FALSE,
             series = paste("NBS Moldova", welfare_def, equiv_scale),
             source1 = "National Bureau of Statistics of Moldova",
             page = "Лист1",
@@ -1115,6 +1115,53 @@ tdgbas <- read_excel("data-raw/tdgbas1.xls", col_names = FALSE, skip = 9) %>%
             link = link)
 
 
+# Thailand (archived)
+nso_thailand1_link <- "https://web.archive.org/web/20101113152831/http://web.nso.go.th/eng/en/stat/socio/soctab6.htm"
+nso_thailand2_link <- "https://web.archive.org/web/20100523041410/http://web.nso.go.th:80/eng/en/indicators/eco/ied-e.htm"
+
+nso_thailand1 <- read_html(nso_thailand1_link) %>% 
+  html_node(".F2 table") %>% 
+  html_table(header = TRUE) %>% 
+  filter(`Quintile Group` == "Gini Coefficient") %>% 
+  select(-`Quintile Group`) %>% 
+  gather(key = year, value = gini) %>% 
+  transmute(country = "Thailand",
+            year = as.numeric(str_extract(year, "\\d{4}")),
+            gini = as.numeric(gini),
+            gini_se = NA,
+            welfare_def = "disp",
+            equiv_scale = "hh",
+            monetary = FALSE,
+            series = paste("NSO Thailand", welfare_def, equiv_scale),
+            source1 = "National Statistical Office of Thailand",
+            page = "",
+            link = nso_thailand1_link) %>% 
+  filter(year < 1998)
+
+nso_thailand2 <- read_html(nso_thailand2_link) %>% 
+  html_node(".F2") %>% 
+  html_table() %>% 
+  filter(str_detect(X2, "Indicators|Gini")) %>% 
+  select(-X1, -X8) %>% 
+  first_row_to_names() %>% 
+  gather(key = year, value = gini, -Indicators) %>% 
+  transmute(country = "Thailand",
+            year = as.numeric(str_extract(year, "\\d{4}")),
+            gini = as.numeric(str_extract(gini, "[\\d\\.]*")),
+            gini_se = NA,
+            welfare_def = "disp",
+            equiv_scale = if_else(str_detect(Indicators, "household"), "hh", "pc"),
+            monetary = FALSE,
+            series = paste("NSO Thailand", welfare_def, equiv_scale),
+            source1 = "National Statistical Office of Thailand",
+            page = "",
+            link = nso_thailand2_link)
+
+nso_thailand <- bind_rows(nso_thailand1, nso_thailand2)
+
+rm(nso_thailand1, nso_thailand2)
+
+
 # Statistics Turkey (automated)
 turkstat_links <- paste0("http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=", c(1601, 2354))
 download.file(turkstat_links[1], "data-raw/turkstat_oecdm.xls")
@@ -1146,6 +1193,7 @@ turkstat <- pmap_df(list(turkstat_list, names(turkstat_list), turkstat_links),
 
 rm(turkstat_list)
 
+
 # U.K. Office for National Statistics (update link)
 # https://www.ons.gov.uk/atoz?query=effects+taxes+benefits (new releases in April)
 
@@ -1171,6 +1219,7 @@ ons <- read_csv("data-raw/ons.csv", skip = 7) %>%
             source1 = "UK Office for National Statistics",
             page = "",
             link = ons_link)  
+
 
 # U.K. Institute for Fiscal Studies (automated)
 ifs <- "https://www.ifs.org.uk/tools_and_resources/incomes_in_uk" %>% 
@@ -1281,7 +1330,6 @@ rm(uscb_ae, uscb_hh)
 
 
 # Uruguay Instituto Nacional de Estadística (update link and wrangle)
-
 uine_link <- "http://www.ine.gub.uy/documents/10181/364159/Estimación+de+la+pobreza+por+el+Método+del+Ingreso+2016/4b1eabd2-ac77-48ac-95c2-fc5b92f3ade8"
 download.file(uine_link, "data-raw/uine.pdf")
 
@@ -1359,7 +1407,7 @@ ineq0 <- bind_rows(lis,
                    stathk, bpsid, amar, cso_ie, istat, kostat,
                    nbs, ssb, dgeec, 
                    rosstat, singstat, ssi, ine, scb, 
-                   tdgbas, turkstat, ons, ifs, cbo, uscb, uine, inev, 
+                   nso_thailand, tdgbas, turkstat, ons, ifs, cbo, uscb, uine, inev, 
                    added_data) %>% 
   rename(gini_m = gini,
          gini_m_se = gini_se) %>%
