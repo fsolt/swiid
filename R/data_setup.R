@@ -689,6 +689,53 @@ stathk <- bind_rows(hk2006, hk2011)
 rm(hk2006, hk2011)
 
 
+# BPS Indonesia (automated)
+# may need to update bpsid2_link: check https://www.bps.go.id/linkTabelStatis/view/id/946 > Download Table
+# with http://wheregoes.com/retracer.php to find download link
+
+bpsid1_link <- "https://www.bps.go.id/website/tabelExcelIndo/indo_23_6.xls"
+download.file(bpsid1_link, "data-raw/bpsid1.xls")
+bpsid2_link <- "https://www.bps.go.id/website/tabelExcelIndo/indo_05_21.xls"
+download.file(bpsid2_link, "data-raw/bpsid2.xls")
+
+bpsid1 <- read_excel("data-raw/bpsid1.xls", skip = 2) %>% 
+  filter(Provinsi == "INDONESIA") %>% 
+  select(-Provinsi) %>% 
+  gather(key = year, value = gini) %>% 
+  transmute(country = "Indonesia",
+            year = as.numeric(year),
+            gini = as.numeric(gini),
+            gini_se = NA,
+            welfare_def = "con",
+            equiv_scale = "pc",
+            monetary = NA,
+            series = paste("Statistics Indonesia", welfare_def, equiv_scale),
+            source1 = "Statistics Indonesia",
+            page = "",
+            link = bpsid1_link)
+
+bpsid2 <- read_excel("data-raw/bpsid2.xls", skip = 2) %>% 
+  fill(Daerah) %>% 
+  filter(Daerah == "Kota+Desa" & !is.na(Tahun)) %>% 
+  rename(year = Tahun, gini = `Indeks Gini`) %>% 
+  transmute(country = "Indonesia",
+            year = year,
+            gini = gini,
+            gini_se = NA,
+            welfare_def = "con",
+            equiv_scale = "pc",
+            monetary = NA,
+            series = paste("Statistics Indonesia", welfare_def, equiv_scale),
+            source1 = "Statistics Indonesia",
+            page = "",
+            link = bpsid2_link) %>% 
+  filter(year > 2013)   # usually prefer newer source, but bpsid1 includes 3 sig. fig.
+
+bpsid <- bind_rows(bpsid1, bpsid2)
+
+rm(bpsid1, bpsid2)
+
+
 # CSO Ireland (automated)
 cso_ie_link <- "http://www.cso.ie/en/statistics/socialconditions/surveyofincomeandlivingconditionssilcmainresults/"
 
@@ -1263,7 +1310,7 @@ ineq0 <- bind_rows(lis,
                    transmonee, ceq1, afr_gini,
                    abs, belstat, statcan, dane, ineccr, dkstat,
                    capmas, statee, statfi, insee, geostat,
-                   stathk, cso_ie, istat, kostat,
+                   stathk, bpsid, cso_ie, istat, kostat,
                    ssb, dgeec, 
                    rosstat, singstat, ssi, ine, scb, 
                    tdgbas, turkstat, ons, ifs, cbo, uscb, uine, inev, 
