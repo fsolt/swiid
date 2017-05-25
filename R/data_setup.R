@@ -1418,6 +1418,53 @@ inev <- read_excel("data-raw/inev.xls", skip = 3) %>%
             link = inev_link)
 
 
+# General Statistics Office of Vietnam (update link for gso_vn2)
+gso_vn1_link <- "http://www.gso.gov.vn/Modules/Doc_Download.aspx?DocID=16773"
+gso_vn2_link <- "http://www.gso.gov.vn/Modules/Doc_Download.aspx?DocID=19990"
+download.file(gso_vn1_link, "data-raw/gso_vn2013.pdf")
+download.file(gso_vn2_link, "data-raw/gso_vn.pdf") # 2016 Stats Yearbook: Health, Culture, Sport and Living Standards
+
+gso_vn1 <- extract_tables("data-raw/gso_vn2013.pdf", pages = 84)[[1]][-1, ] %>% 
+  as_tibble() %>% 
+  filter(str_detect(V1, "TOTAL") | V1 == "") %>% 
+  select(-V1) %>% 
+  first_row_to_names() %>% 
+  gather(key = year, value = gini) %>% 
+  transmute(country = "Vietnam",
+            year = as.numeric(str_extract(year, "\\d{4}")),
+            gini = as.numeric(gini),
+            gini_se = NA,
+            welfare_def = "con",
+            equiv_scale = "pc",
+            monetary = TRUE,
+            series = paste("GSO Vietnam", welfare_def, equiv_scale),
+            source1 = "General Statistics Office of Vietnam 2013",
+            page = "",
+            link = gso_vn1_link)
+
+gso_vn2 <- extract_tables("data-raw/gso_vn.pdf", pages = 61)[[1]] %>% 
+  as_tibble() %>% 
+  filter(str_detect(V1, "GENERAL") | V1 == "") %>%
+  select(-V1) %>% 
+  first_row_to_names() %>% 
+  gather(key = year, value = gini) %>% 
+  transmute(country = "Vietnam",
+            year = as.numeric(str_extract(year, "\\d{4}")),
+            gini = as.numeric(str_replace(gini, ",", ".")),
+            gini_se = NA,
+            welfare_def = "gross",
+            equiv_scale = "pc",
+            monetary = TRUE,
+            series = paste("GSO Vietnam", welfare_def, equiv_scale),
+            source1 = "General Statistics Office of Vietnam",
+            page = "",
+            link = gso_vn2_link)  
+
+gso_vn <- bind_rows(gso_vn1, gso_vn2)
+
+rm(gso_vn1, gso_vn2)
+
+
 ## Added data
 added_data <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/article_data/fs_added_data.csv") %>% 
   mutate(page = as.character(page))
@@ -1458,7 +1505,7 @@ ineq0 <- bind_rows(lis,
                    stathk, bpsid, amar, cso_ie, istat, kostat,
                    nbs, ssb, dgeec, 
                    rosstat, singstat, ssi, ine, statslk, scb, 
-                   nso_thailand, tdgbas, turkstat, ons, ifs, cbo, uscb, uine, inev, 
+                   nso_thailand, tdgbas, turkstat, ons, ifs, cbo, uscb, uine, inev, gso_vn,
                    added_data) %>% 
   rename(gini_m = gini,
          gini_m_se = gini_se) %>%
