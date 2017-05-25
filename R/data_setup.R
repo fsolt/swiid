@@ -1115,7 +1115,7 @@ tdgbas <- read_excel("data-raw/tdgbas1.xls", col_names = FALSE, skip = 9) %>%
             link = link)
 
 
-# Thailand (archived)
+# National Statistics Office of Thailand (archived)
 nso_thailand1_link <- "https://web.archive.org/web/20101113152831/http://web.nso.go.th/eng/en/stat/socio/soctab6.htm"
 nso_thailand2_link <- "https://web.archive.org/web/20100523041410/http://web.nso.go.th:80/eng/en/indicators/eco/ied-e.htm"
 
@@ -1129,7 +1129,7 @@ nso_thailand1 <- read_html(nso_thailand1_link) %>%
             year = as.numeric(str_extract(year, "\\d{4}")),
             gini = as.numeric(gini),
             gini_se = NA,
-            welfare_def = "disp",
+            welfare_def = "gross",
             equiv_scale = "hh",
             monetary = FALSE,
             series = paste("NSO Thailand", welfare_def, equiv_scale),
@@ -1149,7 +1149,7 @@ nso_thailand2 <- read_html(nso_thailand2_link) %>%
             year = as.numeric(str_extract(year, "\\d{4}")),
             gini = as.numeric(str_extract(gini, "[\\d\\.]*")),
             gini_se = NA,
-            welfare_def = "disp",
+            welfare_def = "gross",
             equiv_scale = if_else(str_detect(Indicators, "household"), "hh", "pc"),
             monetary = FALSE,
             series = paste("NSO Thailand", welfare_def, equiv_scale),
