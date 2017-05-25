@@ -1079,6 +1079,32 @@ ine <- read_csv("data-raw/ine.csv", skip = 4) %>%
             link = ine_link)
 
 
+# Statistics Sri Lanka (archived)
+statslk_link <- "http://www.statistics.gov.lk/HIES/HIES2012_13FinalReport.pdf"
+download.file(statslk_link, "data-raw/statslk2015.pdf")
+
+statslk <- extract_tables("data-raw/statslk2015.pdf", pages = 22)[[1]] %>%
+  as_tibble() %>% 
+  filter(str_detect(V1, "Gini coefficient of household") | V1 == "") %>% 
+  separate(V7, into = c("v7, v7a"), sep = " ") %>% 
+  first_row_to_names() %>% 
+  filter(v2 == "") %>% 
+  select(-v2) %>% 
+  gather(key = year, value = gini, -v1) %>% 
+  filter(!gini == "-") %>% 
+  transmute(country = "Sri Lanka",
+            year = as.numeric(str_replace(year, "^(\\d{2}).*(\\d{2})$", "\\1\\2")),
+            gini = as.numeric(gini),
+            gini_se = NA,
+            welfare_def = if_else(str_detect(v1, "income"), "gross", "con"),
+            equiv_scale = "hh",
+            monetary = NA,
+            series = paste("Statistics Sri Lanka", welfare_def, equiv_scale),
+            source1 = "Statistics Sri Lanka 2015",
+            page = "x",
+            link = statslk_link)
+
+
 # Statistics Sweden (automated)
 scb <- get_pxweb_data(url = "http://api.scb.se/OV0104/v1/doris/sv/ssd/HE/HE0103/HE0103A/DispInk8",
                       dims = list(Hushallsdef = c('FAME'),
@@ -1369,6 +1395,7 @@ uine <- extract_tables("data-raw/uine.pdf", pages = 45)[[2]][5:15, 1] %>%
             page = "43",
             link = uine_link)
 
+
 # Venezuela Instituto Nacional de Estadística (update link)
 inev_link <- "http://www.ine.gov.ve/documentos/Social/Pobreza/xls/Serie_%20GINI_1s1997-1s2015.xls"
 download.file(inev_link, "data-raw/inev.xls")
@@ -1430,7 +1457,7 @@ ineq0 <- bind_rows(lis,
                    capmas, statee, statfi, insee, geostat,
                    stathk, bpsid, amar, cso_ie, istat, kostat,
                    nbs, ssb, dgeec, 
-                   rosstat, singstat, ssi, ine, scb, 
+                   rosstat, singstat, ssi, ine, statslk, scb, 
                    nso_thailand, tdgbas, turkstat, ons, ifs, cbo, uscb, uine, inev, 
                    added_data) %>% 
   rename(gini_m = gini,
