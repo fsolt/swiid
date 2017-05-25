@@ -421,6 +421,12 @@ Moldova,2009,0.4338,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Stati
 Moldova,2009,0.3045,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2010,62,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2009.pdf
 Moldova,2012,0.3963,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2008,67,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2012.pdf
 Moldova,2012,0.3241,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2008,67,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2012.pdf
+Morocco,1985,0.399,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,28,www.hcp.ma/file/174377
+Morocco,1991,0.393,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,www.hcp.ma/file/174377
+Morocco,1999,0.39,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2008,,http://www.hcp.ma/Indices-de-la-pauvrete-vulnerabilite-et-inegalite-selon-le-milieu-de-residence-1985-2007_a658.html
+Morocco,2001,0.406,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,www.hcp.ma/file/174377
+Morocco,2007,0.407,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,www.hcp.ma/file/174377
+Morocco,2014,0.388,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,www.hcp.ma/file/174377
 Netherlands,2005,0.33,,disp,hh,,AK2013 disp hh,Arts and Kessels 2013,13,https://www.cbs.nl/NR/rdonlyres/EF9281B6-850E-4485-9058-B6BEC91ED0F0/0/2013miljonairsupdate.pdf
 Netherlands,2006,0.335,,disp,hh,,AK2013 disp hh,Arts and Kessels 2013,13,https://www.cbs.nl/NR/rdonlyres/EF9281B6-850E-4485-9058-B6BEC91ED0F0/0/2013miljonairsupdate.pdf
 Netherlands,2007,0.352,,disp,hh,,AK2013 disp hh,Arts and Kessels 2013,13,https://www.cbs.nl/NR/rdonlyres/EF9281B6-850E-4485-9058-B6BEC91ED0F0/0/2013miljonairsupdate.pdf
@@ -512,6 +518,8 @@ South Africa,2011,0.65,,con,pc,FALSE,SSA2014 con pc,Statistics South Africa 2014
 South Africa,2006,0.72,,gross,pc,FALSE,SSA2014 gross pc,Statistics South Africa 2014,14,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-06March2014.pdf
 South Africa,2009,0.7,,gross,pc,FALSE,SSA2014 gross pc,Statistics South Africa 2014,14,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-06March2014.pdf
 South Africa,2011,0.69,,gross,pc,FALSE,SSA2014 gross pc,Statistics South Africa 2014,14,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-06March2014.pdf
+Sri Lanka,2013,0.46,,gross,pc,FALSE,Statistics Sri Lanka gross pc,Statistics Sri Lanka 2015,14,http://www.statistics.gov.lk/HIES/HIES2012_13FinalReport.pdf
+Sri Lanka,2013,0.39,,con,pc,FALSE,Statistics Sri Lanka con pc,Statistics Sri Lanka 2015,14,http://www.statistics.gov.lk/HIES/HIES2012_13FinalReport.pdf
 Thailand,2004,0.411,,gross,hh,FALSE,NSO Thailand gross hh,National Statistical Office of Thailand 2010,4,"http://web.nso.go.th/en/survey/bts/datafiles/560619_10_8.%20Household%20Income,%20Expenditure%20and%20Debt.pdf"
 Thailand,2004,0.493,,gross,pc,FALSE,NSO Thailand gross pc,National Statistical Office of Thailand 2010,4,"http://web.nso.go.th/en/survey/bts/datafiles/560619_10_8.%20Household%20Income,%20Expenditure%20and%20Debt.pdf"
 Thailand,2006,0.439,,gross,hh,FALSE,NSO Thailand gross hh,National Statistical Office of Thailand 2014,40,http://web.nso.go.th/en/pub/e_book/Indicator_eco_13/files/assets/basic-html/page40.html
