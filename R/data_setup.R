@@ -381,6 +381,27 @@ abs_gh <- abs_format("Table 1.2", "gross", "hh")
 abs <- bind_rows(abs_ne, abs_gh)
 
 
+# Instituto Naciónal de Estadística de Bolivia (update file)
+# http://www.ine.gob.bo > Estadísticas Sociales > Pobreza > Linea de Pobreza > Cuadros Estadísticos >
+#   Indicadores de Distribución del Ingreso > select years > Generar > Exportar a Excel
+
+inebo <- read_excel("data-raw/inebo.xlsx", skip = 6) %>% 
+  filter(DESCRIPCION == "Bolivia") %>% 
+  select(-DESCRIPCION) %>% 
+  gather(key = year, value = gini) %>% 
+  transmute(country = "Bolivia",
+            year = as.numeric(year),
+            gini = gini,
+            gini_se = NA,
+            welfare_def = "gross",
+            equiv_scale = "pc",
+            monetary = FALSE,
+            series = paste("INE Bolivia", welfare_def, equiv_scale),
+            source1 = "Instituto Naciónal de Estadística de Bolivia",
+            page = "",
+            link = "http://www.ine.gob.bo/index.php/2016-08-10-15-59-03/introduccion-2")
+
+
 # Belarus National Statistical Committee (automated, but will probably need to update wrangle)
 belstat_page <- "http://www.belstat.gov.by/en/ofitsialnaya-statistika/social-sector/uroven-zhizni-naseleniya/publikatsii__1/"
 belstat_zip <- html_session(belstat_page) %>% 
@@ -1388,13 +1409,16 @@ baseline <- lis %>%
   ungroup() %>% 
   arrange(desc(lis_count)) 
 
-# turn cross-country series that do not have baseline's welfare_def into within-country series
+# turn cross-country series that do not have baseline's welfare_def and equiv_scale
+# into within-country series
 oecd1 <- oecd %>% 
-  mutate(series = ifelse(welfare_def!=str_extract(baseline_series, "market|disp"),
+  mutate(series = ifelse(welfare_def!=str_extract(baseline_series, "market|disp") |
+                           equiv_scale!=str_extract(baseline_series, "\\w*$"),
                          paste("OECD", country, str_replace(series, "OECD ", "")),
                          series))
 ceq1 <- ceq %>% 
-  mutate(series = ifelse(welfare_def!=str_extract(baseline_series, "market|disp"),
+  mutate(series = ifelse(welfare_def!=str_extract(baseline_series, "market|disp") |
+                           equiv_scale!=str_extract(baseline_series, "\\w*$"),
                          paste("CEQ", country, str_replace(series, "CEQ ", "")),
                          series))
 
@@ -1402,7 +1426,7 @@ ceq1 <- ceq %>%
 ineq0 <- bind_rows(lis, 
                    sedlac, cepal, cepal_sdi, oecd1, eurostat,
                    transmonee, ceq1, afr_gini,
-                   abs, belstat, statcan, dane, ineccr, dkstat,
+                   abs, inebo, belstat, statcan, dane, ineccr, dkstat,
                    capmas, statee, statfi, insee, geostat,
                    stathk, bpsid, amar, cso_ie, istat, kostat,
                    nbs, ssb, dgeec, 
