@@ -1,539 +1,542 @@
-country,year,gini,gini_se,welfare_def,equiv_scale,monetary,series,source1,page,link
-Australia,1982,0.4,,gross,hh,,ABS1994 gross hh 1,Australian Bureau of Statistics 1994,,http://www.abs.gov.au/AUSSTATS/abs@.nsf/Previousproducts/07EFAA68F2F2335FCA2570EC00786CA6?opendocument
-Australia,1986,0.41,,gross,hh,,ABS1994 gross hh 1,Australian Bureau of Statistics 1994,,http://www.abs.gov.au/AUSSTATS/abs@.nsf/Previousproducts/07EFAA68F2F2335FCA2570EC00786CA6?opendocument
-Australia,1990,0.42,,gross,hh,,ABS1994 gross hh 1,Australian Bureau of Statistics 1994,,http://www.abs.gov.au/AUSSTATS/abs@.nsf/Previousproducts/07EFAA68F2F2335FCA2570EC00786CA6?opendocument
-Australia,1984,0.326,,disp,hh,,ABS1997 disp hh 1,Australian Bureau of Statistics 1997,191,http://www.ausstats.abs.gov.au/ausstats/free.nsf/0/F32D0E6724DAF08FCA257AFA00120B12/$File/13010_1997_chapter7.pdf
-Australia,1989,0.341,,disp,hh,,ABS1997 disp hh 1,Australian Bureau of Statistics 1997,191,http://www.ausstats.abs.gov.au/ausstats/free.nsf/0/F32D0E6724DAF08FCA257AFA00120B12/$File/13010_1997_chapter7.pdf
-Australia,1994,0.347,,disp,hh,,ABS1997 disp hh 1,Australian Bureau of Statistics 1997,191,http://www.ausstats.abs.gov.au/ausstats/free.nsf/0/F32D0E6724DAF08FCA257AFA00120B12/$File/13010_1997_chapter7.pdf
-Australia,1984,0.37,,gross,hh,,ABS1997 gross hh 1,Australian Bureau of Statistics 1997,191,http://www.ausstats.abs.gov.au/ausstats/free.nsf/0/F32D0E6724DAF08FCA257AFA00120B12/$File/13010_1997_chapter7.pdf
-Australia,1989,0.381,,gross,hh,,ABS1997 gross hh 1,Australian Bureau of Statistics 1997,191,http://www.ausstats.abs.gov.au/ausstats/free.nsf/0/F32D0E6724DAF08FCA257AFA00120B12/$File/13010_1997_chapter7.pdf
-Australia,1994,0.393,,gross,hh,,ABS1997 gross hh 1,Australian Bureau of Statistics 1997,191,http://www.ausstats.abs.gov.au/ausstats/free.nsf/0/F32D0E6724DAF08FCA257AFA00120B12/$File/13010_1997_chapter7.pdf
-Australia,1984,0.47,,market,hh,,ABS1997 market hh 1,Australian Bureau of Statistics 1997,191,http://www.ausstats.abs.gov.au/ausstats/free.nsf/0/F32D0E6724DAF08FCA257AFA00120B12/$File/13010_1997_chapter7.pdf
-Australia,1989,0.472,,market,hh,,ABS1997 market hh 1,Australian Bureau of Statistics 1997,191,http://www.ausstats.abs.gov.au/ausstats/free.nsf/0/F32D0E6724DAF08FCA257AFA00120B12/$File/13010_1997_chapter7.pdf
-Australia,1994,0.511,,market,hh,,ABS1997 market hh 1,Australian Bureau of Statistics 1997,191,http://www.ausstats.abs.gov.au/ausstats/free.nsf/0/F32D0E6724DAF08FCA257AFA00120B12/$File/13010_1997_chapter7.pdf
-Australia,1975,0.206,,con,hh,TRUE,BCW2000 con hh 1,"Barrett, Crossley, and Worswick 2000",133,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
-Australia,1975,0.218,,con,oecdm,TRUE,BCW2000 con oecd 1,"Barrett, Crossley, and Worswick 2000",133,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
-Australia,1975,0.259,,con,pc,TRUE,BCW2000 con pc 1,"Barrett, Crossley, and Worswick 2000",133,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
-Australia,1975,0.202,0.003,con,sqrt,TRUE,BCW2000 con sqrt 1,"Barrett, Crossley, and Worswick 2000",127,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
-Australia,1984,0.221,0.003,con,sqrt,TRUE,BCW2000 con sqrt 1,"Barrett, Crossley, and Worswick 2000",127,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
-Australia,1989,0.214,0.003,con,sqrt,TRUE,BCW2000 con sqrt 1,"Barrett, Crossley, and Worswick 2000",127,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
-Australia,1994,0.221,0.002,con,sqrt,TRUE,BCW2000 con sqrt 1,"Barrett, Crossley, and Worswick 2000",127,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
-Australia,1975,0.242,,gross,hh,TRUE,BCW2000 gross hh 1,"Barrett, Crossley, and Worswick 2000",133,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
-Australia,1975,0.279,,gross,oecdm,TRUE,BCW2000 gross oecd 1,"Barrett, Crossley, and Worswick 2000",133,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
-Australia,1975,0.321,,gross,pc,TRUE,BCW2000 gross pc 1,"Barrett, Crossley, and Worswick 2000",133,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
-Australia,1975,0.259,0.004,gross,sqrt,TRUE,BCW2000 gross sqrt 1,"Barrett, Crossley, and Worswick 2000",121,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
-Australia,1984,0.28,0.004,gross,sqrt,TRUE,BCW2000 gross sqrt 1,"Barrett, Crossley, and Worswick 2000",121,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
-Australia,1989,0.275,0.004,gross,sqrt,TRUE,BCW2000 gross sqrt 1,"Barrett, Crossley, and Worswick 2000",121,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
-Australia,1994,0.302,0.003,gross,sqrt,TRUE,BCW2000 gross sqrt 1,"Barrett, Crossley, and Worswick 2000",121,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
-Australia,1982,0.266,,gross,sqrt,TRUE,BCW2000 gross sqrt 2,"Barrett, Crossley, and Worswick 2000",131,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
-Australia,1986,0.285,,gross,sqrt,TRUE,BCW2000 gross sqrt 2,"Barrett, Crossley, and Worswick 2000",131,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
-Australia,1990,0.292,,gross,sqrt,TRUE,BCW2000 gross sqrt 2,"Barrett, Crossley, and Worswick 2000",131,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
-Australia,1994,0.293,,gross,sqrt,TRUE,BCW2000 gross sqrt 2,"Barrett, Crossley, and Worswick 2000",131,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
-Australia,1982,0.279,,gross,sqrt,TRUE,BCW2000 gross sqrt 3,"Barrett, Crossley, and Worswick 2000",131,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
-Australia,1986,0.295,,gross,sqrt,TRUE,BCW2000 gross sqrt 3,"Barrett, Crossley, and Worswick 2000",131,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
-Australia,1990,0.284,,gross,sqrt,TRUE,BCW2000 gross sqrt 3,"Barrett, Crossley, and Worswick 2000",131,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
-Australia,1995,0.289,,gross,sqrt,TRUE,BCW2000 gross sqrt 3,"Barrett, Crossley, and Worswick 2000",131,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
-Brazil,1981,0.574,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
-Brazil,1982,0.581,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
-Brazil,1983,0.584,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
-Brazil,1984,0.583,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
-Brazil,1985,0.589,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
-Brazil,1986,0.578,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
-Brazil,1987,0.592,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
-Brazil,1988,0.609,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
-Brazil,1989,0.625,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
-Brazil,1990,0.604,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
-Brazil,1992,0.573,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
-Brazil,1993,0.595,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
-Brazil,1995,0.591,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
-Brazil,1996,0.591,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
-Brazil,1997,0.593,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
-Brazil,1998,0.591,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
-Brazil,1999,0.585,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
-Brazil,2001,0.586,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
-Brazil,2002,0.58,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
-Brazil,2003,0.575,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
-Brazil,2004,0.564,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
-Canada,1969,0.176,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140
-Canada,1978,0.18,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140
-Canada,1982,0.175,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140
-Canada,1986,0.185,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140
-Canada,1992,0.173,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140
-Canada,1996,0.176,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140
-Canada,1997,0.169,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140
-Canada,1998,0.173,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140
-Canada,1999,0.175,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140
-Canada,1971,0.373,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1972,0.368,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1973,0.368,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1974,0.363,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1975,0.364,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1976,0.374,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1977,0.362,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1978,0.367,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1979,0.355,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1980,0.358,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1981,0.351,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1982,0.353,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1983,0.363,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1984,0.359,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1985,0.358,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1986,0.359,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1987,0.357,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1988,0.355,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1989,0.352,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1990,0.352,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1991,0.357,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1992,0.356,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1993,0.358,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1994,0.354,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1995,0.357,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1971,0.4,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1972,0.395,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1973,0.392,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1974,0.389,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1975,0.392,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1976,0.402,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1977,0.388,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1978,0.394,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1979,0.381,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1980,0.383,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1981,0.377,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1982,0.381,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1983,0.393,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1984,0.389,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1985,0.388,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1986,0.389,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1987,0.39,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1988,0.39,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1989,0.386,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1990,0.389,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1991,0.395,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1992,0.394,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1993,0.396,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1994,0.394,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1995,0.397,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1971,0.447,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1972,0.446,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1973,0.445,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1974,0.441,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1975,0.451,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1976,0.462,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1977,0.445,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1978,0.445,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1979,0.436,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1980,0.442,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1981,0.437,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1982,0.453,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1983,0.471,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1984,0.469,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1985,0.466,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1986,0.467,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1987,0.468,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1988,0.469,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1989,0.461,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1990,0.47,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1991,0.486,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1992,0.491,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1993,0.497,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1994,0.495,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1995,0.493,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-China,1985,0.2827,,disp,pc,,CRT2007a disp pc,"Chotikapanich, Rao, and Tang 2007a",141,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4991.2007.00220.x/full
-China,1991,0.3061,,disp,pc,,CRT2007a disp pc,"Chotikapanich, Rao, and Tang 2007a",141,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4991.2007.00220.x/full
-China,1995,0.3506,,disp,pc,,CRT2007a disp pc,"Chotikapanich, Rao, and Tang 2007a",141,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4991.2007.00220.x/full
-China,2000,0.3471,,disp,pc,,CRT2007a disp pc,"Chotikapanich, Rao, and Tang 2007a",141,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4991.2007.00220.x/full
-China,2003,0.4018,,disp,pc,,CRT2007a disp pc,"Chotikapanich, Rao, and Tang 2007a",141,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4991.2007.00220.x/full
-China,2003,0.479,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2013,,http://www.stats.gov.cn/tjgz/tjdt/201301/t20130118_17719.html
-China,2004,0.473,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2013,,http://www.stats.gov.cn/tjgz/tjdt/201301/t20130118_17719.html
-China,2005,0.485,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2013,,http://www.stats.gov.cn/tjgz/tjdt/201301/t20130118_17719.html
-China,2006,0.487,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2013,,http://www.stats.gov.cn/tjgz/tjdt/201301/t20130118_17719.html
-China,2007,0.484,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2013,,http://www.stats.gov.cn/tjgz/tjdt/201301/t20130118_17719.html
-China,2008,0.491,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2013,,http://www.stats.gov.cn/tjgz/tjdt/201301/t20130118_17719.html
-China,2009,0.49,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2013,,http://www.stats.gov.cn/tjgz/tjdt/201301/t20130118_17719.html
-China,2010,0.481,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2013,,http://www.stats.gov.cn/tjgz/tjdt/201301/t20130118_17719.html
-China,2011,0.477,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2013,,http://www.stats.gov.cn/tjgz/tjdt/201301/t20130118_17719.html
-China,2012,0.474,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2013,,http://www.stats.gov.cn/tjgz/tjdt/201301/t20130118_17719.html
-China,2013,0.473,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2014,,http://www.stats.gov.cn/english/PressRelease/201401/t20140120_502079.html
-China,2014,0.469,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2015,,http://www.stats.gov.cn/english/PressRelease/201501/t20150120_671038.html
-China,2002,0.46,,disp,pc,FALSE,SCS2013 disp pc,"Shi, Chuliang, and Sicular 2013",58,https://books.google.com/books?id=0dCaAAAAQBAJ&pg=PA58
-China,2007,0.483,,disp,pc,FALSE,SCS2013 disp pc,"Shi, Chuliang, and Sicular 2013",58,https://books.google.com/books?id=0dCaAAAAQBAJ&pg=PA58
-China,1978,0.31,,disp,pc,,SY2011 disp pc,Sutherland and Yao 2011,101,http://cjres.oxfordjournals.org/content/4/1/91.full.pdf
-China,1985,0.29,,disp,pc,,SY2011 disp pc,Sutherland and Yao 2011,101,http://cjres.oxfordjournals.org/content/4/1/91.full.pdf
-China,1990,0.33,,disp,pc,,SY2011 disp pc,Sutherland and Yao 2011,101,http://cjres.oxfordjournals.org/content/4/1/91.full.pdf
-China,1995,0.39,,disp,pc,,SY2011 disp pc,Sutherland and Yao 2011,101,http://cjres.oxfordjournals.org/content/4/1/91.full.pdf
-China,2000,0.41,,disp,pc,,SY2011 disp pc,Sutherland and Yao 2011,101,http://cjres.oxfordjournals.org/content/4/1/91.full.pdf
-China,2005,0.44,,disp,pc,,SY2011 disp pc,Sutherland and Yao 2011,101,http://cjres.oxfordjournals.org/content/4/1/91.full.pdf
-China,2006,0.45,,disp,pc,,SY2011 disp pc,Sutherland and Yao 2011,101,http://cjres.oxfordjournals.org/content/4/1/91.full.pdf
-China,1985,0.31,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206
-China,1986,0.311,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206
-China,1987,0.317,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206
-China,1988,0.337,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206
-China,1989,0.342,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206
-China,1990,0.327,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206
-China,1991,0.345,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206
-China,1992,0.361,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206
-China,1993,0.38,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206
-China,1994,0.381,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206
-China,1995,0.382,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206
-China,1996,0.349,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206
-China,1997,0.375,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206
-China,1998,0.378,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206
-China,1999,0.389,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206
-China,2000,0.407,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206
-China,2001,0.415,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206
-Croatia,2000,0.31,,disp,hh,FALSE,CBS disp hh 1,Croatian Bureau of Statistics 2004,,http://www.dzs.hr/Eng/publication/2004/13-2-2_1e2004.htm
-Croatia,2001,0.31,,disp,hh,FALSE,CBS disp hh 1,Croatian Bureau of Statistics 2004,,http://www.dzs.hr/Eng/publication/2004/13-2-2_1e2004.htm
-Croatia,2002,0.31,,disp,hh,FALSE,CBS disp hh 1,Croatian Bureau of Statistics 2004,,http://www.dzs.hr/Eng/publication/2004/13-2-2_1e2004.htm
-Croatia,2003,0.29,,disp,hh,FALSE,CBS disp hh 1,Croatian Bureau of Statistics 2006,,http://www.dzs.hr/Eng/publication/2006/14-1-2_1e2006.htm
-Croatia,2004,0.29,,disp,hh,FALSE,CBS disp hh 1,Croatian Bureau of Statistics 2007,,http://www.dzs.hr/Eng/publication/2007/14-1-2_1e2007.htm
-Croatia,2005,0.29,,disp,hh,FALSE,CBS disp hh 1,Croatian Bureau of Statistics 2008,,http://www.dzs.hr/Eng/publication/2008/14-1-2_1e2008.htm
-Croatia,2006,0.28,,disp,hh,FALSE,CBS disp hh 1,Croatian Bureau of Statistics 2009,,http://www.dzs.hr/Eng/publication/2009/14-1-2_1e2009.htm
-Croatia,2007,0.28,,disp,hh,FALSE,CBS disp hh 1,Croatian Bureau of Statistics 2009,,http://www.dzs.hr/Eng/publication/2009/14-1-2_1e2009.htm
-Croatia,2008,0.29,,disp,hh,FALSE,CBS disp hh 1,Croatian Bureau of Statistics 2009,,http://www.dzs.hr/Eng/publication/2009/14-1-2_1e2009.htm
-Croatia,2009,0.27,,disp,hh,FALSE,CBS disp hh 1,Croatian Bureau of Statistics 2010,,http://www.dzs.hr/Hrv_Eng/publication/2010/14-01-02_01_2010.htm
-Croatia,2000,0.28,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2004,,http://www.dzs.hr/Eng/publication/2004/13-2-2_1e2004.htm
-Croatia,2001,0.29,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2004,,http://www.dzs.hr/Eng/publication/2004/13-2-2_1e2004.htm
-Croatia,2002,0.29,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2004,,http://www.dzs.hr/Eng/publication/2004/13-2-2_1e2004.htm
-Croatia,2003,0.3,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2006,,http://www.dzs.hr/Eng/publication/2006/14-1-2_1e2006.htm
-Croatia,2004,0.31,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2007,,http://www.dzs.hr/Eng/publication/2007/14-1-2_1e2007.htm
-Croatia,2005,0.31,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2008,,http://www.dzs.hr/Eng/publication/2008/14-1-2_1e2008.htm
-Croatia,2006,0.29,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2009,,http://www.dzs.hr/Eng/publication/2009/14-1-2_1e2009.htm
-Croatia,2007,0.3,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2009,,http://www.dzs.hr/Eng/publication/2009/14-1-2_1e2009.htm
-Croatia,2008,0.3,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2009,,http://www.dzs.hr/Eng/publication/2009/14-1-2_1e2009.htm
-Croatia,2009,0.29,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2010,,http://www.dzs.hr/Hrv_Eng/publication/2010/14-01-02_01_2010.htm
-Germany,1992,0.249,,disp,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
-Germany,1995,0.265,,disp,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
-Germany,2000,0.251,,disp,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
-Germany,2005,0.278,,disp,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
-Germany,2010,0.285,,disp,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
-Germany,2011,0.282,,disp,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
-Germany,1992,0.243,,disp,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
-Germany,1995,0.255,,disp,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
-Germany,2000,0.241,,disp,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
-Germany,2005,0.262,,disp,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
-Germany,2010,0.272,,disp,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
-Germany,2011,0.272,,disp,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile
-Guatemala,2000,0.476,,con,pc,,INE2002 con pc,Instituto Nacional de Estadi_stica de Guatemala 2002 ,20,https://www.ine.gob.gt/sistema/uploads/2014/01/15/v8ukWQ78M4VJrnYqyN2oCumMy1GiBzaf.pdf
-Guatemala,2000,0.57,,gross,pc,,INE2002 gross pc,Instituto Nacional de Estadi_stica de Guatemala 2002 ,20,https://www.ine.gob.gt/sistema/uploads/2014/01/15/v8ukWQ78M4VJrnYqyN2oCumMy1GiBzaf.pdf
-Ecuador,1998,0.443,,con,pc,,INEC con pc,Instituto Nacional de Estadistica y Censos 2015,98,http://www.ecuadorencifras.gob.ec//documentos/web-inec/Bibliotecas/Libros/reportePobreza.pdf
-Ecuador,2006,0.455,,con,pc,,INEC con pc,Instituto Nacional de Estadistica y Censos 2015,98,http://www.ecuadorencifras.gob.ec//documentos/web-inec/Bibliotecas/Libros/reportePobreza.pdf
-Ecuador,2014,0.408,,con,pc,,INEC con pc,Instituto Nacional de Estadistica y Censos 2015,98,http://www.ecuadorencifras.gob.ec//documentos/web-inec/Bibliotecas/Libros/reportePobreza.pdf
-Iceland,1992,0.276,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,1993,0.267,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,1994,0.264,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,1995,0.265,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,1996,0.275,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,1997,0.285,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,1998,0.291,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,1999,0.305,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2000,0.313,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2001,0.325,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2002,0.329,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2003,0.352,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2004,0.352,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2005,0.389,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2006,0.403,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2007,0.441,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2008,0.373,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,1992,0.394,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,1993,0.396,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,1994,0.396,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,1995,0.395,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,1996,0.406,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,1997,0.417,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,1998,0.423,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,1999,0.434,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2000,0.443,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2001,0.455,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2002,0.458,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2003,0.478,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2004,0.479,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2005,0.51,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2006,0.517,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2007,0.551,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2008,0.479,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,1992,0.427,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,1993,0.428,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,1994,0.432,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,1995,0.435,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,1996,0.446,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,1997,0.455,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,1998,0.461,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,1999,0.471,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2000,0.478,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2001,0.486,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2002,0.49,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2003,0.507,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2004,0.507,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2005,0.536,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2006,0.539,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2007,0.568,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,2008,0.488,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
-Iceland,1992,0.28,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422
-Iceland,1993,0.27,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422
-Iceland,1994,0.26,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422
-Iceland,1995,0.27,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422
-Iceland,1996,0.28,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422
-Iceland,1997,0.29,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422
-Iceland,1998,0.29,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422
-Iceland,1999,0.3,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422
-Iceland,2000,0.31,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422
-Iceland,2001,0.32,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422
-Iceland,2002,0.33,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422
-Iceland,2003,0.35,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422
-Iceland,2004,0.35,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422
-Iceland,2005,0.39,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422
-Iceland,2006,0.4,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422
-Iceland,2007,0.44,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422
-Iceland,2008,0.37,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422
-Iceland,2009,0.34,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422
-India,2011,0.368,,con,pc,,CSI2013 con pc,Central Statistics Office of India 2013,38,http://mospi.nic.in/sites/default/files/publication_reports/SAARC_India_Rep_29aug13.pdf
-India,1994,0.35,,con,pc,,TD2013 con pc,Thorat and Dubey 2013,42,http://www.pnud.org/content/dam/india/docs/human-development/how-inclusive-has-growth-been-in-india-during-1993-94-2009-10.pdf
-India,2005,0.35,,con,pc,,TD2013 con pc,Thorat and Dubey 2013,42,http://www.pnud.org/content/dam/india/docs/human-development/how-inclusive-has-growth-been-in-india-during-1993-94-2009-10.pdf
-India,2010,0.37,,con,pc,,TD2013 con pc,Thorat and Dubey 2013,42,http://www.pnud.org/content/dam/india/docs/human-development/how-inclusive-has-growth-been-in-india-during-1993-94-2009-10.pdf
-India,2004,0.35,,con,sqrt,TRUE,VD con sqrt,Vanneman and Dubey 2013,446,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA446
-India,2004,0.48,,disp,sqrt,TRUE,VD disp sqrt,Vanneman and Dubey 2013,446,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA446
-Ireland,2003,0.311,,disp,pc,,CSO Ireland disp pc,CSO Ireland 2007,13,http://www.cso.ie/en/media/csoie/releasespublications/documents/eusilc/2006/eusilc_2006.pdf
-Ireland,2004,0.318,,disp,pc,,CSO Ireland disp pc,CSO Ireland 2007,13,http://www.cso.ie/en/media/csoie/releasespublications/documents/eusilc/2006/eusilc_2006.pdf
-Ireland,2005,0.324,,disp,pc,,CSO Ireland disp pc,CSO Ireland 2007,13,http://www.cso.ie/en/media/csoie/releasespublications/documents/eusilc/2006/eusilc_2006.pdf
-Ireland,2006,0.324,,disp,pc,,CSO Ireland disp pc,CSO Ireland 2007,13,http://www.cso.ie/en/media/csoie/releasespublications/documents/eusilc/2006/eusilc_2006.pdf
-Ireland,2007,0.317,,disp,pc,,CSO Ireland disp pc,CSO Ireland 2013,3,http://www.cso.ie/en/media/csoie/releasespublications/documents/silc/2011/silc_2011.pdf
-Ireland,2008,0.307,,disp,pc,,CSO Ireland disp pc,CSO Ireland 2013,3,http://www.cso.ie/en/media/csoie/releasespublications/documents/silc/2011/silc_2011.pdf
-Italy,1967,0.391,,disp,pc,TRUE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,1968,0.408,,disp,pc,TRUE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,1969,0.397,,disp,pc,TRUE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,1970,0.383,,disp,pc,TRUE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,1971,0.397,,disp,pc,TRUE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,1972,0.385,,disp,pc,TRUE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,1973,0.401,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,1974,0.391,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,1975,0.353,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,1977,0.358,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,1978,0.329,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,1979,0.361,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,1980,0.332,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,1981,0.315,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,1982,0.297,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,1983,0.3,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,1984,0.321,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,1986,0.307,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,1987,0.318,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,1989,0.3,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,1991,0.305,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,1993,0.328,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,1995,0.331,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,1998,0.342,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,2000,0.333,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,2002,0.328,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,2004,0.351,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,2006,0.337,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Italy,2008,0.327,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
-Japan,2004,0.284,,con,sqrt,TRUE,M2013 con sqrt,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
-Japan,2005,0.298,,con,sqrt,TRUE,M2013 con sqrt,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
-Japan,2006,0.292,,con,sqrt,TRUE,M2013 con sqrt,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
-Japan,2007,0.3,,con,sqrt,TRUE,M2013 con sqrt,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
-Japan,2008,0.293,,con,sqrt,TRUE,M2013 con sqrt,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
-Japan,2009,0.31,,con,sqrt,TRUE,M2013 con sqrt,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
-Japan,1979,0.271,,gross,sqrt,TRUE,M2013 gross sqrt 1,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
-Japan,2004,0.308,,gross,sqrt,TRUE,M2013 gross sqrt 1,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
-Japan,1992,0.377,,gross,sqrt,TRUE,M2013 gross sqrt 2,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
-Japan,2004,0.4,,gross,sqrt,TRUE,M2013 gross sqrt 2,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
-Japan,2005,0.395,,gross,sqrt,TRUE,M2013 gross sqrt 2,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
-Japan,2006,0.398,,gross,sqrt,TRUE,M2013 gross sqrt 2,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
-Japan,2007,0.395,,gross,sqrt,TRUE,M2013 gross sqrt 2,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
-Japan,2004,0.326,,market,sqrt,TRUE,M2013 market sqrt 1,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
-Japan,2005,0.316,,market,sqrt,TRUE,M2013 market sqrt 1,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
-Japan,2006,0.319,,market,sqrt,TRUE,M2013 market sqrt 1,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
-Japan,2007,0.325,,market,sqrt,TRUE,M2013 market sqrt 1,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
-Japan,2008,0.326,,market,sqrt,TRUE,M2013 market sqrt 1,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
-Japan,2004,0.354,,market,sqrt,TRUE,M2013 market sqrt 2,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
-Japan,2005,0.351,,market,sqrt,TRUE,M2013 market sqrt 2,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
-Japan,2006,0.347,,market,sqrt,TRUE,M2013 market sqrt 2,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
-Japan,2007,0.327,,market,sqrt,TRUE,M2013 market sqrt 2,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
-Japan,2008,0.343,,market,sqrt,TRUE,M2013 market sqrt 2,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
-Japan,2002,0.3217,,disp,sqrt,TRUE,MHLW IRS disp sqrt,"Japanese Ministry of Health, Labor, and Welfare 2002",,http://www.e-stat.go.jp/SG1/estat/Xlsdl.do?sinfid=000002479640
-Japan,2005,0.3218,,disp,sqrt,TRUE,MHLW IRS disp sqrt,"Japanese Ministry of Health, Labor, and Welfare 2005",,http://www.e-stat.go.jp/SG1/estat/Xlsdl.do?sinfid=000002478869
-Japan,2008,0.3268,,disp,sqrt,TRUE,MHLW IRS disp sqrt,"Japanese Ministry of Health, Labor, and Welfare 2008",,http://www.e-stat.go.jp/SG1/estat/Xlsdl.do?sinfid=000008189056
-Japan,2011,0.3219,,disp,sqrt,TRUE,MHLW IRS disp sqrt,"Japanese Ministry of Health, Labor, and Welfare 2011",,http://www.e-stat.go.jp/SG1/estat/Xlsdl.do?sinfid=000023335999
-Japan,2002,0.4194,,market,sqrt,TRUE,MHLW IRS market sqrt,"Japanese Ministry of Health, Labor, and Welfare 2002",,http://www.e-stat.go.jp/SG1/estat/Xlsdl.do?sinfid=000002479640
-Japan,2005,0.4354,,market,sqrt,TRUE,MHLW IRS market sqrt,"Japanese Ministry of Health, Labor, and Welfare 2005",,http://www.e-stat.go.jp/SG1/estat/Xlsdl.do?sinfid=000002478869
-Japan,2008,0.4539,,market,sqrt,TRUE,MHLW IRS market sqrt,"Japanese Ministry of Health, Labor, and Welfare 2008",,http://www.e-stat.go.jp/SG1/estat/Xlsdl.do?sinfid=000008189056
-Japan,2011,0.4703,,market,sqrt,TRUE,MHLW IRS market sqrt,"Japanese Ministry of Health, Labor, and Welfare 2011",,http://www.e-stat.go.jp/SG1/estat/Xlsdl.do?sinfid=000023335999
-Japan,2009,0.313,,disp,pc,TRUE,Statistics Japan disp pc,Statistics Japan 2010,,http://www.e-stat.go.jp/SG1/estat/GL32020101.do?method=xlsDownload&fileId=000004955720&releaseCount=1
-Japan,2014,0.31,,disp,pc,TRUE,Statistics Japan disp pc,Statistics Japan 2015,,http://www.e-stat.go.jp/SG1/estat/GL32020101.do?method=xlsDownload&fileId=000007772322&releaseCount=1
-Japan,2009,0.283,,disp,sqrt,TRUE,Statistics Japan disp sqrt,Statistics Japan 2010,,http://www.e-stat.go.jp/SG1/estat/GL32020101.do?method=xlsDownload&fileId=000004955720&releaseCount=1
-Japan,2014,0.281,,disp,sqrt,TRUE,Statistics Japan disp sqrt,Statistics Japan 2015,,http://www.e-stat.go.jp/SG1/estat/GL32020101.do?method=xlsDownload&fileId=000007772322&releaseCount=1
-Japan,2009,0.432,,market,pc,TRUE,Statistics Japan market pc,Statistics Japan 2010,,http://www.e-stat.go.jp/SG1/estat/GL32020101.do?method=xlsDownload&fileId=000004955720&releaseCount=1
-Japan,2014,0.446,,market,pc,TRUE,Statistics Japan market pc,Statistics Japan 2015,,http://www.e-stat.go.jp/SG1/estat/GL32020101.do?method=xlsDownload&fileId=000007772322&releaseCount=1
-Japan,2009,0.406,,market,sqrt,TRUE,Statistics Japan market sqrt,Statistics Japan 2010,,http://www.e-stat.go.jp/SG1/estat/GL32020101.do?method=xlsDownload&fileId=000004955720&releaseCount=1
-Japan,2014,0.421,,market,sqrt,TRUE,Statistics Japan market sqrt,Statistics Japan 2015,,http://www.e-stat.go.jp/SG1/estat/GL32020101.do?method=xlsDownload&fileId=000007772322&releaseCount=1
-Japan,1961,0.39,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,1961,0.344,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,1967,0.375,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,1967,0.328,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,1972,0.354,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,1972,0.314,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,1975,0.375,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,1975,0.346,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,1978,0.365,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,1978,0.338,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,1981,0.349,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,1981,0.314,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,1984,0.398,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,1984,0.343,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,1987,0.405,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,1987,0.338,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,1990,0.433,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,1990,0.364,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,1993,0.439,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,1993,0.365,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,1996,0.441,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,1996,0.361,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,1999,0.472,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,1999,0.381,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,2002,0.498,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,2002,0.381,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,2005,0.526,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Japan,2005,0.387,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf
-Macedonia,2009,0.409,,disp,oecdm,TRUE,Eurostat The former Yugoslav Republic of Macedonia disp oecdm 1,Statistics Macedonia,,http://makstat.stat.gov.mk/PXWeb/pxweb/en/MakStat/MakStat__ZivotenStandard__LaekenIndikatorSiromastija/125_ZivStd_Mk_LaekenGENERAL_en.px/?rxid=46ee0f64-2992-4b45-a2d9-cb4e5f7ec5ef
-Macedonia,2010,0.385,,disp,oecdm,TRUE,Eurostat The former Yugoslav Republic of Macedonia disp oecdm 1,Statistics Macedonia,,http://makstat.stat.gov.mk/PXWeb/pxweb/en/MakStat/MakStat__ZivotenStandard__LaekenIndikatorSiromastija/125_ZivStd_Mk_LaekenGENERAL_en.px/?rxid=46ee0f64-2992-4b45-a2d9-cb4e5f7ec5ef
-Moldova,1998,0.4435,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
-Moldova,1999,0.4342,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
-Moldova,2000,0.4165,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
-Moldova,2001,0.4279,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
-Moldova,2002,0.4208,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
-Moldova,2003,0.3871,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
-Moldova,2004,0.4014,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
-Moldova,2005,0.4105,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
-Moldova,1998,0.3922,,con,hh,,NBS Moldova con hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
-Moldova,1999,0.3866,,con,hh,,NBS Moldova con hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
-Moldova,2000,0.3766,,con,hh,,NBS Moldova con hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
-Moldova,2001,0.3775,,con,hh,,NBS Moldova con hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
-Moldova,2002,0.3637,,con,hh,,NBS Moldova con hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
-Moldova,2003,0.3518,,con,hh,,NBS Moldova con hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
-Moldova,2004,0.3571,,con,hh,,NBS Moldova con hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
-Moldova,2005,0.3766,,con,hh,,NBS Moldova con hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
-Moldova,2007,0.3712,,disp,pc,FALSE,NBS Moldova disp pc,National Bureau of Statistics of Moldova 2008,56,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_privind_nivelul_de_trai_in_2007.pdf
-Moldova,2007,0.4556,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2008,56,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_privind_nivelul_de_trai_in_2007.pdf
-Moldova,2007,0.3287,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2008,56,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_privind_nivelul_de_trai_in_2007.pdf
-Moldova,2009,0.3702,,disp,pc,FALSE,NBS Moldova disp pc,National Bureau of Statistics of Moldova 2010,62,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2009.pdf
-Moldova,2009,0.4338,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2010,62,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2009.pdf
-Moldova,2009,0.3045,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2010,62,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2009.pdf
-Moldova,2012,0.3963,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2008,67,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2012.pdf
-Moldova,2012,0.3241,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2008,67,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2012.pdf
-Morocco,1985,0.399,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,28,www.hcp.ma/file/174377
-Morocco,1991,0.393,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,www.hcp.ma/file/174377
-Morocco,1999,0.39,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2008,,http://www.hcp.ma/Indices-de-la-pauvrete-vulnerabilite-et-inegalite-selon-le-milieu-de-residence-1985-2007_a658.html
-Morocco,2001,0.406,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,www.hcp.ma/file/174377
-Morocco,2007,0.407,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,www.hcp.ma/file/174377
-Morocco,2014,0.388,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,www.hcp.ma/file/174377
-Netherlands,2005,0.33,,disp,hh,,AK2013 disp hh,Arts and Kessels 2013,13,https://www.cbs.nl/NR/rdonlyres/EF9281B6-850E-4485-9058-B6BEC91ED0F0/0/2013miljonairsupdate.pdf
-Netherlands,2006,0.335,,disp,hh,,AK2013 disp hh,Arts and Kessels 2013,13,https://www.cbs.nl/NR/rdonlyres/EF9281B6-850E-4485-9058-B6BEC91ED0F0/0/2013miljonairsupdate.pdf
-Netherlands,2007,0.352,,disp,hh,,AK2013 disp hh,Arts and Kessels 2013,13,https://www.cbs.nl/NR/rdonlyres/EF9281B6-850E-4485-9058-B6BEC91ED0F0/0/2013miljonairsupdate.pdf
-Netherlands,2008,0.347,,disp,hh,,AK2013 disp hh,Arts and Kessels 2013,13,https://www.cbs.nl/NR/rdonlyres/EF9281B6-850E-4485-9058-B6BEC91ED0F0/0/2013miljonairsupdate.pdf
-Netherlands,2009,0.344,,disp,hh,,AK2013 disp hh,Arts and Kessels 2013,13,https://www.cbs.nl/NR/rdonlyres/EF9281B6-850E-4485-9058-B6BEC91ED0F0/0/2013miljonairsupdate.pdf
-Netherlands,2010,0.34,,disp,hh,,AK2013 disp hh,Arts and Kessels 2013,13,https://www.cbs.nl/NR/rdonlyres/EF9281B6-850E-4485-9058-B6BEC91ED0F0/0/2013miljonairsupdate.pdf
-New Zealand,1984,0.272,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
-New Zealand,1984,0.275,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
-New Zealand,1986,0.27,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
-New Zealand,1988,0.271,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
-New Zealand,1990,0.302,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
-New Zealand,1992,0.319,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
-New Zealand,1994,0.332,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
-New Zealand,1996,0.331,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
-New Zealand,1998,0.33,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
-New Zealand,2001,0.338,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
-New Zealand,2004,0.334,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
-New Zealand,2007,0.32,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
-New Zealand,2008,0.333,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
-New Zealand,2009,0.329,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
-New Zealand,2010,0.324,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
-New Zealand,2011,0.351,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
-New Zealand,2012,0.324,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
-New Zealand,2013,0.334,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
-New Zealand,2014,0.342,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
-New Zealand,2015,0.35,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
-Russian Federation,1994,0.48,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,1995,0.45,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,1996,0.46,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,1998,0.47,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2000,0.52,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2001,0.49,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2002,0.49,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2003,0.51,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2004,0.51,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2005,0.43,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2006,0.5,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2007,0.48,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2008,0.5,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2009,0.42,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,1994,0.46,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,1995,0.44,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,1996,0.49,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,1998,0.44,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2000,0.5,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2001,0.49,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2002,0.49,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2003,0.48,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2004,0.5,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2005,0.37,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2006,0.39,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2007,0.38,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2008,0.48,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2009,0.35,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,1989,0.265,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf
-Russian Federation,1992,0.289,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf
-Russian Federation,1993,0.398,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf
-Russian Federation,1994,0.409,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf
-Russian Federation,1995,0.381,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf
-Russian Federation,1996,0.375,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf
-Russian Federation,1997,0.375,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf
-Russian Federation,1997,0.353,,con,pc,FALSE,MY2006 con pc,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
-Russian Federation,1998,0.369,,con,pc,FALSE,MY2006 con pc,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
-Russian Federation,1999,0.357,,con,pc,FALSE,MY2006 con pc,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
-Russian Federation,2000,0.349,,con,pc,FALSE,MY2006 con pc,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
-Russian Federation,2001,0.339,,con,pc,FALSE,MY2006 con pc,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
-Russian Federation,2002,0.338,,con,pc,FALSE,MY2006 con pc,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
-Russian Federation,2003,0.332,,con,pc,FALSE,MY2006 con pc,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
-South Africa,1993,0.66,0.005,disp,pc,TRUE,LFW2012 disp pc,"Leibbrandt, Finn, and Woolard 2012",26,http://www.tandfonline.com/doi/pdf/10.1080/0376835X.2012.645639
-South Africa,2008,0.7,0.01,disp,pc,TRUE,LFW2012 disp pc,"Leibbrandt, Finn, and Woolard 2012",26,http://www.tandfonline.com/doi/pdf/10.1080/0376835X.2012.645639
-South Africa,1993,0.51,,con,sqrt,TRUE,LFW2013 con sqrt,"Leibbrandt, Finn, and Woolard 2013",469,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA469
-South Africa,2008,0.66,,con,sqrt,TRUE,LFW2013 con sqrt,"Leibbrandt, Finn, and Woolard 2013",469,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA469
-South Africa,1993,0.61,,disp,sqrt,TRUE,LFW2013 disp sqrt,"Leibbrandt, Finn, and Woolard 2013",469,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA469
-South Africa,2008,0.65,,disp,sqrt,TRUE,LFW2013 disp sqrt,"Leibbrandt, Finn, and Woolard 2013",469,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA469
-South Africa,2004,0.59,,con,pc,TRUE,LWFA2010 con pc,"Leibbrandt, Finn, Woolard, and Argent 2010",16,http://dx.doi.org/10.1787/5kmms0t7p1ms-en 
-South Africa,1993,0.66,,disp,pc,TRUE,LWFA2010 disp pc,"Leibbrandt, Finn, Woolard, and Argent 2010",32,http://dx.doi.org/10.1787/5kmms0t7p1ms-en 
-South Africa,2000,0.68,,disp,pc,TRUE,LWFA2010 disp pc,"Leibbrandt, Finn, Woolard, and Argent 2010",32,http://dx.doi.org/10.1787/5kmms0t7p1ms-en 
-South Africa,2008,0.7,,disp,pc,TRUE,LWFA2010 disp pc,"Leibbrandt, Finn, Woolard, and Argent 2010",32,http://dx.doi.org/10.1787/5kmms0t7p1ms-en 
-South Africa,1975,0.68,,gross,pc,,SN2005 gross pc 1,Seekings and Nattrass 2005,307,https://books.google.com/books?hl=en&lr=&id=_lLHLuDgzG0C&oi=fnd&pg=PA307
-South Africa,1991,0.68,,gross,pc,,SN2005 gross pc 1,Seekings and Nattrass 2005,307,https://books.google.com/books?hl=en&lr=&id=_lLHLuDgzG0C&oi=fnd&pg=PA307
-South Africa,1996,0.69,,gross,pc,,SN2005 gross pc 1,Seekings and Nattrass 2005,307,https://books.google.com/books?hl=en&lr=&id=_lLHLuDgzG0C&oi=fnd&pg=PA307
-South Africa,1995,0.65,,gross,pc,,SN2005 gross pc 2,Seekings and Nattrass 2005,307,https://books.google.com/books?hl=en&lr=&id=_lLHLuDgzG0C&oi=fnd&pg=PA307
-South Africa,2000,0.69,,gross,pc,,SN2005 gross pc 2,Seekings and Nattrass 2005,307,https://books.google.com/books?hl=en&lr=&id=_lLHLuDgzG0C&oi=fnd&pg=PA307
-South Africa,1995,0.56,,con,hh,FALSE,SSA2002 con hh,Statistics South Africa 2002,48,https://web.archive.org/web/20060609011155/http://www.statssa.gov.za/publications/earningspending2000/earningspending2000October2000.pdf
-South Africa,2000,0.57,,con,hh,FALSE,SSA2002 con hh,Statistics South Africa 2002,48,https://web.archive.org/web/20060609011155/http://www.statssa.gov.za/publications/earningspending2000/earningspending2000October2000.pdf
-South Africa,2006,0.67,,con,pc,FALSE,SSA2014 con pc,Statistics South Africa 2014,14,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-06March2014.pdf
-South Africa,2009,0.65,,con,pc,FALSE,SSA2014 con pc,Statistics South Africa 2014,14,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-06March2014.pdf
-South Africa,2011,0.65,,con,pc,FALSE,SSA2014 con pc,Statistics South Africa 2014,14,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-06March2014.pdf
-South Africa,2006,0.72,,gross,pc,FALSE,SSA2014 gross pc,Statistics South Africa 2014,14,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-06March2014.pdf
-South Africa,2009,0.7,,gross,pc,FALSE,SSA2014 gross pc,Statistics South Africa 2014,14,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-06March2014.pdf
-South Africa,2011,0.69,,gross,pc,FALSE,SSA2014 gross pc,Statistics South Africa 2014,14,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-06March2014.pdf
-Sri Lanka,2013,0.46,,gross,pc,FALSE,Statistics Sri Lanka gross pc,Statistics Sri Lanka 2015,14,http://www.statistics.gov.lk/HIES/HIES2012_13FinalReport.pdf
-Sri Lanka,2013,0.39,,con,pc,FALSE,Statistics Sri Lanka con pc,Statistics Sri Lanka 2015,14,http://www.statistics.gov.lk/HIES/HIES2012_13FinalReport.pdf
-Thailand,2004,0.411,,gross,hh,FALSE,NSO Thailand gross hh,National Statistical Office of Thailand 2010,4,"http://web.nso.go.th/en/survey/bts/datafiles/560619_10_8.%20Household%20Income,%20Expenditure%20and%20Debt.pdf"
-Thailand,2004,0.493,,gross,pc,FALSE,NSO Thailand gross pc,National Statistical Office of Thailand 2010,4,"http://web.nso.go.th/en/survey/bts/datafiles/560619_10_8.%20Household%20Income,%20Expenditure%20and%20Debt.pdf"
-Thailand,2006,0.439,,gross,hh,FALSE,NSO Thailand gross hh,National Statistical Office of Thailand 2014,40,http://web.nso.go.th/en/pub/e_book/Indicator_eco_13/files/assets/basic-html/page40.html
-Thailand,2006,0.512,,gross,pc,FALSE,NSO Thailand gross pc,National Statistical Office of Thailand 2014,40,http://web.nso.go.th/en/pub/e_book/Indicator_eco_13/files/assets/basic-html/page40.html
-Thailand,2007,0.418,,gross,hh,FALSE,NSO Thailand gross hh,National Statistical Office of Thailand 2015,46,http://web.nso.go.th/en/pub/e_book/The%202014%20Economic%20indicators%20in%20Brief/files/assets/basic-html/page46.html
-Thailand,2007,0.496,,gross,pc,FALSE,NSO Thailand gross pc,National Statistical Office of Thailand 2015,46,http://web.nso.go.th/en/pub/e_book/The%202014%20Economic%20indicators%20in%20Brief/files/assets/basic-html/page46.html
-Thailand,2009,0.408,,gross,hh,FALSE,NSO Thailand gross hh,National Statistical Office of Thailand 2015,46,http://web.nso.go.th/en/pub/e_book/The%202014%20Economic%20indicators%20in%20Brief/files/assets/basic-html/page46.html
-Thailand,2009,0.487,,gross,pc,FALSE,NSO Thailand gross pc,National Statistical Office of Thailand 2015,46,http://web.nso.go.th/en/pub/e_book/The%202014%20Economic%20indicators%20in%20Brief/files/assets/basic-html/page46.html
-Thailand,2011,0.402,,gross,hh,FALSE,NSO Thailand gross hh,National Statistical Office of Thailand 2015,46,http://web.nso.go.th/en/pub/e_book/The%202014%20Economic%20indicators%20in%20Brief/files/assets/basic-html/page46.html
-Thailand,2011,0.484,,gross,pc,FALSE,NSO Thailand gross pc,National Statistical Office of Thailand 2015,46,http://web.nso.go.th/en/pub/e_book/The%202014%20Economic%20indicators%20in%20Brief/files/assets/basic-html/page46.html
-Thailand,2013,0.391,,gross,pc,FALSE,NSO Thailand gross pc,National Statistical Office of Thailand 2015,46,http://web.nso.go.th/en/pub/e_book/The%202014%20Economic%20indicators%20in%20Brief/files/assets/basic-html/page46.html
-Vietnam,1999,0.39,,gross,pc,FALSE,GSO Vietnam gross pc,General Statistics Office of Vietnam 2005,,http://www.gso.gov.vn/default_en.aspx?tabid=508&ItemID=2510
-Vietnam,2002,0.42,,gross,pc,FALSE,GSO Vietnam gross pc,General Statistics Office of Vietnam 2005,,http://www.gso.gov.vn/default_en.aspx?tabid=508&ItemID=2510
-Vietnam,2004,0.413,,gross,pc,FALSE,GSO Vietnam gross pc,General Statistics Office of Vietnam 2005,,http://www.gso.gov.vn/default_en.aspx?tabid=508&ItemID=2510
-Zimbabwe,1995,0.501,,con,pc,FALSE,Zimstat  con pc,Zimbabwe National Statistics Agency 2013,42,http://www.zimstat.co.zw/sites/default/files/img/publications/Finance/Poverty2011.pdf
-Zimbabwe,2001,0.489,,con,pc,FALSE,Zimstat  con pc,Zimbabwe National Statistics Agency 2013,42,http://www.zimstat.co.zw/sites/default/files/img/publications/Finance/Poverty2011.pdf
-Zimbabwe,2011,0.423,,con,pc,FALSE,Zimstat  con pc,Zimbabwe National Statistics Agency 2013,42,http://www.zimstat.co.zw/sites/default/files/img/publications/Finance/Poverty2011.pdf
+country,year,gini,gini_se,welfare_def,equiv_scale,monetary,series,source1,page,link,,
+Australia,1982,0.4,,gross,hh,,ABS1994 gross hh 1,Australian Bureau of Statistics 1994,,http://www.abs.gov.au/AUSSTATS/abs@.nsf/Previousproducts/07EFAA68F2F2335FCA2570EC00786CA6?opendocument,,
+Australia,1986,0.41,,gross,hh,,ABS1994 gross hh 1,Australian Bureau of Statistics 1994,,http://www.abs.gov.au/AUSSTATS/abs@.nsf/Previousproducts/07EFAA68F2F2335FCA2570EC00786CA6?opendocument,,
+Australia,1990,0.42,,gross,hh,,ABS1994 gross hh 1,Australian Bureau of Statistics 1994,,http://www.abs.gov.au/AUSSTATS/abs@.nsf/Previousproducts/07EFAA68F2F2335FCA2570EC00786CA6?opendocument,,
+Australia,1984,0.326,,disp,hh,,ABS1997 disp hh 1,Australian Bureau of Statistics 1997,191,http://www.ausstats.abs.gov.au/ausstats/free.nsf/0/F32D0E6724DAF08FCA257AFA00120B12/$File/13010_1997_chapter7.pdf,,
+Australia,1989,0.341,,disp,hh,,ABS1997 disp hh 1,Australian Bureau of Statistics 1997,191,http://www.ausstats.abs.gov.au/ausstats/free.nsf/0/F32D0E6724DAF08FCA257AFA00120B12/$File/13010_1997_chapter7.pdf,,
+Australia,1994,0.347,,disp,hh,,ABS1997 disp hh 1,Australian Bureau of Statistics 1997,191,http://www.ausstats.abs.gov.au/ausstats/free.nsf/0/F32D0E6724DAF08FCA257AFA00120B12/$File/13010_1997_chapter7.pdf,,
+Australia,1984,0.37,,gross,hh,,ABS1997 gross hh 1,Australian Bureau of Statistics 1997,191,http://www.ausstats.abs.gov.au/ausstats/free.nsf/0/F32D0E6724DAF08FCA257AFA00120B12/$File/13010_1997_chapter7.pdf,,
+Australia,1989,0.381,,gross,hh,,ABS1997 gross hh 1,Australian Bureau of Statistics 1997,191,http://www.ausstats.abs.gov.au/ausstats/free.nsf/0/F32D0E6724DAF08FCA257AFA00120B12/$File/13010_1997_chapter7.pdf,,
+Australia,1994,0.393,,gross,hh,,ABS1997 gross hh 1,Australian Bureau of Statistics 1997,191,http://www.ausstats.abs.gov.au/ausstats/free.nsf/0/F32D0E6724DAF08FCA257AFA00120B12/$File/13010_1997_chapter7.pdf,,
+Australia,1984,0.47,,market,hh,,ABS1997 market hh 1,Australian Bureau of Statistics 1997,191,http://www.ausstats.abs.gov.au/ausstats/free.nsf/0/F32D0E6724DAF08FCA257AFA00120B12/$File/13010_1997_chapter7.pdf,,
+Australia,1989,0.472,,market,hh,,ABS1997 market hh 1,Australian Bureau of Statistics 1997,191,http://www.ausstats.abs.gov.au/ausstats/free.nsf/0/F32D0E6724DAF08FCA257AFA00120B12/$File/13010_1997_chapter7.pdf,,
+Australia,1994,0.511,,market,hh,,ABS1997 market hh 1,Australian Bureau of Statistics 1997,191,http://www.ausstats.abs.gov.au/ausstats/free.nsf/0/F32D0E6724DAF08FCA257AFA00120B12/$File/13010_1997_chapter7.pdf,,
+Australia,1975,0.206,,con,hh,TRUE,BCW2000 con hh 1,"Barrett, Crossley, and Worswick 2000",133,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf,,
+Australia,1975,0.218,,con,oecdm,TRUE,BCW2000 con oecd 1,"Barrett, Crossley, and Worswick 2000",133,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf,,
+Australia,1975,0.259,,con,pc,TRUE,BCW2000 con pc 1,"Barrett, Crossley, and Worswick 2000",133,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf,,
+Australia,1975,0.202,0.003,con,sqrt,TRUE,BCW2000 con sqrt 1,"Barrett, Crossley, and Worswick 2000",127,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf,,
+Australia,1984,0.221,0.003,con,sqrt,TRUE,BCW2000 con sqrt 1,"Barrett, Crossley, and Worswick 2000",127,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf,,
+Australia,1989,0.214,0.003,con,sqrt,TRUE,BCW2000 con sqrt 1,"Barrett, Crossley, and Worswick 2000",127,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf,,
+Australia,1994,0.221,0.002,con,sqrt,TRUE,BCW2000 con sqrt 1,"Barrett, Crossley, and Worswick 2000",127,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf,,
+Australia,1975,0.242,,gross,hh,TRUE,BCW2000 gross hh 1,"Barrett, Crossley, and Worswick 2000",133,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf,,
+Australia,1975,0.279,,gross,oecdm,TRUE,BCW2000 gross oecd 1,"Barrett, Crossley, and Worswick 2000",133,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf,,
+Australia,1975,0.321,,gross,pc,TRUE,BCW2000 gross pc 1,"Barrett, Crossley, and Worswick 2000",133,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf,,
+Australia,1975,0.259,0.004,gross,sqrt,TRUE,BCW2000 gross sqrt 1,"Barrett, Crossley, and Worswick 2000",121,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf,,
+Australia,1984,0.28,0.004,gross,sqrt,TRUE,BCW2000 gross sqrt 1,"Barrett, Crossley, and Worswick 2000",121,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf,,
+Australia,1989,0.275,0.004,gross,sqrt,TRUE,BCW2000 gross sqrt 1,"Barrett, Crossley, and Worswick 2000",121,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf,,
+Australia,1994,0.302,0.003,gross,sqrt,TRUE,BCW2000 gross sqrt 1,"Barrett, Crossley, and Worswick 2000",121,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf,,
+Australia,1982,0.266,,gross,sqrt,TRUE,BCW2000 gross sqrt 2,"Barrett, Crossley, and Worswick 2000",131,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf,,
+Australia,1986,0.285,,gross,sqrt,TRUE,BCW2000 gross sqrt 2,"Barrett, Crossley, and Worswick 2000",131,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf,,
+Australia,1990,0.292,,gross,sqrt,TRUE,BCW2000 gross sqrt 2,"Barrett, Crossley, and Worswick 2000",131,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf,,
+Australia,1994,0.293,,gross,sqrt,TRUE,BCW2000 gross sqrt 2,"Barrett, Crossley, and Worswick 2000",131,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf,,
+Australia,1982,0.279,,gross,sqrt,TRUE,BCW2000 gross sqrt 3,"Barrett, Crossley, and Worswick 2000",131,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf,,
+Australia,1986,0.295,,gross,sqrt,TRUE,BCW2000 gross sqrt 3,"Barrett, Crossley, and Worswick 2000",131,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf,,
+Australia,1990,0.284,,gross,sqrt,TRUE,BCW2000 gross sqrt 3,"Barrett, Crossley, and Worswick 2000",131,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf,,
+Australia,1995,0.289,,gross,sqrt,TRUE,BCW2000 gross sqrt 3,"Barrett, Crossley, and Worswick 2000",131,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf,,
+Bosnia and Herzegovina,2007,0.3406,,con,pc,,BHAS con pc,Bosnia and Herzgovina Agency for Statistics 2008,42,http://www.bhas.ba/ankete/hbs_07_001-en.pdf,,
+Bosnia and Herzegovina,2011,0.312,,con,pc,,BHAS con pc,Bosnia and Herzgovina Agency for Statistics 2017,8,http://www.bhas.ba/saopstenja/2017/HBS_Final_17042017_hr.pdf,,
+Bosnia and Herzegovina,2015,0.29,,con,pc,,BHAS con pc,Bosnia and Herzgovina Agency for Statistics 2017,8,http://www.bhas.ba/saopstenja/2017/HBS_Final_17042017_hr.pdf,,
+Brazil,1981,0.574,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf,,
+Brazil,1982,0.581,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf,,
+Brazil,1983,0.584,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf,,
+Brazil,1984,0.583,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf,,
+Brazil,1985,0.589,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf,,
+Brazil,1986,0.578,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf,,
+Brazil,1987,0.592,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf,,
+Brazil,1988,0.609,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf,,
+Brazil,1989,0.625,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf,,
+Brazil,1990,0.604,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf,,
+Brazil,1992,0.573,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf,,
+Brazil,1993,0.595,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf,,
+Brazil,1995,0.591,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf,,
+Brazil,1996,0.591,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf,,
+Brazil,1997,0.593,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf,,
+Brazil,1998,0.591,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf,,
+Brazil,1999,0.585,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf,,
+Brazil,2001,0.586,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf,,
+Brazil,2002,0.58,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf,,
+Brazil,2003,0.575,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf,,
+Brazil,2004,0.564,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf,,
+Canada,1969,0.176,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140,,
+Canada,1978,0.18,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140,,
+Canada,1982,0.175,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140,,
+Canada,1986,0.185,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140,,
+Canada,1992,0.173,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140,,
+Canada,1996,0.176,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140,,
+Canada,1997,0.169,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140,,
+Canada,1998,0.173,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140,,
+Canada,1999,0.175,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140,,
+Canada,1971,0.373,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1972,0.368,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1973,0.368,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1974,0.363,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1975,0.364,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1976,0.374,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1977,0.362,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1978,0.367,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1979,0.355,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1980,0.358,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1981,0.351,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1982,0.353,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1983,0.363,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1984,0.359,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1985,0.358,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1986,0.359,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1987,0.357,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1988,0.355,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1989,0.352,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1990,0.352,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1991,0.357,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1992,0.356,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1993,0.358,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1994,0.354,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1995,0.357,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1971,0.4,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1972,0.395,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1973,0.392,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1974,0.389,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1975,0.392,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1976,0.402,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1977,0.388,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1978,0.394,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1979,0.381,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1980,0.383,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1981,0.377,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1982,0.381,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1983,0.393,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1984,0.389,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1985,0.388,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1986,0.389,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1987,0.39,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1988,0.39,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1989,0.386,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1990,0.389,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1991,0.395,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1992,0.394,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1993,0.396,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1994,0.394,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1995,0.397,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1971,0.447,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1972,0.446,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1973,0.445,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1974,0.441,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1975,0.451,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1976,0.462,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1977,0.445,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1978,0.445,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1979,0.436,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1980,0.442,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1981,0.437,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1982,0.453,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1983,0.471,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1984,0.469,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1985,0.466,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1986,0.467,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1987,0.468,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1988,0.469,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1989,0.461,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1990,0.47,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1991,0.486,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1992,0.491,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1993,0.497,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1994,0.495,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+Canada,1995,0.493,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,,,
+China,1985,0.2827,,disp,pc,,CRT2007a disp pc,"Chotikapanich, Rao, and Tang 2007a",141,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4991.2007.00220.x/full,,
+China,1991,0.3061,,disp,pc,,CRT2007a disp pc,"Chotikapanich, Rao, and Tang 2007a",141,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4991.2007.00220.x/full,,
+China,1995,0.3506,,disp,pc,,CRT2007a disp pc,"Chotikapanich, Rao, and Tang 2007a",141,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4991.2007.00220.x/full,,
+China,2000,0.3471,,disp,pc,,CRT2007a disp pc,"Chotikapanich, Rao, and Tang 2007a",141,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4991.2007.00220.x/full,,
+China,2003,0.4018,,disp,pc,,CRT2007a disp pc,"Chotikapanich, Rao, and Tang 2007a",141,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4991.2007.00220.x/full,,
+China,2003,0.479,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2013,,http://www.stats.gov.cn/tjgz/tjdt/201301/t20130118_17719.html,,
+China,2004,0.473,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2013,,http://www.stats.gov.cn/tjgz/tjdt/201301/t20130118_17719.html,,
+China,2005,0.485,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2013,,http://www.stats.gov.cn/tjgz/tjdt/201301/t20130118_17719.html,,
+China,2006,0.487,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2013,,http://www.stats.gov.cn/tjgz/tjdt/201301/t20130118_17719.html,,
+China,2007,0.484,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2013,,http://www.stats.gov.cn/tjgz/tjdt/201301/t20130118_17719.html,,
+China,2008,0.491,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2013,,http://www.stats.gov.cn/tjgz/tjdt/201301/t20130118_17719.html,,
+China,2009,0.49,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2013,,http://www.stats.gov.cn/tjgz/tjdt/201301/t20130118_17719.html,,
+China,2010,0.481,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2013,,http://www.stats.gov.cn/tjgz/tjdt/201301/t20130118_17719.html,,
+China,2011,0.477,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2013,,http://www.stats.gov.cn/tjgz/tjdt/201301/t20130118_17719.html,,
+China,2012,0.474,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2013,,http://www.stats.gov.cn/tjgz/tjdt/201301/t20130118_17719.html,,
+China,2013,0.473,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2014,,http://www.stats.gov.cn/english/PressRelease/201401/t20140120_502079.html,,
+China,2014,0.469,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2015,,http://www.stats.gov.cn/english/PressRelease/201501/t20150120_671038.html,,
+China,2002,0.46,,disp,pc,FALSE,SCS2013 disp pc,"Shi, Chuliang, and Sicular 2013",58,https://books.google.com/books?id=0dCaAAAAQBAJ&pg=PA58,,
+China,2007,0.483,,disp,pc,FALSE,SCS2013 disp pc,"Shi, Chuliang, and Sicular 2013",58,https://books.google.com/books?id=0dCaAAAAQBAJ&pg=PA58,,
+China,1978,0.31,,disp,pc,,SY2011 disp pc,Sutherland and Yao 2011,101,http://cjres.oxfordjournals.org/content/4/1/91.full.pdf,,
+China,1985,0.29,,disp,pc,,SY2011 disp pc,Sutherland and Yao 2011,101,http://cjres.oxfordjournals.org/content/4/1/91.full.pdf,,
+China,1990,0.33,,disp,pc,,SY2011 disp pc,Sutherland and Yao 2011,101,http://cjres.oxfordjournals.org/content/4/1/91.full.pdf,,
+China,1995,0.39,,disp,pc,,SY2011 disp pc,Sutherland and Yao 2011,101,http://cjres.oxfordjournals.org/content/4/1/91.full.pdf,,
+China,2000,0.41,,disp,pc,,SY2011 disp pc,Sutherland and Yao 2011,101,http://cjres.oxfordjournals.org/content/4/1/91.full.pdf,,
+China,2005,0.44,,disp,pc,,SY2011 disp pc,Sutherland and Yao 2011,101,http://cjres.oxfordjournals.org/content/4/1/91.full.pdf,,
+China,2006,0.45,,disp,pc,,SY2011 disp pc,Sutherland and Yao 2011,101,http://cjres.oxfordjournals.org/content/4/1/91.full.pdf,,
+China,1985,0.31,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206,,
+China,1986,0.311,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206,,
+China,1987,0.317,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206,,
+China,1988,0.337,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206,,
+China,1989,0.342,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206,,
+China,1990,0.327,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206,,
+China,1991,0.345,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206,,
+China,1992,0.361,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206,,
+China,1993,0.38,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206,,
+China,1994,0.381,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206,,
+China,1995,0.382,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206,,
+China,1996,0.349,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206,,
+China,1997,0.375,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206,,
+China,1998,0.378,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206,,
+China,1999,0.389,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206,,
+China,2000,0.407,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206,,
+China,2001,0.415,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206,,
+Croatia,2000,0.31,,disp,hh,FALSE,CBS disp hh 1,Croatian Bureau of Statistics 2004,,http://www.dzs.hr/Eng/publication/2004/13-2-2_1e2004.htm,,
+Croatia,2001,0.31,,disp,hh,FALSE,CBS disp hh 1,Croatian Bureau of Statistics 2004,,http://www.dzs.hr/Eng/publication/2004/13-2-2_1e2004.htm,,
+Croatia,2002,0.31,,disp,hh,FALSE,CBS disp hh 1,Croatian Bureau of Statistics 2004,,http://www.dzs.hr/Eng/publication/2004/13-2-2_1e2004.htm,,
+Croatia,2003,0.29,,disp,hh,FALSE,CBS disp hh 1,Croatian Bureau of Statistics 2006,,http://www.dzs.hr/Eng/publication/2006/14-1-2_1e2006.htm,,
+Croatia,2004,0.29,,disp,hh,FALSE,CBS disp hh 1,Croatian Bureau of Statistics 2007,,http://www.dzs.hr/Eng/publication/2007/14-1-2_1e2007.htm,,
+Croatia,2005,0.29,,disp,hh,FALSE,CBS disp hh 1,Croatian Bureau of Statistics 2008,,http://www.dzs.hr/Eng/publication/2008/14-1-2_1e2008.htm,,
+Croatia,2006,0.28,,disp,hh,FALSE,CBS disp hh 1,Croatian Bureau of Statistics 2009,,http://www.dzs.hr/Eng/publication/2009/14-1-2_1e2009.htm,,
+Croatia,2007,0.28,,disp,hh,FALSE,CBS disp hh 1,Croatian Bureau of Statistics 2009,,http://www.dzs.hr/Eng/publication/2009/14-1-2_1e2009.htm,,
+Croatia,2008,0.29,,disp,hh,FALSE,CBS disp hh 1,Croatian Bureau of Statistics 2009,,http://www.dzs.hr/Eng/publication/2009/14-1-2_1e2009.htm,,
+Croatia,2009,0.27,,disp,hh,FALSE,CBS disp hh 1,Croatian Bureau of Statistics 2010,,http://www.dzs.hr/Hrv_Eng/publication/2010/14-01-02_01_2010.htm,,
+Croatia,2000,0.28,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2004,,http://www.dzs.hr/Eng/publication/2004/13-2-2_1e2004.htm,,
+Croatia,2001,0.29,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2004,,http://www.dzs.hr/Eng/publication/2004/13-2-2_1e2004.htm,,
+Croatia,2002,0.29,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2004,,http://www.dzs.hr/Eng/publication/2004/13-2-2_1e2004.htm,,
+Croatia,2003,0.3,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2006,,http://www.dzs.hr/Eng/publication/2006/14-1-2_1e2006.htm,,
+Croatia,2004,0.31,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2007,,http://www.dzs.hr/Eng/publication/2007/14-1-2_1e2007.htm,,
+Croatia,2005,0.31,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2008,,http://www.dzs.hr/Eng/publication/2008/14-1-2_1e2008.htm,,
+Croatia,2006,0.29,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2009,,http://www.dzs.hr/Eng/publication/2009/14-1-2_1e2009.htm,,
+Croatia,2007,0.3,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2009,,http://www.dzs.hr/Eng/publication/2009/14-1-2_1e2009.htm,,
+Croatia,2008,0.3,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2009,,http://www.dzs.hr/Eng/publication/2009/14-1-2_1e2009.htm,,
+Croatia,2009,0.29,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2010,,http://www.dzs.hr/Hrv_Eng/publication/2010/14-01-02_01_2010.htm,,
+Germany,1992,0.249,,disp,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile,,
+Germany,1995,0.265,,disp,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile,,
+Germany,2000,0.251,,disp,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile,,
+Germany,2005,0.278,,disp,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile,,
+Germany,2010,0.285,,disp,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile,,
+Germany,2011,0.282,,disp,oecdm,TRUE,BPB net oecdm 1,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile,,
+Germany,1992,0.243,,disp,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile,,
+Germany,1995,0.255,,disp,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile,,
+Germany,2000,0.241,,disp,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile,,
+Germany,2005,0.262,,disp,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile,,
+Germany,2010,0.272,,disp,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile,,
+Germany,2011,0.272,,disp,oecdm,TRUE,BPB net oecdm 2,Bundeszentrale fu_r politische Bildung 2013,169,https://www.destatis.de/DE/Publikationen/Datenreport/Downloads/Datenreport2013.pdf?__blob=publicationFile,,
+Guatemala,2000,0.476,,con,pc,,INE2002 con pc,Instituto Nacional de Estadi_stica de Guatemala 2002 ,20,https://www.ine.gob.gt/sistema/uploads/2014/01/15/v8ukWQ78M4VJrnYqyN2oCumMy1GiBzaf.pdf,,
+Guatemala,2000,0.57,,gross,pc,,INE2002 gross pc,Instituto Nacional de Estadi_stica de Guatemala 2002 ,20,https://www.ine.gob.gt/sistema/uploads/2014/01/15/v8ukWQ78M4VJrnYqyN2oCumMy1GiBzaf.pdf,,
+Ecuador,1998,0.443,,con,pc,,INEC con pc,Instituto Nacional de Estadistica y Censos 2015,98,http://www.ecuadorencifras.gob.ec//documentos/web-inec/Bibliotecas/Libros/reportePobreza.pdf,,
+Ecuador,2006,0.455,,con,pc,,INEC con pc,Instituto Nacional de Estadistica y Censos 2015,98,http://www.ecuadorencifras.gob.ec//documentos/web-inec/Bibliotecas/Libros/reportePobreza.pdf,,
+Ecuador,2014,0.408,,con,pc,,INEC con pc,Instituto Nacional de Estadistica y Censos 2015,98,http://www.ecuadorencifras.gob.ec//documentos/web-inec/Bibliotecas/Libros/reportePobreza.pdf,,
+Iceland,1992,0.276,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,1993,0.267,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,1994,0.264,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,1995,0.265,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,1996,0.275,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,1997,0.285,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,1998,0.291,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,1999,0.305,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2000,0.313,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2001,0.325,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2002,0.329,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2003,0.352,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2004,0.352,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2005,0.389,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2006,0.403,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2007,0.441,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2008,0.373,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,1992,0.394,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,1993,0.396,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,1994,0.396,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,1995,0.395,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,1996,0.406,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,1997,0.417,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,1998,0.423,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,1999,0.434,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2000,0.443,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2001,0.455,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2002,0.458,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2003,0.478,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2004,0.479,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2005,0.51,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2006,0.517,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2007,0.551,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2008,0.479,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,1992,0.427,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,1993,0.428,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,1994,0.432,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,1995,0.435,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,1996,0.446,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,1997,0.455,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,1998,0.461,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,1999,0.471,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2000,0.478,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2001,0.486,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2002,0.49,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2003,0.507,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2004,0.507,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2005,0.536,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2006,0.539,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2007,0.568,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,2008,0.488,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf,,
+Iceland,1992,0.28,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422,,
+Iceland,1993,0.27,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422,,
+Iceland,1994,0.26,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422,,
+Iceland,1995,0.27,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422,,
+Iceland,1996,0.28,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422,,
+Iceland,1997,0.29,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422,,
+Iceland,1998,0.29,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422,,
+Iceland,1999,0.3,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422,,
+Iceland,2000,0.31,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422,,
+Iceland,2001,0.32,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422,,
+Iceland,2002,0.33,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422,,
+Iceland,2003,0.35,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422,,
+Iceland,2004,0.35,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422,,
+Iceland,2005,0.39,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422,,
+Iceland,2006,0.4,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422,,
+Iceland,2007,0.44,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422,,
+Iceland,2008,0.37,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422,,
+Iceland,2009,0.34,,disp,sqrt,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422,,
+India,2011,0.368,,con,pc,,CSI2013 con pc,Central Statistics Office of India 2013,38,http://mospi.nic.in/sites/default/files/publication_reports/SAARC_India_Rep_29aug13.pdf,,
+India,1994,0.35,,con,pc,,TD2013 con pc,Thorat and Dubey 2013,42,http://www.pnud.org/content/dam/india/docs/human-development/how-inclusive-has-growth-been-in-india-during-1993-94-2009-10.pdf,,
+India,2005,0.35,,con,pc,,TD2013 con pc,Thorat and Dubey 2013,42,http://www.pnud.org/content/dam/india/docs/human-development/how-inclusive-has-growth-been-in-india-during-1993-94-2009-10.pdf,,
+India,2010,0.37,,con,pc,,TD2013 con pc,Thorat and Dubey 2013,42,http://www.pnud.org/content/dam/india/docs/human-development/how-inclusive-has-growth-been-in-india-during-1993-94-2009-10.pdf,,
+India,2004,0.35,,con,sqrt,TRUE,VD con sqrt,Vanneman and Dubey 2013,446,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA446,,
+India,2004,0.48,,disp,sqrt,TRUE,VD disp sqrt,Vanneman and Dubey 2013,446,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA446,,
+Ireland,2003,0.311,,disp,pc,,CSO Ireland disp pc,CSO Ireland 2007,13,http://www.cso.ie/en/media/csoie/releasespublications/documents/eusilc/2006/eusilc_2006.pdf,,
+Ireland,2004,0.318,,disp,pc,,CSO Ireland disp pc,CSO Ireland 2007,13,http://www.cso.ie/en/media/csoie/releasespublications/documents/eusilc/2006/eusilc_2006.pdf,,
+Ireland,2005,0.324,,disp,pc,,CSO Ireland disp pc,CSO Ireland 2007,13,http://www.cso.ie/en/media/csoie/releasespublications/documents/eusilc/2006/eusilc_2006.pdf,,
+Ireland,2006,0.324,,disp,pc,,CSO Ireland disp pc,CSO Ireland 2007,13,http://www.cso.ie/en/media/csoie/releasespublications/documents/eusilc/2006/eusilc_2006.pdf,,
+Ireland,2007,0.317,,disp,pc,,CSO Ireland disp pc,CSO Ireland 2013,3,http://www.cso.ie/en/media/csoie/releasespublications/documents/silc/2011/silc_2011.pdf,,
+Ireland,2008,0.307,,disp,pc,,CSO Ireland disp pc,CSO Ireland 2013,3,http://www.cso.ie/en/media/csoie/releasespublications/documents/silc/2011/silc_2011.pdf,,
+Italy,1967,0.391,,disp,pc,TRUE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,1968,0.408,,disp,pc,TRUE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,1969,0.397,,disp,pc,TRUE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,1970,0.383,,disp,pc,TRUE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,1971,0.397,,disp,pc,TRUE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,1972,0.385,,disp,pc,TRUE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,1973,0.401,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,1974,0.391,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,1975,0.353,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,1977,0.358,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,1978,0.329,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,1979,0.361,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,1980,0.332,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,1981,0.315,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,1982,0.297,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,1983,0.3,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,1984,0.321,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,1986,0.307,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,1987,0.318,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,1989,0.3,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,1991,0.305,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,1993,0.328,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,1995,0.331,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,1998,0.342,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,2000,0.333,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,2002,0.328,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,2004,0.351,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,2006,0.337,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Italy,2008,0.327,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf,,
+Japan,2004,0.284,,con,sqrt,TRUE,M2013 con sqrt,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397,,
+Japan,2005,0.298,,con,sqrt,TRUE,M2013 con sqrt,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397,,
+Japan,2006,0.292,,con,sqrt,TRUE,M2013 con sqrt,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397,,
+Japan,2007,0.3,,con,sqrt,TRUE,M2013 con sqrt,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397,,
+Japan,2008,0.293,,con,sqrt,TRUE,M2013 con sqrt,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397,,
+Japan,2009,0.31,,con,sqrt,TRUE,M2013 con sqrt,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397,,
+Japan,1979,0.271,,gross,sqrt,TRUE,M2013 gross sqrt 1,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397,,
+Japan,2004,0.308,,gross,sqrt,TRUE,M2013 gross sqrt 1,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397,,
+Japan,1992,0.377,,gross,sqrt,TRUE,M2013 gross sqrt 2,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397,,
+Japan,2004,0.4,,gross,sqrt,TRUE,M2013 gross sqrt 2,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397,,
+Japan,2005,0.395,,gross,sqrt,TRUE,M2013 gross sqrt 2,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397,,
+Japan,2006,0.398,,gross,sqrt,TRUE,M2013 gross sqrt 2,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397,,
+Japan,2007,0.395,,gross,sqrt,TRUE,M2013 gross sqrt 2,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397,,
+Japan,2004,0.326,,market,sqrt,TRUE,M2013 market sqrt 1,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397,,
+Japan,2005,0.316,,market,sqrt,TRUE,M2013 market sqrt 1,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397,,
+Japan,2006,0.319,,market,sqrt,TRUE,M2013 market sqrt 1,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397,,
+Japan,2007,0.325,,market,sqrt,TRUE,M2013 market sqrt 1,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397,,
+Japan,2008,0.326,,market,sqrt,TRUE,M2013 market sqrt 1,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397,,
+Japan,2004,0.354,,market,sqrt,TRUE,M2013 market sqrt 2,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397,,
+Japan,2005,0.351,,market,sqrt,TRUE,M2013 market sqrt 2,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397,,
+Japan,2006,0.347,,market,sqrt,TRUE,M2013 market sqrt 2,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397,,
+Japan,2007,0.327,,market,sqrt,TRUE,M2013 market sqrt 2,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397,,
+Japan,2008,0.343,,market,sqrt,TRUE,M2013 market sqrt 2,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397,,
+Japan,2002,0.3217,,disp,sqrt,TRUE,MHLW IRS disp sqrt,"Japanese Ministry of Health, Labor, and Welfare 2002",,http://www.e-stat.go.jp/SG1/estat/Xlsdl.do?sinfid=000002479640,,
+Japan,2005,0.3218,,disp,sqrt,TRUE,MHLW IRS disp sqrt,"Japanese Ministry of Health, Labor, and Welfare 2005",,http://www.e-stat.go.jp/SG1/estat/Xlsdl.do?sinfid=000002478869,,
+Japan,2008,0.3268,,disp,sqrt,TRUE,MHLW IRS disp sqrt,"Japanese Ministry of Health, Labor, and Welfare 2008",,http://www.e-stat.go.jp/SG1/estat/Xlsdl.do?sinfid=000008189056,,
+Japan,2011,0.3219,,disp,sqrt,TRUE,MHLW IRS disp sqrt,"Japanese Ministry of Health, Labor, and Welfare 2011",,http://www.e-stat.go.jp/SG1/estat/Xlsdl.do?sinfid=000023335999,,
+Japan,2002,0.4194,,market,sqrt,TRUE,MHLW IRS market sqrt,"Japanese Ministry of Health, Labor, and Welfare 2002",,http://www.e-stat.go.jp/SG1/estat/Xlsdl.do?sinfid=000002479640,,
+Japan,2005,0.4354,,market,sqrt,TRUE,MHLW IRS market sqrt,"Japanese Ministry of Health, Labor, and Welfare 2005",,http://www.e-stat.go.jp/SG1/estat/Xlsdl.do?sinfid=000002478869,,
+Japan,2008,0.4539,,market,sqrt,TRUE,MHLW IRS market sqrt,"Japanese Ministry of Health, Labor, and Welfare 2008",,http://www.e-stat.go.jp/SG1/estat/Xlsdl.do?sinfid=000008189056,,
+Japan,2011,0.4703,,market,sqrt,TRUE,MHLW IRS market sqrt,"Japanese Ministry of Health, Labor, and Welfare 2011",,http://www.e-stat.go.jp/SG1/estat/Xlsdl.do?sinfid=000023335999,,
+Japan,2009,0.313,,disp,pc,TRUE,Statistics Japan disp pc,Statistics Japan 2010,,http://www.e-stat.go.jp/SG1/estat/GL32020101.do?method=xlsDownload&fileId=000004955720&releaseCount=1,,
+Japan,2014,0.31,,disp,pc,TRUE,Statistics Japan disp pc,Statistics Japan 2015,,http://www.e-stat.go.jp/SG1/estat/GL32020101.do?method=xlsDownload&fileId=000007772322&releaseCount=1,,
+Japan,2009,0.283,,disp,sqrt,TRUE,Statistics Japan disp sqrt,Statistics Japan 2010,,http://www.e-stat.go.jp/SG1/estat/GL32020101.do?method=xlsDownload&fileId=000004955720&releaseCount=1,,
+Japan,2014,0.281,,disp,sqrt,TRUE,Statistics Japan disp sqrt,Statistics Japan 2015,,http://www.e-stat.go.jp/SG1/estat/GL32020101.do?method=xlsDownload&fileId=000007772322&releaseCount=1,,
+Japan,2009,0.432,,market,pc,TRUE,Statistics Japan market pc,Statistics Japan 2010,,http://www.e-stat.go.jp/SG1/estat/GL32020101.do?method=xlsDownload&fileId=000004955720&releaseCount=1,,
+Japan,2014,0.446,,market,pc,TRUE,Statistics Japan market pc,Statistics Japan 2015,,http://www.e-stat.go.jp/SG1/estat/GL32020101.do?method=xlsDownload&fileId=000007772322&releaseCount=1,,
+Japan,2009,0.406,,market,sqrt,TRUE,Statistics Japan market sqrt,Statistics Japan 2010,,http://www.e-stat.go.jp/SG1/estat/GL32020101.do?method=xlsDownload&fileId=000004955720&releaseCount=1,,
+Japan,2014,0.421,,market,sqrt,TRUE,Statistics Japan market sqrt,Statistics Japan 2015,,http://www.e-stat.go.jp/SG1/estat/GL32020101.do?method=xlsDownload&fileId=000007772322&releaseCount=1,,
+Japan,1961,0.39,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,1961,0.344,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,1967,0.375,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,1967,0.328,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,1972,0.354,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,1972,0.314,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,1975,0.375,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,1975,0.346,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,1978,0.365,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,1978,0.338,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,1981,0.349,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,1981,0.314,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,1984,0.398,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,1984,0.343,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,1987,0.405,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,1987,0.338,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,1990,0.433,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,1990,0.364,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,1993,0.439,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,1993,0.365,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,1996,0.441,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,1996,0.361,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,1999,0.472,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,1999,0.381,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,2002,0.498,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,2002,0.381,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,2005,0.526,,market,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Japan,2005,0.387,,disp,hh,TRUE,T2006 market hh,Tachibanaki 2006,3,http://onlinelibrary.wiley.com/doi/10.1111/j.1468-5876.2006.00355.x/epdf,,
+Macedonia,2009,0.409,,disp,oecdm,TRUE,Eurostat The former Yugoslav Republic of Macedonia disp oecdm 1,Statistics Macedonia,,http://makstat.stat.gov.mk/PXWeb/pxweb/en/MakStat/MakStat__ZivotenStandard__LaekenIndikatorSiromastija/125_ZivStd_Mk_LaekenGENERAL_en.px/?rxid=46ee0f64-2992-4b45-a2d9-cb4e5f7ec5ef,,
+Macedonia,2010,0.385,,disp,oecdm,TRUE,Eurostat The former Yugoslav Republic of Macedonia disp oecdm 1,Statistics Macedonia,,http://makstat.stat.gov.mk/PXWeb/pxweb/en/MakStat/MakStat__ZivotenStandard__LaekenIndikatorSiromastija/125_ZivStd_Mk_LaekenGENERAL_en.px/?rxid=46ee0f64-2992-4b45-a2d9-cb4e5f7ec5ef,,
+Moldova,1998,0.4435,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt,,
+Moldova,1999,0.4342,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt,,
+Moldova,2000,0.4165,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt,,
+Moldova,2001,0.4279,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt,,
+Moldova,2002,0.4208,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt,,
+Moldova,2003,0.3871,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt,,
+Moldova,2004,0.4014,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt,,
+Moldova,2005,0.4105,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt,,
+Moldova,1998,0.3922,,con,hh,,NBS Moldova con hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt,,
+Moldova,1999,0.3866,,con,hh,,NBS Moldova con hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt,,
+Moldova,2000,0.3766,,con,hh,,NBS Moldova con hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt,,
+Moldova,2001,0.3775,,con,hh,,NBS Moldova con hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt,,
+Moldova,2002,0.3637,,con,hh,,NBS Moldova con hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt,,
+Moldova,2003,0.3518,,con,hh,,NBS Moldova con hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt,,
+Moldova,2004,0.3571,,con,hh,,NBS Moldova con hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt,,
+Moldova,2005,0.3766,,con,hh,,NBS Moldova con hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt,,
+Moldova,2007,0.3712,,disp,pc,FALSE,NBS Moldova disp pc,National Bureau of Statistics of Moldova 2008,56,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_privind_nivelul_de_trai_in_2007.pdf,,
+Moldova,2007,0.4556,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2008,56,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_privind_nivelul_de_trai_in_2007.pdf,,
+Moldova,2007,0.3287,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2008,56,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_privind_nivelul_de_trai_in_2007.pdf,,
+Moldova,2009,0.3702,,disp,pc,FALSE,NBS Moldova disp pc,National Bureau of Statistics of Moldova 2010,62,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2009.pdf,,
+Moldova,2009,0.4338,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2010,62,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2009.pdf,,
+Moldova,2009,0.3045,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2010,62,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2009.pdf,,
+Moldova,2012,0.3963,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2008,67,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2012.pdf,,
+Moldova,2012,0.3241,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2008,67,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2012.pdf,,
+Morocco,1985,0.399,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,28,www.hcp.ma/file/174377,,
+Morocco,1991,0.393,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,www.hcp.ma/file/174377,,
+Morocco,1999,0.39,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2008,,http://www.hcp.ma/Indices-de-la-pauvrete-vulnerabilite-et-inegalite-selon-le-milieu-de-residence-1985-2007_a658.html,,
+Morocco,2001,0.406,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,www.hcp.ma/file/174377,,
+Morocco,2007,0.407,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,www.hcp.ma/file/174377,,
+Morocco,2014,0.388,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,www.hcp.ma/file/174377,,
+Netherlands,2005,0.33,,disp,hh,,AK2013 disp hh,Arts and Kessels 2013,13,https://www.cbs.nl/NR/rdonlyres/EF9281B6-850E-4485-9058-B6BEC91ED0F0/0/2013miljonairsupdate.pdf,,
+Netherlands,2006,0.335,,disp,hh,,AK2013 disp hh,Arts and Kessels 2013,13,https://www.cbs.nl/NR/rdonlyres/EF9281B6-850E-4485-9058-B6BEC91ED0F0/0/2013miljonairsupdate.pdf,,
+Netherlands,2007,0.352,,disp,hh,,AK2013 disp hh,Arts and Kessels 2013,13,https://www.cbs.nl/NR/rdonlyres/EF9281B6-850E-4485-9058-B6BEC91ED0F0/0/2013miljonairsupdate.pdf,,
+Netherlands,2008,0.347,,disp,hh,,AK2013 disp hh,Arts and Kessels 2013,13,https://www.cbs.nl/NR/rdonlyres/EF9281B6-850E-4485-9058-B6BEC91ED0F0/0/2013miljonairsupdate.pdf,,
+Netherlands,2009,0.344,,disp,hh,,AK2013 disp hh,Arts and Kessels 2013,13,https://www.cbs.nl/NR/rdonlyres/EF9281B6-850E-4485-9058-B6BEC91ED0F0/0/2013miljonairsupdate.pdf,,
+Netherlands,2010,0.34,,disp,hh,,AK2013 disp hh,Arts and Kessels 2013,13,https://www.cbs.nl/NR/rdonlyres/EF9281B6-850E-4485-9058-B6BEC91ED0F0/0/2013miljonairsupdate.pdf,,
+New Zealand,1984,0.272,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc,,
+New Zealand,1984,0.275,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc,,
+New Zealand,1986,0.27,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc,,
+New Zealand,1988,0.271,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc,,
+New Zealand,1990,0.302,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc,,
+New Zealand,1992,0.319,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc,,
+New Zealand,1994,0.332,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc,,
+New Zealand,1996,0.331,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc,,
+New Zealand,1998,0.33,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc,,
+New Zealand,2001,0.338,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc,,
+New Zealand,2004,0.334,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc,,
+New Zealand,2007,0.32,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc,,
+New Zealand,2008,0.333,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc,,
+New Zealand,2009,0.329,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc,,
+New Zealand,2010,0.324,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc,,
+New Zealand,2011,0.351,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc,,
+New Zealand,2012,0.324,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc,,
+New Zealand,2013,0.334,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc,,
+New Zealand,2014,0.342,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc,,
+New Zealand,2015,0.35,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc,,
+Russian Federation,1994,0.48,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,1995,0.45,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,1996,0.46,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,1998,0.47,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,2000,0.52,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,2001,0.49,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,2002,0.49,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,2003,0.51,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,2004,0.51,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,2005,0.43,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,2006,0.5,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,2007,0.48,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,2008,0.5,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,2009,0.42,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,1994,0.46,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,1995,0.44,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,1996,0.49,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,1998,0.44,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,2000,0.5,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,2001,0.49,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,2002,0.49,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,2003,0.48,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,2004,0.5,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,2005,0.37,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,2006,0.39,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,2007,0.38,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,2008,0.48,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,2009,0.35,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en ,,
+Russian Federation,1989,0.265,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf,,
+Russian Federation,1992,0.289,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf,,
+Russian Federation,1993,0.398,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf,,
+Russian Federation,1994,0.409,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf,,
+Russian Federation,1995,0.381,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf,,
+Russian Federation,1996,0.375,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf,,
+Russian Federation,1997,0.375,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf,,
+Russian Federation,1997,0.353,,con,pc,FALSE,MY2006 con pc,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1,,
+Russian Federation,1998,0.369,,con,pc,FALSE,MY2006 con pc,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1,,
+Russian Federation,1999,0.357,,con,pc,FALSE,MY2006 con pc,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1,,
+Russian Federation,2000,0.349,,con,pc,FALSE,MY2006 con pc,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1,,
+Russian Federation,2001,0.339,,con,pc,FALSE,MY2006 con pc,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1,,
+Russian Federation,2002,0.338,,con,pc,FALSE,MY2006 con pc,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1,,
+Russian Federation,2003,0.332,,con,pc,FALSE,MY2006 con pc,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1,,
+South Africa,1993,0.66,0.005,disp,pc,TRUE,LFW2012 disp pc,"Leibbrandt, Finn, and Woolard 2012",26,http://www.tandfonline.com/doi/pdf/10.1080/0376835X.2012.645639,,
+South Africa,2008,0.7,0.01,disp,pc,TRUE,LFW2012 disp pc,"Leibbrandt, Finn, and Woolard 2012",26,http://www.tandfonline.com/doi/pdf/10.1080/0376835X.2012.645639,,
+South Africa,1993,0.51,,con,sqrt,TRUE,LFW2013 con sqrt,"Leibbrandt, Finn, and Woolard 2013",469,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA469,,
+South Africa,2008,0.66,,con,sqrt,TRUE,LFW2013 con sqrt,"Leibbrandt, Finn, and Woolard 2013",469,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA469,,
+South Africa,1993,0.61,,disp,sqrt,TRUE,LFW2013 disp sqrt,"Leibbrandt, Finn, and Woolard 2013",469,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA469,,
+South Africa,2008,0.65,,disp,sqrt,TRUE,LFW2013 disp sqrt,"Leibbrandt, Finn, and Woolard 2013",469,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA469,,
+South Africa,2004,0.59,,con,pc,TRUE,LWFA2010 con pc,"Leibbrandt, Finn, Woolard, and Argent 2010",16,http://dx.doi.org/10.1787/5kmms0t7p1ms-en ,,
+South Africa,1993,0.66,,disp,pc,TRUE,LWFA2010 disp pc,"Leibbrandt, Finn, Woolard, and Argent 2010",32,http://dx.doi.org/10.1787/5kmms0t7p1ms-en ,,
+South Africa,2000,0.68,,disp,pc,TRUE,LWFA2010 disp pc,"Leibbrandt, Finn, Woolard, and Argent 2010",32,http://dx.doi.org/10.1787/5kmms0t7p1ms-en ,,
+South Africa,2008,0.7,,disp,pc,TRUE,LWFA2010 disp pc,"Leibbrandt, Finn, Woolard, and Argent 2010",32,http://dx.doi.org/10.1787/5kmms0t7p1ms-en ,,
+South Africa,1975,0.68,,gross,pc,,SN2005 gross pc 1,Seekings and Nattrass 2005,307,https://books.google.com/books?hl=en&lr=&id=_lLHLuDgzG0C&oi=fnd&pg=PA307,,
+South Africa,1991,0.68,,gross,pc,,SN2005 gross pc 1,Seekings and Nattrass 2005,307,https://books.google.com/books?hl=en&lr=&id=_lLHLuDgzG0C&oi=fnd&pg=PA307,,
+South Africa,1996,0.69,,gross,pc,,SN2005 gross pc 1,Seekings and Nattrass 2005,307,https://books.google.com/books?hl=en&lr=&id=_lLHLuDgzG0C&oi=fnd&pg=PA307,,
+South Africa,1995,0.65,,gross,pc,,SN2005 gross pc 2,Seekings and Nattrass 2005,307,https://books.google.com/books?hl=en&lr=&id=_lLHLuDgzG0C&oi=fnd&pg=PA307,,
+South Africa,2000,0.69,,gross,pc,,SN2005 gross pc 2,Seekings and Nattrass 2005,307,https://books.google.com/books?hl=en&lr=&id=_lLHLuDgzG0C&oi=fnd&pg=PA307,,
+South Africa,1995,0.56,,con,hh,FALSE,SSA2002 con hh,Statistics South Africa 2002,48,https://web.archive.org/web/20060609011155/http://www.statssa.gov.za/publications/earningspending2000/earningspending2000October2000.pdf,,
+South Africa,2000,0.57,,con,hh,FALSE,SSA2002 con hh,Statistics South Africa 2002,48,https://web.archive.org/web/20060609011155/http://www.statssa.gov.za/publications/earningspending2000/earningspending2000October2000.pdf,,
+South Africa,2006,0.67,,con,pc,FALSE,SSA2014 con pc,Statistics South Africa 2014,14,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-06March2014.pdf,,
+South Africa,2009,0.65,,con,pc,FALSE,SSA2014 con pc,Statistics South Africa 2014,14,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-06March2014.pdf,,
+South Africa,2011,0.65,,con,pc,FALSE,SSA2014 con pc,Statistics South Africa 2014,14,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-06March2014.pdf,,
+South Africa,2006,0.72,,gross,pc,FALSE,SSA2014 gross pc,Statistics South Africa 2014,14,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-06March2014.pdf,,
+South Africa,2009,0.7,,gross,pc,FALSE,SSA2014 gross pc,Statistics South Africa 2014,14,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-06March2014.pdf,,
+South Africa,2011,0.69,,gross,pc,FALSE,SSA2014 gross pc,Statistics South Africa 2014,14,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-06March2014.pdf,,
+Sri Lanka,2013,0.46,,gross,pc,FALSE,Statistics Sri Lanka gross pc,Statistics Sri Lanka 2015,14,http://www.statistics.gov.lk/HIES/HIES2012_13FinalReport.pdf,,
+Sri Lanka,2013,0.39,,con,pc,FALSE,Statistics Sri Lanka con pc,Statistics Sri Lanka 2015,14,http://www.statistics.gov.lk/HIES/HIES2012_13FinalReport.pdf,,
+Thailand,2004,0.411,,gross,hh,FALSE,NSO Thailand gross hh,National Statistical Office of Thailand 2010,4,"http://web.nso.go.th/en/survey/bts/datafiles/560619_10_8.%20Household%20Income,%20Expenditure%20and%20Debt.pdf",,
+Thailand,2004,0.493,,gross,pc,FALSE,NSO Thailand gross pc,National Statistical Office of Thailand 2010,4,"http://web.nso.go.th/en/survey/bts/datafiles/560619_10_8.%20Household%20Income,%20Expenditure%20and%20Debt.pdf",,
+Thailand,2006,0.439,,gross,hh,FALSE,NSO Thailand gross hh,National Statistical Office of Thailand 2014,40,http://web.nso.go.th/en/pub/e_book/Indicator_eco_13/files/assets/basic-html/page40.html,,
+Thailand,2006,0.512,,gross,pc,FALSE,NSO Thailand gross pc,National Statistical Office of Thailand 2014,40,http://web.nso.go.th/en/pub/e_book/Indicator_eco_13/files/assets/basic-html/page40.html,,
+Thailand,2007,0.418,,gross,hh,FALSE,NSO Thailand gross hh,National Statistical Office of Thailand 2015,46,http://web.nso.go.th/en/pub/e_book/The%202014%20Economic%20indicators%20in%20Brief/files/assets/basic-html/page46.html,,
+Thailand,2007,0.496,,gross,pc,FALSE,NSO Thailand gross pc,National Statistical Office of Thailand 2015,46,http://web.nso.go.th/en/pub/e_book/The%202014%20Economic%20indicators%20in%20Brief/files/assets/basic-html/page46.html,,
+Thailand,2009,0.408,,gross,hh,FALSE,NSO Thailand gross hh,National Statistical Office of Thailand 2015,46,http://web.nso.go.th/en/pub/e_book/The%202014%20Economic%20indicators%20in%20Brief/files/assets/basic-html/page46.html,,
+Thailand,2009,0.487,,gross,pc,FALSE,NSO Thailand gross pc,National Statistical Office of Thailand 2015,46,http://web.nso.go.th/en/pub/e_book/The%202014%20Economic%20indicators%20in%20Brief/files/assets/basic-html/page46.html,,
+Thailand,2011,0.402,,gross,hh,FALSE,NSO Thailand gross hh,National Statistical Office of Thailand 2015,46,http://web.nso.go.th/en/pub/e_book/The%202014%20Economic%20indicators%20in%20Brief/files/assets/basic-html/page46.html,,
+Thailand,2011,0.484,,gross,pc,FALSE,NSO Thailand gross pc,National Statistical Office of Thailand 2015,46,http://web.nso.go.th/en/pub/e_book/The%202014%20Economic%20indicators%20in%20Brief/files/assets/basic-html/page46.html,,
+Thailand,2013,0.391,,gross,pc,FALSE,NSO Thailand gross pc,National Statistical Office of Thailand 2015,46,http://web.nso.go.th/en/pub/e_book/The%202014%20Economic%20indicators%20in%20Brief/files/assets/basic-html/page46.html,,
+Vietnam,1999,0.39,,gross,pc,FALSE,GSO Vietnam gross pc,General Statistics Office of Vietnam 2005,,http://www.gso.gov.vn/default_en.aspx?tabid=508&ItemID=2510,,
+Vietnam,2002,0.42,,gross,pc,FALSE,GSO Vietnam gross pc,General Statistics Office of Vietnam 2005,,http://www.gso.gov.vn/default_en.aspx?tabid=508&ItemID=2510,,
+Vietnam,2004,0.413,,gross,pc,FALSE,GSO Vietnam gross pc,General Statistics Office of Vietnam 2005,,http://www.gso.gov.vn/default_en.aspx?tabid=508&ItemID=2510,,
+Zimbabwe,1995,0.501,,con,pc,FALSE,Zimstat  con pc,Zimbabwe National Statistics Agency 2013,42,http://www.zimstat.co.zw/sites/default/files/img/publications/Finance/Poverty2011.pdf,,
+Zimbabwe,2001,0.489,,con,pc,FALSE,Zimstat  con pc,Zimbabwe National Statistics Agency 2013,42,http://www.zimstat.co.zw/sites/default/files/img/publications/Finance/Poverty2011.pdf,,
+Zimbabwe,2011,0.423,,con,pc,FALSE,Zimstat  con pc,Zimbabwe National Statistics Agency 2013,42,http://www.zimstat.co.zw/sites/default/files/img/publications/Finance/Poverty2011.pdf,,
