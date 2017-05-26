@@ -345,6 +345,76 @@ rm(afr_gini_pc, afr_gini_sqrt)
 
 ## National Statistics Offices
 
+# National Statistical Service of Armenia (automated)
+armstat_page <- "http://www.armstat.am/en/?nid=81&pthid=pov&year="
+arm_page <- armstat_page %>% 
+  read_html() %>% 
+  html_nodes("h4 a")
+
+get_access_link <- function(link) {
+  access <- map(link, function(link) {
+    t <- read_html(link) %>% 
+      html_nodes("tr") 
+    t2 <- t[str_detect(t %>% html_text(), "Accessibility|ACCESSIBILITY")] %>% 
+      html_node("a") %>% 
+      html_attr("href") %>% 
+      str_replace("\\.\\.", "http://www.armstat.am") 
+    return(t2)
+  }) %>% 
+    unlist()
+  return(access)
+}
+
+arm_reports <- tibble(title = am_page %>% html_text() %>% tolower(),
+                      link1 = am_page %>% html_attr("href")) %>% 
+  filter(str_detect(title, "december") & !str_detect(title, "armenian")) %>% 
+  mutate(link1 = str_replace(link1, "\\.", "http://www.armstat.am/en"),
+         link2 = get_access_link(link1),
+         year = str_extract(title, "\\d{4}"))
+
+get_arm_ginis <- function(link) {
+  file_yr <- str_extract(link, "\\d{2,4}") %>% 
+    if_else(str_length(.) == 2, str_c("20", .), .)
+  file_name <- paste0("data-raw/armstat", file_yr, ".pdf")
+  if (!file.exists(file_name)) download.file(link, file_name)
+  ginis <- extract_tables(file_name, pages = 11)[[1]] %>% 
+    as_tibble()
+  if (!any(str_detect(ginis$V1, "Gini"))) {
+    ginis <- extract_tables(file_name, pages = 12)[[1]]
+  }
+  ginis1 <- ginis %>% 
+    first_row_to_names() %>% 
+    mutate(v1 = replace(v1, v1=="", NA_character_)) %>% 
+    fill(v1, .direction = "up") %>% 
+    filter(str_detect(v1, "inequality")) %>% 
+    gather(key = year, value = gini, -v1) %>% 
+    filter(!gini=="") %>% 
+    mutate(report = as.numeric(file_yr),
+           link = link)
+  return(ginis1)
+}
+
+armstat <- arm_reports %>% 
+  filter(year >= 2016) %>% 
+  `[[`("link2") %>% 
+  map_df(., ~ get_arm_ginis(.x)) %>% 
+  arrange(desc(report), desc(year), v1) %>% 
+  distinct(year, v1, .keep_all = TRUE) %>% 
+  transmute(country = "Armenia",
+            year = as.numeric(year),
+            gini = as.numeric(gini),
+            gini_se = NA,
+            welfare_def = if_else(str_detect(v1, "consumption"), "con", "gross"),
+            equiv_scale = "pc",
+            monetary = FALSE,
+            series = paste("NSS Armenia", welfare_def, equiv_scale),
+            source1 = "National Statistical Service of Armenia",
+            page = "11",
+            link = link)
+
+rm(arm_page, arm_reports)
+
+
 # Australian Bureau of Statistics (update abs_link; not included in abs api as of 2017-05)
 # confirm latest release at: http://www.abs.gov.au/AUSSTATS/abs@.nsf/second+level+view?ReadForm&prodno=6523.0&viewtitle=Household%20Income%20and%20Wealth,%20Australia~2013-14~Latest~04/09/2015&&tabname=Past%20Future%20Issues&prodno=6523.0&issue=2013-14&num=&view=&
 
