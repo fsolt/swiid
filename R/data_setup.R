@@ -932,6 +932,29 @@ dgeec <- extract_tables("data-raw/dgeec.pdf", pages = 15)[[1]][-1, ] %>%
             link = dgeec_link)
 
 
+# Philippines Statistical Agency (automated)
+psa_link <- "https://www.psa.gov.ph/sites/default/files/Table%202.9_0.csv"
+download.file(psa_link, "data-raw/psa.csv")
+
+psa <- read_csv("data-raw/psa.csv", skip = 3) %>% 
+  first_row_to_names() %>% 
+  filter(v2 == "Philippines") %>%
+  select(-Region, -starts_with("v")) %>% 
+  gather(key = year, value = gini) %>% 
+  transmute(country = "Philippines",
+            year = as.numeric(year),
+            gini = as.numeric(gini),
+            gini_se = NA,
+            welfare_def = "gross",
+            equiv_scale = "pc",
+            monetary = NA,
+            series = paste("PSA", welfare_def, equiv_scale),
+            source1 = "Philippines Statistical Agency",
+            page = "",
+            link = psa_link)
+
+
+
 # Russian Federal State Statistics Service (update link)
 # http://www.gks.ru/wps/wcm/connect/rosstat_main/rosstat/en/main/
 # Social and Economic Indicators of the Russian Federation (Appendix to the 'Statistical Yearbook of Russia')
@@ -1503,7 +1526,7 @@ ineq0 <- bind_rows(lis,
                    abs, inebo, belstat, statcan, dane, ineccr, dkstat,
                    capmas, statee, statfi, insee, geostat,
                    stathk, bpsid, amar, cso_ie, istat, kostat,
-                   nbs, ssb, dgeec, 
+                   nbs, ssb, dgeec, psa,
                    rosstat, singstat, ssi, ine, statslk, scb, 
                    nso_thailand, tdgbas, turkstat, ons, ifs, cbo, uscb, uine, inev, gso_vn,
                    added_data) %>% 
