@@ -1,7 +1,7 @@
 if (!require(pacman)) install.packages("pacman")
 p_load(tidyverse, readxl, 
        eurostat, rsdmx, xml2, CANSIM2R, pxweb, rvest,
-       stringr, magrittr, countrycode)
+       stringr, magrittr, countrycode, pdftools)
 p_load_gh("ropensci/tabulizerjars", "ropensci/tabulizer") # read PDF tables
 p_load_gh("ropengov/dkstat")
 
@@ -917,7 +917,7 @@ kostat <- bind_cols(kr[1:7,], kr[8:14,]) %>%
   first_row_to_names() %>% 
   janitor::clean_names() %>% 
   filter(classification != "Classification") %>% 
-  select(-classification_2, -x_2, -x) %>% 
+  select(-classification_2, -v1, -v2) %>% 
   gather(key = year, value = gini, -classification) %>% 
   transmute(country = "Korea",
             year = as.numeric(str_replace(year, "x", "")),
@@ -1557,6 +1557,117 @@ gso_vn <- bind_rows(gso_vn1, gso_vn2)
 
 rm(gso_vn1, gso_vn2)
 
+## Academic Literature
+
+# Chen and Ravallion 2008 (identifies welfare_def for subset of PovcalNet)
+cr2008_link <- "http://siteresources.worldbank.org/JAPANINJAPANESEEXT/Resources/515497-1201490097949/080827_The_Developing_World_is_Poorer_than_we_Thought.pdf"
+download.file(cr2008_link, "data-raw/ChenRavallion2008.pdf")
+
+cr2008_codes1 <- pdftools::pdf_text("data-raw/ChenRavallion2008.pdf")[41:43] %>% 
+  paste(collapse = "\\n") %>% 
+  str_replace("Appendix.*\\n.*\\n.*\\n.*\\n.*\\n", "") %>%
+  str_replace_all("Note:.*\\n.*\\n.*", "") %>% 
+  str_replace_all(", ", ",") %>%
+  str_replace("& Caribbean", "\t") %>%
+  str_replace_all("(?<=\\d) *([EI])", "\t\\1") %>% 
+  str_replace_all("(?<=\\n) {28,}", "\t\t") %>%
+  str_replace_all(" {2,27}", "\t") %>%
+  str_replace_all(" (\\d)", "\t\\1") %>%
+  str_replace_all("(\\d) ([E|I])", "\\1\t\\2") %>%
+  str_replace_all("(\\d),([E|I])", "\\1,\t\\2") %>%
+  str_replace_all(".*\\d{2}\\.\\d\\s+", "\t") %>% 
+  read_tsv(col_names = FALSE, col_types = "cccc") %>% 
+  transmute(country = X2,
+            years = X3,
+            wd = X4) 
+
+cr2008_codes2 <- pdftools::pdf_text("data-raw/ChenRavallion2008.pdf")[44] %>% 
+  paste(collapse = "\\n") %>% 
+  str_replace("Appendix.*\\n.*\\n.*\\n.*\\n.*\\n", "") %>%
+  str_replace_all("Note:.*\\n.*\\n.*", "") %>% 
+  str_replace_all(", ", ",") %>%
+  str_replace("& Caribbean", "\t") %>%
+  str_replace_all("(?<=\\d) *([EI])", "\t\\1") %>% 
+  str_replace_all("(?<=\\n) {28,}", "\t\t") %>%
+  str_replace_all(" {2,27}", "\t") %>%
+  str_replace_all(" (\\d)", "\t\\1") %>%
+  str_replace_all("(\\d) ([E|I])", "\\1\t\\2") %>%
+  str_replace_all("(\\d),([E|I])", "\\1,\t\\2") %>%
+  str_replace("\\t2005/2006", "\t\t2005/2006") %>% 
+  str_replace_all(".*\\d{2}\\.\\d\\s+", "\t") %>% 
+  read_tsv(col_names = FALSE, col_types = "ccccc") %>% 
+  transmute(country = X3,
+            years = X4,
+            wd = X5)
+
+expand_years <- function(years) {
+  x <- NA
+  for(i in 1:length(years)) {
+    x[i] <- eval(parse(text = years[i])) %>% paste(collapse = ",")
+  }
+  return(x)
+}
+
+cr2008_codes <- bind_rows(cr2008_codes1, cr2008_codes2) %>% 
+  fill(country, wd) %>% 
+  filter(!str_detect(country, "^\\d{2}$")) %>% 
+  filter(!str_detect(years, "^\\d{2}$")) %>% 
+  mutate(years = str_replace_all(years, "-", ":"),
+         years = str_replace_all(years, "(\\d{2})\\d{2}/(\\d{2})", "\\1\\2")) %>% 
+  separate(years, into = paste0("V", 1:7), sep = ",") %>% 
+  gather(key = orig, value = year, V1:V7) %>% 
+  filter(!is.na(year) & !year=="") %>% 
+  mutate(year = str_replace(year, "\\d{2}(\\d{4})", "\\1"),
+         year = str_replace(year, "^(\\d{2})$", "19\\1"),
+         year = str_replace(year, "(\\d{2})(\\d{2}):(\\d{2})$", "\\1\\2:\\1\\3"),
+         year = str_trim(year),
+         years = expand_years(year)) %>% 
+  select(-orig, -year) %>% 
+  separate(years, into = paste0("V", 1:11), sep = ",") %>% 
+  gather(key = orig, value = year, V1:V11) %>% 
+  filter(!is.na(year) & !year=="") %>%
+  mutate(country = countrycode(country, "country.name", "country.name") %>% 
+           str_replace(" \\(.*", "") %>% 
+           str_replace(",.*", "") %>% 
+           str_replace("^(United )?Republic of ", "") %>% 
+           str_replace("^The former Yugoslav Republic of ", "") %>% 
+           str_replace(" of [GA].*", ""),
+         year = as.numeric(year)) %>% 
+  group_by(country, year) %>% 
+  arrange(wd) %>% 
+  filter(row_number(wd) == 1) %>% 
+  ungroup()
+
+cr2008_gini <- wbstats::wb(indicator = "SI.POV.GINI",
+                           startdate = 1980, 
+                           enddate = 2007) %>% 
+  transmute(country = countrycode(country, "country.name", "country.name") %>% 
+              str_replace(" \\(.*", "") %>% 
+              str_replace(",.*", "") %>% 
+              str_replace("^(United )?Republic of ", "") %>% 
+              str_replace("^The former Yugoslav Republic of ", "") %>% 
+              str_replace(" of [GA].*", ""),
+            year = as.numeric(date),
+            gini = value)
+
+cr2008 <- left_join(cr2008_codes, cr2008_gini, by = c("country", "year")) %>% 
+  transmute(country = country,
+            year = year,
+            gini = gini,
+            gini_se = NA,
+            welfare_def = if_else(wd=="Income", "gross", "con"),
+            equiv_scale = "pc",
+            monetary = FALSE,
+            series = paste("CR2008", country, welfare_def, equiv_scale),
+            source1 = "PovcalNet; Chen and Ravallion 2008",
+            page = "41-44",
+            link = "http://databank.worldbank.org/data/reports.aspx?source=2&series=SI.POV.GINI") %>% 
+  filter(!is.na(gini)) %>% 
+  anti_join(afr_gini, by = c("country", "year")) %>% # Exclude obs already added by afr_gini
+  arrange(country, year)
+
+rm(cr2008_codes, cr2008_codes1, cr2008_codes2, cr2008_gini)
+
 
 ## Added data
 added_data <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/article_data/fs_added_data.csv") %>% 
@@ -1599,6 +1710,7 @@ ineq0 <- bind_rows(lis,
                    nbs, ssb, dgeec, psa,
                    rosstat, singstat, ssi, ine, statslk, scb, 
                    nso_thailand, tdgbas, turkstat, ons, ifs, cbo, uscb, uine, inev, gso_vn,
+                   cr2008,
                    added_data) %>% 
   rename(gini_m = gini,
          gini_m_se = gini_se) %>%
