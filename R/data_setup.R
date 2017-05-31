@@ -1653,7 +1653,7 @@ cr2008_gini <- wbstats::wb(indicator = "SI.POV.GINI",
 cr2008 <- left_join(cr2008_codes, cr2008_gini, by = c("country", "year")) %>% 
   transmute(country = country,
             year = year,
-            gini = gini,
+            gini = gini/100,
             gini_se = NA,
             welfare_def = if_else(wd=="Income", "gross", "con"),
             equiv_scale = "pc",
