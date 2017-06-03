@@ -1691,8 +1691,9 @@ rm(cr2008_codes, cr2008_codes1, cr2008_codes2, cr2008_gini)
 
 
 ## Added data
-added_data <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/article_data/fs_added_data.csv") %>% 
-  mutate(page = as.character(page))
+added_data <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/article_data/fs_added_data.csv",
+                       col_types = "cinncclccccii") %>% 
+  select(-X12, -X13)
 
 ## Combine
 # first, get baseline series and order by data-richness
