@@ -897,6 +897,27 @@ istat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw
             link = "http://dati.istat.it/Index.aspx?DataSetCode=DCCV_INDCONSUMI&Lang=en")
 
 
+# Kazakhstan Committee on Statistics (update link)
+kazstat_page <- "http://stat.gov.kz/getImg?id=ESTAT097178"
+download.file(kazstat_page, "data-raw/kazstat.xls")
+
+kazstat <- read_excel("data-raw/kazstat.xls", skip = 3) %>% 
+  filter(X__1 == "Republic of Kazakhstan") %>% 
+  select(-X__1, -ends_with("_1")) %>% 
+  gather(key = year, value = gini) %>% 
+  transmute(country = "Kazakhstan",
+            year = as.numeric(year),
+            gini = gini,
+            gini_se = NA,
+            welfare_def = "con",
+            equiv_scale = "pc",
+            monetary = FALSE,
+            series = paste("Kazstat", welfare_def, equiv_scale),
+            source1 = "Kazakhstan Committee on Statistics",
+            page = "",
+            link = kazstat_page)
+
+
 # Statistics Korea (automated, but will probably have to update wrangle)
 kostat_page <- "http://kostat.go.kr/portal/eng/pressReleases/6/1/index.board" %>% 
   html_session() %>% 
@@ -1706,7 +1727,7 @@ ineq0 <- bind_rows(lis,
                    transmonee, ceq1, afr_gini,
                    abs, inebo, belstat, statcan, dane, ineccr, dkstat,
                    capmas, statee, statfi, insee, geostat,
-                   stathk, bpsid, amar, cso_ie, istat, kostat,
+                   stathk, bpsid, amar, cso_ie, istat, kostat, kazstat,
                    nbs, ssb, dgeec, psa,
                    rosstat, singstat, ssi, ine, statslk, scb, 
                    nso_thailand, tdgbas, turkstat, ons, ifs, cbo, uscb, uine, inev, gso_vn,
