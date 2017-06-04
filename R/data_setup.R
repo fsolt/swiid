@@ -1578,8 +1578,7 @@ gso_vn <- bind_rows(gso_vn1, gso_vn2)
 
 rm(gso_vn1, gso_vn2)
 
-## Academic Literature
-
+# Additional Inequality Datasets
 # Chen and Ravallion 2008 (identifies welfare_def for subset of PovcalNet)
 cr2008_link <- "http://siteresources.worldbank.org/JAPANINJAPANESEEXT/Resources/515497-1201490097949/080827_The_Developing_World_is_Poorer_than_we_Thought.pdf"
 download.file(cr2008_link, "data-raw/ChenRavallion2008.pdf")
@@ -1689,6 +1688,48 @@ cr2008 <- left_join(cr2008_codes, cr2008_gini, by = c("country", "year")) %>%
 
 rm(cr2008_codes, cr2008_codes1, cr2008_codes2, cr2008_gini)
 
+# Global Income Distribution Database (Ackah, Bussolo, De Hoyas, and Medvedev 2008, archived)
+# see http://siteresources.worldbank.org/INTPROSPECTS/Resources/334934-1225141925900/GIDDdatasetpaper.doc
+
+gidd_link <- "https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip"
+download.file(gidd_link, "data-raw/GlobalDistStata.zip")
+
+gidd_raw <- haven::read_dta(unz("data-raw/GlobalDistStata.zip", "global_dist March 12, 2009.dta"))
+
+gini <- function(x, weight) {
+  ox <- order(x)
+  x <- as.vector(x)[ox]
+  weight <- as.vector(weight)[ox] / sum(weight) 
+  p <- cumsum(weight)
+  nu <- cumsum(weight * x)
+  n <- length(nu)
+  nu <- nu / nu[n]
+  res <- round((sum(nu[-1] * p[-n]) - sum(nu[-n] * p[-1])), digits = 3)
+  return(res)
+}
+
+gidd_raw %>% 
+  filter(!countrylong == "") %>% 
+  group_by(country)
+
+
+
+
+gidd <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/GIDD.csv",
+                 col_types = "cin") %>% 
+  transmute(country = country,
+            year = as.numeric(year),
+            gini = as.numeric(gini),
+            gini_se = NA,
+            welfare_def = "con",
+            equiv_scale = "pc",
+            monetary = FALSE,
+            series = paste("GIDD", country, welfare_def, equiv_scale),
+            source1 = "Ackah, Bussolo, De Hoyas, and Medvedev 2008",
+            page = "",
+            link = "http://siteresources.worldbank.org/INTPROSPECTS/Resources/334934-1225141925900/GIDDdatasetpaper.doc")
+
+
 
 ## Added data
 added_data <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/article_data/fs_added_data.csv",
@@ -1725,7 +1766,7 @@ ceq1 <- ceq %>%
 # then combine with other series ordered by data-richness
 ineq0 <- bind_rows(lis, 
                    sedlac, cepal, cepal_sdi, oecd1, eurostat,
-                   transmonee, ceq1, afr_gini,
+                   gidd, transmonee, ceq1, afr_gini,
                    abs, inebo, belstat, statcan, dane, ineccr, dkstat,
                    capmas, statee, statfi, insee, geostat,
                    stathk, bpsid, amar, cso_ie, istat, kostat, kazstat,
