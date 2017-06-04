@@ -1694,9 +1694,19 @@ rm(cr2008_codes, cr2008_codes1, cr2008_codes2, cr2008_gini)
 gidd_link <- "https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip"
 download.file(gidd_link, "data-raw/GlobalDistStata.zip")
 
+con <- c("Algeria", "Angola", "Bhutan", "Bosnia & Herzegovina", "Botswana", "Cape Verde",
+         "Central African Rep.", "Chad", "Comoros", "Congo, Dem. Rep. Of", "Congo, Republic of",
+         "Djibouti", "Egypt", "Gabon", "Guinea-Bissau", "Iran, I.R. of", "Lesotho", "Liberia",
+         "Malawi", "Malaysia", "Mongolia", "Mozambique", "Namibia", "Niger", "Papua New Guinea",
+         "Rwanda", "Sierra Leone", "St. Lucia", "Suriname", "Swaziland", "Togo", 
+         "Trinidad and Tobago", "Tunisia", "Turkmenistan", "Zambia")
+
 gidd_raw <- haven::read_dta(unz("data-raw/GlobalDistStata.zip", "global_dist March 12, 2009.dta")) %>% 
   filter(!countrylong == "") %>%
-  filter(incsource == 1)
+  filter(incsource == 1 | countrylong %in% con) %>% 
+  mutate(countrylong = if_else(countrylong == "Central African Rep.",
+                                  "Central African Republic",
+                                  countrylong))
 
 get_gini <- function(data, x, weight) {
   x <- data[[x]]
@@ -1729,11 +1739,13 @@ gidd <- map_df(gidd_raw$countrylong %>% unique(), function(x) {
             gini_se = NA,
             welfare_def = "con",
             equiv_scale = "pc",
-            monetary = FALSE,
+            monetary = NA,
             series = paste("GIDD", country, welfare_def, equiv_scale),
             source1 = "Ackah, Bussolo, De Hoyos, and Medvedev 2008",
             page = "",
             link = gidd_link)
+
+rm(gidd_raw)
 
 
 ## Added data
