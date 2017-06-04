@@ -1694,9 +1694,13 @@ rm(cr2008_codes, cr2008_codes1, cr2008_codes2, cr2008_gini)
 gidd_link <- "https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip"
 download.file(gidd_link, "data-raw/GlobalDistStata.zip")
 
-gidd_raw <- haven::read_dta(unz("data-raw/GlobalDistStata.zip", "global_dist March 12, 2009.dta"))
+gidd_raw <- haven::read_dta(unz("data-raw/GlobalDistStata.zip", "global_dist March 12, 2009.dta")) %>% 
+  filter(!countrylong == "") %>%
+  filter(incsource == 1)
 
-gini <- function(x, weight) {
+get_gini <- function(data, x, weight) {
+  x <- data[[x]]
+  weight <- data[[weight]]
   ox <- order(x)
   x <- as.vector(x)[ox]
   weight <- as.vector(weight)[ox] / sum(weight) 
@@ -1708,27 +1712,28 @@ gini <- function(x, weight) {
   return(res)
 }
 
-gidd_raw %>% 
-  filter(!countrylong == "") %>% 
-  group_by(country)
-
-
-
-
-gidd <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/GIDD.csv",
-                 col_types = "cin") %>% 
+gidd <- map_df(gidd_raw$countrylong %>% unique(), function(x) {
+  gini <- get_gini(gidd_raw %>% 
+                     filter(countrylong == x), "consincPPP05", "pop")
+  df <- gidd_raw %>% 
+    filter(countrylong == x) %>% 
+    summarize(country = first(countrylong),
+              year = first(year),
+              gini = gini)
+  
+  return(df)
+  }) %>% 
   transmute(country = country,
-            year = as.numeric(year),
-            gini = as.numeric(gini),
+            year = year,
+            gini = gini,
             gini_se = NA,
             welfare_def = "con",
             equiv_scale = "pc",
             monetary = FALSE,
             series = paste("GIDD", country, welfare_def, equiv_scale),
-            source1 = "Ackah, Bussolo, De Hoyas, and Medvedev 2008",
+            source1 = "Ackah, Bussolo, De Hoyos, and Medvedev 2008",
             page = "",
-            link = "http://siteresources.worldbank.org/INTPROSPECTS/Resources/334934-1225141925900/GIDDdatasetpaper.doc")
-
+            link = gidd_link)
 
 
 ## Added data
@@ -1766,14 +1771,14 @@ ceq1 <- ceq %>%
 # then combine with other series ordered by data-richness
 ineq0 <- bind_rows(lis, 
                    sedlac, cepal, cepal_sdi, oecd1, eurostat,
-                   gidd, transmonee, ceq1, afr_gini,
+                   transmonee, ceq1, afr_gini,
                    abs, inebo, belstat, statcan, dane, ineccr, dkstat,
                    capmas, statee, statfi, insee, geostat,
                    stathk, bpsid, amar, cso_ie, istat, kostat, kazstat,
                    nbs, ssb, dgeec, psa,
                    rosstat, singstat, ssi, ine, statslk, scb, 
                    nso_thailand, tdgbas, turkstat, ons, ifs, cbo, uscb, uine, inev, gso_vn,
-                   cr2008,
+                   cr2008, gidd,
                    added_data) %>% 
   rename(gini_m = gini,
          gini_m_se = gini_se) %>%
