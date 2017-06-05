@@ -33,6 +33,7 @@ format_lis <- function(x) {
               page = "",
               link = paste0("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/",
                             x, ".txt")) %>% 
+    filter(!gini == 0) %>% 
     arrange(country, year)
 }
 
