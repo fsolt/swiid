@@ -4,6 +4,8 @@
 *.Rproj
 data-raw/from_Hu.csv
 data-raw/LISSY/net_sqrt_ru_all.txt
+data-raw/ChenRavallion2008.pdf
+data-raw/OECD2008.pdf
 dev/*
 R/dcpo.R
 SWIIDv5_0.RData
