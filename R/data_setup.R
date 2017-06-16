@@ -919,42 +919,26 @@ kazstat <- read_excel("data-raw/kazstat.xls", skip = 3) %>%
             link = kazstat_page)
 
 
-# Statistics Korea (automated, but will probably have to update wrangle)
-kostat_page <- "http://kostat.go.kr/portal/eng/pressReleases/6/1/index.board" %>% 
-  html_session() %>% 
-  follow_link("First Quarter") %>% 
-  follow_link(".pdf")
-writeBin(kostat_page$response$content, "data-raw/kostat.pdf")  
-kostat_link <- kostat_page$back[1]
-rm(kostat_page)
+# Statistics Korea (update file)
+# http://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1L6E001&conn_path=I2&language=en
+# Item: all households; By index of distribution: Gini; Time: all >
 
-kr <- extract_tables("data-raw/kostat.pdf", pages = 4)[[1]] %>% 
-  as_tibble()
-
-kostat <- bind_cols(kr[1:7,], kr[8:14,]) %>% 
-  janitor::clean_names() %>% 
-  filter(str_detect(v1, "Classification|Total|^Market")) %>% 
-  mutate_all(funs(str_replace(., "—", "") %>% str_trim())) %>% 
-  separate(v3, c("v3", "v3a"), sep = "\\s+") %>% 
-  first_row_to_names() %>% 
-  janitor::clean_names() %>% 
-  filter(classification != "Classification") %>% 
-  select(-classification_2, -v1, -v2) %>% 
-  gather(key = year, value = gini, -classification) %>% 
+kostat <- read_csv("~/Downloads/The_Index_of_Income_Distribution_20170617010214.csv") %>% 
+  select(-`By index of distribution`) %>% 
+  filter(!`By income`=="By income") %>% 
+  gather(key = year, value = gini, -`By income`) %>% 
+  filter(!is.na(gini)) %>% 
   transmute(country = "Korea",
             year = as.numeric(str_replace(year, "x", "")),
             gini = as.numeric(gini),
             gini_se = NA,
-            welfare_def = if_else(str_detect(classification, "Disposable"), "disp", "market"),
+            welfare_def = if_else(str_detect(`By income`, "Disposable"), "disp", "market"),
             equiv_scale = "ae",
             monetary = NA,
             series = paste("Kostat", welfare_def, equiv_scale),
             source1 = "Statistics Korea",
             page = "",
-            link = kostat_link) %>% 
-  filter(!is.na(gini))
-
-rm(kr)
+            link = "http://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1L6E001&conn_path=I2&language=en")
 
 
 # National Bureau of Statistics Moldova
