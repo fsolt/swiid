@@ -1,4 +1,5 @@
-"By index of distribution","By income",1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016
-"By index of distribution","By income",All households,All households,All households,All households,All households,All households,All households,All households,All households,All households,All households,All households,All households,All households,All households,All households,All households,All households,All households,All households,All households,All households,All households,All households,All households,All households,All households
-"Gini's coefficient","Market income",,,,,,,,,,,,,,,,,0.330,0.340,0.344,0.345,0.341,0.342,0.338,0.336,0.341,0.341,0.353
-"Gini's coefficient","Disposable income",,,,,,,,,,,,,,,,,0.306,0.312,0.314,0.314,0.310,0.311,0.307,0.302,0.302,0.295,0.304
+"By index of distribution","Item","By income",1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016
+"Gini's coefficient","All households","Market income",,,,,,,,,,,,,,,,,0.330,0.340,0.344,0.345,0.341,0.342,0.338,0.336,0.341,0.341,0.353
+"Gini's coefficient","All households","Disposable income",,,,,,,,,,,,,,,,,0.306,0.312,0.314,0.314,0.310,0.311,0.307,0.302,0.302,0.295,0.304
+"Gini's coefficient","Urban (2 and more nonfarm household)  ","Market income",0.266,0.259,0.254,0.256,0.255,0.259,0.266,0.264,0.293,0.298,0.279,0.290,0.293,0.283,0.293,0.298,0.305,0.316,0.319,0.320,0.315,0.313,0.310,0.307,0.308,0.305,0.317
+"Gini's coefficient","Urban (2 and more nonfarm household)  ","Disposable income",0.256,0.250,0.245,0.250,0.248,0.251,0.257,0.257,0.285,0.288,0.266,0.277,0.279,0.270,0.277,0.281,0.285,0.292,0.294,0.295,0.289,0.289,0.285,0.280,0.277,0.269,0.278

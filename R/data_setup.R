@@ -921,12 +921,12 @@ kazstat <- read_excel("data-raw/kazstat.xls", skip = 3) %>%
 
 # Statistics Korea (update file)
 # http://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1L6E001&conn_path=I2&language=en
-# Item: all households; By index of distribution: Gini; Time: all >
+# Item: all households; By index of distribution: Gini's; Time: all 
 
-kostat <- read_csv("~/Downloads/The_Index_of_Income_Distribution_20170617010214.csv") %>% 
+kostat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/kostat.csv") %>%
   select(-`By index of distribution`) %>% 
   filter(!`By income`=="By income") %>% 
-  gather(key = year, value = gini, -`By income`) %>% 
+  gather(key = year, value = gini, -`By income`, -Item) %>% 
   filter(!is.na(gini)) %>% 
   transmute(country = "Korea",
             year = as.numeric(str_replace(year, "x", "")),
@@ -935,7 +935,7 @@ kostat <- read_csv("~/Downloads/The_Index_of_Income_Distribution_20170617010214.
             welfare_def = if_else(str_detect(`By income`, "Disposable"), "disp", "market"),
             equiv_scale = "ae",
             monetary = NA,
-            series = paste("Kostat", welfare_def, equiv_scale),
+            series = paste("Kostat", welfare_def, equiv_scale, if_else(Item == "All households", 2, 1)),
             source1 = "Statistics Korea",
             page = "",
             link = "http://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1L6E001&conn_path=I2&language=en")
