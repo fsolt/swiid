@@ -929,8 +929,8 @@ kostat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-ra
   gather(key = year, value = gini, -`By income`, -Item) %>% 
   filter(!is.na(gini)) %>% 
   transmute(country = "Korea",
-            year = as.numeric(str_replace(year, "x", "")),
-            gini = as.numeric(gini),
+            year = as.numeric(year),
+            gini = gini,
             gini_se = NA,
             welfare_def = if_else(str_detect(`By income`, "Disposable"), "disp", "market"),
             equiv_scale = "ae",
@@ -1631,13 +1631,16 @@ cr2008_codes <- bind_rows(cr2008_codes1, cr2008_codes2) %>%
   separate(years, into = paste0("V", 1:11), sep = ",") %>% 
   gather(key = orig, value = year, V1:V11) %>% 
   filter(!is.na(year) & !year=="") %>%
-  mutate(country = countrycode(country, "country.name", "country.name") %>% 
+  mutate(country = if_else(country == "Central African Rep.",
+                           "Central African Republic",
+                           countrycode(country, "country.name", "country.name")) %>% 
            str_replace(" \\(.*", "") %>% 
            str_replace(",.*", "") %>% 
            str_replace("^(United )?Republic of ", "") %>% 
            str_replace("^The former Yugoslav Republic of ", "") %>% 
            str_replace(" of [GA].*", ""),
-         year = as.numeric(year)) %>% 
+         year = as.numeric(year),
+         wd = if_else(country == "Turkey", "Income", wd)) %>% 
   group_by(country, year) %>% 
   arrange(wd) %>% 
   filter(row_number(wd) == 1) %>% 
@@ -1646,7 +1649,9 @@ cr2008_codes <- bind_rows(cr2008_codes1, cr2008_codes2) %>%
 cr2008_gini <- wbstats::wb(indicator = "SI.POV.GINI",
                            startdate = 1980, 
                            enddate = 2007) %>% 
-  transmute(country = countrycode(country, "country.name", "country.name") %>% 
+  transmute(country = if_else(country == "Central African Rep.",
+                              "Central African Republic",
+                              countrycode(country, "country.name", "country.name")) %>% 
               str_replace(" \\(.*", "") %>% 
               str_replace(",.*", "") %>% 
               str_replace("^(United )?Republic of ", "") %>% 
