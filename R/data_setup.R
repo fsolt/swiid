@@ -1640,7 +1640,8 @@ cr2008_codes <- bind_rows(cr2008_codes1, cr2008_codes2) %>%
            str_replace("^The former Yugoslav Republic of ", "") %>% 
            str_replace(" of [GA].*", ""),
          year = as.numeric(year),
-         wd = if_else(country == "Turkey", "Income", wd)) %>% 
+         wd = if_else(country == "Turkey" | country == "Bulgaria",
+                      "Income", wd)) %>% 
   group_by(country, year) %>% 
   arrange(wd) %>% 
   filter(row_number(wd) == 1) %>% 
@@ -1677,6 +1678,38 @@ cr2008 <- left_join(cr2008_codes, cr2008_gini, by = c("country", "year")) %>%
   arrange(country, year)
 
 rm(cr2008_codes, cr2008_codes1, cr2008_codes2, cr2008_gini)
+
+
+# Milanovic All the Ginis
+atg <- "https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Centers-and-Institutes/Stone-Center-on-Socio-Economic-Inequality/Core-Faculty,-Team,-and-Affiliated-LIS-Scholars/Branko-Milanovic/Datasets" %>% 
+  html_session() %>% 
+  follow_link("Dataset")
+writeBin(httr::content(atg$response, "raw"), "data-raw/atg.dta")
+atg_link <- atg$response$url
+
+atg <- haven::read_dta("data-raw/atg.dta") %>% 
+  select(contcod, year, ends_with("_INDIE")) %>% 
+  filter(!is.na(gini_INDIE)) %>% 
+  mutate(country = countrycode(contcod, "wb_api3c", "country.name") %>% 
+           str_replace(" \\(.*", "") %>% 
+           str_replace(",.*", "") %>% 
+           str_replace("^(United )?Republic of ", "") %>% 
+           str_replace("^The former Yugoslav Republic of ", "") %>% 
+           str_replace(" of [GA].*", "")) %>% 
+  filter(country == "Poland" | country == "United Kingdom") %>% 
+  transmute(country = country,
+         year = year,
+         gini = gini_INDIE,
+         gini_se = NA,
+         welfare_def = if_else(Dinc_INDIE == 0, "con",
+                               if_else(Dgross_INDIE == 1, "gross", "disp")),
+         equiv_scale = if_else(Dhh_INDIE == 1, "hh", "pc"),
+         monetary = NA,
+         series = paste("AtG", country, welfare_def, equiv_scale),
+         source1 = "Milanovic 2016",
+         page = "",
+         link = atg_link)
+
 
 # Global Income Distribution Database (Ackah, Bussolo, De Hoyas, and Medvedev 2008, archived)
 # see http://siteresources.worldbank.org/INTPROSPECTS/Resources/334934-1225141925900/GIDDdatasetpaper.doc
