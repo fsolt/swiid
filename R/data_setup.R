@@ -963,6 +963,29 @@ nbs <- read_excel("data-raw/nbs.xls", skip = 2, sheet = "Лист1") %>%
             link = nbs_link)
 
 
+# Statistics Office of Montenegro (automated)
+monstat_file <- html_session("https://www.monstat.org/eng/index.php") %>% 
+  follow_link("Poverty line") %>% 
+  follow_link("Data")
+writeBin(httr::content(monstat_file$response, "raw"), "data-raw/monstat.xls")
+monstat_link <- monstat_file$response$url
+rm(monstat_file)
+
+monstat <- read_excel("data-raw/monstat.xls", skip = 1) %>%
+  filter(!is.na(`Gini coefficient (%)`)) %>% 
+  transmute(country = "Montenegro",
+            year = as.numeric(X__1),
+            gini = `Gini coefficient (%)`/100,
+            gini_se = NA,
+            welfare_def = "con",
+            equiv_scale = "oecdm",
+            monetary = NA,
+            series = paste("Monstat", welfare_def, equiv_scale),
+            source1 = "Statistical Office of Montenegro",
+            page = "",
+            link = monstat_link)
+
+
 # Statistics Norway (automated)
 ssb_link <- "https://www.ssb.no/en/inntekt-og-forbruk/statistikker/ifhus/aar/2016-12-16?fane=tabell&sort=nummer&tabell=288299"
 
@@ -1687,7 +1710,7 @@ atg <- "https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiat
 writeBin(httr::content(atg$response, "raw"), "data-raw/atg.dta")
 atg_link <- atg$response$url
 
-atg <- haven::read_dta("data-raw/atg.dta") %>% 
+atg0 <- haven::read_dta("data-raw/atg.dta") %>% 
   select(contcod, year, ends_with("_INDIE")) %>% 
   filter(!is.na(gini_INDIE)) %>% 
   mutate(country = countrycode(contcod, "wb_api3c", "country.name") %>% 
@@ -1699,7 +1722,7 @@ atg <- haven::read_dta("data-raw/atg.dta") %>%
   filter(country == "Poland" | country == "United Kingdom") %>% 
   transmute(country = country,
          year = year,
-         gini = gini_INDIE,
+         gini = gini_INDIE/100,
          gini_se = NA,
          welfare_def = if_else(Dinc_INDIE == 0, "con",
                                if_else(Dgross_INDIE == 1, "gross", "disp")),
@@ -1710,6 +1733,33 @@ atg <- haven::read_dta("data-raw/atg.dta") %>%
          page = "",
          link = atg_link)
 
+brandolini <- haven::read_dta("data-raw/atg.dta") %>% 
+  select(contcod, year, ends_with("_INDIE")) %>% 
+  filter(!is.na(gini_INDIE)) %>% 
+  mutate(country = countrycode(contcod, "wb_api3c", "country.name") %>% 
+           str_replace(" \\(.*", "") %>% 
+           str_replace(",.*", "") %>% 
+           str_replace("^(United )?Republic of ", "") %>% 
+           str_replace("^The former Yugoslav Republic of ", "") %>% 
+           str_replace(" of [GA].*", "")) %>% 
+  filter(country == "France" | country == "Germany" | country == "Canada" | country == "Netherlands") %>% 
+  transmute(country = country,
+            year = year,
+            gini = gini_INDIE/100,
+            gini_se = NA,
+            welfare_def = if_else(Dinc_INDIE == 0, "con",
+                                  if_else(Dgross_INDIE == 1, "gross", "disp")),
+            equiv_scale = if_else(Dhh_INDIE == 1, "hh", "pc"),
+            monetary = NA,
+            series = paste("Brandolini1998", country, welfare_def, equiv_scale),
+            source1 = "Milanovic 2016; Brandolini 1998",
+            page = "",
+            link = atg_link)
+
+atg <- bind_rows(atg0, brandolini) %>% 
+  filter(year >= 1960)
+
+rm(atg0, brandolini)
 
 # Global Income Distribution Database (Ackah, Bussolo, De Hoyas, and Medvedev 2008, archived)
 # see http://siteresources.worldbank.org/INTPROSPECTS/Resources/334934-1225141925900/GIDDdatasetpaper.doc
@@ -1810,10 +1860,10 @@ ineq0 <- bind_rows(lis,
                    abs, inebo, belstat, statcan, dane, ineccr, dkstat,
                    capmas, statee, statfi, insee, geostat,
                    stathk, bpsid, amar, cso_ie, istat, kostat, kazstat,
-                   nbs, ssb, dgeec, psa,
+                   nbs, monstat, ssb, dgeec, psa,
                    rosstat, singstat, ssi, ine, statslk, scb, 
                    nso_thailand, tdgbas, turkstat, ons, ifs, cbo, uscb, uine, inev, gso_vn,
-                   cr2008, gidd,
+                   cr2008, atg, gidd,
                    added_data) %>% 
   rename(gini_m = gini,
          gini_m_se = gini_se) %>%
