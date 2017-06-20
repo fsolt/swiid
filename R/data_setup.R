@@ -1144,16 +1144,16 @@ download.file(ssi1_link, "data-raw/ssi.xls", method = "curl", extra = "-k")
 
 ssi1 <- read_excel("data-raw/ssi.xls", sheet = "Laekens kazalniki 1997-2003", skip = 4) %>% 
   janitor::clean_names() %>% 
-  filter(str_detect(x, "Gini")) %>% 
-  select(-na, -x) %>% 
+  filter(str_detect(x_1, "Gini")) %>% 
+  select(-x_1, -x_2, -x_3, -x_4) %>% 
   gather(key = year0, value = gini) %>% 
   transmute(country = "Slovenia",
             year = as.numeric(str_extract(year0, "\\d{4}")),
-            gini = as.numeric(gini),
+            gini = as.numeric(gini)/100,
             gini_se = NA,
             welfare_def = "disp",
             equiv_scale = "oecdm",
-            monetary = !str_detect(year0, "_2"),
+            monetary = !str_detect(year0, "_1"),
             series = paste("Statsi 2005", welfare_def, equiv_scale),
             source1 = "Slovenia Statistics Office 2005",
             page = "Laekens kazalniki 1997-2003",
