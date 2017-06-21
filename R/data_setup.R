@@ -165,6 +165,7 @@ cepal_labels <- cepal_extract("//des") %>%
 cepal_notes <- cepal_extract("//nota")
 
 cepal <- left_join(cepal_raw, cepal_labels, by = c("dim_208" = "id")) %>%
+  filter(!name=="Latin America (simple average)") %>% 
   mutate(country = countrycode(as.character(name), "country.name", "country.name") %>% 
            str_replace(",.*", "") %>% 
            str_replace("Bolivia \\(Plurinational State of\\)", "Bolivia")) %>% 
@@ -301,7 +302,7 @@ transmonee <- suppressWarnings(read_excel("data-raw/transmonee.xls",
             page = "",
             link = transmonee_link)
 
-# Commitment to Equity (updated by hand; see http://www.commitmentoequity.org/publications-ceqworkingpapers/ and http://www.commitmentoequity.org/data/ )
+# Commitment to Equity (update by hand; see http://www.commitmentoequity.org/publications-ceqworkingpapers/ and http://www.commitmentoequity.org/data/ )
 ceq <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/ceq.csv", col_types = "cnnncclcccc") %>% 
   mutate(series = paste("CEQ", welfare_def, equiv_scale))
 
@@ -346,6 +347,13 @@ rm(afr_gini_pc, afr_gini_sqrt)
 
 ## National Statistics Offices
 
+first_row_to_names <- function(x) {
+  names(x) <- x[1, ]
+  names(x)[which(names(x) == "" | is.na(names(x)))] <- paste0("v", 1:length(which(names(x) == "" | is.na(names(x)))))
+  x <- x[-1, ]
+  return(x)
+}
+
 # National Statistical Service of Armenia (automated)
 armstat_page <- "http://www.armstat.am/en/?nid=81&pthid=pov&year="
 arm_page <- armstat_page %>% 
@@ -366,8 +374,8 @@ get_access_link <- function(link) {
   return(access)
 }
 
-arm_reports <- tibble(title = am_page %>% html_text() %>% tolower(),
-                      link1 = am_page %>% html_attr("href")) %>% 
+arm_reports <- tibble(title = arm_page %>% html_text() %>% tolower(),
+                      link1 = arm_page %>% html_attr("href")) %>% 
   filter(str_detect(title, "december") & !str_detect(title, "armenian")) %>% 
   mutate(link1 = str_replace(link1, "\\.", "http://www.armstat.am/en"),
          link2 = get_access_link(link1),
@@ -447,9 +455,11 @@ abs_format <- function(sheet, wd, es) {
   return(x)
 }
        
-abs_ne <- abs_format("Table 1.1", "disp", "oecdm")
+abs_de <- abs_format("Table 1.1", "disp", "oecdm")
 abs_gh <- abs_format("Table 1.2", "gross", "hh")
-abs <- bind_rows(abs_ne, abs_gh)
+abs <- bind_rows(abs_de, abs_gh)
+
+rm(abs_de, abs_gh)
 
 
 # Instituto Naciónal de Estadística de Bolivia (update file)
@@ -481,21 +491,14 @@ belstat_zip <- html_session(belstat_page) %>%
 belstat_link <- belstat_zip$back[1]
 belstat_temp <- tempfile(fileext = ".zip")
 writeBin(belstat_zip$response$content, belstat_temp)
-belstat_dir <- tempdir()
+belstat_dir <- file.path(tempdir(), "belstat")
 unzip(belstat_temp, exdir = belstat_dir) 
 belstat_file <- list.files(belstat_dir) %>% 
   str_subset(".pdf") %>% 
   file.path(belstat_dir, .)
 file.rename(belstat_file, "data-raw/belstat.pdf")
-unlink(c(belstat_temp, belstat_dir))
+unlink(c(belstat_temp, belstat_dir), recursive = TRUE)
 rm(belstat_zip)
-
-first_row_to_names <- function(x) {
-  names(x) <- x[1, ]
-  names(x)[which(names(x) == "" | is.na(names(x)))] <- paste0("v", 1:length(which(names(x) == "" | is.na(names(x)))))
-  x <- x[-1, ]
-  return(x)
-}
 
 belstat <- extract_tables("data-raw/belstat.pdf", pages = 76)[[1]] %>%
   as_data_frame() %>% 
@@ -635,7 +638,9 @@ capmas <- read_excel("data-raw/capmas.xls", skip = 7) %>%
 
 
 # Statistics Estonia (archived)
-statee <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/statistics_estonia.tsv", col_names = FALSE) %>% 
+statee <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/statistics_estonia.tsv", 
+                   col_names = FALSE,
+                   col_types = "idd") %>% 
   rename(year = X1, pc = X2, oecdm = X3) %>% 
   gather(key = equiv_scale, value = gini, pc:oecdm) %>% 
   transmute(country = "Estonia",
@@ -702,7 +707,10 @@ insee <- readLines(insee_link) %>%              # kickin' it old skool . . .
 # Social Statistics > Standard of Living, Subsistance Minimum > Gini Coefficients by Year and Indicator
 # All years, "By total incomes" and "By total expenditures"
 
-geostat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/geostat.csv", skip = 3, col_names = c("year", "gross", "con")) %>% 
+geostat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/geostat.csv",
+                    skip = 3, 
+                    col_names = c("year", "gross", "con"),
+                    col_types = "cdd") %>% 
   filter(!is.na(gross)) %>% 
   gather(key = "welfare_def", value = "gini", gross:con) %>% 
   transmute(country = "Georgia",
@@ -718,11 +726,33 @@ geostat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-r
             link = "http://pc-axis.geostat.ge")
 
 
-# Statistics Hong Kong (update link--on 2017-06-18?; see http://www.censtatd.gov.hk/hkstat/sub/sp440.jsp?productCode=B1120057)
+# Statistics Hong Kong (update link--in 2022)
+hk2016_link <- "http://www.bycensus2016.gov.hk/data/16BC_Income_Report_Key_Statistics.xlsx"
 hk2011_link <- "http://www.statistics.gov.hk/pub/B11200572012XXXXB0100.pdf"
 hk2006_link <- "http://www.censtatd.gov.hk/fd.jsp?file=B11200452006XXXXB0400.pdf"
+download.file(hk2016_link, "data-raw/hk2016.xlsx")
 download.file(hk2011_link, "data-raw/hk2011.pdf")
 download.file(hk2006_link, "data-raw/hk2006.pdf")
+
+hk2016 <- read_excel("data-raw/hk2016.xlsx", sheet = "KeyStat2", skip = 6) %>% 
+  mutate(es = str_extract(X__2, ".* income")) %>% 
+  fill(es) %>% 
+  filter(str_detect(X__2, "\\([ac]\\)")) %>% 
+  mutate(wd = if_else(X__2 == "(a)", "market", "disp"),
+         `2016` = str_replace(`2016`, "\\[", "")) %>% 
+  select(`2006`, `2011`, `2016`, es, wd) %>% 
+    gather(key = year, value = gini, -wd, -es) %>%
+    transmute(country = "Hong Kong",
+              year = as.numeric(year),
+              gini = as.numeric(gini),
+              gini_se = NA,
+              welfare_def = wd,
+              equiv_scale = if_else(str_detect(es, "per capita"), "pc", "hh"),
+              monetary = FALSE,
+              series = paste("Statistics Hong Kong", welfare_def, equiv_scale),
+              source1 = "Statistics Hong Kong 2017",
+              page = "KeyStat2",
+              link = hk2016_link)
 
 hk2011 <- extract_tables("data-raw/hk2011.pdf", pages = 123)[[1]] %>% 
   as_tibble() %>% 
@@ -738,6 +768,7 @@ hk2011 <- extract_tables("data-raw/hk2011.pdf", pages = 123)[[1]] %>%
   first_row_to_names() %>%
   rename(wd = market, es = pc) %>% 
   gather(key = year, value = gini, -wd, -es) %>%
+  filter(year == 2001) %>% 
   transmute(country = "Hong Kong",
             year = as.numeric(year),
             gini = as.numeric(gini),
@@ -778,9 +809,9 @@ hk2006 <- extract_tables("data-raw/hk2006.pdf", pages = 105)[[1]] %>%
             page = "107",
             link = hk2006_link)
 
-stathk <- bind_rows(hk2006, hk2011)
+stathk <- bind_rows(hk2006, hk2011, hk2016)
 
-rm(hk2006, hk2011)
+rm(hk2006, hk2011, hk2016)
 
 
 # BPS Indonesia (automated)
