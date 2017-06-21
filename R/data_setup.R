@@ -915,7 +915,8 @@ rm(cso_ie0)
 # http://dati.istat.it/Index.aspx?DataSetCode=DCCV_INDCONSUMI&Lang=en#
 # Customize > Territory: Italy > Data Type: Gini
 
-istat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/istat.csv") %>% 
+istat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/istat.csv",
+                  col_types = "ccccicdc") %>% 
   transmute(country = "Italy",
             year = Year,
             gini = `0`,
@@ -954,7 +955,13 @@ kazstat <- read_excel("data-raw/kazstat.xls", skip = 3) %>%
 # http://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1L6E001&conn_path=I2&language=en
 # Item: all households; By index of distribution: Gini's; Time: all 
 
-kostat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/kostat.csv") %>%
+kostat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/kostat.csv",
+                   col_types = cols(
+                     .default = col_double(),
+                     `By index of distribution` = col_character(),
+                     Item = col_character(),
+                     `By income` = col_character()
+                   )) %>%
   select(-`By index of distribution`) %>% 
   filter(!`By income`=="By income") %>% 
   gather(key = year, value = gini, -`By income`, -Item) %>% 
@@ -1046,7 +1053,7 @@ dgeec_link <- "http://www.dgeec.gov.py/Publicaciones/Biblioteca/eph2015/Boletin%
 download.file(dgeec_link, "data-raw/dgeec.pdf")
 
 dgeec <- extract_tables("data-raw/dgeec.pdf", pages = 15)[[1]][-1, ] %>%
-  as_data_frame() %>% 
+  as_tibble() %>% 
   transmute(country = "Paraguay",
             year = ifelse(str_trim(V1) %>% str_extract("\\d{2}$") %>% as.numeric() > 50,
                           str_trim(V1) %>% str_extract("\\d{2}$") %>% as.numeric() + 1900,
@@ -1066,7 +1073,7 @@ dgeec <- extract_tables("data-raw/dgeec.pdf", pages = 15)[[1]][-1, ] %>%
 psa_link <- "https://www.psa.gov.ph/sites/default/files/Table%202.9_0.csv"
 download.file(psa_link, "data-raw/psa.csv")
 
-psa <- read_csv("data-raw/psa.csv", skip = 3) %>% 
+psa <- read_csv("data-raw/psa.csv", skip = 3, col_types = "cccdddddcc") %>% 
   first_row_to_names() %>% 
   filter(v2 == "Philippines") %>%
   select(-Region, -starts_with("v")) %>% 
@@ -1093,14 +1100,14 @@ rosstat_link <- "http://www.gks.ru/free_doc/doc_2016/year/pril-year_2016_eng.xls
 download.file(rosstat_link, "data-raw/rosstat.xls")
 
 rosstat <- read_excel("data-raw/rosstat.xls", sheet = "Sec.5", skip = 1) %>% 
-  filter(str_detect(`  INDICATORS `, "Gini")) %>% 
+  filter(str_detect(INDICATORS, "Gini")) %>% 
   gather(key = year, value = gini) %>% 
   mutate_all(as.numeric) %>% 
   filter(!is.na(gini)) %>% 
   transmute(country = "Russian Federation",
             year = year,
             gini = gini,
-            gini_se = ifelse(year<1993, .03, NA),
+            gini_se = NA,
             welfare_def = "gross",
             equiv_scale = "pc",
             monetary = TRUE,
@@ -1119,7 +1126,10 @@ rosstat <- read_excel("data-raw/rosstat.xls", sheet = "Sec.5", skip = 1) %>%
 # http://www.tablebuilder.singstat.gov.sg/publicfacing/createSpecialTable.action?refId=12356
 # Export > CSV
 
-singstat <- read_csv("data-raw/singstat.csv", skip = 4) %>% 
+singstat <- read_csv("data-raw/singstat.csv", skip = 4, col_types = cols(
+  .default = col_double(),
+  `Gini Coefficient` = col_character(),
+  X19 = col_character())) %>% 
   filter(!is.na(`2000`)) %>%
   select(-X19) %>% 
   gather(key = year, value = gini, -`Gini Coefficient`) %>% 
@@ -1290,18 +1300,19 @@ download.file(tdgbas_link, "data-raw/tdgbas1.xls")
 tdgbas_link2 <- "http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L"
 
 tdgbas <- read_excel("data-raw/tdgbas1.xls", col_names = FALSE, skip = 9) %>% 
-  transmute(year = X2,
-            pc = X4,
-            sqrt = X6) %>% 
+  transmute(year = X__2,
+            pc = X__4,
+            sqrt = X__6) %>% 
   gather(key = equiv_scale, value = gini, -year) %>% 
   filter(!is.na(year)) %>% 
   mutate(link = tdgbas_link) %>% 
-  bind_rows(suppressWarnings(read_csv("data-raw/tdgbas2.csv", col_names = FALSE, skip = 4)) %>% 
-              filter(!is.na(X1)) %>% 
-              transmute(year = X1, 
-                        gini = X2,
-                        equiv_scale = "hh",
-                        link = "http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L")) %>% 
+  bind_rows(read_csv("data-raw/tdgbas2.csv", 
+                     col_names = c("year", "gini"), 
+                     col_types = "id", 
+                     skip = 4) %>% 
+              filter(!is.na(year)) %>% 
+              mutate(equiv_scale = "hh",
+                     link = "http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L")) %>% 
   transmute(country = "Taiwan",
             year = year,
             gini = gini,
