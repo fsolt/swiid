@@ -22,7 +22,7 @@ for (wd_es in weldef_eqsc) {
     str_replace("WT", wt)
   
   mailR::send.mail(from = gmail_user,
-                   to = c("postbox@lisdatacenter.org", gmail_user),
+                   to = "postbox@lisdatacenter.org",
                    subject = wd_es,
                    body = lissy,
                    smtp = list(host.name = "smtp.gmail.com",
