@@ -198,7 +198,8 @@ rm(cepal0, cepal_raw, cepal_labels, cepal_notes)
 
 
 # CEPAL Serie Distribución del Ingreso (archived)
-cepal_sdi <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/repositorio_cepal.tsv") %>% 
+cepal_sdi <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/repositorio_cepal.tsv",
+                      col_types = "ciiccccccc") %>% 
   transmute(country = country,
             year = year,
             gini = gini/100,
@@ -250,6 +251,7 @@ eurostat <- get_eurostat("ilc_di12",
                          update_cache = TRUE,
                          keepFlags = TRUE) %>%
   mutate(geo = as.character(geo) %>% recode("UK" = "GB", "EL" = "GR")) %>% 
+  filter(!str_detect(geo, "E[AU]\\d*|NMS10")) %>% 
   transmute(country = countrycode(as.character(geo), "iso2c", "country.name"),
          year = time - (!(country=="United Kingdom" | country=="Ireland")), #eurostat reports survey year not ref year except in UK and IE <http://ec.europa.eu/eurostat/cache/metadata/en/ilc_esms.htm#ref_period>
          gini = values/100,
@@ -274,23 +276,15 @@ eurostat <- get_eurostat("ilc_di12",
 transmonee_link <- "https://web.archive.org/web/20130401075747/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls"
 download.file(transmonee_link, "data-raw/transmonee.xls")
 
-transmonee <- suppressWarnings(read_excel("data-raw/transmonee.xls", 
+transmonee <- read_excel("data-raw/transmonee.xls", 
                                           sheet = "10. Economy",
                                           skip = 398,
-                                          na = "-")[1:34, ]) %>% 
-  mutate(country = c("Czech Republic", "Hungary", "Poland",
-                     "Slovakia", "Slovenia", "", "Estonia", "Latvia",
-                     "Lithuania", "", "Bulgaria", "Romania", "",
-                     "Albania", "Bosnia and Herzegovina", "Croatia",
-                     "Montenegro", "Serbia", "Macedonia, the former Yugoslav Republic of", "",
-                     "Belarus", "Moldova", "Russian Federation", 
-                     "Ukraine", "", "Armenia", "Azerbaijan", "Georgia",
-                     "", "Kazakhstan", "Kyrgyzstan", "Tajikistan",
-                     "Turkmenistan", "Uzbekistan")) %>% 
-  filter(country!="") %>% 
-  gather(key = year, value = gini, -country) %>% 
+                                          na = "-")[1:34, ] %>% 
+  filter(!is.na(X__1)) %>% 
+  select(-X__2) %>% 
+  gather(key = year, value = gini, -X__1) %>% 
   filter(!is.na(gini)) %>% 
-  transmute(country = country,
+  transmute(country = countrycode(X__1, "country.name", "country.name"),
             year = as.numeric(year),
             gini = gini,
             gini_se = NA,
@@ -328,7 +322,8 @@ afr_gini_pc <- wbstats::wb(indicator = "SI.POV.GINI",
             page = "121-126",
             link = "http://databank.worldbank.org/data/reports.aspx?source=2&series=SI.POV.GINI")
 
-afr_gini_sqrt <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv") %>% 
+afr_gini_sqrt <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv", 
+                          col_types = "cid") %>% 
   transmute(country = countrycode(country, origin = "wb_api3c", "country.name"),
             year = as.numeric(surveyr),
             gini = gini_sqrthhs/100,
@@ -726,7 +721,7 @@ geostat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-r
             link = "http://pc-axis.geostat.ge")
 
 
-# Statistics Hong Kong (update link--in 2022)
+# Statistics Hong Kong (update in 2022)
 hk2016_link <- "http://www.bycensus2016.gov.hk/data/16BC_Income_Report_Key_Statistics.xlsx"
 hk2011_link <- "http://www.statistics.gov.hk/pub/B11200572012XXXXB0100.pdf"
 hk2006_link <- "http://www.censtatd.gov.hk/fd.jsp?file=B11200452006XXXXB0400.pdf"
@@ -862,6 +857,8 @@ rm(bpsid1, bpsid2)
 
 
 # Statistical Center of Iran (update link--search site with Google)
+# https://www.google.com/search?hl=en&as_q=gini&as_sitesearch=https%3A%2F%2Fwww.amar.org.ir%2Fenglish
+
 amar_link <- "https://www.amar.org.ir/english/Latest-Releases-Page/articleType/ArticleView/articleId/475"
 
 amar <- read_html(amar_link) %>% 
@@ -979,7 +976,7 @@ kostat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-ra
             link = "http://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1L6E001&conn_path=I2&language=en")
 
 
-# National Bureau of Statistics Moldova
+# National Bureau of Statistics Moldova (automated)
 nbs_link <- "http://www.statistica.md/public/files/serii_de_timp/venituri_cheltuieli/veniturile_gospodariilor/4.2.4.xls"
 download.file(nbs_link, "data-raw/nbs.xls")
 
@@ -1001,13 +998,25 @@ nbs <- read_excel("data-raw/nbs.xls", skip = 2, sheet = "Лист1") %>%
             link = nbs_link)
 
 
-# Statistics Office of Montenegro (automated)
-monstat_file <- html_session("https://www.monstat.org/eng/index.php") %>% 
-  follow_link("Poverty line") %>% 
-  follow_link("Data")
-writeBin(httr::content(monstat_file$response, "raw"), "data-raw/monstat.xls")
-monstat_link <- monstat_file$response$url
-rm(monstat_file)
+# Statistics Office of Montenegro (automated, but update backup Internet Archive link)
+# Slow server, so get from Internet Archive if it times out
+
+get_monstat_file <- function() {
+  monstat_file <- html_session("https://www.monstat.org/eng/index.php") %>% 
+    follow_link("Poverty line") %>% 
+    follow_link("Data")
+  writeBin(httr::content(monstat_file$response, "raw"), "data-raw/monstat.xls")
+  return(monstat_file$response$url)
+}
+
+monstat_link <- tryCatch(get_monstat_file(), 
+  error = function(e) {
+    monstat_file <- html_session("https://web.archive.org/web/20170613040141/http://www.monstat.org/eng/index.php") %>% 
+      follow_link("Poverty line") %>% 
+      follow_link("Data")
+    writeBin(httr::content(monstat_file$response, "raw"), "data-raw/monstat.xls")
+    return(monstat_file$response$url)
+  })
 
 monstat <- read_excel("data-raw/monstat.xls", skip = 1) %>%
   filter(!is.na(`Gini coefficient (%)`)) %>% 
@@ -1440,18 +1449,18 @@ writeBin(httr::content(ifs$response, "raw"), "data-raw/ifs.xlsx")
 ifs_link <- ifs$response$url
 
 ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3) %>%
-  select(X__1, X__2, X__3) %>%
-  filter(!is.na(X__1)) %>% 
+  select(X__1:X__4) %>%
+  filter(!is.na(X__2)) %>% 
   transmute(country = "United Kingdom",
-            year = ifelse(str_extract(X__1, "\\d{2}$") %>% as.numeric() > 50,
-                   str_extract(X__1, "\\d{2}$") %>% as.numeric() + 1900,
-                   str_extract(X__1, "\\d{2}$") %>% as.numeric() + 2000),
-            gini = as.numeric(X__3) %>% round(4),
+            year = ifelse(str_extract(X__2, "\\d{2}$") %>% as.numeric() > 50,
+                   str_extract(X__2, "\\d{2}$") %>% as.numeric() + 1900,
+                   str_extract(X__2, "\\d{2}$") %>% as.numeric() + 2000),
+            gini = as.numeric(X__4) %>% round(4),
             gini_se = NA,
             welfare_def = "disp",
             equiv_scale = "oecdm",
             monetary = TRUE,
-            series = paste("IFS", X__2, welfare_def, equiv_scale),
+            series = paste("IFS", X__1, welfare_def, equiv_scale),
             source1 = "Institute for Fiscal Studies",
             page = "",
             link = ifs_link)
@@ -1465,14 +1474,14 @@ download.file(cbo_link, "data-raw/cbo.xlsx")
 
 cbo <- read_excel("data-raw/cbo.xlsx", sheet = 9, col_names = FALSE, skip = 10) %>% 
   select(X__1:X__4) %>% 
-  filter(!is.na(X__2)) %>% 
+  filter(!is.na(X__1) & !is.na(X__2)) %>% 
   transmute(year = as.numeric(X__1),
-            market = X__2,
-            gross = X__3,
-            disp = X__4) %>% 
+            market = as.numeric(X__2),
+            gross = as.numeric(X__3),
+            disp = as.numeric(X__4)) %>% 
   filter(!is.na(year)) %>% 
-  gather(key = "welfare_def", 
-         value = "gini",
+  gather(key = welfare_def, 
+         value = gini,
          market:disp) %>% 
   mutate(country = "United States",
          gini_se = NA,
@@ -1681,8 +1690,9 @@ expand_years <- function(years) {
 cr2008_codes <- bind_rows(cr2008_codes1, cr2008_codes2) %>% 
   fill(country, wd) %>% 
   filter(!str_detect(country, "^\\d{2}$")) %>% 
-  filter(!str_detect(years, "^\\d{2}$")) %>% 
-  mutate(years = str_replace_all(years, "-", ":"),
+  filter(!str_detect(years, "^\\d{2}$")) %>%
+  mutate(years = str_replace(years, ",\\s*$", ""),
+         years = str_replace_all(years, "-", ":"),
          years = str_replace_all(years, "(\\d{2})\\d{2}/(\\d{2})", "\\1\\2")) %>% 
   separate(years, into = paste0("V", 1:7), sep = ",") %>% 
   gather(key = orig, value = year, V1:V7) %>% 
@@ -1708,8 +1718,8 @@ cr2008_codes <- bind_rows(cr2008_codes1, cr2008_codes2) %>%
          wd = if_else(country == "Turkey" | country == "Bulgaria",
                       "Income", wd)) %>% 
   group_by(country, year) %>% 
-  arrange(wd) %>% 
-  filter(row_number(wd) == 1) %>% 
+  arrange(wd, .by_group = TRUE) %>% 
+  slice(1) %>% 
   ungroup()
 
 cr2008_gini <- wbstats::wb(indicator = "SI.POV.GINI",
