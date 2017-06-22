@@ -104,7 +104,7 @@ format_sedlac <- function(df, sheet, link, es) {
     filter(!is.na(gini)) %>%
     transmute(country = country,
               year = as.numeric(year),
-              gini = gini,
+              gini = as.numeric(gini),
               gini_se = se,
               welfare_def = "disp",
               equiv_scale = es,
@@ -1865,8 +1865,7 @@ rm(gidd_raw)
 
 ## Added data
 added_data <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/article_data/fs_added_data.csv",
-                       col_types = "cinncclccccii") %>% 
-  select(-X12, -X13)
+                       col_types = "ciddcclcccc")
 
 ## Combine
 # first, get baseline series and order by data-richness
