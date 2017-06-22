@@ -1402,7 +1402,7 @@ turkstat <- pmap_df(list(turkstat_list, names(turkstat_list), turkstat_links),
             page = "",
             link = link_x) })
 
-rm(turkstat_list)
+rm(turkstat_list, turkstat_hh, turkstat_oecdm)
 
 
 # U.K. Office for National Statistics (update link)
@@ -1411,7 +1411,7 @@ rm(turkstat_list)
 ons_link <- "https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv"
 download.file(ons_link, "data-raw/ons.csv")
 
-ons <- read_csv("data-raw/ons.csv", skip = 7) %>% 
+ons <- read_csv("data-raw/ons.csv", skip = 7, col_types = "cdddd") %>% 
   transmute(year = X1,
             market = Original,
             gross = Gross,
@@ -1440,18 +1440,18 @@ writeBin(httr::content(ifs$response, "raw"), "data-raw/ifs.xlsx")
 ifs_link <- ifs$response$url
 
 ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3) %>%
-  select(X1, X2, X3) %>%
-  filter(!is.na(X1)) %>% 
+  select(X__1, X__2, X__3) %>%
+  filter(!is.na(X__1)) %>% 
   transmute(country = "United Kingdom",
-            year = ifelse(str_extract(X1, "\\d{2}$") %>% as.numeric() > 50,
-                   str_extract(X1, "\\d{2}$") %>% as.numeric() + 1900,
-                   str_extract(X1, "\\d{2}$") %>% as.numeric() + 2000),
-            gini = as.numeric(X3) %>% round(4),
+            year = ifelse(str_extract(X__1, "\\d{2}$") %>% as.numeric() > 50,
+                   str_extract(X__1, "\\d{2}$") %>% as.numeric() + 1900,
+                   str_extract(X__1, "\\d{2}$") %>% as.numeric() + 2000),
+            gini = as.numeric(X__3) %>% round(4),
             gini_se = NA,
             welfare_def = "disp",
             equiv_scale = "oecdm",
             monetary = TRUE,
-            series = paste("IFS", X2, welfare_def, equiv_scale),
+            series = paste("IFS", X__2, welfare_def, equiv_scale),
             source1 = "Institute for Fiscal Studies",
             page = "",
             link = ifs_link)
@@ -1464,12 +1464,13 @@ cbo_link <- "https://www.cbo.gov/sites/default/files/114th-congress-2015-2016/re
 download.file(cbo_link, "data-raw/cbo.xlsx")
 
 cbo <- read_excel("data-raw/cbo.xlsx", sheet = 9, col_names = FALSE, skip = 10) %>% 
-  select(X0:X3) %>% 
-  filter(!is.na(X1)) %>% 
-  transmute(year = as.numeric(X0),
-            market = X1,
-            gross = X2,
-            disp = X3) %>% 
+  select(X__1:X__4) %>% 
+  filter(!is.na(X__2)) %>% 
+  transmute(year = as.numeric(X__1),
+            market = X__2,
+            gross = X__3,
+            disp = X__4) %>% 
+  filter(!is.na(year)) %>% 
   gather(key = "welfare_def", 
          value = "gini",
          market:disp) %>% 
@@ -1565,9 +1566,8 @@ inev_link <- "http://www.ine.gov.ve/documentos/Social/Pobreza/xls/Serie_%20GINI_
 download.file(inev_link, "data-raw/inev.xls")
 
 inev <- read_excel("data-raw/inev.xls", skip = 3) %>% 
-  janitor::clean_names() %>% 
-  filter(coeficiente_gini_y_quintiles == "Coeficiente de Gini") %>% 
-  select(-coeficiente_gini_y_quintiles, -x) %>% 
+  filter(`Coeficiente Gini y Quintiles` == "Coeficiente de Gini") %>% 
+  select(matches("\\d{4}")) %>% 
   gather(key = year, value = gini) %>% 
   transmute(country = "Venezuela",
             year = as.numeric(str_extract(year, "\\d{4}")),
