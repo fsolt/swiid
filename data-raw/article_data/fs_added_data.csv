@@ -87,6 +87,11 @@ Australia,1989,0.294,,con,hh,,Park1995 Australia con hh,Tabatabai 1996; Park 199
 Australia,1989,0.388,,disp,hh,,Park1995 Australia disp hh,Tabatabai 1996; Park 1995,124,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Azerbaijan,1988,0.317,,gross,pc,,AG1993 Azerbaijan gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,119,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Azerbaijan,1990,0.345,,gross,pc,,AG1993 Azerbaijan gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,119,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Azerbaijan,1994,0.36,,con,pc,,MY2006b Azerbaijan con pc,Mitra and Yemtsov 2006b,11,http://siteresources.worldbank.org/INTDECABC2006/Resources/pradeepmitra.PDF
+Azerbaijan,2001,0.365,,con,pc,,MY2006b Azerbaijan con pc,Mitra and Yemtsov 2006b,11,http://siteresources.worldbank.org/INTDECABC2006/Resources/pradeepmitra.PDF
+Azerbaijan,1990,0.345,,gross,pc,,MY2006b Azerbaijan disp pc,Mitra and Yemtsov 2006b,8,http://siteresources.worldbank.org/INTDECABC2006/Resources/pradeepmitra.PDF
+Azerbaijan,1995,0.44,,gross,pc,,MY2006b Azerbaijan disp pc,Mitra and Yemtsov 2006b,8,http://siteresources.worldbank.org/INTDECABC2006/Resources/pradeepmitra.PDF
+Azerbaijan,2001,0.373,,gross,pc,,MY2006b Azerbaijan disp pc,Mitra and Yemtsov 2006b,8,http://siteresources.worldbank.org/INTDECABC2006/Resources/pradeepmitra.PDF
 Azerbaijan,2008,0.337,,con,pc,,ZKM2014 Azerbaijan con pc,"Zhuang, Kanbur, and Maligalig 2014",24,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA24
 Bahamas,2001,0.5745,,con,pc,TRUE,Statistics Bahamas con pc,Statistics Bahamas 2004,15,https://www.bahamas.gov.bs/wps/wcm/connect/d01ce76a-75b4-4229-baae-af3b87b6816c/Bahamas+Living+Conditions+Survey+2001+report-Copy.pdf?MOD=AJPERES
 Bahamas,2013,0.414,,con,pc,TRUE,Statistics Bahamas con pc,Statistics Bahamas 2016,21,https://www.bahamas.gov.bs/wps/wcm/connect/5312dd47-5cd9-45f5-bf6c-dea99f3a6226/Bahamas+Household+Expenditure+Survey+2013+Report_v2.pdf?MOD=AJPERES
@@ -392,6 +397,7 @@ Croatia,2006,0.29,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2009
 Croatia,2007,0.3,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2009,,http://www.dzs.hr/Eng/publication/2009/14-1-2_1e2009.htm
 Croatia,2008,0.3,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2009,,http://www.dzs.hr/Eng/publication/2009/14-1-2_1e2009.htm
 Croatia,2009,0.29,,disp,hh,TRUE,CBS disp hh 2,Croatian Bureau of Statistics 2010,,http://www.dzs.hr/Hrv_Eng/publication/2010/14-01-02_01_2010.htm
+Croatia,1998,0.279,,con,pc,,MY2006b Croatia con pc,Mitra and Yemtsov 2006b,11,http://siteresources.worldbank.org/INTDECABC2006/Resources/pradeepmitra.PDF
 Cyprus,1985,0.296,,con,hh,,Park1995 Cyprus con hh,Tabatabai 1996; Park 1995,118,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Cyprus,1991,0.279,,con,hh,,Park1995 Cyprus con hh,Tabatabai 1996; Park 1995,118,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Cyprus,1985,0.371,,disp,hh,,Park1995 Cyprus disp hh,Tabatabai 1996; Park 1995,118,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
