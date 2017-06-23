@@ -561,6 +561,8 @@ Guinea,2007,0.312,,con,pc,,INS Guinea con pc,Institut National de la Statistique
 Guinea,2012,0.317,,con,pc,,INS Guinea con pc,Institut National de la Statistique Guinea 2012,12,http://www.stat-guinee.org/www.old/DSRP/PDF/Pauvrete%20Inegalite%20Guinee_fVer2_%2021%2008%20%202012.pdf
 Guinea-Bissau,2002,0.36,,con,pc,,INE Guinea-Bissau con pc,Instituto Nacional de Estati_stica Guinea-Bissau 2014,13,http://www.stat-guinebissau.com/nada41/index.php/catalog/7/download/34
 Guinea-Bissau,2010,0.46,,con,pc,,INE Guinea-Bissau con pc,Instituto Nacional de Estati_stica Guinea-Bissau 2014,13,http://www.stat-guinebissau.com/nada41/index.php/catalog/7/download/34
+Guyana,1993,0.467,,con,pc,,Gafar2004,Gafar 2004,66,http://www.jstor.org/stable/20066694 
+Guyana,1999,0.421,,con,pc,,Gafar2004,Gafar 2004,66,http://www.jstor.org/stable/20066694 
 Guyana,2007,0.5,,con,pc,,MM2009 Guyana con pc,Mendoza and Machado 2009,112,http://www.cepal.org/publicaciones/xml/3/38253/LCARL.245part2.pdf
 Haiti,2012,0.676,,gross,hh,FALSE,Herrera gross hh,Herrera et al. 2014,75,http://www.ihsi.ht/pdf/ecvmas/analyse/IHSI_DIAL_Rapport%20complet_11072014.pdf
 Haiti,2001,0.61,,gross,pc,FALSE,WBH gross pc,World Bank 2014,6,http://www.ihsi.ht/pdf/ecvmas/ecvmas_seuil/pauvrete%20et%20inclusion%20sociale%20en%20haiti%20francais.pdf
@@ -1396,6 +1398,14 @@ Poland,2001,0.307,,con,pc,FALSE,MY2006 Poland con pc 5,Mitra and Yemtsov 2006,10
 Poland,2002,0.32,,con,pc,FALSE,MY2006 Poland con pc 5,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Poland,1990,0.177,,con,pc,,Park1995 Poland con pc,Tabatabai 1996; Park 1995,121,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Poland,1990,0.257,,disp,pc,,Park1995 Poland disp pc,Tabatabai 1996; Park 1995,121,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Portugal,1994,0.436,,gross,hh,,Budria2007 gross hh,Budria 2007,32,https://mpra.ub.uni-muenchen.de/1784/1/MPRA_paper_1784.pdf
+Portugal,1995,0.421,,gross,hh,,Budria2007 gross hh,Budria 2007,32,https://mpra.ub.uni-muenchen.de/1784/1/MPRA_paper_1784.pdf
+Portugal,1996,0.409,,gross,hh,,Budria2007 gross hh,Budria 2007,32,https://mpra.ub.uni-muenchen.de/1784/1/MPRA_paper_1784.pdf
+Portugal,1997,0.409,,gross,hh,,Budria2007 gross hh,Budria 2007,32,https://mpra.ub.uni-muenchen.de/1784/1/MPRA_paper_1784.pdf
+Portugal,1998,0.41,,gross,hh,,Budria2007 gross hh,Budria 2007,32,https://mpra.ub.uni-muenchen.de/1784/1/MPRA_paper_1784.pdf
+Portugal,1999,0.403,,gross,hh,,Budria2007 gross hh,Budria 2007,32,https://mpra.ub.uni-muenchen.de/1784/1/MPRA_paper_1784.pdf
+Portugal,2000,0.397,,gross,hh,,Budria2007 gross hh,Budria 2007,32,https://mpra.ub.uni-muenchen.de/1784/1/MPRA_paper_1784.pdf
+Portugal,2001,0.4,,gross,hh,,Budria2007 gross hh,Budria 2007,32,https://mpra.ub.uni-muenchen.de/1784/1/MPRA_paper_1784.pdf
 Portugal,1968,0.35,,hh,gross,,CR1977 hh gross,Castanheira and Ribeiro 1977,728,http://www.jstor.org/stable/41008246
 Portugal,1974,0.39,,hh,gross,,CR1977 hh gross,Castanheira and Ribeiro 1977,728,http://www.jstor.org/stable/41008246
 Portugal,1980,0.387,0.003,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
