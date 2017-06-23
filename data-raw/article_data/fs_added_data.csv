@@ -1412,8 +1412,8 @@ Portugal,1998,0.41,,gross,hh,,Budria2007 gross hh,Budria 2007,32,https://mpra.ub
 Portugal,1999,0.403,,gross,hh,,Budria2007 gross hh,Budria 2007,32,https://mpra.ub.uni-muenchen.de/1784/1/MPRA_paper_1784.pdf
 Portugal,2000,0.397,,gross,hh,,Budria2007 gross hh,Budria 2007,32,https://mpra.ub.uni-muenchen.de/1784/1/MPRA_paper_1784.pdf
 Portugal,2001,0.4,,gross,hh,,Budria2007 gross hh,Budria 2007,32,https://mpra.ub.uni-muenchen.de/1784/1/MPRA_paper_1784.pdf
-Portugal,1968,0.35,,hh,gross,,CR1977 hh gross,Castanheira and Ribeiro 1977,728,http://www.jstor.org/stable/41008246
-Portugal,1974,0.39,,hh,gross,,CR1977 hh gross,Castanheira and Ribeiro 1977,728,http://www.jstor.org/stable/41008246
+Portugal,1968,0.35,,gross,hh,,CR1977 hh gross,Castanheira and Ribeiro 1977,728,http://www.jstor.org/stable/41008246
+Portugal,1974,0.39,,gross,hh,,CR1977 hh gross,Castanheira and Ribeiro 1977,728,http://www.jstor.org/stable/41008246
 Portugal,1980,0.387,0.003,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Portugal,1990,0.374,0.003,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Puerto Rico,1979,0.516,,gross,ae,,Sotomayor2004 gross ae,Sotomayor 2004,1397,https://doi.org/10.1016/j.worlddev.2004.02.005
@@ -1779,9 +1779,9 @@ Sweden,1990,0.2608,,disp,ae,TRUE,W1999 Sweden disp ae 1,Wagstaff et al. 1999,82,
 Sweden,1990,0.256,,disp,ae,TRUE,W1999 Sweden disp ae 2,Wagstaff et al. 1999,86,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 Sweden,1990,0.3004,,gross,ae,TRUE,W1999 Sweden gross ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 Sweden,1990,0.296,,gross,ae,TRUE,W1999 Sweden gross ae 2,Wagstaff et al. 1999,86,http://www.sciencedirect.com/science/article/pii/S0047272798000851
-Switzerland,1980,0.361,,hh,disp,FALSE,LF1985 hh disp,Leu and Frey 1985,201,http://dx.doi.org/10.1068/030199
-Switzerland,1980,0.399,,hh,gross,FALSE,LF1985 hh gross,Leu and Frey 1985,201,http://dx.doi.org/10.1068/030199
-Switzerland,1980,0.452,,hh,market,FALSE,LF1985 hh market,Leu and Frey 1985,201,http://dx.doi.org/10.1068/030199
+Switzerland,1980,0.361,,disp,hh,FALSE,LF1985 hh disp,Leu and Frey 1985,201,http://dx.doi.org/10.1068/030199
+Switzerland,1980,0.399,,gross,hh,FALSE,LF1985 hh gross,Leu and Frey 1985,201,http://dx.doi.org/10.1068/030199
+Switzerland,1980,0.452,,market,hh,FALSE,LF1985 hh market,Leu and Frey 1985,201,http://dx.doi.org/10.1068/030199
 Switzerland,1992,0.2541,,disp,ae,TRUE,W1999 Switzerland disp ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 Switzerland,1992,0.2716,,gross,ae,TRUE,W1999 Switzerland gross ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 Syria,1997,0.326,,con,pc,,AIAGEL2011 con pc,"Abu-Ismail, Abdel-Gadir, and El-Laithy 2011",11,http://www.undp.org/content/dam/rbas/doc/poverty/BG_15_Poverty%20and%20Inequality%20in%20Syria_FeB.pdf
