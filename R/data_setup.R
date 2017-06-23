@@ -1008,6 +1008,29 @@ nbs <- read_excel("data-raw/nbs.xls", skip = 2, sheet = "Лист1") %>%
             link = nbs_link)
 
 
+# National Statistical Committee of Kyrgyzstan (automated)
+nsck_link <- "http://www.stat.kg/en/statistics/download/dynamic/543/"
+download.file(nsck_link, "data-raw/nsck.xls")
+
+nsck <- read_excel("data-raw/nsck.xls") %>% 
+  filter(str_detect(`5.04.00.14 Additional tables- incomes`, "Items|Gini")) %>% 
+  first_row_to_names() %>% 
+  select(matches("\\d{4}")) %>% 
+  gather(key = year, value = gini) %>% 
+  filter(!is.na(gini)) %>% 
+  transmute(country = "Kyrgyzstan",
+            year = as.numeric(year),
+            gini = gini,
+            gini_se = NA,
+            welfare_def = "gross",
+            equiv_scale = "pc",
+            monetary = TRUE,
+            series = paste("NSC Kyrgyzstan", welfare_def, equiv_scale),
+            source1 = "National Statistical Committee of Kyrgyzstan",
+            page = "5.04.00.14",
+            link = nsck_link)
+  
+
 # Statistics Office of Montenegro (automated, but update backup Internet Archive link)
 # Slow server, so get from Internet Archive if it times out
 
@@ -1896,7 +1919,7 @@ ineq0 <- bind_rows(lis,
                    transmonee, ceq1, afr_gini,
                    abs, inebo, belstat, statcan, dane, ineccr, dkstat,
                    capmas, statee, statfi, insee, geostat,
-                   stathk, bpsid, amar, cso_ie, istat, kostat, kazstat,
+                   stathk, bpsid, amar, cso_ie, istat, kazstat, kostat, nsck,
                    nbs, monstat, ssb, dgeec, psa,
                    rosstat, singstat, ssi, ine, statslk, scb, 
                    nso_thailand, tdgbas, turkstat, ons, ifs, cbo, uscb, uine, inev, gso_vn,
