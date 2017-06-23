@@ -1938,7 +1938,7 @@ ineq <- bind_rows(ineq_bl, ineq_nbl) %>%
          ecode = as.integer(factor(equiv_scale), levels = unique(equiv_scale)),
          scode = as.integer(factor(series, levels = unique(series))))
 
-save.image(file = "data/ineq.Rda")
+save.image(file = "data/ineq.rda")
 
 
 
