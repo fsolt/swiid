@@ -2,16 +2,16 @@ library(tidyverse)
 library(stringr)
 library(mailR)
 
-gmail_user <- getOption("gmail_user")         # set all of these in .Rprofile, e.g.: 
-gmail_password <- getOption("gmail_password") # options("gmail_user" = "juanita_herrara@gmail.com", 
-lis_user <- getOption("lis_user")             #         "gmail_password" = "my_password")
-lis_password <- getOption("lis_password")
-
 weldef_eqsc <- c("market_hh", "market_sqrt", "market_pc",
                  "disp_hh", "disp_sqrt", "disp_pc",
                  "con_hh", "con_sqrt", "con_pc")
 
 get_lis_ginis <- function(wd_es) {
+  gmail_user <- getOption("gmail_user")         # set all of these in .Rprofile, e.g.: 
+  gmail_password <- getOption("gmail_password") # options("gmail_user" = "juanita_herrara@gmail.com", 
+  lis_user <- getOption("lis_user")             #         "gmail_password" = "my_password")
+  lis_password <- getOption("lis_password")
+  
   purrr::walk(wd_es, function(weldef_eqsc) {
     wt <- ifelse(str_detect(weldef_eqsc, "hh"), "hpopwgt", "hpopwgt*nhhmem")
     
