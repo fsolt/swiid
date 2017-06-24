@@ -381,7 +381,7 @@ China,2000,0.407,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mit
 China,2001,0.415,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206
 Colombia,1997,0.53,,con,hh,,GLS2006 Colombia con hh,"Goni, Lopez, and Serven 2006",27,http://papers.ssrn.com/sol3/papers.cfm?abstract_id=875741
 Colombia,2003,0.5,,con,hh,,GLS2006 Colombia con hh,"Goni, Lopez, and Serven 2006",27,http://papers.ssrn.com/sol3/papers.cfm?abstract_id=875741
-"Congo, Republic of",2005,0.416,,gross,hh,FALSE,,CNSEE Republic of Congo 2006,28,http://www.cnsee.org/Donnees/Enquete/PDF/Ecom.pdf
+"Congo, Republic of",2005,0.416,,gross,hh,FALSE,CNSEE Republic of Congo gross hh,CNSEE Republic of Congo 2006,28,http://www.cnsee.org/Donnees/Enquete/PDF/Ecom.pdf
 Costa Rica,1988,0.354,,con,pc,,Park1995 Costa Rica con pc,Tabatabai 1996; Park 1995,113,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Costa Rica,1988,0.396,,disp,pc,,Park1995 Costa Rica disp pc,Tabatabai 1996; Park 1995,113,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Costa Rica,1981,0.49,,disp,hh,,vGP1984 Costa Rica disp hh,Tabatabai 1996; van Ginneken and Park 1984,113,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
