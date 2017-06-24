@@ -21,7 +21,7 @@ get_lis_ginis <- function(wd_es) {
       str_replace("lis_password", lis_password) %>% 
       str_replace_all("WD_ES", weldef_eqsc) %>% 
       str_replace("WT", wt)
-    
+
     mailR::send.mail(from = gmail_user,
                      to = "postbox@lisdatacenter.org",
                      subject = weldef_eqsc,
@@ -36,11 +36,4 @@ get_lis_ginis <- function(wd_es) {
   })
 } 
 
-
-
-
-
-
-
-
-
+get_lis_ginis(weldef_eqsc)
