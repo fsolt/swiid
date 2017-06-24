@@ -1962,7 +1962,7 @@ ineq <- bind_rows(ineq_bl, ineq_nbl) %>%
          scode = as.integer(factor(series, levels = unique(series))))
 
 save.image(file = "data/ineq.rda")
-write_csv(ineq, "data/ineq.csv")
+write_csv(ineq, "data/swiid_source.csv")
 
 
 # Should flag series that *only* share obs with baseline?
