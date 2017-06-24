@@ -1,13 +1,13 @@
 p_load(rstan, beepr)
 
-seed <- 3034
-iter <- 1000
-chains <- 4
+seed <- 324
+iter <- 200
+chains <- 3
 cores <- chains
 
 #names(table(lis$country)[5])
 
-x <- ineq %>% filter(country=="Italy") %>%  
+x <- ineq %>%  
   mutate(ccode = ccode %>% factor() %>% as.numeric(),
          ycode = ycode - min(ycode) + 1,
          scode = scode %>% factor() %>% as.numeric())
@@ -50,7 +50,7 @@ model_code <- '
   transformed data {
     int G[N-1];				// number of missing years until next observed country-year (G for "gap")
     for (n in 1:N-1) {
-      G[n] <- yy[n+1] - yy[n] - 1;
+      G[n] = yy[n+1] - yy[n] - 1;
     }
   }
   parameters {
@@ -89,8 +89,8 @@ model_code <- '
       if (n < N) {
         if (yy[n] < Y) {
           for (g in 0:G[n]) {
-            // this is no longer right because n are not now in c-y order;
-            // now G probably needs to be calculated in R rather than Stan
+            // this is no longer right for years preceding any LIS data
+            // because n are now not in c-y order
             gini[cc[n], yy[n]+g+1] ~ normal(gini[cc[n], yy[n]+g], sigma_country[cc[n]]);
           }
         }
