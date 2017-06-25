@@ -13,17 +13,16 @@ parameters {
   real<lower=0, upper=.1> sigma_gini[K]; 	// country variance parameter (see Linzer and Stanton 2012, 12)
 }
 model {
-  for (n in 1:N) {
-    if (tt[n] == 1) {
-      gini[kk[n], tt[n]] ~ normal(.4, .2) 
-    } else {
-      gini[kk[n], tt[n]] ~ normal(gini[kk[n], yy[n-1]], sigma_gini[kk[n]])
+  for (k in 1:K) {
+    gini[k, 1] ~ normal(.4, .2);
+    for (t in 2:T) {
+      gini[k, t] ~ normal(gini[k, t-1], sigma_gini[k]);
     }
   }
   
   for (n in 1:N) {
     if (n <= N_b) {
-        gini[cc[n], yy[n]] ~ normal(gini_b[n], gini_b_se[n]); // use baseline series where observed
+        gini[kk[n], tt[n]] ~ normal(gini_b[n], gini_b_se[n]); // use baseline series where observed
     }
   }
 }
