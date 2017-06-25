@@ -97,7 +97,7 @@ plot_results <- function(stan_m){
 #ts_plot <- function(df, rows = 7, cols = 5, npages) {
 rows <- 7
 cols <- 5
-npages <- max(x$kcode)/35
+npages <- ceiling(max(x$kcode)/35)
 #a_res <- df
 
 pages <- c("1:35", "36:70")
