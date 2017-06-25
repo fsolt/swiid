@@ -1955,14 +1955,18 @@ ineq_nbl <- ineq0 %>% anti_join(ineq_bl %>% select(-gini_b, -gini_b_se),
 ineq <- bind_rows(ineq_bl, ineq_nbl) %>% 
   mutate(gini_m_se = ifelse(!is.na(gini_m_se), gini_m_se,
                             quantile(gini_m_se/gini_m, .99, na.rm = TRUE)*gini_m),
-         ccode = as.integer(factor(country, levels = unique(country))),
-         ycode = as.integer(year - min(year) + 1),
+         kcode = as.integer(factor(country, levels = unique(country))),
+         tcode = as.integer(year - min(year) + 1),
          wcode = as.integer(factor(welfare_def), levels = unique(welfare_def)),
          ecode = as.integer(factor(equiv_scale), levels = unique(equiv_scale)),
          scode = as.integer(factor(series, levels = unique(series))))
 
+swiid_source <- ineq0 %>% 
+  select(-oth_count, -s_count) %>% 
+  arrange(country, year, series)
+
 save.image(file = "data/ineq.rda")
-write_csv(ineq, "data/swiid_source.csv")
+write_csv(swiid_source, "data/swiid_source.csv")
 
 
 # Should flag series that *only* share obs with baseline?
