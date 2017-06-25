@@ -67,7 +67,7 @@ format_lis_xtra <- function(x) {
               equiv_scale = "sqrt",
               welfare_def = "disp",
               monetary = FALSE,
-              series = "LIS disp_sqrt",
+              series = "LIS disp sqrt",
               source1 = ifelse(country=="New Zealand", "Statistics New Zealand 1999", "LISSY"),
               page = ifelse(country=="New Zealand", "73", ""),
               link = ifelse(country=="New Zealand", 
