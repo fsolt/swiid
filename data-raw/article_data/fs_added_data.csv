@@ -289,9 +289,9 @@ Canada,1993,0.497,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, In
 Canada,1994,0.495,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1995,0.493,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Cape Verde,2001,0.51,,con,pc,,FR2008 Cape Verde con pc,Ferreira and Ravallion 2008,35,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
-Cape Verde,2002,0.53,,con,pc,,INE Cape Verde con pc,Instituto Nacional de Estat’stica Cape Verde 2016,49,http://ine.cv/wp-content/uploads/2016/11/apresentacao-resultados-preliminares-18-novembro-2016.pdf
-Cape Verde,2007,0.47,,con,pc,,INE Cape Verde con pc,Instituto Nacional de Estat’stica Cape Verde 2016,49,http://ine.cv/wp-content/uploads/2016/11/apresentacao-resultados-preliminares-18-novembro-2016.pdf
-Cape Verde,2015,0.46,,con,pc,,INE Cape Verde con pc,Instituto Nacional de Estat’stica Cape Verde 2016,49,http://ine.cv/wp-content/uploads/2016/11/apresentacao-resultados-preliminares-18-novembro-2016.pdf
+Cape Verde,2002,0.53,,con,pc,,INE Cape Verde con pc,Instituto Nacional de EstatÕstica Cape Verde 2016,49,http://ine.cv/wp-content/uploads/2016/11/apresentacao-resultados-preliminares-18-novembro-2016.pdf
+Cape Verde,2007,0.47,,con,pc,,INE Cape Verde con pc,Instituto Nacional de EstatÕstica Cape Verde 2016,49,http://ine.cv/wp-content/uploads/2016/11/apresentacao-resultados-preliminares-18-novembro-2016.pdf
+Cape Verde,2015,0.46,,con,pc,,INE Cape Verde con pc,Instituto Nacional de EstatÕstica Cape Verde 2016,49,http://ine.cv/wp-content/uploads/2016/11/apresentacao-resultados-preliminares-18-novembro-2016.pdf
 Chile,1978,0.485,,gross,pc,,Berry1997 gross pc,Berry 1997,15,http://www.jstor.org/stable/2503865
 Chile,1988,0.519,,gross,pc,,Berry1997 gross pc,Berry 1997,15,http://www.jstor.org/stable/2503865
 Chile,1989,0.522,,gross,pc,,Berry1997 gross pc,Berry 1997,15,http://www.jstor.org/stable/2503865
@@ -1012,6 +1012,8 @@ Korea,1997,0.303,,con,pc,,SK2006 Korea con pc,Son and Kakwani 2006,202,http://do
 Korea,1998,0.309,,con,pc,,SK2006 Korea con pc,Son and Kakwani 2006,202,http://doi.org/10.1007/s10888-005-9010-8
 Korea,1999,0.312,,con,pc,,SK2006 Korea con pc,Son and Kakwani 2006,202,http://doi.org/10.1007/s10888-005-9010-8
 Kuwait,1998,0.32,,con,pc,,FR2008 Kuwait con pc,Ferreira and Ravallion 2008,37,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
+Kyrgyzstan,1988,0.312,,gross,pc,,AG1993 Kyrgyzstan gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,120,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Kyrgyzstan,1990,0.308,,gross,pc,,AG1993 Kyrgyzstan gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,120,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Kyrgyzstan,1994,0.537,,con,pc,FALSE,MY2006 Kyrgyzstan con pc 2,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Kyrgyzstan,1996,0.523,,con,pc,FALSE,MY2006 Kyrgyzstan con pc 2,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Kyrgyzstan,1997,0.405,,con,pc,FALSE,MY2006 Kyrgyzstan con pc 2,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
@@ -1021,8 +1023,6 @@ Kyrgyzstan,2000,0.299,,con,pc,FALSE,MY2006 Kyrgyzstan con pc 2,Mitra and Yemtsov
 Kyrgyzstan,2001,0.29,,con,pc,FALSE,MY2006 Kyrgyzstan con pc 2,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Kyrgyzstan,2002,0.292,,con,pc,FALSE,MY2006 Kyrgyzstan con pc 2,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Kyrgyzstan,2003,0.276,,con,pc,FALSE,MY2006 Kyrgyzstan con pc 2,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
-Kyrgyzstan,1988,0.312,,gross,pc,,AG1993 Kyrgyzstan gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,120,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Kyrgyzstan,1990,0.308,,gross,pc,,AG1993 Kyrgyzstan gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,120,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Kyrgyzstan,2009,0.362,,con,pc,,ZKM2014 Kyrgystan con pc,"Zhuang, Kanbur, and Maligalig 2014",24,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA24
 Lao,1992,0.304,,con,pc,,FR2008 Lao con pc,Ferreira and Ravallion 2008,37,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Lao,1992,0.305,,con,pc,,LMPI2010 con pc,"Lao Ministry of Planning and Investment, Department of Statistics, 2010",66,http://www.nsc.gov.la/en/PDF/Poverty%20in%20lao%202008.pdf
@@ -1449,58 +1449,58 @@ Romania,2000,0.283,,con,pc,FALSE,MY2006 Romania con pc 3,Mitra and Yemtsov 2006,
 Romania,2001,0.286,,con,pc,FALSE,MY2006 Romania con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Romania,2002,0.294,,con,pc,FALSE,MY2006 Romania con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Romania,2003,0.289,,con,pc,FALSE,MY2006 Romania con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
+Russia,1988,0.264,,gross,pc,,AG1993 Russian Federation gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,121,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Russia,1990,0.259,,gross,pc,,AG1993 Russian Federation gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,121,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Russia,1990,0.233,,market,pc,,Cornia1994 Russia market pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Russia,1991,0.2604,,market,pc,,Cornia1994 Russia market pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Russia,1992,0.278,,market,pc,,Cornia1994 Russia market pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
-Russian Federation,1988,0.264,,gross,pc,,AG1993 Russian Federation gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,121,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Russian Federation,1990,0.259,,gross,pc,,AG1993 Russian Federation gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,121,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Russian Federation,1994,0.48,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,1995,0.45,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,1996,0.46,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,1998,0.47,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2000,0.52,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2001,0.49,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2002,0.49,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2003,0.51,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2004,0.51,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2005,0.43,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2006,0.5,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2007,0.48,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2008,0.5,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2009,0.42,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,1994,0.46,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,1995,0.44,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,1996,0.49,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,1998,0.44,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2000,0.5,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2001,0.49,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2002,0.49,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2003,0.48,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2004,0.5,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2005,0.37,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2006,0.39,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2007,0.38,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2008,0.48,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,2009,0.35,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
-Russian Federation,1989,0.265,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf
-Russian Federation,1992,0.289,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf
-Russian Federation,1993,0.398,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf
-Russian Federation,1994,0.409,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf
-Russian Federation,1995,0.381,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf
-Russian Federation,1996,0.375,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf
-Russian Federation,1997,0.375,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf
-Russian Federation,1989,0.219,,gross,pc,,Milanovic1998 Russia gross pc 1,Milanovic 1998,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
-Russian Federation,1992,0.543,,gross,pc,,Milanovic1998 Russia gross pc 2,Milanovic 1998,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
-Russian Federation,1994,0.455,,gross,pc,,Milanovic1998 Russia gross pc 2,Milanovic 1998,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
-Russian Federation,1995,0.48,,gross,pc,,Milanovic1998 Russia gross pc 2,Milanovic 1998,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
-Russian Federation,1996,0.518,,gross,pc,,Milanovic1998 Russia gross pc 2,Milanovic 1998,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
-Russian Federation,1997,0.353,,con,pc,FALSE,MY2006 Russian Federation con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
-Russian Federation,1998,0.369,,con,pc,FALSE,MY2006 Russian Federation con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
-Russian Federation,1999,0.357,,con,pc,FALSE,MY2006 Russian Federation con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
-Russian Federation,2000,0.349,,con,pc,FALSE,MY2006 Russian Federation con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
-Russian Federation,2001,0.339,,con,pc,FALSE,MY2006 Russian Federation con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
-Russian Federation,2002,0.338,,con,pc,FALSE,MY2006 Russian Federation con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
-Russian Federation,2003,0.332,,con,pc,FALSE,MY2006 Russian Federation con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
+Russia,1994,0.48,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,1995,0.45,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,1996,0.46,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,1998,0.47,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,2000,0.52,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,2001,0.49,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,2002,0.49,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,2003,0.51,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,2004,0.51,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,2005,0.43,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,2006,0.5,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,2007,0.48,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,2008,0.5,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,2009,0.42,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,1994,0.46,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,1995,0.44,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,1996,0.49,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,1998,0.44,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,2000,0.5,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,2001,0.49,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,2002,0.49,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,2003,0.48,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,2004,0.5,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,2005,0.37,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,2006,0.39,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,2007,0.38,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,2008,0.48,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,2009,0.35,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en 
+Russia,1989,0.265,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf
+Russia,1992,0.289,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf
+Russia,1993,0.398,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf
+Russia,1994,0.409,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf
+Russia,1995,0.381,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf
+Russia,1996,0.375,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf
+Russia,1997,0.375,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf
+Russia,1989,0.219,,gross,pc,,Milanovic1998 Russia gross pc 1,Milanovic 1998,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Russia,1992,0.543,,gross,pc,,Milanovic1998 Russia gross pc 2,Milanovic 1998,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Russia,1994,0.455,,gross,pc,,Milanovic1998 Russia gross pc 2,Milanovic 1998,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Russia,1995,0.48,,gross,pc,,Milanovic1998 Russia gross pc 2,Milanovic 1998,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Russia,1996,0.518,,gross,pc,,Milanovic1998 Russia gross pc 2,Milanovic 1998,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Russia,1997,0.353,,con,pc,FALSE,MY2006 Russian Federation con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
+Russia,1998,0.369,,con,pc,FALSE,MY2006 Russian Federation con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
+Russia,1999,0.357,,con,pc,FALSE,MY2006 Russian Federation con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
+Russia,2000,0.349,,con,pc,FALSE,MY2006 Russian Federation con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
+Russia,2001,0.339,,con,pc,FALSE,MY2006 Russian Federation con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
+Russia,2002,0.338,,con,pc,FALSE,MY2006 Russian Federation con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
+Russia,2003,0.332,,con,pc,FALSE,MY2006 Russian Federation con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Rwanda,1986,0.29,,con,ae,FALSE,NIS Rwanda con ae 1,National Institute of Statistics of Rwanda 2002,27,http://www.statistics.gov.rw/file/714/download?token=J-PX22mI
 Rwanda,2001,0.45,,con,ae,FALSE,NIS Rwanda con ae 1,National Institute of Statistics of Rwanda 2002,27,http://www.statistics.gov.rw/file/714/download?token=J-PX22mI
 Rwanda,2001,0.473,,con,ae,FALSE,NIS Rwanda con ae 2,National Institute of Statistics of Rwanda 2006,25,http://www.statistics.gov.rw/file/710/download?token=F2o-qYal

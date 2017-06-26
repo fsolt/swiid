@@ -6,8 +6,9 @@ cc_swiid <- countrycode::countrycode_data %>%
            str_replace("^The former Yugoslav Republic of ", "") %>% 
            str_replace(" of [GA].*", "") %>% 
            str_replace("Democratic Republic of the Congo", "Congo, D.R.") %>% 
-           str_replace("Lao People's Democratic Republic", "Lao"),
-         country.name.en.regex = if_else(swiid.name == "Russian Federation",
+           str_replace("Lao People's Democratic Republic", "Lao") %>% 
+           str_replace("Russian Federation", "Russia"),
+         country.name.en.regex = if_else(swiid.name == "Russia",
                                          "\\brussia",
                                          if_else(swiid.name == "Central African Republic",
                                                  "\\bcentral.african.rep",
