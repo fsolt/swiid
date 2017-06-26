@@ -21,8 +21,9 @@ program define make_variables
 	gen disp_pc = dhi_tb/nhhmem  
 
 	gen mi_tb = factor + hitp
-	replace mi_tb = 0 if mi<0  
-	replace mi_tb = 10*r(p50) if mi>`topline' 
+	qui replace mi = factor if factor!=. & hitp==.
+	replace mi_tb = 0 if mi_tb<0  
+	replace mi_tb = 10*r(p50) if mi_tb>`topline' 
 	gen market_hh = mi_tb
 	gen market_sqrt = mi_tb/(nhhmem^0.5)
 	gen market_pc = mi_tb/nhhmem 
