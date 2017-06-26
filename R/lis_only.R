@@ -1,3 +1,4 @@
+library(tidyverse)
 library(rstan)
 library(beepr)
 
@@ -38,8 +39,9 @@ runtime
 lapply(get_sampler_params(out1, inc_warmup = FALSE),
        summary, digits = 2)
 
-# Chime
-beep()
+save(out1, file = str_c("data/lis_only_", str_replace(Sys.time(), " ", "_"), ".rda"))
+
+beep() # chime
 
 
 # Post-processing
