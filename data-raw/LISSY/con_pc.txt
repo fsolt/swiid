@@ -1,6 +1,6 @@
 From: postbox@lisdatacenter.org
-Subject: job 460195 con_pc
-Date: May 17, 2017 at 6:52:32 AM CDT
+Subject: job 468471 con_pc
+Date: June 26, 2017 at 7:10:13 AM CDT
 To: fsolt@mac.com
 
 ############################### NOTICE TO USERS ###############################
@@ -91,6 +91,8 @@ fr00, con_pc, .345, .004, 320
 fr05, con_pc, .317, .003, 320
 fr10, con_pc, .532, .005, 320
 gt06, con_pc, .5700000000000001, .005, 110
+gt11, con_pc, .388, .005, 120
+gt14, con_pc, .43, .005, 120
 hu91, con_pc, .293, .007, 200
 hu94, con_pc, .388, .015, 200
 il92, con_pc, .366, .004, 100

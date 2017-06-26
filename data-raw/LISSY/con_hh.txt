@@ -1,6 +1,6 @@
 From: postbox@lisdatacenter.org
-Subject: job 460193 con_hh
-Date: May 17, 2017 at 6:40:18 AM CDT
+Subject: job 468469 con_hh
+Date: June 26, 2017 at 6:42:32 AM CDT
 To: fsolt@mac.com
 
 ############################### NOTICE TO USERS ###############################
@@ -91,6 +91,8 @@ fr00, con_hh, .377, .004, 320
 fr05, con_hh, .334, .002, 320
 fr10, con_hh, .523, .004, 320
 gt06, con_hh, .52, .004, 110
+gt11, con_hh, .357, .005, 120
+gt14, con_hh, .373, .004, 120
 hu91, con_hh, .339, .006, 200
 hu94, con_hh, .415, .013, 200
 il92, con_hh, .364, .004, 100

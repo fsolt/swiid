@@ -1,6 +1,6 @@
 From: postbox@lisdatacenter.org
-Subject: job 460194 con_sqrt
-Date: May 17, 2017 at 7:15:21 AM CDT
+Subject: job 468470 con_sqrt
+Date: June 26, 2017 at 7:07:14 AM CDT
 To: fsolt@mac.com
 
 ############################### NOTICE TO USERS ###############################
@@ -91,6 +91,8 @@ fr00, con_sqrt, .326, .004, 320
 fr05, con_sqrt, .285, .002, 320
 fr10, con_sqrt, .49, .004, 320
 gt06, con_sqrt, .527, .004, 110
+gt11, con_sqrt, .34, .005, 120
+gt14, con_sqrt, .379, .005, 120
 hu91, con_sqrt, .273, .006, 200
 hu94, con_sqrt, .347, .013, 200
 il92, con_sqrt, .324, .004, 100
