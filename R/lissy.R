@@ -82,19 +82,18 @@ get_ginis <- function(cc, reps = 100) {
   if (!cc %in% ccs) {
     stop("Please specify a LIS country in iso2c format")
   }
-  yy <- as.character(c(c(67, 69, 71, 73:75, 78:99), paste0("0", 1:9), c(11:17)))
+  yy <- as.character(c(c(67, 69, 71, 73:75, 78:99), paste0("0", 0:9), c(10:17)))
   
   datasets <- paste0(rep(cc, each = length(yy)), rep(yy, times = length(cc)), "h")
   vars <- c("dhi", "factor", "hitp", "hc", "hpopwgt", "nhhmem", "grossnet")
-  subset <- "complete.cases(dhi)"
-  
+
   v <- c("market_hh", "market_sqrt", "market_pc",
         "disp_hh", "disp_sqrt", "disp_pc",
         "con_hh", "con_sqrt", "con_pc")
   
   for (ccyy in datasets) {
     cat("")
-    df <- try(read.LIS(ccyy, labels = FALSE, vars = vars, subset = subset), silent = TRUE)
+    df <- try(read.LIS(ccyy, labels = FALSE, vars = vars), silent = TRUE)
     if (!class(df)[1] == "try-error") {
       if (!is.nan(mean(df$dhi)) & !mean(df$dhi) == 0) {
         df <- setups(df)
