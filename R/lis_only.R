@@ -1,4 +1,5 @@
 library(tidyverse)
+library(stringr)
 library(rstan)
 library(beepr)
 
@@ -125,6 +126,7 @@ plot_tscs_results <- function(input, output, pars="gini", probs=c(.025, .975),
   return(plotx1)
 }
 
-plot_tscs_results(x, out1)
 plot_tscs_results(x, out1, save_pdf = "paper/figures/ts.pdf")
+plot_tscs_results(x, out1)
+
 
