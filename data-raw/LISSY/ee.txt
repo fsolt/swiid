@@ -1,0 +1,186 @@
+From: postbox@lisdatacenter.org
+Subject: job 468808 ee
+Date: June 27, 2017 at 3:27:51 PM CDT
+To: fsolt@mac.com
+
+############################### NOTICE TO USERS ###############################
+                                                                        
+  Use of the data in the LUXEMBOURG INCOME STUDY DATABASE is governed by
+  regulations which do not allow copying or further distribution of the 
+  survey microdata.                                                     
+
+  Anyone violating these regulations will lose all privileges to the    
+  databases and may be subject to prosecution under the law. In addition,
+  any attempt to circumvent the LIS processing system or unauthorized entry
+  into the LIS computing system will result in prosecution.             
+
+  All papers written using the LUXEMBOURG INCOME STUDY DATABASE must be 
+  submitted for entry into the Working Papers Series.                   
+  Please consult our web site for more information at WWW.LISDATACENTER.ORG
+                                                                        
+############################### NOTICE TO USERS ###############################
+
+> options(echo=FALSE, encoding="UTF-8")
+Loading required package: readstata13
+> options(error = expression(q('no')))
+> ## Define functions 
+> gini <- function(df, x) { 
++   df1 <- df[!is.na(df[[x]]), ] 
++   x <- as.vector(df1[[x]]) 
++   weight <- df1$wt 
++    
++   ox <- order(x) 
++   x <- as.vector(x)[ox] 
++   weight <- as.vector(weight)[ox] / sum(weight)  
++   p <- cumsum(weight) 
++   nu <- cumsum(weight * x) 
++   n <- length(nu) 
++   nu <- nu / nu[n] 
++   res <- round((sum(nu[-1] * p[-n]) - sum(nu[-n] * p[-1])), digits = 4) 
++   return(res) 
++ } 
+>  
+> wNtile <- function(var, wgt, split) { 
++   x <- var[order(var)] 
++   y <- wgt[order(var)] 
++   z <- cumsum(y) / sum(y) 
++   cop <- rep(NA, length(split))  
++   for (i in 1:length(cop)) { 
++     cop[i] <- x[Find(function(h) z[h] > split[i], seq_along(z))] 
++   } 
++   return(cop) 
++ } 
+>  
+> topBottom <- function(var, botline, topline) { 
++   tb <- ifelse(var < botline, botline, var) 
++   tb <- ifelse(var > topline, topline, var) 
++   return(tb) 
++ } 
+>  
+> setups <- function(df) { 
++   botline <- 0 
++   topline <- 10 * wNtile(df$dhi, df$hpopwgt, 0.5) 
++   df$disp_hh <- topBottom(df$dhi, botline, topline) 
++   df$disp_sqrt <- df$disp_hh / (df$nhhmem ^ 0.5) 
++   df$disp_pc <- df$disp_hh / df$nhhmem 
++   df$market_hh <- topBottom(ifelse(!is.na(df$hitp), (df$factor + df$hitp), df$factor), botline, topline) 
++   df$market_sqrt <- df$market_hh / (df$nhhmem ^ 0.5) 
++   df$market_pc <- df$market_hh / df$nhhmem 
++   df$con_hh <- topBottom(df$hc, botline, topline) 
++   df$con_sqrt <- df$con_hh / (df$nhhmem ^ 0.5) 
++   df$con_pc <- df$con_hh / df$nhhmem   
++   return(df) 
++ } 
+>  
+> boot_gini_se <- function(data, var, reps=100) { 
++   data <- data[!is.na(data[[var]]), ] 
++   resamples <- lapply(1:reps, function(i) dplyr::sample_n(data, size = nrow(data), replace=TRUE)) 
++   r_stat <- lapply(resamples, function(x) gini(x, var)) 
++   std_err <- round(sqrt(var(unlist(r_stat))), digits = 4) 
++   return(std_err)    
++ } 
+>  
+> # For testing at home: 
+> # read.LIS <- function(data_file, labels, vars, subset) { 
+> #   require(dplyr) 
+> #   data_file <- stringr::str_replace(data_file, "h", "ih.dta") 
+> #   df <- haven::read_dta(data_file)[, vars] %>% 
+> #     filter(eval(parse(text = subset), .)) 
+> #   if (!labels) { 
+> #     df <- df %>% dplyr::mutate_all(funs(as.numeric)) 
+> #   } 
+> #   return(df) 
+> # } 
+>  
+> get_ginis <- function(cc, reps = 100) { 
++   ccs <- c("au", "at", "be", "br", "ca", "cl", "cn", "co", "cz", "dk",  
++            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is",  
++            "in", "ie", "il", "it", "jp", "lu", "mx", "nl", "no", "pa", "py",  
++            "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
++            "ch", "tw", "uk", "us", "uy") 
++   cc <- tolower(cc) 
++   if (!cc %in% ccs) { 
++     stop("Please specify a LIS country in iso2c format") 
++   } 
++   yy <- as.character(c(c(67, 69, 71, 73:75, 78:99), paste0("0", 0:9), c(10:17))) 
++  
++   datasets <- paste0(rep(cc, each = length(yy)), rep(yy, times = length(cc)), "h") 
++   vars <- c("dhi", "factor", "hitp", "hc", "hpopwgt", "nhhmem", "grossnet") 
++  
++   v <- c("market_hh", "market_sqrt", "market_pc", 
++         "disp_hh", "disp_sqrt", "disp_pc", 
++         "con_hh", "con_sqrt", "con_pc") 
++    
++   for (ccyy in datasets) { 
++     cat("") 
++     df <- try(read.LIS(ccyy, labels = FALSE, vars = vars), silent = TRUE) 
++     if (!class(df)[1] == "try-error") { 
++       mean_dhi <- mean(df$dhi, na.rm = TRUE) 
++       if (!is.nan(mean_dhi) & !mean_dhi == 0) { 
++         df <- setups(df) 
++         for (var in v) { 
++           if (grepl("hh", var)) { 
++             df$wt <- df$hpopwgt 
++           } else { 
++             df$wt <- df$hpopwgt * df$nhhmem 
++           } 
++           if (!is.na(mean(df[[var]], na.rm = TRUE))) { 
++             cat(paste(ccyy,  
++                       var,  
++                       gini(df, var), 
++                       boot_gini_se(df, var, reps = reps), 
++                       df$grossnet[1], 
++                       sep = ","), sep = "\n") 
++           } 
++         } 
++       } 
++     } 
++   } 
++ } 
+>  
+> # Call 
+> get_ginis("ee") 
+[1] "Loading dataset ee00h..."
+ee00h,market_hh,0.5856,0.0059,320
+ee00h,market_sqrt,0.5126,0.0057,320
+ee00h,market_pc,0.5257,0.0061,320
+ee00h,disp_hh,0.4253,0.0052,320
+ee00h,disp_sqrt,0.3651,0.0054,320
+ee00h,disp_pc,0.3669,0.0054,320
+ee00h,con_hh,0.4137,0.0049,320
+ee00h,con_sqrt,0.3543,0.006,320
+ee00h,con_pc,0.3599,0.0057,320
+[1] "Loading dataset ee04h..."
+ee04h,market_hh,0.583,0.0068,100
+ee04h,market_sqrt,0.4987,0.0058,100
+ee04h,market_pc,0.5097,0.0068,100
+ee04h,disp_hh,0.4211,0.0061,100
+ee04h,disp_sqrt,0.3491,0.0053,100
+ee04h,disp_pc,0.3443,0.0052,100
+[1] "Loading dataset ee07h..."
+ee07h,market_hh,0.541,0.0064,120
+ee07h,market_sqrt,0.4483,0.006,120
+ee07h,market_pc,0.4657,0.0064,120
+ee07h,disp_hh,0.3962,0.0048,120
+ee07h,disp_sqrt,0.3118,0.0044,120
+ee07h,disp_pc,0.3109,0.0052,120
+[1] "Loading dataset ee10h..."
+ee10h,market_hh,0.5706,0.0056,120
+ee10h,market_sqrt,0.4859,0.0052,120
+ee10h,market_pc,0.5025,0.0061,120
+ee10h,disp_hh,0.3948,0.0047,120
+ee10h,disp_sqrt,0.32,0.0044,120
+ee10h,disp_pc,0.3217,0.0052,120
+[1] "Loading dataset ee13h..."
+ee13h,market_hh,0.5972,0.0069,120
+ee13h,market_sqrt,0.5098,0.0055,120
+ee13h,market_pc,0.5278,0.0053,120
+ee13h,disp_hh,0.4302,0.0044,120
+ee13h,disp_sqrt,0.355,0.0046,120
+ee13h,disp_pc,0.3518,0.0045,120
+> 
+> proc.time()
+   user  system elapsed 
+ 23.065   0.118  24.397 
+
+
