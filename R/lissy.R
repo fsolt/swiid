@@ -62,7 +62,8 @@ setups <- function(df) {
   return(df)
 }
 
-boot_gini_se <- function(data, reps=100) {
+boot_gini_se <- function(data, var, reps=100) {
+  data <- data[!is.na(df[[var]]), ]
   resamples <- lapply(1:reps, function(i) dplyr::sample_n(data, size = nrow(data), replace=TRUE))
   r_stat <- lapply(resamples, function(x) gini(x, var))
   std_err <- round(sqrt(var(unlist(r_stat))), digits = 4)
@@ -81,49 +82,7 @@ boot_gini_se <- function(data, reps=100) {
 #   return(df)
 # }
 
-get_ginis <- function(v = c("market_hh", "market_sqrt", "market_pc",
-                            "disp_hh", "disp_sqrt", "disp_pc",
-                            "con_hh", "con_sqrt", "con_pc")) {
-  if (grepl("disp", v)) {
-    vars <- c("dhi", "hpopwgt", "nhhmem", "grossnet")
-    subset <- "complete.cases(dhi)"
-  } else if (grepl("market", v)) {
-    vars <- c("dhi", "factor", "hitp", "hpopwgt", "nhhmem", "grossnet")
-    subset <- "complete.cases(factor)"
-  } else {
-    vars <- c("dhi", "hc", "hpopwgt", "nhhmem", "grossnet")
-    subset <- "complete.cases(hc)"
-  }
-  
-  for (ccyy in datasets) {
-    cat("")
-    df <- try(read.LIS(ccyy, labels = FALSE, vars = vars, subset = subset), silent = TRUE)
-    if (class(df)[1] != "try-error") {
-      if (!is.nan(mean(df$dhi)) & !mean(df$dhi) == 0) {
-        df <- setups(df)
-        for (var in v) {
-          if (var == "market_hh" | var == "disp_hh" | var == "con_hh") {
-            wt <- df$hpopwgt
-          } else {
-            wt <- df$hpopwgt * df$nhhmem
-          }
-          if (!is.na(mean(df[[var]]))) {
-            cat(paste(ccyy, 
-                      var, 
-                      gini(df[[var]], wt),
-                      boot_gini_se(df),
-                      df$grossnet[1],
-                      sep = ","), sep = "\n")
-          }
-        }
-      }
-    }
-  }
-}
-
-get_ginis("WD_ES")
-
-get_ginis_by_cc <- function(cc, reps = 100) {
+get_ginis <- function(cc, reps = 100) {
   ccs <- c("au", "at", "be", "br", "ca", "cl", "cn", "co", "cz", "dk", 
            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", 
            "in", "ie", "il", "it", "jp", "lu", "mx", "nl", "no", "pa", "py", 
@@ -159,7 +118,7 @@ get_ginis_by_cc <- function(cc, reps = 100) {
             cat(paste(ccyy, 
                       var, 
                       gini(df, var),
-                      boot_gini_se(df, reps = reps),
+                      boot_gini_se(df, var, reps = reps),
                       df$grossnet[1],
                       sep = ","), sep = "\n")
           }
@@ -168,3 +127,5 @@ get_ginis_by_cc <- function(cc, reps = 100) {
     }
   }
 }
+
+get_ginis("CCODE")
