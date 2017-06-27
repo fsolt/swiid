@@ -53,7 +53,7 @@ setups <- function(df) {
 }
 
 boot_gini_se <- function(data, var, reps=100) {
-  data <- data[!is.na(df[[var]]), ]
+  data <- data[!is.na(data[[var]]), ]
   resamples <- lapply(1:reps, function(i) dplyr::sample_n(data, size = nrow(data), replace=TRUE))
   r_stat <- lapply(resamples, function(x) gini(x, var))
   std_err <- round(sqrt(var(unlist(r_stat))), digits = 4)
