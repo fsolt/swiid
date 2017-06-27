@@ -2,16 +2,6 @@
 * password = lis_password
 * package = R
 * project = LIS
-  
-cc <- tolower(c("AU", "AT", "BE", "BR", "CA", "CL", "CN", "CO",
-                "CZ", "DK", "DO", "EG", "EE", "FI", "FR", "DE",
-                "GE", "GR", "GT", "HU", "IS", "IN", "IE", "IL",
-                "IT", "JP", "LU", "MX", "NL", "NO", "PA", "PY",
-                "PE", "PL", "RO", "RU", "RS", "SK", "SI", "ZA",
-                "KR", "ES", "SE", "CH", "TW", "UK", "US", "UY"))
-yy <- as.character(c(c(67, 69, 71, 73:75, 78:99), paste0("0", 1:9), c(11:17)))
-
-datasets <- paste0(rep(cc, each = length(yy)), rep(yy, times = length(cc)), "h")
 
 ## Define functions
 gini <- function(df, x) {
@@ -128,4 +118,5 @@ get_ginis <- function(cc, reps = 100) {
   }
 }
 
+# Call
 get_ginis("CCODE")
