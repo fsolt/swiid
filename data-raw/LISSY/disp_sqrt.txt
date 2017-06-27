@@ -1,6 +1,6 @@
 From: postbox@lisdatacenter.org
-Subject: job 459638 disp_sqrt
-Date: May 15, 2017 at 1:55:15 AM CDT
+Subject: job 468611 disp_sqrt
+Date: June 27, 2017 at 12:43:55 AM CDT
 To: fsolt@mac.com
 
 ############################### NOTICE TO USERS ###############################
@@ -44,24 +44,25 @@ To: fsolt@mac.com
   8.  gen disp_pc = dhi_tb/nhhmem   
   9.  
 .  gen mi_tb = factor + hitp 
- 10.  replace mi_tb = 0 if mi<0   
- 11.  replace mi_tb = 10*r(p50) if mi>`topline'  
- 12.  gen market_hh = mi_tb 
- 13.  gen market_sqrt = mi_tb/(nhhmem^0.5) 
- 14.  gen market_pc = mi_tb/nhhmem  
- 15.   
+ 10.  qui replace mi = factor if factor!=. & hitp==. 
+ 11.  replace mi_tb = 0 if mi_tb<0   
+ 12.  replace mi_tb = 10*r(p50) if mi_tb>`topline'  
+ 13.  gen market_hh = mi_tb 
+ 14.  gen market_sqrt = mi_tb/(nhhmem^0.5) 
+ 15.  gen market_pc = mi_tb/nhhmem  
+ 16.   
 .  gen hc_tb = hc   
- 16.  sum hc [w=hpopwgt], de   
- 17.  replace hc_tb = 0 if hc<0   
- 18.  replace hc_tb = 10*r(p50) if hc>10*r(p50)  
- 19.  gen con_hh = hc_tb 
- 20.  gen con_sqrt = hc_tb/(nhhmem^0.5) 
- 21.  gen con_pc = hc_tb/nhhmem   
- 22.  
+ 17.  sum hc [w=hpopwgt], de   
+ 18.  replace hc_tb = 0 if hc<0   
+ 19.  replace hc_tb = 10*r(p50) if hc>10*r(p50)  
+ 20.  gen con_hh = hc_tb 
+ 21.  gen con_sqrt = hc_tb/(nhhmem^0.5) 
+ 22.  gen con_pc = hc_tb/nhhmem   
+ 23.  
 .  gen target = disp_sqrt 
- 23.   
+ 24.   
 .  gen wt = hpopwgt*nhhmem   
- 24. end   
+ 25. end   
 
 .  
 . foreach c of local country {   
@@ -71,7 +72,7 @@ To: fsolt@mac.com
   5.     if !_rc {   
   6.       qui use dhi factor hitp hc hpopwgt nhhmem grossnet using $`file', clear   
   7.       qui make_variables   
-  8.       qui sum dhi  
+  8.       qui sum target  
   9.       if r(N)>0 & r(mean)!=0 {   
  10.         set seed 324   
  11.         version 7 : quietly bs "ineqdec0 target [aw=wt]" "S_gini", reps(500) nowarn   
@@ -186,6 +187,8 @@ gr07, disp_sqrt, .321, .005, 120
 gr10, disp_sqrt, .331, .006, 120
 gr13, disp_sqrt, .334, .005, 120
 gt06, disp_sqrt, .493, .005, 110
+gt11, disp_sqrt, .493, .005, 120
+gt14, disp_sqrt, .438, .005, 120
 hu91, disp_sqrt, .289, .007, 200
 hu94, disp_sqrt, .409, .011, 200
 hu99, disp_sqrt, .54, .004, 200

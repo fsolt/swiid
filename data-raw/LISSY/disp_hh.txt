@@ -1,6 +1,6 @@
 From: postbox@lisdatacenter.org
-Subject: job 459637 disp_hh
-Date: May 15, 2017 at 3:56:46 AM CDT
+Subject: job 468475 disp_hh
+Date: June 27, 2017 at 8:10:20 AM CDT
 To: fsolt@mac.com
 
 ############################### NOTICE TO USERS ###############################
@@ -71,7 +71,7 @@ To: fsolt@mac.com
   5.     if !_rc {   
   6.       qui use dhi factor hitp hc hpopwgt nhhmem grossnet using $`file', clear   
   7.       qui make_variables   
-  8.       qui sum dhi  
+  8.       qui sum target  
   9.       if r(N)>0 & r(mean)!=0 {   
  10.         set seed 324   
  11.         version 7 : quietly bs "ineqdec0 target [aw=wt]" "S_gini", reps(500) nowarn   
@@ -186,6 +186,8 @@ gr07, disp_hh, .363, .004, 120
 gr10, disp_hh, .371, .006, 120
 gr13, disp_hh, .368, .005, 120
 gt06, disp_hh, .499, .005, 110
+gt11, disp_hh, .503, .004, 120
+gt14, disp_hh, .455, .005, 120
 hu91, disp_hh, .363, .007, 200
 hu94, disp_hh, .461, .01, 200
 hu99, disp_hh, .5650000000000001, .003, 200
