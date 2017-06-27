@@ -11,7 +11,7 @@ cc <- tolower(c("AU", "AT", "BE", "BR", "CA", "CL", "CN", "CO",
                 "KR", "ES", "SE", "CH", "TW", "UK", "US", "UY"))
 yy <- as.character(c(c(67, 69, 71, 73:75, 78:99), paste0("0", 1:9), c(11:17)))
 
-datasets <- paste0(cc, yy, "h")
+datasets <- paste0(rep(cc, each = length(yy)), rep(yy, times = length(cc)), "h")
 
 ## Define functions
 gini <- function(x, weight) {
@@ -22,7 +22,7 @@ gini <- function(x, weight) {
   nu <- cumsum(weight * x)
   n <- length(nu)
   nu <- nu / nu[n]
-  res <- round((sum(nu[-1] * p[-n]) - sum(nu[-n] * p[-1]))*100, digits = 2)
+  res <- round((sum(nu[-1] * p[-n]) - sum(nu[-n] * p[-1])), digits = 4)
   return(res)
 }
 
@@ -49,7 +49,7 @@ setups <- function(df) {
   df$disp_hh <- topBottom(df$dhi, botline, topline)
   df$disp_sqrt <- df$disp_hh / (df$nhhmem ^ 0.5)
   df$disp_pc <- df$disp_hh / df$nhhmem
-  df$market_hh <- topBottom((df$factor + df$hitp), botline, topline)
+  df$market_hh <- topBottom(if.else(!is.na(df$hitp), (df$factor + df$hitp), df$factor), botline, topline)
   df$market_sqrt <- df$market_hh / (df$nhhmem ^ 0.5)
   df$market_pc <- df$market_hh / df$nhhmem
   df$con_hh <- topBottom(df$hc, botline, topline)
@@ -58,30 +58,39 @@ setups <- function(df) {
   return(df)
 }
 
-boot_gini_se <- function(data, reps=1000) {
+boot_gini_se <- function(data, reps=100) {
   resamples <- lapply(1:reps, function(i) dplyr::sample_n(data, size = nrow(data), replace=TRUE))
   r_stat <- lapply(resamples, function(x) gini(x[[var]], x$hpopwgt * x$nhhmem))
-  std_err <- round(sqrt(var(unlist(r_stat))), digits = 2)
+  std_err <- round(sqrt(var(unlist(r_stat))), digits = 4)
   return(std_err)   
 }
 
-# # For testing at home:
-# read.LIS <- function(data_file, labels, vars, subset) {
-#   require(dplyr)
-#   data_file <- str_replace(data_file, "h", "ih.dta")
-#   df <- haven::read_dta(data_file)[, vars] %>%
-#     filter(eval(parse(text = subset), .))
-#   if (!labels) {
-#     df <- df %>% mutate_each(funs(as.numeric))
-#   }
-#   return(df)
-# }
+# For testing at home:
+read.LIS <- function(data_file, labels, vars, subset) {
+  require(dplyr)
+  data_file <- str_replace(data_file, "h", "ih.dta")
+  df <- haven::read_dta(data_file)[, vars] %>%
+    filter(eval(parse(text = subset), .))
+  if (!labels) {
+    df <- df %>% mutate_each(funs(as.numeric))
+  }
+  return(df)
+}
 
 get_ginis <- function(v = c("market_hh", "market_sqrt", "market_pc",
                             "disp_hh", "disp_sqrt", "disp_pc",
                             "con_hh", "con_sqrt", "con_pc")) {
-  vars <- c("dhi", "factor", "hitp", "hpopwgt", "nhhmem", "grossnet", "hc")
-  subset <- "complete.cases(dhi, factor, hitp)"
+  if (grepl("disp", v)) {
+    vars <- c("dhi", "hpopwgt", "nhhmem", "grossnet")
+    subset <- "complete.cases(dhi)"
+  } else if (grepl("market", v)) {
+    vars <- c("dhi", "factor", "hitp", "hpopwgt", "nhhmem", "grossnet")
+    subset <- "complete.cases(factor)"
+  } else {
+    vars <- c("dhi", "hc", "hpopwgt", "nhhmem", "grossnet")
+    subset <- "complete.cases(hc)"
+  }
+  
   for (ccyy in datasets) {
     cat("")
     df <- try(read.LIS(ccyy, labels = FALSE, vars = vars, subset = subset), silent = TRUE)
