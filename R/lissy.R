@@ -83,7 +83,7 @@ get_ginis <- function(cc, reps = 100) {
     stop("Please specify a LIS country in iso2c format")
   }
   yy <- as.character(c(c(67, 69, 71, 73:75, 78:99), paste0("0", 0:9), c(10:17)))
-  
+
   datasets <- paste0(rep(cc, each = length(yy)), rep(yy, times = length(cc)), "h")
   vars <- c("dhi", "factor", "hitp", "hc", "hpopwgt", "nhhmem", "grossnet")
 
@@ -95,7 +95,8 @@ get_ginis <- function(cc, reps = 100) {
     cat("")
     df <- try(read.LIS(ccyy, labels = FALSE, vars = vars), silent = TRUE)
     if (!class(df)[1] == "try-error") {
-      if (!is.nan(mean(df$dhi)) & !mean(df$dhi) == 0) {
+      mean_dhi <- mean(df$dhi, na.rm = TRUE)
+      if (!is.nan(mean_dhi) & !mean_dhi == 0) {
         df <- setups(df)
         for (var in v) {
           if (grepl("hh", var)) {
@@ -103,7 +104,7 @@ get_ginis <- function(cc, reps = 100) {
           } else {
             df$wt <- df$hpopwgt * df$nhhmem
           }
-          if (!is.na(mean(df[[var]]))) {
+          if (!is.na(mean(df[[var]], na.rm = TRUE))) {
             cat(paste(ccyy, 
                       var, 
                       gini(df, var),
