@@ -21,6 +21,7 @@ source_data <- list(  K = max(x$kcode),
                       N_b = length(x$gini_b[!is.na(x$gini_b)]),
                       kk = x$kcode,
                       tt = x$tcode,
+                      kktt = (x$kcode-1)*max(x$tcode)+x$tcode,
                       gini_m = x$gini_m,
                       gini_m_se = x$gini_m_se,
                       gini_b = x$gini_b[!is.na(x$gini_b)],
@@ -35,7 +36,7 @@ out1 <- stan(file = "R/lis_only.stan",
              cores = cores,
              chains = chains,
              control = list(max_treedepth = 20,
-                            adapt_delta = .8))
+                            adapt_delta = .9))
 runtime <- proc.time() - start
 runtime
 
@@ -50,7 +51,7 @@ beep() # chime
 # Post-processing
 plot_tscs <- function(input, output, pars="gini", probs=c(.025, .975),
                       dims, year_bounds, y_label, save_pdf = NA) {
-
+  
   kcodes <- input %>%
     group_by(country) %>%
     summarize(kcode = first(kcode),
@@ -76,8 +77,9 @@ plot_tscs <- function(input, output, pars="gini", probs=c(.025, .975),
     mutate(estimate = mean,
            lb = get(paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[1]),
            ub = get(paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[2]),
-           ktcode = as.numeric(str_extract(parameter, "(?<=\\[)\\d+"))) %>%
-    left_join(ktcodes, by="ktcode") %>%
+           kcode = as.numeric(str_extract(parameter, "(?<=\\[)\\d+")),
+           tcode = as.numeric(str_extract(parameter, "(?<=,)\\d+"))) %>%
+    left_join(ktcodes, by=c("kcode", "tcode")) %>%
     arrange(kcode, tcode)
   
   if (missing(dims)) {
@@ -120,7 +122,7 @@ plot_tscs <- function(input, output, pars="gini", probs=c(.025, .975),
     
     if (!is.na(save_pdf)) {
       pdf(file=str_replace(save_pdf, "\\.", paste0(i, ".")), width=6, height = 9)
-        plot(plotx)
+      plot(plotx)
       graphics.off()
     }
   }
@@ -130,5 +132,3 @@ plot_tscs <- function(input, output, pars="gini", probs=c(.025, .975),
 
 plot_tscs_results(x, out1, save_pdf = "paper/figures/ts.pdf")
 plot_tscs(x, out1)
-
-

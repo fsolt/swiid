@@ -15,7 +15,7 @@ parameters {
 }
 model {
   for (k in 1:K) {
-    gini[k, 1] ~ normal(.4, .2);
+    gini[k, 1] ~ normal(.35, .1);
     for (t in 2:T) {
       gini[k, t] ~ normal(gini[k, t-1], sigma_gini[k]);
     }
