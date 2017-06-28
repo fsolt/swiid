@@ -25,7 +25,7 @@ format_lis <- function(x) {
   paste0("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/", 
          x, ".txt") %>%
     readLines() %>% 
-    str_subset("^\\D{2}\\d{2},.*") %>%
+    str_subset("^\\D{2}\\d{2}h,.*") %>%
     paste(collapse = "\n") %>% 
     read_csv(col_names = FALSE) %>%
     transmute(country = str_extract(X1, "\\D{2}") %>%
@@ -37,8 +37,8 @@ format_lis <- function(x) {
                             str_extract(X1, "\\d{2}") %>% as.numeric() + 2000),
               gini = (str_trim(X3) %>% as.numeric()),
               gini_se = (str_trim(X4) %>% as.numeric()),
-              welfare_def = str_extract(x, "[^_]*"),
-              equiv_scale = str_extract(x, "(?<=_).*"),
+              welfare_def = str_extract(X2, "[^_]*"),
+              equiv_scale = str_extract(X2, "(?<=_).*"),
               monetary = FALSE,
               series = paste("LIS", welfare_def, equiv_scale),
               source1 = "LISSY",
@@ -76,13 +76,15 @@ format_lis_xtra <- function(x) {
     arrange(country, year)
 }
 
-lis_files <- c("disp_sqrt", "disp_pc", "disp_hh", 
-               "market_sqrt", "market_pc", "market_hh",
-               "con_sqrt", "con_pc", "con_hh")
+lis_files <- c("au", "at", "be", "br", "ca", "cn", "co", "cz", "dk",   # add "cl" when LIS releases data
+               "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", 
+               "in", "ie", "il", "it", "jp", "lu", "mx", "nl", "no", "pa", "py", 
+               "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se", 
+               "ch", "tw", "uk", "us", "uy")
 
 lis <- lis_files %>% 
   map_df(format_lis) %>% 
-  rbind(format_lis_xtra("disp_sqrt_nz"), format_lis_xtra("disp_sqrt_ru")) %>% 
+  rbind(format_lis_xtra("nz"), format_lis_xtra("ru_old")) %>% 
   arrange(country, year, welfare_def, equiv_scale)
 
 
