@@ -1,6 +1,6 @@
 From: postbox@lisdatacenter.org
-Subject: job 468859 us
-Date: June 27, 2017 at 5:29:21 PM CDT
+Subject: job 468837 sk
+Date: June 27, 2017 at 4:35:54 PM CDT
 To: fsolt@mac.com
 
 ############################### NOTICE TO USERS ###############################
@@ -139,87 +139,52 @@ Loading required package: readstata13
 + } 
 >  
 > # Call 
-> get_ginis("us") 
-[1] "Loading dataset us74h..."
-us74h,market_hh,0.4728,0.0032,120
-us74h,market_sqrt,0.4152,0.0032,120
-us74h,market_pc,0.4545,0.0034,120
-us74h,disp_hh,0.3663,0.0027,120
-us74h,disp_sqrt,0.3193,0.0027,120
-us74h,disp_pc,0.3586,0.0032,120
-[1] "Loading dataset us79h..."
-us79h,market_hh,0.4849,0.0016,120
-us79h,market_sqrt,0.4302,0.0017,120
-us79h,market_pc,0.4632,0.0014,120
-us79h,disp_hh,0.3584,0.0012,120
-us79h,disp_sqrt,0.3119,0.0012,120
-us79h,disp_pc,0.3481,0.0013,120
-[1] "Loading dataset us86h..."
-us86h,market_hh,0.5077,0.0015,120
-us86h,market_sqrt,0.4599,0.0017,120
-us86h,market_pc,0.4901,0.0015,120
-us86h,disp_hh,0.3774,0.0014,120
-us86h,disp_sqrt,0.3424,0.0015,120
-us86h,disp_pc,0.3772,0.0013,120
-[1] "Loading dataset us91h..."
-us91h,market_hh,0.5141,0.0017,120
-us91h,market_sqrt,0.4681,0.0016,120
-us91h,market_pc,0.4996,0.0016,120
-us91h,disp_hh,0.3812,0.0013,120
-us91h,disp_sqrt,0.3471,0.0014,120
-us91h,disp_pc,0.3834,0.0014,120
-[1] "Loading dataset us94h..."
-us94h,market_hh,0.5344,0.0016,120
-us94h,market_sqrt,0.4868,0.0019,120
-us94h,market_pc,0.5151,0.0018,120
-us94h,disp_hh,0.396,0.0014,120
-us94h,disp_sqrt,0.361,0.0018,120
-us94h,disp_pc,0.3935,0.0016,120
-[1] "Loading dataset us97h..."
-us97h,market_hh,0.5285,0.0019,120
-us97h,market_sqrt,0.4818,0.0019,120
-us97h,market_pc,0.512,0.0018,120
-us97h,disp_hh,0.3955,0.0017,120
-us97h,disp_sqrt,0.3604,0.0016,120
-us97h,disp_pc,0.3951,0.0015,120
-[1] "Loading dataset us00h..."
-us00h,market_hh,0.5252,0.0016,120
-us00h,market_sqrt,0.4751,0.0013,120
-us00h,market_pc,0.5054,0.0015,120
-us00h,disp_hh,0.3959,0.0015,120
-us00h,disp_sqrt,0.3566,0.0014,120
-us00h,disp_pc,0.3898,0.0015,120
-[1] "Loading dataset us04h..."
-us04h,market_hh,0.5392,0.0016,120
-us04h,market_sqrt,0.4876,0.0015,120
-us04h,market_pc,0.5164,0.0014,120
-us04h,disp_hh,0.4086,0.0014,120
-us04h,disp_sqrt,0.3645,0.0015,120
-us04h,disp_pc,0.3941,0.0015,120
-[1] "Loading dataset us07h..."
-us07h,market_hh,0.5328,0.0015,120
-us07h,market_sqrt,0.4827,0.0016,120
-us07h,market_pc,0.5131,0.0015,120
-us07h,disp_hh,0.4194,0.0014,120
-us07h,disp_sqrt,0.3757,0.0013,120
-us07h,disp_pc,0.4071,0.0014,120
-[1] "Loading dataset us10h..."
-us10h,market_hh,0.5583,0.0015,120
-us10h,market_sqrt,0.5091,0.0014,120
-us10h,market_pc,0.5377,0.0014,120
-us10h,disp_hh,0.4115,0.0015,120
-us10h,disp_sqrt,0.3694,0.0015,120
-us10h,disp_pc,0.4001,0.0015,120
-[1] "Loading dataset us13h..."
-us13h,market_hh,0.5625,0.0018,120
-us13h,market_sqrt,0.5101,0.0018,120
-us13h,market_pc,0.5363,0.002,120
-us13h,disp_hh,0.4211,0.0016,120
-us13h,disp_sqrt,0.3786,0.0018,120
-us13h,disp_pc,0.4062,0.0017,120
+> get_ginis("sk") 
+[1] "Loading dataset sk92h..."
+sk92h,market_hh,0.502,0.0031,100
+sk92h,market_sqrt,0.4033,0.0026,100
+sk92h,market_pc,0.4286,0.0028,100
+sk92h,disp_hh,0.2845,0.0016,100
+sk92h,disp_sqrt,0.189,0.0019,100
+sk92h,disp_pc,0.2016,0.0019,100
+[1] "Loading dataset sk96h..."
+sk96h,market_hh,0.5175,0.0043,200
+sk96h,market_sqrt,0.432,0.005,200
+sk96h,market_pc,0.4541,0.0049,200
+sk96h,disp_hh,0.3219,0.0034,200
+sk96h,disp_sqrt,0.2493,0.0034,200
+sk96h,disp_pc,0.2623,0.004,200
+[1] "Loading dataset sk04h..."
+sk04h,market_hh,0.5662,0.0059,110
+sk04h,market_sqrt,0.4527,0.0051,110
+sk04h,market_pc,0.4695,0.0053,110
+sk04h,disp_hh,0.3546,0.0044,110
+sk04h,disp_sqrt,0.2694,0.0041,110
+sk04h,disp_pc,0.2713,0.0047,110
+[1] "Loading dataset sk07h..."
+sk07h,market_hh,0.5321,0.0055,110
+sk07h,market_sqrt,0.4169,0.0049,110
+sk07h,market_pc,0.4363,0.0056,110
+sk07h,disp_hh,0.3417,0.0031,110
+sk07h,disp_sqrt,0.2482,0.0036,110
+sk07h,disp_pc,0.2477,0.0041,110
+[1] "Loading dataset sk10h..."
+sk10h,market_hh,0.5329,0.0059,110
+sk10h,market_sqrt,0.4299,0.0041,110
+sk10h,market_pc,0.449,0.0055,110
+sk10h,disp_hh,0.341,0.0037,110
+sk10h,disp_sqrt,0.2616,0.004,110
+sk10h,disp_pc,0.2698,0.0043,110
+[1] "Loading dataset sk13h..."
+sk13h,market_hh,0.5273,0.0065,110
+sk13h,market_sqrt,0.4264,0.0058,110
+sk13h,market_pc,0.4491,0.0058,110
+sk13h,disp_hh,0.3451,0.0044,110
+sk13h,disp_sqrt,0.2688,0.005,110
+sk13h,disp_pc,0.2808,0.0052,110
 > 
 > proc.time()
-    user   system  elapsed 
- 642.071    1.328 1118.391 
+   user  system elapsed 
+ 44.158   0.170  46.594 
 
 

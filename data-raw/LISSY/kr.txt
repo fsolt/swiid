@@ -1,6 +1,6 @@
 From: postbox@lisdatacenter.org
-Subject: job 468859 us
-Date: June 27, 2017 at 5:29:21 PM CDT
+Subject: job 468840 kr
+Date: June 27, 2017 at 4:37:54 PM CDT
 To: fsolt@mac.com
 
 ############################### NOTICE TO USERS ###############################
@@ -139,87 +139,38 @@ Loading required package: readstata13
 + } 
 >  
 > # Call 
-> get_ginis("us") 
-[1] "Loading dataset us74h..."
-us74h,market_hh,0.4728,0.0032,120
-us74h,market_sqrt,0.4152,0.0032,120
-us74h,market_pc,0.4545,0.0034,120
-us74h,disp_hh,0.3663,0.0027,120
-us74h,disp_sqrt,0.3193,0.0027,120
-us74h,disp_pc,0.3586,0.0032,120
-[1] "Loading dataset us79h..."
-us79h,market_hh,0.4849,0.0016,120
-us79h,market_sqrt,0.4302,0.0017,120
-us79h,market_pc,0.4632,0.0014,120
-us79h,disp_hh,0.3584,0.0012,120
-us79h,disp_sqrt,0.3119,0.0012,120
-us79h,disp_pc,0.3481,0.0013,120
-[1] "Loading dataset us86h..."
-us86h,market_hh,0.5077,0.0015,120
-us86h,market_sqrt,0.4599,0.0017,120
-us86h,market_pc,0.4901,0.0015,120
-us86h,disp_hh,0.3774,0.0014,120
-us86h,disp_sqrt,0.3424,0.0015,120
-us86h,disp_pc,0.3772,0.0013,120
-[1] "Loading dataset us91h..."
-us91h,market_hh,0.5141,0.0017,120
-us91h,market_sqrt,0.4681,0.0016,120
-us91h,market_pc,0.4996,0.0016,120
-us91h,disp_hh,0.3812,0.0013,120
-us91h,disp_sqrt,0.3471,0.0014,120
-us91h,disp_pc,0.3834,0.0014,120
-[1] "Loading dataset us94h..."
-us94h,market_hh,0.5344,0.0016,120
-us94h,market_sqrt,0.4868,0.0019,120
-us94h,market_pc,0.5151,0.0018,120
-us94h,disp_hh,0.396,0.0014,120
-us94h,disp_sqrt,0.361,0.0018,120
-us94h,disp_pc,0.3935,0.0016,120
-[1] "Loading dataset us97h..."
-us97h,market_hh,0.5285,0.0019,120
-us97h,market_sqrt,0.4818,0.0019,120
-us97h,market_pc,0.512,0.0018,120
-us97h,disp_hh,0.3955,0.0017,120
-us97h,disp_sqrt,0.3604,0.0016,120
-us97h,disp_pc,0.3951,0.0015,120
-[1] "Loading dataset us00h..."
-us00h,market_hh,0.5252,0.0016,120
-us00h,market_sqrt,0.4751,0.0013,120
-us00h,market_pc,0.5054,0.0015,120
-us00h,disp_hh,0.3959,0.0015,120
-us00h,disp_sqrt,0.3566,0.0014,120
-us00h,disp_pc,0.3898,0.0015,120
-[1] "Loading dataset us04h..."
-us04h,market_hh,0.5392,0.0016,120
-us04h,market_sqrt,0.4876,0.0015,120
-us04h,market_pc,0.5164,0.0014,120
-us04h,disp_hh,0.4086,0.0014,120
-us04h,disp_sqrt,0.3645,0.0015,120
-us04h,disp_pc,0.3941,0.0015,120
-[1] "Loading dataset us07h..."
-us07h,market_hh,0.5328,0.0015,120
-us07h,market_sqrt,0.4827,0.0016,120
-us07h,market_pc,0.5131,0.0015,120
-us07h,disp_hh,0.4194,0.0014,120
-us07h,disp_sqrt,0.3757,0.0013,120
-us07h,disp_pc,0.4071,0.0014,120
-[1] "Loading dataset us10h..."
-us10h,market_hh,0.5583,0.0015,120
-us10h,market_sqrt,0.5091,0.0014,120
-us10h,market_pc,0.5377,0.0014,120
-us10h,disp_hh,0.4115,0.0015,120
-us10h,disp_sqrt,0.3694,0.0015,120
-us10h,disp_pc,0.4001,0.0015,120
-[1] "Loading dataset us13h..."
-us13h,market_hh,0.5625,0.0018,120
-us13h,market_sqrt,0.5101,0.0018,120
-us13h,market_pc,0.5363,0.002,120
-us13h,disp_hh,0.4211,0.0016,120
-us13h,disp_sqrt,0.3786,0.0018,120
-us13h,disp_pc,0.4062,0.0017,120
+> get_ginis("kr") 
+[1] "Loading dataset kr06h..."
+kr06h,market_hh,0.3909,0.0032,110
+kr06h,market_sqrt,0.3311,0.0026,110
+kr06h,market_pc,0.3434,0.0031,110
+kr06h,disp_hh,0.3623,0.003,110
+kr06h,disp_sqrt,0.3065,0.0028,110
+kr06h,disp_pc,0.3205,0.0028,110
+[1] "Loading dataset kr08h..."
+kr08h,market_hh,0.411,0.0038,110
+kr08h,market_sqrt,0.3445,0.0034,110
+kr08h,market_pc,0.3558,0.0037,110
+kr08h,disp_hh,0.3775,0.0032,110
+kr08h,disp_sqrt,0.3146,0.0029,110
+kr08h,disp_pc,0.3278,0.003,110
+[1] "Loading dataset kr10h..."
+kr10h,market_hh,0.4132,0.0044,110
+kr10h,market_sqrt,0.3406,0.0034,110
+kr10h,market_pc,0.3535,0.0035,110
+kr10h,disp_hh,0.3766,0.0035,110
+kr10h,disp_sqrt,0.3093,0.0032,110
+kr10h,disp_pc,0.3234,0.003,110
+[1] "Loading dataset kr12h..."
+kr12h,market_hh,0.4148,0.0036,110
+kr12h,market_sqrt,0.3376,0.0031,110
+kr12h,market_pc,0.3481,0.0037,110
+kr12h,disp_hh,0.3772,0.0036,110
+kr12h,disp_sqrt,0.3067,0.0028,110
+kr12h,disp_pc,0.3185,0.0032,110
 > 
 > proc.time()
-    user   system  elapsed 
- 642.071    1.328 1118.391 
+   user  system elapsed 
+ 46.100   0.182  48.636 
 
 
