@@ -5,6 +5,7 @@ data{
   int<lower=0> N_b;                       // total number of observations with baseline
   int<lower=1, upper=K> kk[N]; 	          // country for observation n
   int<lower=1, upper=T> tt[N]; 	          // year for observation n
+  int<lower=1, upper=K*T> kktt[N];        // country-year for observation n
   real<lower=0, upper=1> gini_b[N_b];     // baseline gini for obs n
   real<lower=0, upper=1> gini_b_se[N_b];  // baseline gini for obs n
 }  

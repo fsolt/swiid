@@ -48,8 +48,8 @@ beep() # chime
 
 
 # Post-processing
-plot_tscs_results <- function(input, output, pars="gini", probs=c(.025, .975),
-                              dims, year_bounds, y_label, save_pdf = NA) {
+plot_tscs <- function(input, output, pars="gini", probs=c(.025, .975),
+                      dims, year_bounds, y_label, save_pdf = NA) {
 
   kcodes <- input %>%
     group_by(country) %>%
@@ -58,8 +58,9 @@ plot_tscs_results <- function(input, output, pars="gini", probs=c(.025, .975),
               lastyr = max(year)) %>%
     ungroup()
   
-  ktcodes <- tibble(kcode = rep(1:max(input$kcode), each = max(input$tcode)),
-                    tcode = rep(1:max(input$tcode), times = max(input$kcode))) %>%
+  ktcodes <- tibble(kcode = rep(1:max(x$kcode), each = max(x$tcode)),
+                    tcode = rep(1:max(x$tcode), times = max(x$kcode)),
+                    ktcode = (kcode-1)*max(tcode)+tcode) %>%
     left_join(kcodes, by = "kcode") %>%
     mutate(year = min(firstyr) + tcode - 1)  
   
@@ -75,9 +76,8 @@ plot_tscs_results <- function(input, output, pars="gini", probs=c(.025, .975),
     mutate(estimate = mean,
            lb = get(paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[1]),
            ub = get(paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[2]),
-           kcode = as.numeric(str_extract(parameter, "(?<=\\[)\\d+")),
-           tcode = as.numeric(str_extract(parameter, "(?<=,)\\d+"))) %>%
-    left_join(ktcodes, by=c("kcode", "tcode")) %>%
+           ktcode = as.numeric(str_extract(parameter, "(?<=\\[)\\d+"))) %>%
+    left_join(ktcodes, by="ktcode") %>%
     arrange(kcode, tcode)
   
   if (missing(dims)) {
@@ -129,6 +129,6 @@ plot_tscs_results <- function(input, output, pars="gini", probs=c(.025, .975),
 }
 
 plot_tscs_results(x, out1, save_pdf = "paper/figures/ts.pdf")
-plot_tscs_results(x, out1)
+plot_tscs(x, out1)
 
 
