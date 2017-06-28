@@ -84,6 +84,7 @@ lis_files <- c("au", "at", "be", "br", "ca", "cn", "co", "cz", "dk",   # add "cl
 
 lis <- lis_files %>% 
   map_df(format_lis) %>% 
+  filter(!country=="Russia") %>% 
   rbind(format_lis_xtra("nz"), format_lis_xtra("ru_old")) %>% 
   arrange(country, year, welfare_def, equiv_scale)
 
