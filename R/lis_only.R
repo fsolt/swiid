@@ -36,7 +36,7 @@ out1 <- stan(file = "R/lis_only.stan",
              cores = cores,
              chains = chains,
              control = list(max_treedepth = 20,
-                            adapt_delta = .9))
+                            adapt_delta = .8))
 runtime <- proc.time() - start
 runtime
 
@@ -77,9 +77,8 @@ plot_tscs <- function(input, output, pars="gini", probs=c(.025, .975),
     mutate(estimate = mean,
            lb = get(paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[1]),
            ub = get(paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[2]),
-           kcode = as.numeric(str_extract(parameter, "(?<=\\[)\\d+")),
-           tcode = as.numeric(str_extract(parameter, "(?<=,)\\d+"))) %>%
-    left_join(ktcodes, by=c("kcode", "tcode")) %>%
+           ktcode = as.numeric(str_extract(parameter, "(?<=\\[)\\d+"))) %>%
+    left_join(ktcodes, by=c("ktcode")) %>%
     arrange(kcode, tcode)
   
   if (missing(dims)) {
@@ -130,5 +129,5 @@ plot_tscs <- function(input, output, pars="gini", probs=c(.025, .975),
   return(plotx1)
 }
 
-plot_tscs_results(x, out1, save_pdf = "paper/figures/ts.pdf")
+plot_tscs(x, out1, save_pdf = "paper/figures/ts.pdf")
 plot_tscs(x, out1)
