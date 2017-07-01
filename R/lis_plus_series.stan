@@ -22,36 +22,38 @@ parameters {
   real<lower=0, upper=.1> sigma_gini[K]; 	// country variance parameter (see Linzer and Stanton 2012, 12)
 
   real<lower=0, upper=1> gini_t_raw[N];   // centered gini_t
-  real<lower=0> rho_s[S];                 // ratio of series s 
+  real<lower=0> rho_s_raw[S];             // centered rho_s
   real<lower=0> sigma_rho_s[S];           // scale for series ratios
   real<lower=0> sigma_s[S]; 	            // series noise
 }
 
 transformed parameters {
   real<lower=0, upper=1> gini_t[N];       // unknown "true" gini for obs n given gini_m and gini_m_se
-  
-  gini_t = gini_m + gini_m_se * gini_t_raw;
+  real<lower=0> rho_s[S];                 // ratio of series s 
+
+  gini_t = gini_m + gini_m_se * gini_t_raw; // decenter
+  rho_s = 1 + rho_s_raw * sigma_rho_s * .4; // decenter
 }
 
 model {
   gini_t_raw ~ normal(0, 1);
-  rho_s ~ normal(1, sigma_rho_s);
-  sigma_rho_s ~ cauchy(0, .4);
+  rho_s_raw ~ normal(0, 1);
+  sigma_rho_s ~ cauchy(0, 1);
   
   for (kt in 1:K*T) {
-    if (ktt[kt] == 1) { // if this country-year is the first year for a country
-      gini[kt] ~ normal(.35, .1); // give it a random draw from N(.35, .1)
-    } else {            // otherwise
+    if (ktt[kt] == 1) {             // if this country-year is the first year for a country
+      gini[kt] ~ normal(.35, .1);   // give it a random draw from N(.35, .1)
+    } else {                        // otherwise, give it
       gini[kt] ~ normal(gini[kt-1], sigma_gini[ktk[kt]]); // a random walk from previous year
     }
   }
   
   for (n in 1:N) {
     if (n <= N_b) {
-      gini[kktt[n]] ~ normal(gini_b[n], gini_b_se[n]); // use baseline series where observed
+      gini[kktt[n]] ~ normal(gini_b[n], gini_b_se[n]);              // use baseline series where observed
       gini_b[n] ~ normal(rho_s[ss[n]] * gini_t[n], sigma_s[ss[n]]); // estimate rho_s 
     } else {
-      gini[kktt[n]] ~ normal(rho_s[ss[n]] * gini_t[n], sigma_s[ss[n]]); // predict from rho_s
+      gini[kktt[n]] ~ normal(rho_s[ss[n]] * gini_t[n], sigma_s[ss[n]]); // estimate gini from rho_s
     }
   }
 }
