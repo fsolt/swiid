@@ -6,14 +6,20 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 2000
+iter <- 1000
 chains <- 4
 cores <- chains
 
 x <- ineq %>% 
   filter(series == "LIS disp sqrt") %>% 
   mutate(kcode = as.integer(factor(country, levels = unique(country))), # redo codes for filtered sample
-         tcode = as.integer(year - min(year) + 1)) 
+         tcode = as.integer(year - min(year) + 1))
+
+nn <- tibble(kktt = 1:(max(x$kcode)*max(x$tcode))) %>% 
+  left_join(tibble(kktt = (x$kcode-1)*max(x$tcode)+x$tcode,
+                   nn = row_number(kktt)), by = "kktt") %>% 
+  mutate(nn = if_else(is.na(nn), as.integer(0), nn)) %>% 
+  pull(nn)
 
 source_data <- list(  K = max(x$kcode),
                       T = max(x$tcode),
@@ -22,6 +28,9 @@ source_data <- list(  K = max(x$kcode),
                       kk = x$kcode,
                       tt = x$tcode,
                       kktt = (x$kcode-1)*max(x$tcode)+x$tcode,
+                      nn = nn,
+                      ktt = rep(1:max(x$tcode), times = max(x$kcode)),
+                      ktk = rep(1:max(x$kcode), each = max(x$tcode)),
                       gini_m = x$gini_m,
                       gini_m_se = x$gini_m_se,
                       gini_b = x$gini_b[!is.na(x$gini_b)],
