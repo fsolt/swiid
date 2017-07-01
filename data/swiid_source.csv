@@ -2858,8 +2858,6 @@ Egypt,2012,0.4693,0.0039,disp,sqrt,FALSE,LIS disp sqrt,LISSY,,https://raw.github
 Egypt,2012,0.5334,0.0045,market,hh,FALSE,LIS market hh,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/eg.txt
 Egypt,2012,0.5251,0.0043,market,pc,FALSE,LIS market pc,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/eg.txt
 Egypt,2012,0.5017,0.0043,market,sqrt,FALSE,LIS market sqrt,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/eg.txt
-El Salvador,1991,NA,NA,disp,ae,TRUE,SEDLAC El Salvador disp ae 1,SEDLAC,intervals ei,http://sedlac.econo.unlp.edu.ar/download.php?file=archivos_estadistica/inequality_LAC_2016-12.xls
-El Salvador,1991,NA,NA,disp,pc,TRUE,SEDLAC El Salvador disp pc 1,SEDLAC,intervals pci,http://sedlac.econo.unlp.edu.ar/download.php?file=archivos_estadistica/inequality_LAC_2016-12.xls
 El Salvador,1995,0.507,NA,disp,pc,TRUE,CEPAL El Salvador disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 El Salvador,1995,0.4988,NA,gross,pc,FALSE,CR2008 El Salvador gross pc,PovcalNet; Chen and Ravallion 2008,41-44,http://databank.worldbank.org/data/reports.aspx?source=2&series=SI.POV.GINI
 El Salvador,1996,0.5139,NA,gross,pc,FALSE,CR2008 El Salvador gross pc,PovcalNet; Chen and Ravallion 2008,41-44,http://databank.worldbank.org/data/reports.aspx?source=2&series=SI.POV.GINI

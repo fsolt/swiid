@@ -116,7 +116,6 @@ format_sedlac <- function(df, sheet, link, es) {
                    as.numeric(factor(series0, levels = unique(series0)))) %>% 
              str_replace("NA", "1")) %>% 
     ungroup() %>% 
-    filter(!is.na(gini)) %>%
     transmute(country = country,
               year = as.numeric(year),
               gini = as.numeric(gini),
@@ -127,7 +126,9 @@ format_sedlac <- function(df, sheet, link, es) {
               series = series,
               source1 = "SEDLAC",
               page = sheet, 
-              link = link)
+              link = link) %>% 
+    filter(!is.na(gini))
+    
   return(x)
 }
 
@@ -159,7 +160,8 @@ sedlac_hh <- read_excel(path = "data-raw/sedlac.xls",
                 link = sedlac_link,
                 es = "hh")
 
-sedlac <- rbind(sedlac_ei, sedlac_hh, sedlac_pc)
+sedlac <- rbind(sedlac_ei, sedlac_hh, sedlac_pc) %>% 
+  filter(!is.na(gini))
 
 rm(sedlac_ei, sedlac_hh, sedlac_pc)
 
@@ -1945,17 +1947,26 @@ ineq_bl <- ineq0 %>%
                select(country, year, gini_b, gini_b_se, lis_count),
              by = c("country", "year")) %>% 
   arrange(desc(lis_count)) %>% 
-  select(-lis_count)
+  select(-lis_count) 
 
-# obs with no baseline data [from series with some baseline data?]
-ineq_nbl <- ineq0 %>% anti_join(ineq_bl %>% select(-gini_b, -gini_b_se), 
-             by = c("country", "year"))
+ineq_bl_series <- ineq_bl %>% pull(series) %>% unique()
+  # need to exclude those without other data
+
+# obs with no baseline data from series with some baseline data ("overlap baseline")
+ineq_obl <- ineq0 %>% anti_join(ineq_bl %>% select(-gini_b, -gini_b_se), 
+                                  by = c("country", "year")) %>% 
+  filter(series %in% ineq_bl_series)
 
 # obs from series with no baseline data
+ineq_nbl <- ineq0 %>% anti_join(ineq_bl %>% select(-gini_b, -gini_b_se), 
+                                  by = c("country", "year")) %>% 
+  filter(!series %in% ineq_bl_series)
 
+ineq_oth_series <- rbind(ineq_obl, ineq_nbl) %>% pull(series) %>% unique()
 
 # combine all
-ineq <- bind_rows(ineq_bl, ineq_nbl) %>% 
+ineq <- bind_rows(ineq_bl, ineq_obl, ineq_nbl) %>% 
+  filter(series %in% c(baseline_series, ineq_oth_series)) %>% 
   mutate(gini_m_se = ifelse(!is.na(gini_m_se), gini_m_se,
                             quantile(gini_m_se/gini_m, .99, na.rm = TRUE)*gini_m),
          kcode = as.integer(factor(country, levels = unique(country))),
