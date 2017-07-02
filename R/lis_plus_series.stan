@@ -31,8 +31,14 @@ transformed parameters {
   real<lower=0, upper=1> gini_t[N];       // unknown "true" gini for obs n given gini_m and gini_m_se
   real<lower=0> rho_s[S];                 // ratio of series s 
 
-  gini_t = gini_m + gini_m_se * gini_t_raw; // decenter
-  rho_s = 1 + rho_s_raw * sigma_rho_s * .4; // decenter
+  for (n in 1:N) {
+    gini_t[n] = gini_m[n] + gini_m_se[n] * gini_t_raw[n]; // decenter
+  }
+  
+  for (s in 1:S) {
+    rho_s[s] = 1 + rho_s_raw[s] * sigma_rho_s[s] * .4; // decenter
+  }
+  
 }
 
 model {
