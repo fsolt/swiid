@@ -71,7 +71,7 @@ format_lis_xtra <- function(x) {
               source1 = ifelse(country=="New Zealand", "Statistics New Zealand 1999", "LISSY"),
               page = ifelse(country=="New Zealand", "73", ""),
               link = ifelse(country=="New Zealand", 
-                            "http://www2.stats.govt.nz/domino/external/PASFull/pasfull.nsf/173371ce38d7627b4c25680900046f25/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf", 
+                            "https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf", 
                             "https://web.archive.org/web/20100804001129/http://www.lisproject.org/key-figures/kf-workbook.xls")) %>% 
     arrange(country, year)
 }
@@ -1071,6 +1071,28 @@ monstat <- read_excel("data-raw/monstat.xls", skip = 1) %>%
             link = monstat_link)
 
 
+# Statistics New Zealand (archived)
+# Note: Perry's annual work for Ministry of Social Development is included in added_data.csv because 
+# it is published as a .doc(!) file
+
+snz_link <- "https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Income.xls"
+download.file(snz_link, "data-raw/snz.xls")
+
+snz <- read_excel("data-raw/snz.xls",
+                  sheet = "A2.2", skip = 3) %>% 
+  transmute(country = "New Zealand",
+            year = as.numeric(Year),
+            gini = `Gini coefficient`,
+            gini_se = NA,
+            welfare_def = "disp",
+            equiv_scale = "oecdm", # actually the Revised Jensen Scale, but basically identical to oecdm (see https://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2014/appendices.doc)
+            monetary = NA,
+            series = paste("Statistics New Zealand 1999", welfare_def, equiv_scale),
+            source1 = "Statistics New Zealand 1999",
+            page = "100",
+            link = "https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf")
+
+
 # Statistics Norway (automated)
 ssb_link <- "https://www.ssb.no/en/inntekt-og-forbruk/statistikker/ifhus/aar/2016-12-16?fane=tabell&sort=nummer&tabell=288299"
 
@@ -1925,7 +1947,7 @@ ineq0 <- bind_rows(lis,
                    abs, inebo, belstat, statcan, dane, ineccr, dkstat,
                    capmas, statee, statfi, insee, geostat,
                    stathk, bpsid, amar, cso_ie, istat, kazstat, kostat, nsck,
-                   nbs, monstat, ssb, dgeec, psa,
+                   snz, nbs, monstat, ssb, dgeec, psa,
                    rosstat, singstat, ssi, ine, statslk, scb, 
                    nso_thailand, tdgbas, turkstat, ons, ifs, cbo, uscb, uine, inev, gso_vn,
                    cr2008, atg, gidd,
