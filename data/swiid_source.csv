@@ -566,7 +566,7 @@ Belarus,2010,0.265,NA,disp,pc,FALSE,Belstat disp pc,Belarus National Committee o
 Belarus,2011,0.284,NA,disp,pc,FALSE,Belstat disp pc,Belarus National Committee of Statistics,,http://www.belstat.gov.by/en/ofitsialnaya-statistika/social-sector/uroven-zhizni-naseleniya/publikatsii__1/index_196/
 Belarus,2012,0.285,NA,disp,pc,FALSE,Belstat disp pc,Belarus National Committee of Statistics,,http://www.belstat.gov.by/en/ofitsialnaya-statistika/social-sector/uroven-zhizni-naseleniya/publikatsii__1/index_196/
 Belarus,2013,0.283,NA,disp,pc,FALSE,Belstat disp pc,Belarus National Committee of Statistics,,http://www.belstat.gov.by/en/ofitsialnaya-statistika/social-sector/uroven-zhizni-naseleniya/publikatsii__1/index_196/
-Belgium,1979,0.212,0.003,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Belgium,1979,0.212,0.003,con,oecdm,FALSE,ZdV2001 Belgium con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Belgium,1983,0.274,NA,disp,sqrt,FALSE,"OECD disp sqrt, incomparable def, 2011 method",OECD,NA,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Belgium,1985,0.2903,0.0033,disp,hh,FALSE,LIS disp hh,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/be.txt
 Belgium,1985,0.2536,0.0032,disp,pc,FALSE,LIS disp pc,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/be.txt
@@ -580,7 +580,7 @@ Belgium,1988,0.2347,0.0041,disp,sqrt,FALSE,LIS disp sqrt,LISSY,,https://raw.gith
 Belgium,1988,0.5086,0.0068,market,hh,FALSE,LIS market hh,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/be.txt
 Belgium,1988,0.4557,0.0055,market,pc,FALSE,LIS market pc,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/be.txt
 Belgium,1988,0.4263,0.0062,market,sqrt,FALSE,LIS market sqrt,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/be.txt
-Belgium,1988,0.236,0.004,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Belgium,1988,0.236,0.004,con,oecdm,FALSE,ZdV2001 Belgium con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Belgium,1992,0.3006,0.0038,disp,hh,FALSE,LIS disp hh,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/be.txt
 Belgium,1992,0.2495,0.0036,disp,pc,FALSE,LIS disp pc,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/be.txt
 Belgium,1992,0.2289,0.0033,disp,sqrt,FALSE,LIS disp sqrt,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/be.txt
@@ -1090,12 +1090,12 @@ Cabo Verde,2001,0.51,NA,con,pc,NA,FR2008 Cape Verde con pc,Ferreira and Ravallio
 Cabo Verde,2001,0.525,NA,con,pc,FALSE,World Bank Africa Poverty Database Cabo Verde con pc,Beegle et al. 2016,121-126,http://databank.worldbank.org/data/reports.aspx?source=2&series=SI.POV.GINI
 Cabo Verde,2001,0.4648,NA,con,sqrt,FALSE,World Bank Africa Poverty Database Cabo Verde con sqrt,"Personal communication, K. Beegle, 2016-08-01",,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
 Cabo Verde,2002,0.5283,NA,con,pc,NA,AUW2007 con pc,Angel-Urdinola and Wodon 2007,103,https://mpra.ub.uni-muenchen.de/11111/1/MPRA_paper_11111.pdf
-Cabo Verde,2002,0.53,NA,con,pc,NA,INE Cape Verde con pc,Instituto Nacional de EstatÍstica Cape Verde 2016,49,http://ine.cv/wp-content/uploads/2016/11/apresentacao-resultados-preliminares-18-novembro-2016.pdf
+Cabo Verde,2002,0.53,NA,con,pc,NA,INE Cape Verde con pc,Instituto Nacional de Estatêstica Cape Verde 2016,49,http://ine.cv/wp-content/uploads/2016/11/apresentacao-resultados-preliminares-18-novembro-2016.pdf
 Cabo Verde,2005,0.498,NA,con,pc,NA,GIDD Cabo Verde con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008",,https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
-Cabo Verde,2007,0.47,NA,con,pc,NA,INE Cape Verde con pc,Instituto Nacional de EstatÍstica Cape Verde 2016,49,http://ine.cv/wp-content/uploads/2016/11/apresentacao-resultados-preliminares-18-novembro-2016.pdf
+Cabo Verde,2007,0.47,NA,con,pc,NA,INE Cape Verde con pc,Instituto Nacional de Estatêstica Cape Verde 2016,49,http://ine.cv/wp-content/uploads/2016/11/apresentacao-resultados-preliminares-18-novembro-2016.pdf
 Cabo Verde,2007,0.4719,NA,con,pc,FALSE,World Bank Africa Poverty Database Cabo Verde con pc,Beegle et al. 2016,121-126,http://databank.worldbank.org/data/reports.aspx?source=2&series=SI.POV.GINI
 Cabo Verde,2007,0.41490000000000005,NA,con,sqrt,FALSE,World Bank Africa Poverty Database Cabo Verde con sqrt,"Personal communication, K. Beegle, 2016-08-01",,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
-Cabo Verde,2015,0.46,NA,con,pc,NA,INE Cape Verde con pc,Instituto Nacional de EstatÍstica Cape Verde 2016,49,http://ine.cv/wp-content/uploads/2016/11/apresentacao-resultados-preliminares-18-novembro-2016.pdf
+Cabo Verde,2015,0.46,NA,con,pc,NA,INE Cape Verde con pc,Instituto Nacional de Estatêstica Cape Verde 2016,49,http://ine.cv/wp-content/uploads/2016/11/apresentacao-resultados-preliminares-18-novembro-2016.pdf
 Cambodia,1994,0.3815,NA,con,pc,FALSE,CR2008 Cambodia con pc,PovcalNet; Chen and Ravallion 2008,41-44,http://databank.worldbank.org/data/reports.aspx?source=2&series=SI.POV.GINI
 Cambodia,1997,0.404,NA,con,pc,NA,GIDD Cambodia con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008",,https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
 Cambodia,2004,0.3546,NA,con,pc,FALSE,CR2008 Cambodia con pc,PovcalNet; Chen and Ravallion 2008,41-44,http://databank.worldbank.org/data/reports.aspx?source=2&series=SI.POV.GINI
@@ -3434,7 +3434,7 @@ France,1984,0.5672,0.0042,market,hh,FALSE,LIS market hh,LISSY,,https://raw.githu
 France,1984,0.5353,0.0037,market,pc,FALSE,LIS market pc,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1984,0.506,0.0045,market,sqrt,FALSE,LIS market sqrt,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1984,0.3,NA,disp,sqrt,FALSE,"OECD disp sqrt, incomparable def, 2011 method",OECD,NA,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-France,1984,0.271,0.002,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+France,1984,0.271,0.002,con,oecdm,FALSE,ZdV2001 France con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 France,1989,0.3506,0.0036,disp,hh,FALSE,LIS disp hh,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1989,0.3288,0.0034,disp,pc,FALSE,LIS disp pc,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1989,0.2937,0.0032,disp,sqrt,FALSE,LIS disp sqrt,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -3446,7 +3446,7 @@ France,1989,0.3056,NA,disp,ae,TRUE,W1999 France disp ae 1,Wagstaff et al. 1999,8
 France,1989,0.3124,NA,disp,ae,TRUE,W1999 France disp ae 2,Wagstaff et al. 1999,86,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 France,1989,0.3219,NA,gross,ae,TRUE,W1999 France gross ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 France,1989,0.329,NA,gross,ae,TRUE,W1999 France gross ae 2,Wagstaff et al. 1999,86,http://www.sciencedirect.com/science/article/pii/S0047272798000851
-France,1989,0.295,0.003,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+France,1989,0.295,0.003,con,oecdm,FALSE,ZdV2001 France con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 France,1990,0.29200000762939454,NA,disp,hh,NA,Brandolini1998 France disp hh,Milanovic 2016; Brandolini 1998,,https://wfs.gc.cuny.edu/njohnson/www/BrankoData/allginis_2016.dta
 France,1990,0.277,NA,disp,oecdm,FALSE,Insee disp oecdm,Insee,,https://web-beta.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
 France,1994,0.29,NA,disp,oecdm,TRUE,Eurostat France disp oecdm 1,Eurostat,,http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
@@ -3659,7 +3659,7 @@ Germany,1983,0.4397,0.0022,market,pc,FALSE,LIS market pc,LISSY,,https://raw.gith
 Germany,1983,0.4146,0.0024,market,sqrt,FALSE,LIS market sqrt,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/de.txt
 Germany,1983,0.257,NA,con,hh,NA,Park1995 Germany con hh,Tabatabai 1996; Park 1995,125,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Germany,1983,0.324,NA,disp,hh,NA,Park1995 Germany disp hh,Tabatabai 1996; Park 1995,125,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Germany,1983,0.247,0.001,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Germany,1983,0.247,0.001,con,oecdm,FALSE,ZdV2001 Germany con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Germany,1984,0.268,NA,disp,ae,FALSE,BP1997 Germany disp ae,Burkhauser and Pourore 1997,14,http://www.jstor.org/stable/2951428
 Germany,1984,0.337,NA,market,ae,FALSE,BP1997 Germany market ae,Burkhauser and Pourore 1997,14,http://www.jstor.org/stable/2951428
 Germany,1984,0.3340000152587891,NA,disp,hh,NA,Brandolini1998 Germany disp hh,Milanovic 2016; Brandolini 1998,,https://wfs.gc.cuny.edu/njohnson/www/BrankoData/allginis_2016.dta
@@ -3684,7 +3684,7 @@ Germany,1988,0.271,NA,disp,ae,FALSE,BP1997 Germany disp ae,Burkhauser and Pouror
 Germany,1988,0.353,NA,market,ae,FALSE,BP1997 Germany market ae,Burkhauser and Pourore 1997,14,http://www.jstor.org/stable/2951428
 Germany,1988,0.2312,NA,disp,ae,TRUE,W1999 Germany disp ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 Germany,1988,0.2591,NA,gross,ae,TRUE,W1999 Germany gross ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
-Germany,1988,0.256,0.001,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Germany,1988,0.256,0.001,con,oecdm,FALSE,ZdV2001 Germany con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Germany,1989,0.3292,0.0054,disp,hh,FALSE,LIS disp hh,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/de.txt
 Germany,1989,0.2858,0.0052,disp,pc,FALSE,LIS disp pc,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/de.txt
 Germany,1989,0.2583,0.0049,disp,sqrt,FALSE,LIS disp sqrt,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/de.txt
@@ -3817,12 +3817,12 @@ Ghana,2013,0.42330000000000007,NA,con,pc,FALSE,CEQ Ghana con pc,"Younger, Osei-A
 Ghana,2013,0.423,NA,con,ae,FALSE,GSS con ae,Ghana Statistical Service 2014,22,http://www.statsghana.gov.gh/glss6.html
 Greece,1974,0.432,NA,disp,sqrt,FALSE,"OECD disp sqrt, current def, 2011 method",OECD,NA,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Greece,1974,0.413,0.006,disp,sqrt,FALSE,"OECD disp sqrt, previous def, 2011 method",OECD,NA,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Greece,1982,0.316,0.004,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Greece,1982,0.316,0.004,con,oecdm,FALSE,ZdV2001 Greece con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Greece,1986,0.352,NA,disp,sqrt,FALSE,"OECD disp sqrt, current def, 2011 method",OECD,NA,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Greece,1986,0.336,0.005,disp,sqrt,FALSE,"OECD disp sqrt, previous def, 2011 method",OECD,NA,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Greece,1988,0.245,NA,con,hh,NA,Park1995 Greece con hh,Tabatabai 1996; Park 1995,125,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Greece,1988,0.349,NA,disp,hh,NA,Park1995 Greece disp hh,Tabatabai 1996; Park 1995,125,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Greece,1988,0.32,0.003,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Greece,1988,0.32,0.003,con,oecdm,FALSE,ZdV2001 Greece con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Greece,1994,0.35,NA,disp,oecdm,TRUE,Eurostat Greece disp oecdm 1,Eurostat,,http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Greece,1994,0.352,NA,disp,sqrt,FALSE,"OECD disp sqrt, current def, 2011 method",OECD,NA,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Greece,1994,0.336,0.004,disp,sqrt,FALSE,"OECD disp sqrt, previous def, 2011 method",OECD,NA,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -4886,7 +4886,7 @@ Italy,1984,0.291,NA,disp,sqrt,FALSE,"OECD disp sqrt, current def, 2011 method",O
 Italy,1984,0.309,NA,disp,sqrt,FALSE,"OECD disp sqrt, previous def, 2011 method",OECD,NA,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Italy,1984,0.387,NA,market,sqrt,FALSE,"OECD Italy market sqrt, current def, 2011 method",OECD,NA,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Italy,1984,0.42,NA,market,sqrt,FALSE,"OECD Italy market sqrt, previous def, 2011 method",OECD,NA,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Italy,1985,0.331,0.002,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Italy,1985,0.331,0.002,con,oecdm,FALSE,ZdV2001 Italy con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Italy,1986,0.307,NA,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
 Italy,1986,0.3402,0.0046,disp,hh,FALSE,LIS disp hh,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/it.txt
 Italy,1986,0.3226,0.0048,disp,pc,FALSE,LIS disp pc,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/it.txt
@@ -4901,7 +4901,7 @@ Italy,1987,0.3337,0.0046,disp,sqrt,FALSE,LIS disp sqrt,LISSY,,https://raw.github
 Italy,1987,0.5281,0.0073,market,hh,FALSE,LIS market hh,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/it.txt
 Italy,1987,0.472,0.0052,market,pc,FALSE,LIS market pc,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/it.txt
 Italy,1987,0.4549,0.0064,market,sqrt,FALSE,LIS market sqrt,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/it.txt
-Italy,1988,0.352,0.002,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Italy,1988,0.352,0.002,con,oecdm,FALSE,ZdV2001 Italy con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Italy,1989,0.3,NA,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
 Italy,1989,0.3474,0.0046,disp,hh,FALSE,LIS disp hh,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/it.txt
 Italy,1989,0.3261,0.0051,disp,pc,FALSE,LIS disp pc,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/it.txt
@@ -6200,7 +6200,7 @@ Netherlands,1977,0.263,NA,disp,sqrt,FALSE,"OECD disp sqrt, current def, 2011 met
 Netherlands,1977,0.226,NA,disp,sqrt,FALSE,"OECD disp sqrt, previous def, 2011 method",OECD,NA,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Netherlands,1977,0.426,NA,market,sqrt,FALSE,"OECD Netherlands market sqrt, current def, 2011 method",OECD,NA,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Netherlands,1977,0.368,NA,market,sqrt,FALSE,"OECD Netherlands market sqrt, previous def, 2011 method",OECD,NA,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Netherlands,1980,0.21,0.003,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Netherlands,1980,0.21,0.003,con,oecdm,FALSE,ZdV2001 Netherlands con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Netherlands,1981,0.28299999237060547,NA,disp,hh,NA,Brandolini1998 Netherlands disp hh,Milanovic 2016; Brandolini 1998,,https://wfs.gc.cuny.edu/njohnson/www/BrankoData/allginis_2016.dta
 Netherlands,1983,0.27799999237060546,NA,disp,hh,NA,Brandolini1998 Netherlands disp hh,Milanovic 2016; Brandolini 1998,,https://wfs.gc.cuny.edu/njohnson/www/BrankoData/allginis_2016.dta
 Netherlands,1983,0.3088,0.0065,disp,hh,FALSE,LIS disp hh,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/nl.txt
@@ -6223,7 +6223,7 @@ Netherlands,1987,0.5194,0.0077,market,pc,FALSE,LIS market pc,LISSY,,https://raw.
 Netherlands,1987,0.4789,0.0073,market,sqrt,FALSE,LIS market sqrt,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/nl.txt
 Netherlands,1988,0.29,NA,disp,hh,NA,Brandolini1998 Netherlands disp hh,Milanovic 2016; Brandolini 1998,,https://wfs.gc.cuny.edu/njohnson/www/BrankoData/allginis_2016.dta
 Netherlands,1988,0.307,NA,disp,hh,NA,Park1995 Netherlands disp hh,Tabatabai 1996; Park 1995,127,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Netherlands,1988,0.214,0.004,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Netherlands,1988,0.214,0.004,con,oecdm,FALSE,ZdV2001 Netherlands con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Netherlands,1989,0.29600000381469727,NA,disp,hh,NA,Brandolini1998 Netherlands disp hh,Milanovic 2016; Brandolini 1998,,https://wfs.gc.cuny.edu/njohnson/www/BrankoData/allginis_2016.dta
 Netherlands,1990,0.3256,0.0043,disp,hh,FALSE,LIS disp hh,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/nl.txt
 Netherlands,1990,0.3158,0.0056,disp,pc,FALSE,LIS disp pc,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/nl.txt
@@ -7314,9 +7314,9 @@ Poland,2014,0.306,NA,disp,oecdm,TRUE,Eurostat Poland disp oecdm 2,Eurostat,,http
 Portugal,1968,0.35,NA,gross,hh,NA,CR1977 hh gross,Castanheira and Ribeiro 1977,728,http://www.jstor.org/stable/41008246
 Portugal,1974,0.39,NA,gross,hh,NA,CR1977 hh gross,Castanheira and Ribeiro 1977,728,http://www.jstor.org/stable/41008246
 Portugal,1980,0.354,NA,disp,sqrt,FALSE,"OECD disp sqrt, incomparable def, 2011 method",OECD,NA,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Portugal,1980,0.387,0.003,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Portugal,1980,0.387,0.003,con,oecdm,FALSE,ZdV2001 Portugal con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Portugal,1990,0.329,NA,disp,sqrt,FALSE,"OECD disp sqrt, incomparable def, 2011 method",OECD,NA,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Portugal,1990,0.374,0.003,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Portugal,1990,0.374,0.003,con,oecdm,FALSE,ZdV2001 Portugal con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Portugal,1994,0.436,NA,gross,hh,NA,Budria2007 gross hh,Budria 2007,32,https://mpra.ub.uni-muenchen.de/1784/1/MPRA_paper_1784.pdf
 Portugal,1994,0.37,NA,disp,oecdm,TRUE,Eurostat Portugal disp oecdm 1,Eurostat,,http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Portugal,1995,0.421,NA,gross,hh,NA,Budria2007 gross hh,Budria 2007,32,https://mpra.ub.uni-muenchen.de/1784/1/MPRA_paper_1784.pdf
@@ -8098,7 +8098,7 @@ Spain,1980,0.3178,0.0023,disp,sqrt,FALSE,LIS disp sqrt,LISSY,,https://raw.github
 Spain,1980,0.4747,0.003,market,hh,FALSE,LIS market hh,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/es.txt
 Spain,1980,0.4443,0.0029,market,pc,FALSE,LIS market pc,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/es.txt
 Spain,1980,0.417,0.0027,market,sqrt,FALSE,LIS market sqrt,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/es.txt
-Spain,1980,0.317,0.002,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Spain,1980,0.317,0.002,con,oecdm,FALSE,ZdV2001 Spain con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Spain,1981,0.3562,NA,con,hh,FALSE,IVIE con hh,Caixa Galicia Foundation and Ivie (Valencian Institute of Economic Research) 2009,bloque2/GTH_ID_8081.xls,http://www.ivie.es/downloads/desigualdad/desigualdad.zip
 Spain,1981,0.332,NA,con,pc,FALSE,IVIE con pc,Caixa Galicia Foundation and Ivie (Valencian Institute of Economic Research) 2009,bloque2/GTP_ID_8081.xls,http://www.ivie.es/downloads/desigualdad/desigualdad.zip
 Spain,1981,0.3194,NA,con,sqrt,FALSE,IVIE con sqrt,Caixa Galicia Foundation and Ivie (Valencian Institute of Economic Research) 2009,bloque2/GTU_ID_8081.xls,http://www.ivie.es/downloads/desigualdad/desigualdad.zip
@@ -8146,7 +8146,7 @@ Spain,1990,0.3694,NA,disp,ae,TRUE,W1999 Spain disp ae 1,Wagstaff et al. 1999,82,
 Spain,1990,0.3902,NA,disp,oecdm,TRUE,W1999 Spain disp oecdm,Wagstaff et al. 1999,86,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 Spain,1990,0.4083,NA,gross,ae,TRUE,W1999 Spain gross ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 Spain,1990,0.4261,NA,gross,oecdm,TRUE,W1999 Spain gross oecdm,Wagstaff et al. 1999,86,http://www.sciencedirect.com/science/article/pii/S0047272798000851
-Spain,1990,0.304,0.002,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Spain,1990,0.304,0.002,con,oecdm,FALSE,ZdV2001 Spain con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Spain,1991,0.3488,NA,con,hh,FALSE,IVIE con hh,Caixa Galicia Foundation and Ivie (Valencian Institute of Economic Research) 2009,bloque2/GTH_ID_9091.xls,http://www.ivie.es/downloads/desigualdad/desigualdad.zip
 Spain,1991,0.3177,NA,con,pc,FALSE,IVIE con pc,Caixa Galicia Foundation and Ivie (Valencian Institute of Economic Research) 2009,bloque2/GTP_ID_9091.xls,http://www.ivie.es/downloads/desigualdad/desigualdad.zip
 Spain,1991,0.3082,NA,con,sqrt,FALSE,IVIE con sqrt,Caixa Galicia Foundation and Ivie (Valencian Institute of Economic Research) 2009,bloque2/GTU_ID_9091.xls,http://www.ivie.es/downloads/desigualdad/desigualdad.zip
@@ -9252,7 +9252,7 @@ United Kingdom,1985,0.444,NA,market,sqrt,FALSE,"OECD United Kingdom market sqrt,
 United Kingdom,1985,0.304,NA,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,,https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1985,0.336,NA,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,,https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1985,0.495,NA,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,,https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
-United Kingdom,1985,0.291,0.004,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+United Kingdom,1985,0.291,0.004,con,oecdm,FALSE,ZdV2001 United Kingdom con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 United Kingdom,1986,0.3152000045776367,NA,disp,pc,NA,AtG United Kingdom disp pc,Milanovic 2016,,https://wfs.gc.cuny.edu/njohnson/www/BrankoData/allginis_2016.dta
 United Kingdom,1986,0.291,NA,disp,oecdm,TRUE,IFS FES disp oecdm,Institute for Fiscal Studies,,https://www.ifs.org.uk/uploads/publications/bns/bn19figs_2016.xlsx
 United Kingdom,1986,0.3752,0.0031,con,hh,FALSE,LIS con hh,LISSY,,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
@@ -9277,7 +9277,7 @@ United Kingdom,1988,0.3226,NA,disp,oecdm,TRUE,IFS FES disp oecdm,Institute for F
 United Kingdom,1988,0.35100000000000003,NA,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,,https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1988,0.371,NA,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,,https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1988,0.509,NA,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,,https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
-United Kingdom,1988,0.313,0.005,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+United Kingdom,1988,0.313,0.005,con,oecdm,FALSE,ZdV2001 United Kingdom con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 United Kingdom,1989,0.3479000091552734,NA,disp,pc,NA,AtG United Kingdom disp pc,Milanovic 2016,,https://wfs.gc.cuny.edu/njohnson/www/BrankoData/allginis_2016.dta
 United Kingdom,1989,0.3268,NA,disp,oecdm,TRUE,IFS FES disp oecdm,Institute for Fiscal Studies,,https://www.ifs.org.uk/uploads/publications/bns/bn19figs_2016.xlsx
 United Kingdom,1989,0.344,NA,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,,https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
