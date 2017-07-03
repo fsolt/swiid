@@ -1916,7 +1916,7 @@ added_data <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/dat
 # first, get baseline series and order by data-richness
 baseline_series <- "LIS disp sqrt"
 baseline <- lis %>% 
-  filter(series = baseline_series) %>% 
+  filter(series == baseline_series) %>% 
   rename(gini_b = gini,
          gini_b_se = gini_se) %>%
   group_by(country) %>% 
@@ -2000,7 +2000,7 @@ swiid_source <- ineq0 %>%
   arrange(country, year, series)
 
 save.image(file = "data/ineq.rda")
-write_csv(swiid_source, "data/swiid_source.csv")
+write_csv(swiid_source, "data/swiid_source.csv", na = "")
 
 
 ##
