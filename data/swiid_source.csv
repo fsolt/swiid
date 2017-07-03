@@ -1,4 +1,4 @@
-country,year,gini_m,gini_m_se,welfare_def,equiv_scale,monetary,series,source1,page,link
+country,year,gini,gini_se,welfare_def,equiv_scale,monetary,series,source1,page,link
 Afghanistan,2007,0.278,NA,con,pc,NA,ZKM2014 Afghanistan con pc,"Zhuang, Kanbur, and Maligalig 2014",24,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA24
 Afghanistan,2008,0.297,NA,con,pc,NA,CSO Afghanistan con pc,Central Statistics Organization Afghanistan 2014,52,http://www.af.undp.org/content/dam/afghanistan/docs/MDGs/NRVA%20REPORT-rev-5%202013.pdf
 Afghanistan,2012,0.316,NA,con,pc,NA,CSO Afghanistan con pc,Central Statistics Organization Afghanistan 2014,52,http://www.af.undp.org/content/dam/afghanistan/docs/MDGs/NRVA%20REPORT-rev-5%202013.pdf
