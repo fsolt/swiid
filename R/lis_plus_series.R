@@ -6,18 +6,11 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 1000
+iter <- 500
 chains <- 4
 cores <- chains
 
-x <- ineq %>%
-  filter(country %in% (ineq %>% 
-           filter(series == "LIS disp sqrt") %>% 
-           pull(country)) == TRUE) %>% 
-  mutate(kcode = as.integer(factor(country, levels = unique(country))),
-         tcode = as.integer(year - min(year) + 1),
-         scode = as.integer(factor(series, levels = unique(series))))
-
+x <- ineq 
 
 # Format data for Stan
 source_data <- list(  K = max(x$kcode),
