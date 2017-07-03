@@ -1972,7 +1972,6 @@ ineq_bl <- ineq0 %>%
   select(-lis_count) 
 
 ineq_bl_series <- ineq_bl %>% pull(series) %>% unique()
-  # need to exclude those without other data
 
 # obs with no baseline data from series with some baseline data ("overlap baseline")
 ineq_obl <- ineq0 %>% anti_join(ineq_bl %>% select(-gini_b, -gini_b_se), 
@@ -1988,7 +1987,7 @@ ineq_oth_series <- rbind(ineq_obl, ineq_nbl) %>% pull(series) %>% unique()
 
 # combine all
 ineq <- bind_rows(ineq_bl, ineq_obl, ineq_nbl) %>% 
-  filter(series %in% c(baseline_series, ineq_oth_series)) %>% 
+  filter(series %in% c(baseline_series, ineq_oth_series)) %>% # i.e., exclude series that overlap completely with baseline
   mutate(gini_m_se = ifelse(!is.na(gini_m_se), gini_m_se,
                             quantile(gini_m_se/gini_m, .99, na.rm = TRUE)*gini_m),
          kcode = as.integer(factor(country, levels = unique(country))),
@@ -2004,10 +2003,6 @@ swiid_source <- ineq0 %>%
 save.image(file = "data/ineq.rda")
 write_csv(swiid_source, "data/swiid_source.csv")
 
-
-# Should flag series that *only* share obs with baseline?
-# weird: Finland, Italy -- in year w missing, est goes to 50 
-# not enough data: China, DR, Egypt
 
 ##
 # ineq_l <- bind_rows(lis, 
