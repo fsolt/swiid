@@ -1110,7 +1110,6 @@ Cameroon,2007,0.4282,,con,pc,FALSE,World Bank Africa Poverty Database Cameroon c
 Cameroon,2007,0.38659999999999994,,con,sqrt,FALSE,World Bank Africa Poverty Database Cameroon con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
 Cameroon,2014,0.4654,,con,pc,FALSE,World Bank Africa Poverty Database Cameroon con pc,Beegle et al. 2016,121-126,http://databank.worldbank.org/data/reports.aspx?source=2&series=SI.POV.GINI
 Cameroon,2014,0.41229999999999994,,con,sqrt,FALSE,World Bank Africa Poverty Database Cameroon con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
-Canada,1969,0.176,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140
 Canada,1971,0.3729999923706055,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://wfs.gc.cuny.edu/njohnson/www/BrankoData/allginis_2016.dta
 Canada,1971,0.3918,0.0021,disp,hh,FALSE,LIS disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1971,0.3745,0.0021,disp,pc,FALSE,LIS disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
@@ -1118,21 +1117,9 @@ Canada,1971,0.3238,0.0021,disp,sqrt,FALSE,LIS disp sqrt,LISSY,"",https://raw.git
 Canada,1971,0.4823,0.0024,market,hh,FALSE,LIS market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1971,0.4614,0.0024,market,pc,FALSE,LIS market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1971,0.4108,0.0024,market,sqrt,FALSE,LIS market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
-Canada,1971,0.373,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1971,0.4,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1971,0.447,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1972,0.3679999923706055,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://wfs.gc.cuny.edu/njohnson/www/BrankoData/allginis_2016.dta
-Canada,1972,0.368,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1972,0.395,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1972,0.446,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1973,0.3679999923706055,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://wfs.gc.cuny.edu/njohnson/www/BrankoData/allginis_2016.dta
-Canada,1973,0.368,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1973,0.392,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1973,0.445,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1974,0.3629999923706055,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://wfs.gc.cuny.edu/njohnson/www/BrankoData/allginis_2016.dta
-Canada,1974,0.363,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1974,0.389,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1974,0.441,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1975,0.36400001525878906,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://wfs.gc.cuny.edu/njohnson/www/BrankoData/allginis_2016.dta
 Canada,1975,0.3614,0.002,disp,hh,FALSE,LIS disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1975,0.335,0.0019,disp,pc,FALSE,LIS disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
@@ -1140,18 +1127,12 @@ Canada,1975,0.294,0.0019,disp,sqrt,FALSE,LIS disp sqrt,LISSY,"",https://raw.gith
 Canada,1975,0.4601,0.0023,market,hh,FALSE,LIS market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1975,0.4316,0.0024,market,pc,FALSE,LIS market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1975,0.3904,0.002,market,sqrt,FALSE,LIS market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
-Canada,1975,0.364,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1975,0.392,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1975,0.451,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1976,0.37400001525878906,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://wfs.gc.cuny.edu/njohnson/www/BrankoData/allginis_2016.dta
 Canada,1976,0.333,,gross,sqrt,FALSE,"OECD Canada gross sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1976,0.385,,market,sqrt,FALSE,"OECD Canada market sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1976,0.385,,market,sqrt,FALSE,"OECD Canada market sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1976,0.304,,disp,sqrt,FALSE,"OECD disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1976,0.304,,disp,sqrt,FALSE,"OECD disp sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Canada,1976,0.374,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1976,0.402,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1976,0.462,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1976,0.364,0.00728,disp,hh,TRUE,Statistics Canada disp hh,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020705
 Canada,1976,0.3,0.006,disp,pc,TRUE,Statistics Canada disp pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1976,0.3,0.006,disp,sqrt,TRUE,Statistics Canada disp sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
@@ -1167,9 +1148,6 @@ Canada,1977,0.369,,market,sqrt,FALSE,"OECD Canada market sqrt, current def, 2011
 Canada,1977,0.369,,market,sqrt,FALSE,"OECD Canada market sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1977,0.288,,disp,sqrt,FALSE,"OECD disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1977,0.288,,disp,sqrt,FALSE,"OECD disp sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Canada,1977,0.362,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1977,0.388,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1977,0.445,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1977,0.353,0.0070599999999999994,disp,hh,TRUE,Statistics Canada disp hh,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020705
 Canada,1977,0.286,0.005719999999999999,disp,pc,TRUE,Statistics Canada disp pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1977,0.286,0.005719999999999999,disp,sqrt,TRUE,Statistics Canada disp sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
@@ -1180,15 +1158,11 @@ Canada,1977,0.434,0.00868,market,hh,TRUE,Statistics Canada market hh,Statistics 
 Canada,1977,0.368,0.00736,market,pc,TRUE,Statistics Canada market pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1977,0.368,0.00736,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
 Canada,1978,0.36700000762939455,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://wfs.gc.cuny.edu/njohnson/www/BrankoData/allginis_2016.dta
-Canada,1978,0.18,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140
 Canada,1978,0.323,,gross,sqrt,FALSE,"OECD Canada gross sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1978,0.375,,market,sqrt,FALSE,"OECD Canada market sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1978,0.375,,market,sqrt,FALSE,"OECD Canada market sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1978,0.293,,disp,sqrt,FALSE,"OECD disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1978,0.293,,disp,sqrt,FALSE,"OECD disp sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Canada,1978,0.367,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1978,0.394,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1978,0.445,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1978,0.357,0.00714,disp,hh,TRUE,Statistics Canada disp hh,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020705
 Canada,1978,0.291,0.00582,disp,pc,TRUE,Statistics Canada disp pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1978,0.291,0.00582,disp,sqrt,TRUE,Statistics Canada disp sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
@@ -1204,9 +1178,6 @@ Canada,1979,0.365,,market,sqrt,FALSE,"OECD Canada market sqrt, current def, 2011
 Canada,1979,0.365,,market,sqrt,FALSE,"OECD Canada market sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1979,0.289,,disp,sqrt,FALSE,"OECD disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1979,0.289,,disp,sqrt,FALSE,"OECD disp sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Canada,1979,0.355,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1979,0.381,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1979,0.436,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1979,0.353,0.0070599999999999994,disp,hh,TRUE,Statistics Canada disp hh,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020705
 Canada,1979,0.286,0.005719999999999999,disp,pc,TRUE,Statistics Canada disp pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1979,0.286,0.005719999999999999,disp,sqrt,TRUE,Statistics Canada disp sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
@@ -1222,9 +1193,6 @@ Canada,1980,0.37,,market,sqrt,FALSE,"OECD Canada market sqrt, current def, 2011 
 Canada,1980,0.37,,market,sqrt,FALSE,"OECD Canada market sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1980,0.289,,disp,sqrt,FALSE,"OECD disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1980,0.289,,disp,sqrt,FALSE,"OECD disp sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Canada,1980,0.358,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1980,0.383,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1980,0.442,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1980,0.353,0.0070599999999999994,disp,hh,TRUE,Statistics Canada disp hh,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020705
 Canada,1980,0.286,0.005719999999999999,disp,pc,TRUE,Statistics Canada disp pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1980,0.286,0.005719999999999999,disp,sqrt,TRUE,Statistics Canada disp sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
@@ -1246,9 +1214,6 @@ Canada,1981,0.369,,market,sqrt,FALSE,"OECD Canada market sqrt, current def, 2011
 Canada,1981,0.369,,market,sqrt,FALSE,"OECD Canada market sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1981,0.287,,disp,sqrt,FALSE,"OECD disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1981,0.287,,disp,sqrt,FALSE,"OECD disp sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Canada,1981,0.351,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1981,0.377,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1981,0.437,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1981,0.348,0.00696,disp,hh,TRUE,Statistics Canada disp hh,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020705
 Canada,1981,0.285,0.005699999999999999,disp,pc,TRUE,Statistics Canada disp pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1981,0.285,0.005699999999999999,disp,sqrt,TRUE,Statistics Canada disp sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
@@ -1259,15 +1224,11 @@ Canada,1981,0.434,0.00868,market,hh,TRUE,Statistics Canada market hh,Statistics 
 Canada,1981,0.369,0.00738,market,pc,TRUE,Statistics Canada market pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1981,0.369,0.00738,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
 Canada,1982,0.3529999923706055,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://wfs.gc.cuny.edu/njohnson/www/BrankoData/allginis_2016.dta
-Canada,1982,0.175,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140
 Canada,1982,0.323,,gross,sqrt,FALSE,"OECD Canada gross sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1982,0.389,,market,sqrt,FALSE,"OECD Canada market sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1982,0.389,,market,sqrt,FALSE,"OECD Canada market sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1982,0.291,,disp,sqrt,FALSE,"OECD disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1982,0.291,,disp,sqrt,FALSE,"OECD disp sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Canada,1982,0.353,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1982,0.381,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1982,0.453,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1982,0.351,0.007019999999999999,disp,hh,TRUE,Statistics Canada disp hh,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020705
 Canada,1982,0.288,0.0057599999999999995,disp,pc,TRUE,Statistics Canada disp pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1982,0.288,0.0057599999999999995,disp,sqrt,TRUE,Statistics Canada disp sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
@@ -1283,9 +1244,6 @@ Canada,1983,0.403,,market,sqrt,FALSE,"OECD Canada market sqrt, current def, 2011
 Canada,1983,0.403,,market,sqrt,FALSE,"OECD Canada market sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1983,0.299,,disp,sqrt,FALSE,"OECD disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1983,0.299,,disp,sqrt,FALSE,"OECD disp sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Canada,1983,0.363,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1983,0.393,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1983,0.471,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1983,0.361,0.00722,disp,hh,TRUE,Statistics Canada disp hh,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020705
 Canada,1983,0.296,0.00592,disp,pc,TRUE,Statistics Canada disp pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1983,0.296,0.00592,disp,sqrt,TRUE,Statistics Canada disp sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
@@ -1301,9 +1259,6 @@ Canada,1984,0.402,,market,sqrt,FALSE,"OECD Canada market sqrt, current def, 2011
 Canada,1984,0.402,,market,sqrt,FALSE,"OECD Canada market sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1984,0.296,,disp,sqrt,FALSE,"OECD disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1984,0.296,,disp,sqrt,FALSE,"OECD disp sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Canada,1984,0.359,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1984,0.389,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1984,0.469,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1984,0.357,0.00714,disp,hh,TRUE,Statistics Canada disp hh,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020705
 Canada,1984,0.293,0.00586,disp,pc,TRUE,Statistics Canada disp pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1984,0.293,0.00586,disp,sqrt,TRUE,Statistics Canada disp sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
@@ -1319,9 +1274,6 @@ Canada,1985,0.395,,market,sqrt,FALSE,"OECD Canada market sqrt, current def, 2011
 Canada,1985,0.395,,market,sqrt,FALSE,"OECD Canada market sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1985,0.293,,disp,sqrt,FALSE,"OECD disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1985,0.293,,disp,sqrt,FALSE,"OECD disp sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Canada,1985,0.358,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1985,0.388,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1985,0.466,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1985,0.357,0.00714,disp,hh,TRUE,Statistics Canada disp hh,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020705
 Canada,1985,0.29,0.0058,disp,pc,TRUE,Statistics Canada disp pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1985,0.29,0.0058,disp,sqrt,TRUE,Statistics Canada disp sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
@@ -1332,7 +1284,6 @@ Canada,1985,0.464,0.00928,market,hh,TRUE,Statistics Canada market hh,Statistics 
 Canada,1985,0.395,0.0079,market,pc,TRUE,Statistics Canada market pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1985,0.395,0.0079,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
 Canada,1986,0.35900001525878905,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://wfs.gc.cuny.edu/njohnson/www/BrankoData/allginis_2016.dta
-Canada,1986,0.185,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140
 Canada,1986,0.325,,gross,sqrt,FALSE,"OECD Canada gross sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1986,0.395,,market,sqrt,FALSE,"OECD Canada market sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1986,0.395,,market,sqrt,FALSE,"OECD Canada market sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -1340,9 +1291,6 @@ Canada,1986,0.292,,disp,sqrt,FALSE,"OECD disp sqrt, current def, 2011 method",OE
 Canada,1986,0.292,,disp,sqrt,FALSE,"OECD disp sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1986,0.318,,con,hh,,Park1995 Canada con hh,Tabatabai 1996; Park 1995,124,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Canada,1986,0.362,,disp,hh,,Park1995 Canada disp hh,Tabatabai 1996; Park 1995,124,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Canada,1986,0.359,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1986,0.389,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1986,0.467,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1986,0.358,0.00716,disp,hh,TRUE,Statistics Canada disp hh,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020705
 Canada,1986,0.29,0.0058,disp,pc,TRUE,Statistics Canada disp pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1986,0.29,0.0058,disp,sqrt,TRUE,Statistics Canada disp sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
@@ -1364,9 +1312,6 @@ Canada,1987,0.393,,market,sqrt,FALSE,"OECD Canada market sqrt, current def, 2011
 Canada,1987,0.393,,market,sqrt,FALSE,"OECD Canada market sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1987,0.289,,disp,sqrt,FALSE,"OECD disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1987,0.289,,disp,sqrt,FALSE,"OECD disp sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Canada,1987,0.357,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1987,0.39,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1987,0.468,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1987,0.355,0.0070999999999999995,disp,hh,TRUE,Statistics Canada disp hh,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020705
 Canada,1987,0.287,0.0057399999999999994,disp,pc,TRUE,Statistics Canada disp pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1987,0.287,0.0057399999999999994,disp,sqrt,TRUE,Statistics Canada disp sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
@@ -1382,9 +1327,6 @@ Canada,1988,0.391,,market,sqrt,FALSE,"OECD Canada market sqrt, current def, 2011
 Canada,1988,0.391,,market,sqrt,FALSE,"OECD Canada market sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1988,0.284,,disp,sqrt,FALSE,"OECD disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1988,0.284,,disp,sqrt,FALSE,"OECD disp sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Canada,1988,0.355,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1988,0.39,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1988,0.469,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1988,0.354,0.0070799999999999995,disp,hh,TRUE,Statistics Canada disp hh,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020705
 Canada,1988,0.282,0.005639999999999999,disp,pc,TRUE,Statistics Canada disp pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1988,0.282,0.005639999999999999,disp,sqrt,TRUE,Statistics Canada disp sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
@@ -1400,9 +1342,6 @@ Canada,1989,0.388,,market,sqrt,FALSE,"OECD Canada market sqrt, current def, 2011
 Canada,1989,0.388,,market,sqrt,FALSE,"OECD Canada market sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1989,0.282,,disp,sqrt,FALSE,"OECD disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1989,0.282,,disp,sqrt,FALSE,"OECD disp sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Canada,1989,0.352,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1989,0.386,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1989,0.461,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1989,0.351,0.007019999999999999,disp,hh,TRUE,Statistics Canada disp hh,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020705
 Canada,1989,0.281,0.005620000000000001,disp,pc,TRUE,Statistics Canada disp pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1989,0.281,0.005620000000000001,disp,sqrt,TRUE,Statistics Canada disp sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
@@ -1418,9 +1357,6 @@ Canada,1990,0.403,,market,sqrt,FALSE,"OECD Canada market sqrt, current def, 2011
 Canada,1990,0.403,,market,sqrt,FALSE,"OECD Canada market sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1990,0.287,,disp,sqrt,FALSE,"OECD disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1990,0.287,,disp,sqrt,FALSE,"OECD disp sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Canada,1990,0.352,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1990,0.389,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1990,0.47,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1990,0.357,0.00714,disp,hh,TRUE,Statistics Canada disp hh,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020705
 Canada,1990,0.286,0.005719999999999999,disp,pc,TRUE,Statistics Canada disp pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1990,0.286,0.005719999999999999,disp,sqrt,TRUE,Statistics Canada disp sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
@@ -1442,9 +1378,6 @@ Canada,1991,0.423,,market,sqrt,FALSE,"OECD Canada market sqrt, current def, 2011
 Canada,1991,0.423,,market,sqrt,FALSE,"OECD Canada market sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1991,0.294,,disp,sqrt,FALSE,"OECD disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1991,0.294,,disp,sqrt,FALSE,"OECD disp sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Canada,1991,0.357,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1991,0.395,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1991,0.486,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1991,0.364,0.00728,disp,hh,TRUE,Statistics Canada disp hh,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020705
 Canada,1991,0.292,0.00584,disp,pc,TRUE,Statistics Canada disp pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1991,0.292,0.00584,disp,sqrt,TRUE,Statistics Canada disp sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
@@ -1455,15 +1388,11 @@ Canada,1991,0.498,0.00996,market,hh,TRUE,Statistics Canada market hh,Statistics 
 Canada,1991,0.422,0.00844,market,pc,TRUE,Statistics Canada market pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1991,0.422,0.00844,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
 Canada,1992,0.3559999847412109,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://wfs.gc.cuny.edu/njohnson/www/BrankoData/allginis_2016.dta
-Canada,1992,0.173,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140
 Canada,1992,0.337,,gross,sqrt,FALSE,"OECD Canada gross sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1992,0.429,,market,sqrt,FALSE,"OECD Canada market sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1992,0.429,,market,sqrt,FALSE,"OECD Canada market sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1992,0.292,,disp,sqrt,FALSE,"OECD disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1992,0.292,,disp,sqrt,FALSE,"OECD disp sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Canada,1992,0.356,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1992,0.394,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1992,0.491,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1992,0.364,0.00728,disp,hh,TRUE,Statistics Canada disp hh,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020705
 Canada,1992,0.291,0.00582,disp,pc,TRUE,Statistics Canada disp pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1992,0.291,0.00582,disp,sqrt,TRUE,Statistics Canada disp sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
@@ -1479,9 +1408,6 @@ Canada,1993,0.43,,market,sqrt,FALSE,"OECD Canada market sqrt, current def, 2011 
 Canada,1993,0.43,,market,sqrt,FALSE,"OECD Canada market sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1993,0.286,,disp,sqrt,FALSE,"OECD disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1993,0.286,,disp,sqrt,FALSE,"OECD disp sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Canada,1993,0.358,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1993,0.396,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1993,0.497,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1993,0.361,0.00722,disp,hh,TRUE,Statistics Canada disp hh,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020705
 Canada,1993,0.289,0.0057799999999999995,disp,pc,TRUE,Statistics Canada disp pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1993,0.289,0.0057799999999999995,disp,sqrt,TRUE,Statistics Canada disp sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
@@ -1503,9 +1429,6 @@ Canada,1994,0.432,,market,sqrt,FALSE,"OECD Canada market sqrt, current def, 2011
 Canada,1994,0.432,,market,sqrt,FALSE,"OECD Canada market sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1994,0.287,,disp,sqrt,FALSE,"OECD disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1994,0.287,,disp,sqrt,FALSE,"OECD disp sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Canada,1994,0.354,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1994,0.394,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1994,0.495,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1994,0.362,0.00724,disp,hh,TRUE,Statistics Canada disp hh,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020705
 Canada,1994,0.29,0.0058,disp,pc,TRUE,Statistics Canada disp pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1994,0.29,0.0058,disp,sqrt,TRUE,Statistics Canada disp sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
@@ -1520,9 +1443,6 @@ Canada,1995,0.43,,market,sqrt,FALSE,"OECD Canada market sqrt, current def, 2011 
 Canada,1995,0.43,,market,sqrt,FALSE,"OECD Canada market sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1995,0.289,,disp,sqrt,FALSE,"OECD disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1995,0.289,,disp,sqrt,FALSE,"OECD disp sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Canada,1995,0.357,,disp,hh,TRUE,SC1999 disp hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1995,0.397,,gross,hh,TRUE,SC1999 gross hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
-Canada,1995,0.493,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1995,0.363,0.00726,disp,hh,TRUE,Statistics Canada disp hh,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020705
 Canada,1995,0.293,0.00586,disp,pc,TRUE,Statistics Canada disp pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1995,0.293,0.00586,disp,sqrt,TRUE,Statistics Canada disp sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
@@ -1532,7 +1452,6 @@ Canada,1995,0.336,0.00672,gross,sqrt,TRUE,Statistics Canada gross sqrt,Statistic
 Canada,1995,0.503,0.01006,market,hh,TRUE,Statistics Canada market hh,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020705
 Canada,1995,0.43,0.0086,market,pc,TRUE,Statistics Canada market pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1995,0.43,0.0086,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
-Canada,1996,0.176,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140
 Canada,1996,0.345,,gross,sqrt,FALSE,"OECD Canada gross sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1996,0.439,,market,sqrt,FALSE,"OECD Canada market sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1996,0.439,,market,sqrt,FALSE,"OECD Canada market sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -1547,7 +1466,6 @@ Canada,1996,0.346,0.00692,gross,sqrt,TRUE,Statistics Canada gross sqrt,Statistic
 Canada,1996,0.513,0.01026,market,hh,TRUE,Statistics Canada market hh,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020705
 Canada,1996,0.439,0.00878,market,pc,TRUE,Statistics Canada market pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1996,0.439,0.00878,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
-Canada,1997,0.169,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140
 Canada,1997,0.3481,0.0017,disp,hh,FALSE,LIS disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1997,0.3171,0.0018,disp,pc,FALSE,LIS disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1997,0.2921,0.0019,disp,sqrt,FALSE,LIS disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
@@ -1568,7 +1486,6 @@ Canada,1997,0.348,0.00696,gross,sqrt,TRUE,Statistics Canada gross sqrt,Statistic
 Canada,1997,0.516,0.010320000000000001,market,hh,TRUE,Statistics Canada market hh,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020705
 Canada,1997,0.438,0.00876,market,pc,TRUE,Statistics Canada market pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1997,0.438,0.00876,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
-Canada,1998,0.173,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140
 Canada,1998,0.3728,0.0031,disp,hh,FALSE,LIS disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1998,0.3335,0.0031,disp,pc,FALSE,LIS disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1998,0.3127,0.0027,disp,sqrt,FALSE,LIS disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
@@ -1589,7 +1506,6 @@ Canada,1998,0.356,0.00712,gross,sqrt,TRUE,Statistics Canada gross sqrt,Statistic
 Canada,1998,0.523,0.01046,market,hh,TRUE,Statistics Canada market hh,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020705
 Canada,1998,0.446,0.00892,market,pc,TRUE,Statistics Canada market pc,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2020709
 Canada,1998,0.446,0.00892,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",http://www5.statcan.gc.ca/cansim/a26?id=2060033
-Canada,1999,0.175,,con,ae,TRUE,CP2006 con ae 1,Crossley and Pendakur 2006,140,https://books.google.com/books?id=pgPBMVYO8DoC&pg=PA140
 Canada,1999,0.355,,gross,sqrt,FALSE,"OECD Canada gross sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1999,0.438,,market,sqrt,FALSE,"OECD Canada market sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1999,0.438,,market,sqrt,FALSE,"OECD Canada market sqrt, previous def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
