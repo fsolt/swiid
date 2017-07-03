@@ -1160,7 +1160,6 @@ psa <- read_csv("data-raw/psa.csv", skip = 3, col_types = "cccdddddcc") %>%
             link = psa_link)
 
 
-
 # Russian Federal State Statistics Service (update link)
 # http://www.gks.ru/wps/wcm/connect/rosstat_main/rosstat/en/main/
 # Social and Economic Indicators of the Russian Federation (Appendix to the 'Statistical Yearbook of Russia')
@@ -1305,8 +1304,8 @@ ine <- read_csv("data-raw/ine.csv", skip = 4) %>%
             welfare_def = "disp",
             equiv_scale = "oecdm",
             monetary = FALSE,
-            series = paste("Instituto Nacional de Estadística", welfare_def, equiv_scale),
-            source1 = "Instituto Nacional de Estadística",
+            series = paste("Instituto Nacional de Estadistica Spain", welfare_def, equiv_scale),
+            source1 = "Instituto Nacional de Estadistica Spain",
             page = "",
             link = ine_link)
 
@@ -1624,8 +1623,8 @@ uine <- extract_tables("data-raw/uine.pdf", pages = 45)[[2]][5:15, 1] %>%
             welfare_def = "disp",
             equiv_scale = "pc",
             monetary = TRUE,
-            series = paste("Instituto Nacional de Estadistica", welfare_def, equiv_scale),
-            source1 = "Instituto Nacional de Estadistica",
+            series = paste("Instituto Nacional de Estadistica Uruguay", welfare_def, equiv_scale),
+            source1 = "Instituto Nacional de Estadistica Uruguay",
             page = "43",
             link = uine_link)
 
@@ -1645,8 +1644,8 @@ inev <- read_excel("data-raw/inev.xls", skip = 3) %>%
             welfare_def = "disp",
             equiv_scale = "pc",
             monetary = TRUE,
-            series = paste("Instituto Nacional de Estadistica", welfare_def, equiv_scale),
-            source1 = "Instituto Nacional de Estadistica",
+            series = paste("Instituto Nacional de Estadistica Venezuela", welfare_def, equiv_scale),
+            source1 = "Instituto Nacional de Estadistica Venezuela",
             page = "",
             link = inev_link)
 

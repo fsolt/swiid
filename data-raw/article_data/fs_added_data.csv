@@ -134,8 +134,8 @@ Belarus,1999,0.299,,con,pc,FALSE,MY2006 Belarus con pc 3,Mitra and Yemtsov 2006,
 Belarus,2000,0.293,,con,pc,FALSE,MY2006 Belarus con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Belarus,2001,0.301,,con,pc,FALSE,MY2006 Belarus con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Belarus,2002,0.292,,con,pc,FALSE,MY2006 Belarus con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
-Belgium,1979,0.212,0.003,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
-Belgium,1988,0.236,0.004,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Belgium,1979,0.212,0.003,con,oecdm,FALSE,ZdV2001 Belgium con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Belgium,1988,0.236,0.004,con,oecdm,FALSE,ZdV2001 Belgium con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Belize,2002,0.4,,con,pc,,MM2009 Belize con pc,Mendoza and Machado 2009,112,http://www.cepal.org/publicaciones/xml/3/38253/LCARL.245part2.pdf
 Belize,2009,0.42,,con,pc,,SALISES 2012 Belize con pc,SALISES 2012,27,http://www.caribank.org/uploads/2012/12/Barbados-CALC-Volume-1-MainReport-FINAL-Dec-2012.pdf
 Belize,1996,0.51,,con,hh,,TW2002 Belize con hh,Thomas and Wint 2002; Canterbury 2005,861,http://dx.doi.org/10.1080/02255189.2005.9669090 
@@ -289,9 +289,9 @@ Canada,1993,0.497,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, In
 Canada,1994,0.495,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Canada,1995,0.493,,market,hh,TRUE,SC1999 market hh 1,"Statistics Canada 1999, Income After Tax, Distributions by Size in Canada 1997, 13-210-xpb",,
 Cape Verde,2001,0.51,,con,pc,,FR2008 Cape Verde con pc,Ferreira and Ravallion 2008,35,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
-Cape Verde,2002,0.53,,con,pc,,INE Cape Verde con pc,Instituto Nacional de EstatÍstica Cape Verde 2016,49,http://ine.cv/wp-content/uploads/2016/11/apresentacao-resultados-preliminares-18-novembro-2016.pdf
-Cape Verde,2007,0.47,,con,pc,,INE Cape Verde con pc,Instituto Nacional de EstatÍstica Cape Verde 2016,49,http://ine.cv/wp-content/uploads/2016/11/apresentacao-resultados-preliminares-18-novembro-2016.pdf
-Cape Verde,2015,0.46,,con,pc,,INE Cape Verde con pc,Instituto Nacional de EstatÍstica Cape Verde 2016,49,http://ine.cv/wp-content/uploads/2016/11/apresentacao-resultados-preliminares-18-novembro-2016.pdf
+Cape Verde,2002,0.53,,con,pc,,INE Cape Verde con pc,Instituto Nacional de Estatêstica Cape Verde 2016,49,http://ine.cv/wp-content/uploads/2016/11/apresentacao-resultados-preliminares-18-novembro-2016.pdf
+Cape Verde,2007,0.47,,con,pc,,INE Cape Verde con pc,Instituto Nacional de Estatêstica Cape Verde 2016,49,http://ine.cv/wp-content/uploads/2016/11/apresentacao-resultados-preliminares-18-novembro-2016.pdf
+Cape Verde,2015,0.46,,con,pc,,INE Cape Verde con pc,Instituto Nacional de Estatêstica Cape Verde 2016,49,http://ine.cv/wp-content/uploads/2016/11/apresentacao-resultados-preliminares-18-novembro-2016.pdf
 Chile,1978,0.485,,gross,pc,,Berry1997 gross pc,Berry 1997,15,http://www.jstor.org/stable/2503865
 Chile,1988,0.519,,gross,pc,,Berry1997 gross pc,Berry 1997,15,http://www.jstor.org/stable/2503865
 Chile,1989,0.522,,gross,pc,,Berry1997 gross pc,Berry 1997,15,http://www.jstor.org/stable/2503865
@@ -500,8 +500,8 @@ France,1989,0.3056,,disp,ae,TRUE,W1999 France disp ae 1,Wagstaff et al. 1999,82,
 France,1989,0.3124,,disp,ae,TRUE,W1999 France disp ae 2,Wagstaff et al. 1999,86,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 France,1989,0.3219,,gross,ae,TRUE,W1999 France gross ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 France,1989,0.329,,gross,ae,TRUE,W1999 France gross ae 2,Wagstaff et al. 1999,86,http://www.sciencedirect.com/science/article/pii/S0047272798000851
-France,1984,0.271,0.002,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
-France,1989,0.295,0.003,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+France,1984,0.271,0.002,con,oecdm,FALSE,ZdV2001 France con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+France,1989,0.295,0.003,con,oecdm,FALSE,ZdV2001 France con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 "Gambia, The",1992,0.478,,con,pc,,"FR2008 Gambia, The con pc",Ferreira and Ravallion 2008,36,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Georgia,1988,0.313,,gross,pc,,AG1993 Georgia gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,120,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Georgia,1990,0.291,,gross,pc,,AG1993 Georgia gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,120,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -545,15 +545,15 @@ Germany,1978,0.36,,disp,hh,,vGP1984 Germany disp hh,Tabatabai 1996; van Ginneken
 Germany,1974,0.32,,disp,pc,,vGP1984 Germany disp pc,Tabatabai 1996; van Ginneken and Park 1984,125,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Germany,1988,0.2312,,disp,ae,TRUE,W1999 Germany disp ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 Germany,1988,0.2591,,gross,ae,TRUE,W1999 Germany gross ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
-Germany,1983,0.247,0.001,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
-Germany,1988,0.256,0.001,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Germany,1983,0.247,0.001,con,oecdm,FALSE,ZdV2001 Germany con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Germany,1988,0.256,0.001,con,oecdm,FALSE,ZdV2001 Germany con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Ghana,1992,0.381,,con,pc,,FR2008 Ghana con pc,Ferreira and Ravallion 2008,36,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Ghana,2006,0.419,,con,ae,FALSE,GSS con ae,Ghana Statistical Service 2014,22,http://www.statsghana.gov.gh/glss6.html
 Ghana,2013,0.423,,con,ae,FALSE,GSS con ae,Ghana Statistical Service 2014,22,http://www.statsghana.gov.gh/glss6.html
 Greece,1988,0.245,,con,hh,,Park1995 Greece con hh,Tabatabai 1996; Park 1995,125,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Greece,1988,0.349,,disp,hh,,Park1995 Greece disp hh,Tabatabai 1996; Park 1995,125,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Greece,1982,0.316,0.004,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
-Greece,1988,0.32,0.003,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Greece,1982,0.316,0.004,con,oecdm,FALSE,ZdV2001 Greece con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Greece,1988,0.32,0.003,con,oecdm,FALSE,ZdV2001 Greece con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Grenada,2008,0.37,,con,pc,,SALISES 2012 Grenada con pc,SALISES 2012,27,http://www.caribank.org/uploads/2012/12/Barbados-CALC-Volume-1-MainReport-FINAL-Dec-2012.pdf
 Grenada,1999,0.45,,con,hh,,TW2002 Grenada con hh,Thomas and Wint 2002; Canterbury 2005,861,http://dx.doi.org/10.1080/02255189.2005.9669090 
 Guatemala,2000,0.476,,con,pc,,INE2002 con pc,Instituto Nacional de Estadi_stica de Guatemala 2002 ,20,https://www.ine.gob.gt/sistema/uploads/2014/01/15/v8ukWQ78M4VJrnYqyN2oCumMy1GiBzaf.pdf
@@ -844,8 +844,8 @@ Italy,1989,0.35,,con,hh,,Park1995 Italy con hh,Tabatabai 1996; Park 1995,126,htt
 Italy,1989,0.328,,disp,hh,,Park1995 Italy disp hh,Tabatabai 1996; Park 1995,126,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Italy,1991,0.3009,,disp,ae,TRUE,W1999 Italy disp ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 Italy,1991,0.3248,,gross,ae,TRUE,W1999 Italy gross ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
-Italy,1985,0.331,0.002,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
-Italy,1988,0.352,0.002,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Italy,1985,0.331,0.002,con,oecdm,FALSE,ZdV2001 Italy con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Italy,1988,0.352,0.002,con,oecdm,FALSE,ZdV2001 Italy con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Jamaica,2001,0.38,,con,hh,,TW2002 Jamaica con hh,Thomas and Wint 2002; Canterbury 2005,861,http://dx.doi.org/10.1080/02255189.2005.9669090 
 Japan,1993,0.248,,con,pc,,FR2008 Japan con pc,Ferreira and Ravallion 2008,37,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Japan,2004,0.45,,con,pc,,FR2008 Japan con pc,Ferreira and Ravallion 2008,37,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
@@ -1190,8 +1190,8 @@ Netherlands,2010,0.34,,disp,hh,,AK2013 disp hh,Arts and Kessels 2013,13,https://
 Netherlands,1988,0.307,,disp,hh,,Park1995 Netherlands disp hh,Tabatabai 1996; Park 1995,127,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Netherlands,1992,0.2517,,disp,ae,TRUE,W1999 Netherlands disp ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 Netherlands,1992,0.2846,,gross,ae,TRUE,W1999 Netherlands gross ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
-Netherlands,1980,0.21,0.003,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
-Netherlands,1988,0.214,0.004,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Netherlands,1980,0.21,0.003,con,oecdm,FALSE,ZdV2001 Netherlands con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Netherlands,1988,0.214,0.004,con,oecdm,FALSE,ZdV2001 Netherlands con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 New Zealand,1990,0.229,,con,hh,,Park1995 New Zealand con hh,Tabatabai 1996; Park 1995,127,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 New Zealand,1990,0.377,,disp,hh,,Park1995 New Zealand disp hh,Tabatabai 1996; Park 1995,127,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 New Zealand,1984,0.272,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
@@ -1414,8 +1414,8 @@ Portugal,2000,0.397,,gross,hh,,Budria2007 gross hh,Budria 2007,32,https://mpra.u
 Portugal,2001,0.4,,gross,hh,,Budria2007 gross hh,Budria 2007,32,https://mpra.ub.uni-muenchen.de/1784/1/MPRA_paper_1784.pdf
 Portugal,1968,0.35,,gross,hh,,CR1977 hh gross,Castanheira and Ribeiro 1977,728,http://www.jstor.org/stable/41008246
 Portugal,1974,0.39,,gross,hh,,CR1977 hh gross,Castanheira and Ribeiro 1977,728,http://www.jstor.org/stable/41008246
-Portugal,1980,0.387,0.003,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
-Portugal,1990,0.374,0.003,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Portugal,1980,0.387,0.003,con,oecdm,FALSE,ZdV2001 Portugal con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Portugal,1990,0.374,0.003,con,oecdm,FALSE,ZdV2001 Portugal con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Puerto Rico,1979,0.516,,gross,ae,,Sotomayor2004 gross ae,Sotomayor 2004,1397,https://doi.org/10.1016/j.worlddev.2004.02.005
 Puerto Rico,1989,0.499,,gross,ae,,Sotomayor2004 gross ae,Sotomayor 2004,1397,https://doi.org/10.1016/j.worlddev.2004.02.005
 Puerto Rico,1999,0.558,,gross,ae,,Sotomayor2004 gross ae,Sotomayor 2004,1397,https://doi.org/10.1016/j.worlddev.2004.02.005
@@ -1700,8 +1700,8 @@ Spain,1990,0.3694,,disp,ae,TRUE,W1999 Spain disp ae 1,Wagstaff et al. 1999,82,ht
 Spain,1990,0.3902,,disp,oecdm,TRUE,W1999 Spain disp oecdm,Wagstaff et al. 1999,86,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 Spain,1990,0.4083,,gross,ae,TRUE,W1999 Spain gross ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 Spain,1990,0.4261,,gross,oecdm,TRUE,W1999 Spain gross oecdm,Wagstaff et al. 1999,86,http://www.sciencedirect.com/science/article/pii/S0047272798000851
-Spain,1980,0.317,0.002,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
-Spain,1990,0.304,0.002,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Spain,1980,0.317,0.002,con,oecdm,FALSE,ZdV2001 Spain con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+Spain,1990,0.304,0.002,con,oecdm,FALSE,ZdV2001 Spain con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Sri Lanka,1994,0.344,,con,pc,,FR2008 Sri Lanka con pc,Ferreira and Ravallion 2008,39,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Sri Lanka,1980,0.31,,con,ae,,GC2005 Sri Lanka con ae,Gunatilaka and Chotikapanich 2005,39,https://www.researchgate.net/profile/Ramani_Gunatilaka2/publication/5179946_Inequality_Trends_and_Determinants_in_Sri_Lanka_1980-2002_A_Shapley_Approach_to_Decomposition/links/0f3175347a7e7d2f75000000/Inequality-Trends-and-Determinants-in-Sri-Lanka-1980-2002-A-Shapley-Approach-to-Decomposition.pdf
 Sri Lanka,1985,0.323,,con,ae,,GC2005 Sri Lanka con ae,Gunatilaka and Chotikapanich 2005,39,https://www.researchgate.net/profile/Ramani_Gunatilaka2/publication/5179946_Inequality_Trends_and_Determinants_in_Sri_Lanka_1980-2002_A_Shapley_Approach_to_Decomposition/links/0f3175347a7e7d2f75000000/Inequality-Trends-and-Determinants-in-Sri-Lanka-1980-2002-A-Shapley-Approach-to-Decomposition.pdf
@@ -1888,8 +1888,8 @@ Ukraine,2003,0.268,,con,pc,FALSE,MY2006 Ukraine con pc 6,Mitra and Yemtsov 2006,
 United Arab Emirates,2008,0.395,,con,pc,,Hassine2015 UAE con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 United Kingdom,1993,0.3768,,disp,ae,TRUE,W1999 United Kingdom disp ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 United Kingdom,1993,0.4121,,gross,ae,TRUE,W1999 United Kingdom gross ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
-United Kingdom,1985,0.291,0.004,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
-United Kingdom,1988,0.313,0.005,con,oecdm,FALSE,ZdV2001 con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+United Kingdom,1985,0.291,0.004,con,oecdm,FALSE,ZdV2001 United Kingdom con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
+United Kingdom,1988,0.313,0.005,con,oecdm,FALSE,ZdV2001 United Kingdom con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 United States,1983,0.359,,disp,ae,FALSE,BP1997 United States disp ae,Burkhauser and Pourore 1997,14,http://www.jstor.org/stable/2951428 
 United States,1984,0.367,,disp,ae,FALSE,BP1997 United States disp ae,Burkhauser and Pourore 1997,14,http://www.jstor.org/stable/2951428 
 United States,1985,0.375,,disp,ae,FALSE,BP1997 United States disp ae,Burkhauser and Pourore 1997,14,http://www.jstor.org/stable/2951428 
