@@ -4,7 +4,7 @@ library(rstan)
 library(beepr)
 
 seed <- 324
-iter <- 100
+iter <- 2000
 chains <- 4
 cores <- chains
 
@@ -38,17 +38,17 @@ x <- swiid_source %>%                               # get data in series with so
          n_bl = sum(!is.na(gini_b))) %>% 
   ungroup() %>%
   filter(!n_all == n_bl) %>%   # exclude series with *only* country-years with baseline data
+  group_by(country) %>% 
+  mutate(bl_count = mean(bl_count, na.rm = TRUE)) %>% 
+  ungroup() %>% 
+  arrange(-bl_count) %>% 
   rename(gini_m = gini,
          gini_m_se = gini_se) %>% 
   mutate(gini_m_se = ifelse(!is.na(gini_m_se), gini_m_se,
                             quantile(gini_m_se/gini_m, .99, na.rm = TRUE)*gini_m),
          kcode = as.integer(factor(country, levels = unique(country))), # redo codes for filtered sample
          tcode = as.integer(year - min(year) + 1),
-         scode = as.integer(factor(series, levels = unique(series)))) %>% 
-  group_by(country) %>% 
-  mutate(bl_count = mean(bl_count, na.rm = TRUE)) %>% 
-  ungroup() %>% 
-  arrange(-bl_count)
+         scode = as.integer(factor(series, levels = unique(series))))
 
 
 # Format data for Stan
