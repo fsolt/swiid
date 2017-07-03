@@ -3,50 +3,18 @@ library(stringr)
 library(rstan)
 library(beepr)
 
+load("data/ineq.rda")
+
 seed <- 324
-iter <- 2000
+iter <- 1000
 chains <- 4
 cores <- chains
 
-# Get data for all series that overlap country-years with LIS data
-swiid_source <- read_csv("data/swiid_source.csv")   # get all data
-
-baseline_series <- "LIS disp sqrt"
-baseline <- swiid_source %>%                        # get the LIS data for selected baseline
-  filter(series == baseline_series) %>% 
-  rename(gini_b = gini,
-         gini_b_se = gini_se) %>% 
-  group_by(country) %>% 
-  mutate(bl_count = n()) %>% 
-  ungroup() %>% 
-  arrange(desc(bl_count))
-
-ineq_bl_series <- swiid_source %>%                  # identify series with some baseline data
-  right_join(baseline %>% 
-               select(country, year), 
-             by = c("country", "year")) %>% 
-  pull(series) %>%
-  unique() 
-
-x <- swiid_source %>%                               # get data in series with some baseline data
-  left_join(baseline %>% 
-              select(country, year, gini_b, gini_b_se, bl_count),
-            by = c("country", "year")) %>% 
-  filter(series %in% ineq_bl_series) %>% 
-  group_by(series) %>% 
-  mutate(n_all = n(),
-         n_bl = sum(!is.na(gini_b))) %>% 
-  ungroup() %>%
-  filter(!n_all == n_bl) %>%   # exclude series with *only* country-years with baseline data
-  group_by(country) %>% 
-  mutate(bl_count = mean(bl_count, na.rm = TRUE)) %>% 
-  ungroup() %>% 
-  arrange(-bl_count) %>% 
-  rename(gini_m = gini,
-         gini_m_se = gini_se) %>% 
-  mutate(gini_m_se = ifelse(!is.na(gini_m_se), gini_m_se,
-                            quantile(gini_m_se/gini_m, .99, na.rm = TRUE)*gini_m),
-         kcode = as.integer(factor(country, levels = unique(country))), # redo codes for filtered sample
+x <- ineq %>%
+  filter(country %in% (ineq %>% 
+           filter(series == "LIS disp sqrt") %>% 
+           pull(country)) == TRUE) %>% 
+  mutate(kcode = as.integer(factor(country, levels = unique(country))),
          tcode = as.integer(year - min(year) + 1),
          scode = as.integer(factor(series, levels = unique(series))))
 
