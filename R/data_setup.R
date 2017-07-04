@@ -1915,6 +1915,8 @@ added_data <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/dat
 ## Combine
 # first, get baseline series and order by data-richness
 baseline_series <- "LIS disp sqrt"
+baseline_wd <- str_split(baseline_series, "\\s")[[1]] %>% nth(-2)
+baseline_es <- str_split(baseline_series, "\\s")[[1]] %>% last()
 baseline <- lis %>% 
   filter(series == baseline_series) %>% 
   rename(gini_b = gini,
@@ -1989,8 +1991,8 @@ ineq <- bind_rows(ineq_bl, ineq_obl, ineq_nbl) %>%
                             quantile(gini_m_se/gini_m, .99, na.rm = TRUE)*gini_m),
          kcode = as.integer(factor(country, levels = unique(country))),
          tcode = as.integer(year - min(year) + 1),
-         wcode = as.integer(factor(welfare_def), levels = unique(welfare_def)),
-         ecode = as.integer(factor(equiv_scale), levels = unique(equiv_scale)),
+         wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)),
+         ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)),
          scode = as.integer(factor(series, levels = unique(series))))
 
 swiid_source <- ineq0 %>% 
