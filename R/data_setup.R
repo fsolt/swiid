@@ -2002,12 +2002,30 @@ swiid_source <- ineq0 %>%
 save.image(file = "data/ineq.rda")
 write_csv(swiid_source, "data/swiid_source.csv", na = "")
 
+######
+# want to get disp_sqrt, same_sqrt, and disp_same (or whatever corresponds to baseline_series)
+# plus baseline_series to disp_sqrt (or all LIS to matching wdes?)
 
-##
-# ineq_l <- bind_rows(lis, 
-#           sedlac, cepal, oecd, eurostat, ceq, abs, statcan, ifs, cbo)
-# 
-# ineq_w <- ineq_l %>% spread(key = series, value = gini)
+ineq1 <- ineq %>%
+  group_by(country, year, welfare_def, equiv_scale) %>% 
+  summarize(n_obs = n(),
+            gini_cat = mean(gini_m), 
+            gini_cat_se = ifelse(n_obs == 1,
+                                  gini_m_se,
+                                  sqrt(mean(gini_m_se^2) + (1+1/n_obs)*var(gini_m)))) %>%  # per Rubin (1987)
+  ungroup() %>% 
+  unite(wdes, welfare_def, equiv_scale)
+
+gini_cat <- ineq1 %>% 
+  select(-gini_cat_se, -n_obs) %>% 
+  spread(key = wdes, value = gini_cat)
+    
+gini_cat_se <- ineq1 %>% 
+  select(-gini_cat, -n_obs) %>% 
+  spread(key = wdes, value = gini_cat_se) %>% 
+  rename_at(vars(contains("_")), funs(paste0(., "_se")))
+
+
 
 
 # t <- ineq %>%
