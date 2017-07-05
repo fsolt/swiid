@@ -578,7 +578,7 @@ dane <- read_excel("data-raw/dane.xls", sheet = "Gini", skip = 9) %>%
             equiv_scale = "pc",
             monetary = FALSE,
             series = paste("DANE", welfare_def, equiv_scale),
-            source1 = "DANE",
+            source1 = "Departamento Administrativo Nacional de Estadística Colombia",
             page = "",
             link = dane_link)
 
@@ -601,7 +601,7 @@ ineccr <- read_excel("data-raw/ineccr.xlsx", skip = 5) %>%
             equiv_scale = es,
             monetary = NA,
             series = paste("INEC", welfare_def, equiv_scale),
-            source1 = "Instituto Naciónal de Estadística y Censos de Costa Rica",
+            source1 = "Instituto Naciónal de Estadística y Censos Costa Rica",
             page = "",
             link = ineccr_link)
 
@@ -642,7 +642,7 @@ capmas <- read_excel("data-raw/capmas.xls", skip = 7) %>%
             equiv_scale = "pc",
             monetary = FALSE,
             series = paste("CAPMAS", welfare_def, equiv_scale),
-            source1 = "CAPMAS",
+            source1 = "Central Agency for Public Mobilization and Statistics Egypt",
             page = "",
             link = capmas_link) 
 
@@ -707,7 +707,7 @@ insee <- readLines(insee_link) %>%              # kickin' it old skool . . .
             equiv_scale = "oecdm",
             monetary = FALSE,
             series = paste("Insee", welfare_def, equiv_scale),
-            source1 = "Insee",
+            source1 = "Institut National de la Statistique et des Études Économiques France",
             page = "",
             link = insee_link)
 
@@ -731,7 +731,7 @@ geostat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-r
             equiv_scale = "pc",
             monetary = FALSE,
             series = paste("Geostat", welfare_def, equiv_scale),
-            source1 = "Geostat",
+            source1 = "Statistics Georgia",
             page = "",
             link = "http://pc-axis.geostat.ge")
 
@@ -1305,7 +1305,7 @@ ine <- read_csv("data-raw/ine.csv", skip = 4) %>%
             equiv_scale = "oecdm",
             monetary = FALSE,
             series = paste("Instituto Nacional de Estadistica Spain", welfare_def, equiv_scale),
-            source1 = "Instituto Nacional de Estadistica Spain",
+            source1 = "Instituto Nacional de Estadística Spain",
             page = "",
             link = ine_link)
 
@@ -1624,7 +1624,7 @@ uine <- extract_tables("data-raw/uine.pdf", pages = 45)[[2]][5:15, 1] %>%
             equiv_scale = "pc",
             monetary = TRUE,
             series = paste("Instituto Nacional de Estadistica Uruguay", welfare_def, equiv_scale),
-            source1 = "Instituto Nacional de Estadistica Uruguay",
+            source1 = "Instituto Nacional de Estadística Uruguay",
             page = "43",
             link = uine_link)
 
@@ -1645,7 +1645,7 @@ inev <- read_excel("data-raw/inev.xls", skip = 3) %>%
             equiv_scale = "pc",
             monetary = TRUE,
             series = paste("Instituto Nacional de Estadistica Venezuela", welfare_def, equiv_scale),
-            source1 = "Instituto Nacional de Estadistica Venezuela",
+            source1 = "Instituto Nacional de Estadística Venezuela",
             page = "",
             link = inev_link)
 
