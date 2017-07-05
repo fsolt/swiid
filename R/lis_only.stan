@@ -19,7 +19,6 @@ parameters {
 }
 
 model {
-
   for (k in 1:K) {
     gini[k][1] ~ normal(.35, .1);                         // a random draw from N(.35, .1) in first year
     gini[k][2:T] ~ normal(gini[k][1:T-1], sigma_gini[k]); // otherwise a random walk from previous year 
