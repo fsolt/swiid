@@ -39,20 +39,17 @@ model {
   rho_s_raw ~ normal(0, 1);
   sigma_rho_s ~ cauchy(0, 1);
   
-  for (kt in 1:K*T) {
-    if (ktt[kt] == 1) {             // if this country-year is the first year for a country
-      gini[kt] ~ normal(.35, .1);   // give it a random draw from N(.35, .1)
-    } else {                        // otherwise, give it
-      gini[kt] ~ normal(gini[kt-1], sigma_gini[ktk[kt]]); // a random walk from previous year
-    }
+  for (k in 1:K) {
+    gini[k][1] ~ normal(.35, .1);                         // a random draw from N(.35, .1) in first year
+    gini[k][2:T] ~ normal(gini[k][1:T-1], sigma_gini[k]); // otherwise a random walk from previous year 
   }
   
   for (n in 1:N) {
     if (n <= N_b) {
-      gini[kktt[n]] ~ normal(gini_b[n], gini_b_se[n]);              // use baseline series where observed
-      gini_b[n] ~ normal(rho_s[ss[n]] * gini_t[n], sigma_s[ss[n]]); // estimate rho_s 
+      gini[kk[n]][tt[n]][1:N_b] ~ normal(gini_b[n], gini_b_se[n]); // use baseline series where observed
+      gini_b[n][1:N_b] ~ normal(rho_s[ss[n]] * gini_t[n], sigma_s[ss[n]]); // estimate rho_s 
     } else {
-      gini[kktt[n]] ~ normal(rho_s[ss[n]] * gini_t[n], sigma_s[ss[n]]); // estimate gini from rho_s
-    }
+      gini[kk[n]][tt[n]][N_b+1:N] ~ normal(rho_s[ss[n]] * gini_t[n], sigma_s[ss[n]]); // estimate gini from rho_s
   }
+  
 }
