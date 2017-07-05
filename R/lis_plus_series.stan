@@ -17,8 +17,8 @@ data{
 }  
   
 parameters {
-  real<lower=0, upper=1> gini[K*T];       // SWIID gini estimate of baseline in country k at time t
-  real<lower=0, upper=.1> sigma_gini[K]; 	// country variance parameter (see Linzer and Stanton 2012, 12)
+  row_vector<lower=0, upper=1>[T] gini[K];  // SWIID gini estimate of baseline in country k at time t
+  vector<lower=0>[K] sigma_gini; 	        // country variance parameter (see Linzer and Stanton 2012, 12)
 
   vector<lower=0, upper=1>[N] gini_t_raw;   // centered gini_t
   vector<lower=0>[S] rho_s_raw;             // centered rho_s
@@ -45,11 +45,9 @@ model {
   }
   
   for (n in 1:N) {
-    if (n <= N_b) {
-      gini[kk[n]][tt[n]][1:N_b] ~ normal(gini_b[n], gini_b_se[n]); // use baseline series where observed
-      gini_b[n][1:N_b] ~ normal(rho_s[ss[n]] * gini_t[n], sigma_s[ss[n]]); // estimate rho_s 
-    } else {
-      gini[kk[n]][tt[n]][N_b+1:N] ~ normal(rho_s[ss[n]] * gini_t[n], sigma_s[ss[n]]); // estimate gini from rho_s
+      gini[kk[n]][tt[n]][1:N_b] ~ normal(gini_b[n][1:N_b], gini_b_se[n][1:N_b]); // use baseline series where observed
+      gini_b[n][1:N_b] ~ normal(rho_s[ss[n][1:N_b]] * gini_t[n][1:N_b], sigma_s[ss[n][1:N_b]]); // estimate rho_s 
+      gini[kk[n]][tt[n]][N_b+1:N] ~ normal(rho_s[ss[n][N_b+1:N]] * gini_t[n][N_b+1:N], sigma_s[ss[n][N_b+1:N]]); // estimate gini from rho_s
   }
   
 }

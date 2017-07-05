@@ -6,7 +6,7 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 500
+iter <- 100
 chains <- 4
 cores <- chains
 
@@ -81,8 +81,9 @@ plot_tscs <- function(input, output, pars="gini", probs=c(.025, .975),
     mutate(estimate = mean,
            lb = get(paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[1]),
            ub = get(paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[2]),
-           ktcode = as.numeric(str_extract(parameter, "(?<=\\[)\\d+"))) %>%
-    left_join(ktcodes, by=c("ktcode")) %>%
+           kcode = as.numeric(str_extract(parameter, "(?<=\\[)\\d+")),
+           tcode = as.numeric(str_extract(parameter, "(?<=,)\\d+"))) %>%
+    left_join(ktcodes, by=c("kcode", "tcode")) %>%
     arrange(kcode, tcode)
   
   if (missing(dims)) {
