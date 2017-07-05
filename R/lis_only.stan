@@ -15,13 +15,13 @@ data{
 
 parameters {
   row_vector<lower=0, upper=1>[T] gini[K];       // SWIID gini estimate of baseline in country k at time t
-  vector<lower=0>[K] sigma_gini; 	// country variance parameter (see Linzer and Stanton 2012, 12)
+  real<lower=0, upper=.08> sigma_gini[K]; 	// country variance parameter (see Linzer and Stanton 2012, 12)
 }
 
 model {
   for (k in 1:K) {
-    gini[k][1] ~ normal(.35, .1);                         // a random draw from N(.35, .1) in first year
-    gini[k][2:T] ~ normal(gini[k][1:T-1], sigma_gini[k]); // otherwise a random walk from previous year 
+    gini[k][1] ~ normal(.35, .1);                        // a random draw for the first year
+    gini[k][2:T] ~ normal(gini[k][1:T-1], sigma_gini[k]); // then a random walk from previous year 
   }
 
   for (n in 1:N_b) {
