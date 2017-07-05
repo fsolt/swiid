@@ -24,9 +24,7 @@ model {
     gini[k][2:T] ~ normal(gini[k][1:T-1], sigma_gini[k]); // otherwise a random walk from previous year 
   }
 
-  for (n in 1:N) {
-    if (n <= N_b) {
-        gini[kk[n]][tt[n]] ~ normal(gini_b[n], gini_b_se[n]); // use baseline series where observed
-    }
+  for (n in 1:N_b) {
+    gini[kk[n]][tt[n]] ~ normal(gini_b[n], gini_b_se[n]); // use baseline series where observed
   }
 }
