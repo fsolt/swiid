@@ -15,12 +15,11 @@ data{
 
 parameters {
   row_vector<lower=0, upper=1>[T] gini[K];       // SWIID gini estimate of baseline in country k at time t
-  real<lower=0> sigma_gini[K]; 	// country variance parameter (see Linzer and Stanton 2012, 12)
+  vector<lower=0>[K] sigma_gini; 	// country variance parameter (see Linzer and Stanton 2012, 12)
 }
 
 model {
-  sigma_gini ~ cauchy(0, .05);
-  
+
   for (k in 1:K) {
     gini[k][1] ~ normal(.35, .1);                         // a random draw from N(.35, .1) in first year
     gini[k][2:T] ~ normal(gini[k][1:T-1], sigma_gini[k]); // otherwise a random walk from previous year 
