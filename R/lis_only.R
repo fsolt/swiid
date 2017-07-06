@@ -76,7 +76,7 @@ plot_tscs <- function(input, output, kt = FALSE, pars="gini", probs=c(.025, .975
   lb <- paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[1]
   ub <- paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[2]
   
-  if (kt) {
+  if (!kt) {
     gini_res <- rstan::summary(output, pars=pars, probs=probs) %>%
       first() %>%
       as.data.frame() %>%
