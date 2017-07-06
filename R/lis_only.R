@@ -10,8 +10,8 @@ iter <- 1000
 chains <- 4
 cores <- chains
 
-x <- ineq %>% 
-  filter(series == "LIS disp sqrt" & s_count > 3) %>% 
+x <- baseline %>% 
+  filter(k_bl_count > 3) %>% 
   mutate(kcode = as.integer(factor(country, levels = unique(country))), # redo codes for filtered sample
          tcode = as.integer(year - min(year) + 1))
 
