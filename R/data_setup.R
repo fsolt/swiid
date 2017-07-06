@@ -1922,9 +1922,9 @@ baseline <- lis %>%
   rename(gini_b = gini,
          gini_b_se = gini_se) %>%
   group_by(country) %>% 
-  mutate(lis_count = n()) %>% 
+  mutate(k_bl_obs = n()) %>% 
   ungroup() %>% 
-  arrange(desc(lis_count)) 
+  arrange(desc(k_bl_obs)) 
 
 # turn cross-country series that do not have baseline's welfare_def and equiv_scale
 # into within-country series
@@ -1955,27 +1955,28 @@ ineq0 <- bind_rows(lis,
          gini_m_se = gini_se) %>%
   mutate(country = countrycode(country, "country.name", "swiid.name", custom_dict = cc_swiid)) %>% 
   group_by(country) %>% 
-  mutate(oth_count = n()) %>% 
+  mutate(country_obs = n()) %>% 
   ungroup() %>% 
   group_by(country, series) %>% 
-  mutate(s_count = n()) %>%
+  mutate(series_obs = n()) %>%
   ungroup() %>% 
-  arrange(desc(oth_count), desc(s_count))  
+  arrange(desc(country_obs), desc(series_obs))  
   
 # obs with baseline data
 ineq_bl <- ineq0 %>% 
   right_join(baseline %>% 
-               select(country, year, gini_b, gini_b_se, lis_count),
+               select(country, year, gini_b, gini_b_se, k_bl_obs),
              by = c("country", "year")) %>% 
-  arrange(desc(lis_count)) %>% 
-  select(-lis_count) 
+  arrange(desc(k_bl_obs)) %>% 
+  group_by(country, series) 
 
 ineq_bl_series <- ineq_bl %>% pull(series) %>% unique()
 
 # obs with no baseline data from series with some baseline data ("overlap baseline")
 ineq_obl <- ineq0 %>% anti_join(ineq_bl %>% select(-gini_b, -gini_b_se), 
                                   by = c("country", "year")) %>% 
-  filter(series %in% ineq_bl_series)
+  filter(series %in% ineq_bl_series) %>% 
+  group_by(country, series)
 
 # obs from series with no baseline data
 ineq_nbl <- ineq0 %>% anti_join(ineq_bl %>% select(-gini_b, -gini_b_se), 
@@ -1987,6 +1988,9 @@ ineq_oth_series <- rbind(ineq_obl, ineq_nbl) %>% pull(series) %>% unique()
 # combine all
 ineq <- bind_rows(ineq_bl, ineq_obl, ineq_nbl) %>% 
   filter(series %in% c(baseline_series, ineq_oth_series)) %>% # i.e., exclude series that overlap completely with baseline
+  group_by(series) %>% 
+  mutate(s_bl_obs = sum(!is.na(gini_b))) %>% 
+  ungroup() %>% 
   mutate(gini_m_se = ifelse(!is.na(gini_m_se), gini_m_se,
                             quantile(gini_m_se/gini_m, .99, na.rm = TRUE)*gini_m),
          kcode = as.integer(factor(country, levels = unique(country))),
@@ -1998,7 +2002,7 @@ ineq <- bind_rows(ineq_bl, ineq_obl, ineq_nbl) %>%
 swiid_source <- ineq0 %>% 
   rename(gini = gini_m,
          gini_se = gini_m_se) %>% 
-  select(-oth_count, -s_count) %>% 
+  select(-country_obs, -series_obs) %>% 
   arrange(country, year, series)
 
 save.image(file = "data/ineq.rda")
