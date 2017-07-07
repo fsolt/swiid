@@ -4,11 +4,14 @@
 *.Rproj
 data-raw/from_Hu.csv
 data-raw/LISSY/net_sqrt_ru_all.txt
-data-raw/ChenRavallion2008.pdf
+data-raw/article_data/fs_reviewing.csv
 data-raw/OECD2008.pdf
 dev/*
 R/dcpo.R
+R/temp.stan
 SWIIDv5_0.RData
 vignette/reference/*
 vignette/*.dta
 data/lis_only_*.rda
+data/lis_gt*.rda
+data/series_gt*.rda
