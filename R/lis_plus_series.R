@@ -6,8 +6,8 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 100
-chains <- 1
+iter <- 1000
+chains <- 4
 cores <- chains
 gt <- 3
 
@@ -16,13 +16,6 @@ x <- ineq %>%
   mutate(kcode = as.integer(factor(country, levels = unique(country))), # redo codes for filtered sample
          tcode = as.integer(year - min(year) + 1),
          scode = as.integer(factor(series, levels = unique(series))))
-
-u <- x %>% 
-  group_by(scode) %>% 
-  summarize(wcode = first(wcode),
-            ecode = first(ecode)) %>% 
-  select(-scode) %>% 
-  as.matrix()
 
 # Format data for Stan
 source_data <- list(  K = max(x$kcode),
@@ -39,8 +32,7 @@ source_data <- list(  K = max(x$kcode),
                       gini_m = x$gini_m,
                       gini_m_se = x$gini_m_se,
                       gini_b = x$gini_b[!is.na(x$gini_b)],
-                      gini_b_se = x$gini_b_se[!is.na(x$gini_b_se)],
-                      u = u)
+                      gini_b_se = x$gini_b_se[!is.na(x$gini_b_se)]
 )
 
 # Stan
@@ -146,7 +138,7 @@ plot_tscs <- function(input, output, kt = FALSE, pars="gini", probs=c(.025, .975
       coord_cartesian(xlim=year_bounds) +
       labs(x = NULL, y = y_label) +
       geom_ribbon(aes(ymin = lb, ymax = ub, linetype=NA), alpha = .25) +
-      facet_wrap(~country, ncol = 5) +
+      facet_wrap(~country, ncol = cols) +
       theme(axis.text.x = element_text(angle = 45, hjust = 1),
             strip.background = element_rect(fill = "white", colour = "white"))
     

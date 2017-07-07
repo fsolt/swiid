@@ -20,18 +20,9 @@ parameters {
   real<lower=0, upper=.02> sigma_gini[K]; 	// country variance parameter (see Linzer and Stanton 2012, 12)
   vector<lower=0, upper=1>[N] gini_t;   
   
-//  vector<lower=0, upper=1>[N] gini_t_raw;   // centered gini_t
-  vector<lower=0>[S] rho_s;             // centered rho_s
+  vector<lower=0>[S] rho_s;            
   real<lower=0> sigma_s; 	            // series noise       
 }
-
-// transformed parameters {
-//   vector<lower=0, upper=1>[N] gini_t;       // unknown "true" gini for obs n given gini_m and gini_m_se
-//   vector<lower=0>[S] rho_s;                 // ratio of series s 
-//   
-//  gini_t = gini_m + gini_m_se .* gini_t_raw; // decenter
-//  rho_s = 1 + rho_s_raw .* (sigma_rho_s * .4);  // decenter
-// }
 
 model {
   gini_t ~ normal(gini_m, gini_m_se);
