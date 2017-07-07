@@ -344,22 +344,28 @@ wb <- read_csv(unz("data-raw/wb.zip", "WDIData.csv")) %>%
   filter(`Indicator Code` == "SI.POV.GINI") %>% 
   select(-`Country Name`, -contains("Indicator"), -contains("X")) %>% 
   gather(key = year, value = gini, -`Country Code`) %>% 
+  rename(CountryCode = `Country Code`) %>% 
   filter(!is.na(gini)) %>% 
-  left_join(wb_fn, by = c(`Country Code` = "CountryCode", "year")) %>% 
+  left_join(wb_fn, by = c("CountryCode", "year")) %>% 
   filter(!str_detect(DESCRIPTION, "[Uu]rban|[Rr]ural")) %>% 
-  transmute(country = countrycode(country, origin = "wb_api3c", "swiid.name", custom_dict = cc_swiid),
+  mutate(CountryCode = if_else(CountryCode == "XKX", "KSV", CountryCode)) %>% 
+  group_by(CountryCode) %>% 
+  mutate(desc = as.integer(as.factor(DESCRIPTION))) %>% 
+  ungroup() %>% 
+  transmute(country = countrycode(CountryCode, origin = "wb_api3c", "swiid.name", custom_dict = cc_swiid),
             year = as.numeric(year),
             gini = as.numeric(gini)/100,
             gini_se = NA,
             welfare_def = if_else(str_detect(DESCRIPTION, "income"), "gross", "con"),
             equiv_scale = "pc",
             monetary = FALSE,
-            series = paste("Povcalnet", country, welfare_def, equiv_scale),
+            series = paste("Povcalnet", country, welfare_def, equiv_scale, desc),
             source1 = "World Bank Povcalnet",
             page = "",
             link = wb_zip)
 
 rm(wb_fn)
+unlink("data-raw/wb.zip")
 
 
 ## National Statistics Offices
