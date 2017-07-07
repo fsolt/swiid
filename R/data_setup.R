@@ -1894,7 +1894,7 @@ ineq_nbl <- ineq0 %>% anti_join(ineq_bl %>% select(-gini_b, -gini_b_se),
                                   by = c("country", "year")) %>% 
   filter(!series %in% ineq_bl_series)
 
-ineq_oth_series <- rbind(ineq_obl, ineq_nbl) %>% pull(series) %>% unique()
+ineq_oth_series <- bind_rows(ineq_obl, ineq_nbl) %>% pull(series) %>% unique()
 
 # combine all
 ineq <- bind_rows(ineq_bl, ineq_obl, ineq_nbl) %>% 
