@@ -7,12 +7,15 @@ cc_swiid <- countrycode::countrycode_data %>%
            str_replace(" of [GA].*", "") %>% 
            str_replace("Democratic Republic of the Congo", "Congo, D.R.") %>% 
            str_replace("Lao People's Democratic Republic", "Lao") %>% 
-           str_replace("Russian Federation", "Russia"),
+           str_replace("Russian Federation", "Russia") %>% 
+           str_replace("Syrian Arab Republic", "Syria"),
          country.name.en.regex = if_else(swiid.name == "Russia",
                                          "\\brussia",
                                          if_else(swiid.name == "Central African Republic",
                                                  "\\bcentral.african.rep",
-                                                 country.name.en.regex))) %>% 
+                                                 if_else(swiid.name == "Micronesia",
+                                                         "micronesia",
+                                                         country.name.en.regex)))) %>% 
   filter(!country.name.en == "Korea") %>% 
   full_join(tibble(swiid.name = "Soviet Union", 
                    country.name.en.regex = "soviet.?union|u\\.?s\\.?s\\.?r|socialist.?republics"),
