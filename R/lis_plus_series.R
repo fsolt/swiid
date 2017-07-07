@@ -7,10 +7,22 @@ load("data/ineq.rda")
 
 seed <- 324
 iter <- 100
-chains <- 4
+chains <- 1
 cores <- chains
+gt <- 3
 
-x <- ineq 
+x <- ineq %>%  
+  filter(k_bl_obs > gt & s_bl_obs > 1) %>% 
+  mutate(kcode = as.integer(factor(country, levels = unique(country))), # redo codes for filtered sample
+         tcode = as.integer(year - min(year) + 1),
+         scode = as.integer(factor(series, levels = unique(series))))
+
+u <- x %>% 
+  group_by(scode) %>% 
+  summarize(wcode = first(wcode),
+            ecode = first(ecode)) %>% 
+  select(-scode) %>% 
+  as.matrix()
 
 # Format data for Stan
 source_data <- list(  K = max(x$kcode),
@@ -27,9 +39,9 @@ source_data <- list(  K = max(x$kcode),
                       gini_m = x$gini_m,
                       gini_m_se = x$gini_m_se,
                       gini_b = x$gini_b[!is.na(x$gini_b)],
-                      gini_b_se = x$gini_b_se[!is.na(x$gini_b_se)]
+                      gini_b_se = x$gini_b_se[!is.na(x$gini_b_se)],
+                      u = u)
 )
-
 
 # Stan
 start <- proc.time()
@@ -47,13 +59,14 @@ runtime
 lapply(get_sampler_params(out1, inc_warmup = FALSE),
        summary, digits = 2)
 
-save(out1, file = str_c("data/lis_plus_series_", str_replace(Sys.time(), " ", "_"), ".rda"))
+save(out1, file = str_c("data/series_gt", gt, iter/1000, "k_", 
+                        str_replace(Sys.time(), " ", "_") %>% str_replace("2017-", ""), ".rda"))
 
 beep() # chime
 
 
 # Post-processing
-plot_tscs <- function(input, output, pars="gini", probs=c(.025, .975),
+plot_tscs <- function(input, output, kt = FALSE, pars="gini", probs=c(.025, .975),
                       dims, year_bounds, y_label, save_pdf = NA) {
   
   kcodes <- input %>%
@@ -72,19 +85,34 @@ plot_tscs <- function(input, output, pars="gini", probs=c(.025, .975),
   lb <- paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[1]
   ub <- paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[2]
   
-  gini_res <- rstan::summary(output, pars=pars, probs=probs) %>%
-    first() %>%
-    as.data.frame() %>%
-    rownames_to_column("parameter") %>%
-    as_tibble() %>%
-    janitor::clean_names() %>% 
-    mutate(estimate = mean,
-           lb = get(paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[1]),
-           ub = get(paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[2]),
-           kcode = as.numeric(str_extract(parameter, "(?<=\\[)\\d+")),
-           tcode = as.numeric(str_extract(parameter, "(?<=,)\\d+"))) %>%
-    left_join(ktcodes, by=c("kcode", "tcode")) %>%
+  if (!kt) {
+    gini_res <- rstan::summary(output, pars=pars, probs=probs) %>%
+      first() %>%
+      as.data.frame() %>%
+      rownames_to_column("parameter") %>%
+      as_tibble() %>%
+      janitor::clean_names() %>% 
+      mutate(estimate = mean,
+             lb = get(paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[1]),
+             ub = get(paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[2]),
+             kcode = as.numeric(str_extract(parameter, "(?<=\\[)\\d+")),
+             tcode = as.numeric(str_extract(parameter, "(?<=,)\\d+"))) %>%
+      left_join(ktcodes, by=c("kcode", "tcode")) %>%
+      arrange(kcode, tcode)
+  } else {
+    gini_res <- rstan::summary(output, pars=pars, probs=probs) %>%
+      first() %>%
+      as.data.frame() %>%
+      rownames_to_column("parameter") %>%
+      as_tibble() %>%
+      janitor::clean_names() %>% 
+      mutate(estimate = mean,
+             lb = get(paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[1]),
+             ub = get(paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[2]),
+             ktcode = as.numeric(str_extract(parameter, "(?<=\\[)\\d+"))) %>%
+      left_join(ktcodes, by="ktcode")
     arrange(kcode, tcode)
+  }
   
   if (missing(dims)) {
     if (!missing(save_pdf)) {
