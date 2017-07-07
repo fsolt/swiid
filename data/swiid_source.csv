@@ -6377,6 +6377,8 @@ Mexico,2014,0.465923,0.004124,disp,ae,TRUE,SEDLAC Mexico disp ae 1,SEDLAC,interv
 Mexico,2014,0.46488942,,disp,hh,TRUE,SEDLAC Mexico disp hh 1,SEDLAC,gini1,http://sedlac.econo.unlp.edu.ar/download.php?file=archivos_estadistica/inequality_LAC_2016-12.xls
 Mexico,2014,0.489008,0.0041306,disp,pc,TRUE,SEDLAC Mexico disp pc 1,SEDLAC,intervals pci,http://sedlac.econo.unlp.edu.ar/download.php?file=archivos_estadistica/inequality_LAC_2016-12.xls
 Micronesia,1998,0.45,,con,pc,,ZKM2014 Micronesia con pc,"Zhuang, Kanbur, and Maligalig 2014",25,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA25
+Micronesia,2005,0.431,,con,pc,FALSE,Povcalnet Micronesia con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Micronesia,2013,0.42460000000000003,,con,pc,FALSE,Povcalnet Micronesia con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Moldova,1988,0.264,,gross,pc,,AG1993 Moldova gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,121,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Moldova,1988,0.2414,,gross,pc,FALSE,Povcalnet Moldova gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Moldova,1989,0.251,,disp,pc,FALSE,Transmonee Moldova disp pc,Transmonee 2012,"",https://web.archive.org/web/20130401075747/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
@@ -9202,11 +9204,11 @@ Switzerland,2013,0.295,,disp,sqrt,FALSE,"OECD disp sqrt, current def, 2012 metho
 Switzerland,2013,0.294,,gross,sqrt,FALSE,"OECD Switzerland gross sqrt, current def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Switzerland,2013,0.387,,market,sqrt,FALSE,"OECD Switzerland market sqrt, current def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Switzerland,2014,0.29600000000000004,,disp,oecdm,TRUE,Eurostat Switzerland disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
-Syrian Arab Republic,1997,0.326,,con,pc,,AIAGEL2011 con pc,"Abu-Ismail, Abdel-Gadir, and El-Laithy 2011",11,http://www.undp.org/content/dam/rbas/doc/poverty/BG_15_Poverty%20and%20Inequality%20in%20Syria_FeB.pdf
-Syrian Arab Republic,1997,0.324,,con,pc,,Hassine2015 Syria con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
-Syrian Arab Republic,2004,0.375,,con,pc,,AIAGEL2011 con pc,"Abu-Ismail, Abdel-Gadir, and El-Laithy 2011",12,http://www.undp.org/content/dam/rbas/doc/poverty/BG_15_Poverty%20and%20Inequality%20in%20Syria_FeB.pdf
-Syrian Arab Republic,2004,0.376,,con,pc,,Hassine2015 Syria con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
-Syrian Arab Republic,2007,0.342,,con,pc,,AIAGEL2011 con pc,"Abu-Ismail, Abdel-Gadir, and El-Laithy 2011",13,http://www.undp.org/content/dam/rbas/doc/poverty/BG_15_Poverty%20and%20Inequality%20in%20Syria_FeB.pdf
+Syria,1997,0.326,,con,pc,,AIAGEL2011 con pc,"Abu-Ismail, Abdel-Gadir, and El-Laithy 2011",11,http://www.undp.org/content/dam/rbas/doc/poverty/BG_15_Poverty%20and%20Inequality%20in%20Syria_FeB.pdf
+Syria,1997,0.324,,con,pc,,Hassine2015 Syria con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
+Syria,2004,0.375,,con,pc,,AIAGEL2011 con pc,"Abu-Ismail, Abdel-Gadir, and El-Laithy 2011",12,http://www.undp.org/content/dam/rbas/doc/poverty/BG_15_Poverty%20and%20Inequality%20in%20Syria_FeB.pdf
+Syria,2004,0.376,,con,pc,,Hassine2015 Syria con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
+Syria,2007,0.342,,con,pc,,AIAGEL2011 con pc,"Abu-Ismail, Abdel-Gadir, and El-Laithy 2011",13,http://www.undp.org/content/dam/rbas/doc/poverty/BG_15_Poverty%20and%20Inequality%20in%20Syria_FeB.pdf
 Taiwan,1964,0.3218,,gross,hh,,FRK1979 gross hh 1,"Chinn 1982; Fei, Ranis, and Kuo 1979",877,http://www.jstor.org/stable/3203122
 Taiwan,1966,0.323,,gross,hh,,FRK1979 gross hh 1,"Chinn 1982; Fei, Ranis, and Kuo 1979",877,http://www.jstor.org/stable/3203122
 Taiwan,1968,0.3278,,gross,hh,,FRK1979 gross hh 1,"Chinn 1982; Fei, Ranis, and Kuo 1979",877,http://www.jstor.org/stable/3203122
@@ -10851,5 +10853,3 @@ Zimbabwe,1995,0.501,,con,pc,FALSE,Zimstat  con pc,Zimbabwe National Statistics A
 Zimbabwe,2001,0.489,,con,pc,FALSE,Zimstat  con pc,Zimbabwe National Statistics Agency 2013,42,http://www.zimstat.co.zw/sites/default/files/img/publications/Finance/Poverty2011.pdf
 Zimbabwe,2011,0.4315,,con,pc,FALSE,Povcalnet Zimbabwe con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Zimbabwe,2011,0.423,,con,pc,FALSE,Zimstat  con pc,Zimbabwe National Statistics Agency 2013,42,http://www.zimstat.co.zw/sites/default/files/img/publications/Finance/Poverty2011.pdf
-,2005,0.431,,con,pc,FALSE,Povcalnet Micronesia con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-,2013,0.42460000000000003,,con,pc,FALSE,Povcalnet Micronesia con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
