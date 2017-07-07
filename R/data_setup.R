@@ -333,19 +333,34 @@ afr_gini <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-
 
 # World Bank Povcalnet
 wb_zip <- "http://databank.worldbank.org/data/download/WDI_csv.zip"
-wb_temp <- tempfile(fileext = ".zip")
-writeBin(wb_zip, wb_temp)
-wb_dir <- file.path(tempdir(), "wb")
-unzip(wb_temp, exdir = wb_dir) 
+download.file(wb_zip, "data-raw/wb.zip")
 
-wb_file1 <- list.files(wb_dir) %>% 
-  str_subset(".pdf") %>% 
-  file.path(belstat_dir, .)
-file.rename(belstat_file, "data-raw/belstat.pdf")
+wb_fn <- read_csv(unz("data-raw/wb.zip", "WDIFootNote.csv")) %>% 
+  filter(SeriesCode == "SI.POV.GINI") %>% 
+  mutate(year = str_replace(Year, "YR", "")) %>% 
+  select(CountryCode, year, DESCRIPTION)
 
+wb <- read_csv(unz("data-raw/wb.zip", "WDIData.csv")) %>% 
+  filter(`Indicator Code` == "SI.POV.GINI") %>% 
+  select(-`Country Name`, -contains("Indicator"), -contains("X")) %>% 
+  gather(key = year, value = gini, -`Country Code`) %>% 
+  filter(!is.na(gini)) %>% 
+  left_join(wb_fn, by = c(`Country Code` = "CountryCode", "year")) %>% 
+  filter(!str_detect(DESCRIPTION, "[Uu]rban|[Rr]ural")) %>% 
+  transmute(country = countrycode(country, origin = "wb_api3c", "swiid.name", custom_dict = cc_swiid),
+            year = as.numeric(year),
+            gini = as.numeric(gini)/100,
+            gini_se = NA,
+            welfare_def = if_else(str_detect(DESCRIPTION, "income"), "gross", "con"),
+            equiv_scale = "pc",
+            monetary = FALSE,
+            series = paste("Povcalnet", country, welfare_def, equiv_scale),
+            source1 = "World Bank Povcalnet",
+            page = "",
+            link = wb_zip)
 
-unlink(c(wb_temp, wb_dir), recursive = TRUE)
-rm(wb_zip)
+rm(wb_fn)
+
 
 ## National Statistics Offices
 
@@ -1689,108 +1704,6 @@ gso_vn <- bind_rows(gso_vn1, gso_vn2)
 rm(gso_vn1, gso_vn2)
 
 # Additional Inequality Datasets
-# Chen and Ravallion 2008 (identifies welfare_def for subset of PovcalNet)
-cr2008_link <- "http://siteresources.worldbank.org/JAPANINJAPANESEEXT/Resources/515497-1201490097949/080827_The_Developing_World_is_Poorer_than_we_Thought.pdf"
-download.file(cr2008_link, "data-raw/ChenRavallion2008.pdf")
-
-cr2008_codes1 <- pdftools::pdf_text("data-raw/ChenRavallion2008.pdf")[41:43] %>% 
-  paste(collapse = "\\n") %>% 
-  str_replace("Appendix.*\\n.*\\n.*\\n.*\\n.*\\n", "") %>%
-  str_replace_all("Note:.*\\n.*\\n.*", "") %>% 
-  str_replace_all(", ", ",") %>%
-  str_replace("& Caribbean", "\t") %>%
-  str_replace_all("(?<=\\d) *([EI])", "\t\\1") %>% 
-  str_replace_all("(?<=\\n) {28,}", "\t\t") %>%
-  str_replace_all(" {2,27}", "\t") %>%
-  str_replace_all(" (\\d)", "\t\\1") %>%
-  str_replace_all("(\\d) ([E|I])", "\\1\t\\2") %>%
-  str_replace_all("(\\d),([E|I])", "\\1,\t\\2") %>%
-  str_replace_all(".*\\d{2}\\.\\d\\s+", "\t") %>% 
-  read_tsv(col_names = FALSE, col_types = "cccc") %>% 
-  transmute(country = X2,
-            years = X3,
-            wd = X4) 
-
-cr2008_codes2 <- pdftools::pdf_text("data-raw/ChenRavallion2008.pdf")[44] %>% 
-  paste(collapse = "\\n") %>% 
-  str_replace("Appendix.*\\n.*\\n.*\\n.*\\n.*\\n", "") %>%
-  str_replace_all("Note:.*\\n.*\\n.*", "") %>% 
-  str_replace_all(", ", ",") %>%
-  str_replace("& Caribbean", "\t") %>%
-  str_replace_all("(?<=\\d) *([EI])", "\t\\1") %>% 
-  str_replace_all("(?<=\\n) {28,}", "\t\t") %>%
-  str_replace_all(" {2,27}", "\t") %>%
-  str_replace_all(" (\\d)", "\t\\1") %>%
-  str_replace_all("(\\d) ([E|I])", "\\1\t\\2") %>%
-  str_replace_all("(\\d),([E|I])", "\\1,\t\\2") %>%
-  str_replace("\\t2005/2006", "\t\t2005/2006") %>% 
-  str_replace_all(".*\\d{2}\\.\\d\\s+", "\t") %>% 
-  read_tsv(col_names = FALSE, col_types = "ccccc") %>% 
-  transmute(country = X3,
-            years = X4,
-            wd = X5)
-
-expand_years <- function(years) {
-  x <- NA
-  for(i in 1:length(years)) {
-    x[i] <- eval(parse(text = years[i])) %>% paste(collapse = ",")
-  }
-  return(x)
-}
-
-cr2008_codes <- bind_rows(cr2008_codes1, cr2008_codes2) %>% 
-  fill(country, wd) %>% 
-  filter(!str_detect(country, "^\\d{2}$")) %>% 
-  filter(!str_detect(years, "^\\d{2}$")) %>%
-  mutate(years = str_replace(years, ",\\s*$", ""),
-         years = str_replace_all(years, "-", ":"),
-         years = str_replace_all(years, "(\\d{2})\\d{2}/(\\d{2})", "\\1\\2")) %>% 
-  separate(years, into = paste0("V", 1:7), sep = ",") %>% 
-  gather(key = orig, value = year, V1:V7) %>% 
-  filter(!is.na(year) & !year=="") %>% 
-  mutate(year = str_replace(year, "\\d{2}(\\d{4})", "\\1"),
-         year = str_replace(year, "^(\\d{2})$", "19\\1"),
-         year = str_replace(year, "(\\d{2})(\\d{2}):(\\d{2})$", "\\1\\2:\\1\\3"),
-         year = str_trim(year),
-         years = expand_years(year)) %>% 
-  select(-orig, -year) %>% 
-  separate(years, into = paste0("V", 1:11), sep = ",") %>% 
-  gather(key = orig, value = year, V1:V11) %>% 
-  filter(!is.na(year) & !year=="") %>%
-  mutate(country = countrycode(country, "country.name", "swiid.name", custom_dict = cc_swiid),
-         year = as.numeric(year),
-         wd = if_else(country == "Turkey" | country == "Bulgaria",
-                      "Income", wd)) %>% 
-  group_by(country, year) %>% 
-  arrange(wd, .by_group = TRUE) %>% 
-  slice(1) %>% 
-  ungroup()
-
-cr2008_gini <- wbstats::wb(indicator = "SI.POV.GINI",
-                           startdate = 1980, 
-                           enddate = 2007) %>% 
-  transmute(country = countrycode(country, "country.name", "swiid.name", custom_dict = cc_swiid),
-            year = as.numeric(date),
-            gini = value)
-
-cr2008 <- left_join(cr2008_codes, cr2008_gini, by = c("country", "year")) %>% 
-  transmute(country = country,
-            year = year,
-            gini = gini/100,
-            gini_se = NA,
-            welfare_def = if_else(wd=="Income", "gross", "con"),
-            equiv_scale = "pc",
-            monetary = FALSE,
-            series = paste("CR2008", country, welfare_def, equiv_scale),
-            source1 = "PovcalNet; Chen and Ravallion 2008",
-            page = "41-44",
-            link = "http://databank.worldbank.org/data/reports.aspx?source=2&series=SI.POV.GINI") %>% 
-  filter(!is.na(gini)) %>% 
-  anti_join(afr_gini, by = c("country", "year")) %>% # Exclude obs already added by afr_gini
-  arrange(country, year)
-
-rm(cr2008_codes, cr2008_codes1, cr2008_codes2, cr2008_gini)
-
 
 # Milanovic All the Ginis
 atg <- "https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Centers-and-Institutes/Stone-Center-on-Socio-Economic-Inequality/Core-Faculty,-Team,-and-Affiliated-LIS-Scholars/Branko-Milanovic/Datasets" %>% 
@@ -1934,14 +1847,14 @@ ceq1 <- ceq %>%
 # then combine with other series ordered by data-richness
 ineq0 <- bind_rows(lis, 
                    sedlac, cepal, cepal_sdi, oecd1, eurostat,
-                   transmonee, ceq1, afr_gini,
+                   transmonee, ceq1, afr_gini, wb,
                    abs, inebo, belstat, statcan, dane, ineccr, dkstat,
                    capmas, statee, statfi, insee, geostat,
                    stathk, bpsid, amar, cso_ie, istat, kazstat, kostat, nsck,
                    snz, nbs, monstat, ssb, dgeec, psa,
                    rosstat, singstat, ssi, ine, statslk, scb, 
                    nso_thailand, tdgbas, turkstat, ons, ifs, cbo, uscb, uine, inev, gso_vn,
-                   cr2008, atg, gidd,
+                   atg, gidd,
                    added_data) %>% 
   rename(gini_m = gini,
          gini_m_se = gini_se) %>%
