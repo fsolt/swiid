@@ -1,0 +1,33 @@
+Don't check:
+Australia
+Austria
+Belarus
+Belgium
+Bulgaria
+Brazil
+Colombia
+Costa Rica
+Croatia
+Czech Republic
+Dominican Republic
+Estonia
+Germany
+Georgia
+Greece
+Hungary
+Hong Kong
+Indonesia
+Israel
+Latvia
+Luxembourg
+Macedonia
+Malta
+Mexico
+Poland
+Slovenia
+Spain
+
+
+
+
+Latvia
