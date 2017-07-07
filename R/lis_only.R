@@ -131,7 +131,7 @@ plot_tscs <- function(input, output, kt = FALSE, pars="gini", probs=c(.025, .975
       coord_cartesian(xlim=year_bounds) +
       labs(x = NULL, y = y_label) +
       geom_ribbon(aes(ymin = lb, ymax = ub, linetype=NA), alpha = .25) +
-      facet_wrap(~country, ncol = 5) +
+      facet_wrap(~country, ncol = cols) +
       theme(axis.text.x = element_text(angle = 45, hjust = 1),
             strip.background = element_rect(fill = "white", colour = "white"))
     
@@ -147,5 +147,5 @@ plot_tscs <- function(input, output, kt = FALSE, pars="gini", probs=c(.025, .975
   return(plotx1)
 }
 
-plot_tscs(x, out1, save_pdf = "paper/figures/ts.pdf")
+plot_tscs(x, out1, dims = c(7, 4), save_pdf = "paper/figures/ts.pdf")
 plot_tscs(x, out1)
