@@ -315,29 +315,8 @@ transmonee <- read_excel("data-raw/transmonee.xls",
 ceq <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/ceq.csv", col_types = "cnnncclcccc") %>% 
   mutate(series = paste("CEQ", welfare_def, equiv_scale))
 
-# World Bank Africa Poverty Database (carefully vetted subset of WDI; automated/archived)
-afr_wb3c <- countrycode::countrycode_data %>% 
-  filter(continent=="Africa" & !is.na(wb_api3c)) %>% 
-  `[[`("wb_api3c") %>% 
-  setdiff(c("DZA", "DJI", "EGY", "LBY", "MAR", "TUN"))
-
-afr_gini_pc <- wbstats::wb(indicator = "SI.POV.GINI",
-               startdate = 1960, 
-               enddate = 2016, 
-               country = afr_wb3c) %>% 
-  transmute(country = countrycode(country, origin = "country.name", "swiid.name", custom_dict = cc_swiid),
-            year = as.numeric(date),
-            gini = value/100,
-            gini_se = NA,
-            welfare_def = "con",
-            equiv_scale = "pc",
-            monetary = FALSE,
-            series = paste("World Bank Africa Poverty Database", country, welfare_def, equiv_scale),
-            source1 = "Beegle et al. 2016",
-            page = "121-126",
-            link = "http://databank.worldbank.org/data/reports.aspx?source=2&series=SI.POV.GINI")
-
-afr_gini_sqrt <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv", 
+# World Bank Africa Poverty Database (bespoke analysis of subset of WB surveys; archived)
+afr_gini <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv", 
                           col_types = "cid") %>% 
   transmute(country = countrycode(country, origin = "wb_api3c", "swiid.name", custom_dict = cc_swiid),
             year = as.numeric(surveyr),
@@ -351,9 +330,22 @@ afr_gini_sqrt <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/
             page = "",
             link = "https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv")
 
-afr_gini <- bind_rows(afr_gini_pc, afr_gini_sqrt)
-rm(afr_gini_pc, afr_gini_sqrt)
 
+# World Bank Povcalnet
+wb_zip <- "http://databank.worldbank.org/data/download/WDI_csv.zip"
+wb_temp <- tempfile(fileext = ".zip")
+writeBin(wb_zip, wb_temp)
+wb_dir <- file.path(tempdir(), "wb")
+unzip(wb_temp, exdir = wb_dir) 
+
+wb_file1 <- list.files(wb_dir) %>% 
+  str_subset(".pdf") %>% 
+  file.path(belstat_dir, .)
+file.rename(belstat_file, "data-raw/belstat.pdf")
+
+
+unlink(c(wb_temp, wb_dir), recursive = TRUE)
+rm(wb_zip)
 
 ## National Statistics Offices
 
@@ -1990,6 +1982,10 @@ ineq <- bind_rows(ineq_bl, ineq_obl, ineq_nbl) %>%
   filter(series %in% ineq_oth_series) %>% # i.e., exclude series that overlap completely with baseline
   group_by(series) %>% 
   mutate(s_bl_obs = sum(!is.na(gini_b))) %>% 
+  ungroup() %>% 
+  group_by(country) %>% 
+  mutate(k_bl_obs = if_else(!is.na(mean(k_bl_obs, na.rm = TRUE)),
+                            mean(k_bl_obs, na.rm = TRUE), 0)) %>% 
   ungroup() %>% 
   mutate(gini_m_se = ifelse(!is.na(gini_m_se), gini_m_se,
                             quantile(gini_m_se/gini_m, .99, na.rm = TRUE)*gini_m),
