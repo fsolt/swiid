@@ -1898,7 +1898,7 @@ ineq_oth_series <- bind_rows(ineq_obl, ineq_nbl) %>% pull(series) %>% unique()
 
 # combine all
 ineq <- bind_rows(ineq_bl, ineq_obl, ineq_nbl) %>% 
-  filter(series %in% ineq_oth_series) %>% # i.e., exclude series that overlap completely with baseline
+  filter(series %in% c(baseline_series, ineq_oth_series)) %>% # i.e., exclude series that overlap completely with baseline
   group_by(series) %>% 
   mutate(s_bl_obs = sum(!is.na(gini_b))) %>% 
   ungroup() %>% 
