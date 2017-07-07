@@ -6,32 +6,25 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 1000
+iter <- 2000
 chains <- 4
 cores <- chains
+gt <- 4
 
 x <- baseline %>% 
-  filter(k_bl_count > 3) %>% 
+  filter(k_bl_obs > gt) %>% 
   mutate(kcode = as.integer(factor(country, levels = unique(country))), # redo codes for filtered sample
          tcode = as.integer(year - min(year) + 1))
 
-nn <- tibble(kktt = 1:(max(x$kcode)*max(x$tcode))) %>% 
-  left_join(tibble(kktt = (x$kcode-1)*max(x$tcode)+x$tcode,
-                   nn = row_number(kktt)), by = "kktt") %>% 
-  mutate(nn = if_else(is.na(nn), as.integer(0), nn)) 
-
 source_data <- list(  K = max(x$kcode),
                       T = max(x$tcode),
-                      N = length(x$gini_m),
+                      N = length(x$gini_b),
                       N_b = length(x$gini_b[!is.na(x$gini_b)]),
                       kk = x$kcode,
                       tt = x$tcode,
                       kktt = (x$kcode-1)*max(x$tcode)+x$tcode,
-                      nn = nn$nn,
                       ktt = rep(1:max(x$tcode), times = max(x$kcode)),
                       ktk = rep(1:max(x$kcode), each = max(x$tcode)),
-                      gini_m = x$gini_m,
-                      gini_m_se = x$gini_m_se,
                       gini_b = x$gini_b[!is.na(x$gini_b)],
                       gini_b_se = x$gini_b_se[!is.na(x$gini_b_se)]
 )
@@ -51,7 +44,8 @@ runtime
 lapply(get_sampler_params(out1, inc_warmup = FALSE),
        summary, digits = 2)
 
-save(out1, file = str_c("data/lis_only_", str_replace(Sys.time(), " ", "_"), ".rda"))
+save(out1, file = str_c("data/lis_gt", gt, iter/1000, "k_", 
+                        str_replace(Sys.time(), " ", "_") %>% str_replace("2017-", ""), ".rda"))
 
 beep() # chime
 
