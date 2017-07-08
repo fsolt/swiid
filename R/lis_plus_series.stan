@@ -20,26 +20,13 @@ parameters {
   real<lower=0, upper=.02> sigma_gini[K]; 	// country variance parameter (see Linzer and Stanton 2012, 12)
   vector<lower=0, upper=1>[N] gini_t;   
   
-  vector[S] alpha_s;
-  vector[S] beta_s;
-  real mu_alpha_s;
-  real mu_beta_s;
-  real<lower=0> sigma_s; 	            // series noise  
-  real<lower=0> sigma_alpha_s;
-  real<lower=0> sigma_beta_s;
+  vector<lower=0>[S] rho_s;            
+  real<lower=0> sigma_s; 	            // series noise       
 }
 
 model {
   gini_t ~ normal(gini_m, gini_m_se);
-  
-  mu_alpha_s ~ normal(0, .1);
-  mu_beta_s ~ normal(0, .5);
-  
-  sigma_alpha_s ~ normal(0, .1);
-  sigma_beta_s ~ normal(0, .5);
-  
-  alpha_s ~ normal(mu_alpha_s, sigma_alpha_s);
-  beta_s ~ normal(mu_beta_s, sigma_beta_s);
+  rho_s ~ normal(1, .25);
 
   for (k in 1:K) {
     gini[k][1] ~ normal(.35, .1);                         // a random draw from N(.35, .1) in first year
@@ -49,9 +36,9 @@ model {
   for (n in 1:N) {
     if (n <= N_b) {
       gini[kk[n]][tt[n]] ~ normal(gini_b[n], gini_b_se[n]); // use baseline series where observed
-      gini_b[n] ~ normal(alpha_s[ss[n]] + beta_s[ss[n]] * gini_t[n], sigma_s); // estimate rho_s 
+      gini_b[n] ~ normal(rho_s[ss[n]] * gini_t[n], sigma_s); // estimate rho_s 
     } else {
-      gini[kk[n]][tt[n]] ~ normal(alpha_s[ss[n]] + gini_t[n] * beta_s[ss[n]], sigma_s); // estimate gini
+      gini[kk[n]][tt[n]] ~ normal(gini_t[n] * rho_s[ss[n]], sigma_s); // estimate gini
     }
   }
 
