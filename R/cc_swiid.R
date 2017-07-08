@@ -19,6 +19,8 @@ cc_swiid <- countrycode::countrycode_data %>%
   filter(!country.name.en == "Korea") %>% 
   full_join(tibble(swiid.name = "Soviet Union", 
                    country.name.en.regex = "soviet.?union|u\\.?s\\.?s\\.?r|socialist.?republics"),
-            by = c("country.name.en.regex", "swiid.name"))
+            by = c("country.name.en.regex", "swiid.name")) %>% 
+  left_join(read_csv("data/reg.csv", col_types = "cc"), by = "swiid.name")
 
 save(cc_swiid, file = "data/cc_swiid.rda")
+
