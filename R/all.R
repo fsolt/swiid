@@ -12,7 +12,7 @@ cores <- chains
 gt <- 3
 
 x <- ineq %>%  
-  filter(k_bl_obs > gt & s_bl_obs > 1) %>% 
+  filter(k_bl_obs > gt) %>% 
   mutate(kcode = as.integer(factor(country, levels = unique(country))), # redo codes for filtered sample
          tcode = as.integer(year - min(year) + 1),
          scode = as.integer(factor(series, levels = unique(series))))
@@ -37,7 +37,7 @@ source_data <- list(  K = max(x$kcode),
 
 # Stan
 start <- proc.time()
-out1 <- stan(file = "R/lis_plus_series.stan",
+out1 <- stan(file = "R/all.stan",
              data = source_data,
              seed = seed,
              iter = iter,
@@ -51,7 +51,7 @@ runtime
 lapply(get_sampler_params(out1, inc_warmup = FALSE),
        summary, digits = 2)
 
-save(out1, file = str_c("data/series_gt", gt, iter/1000, "k_", 
+save(out1, file = str_c("data/all_gt", gt, iter/1000, "k_", 
                         str_replace(Sys.time(), " ", "_") %>% str_replace("2017-", ""), ".rda"))
 
 beep() # chime
