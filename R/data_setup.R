@@ -1837,18 +1837,11 @@ baseline <- lis %>%
   ungroup() %>% 
   arrange(desc(k_bl_obs)) 
 
-# turn cross-country series that do not have baseline's welfare_def and equiv_scale
-# into within-country series
+# turn cross-country series into within-country series
 oecd1 <- oecd %>% 
-  mutate(series = ifelse(welfare_def!=str_extract(baseline_series, "market|disp") |
-                           equiv_scale!=str_extract(baseline_series, "\\w*$"),
-                         paste("OECD", country, str_replace(series, "OECD ", "")),
-                         series))
+  mutate(series = paste("OECD", country, str_replace(series, "OECD ", "")))
 ceq1 <- ceq %>% 
-  mutate(series = ifelse(welfare_def!=str_extract(baseline_series, "market|disp") |
-                           equiv_scale!=str_extract(baseline_series, "\\w*$"),
-                         paste("CEQ", country, str_replace(series, "CEQ ", "")),
-                         series))
+  mutate(series = paste("CEQ", country, str_replace(series, "CEQ ", "")))
 
 # then combine with other series ordered by data-richness
 ineq0 <- bind_rows(lis, 
