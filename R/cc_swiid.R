@@ -1,7 +1,7 @@
 cc_swiid <- countrycode::countrycode_data %>% 
   mutate(swiid.name = country.name.en %>% 
            str_replace(" \\(.*", "") %>% 
-           str_replace(",.*", "") %>% 
+           str_replace(", [^U]*", "") %>% 
            str_replace("^(United )?Republic of ", "") %>% 
            str_replace("^The former Yugoslav Republic of ", "") %>% 
            str_replace(" of [GA].*", "") %>% 
@@ -20,6 +20,6 @@ cc_swiid <- countrycode::countrycode_data %>%
   full_join(tibble(swiid.name = "Soviet Union", 
                    country.name.en.regex = "soviet.?union|u\\.?s\\.?s\\.?r|socialist.?republics"),
             by = c("country.name.en.regex", "swiid.name")) %>% 
-  left_join(read_csv("data/reg.csv", col_types = "cc"), by = "swiid.name")
+  left_join(read_csv("data/reg.csv", col_types = "cc"), by = "swiid.name") 
 
 save(cc_swiid, file = "data/cc_swiid.rda")
