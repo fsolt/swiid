@@ -23,4 +23,3 @@ cc_swiid <- countrycode::countrycode_data %>%
   left_join(read_csv("data/reg.csv", col_types = "cc"), by = "swiid.name")
 
 save(cc_swiid, file = "data/cc_swiid.rda")
-
