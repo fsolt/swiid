@@ -1,4 +1,4 @@
-data{
+data {
   int<lower=1> K;     		                // number of countries
   int<lower=1> T; 				                // number of years
   int<lower=1> S; 				                // number of series
@@ -11,8 +11,6 @@ data{
   vector<lower=0, upper=1>[N] gini_m_se;  // std error of measured gini for obs n
   vector<lower=0, upper=1>[N_b] gini_b;   // baseline gini for obs n
   vector<lower=0, upper=1>[N_b] gini_b_se; // std error of baseline gini for obs n
-  
-//  vector[N] u;                            // group predictors (wd[ss] and es[ss], but just wd for now)
 }  
   
 parameters {
