@@ -1857,7 +1857,8 @@ ineq0 <- bind_rows(lis,
                    added_data) %>% 
   rename(gini_m = gini,
          gini_m_se = gini_se) %>%
-  mutate(country = countrycode(country, "country.name", "swiid.name", custom_dict = cc_swiid)) %>% 
+  mutate(country = countrycode(country, "country.name", "swiid.name", custom_dict = cc_swiid),
+         region = countrycode(country, "swiid.name", "swiid.region", custom_dict = cc_swiid)) %>% 
   group_by(country) %>% 
   mutate(country_obs = n()) %>% 
   ungroup() %>% 
@@ -1903,14 +1904,15 @@ ineq <- bind_rows(ineq_bl, ineq_obl, ineq_nbl) %>%
                             quantile(gini_m_se/gini_m, .99, na.rm = TRUE)*gini_m),
          kcode = as.integer(factor(country, levels = unique(country))),
          tcode = as.integer(year - min(year) + 1),
+         rcode = as.integer(factor(region, levels = unique(region))),
+         scode = as.integer(factor(series, levels = unique(series))),
          wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)),
-         ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)),
-         scode = as.integer(factor(series, levels = unique(series))))
+         ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)))
 
 swiid_source <- ineq0 %>% 
   rename(gini = gini_m,
          gini_se = gini_m_se) %>% 
-  select(-country_obs, -series_obs) %>% 
+  select(-country_obs, -series_obs, -region) %>% 
   arrange(country, year, series)
 
 save.image(file = "data/ineq.rda")
@@ -1928,7 +1930,10 @@ ineq1 <- ineq %>%
                                   gini_m_se,
                                   sqrt(mean(gini_m_se^2) + (1+1/n_obs)*var(gini_m)))) %>%  # per Rubin (1987)
   ungroup() %>% 
-  unite(wdes, welfare_def, equiv_scale)
+  unite(wdes, welfare_def, equiv_scale) %>% 
+  bind_rows(ineq %>%
+              group_by(country, year) %>% 
+              summarize(gini_cat = mean(gini_b))
 
 gini_cat <- ineq1 %>% 
   select(-gini_cat_se, -n_obs) %>% 
