@@ -1902,25 +1902,14 @@ ineq <- bind_rows(ineq_bl, ineq_obl, ineq_nbl) %>%
   ungroup() %>% 
   mutate(gini_m_se = ifelse(!is.na(gini_m_se), gini_m_se,
                             quantile(gini_m_se/gini_m, .99, na.rm = TRUE)*gini_m),
+         wdes = paste(welfare_def, equiv_scale, sep = "_"),
          kcode = as.integer(factor(country, levels = unique(country))),
          tcode = as.integer(year - min(year) + 1),
          rcode = as.integer(factor(region, levels = unique(region))),
          scode = as.integer(factor(series, levels = unique(series))),
+         wecode = as.integer(factor(wdes, levels = unique(wdes))),
          wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)),
          ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)))
-
-swiid_source <- ineq0 %>% 
-  rename(gini = gini_m,
-         gini_se = gini_m_se) %>% 
-  select(-country_obs, -series_obs, -region) %>% 
-  arrange(country, year, series)
-
-save.image(file = "data/ineq.rda")
-write_csv(swiid_source, "data/swiid_source.csv", na = "")
-
-######
-# want to get disp_sqrt, same_sqrt, and disp_same (or whatever corresponds to baseline_series)
-# plus baseline_series to disp_sqrt (or all LIS to matching wdes?)
 
 ineq1 <- ineq %>%
   group_by(country, year, welfare_def, equiv_scale) %>% 
@@ -1938,24 +1927,40 @@ ineq1 <- ineq %>%
                         wdes = "baseline") %>% 
               ungroup())
 
-gini_cat <- ineq1 %>% 
+rho_cat <- ineq1 %>% 
   select(-gini_cat_se, -n_obs) %>% 
-  spread(key = wdes, value = gini_cat)
+  spread(key = wdes, value = gini_cat) %>% 
+  mutate_at(vars(matches("_")),
+            funs(baseline/.)) %>% 
+  select(-baseline) %>% 
+  gather(key = wdes, value = rho, -country, -year) %>% 
+  filter(!is.na(rho)) %>% 
+  arrange(country, year, wdes)
     
-gini_cat_se <- ineq1 %>% 
+rho_cat_se <- ineq1 %>% 
   select(-gini_cat, -n_obs) %>% 
   spread(key = wdes, value = gini_cat_se) %>% 
-  rename_at(vars(contains("_")), funs(paste0(., "_se")))
+  mutate_at(vars(matches("_")),
+            funs(sqrt(baseline^2+.^2))) %>% 
+  select(-matches("baseline")) %>% 
+  gather(key = wdes, value = rho_se, -country, -year) %>% 
+  filter(!is.na(rho_se)) %>% 
+  arrange(country, year, wdes)
+
+rho_obs <- rho_cat %>% 
+  left_join(rho_cat_se, by = c("country", "year", "wdes")) %>% 
+  filter(!rho == 1) %>% 
+  left_join(ineq %>% select(matches("code"), "country", "year", "wdes"),
+            by = c("country", "year", "wdes"))
+
+rm(rho_cat, rho_cat_se)
 
 
+swiid_source <- ineq0 %>% 
+  rename(gini = gini_m,
+         gini_se = gini_m_se) %>% 
+  select(-country_obs, -series_obs, -region) %>% 
+  arrange(country, year, series)
 
-
-# t <- ineq %>%
-#   select(country, year, gini_m, scode) %>%
-#   mutate(scode = paste0("s", scode)) %>%
-#   split(.$country) 
-# %>% 
-#   map(function(x) {
-#     spread(., key = scode, value = gini_m) %>% 
-#       select(-country, -year) %>%
-#       cor(use = "pairwise.complete.obs")})
+write_csv(swiid_source, "data/swiid_source.csv", na = "")
+save.image(file = "data/ineq.rda")
