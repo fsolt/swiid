@@ -1933,7 +1933,10 @@ ineq1 <- ineq %>%
   unite(wdes, welfare_def, equiv_scale) %>% 
   bind_rows(ineq %>%
               group_by(country, year) %>% 
-              summarize(gini_cat = mean(gini_b))
+              summarize(gini_cat = first(gini_b),
+                        gini_cat_se = first(gini_b_se),
+                        wdes = "baseline") %>% 
+              ungroup())
 
 gini_cat <- ineq1 %>% 
   select(-gini_cat_se, -n_obs) %>% 
