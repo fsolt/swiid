@@ -1892,7 +1892,7 @@ ineq_oth_series <- bind_rows(ineq_obl, ineq_nbl) %>% pull(series) %>% unique()
 
 # combine all
 ineq <- bind_rows(ineq_bl, ineq_obl, ineq_nbl) %>% 
-  filter(series %in% c(baseline_series, ineq_oth_series)) %>% # i.e., exclude series that overlap completely with baseline
+#  filter(series %in% c(baseline_series, ineq_oth_series)) %>% # i.e., exclude series that overlap completely with baseline
   group_by(series) %>% 
   mutate(s_bl_obs = sum(!is.na(gini_b))) %>% 
   ungroup() %>% 
@@ -1916,9 +1916,11 @@ wecodes <- ineq %>%
   select(wdes, wecode, wcode, ecode) %>% 
   distinct()
 
-ineq1 <- bind_rows(ineq_bl, ineq_obl, ineq_nbl) %>%     # including series that overlap completely
-  mutate(gini_m_se = if_else(!is.na(gini_m_se), gini_m_se,
-                             .03*gini_m)) %>% 
+
+# ineq1 <- bind_rows(ineq_bl, ineq_obl, ineq_nbl) %>%     # including series that overlap completely
+#   mutate(gini_m_se = if_else(!is.na(gini_m_se), gini_m_se,
+#                              .03*gini_m)) %>% 
+ineq1 <- ineq %>% 
   group_by(country, year, welfare_def, equiv_scale) %>% 
   summarize(n_obs = n(),
             gini_cat = mean(gini_m), 
