@@ -9,24 +9,10 @@ seed <- 324
 iter <- 1000
 chains <- 4
 cores <- chains
-gt <- 2
+gt <- 0
 
-xx <- ineq %>%  
-  filter(k_bl_obs > gt)
-
-x_countries <- unique(xx$country)
-
-rho0 <- rho_obs %>% 
-  filter(country %in% x_countries)
-
-rho_obl <- rho0 %>% 
-  distinct(country, wdes) %>% 
-  mutate(rho_obl = TRUE)
-
-x <- xx %>% 
-  left_join(rho_obl, by = c("country", "wdes")) %>% 
-  mutate(rho_obl = if_else(!is.na(gini_b), TRUE, rho_obl)) %>% 
-  filter(!is.na(rho_obl)) %>% 
+x <- ineq %>%  
+  filter(k_bl_obs > gt) %>% 
   mutate(kcode = as.integer(factor(country, levels = unique(country))),  # redo codes for filtered sample
          tcode = as.integer(year - min(year) + 1),
          rcode = as.integer(factor(region, levels = unique(region))),
@@ -36,10 +22,18 @@ x <- xx %>%
          wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)),
          ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)))
 
-rho <- rho0 %>% 
+x_countries <- unique(x$country)
+x_wecodes <- x %>%
+  select(wdes, wecode, wcode, ecode) %>% 
+  distinct() 
+
+rho <- rho_obs %>% 
+  filter(country %in% x_countries) %>% 
   select(-matches("code")) %>% 
-  left_join(x %>% select(matches("code"), "country", "year", "wdes"),
-            by = c("country", "year", "wdes"))
+  left_join(x %>% select("country", "year", "kcode", "tcode", "rcode") %>% distinct(),
+            by = c("country", "year")) %>% 
+  left_join(x_wecodes, by = "wdes") %>% 
+  mutate(kwecode = as.integer(factor(100*kcode+wecode)))
 
 # Format data for Stan
 source_data <- list(  K = max(x$kcode),
@@ -90,8 +84,8 @@ runtime
 lapply(get_sampler_params(out1, inc_warmup = FALSE),
        summary, digits = 2)
 
-save(out1, file = str_c("data/all_lis_gt", gt, iter/1000, "k_",
-                        str_replace(Sys.time(), " ", "_") %>% str_replace("2017-", ""), ".rda"))
+# save(out1, file = str_c("data/all_lis_gt", gt, iter/1000, "k_", 
+                        # str_replace(Sys.time(), " ", "_") %>% str_replace("2017-", ""), ".rda"))
 
 beep() # chime
 
