@@ -27,7 +27,7 @@ x_wecodes <- x %>%
   select(wdes, wecode, wcode, ecode) %>% 
   distinct() 
 
-rho <- rho_obs %>% 
+rho_we <- rho_we %>% 
   filter(country %in% x_countries) %>% 
   select(-matches("code")) %>% 
   left_join(x %>% select("country", "year", "kcode", "tcode", "rcode") %>% distinct(),
@@ -58,14 +58,14 @@ source_data <- list(  K = max(x$kcode),
                       gini_b = x$gini_b[!is.na(x$gini_b)],
                       gini_b_se = x$gini_b_se[!is.na(x$gini_b_se)],
                       
-                      M = length(rho$rho),
-                      kkm = rho$kcode,      
-                      rrm = rho$rcode,
-                      ttm	= rho$tcode,
-                      wem = rho$wecode,
-                      kwem = rho$kwecode,
-                      rho_we = rho$rho,
-                      rho_we_se = rho$rho_se
+                      M = length(rho_we$rho),
+                      kkm = rho_we$kcode,      
+                      rrm = rho_we$rcode,
+                      ttm	= rho_we$tcode,
+                      wem = rho_we$wecode,
+                      kwem = rho_we$kwecode,
+                      rho_we = rho_we$rho,
+                      rho_we_se = rho_we$rho_se
 )
 
 # Stan
