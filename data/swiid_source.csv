@@ -1172,12 +1172,12 @@ Cabo Verde,2001,0.51,,con,pc,,FR2008 Cape Verde con pc,Ferreira and Ravallion 20
 Cabo Verde,2001,0.525,,con,pc,FALSE,Povcalnet Cabo Verde con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Cabo Verde,2001,0.4648,,con,sqrt,FALSE,World Bank Africa Poverty Database Cabo Verde con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
 Cabo Verde,2002,0.5283,,con,pc,,AUW2007 con pc,Angel-Urdinola and Wodon 2007,103,https://mpra.ub.uni-muenchen.de/11111/1/MPRA_paper_11111.pdf
-Cabo Verde,2002,0.53,,con,pc,,INE Cape Verde con pc,Instituto Nacional de Estatêstica Cape Verde 2016,49,http://ine.cv/wp-content/uploads/2016/11/apresentacao-resultados-preliminares-18-novembro-2016.pdf
+Cabo Verde,2002,0.53,,con,pc,,INE Cape Verde con pc,Instituto Nacional de Estatistica Cape Verde 2016,49,http://ine.cv/wp-content/uploads/2016/11/apresentacao-resultados-preliminares-18-novembro-2016.pdf
 Cabo Verde,2005,0.498,,con,pc,,GIDD Cabo Verde con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
-Cabo Verde,2007,0.47,,con,pc,,INE Cape Verde con pc,Instituto Nacional de Estatêstica Cape Verde 2016,49,http://ine.cv/wp-content/uploads/2016/11/apresentacao-resultados-preliminares-18-novembro-2016.pdf
+Cabo Verde,2007,0.47,,con,pc,,INE Cape Verde con pc,Instituto Nacional de Estatistica Cape Verde 2016,49,http://ine.cv/wp-content/uploads/2016/11/apresentacao-resultados-preliminares-18-novembro-2016.pdf
 Cabo Verde,2007,0.4719,,con,pc,FALSE,Povcalnet Cabo Verde con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Cabo Verde,2007,0.41490000000000005,,con,sqrt,FALSE,World Bank Africa Poverty Database Cabo Verde con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
-Cabo Verde,2015,0.46,,con,pc,,INE Cape Verde con pc,Instituto Nacional de Estatêstica Cape Verde 2016,49,http://ine.cv/wp-content/uploads/2016/11/apresentacao-resultados-preliminares-18-novembro-2016.pdf
+Cabo Verde,2015,0.46,,con,pc,,INE Cape Verde con pc,Instituto Nacional de Estatistica Cape Verde 2016,49,http://ine.cv/wp-content/uploads/2016/11/apresentacao-resultados-preliminares-18-novembro-2016.pdf
 Cambodia,1994,0.3815,,con,pc,FALSE,Povcalnet Cambodia con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Cambodia,1997,0.404,,con,pc,,GIDD Cambodia con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
 Cambodia,2004,0.3546,,con,pc,FALSE,Povcalnet Cambodia con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
@@ -4647,6 +4647,7 @@ India,1976,0.42,,disp,hh,,vGP1984 India disp hh,Tabatabai 1996; van Ginneken and
 India,1976,0.38,,disp,pc,,vGP1984 India disp pc,Tabatabai 1996; van Ginneken and Park 1984,95,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 India,1983,0.325,,con,pc,,Bhalla2003 India con pc,Bhalla 2003,346,http://www.jstor.org/stable/4413132
 India,1983,0.3206,,con,pc,,Ravallion2000 India con pc,Ravallion 2000,3247,http://www.jstor.org/stable/4409692
+India,1987,0.352,,con,pc,,CN2016 con pc,Chadha and Nandwani 2016,22,http://hdl.handle.net/10419/161488
 India,1987,0.3368,,con,pc,,Ravallion2000 India con pc,Ravallion 2000,3247,http://www.jstor.org/stable/4409692
 India,1988,0.329,,con,pc,,Bhalla2003 India con pc,Bhalla 2003,346,http://www.jstor.org/stable/4413132
 India,1988,0.3308,,con,pc,,Ravallion2000 India con pc,Ravallion 2000,3247,http://www.jstor.org/stable/4409692
@@ -4654,8 +4655,10 @@ India,1989,0.3293,,con,pc,,Ravallion2000 India con pc,Ravallion 2000,3247,http:/
 India,1990,0.3184,,con,pc,,Ravallion2000 India con pc,Ravallion 2000,3247,http://www.jstor.org/stable/4409692
 India,1991,0.3121,,con,pc,,Ravallion2000 India con pc,Ravallion 2000,3247,http://www.jstor.org/stable/4409692
 India,1992,0.3431,,con,pc,,Ravallion2000 India con pc,Ravallion 2000,3247,http://www.jstor.org/stable/4409692
+India,1993,0.3,,con,pc,,CMSPP2016 con pc,"Chauhan, Mohanty, Subramanian, Parida, and Padhi 2016",1280,http://doi.org/10.1007/s11205-015-1006-6
 India,1993,0.325,,con,pc,,ZKM2014 India con pc,"Zhuang, Kanbur, and Maligalig 2014",24,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA24
 India,1994,0.325,,con,pc,,Bhalla2003 India con pc,Bhalla 2003,346,http://www.jstor.org/stable/4413132
+India,1994,0.35,,con,pc,,CN2016 con pc,Chadha and Nandwani 2016,22,http://hdl.handle.net/10419/161488
 India,1994,0.3152,,con,pc,,Ravallion2000 India con pc,Ravallion 2000,3247,http://www.jstor.org/stable/4409692
 India,1994,0.35,,con,pc,,TD2013 con pc,Thorat and Dubey 2013,42,http://www.pnud.org/content/dam/india/docs/human-development/how-inclusive-has-growth-been-in-india-during-1993-94-2009-10.pdf
 India,1995,0.3632,,con,pc,,Ravallion2000 India con pc,Ravallion 2000,3247,http://www.jstor.org/stable/4409692
@@ -4665,6 +4668,8 @@ India,1997,0.3783,,con,pc,,Ravallion2000 India con pc,Ravallion 2000,3247,http:/
 India,2e3,0.32,,con,pc,,Bhalla2003 India con pc,Bhalla 2003,346,http://www.jstor.org/stable/4413132
 India,2e3,0.29,,con,pc,,GIDD India con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
 India,2002,0.443,,disp,pc,FALSE,MSR2011 India disp pc,"Mukhopadhaya, Shantakumar, and Rao 2011",102,https://books.google.com/books?id=_aapAgAAQBAJ
+India,2004,0.347,,con,pc,,CMSPP2016 con pc,"Chauhan, Mohanty, Subramanian, Parida, and Padhi 2016",1280,http://doi.org/10.1007/s11205-015-1006-6
+India,2004,0.352,,con,pc,,CN2016 con pc,Chadha and Nandwani 2016,22,http://hdl.handle.net/10419/161488
 India,2004,0.368,,con,pc,,FR2008 India con pc,Ferreira and Ravallion 2008,37,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 India,2004,0.4932,0.0017,disp,hh,FALSE,LIS disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/in.txt
 India,2004,0.4875,0.002,disp,pc,FALSE,LIS disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/in.txt
@@ -4675,9 +4680,12 @@ India,2004,0.4797,0.0019,market,sqrt,FALSE,LIS market sqrt,LISSY,"",https://raw.
 India,2004,0.35,,con,sqrt,TRUE,VD con sqrt,Vanneman and Dubey 2013,446,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA446
 India,2004,0.48,,disp,sqrt,TRUE,VD disp sqrt,Vanneman and Dubey 2013,446,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA446
 India,2005,0.35,,con,pc,,TD2013 con pc,Thorat and Dubey 2013,42,http://www.pnud.org/content/dam/india/docs/human-development/how-inclusive-has-growth-been-in-india-during-1993-94-2009-10.pdf
+India,2007,0.36,,con,pc,,CN2016 con pc,Chadha and Nandwani 2016,22,http://hdl.handle.net/10419/161488
+India,2010,0.396,,con,pc,,CN2016 con pc,Chadha and Nandwani 2016,22,http://hdl.handle.net/10419/161488
 India,2010,0.563,,disp,pc,FALSE,MSR2011 India disp pc,"Mukhopadhaya, Shantakumar, and Rao 2011",102,https://books.google.com/books?id=_aapAgAAQBAJ
 India,2010,0.37,,con,pc,,TD2013 con pc,Thorat and Dubey 2013,42,http://www.pnud.org/content/dam/india/docs/human-development/how-inclusive-has-growth-been-in-india-during-1993-94-2009-10.pdf
 India,2010,0.37,,con,pc,,ZKM2014 India con pc,"Zhuang, Kanbur, and Maligalig 2014",24,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA24
+India,2011,0.359,,con,pc,,CMSPP2016 con pc,"Chauhan, Mohanty, Subramanian, Parida, and Padhi 2016",1280,http://doi.org/10.1007/s11205-015-1006-6
 India,2011,0.368,,con,pc,,CSI2013 con pc,Central Statistics Office of India 2013,38,http://mospi.nic.in/sites/default/files/publication_reports/SAARC_India_Rep_29aug13.pdf
 India,2011,0.5028,0.0021,disp,hh,FALSE,LIS disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/in.txt
 India,2011,0.4941,0.0022,disp,pc,FALSE,LIS disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/in.txt
@@ -4685,6 +4693,7 @@ India,2011,0.4791,0.0022,disp,sqrt,FALSE,LIS disp sqrt,LISSY,"",https://raw.gith
 India,2011,0.5241,0.0021,market,hh,FALSE,LIS market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/in.txt
 India,2011,0.5097,0.0023,market,pc,FALSE,LIS market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/in.txt
 India,2011,0.4965,0.0021,market,sqrt,FALSE,LIS market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/in.txt
+India,2012,0.375,,con,pc,,CN2016 con pc,Chadha and Nandwani 2016,22,http://hdl.handle.net/10419/161488
 Indonesia,1965,0.35,,con,pc,,cdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
 Indonesia,1970,0.35,,con,pc,,cdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
 Indonesia,1976,0.34,,con,pc,,cdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf

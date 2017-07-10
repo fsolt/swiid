@@ -1912,7 +1912,13 @@ ineq <- bind_rows(ineq_bl, ineq_obl, ineq_nbl) %>%
          wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)),
          ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)))
 
-ineq1 <- ineq %>%
+wecodes <- ineq %>%
+  select(wdes, wecode, wcode, ecode) %>% 
+  distinct()
+
+ineq1 <- bind_rows(ineq_bl, ineq_obl, ineq_nbl) %>%     # including series that overlap completely
+  mutate(gini_m_se = if_else(!is.na(gini_m_se), gini_m_se,
+                             .03*gini_m)) %>% 
   group_by(country, year, welfare_def, equiv_scale) %>% 
   summarize(n_obs = n(),
             gini_cat = mean(gini_m), 
@@ -1951,8 +1957,11 @@ rho_cat_se <- ineq1 %>%
 rho_obs <- rho_cat %>% 
   left_join(rho_cat_se, by = c("country", "year", "wdes")) %>% 
   filter(!rho == 1) %>% 
-  left_join(ineq %>% select(matches("code"), "country", "year", "wdes"),
-            by = c("country", "year", "wdes"))
+  left_join(ineq %>% select("country", "year", "kcode", "tcode", "rcode") %>% distinct(),
+            by = c("country", "year")) %>% 
+  left_join(wecodes, by = "wdes") %>% 
+  mutate(kwecode = as.integer(factor(100*kcode+wecode)))
+  
 
 rm(rho_cat, rho_cat_se)
 
