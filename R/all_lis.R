@@ -9,7 +9,7 @@ seed <- 324
 iter <- 1000
 chains <- 4
 cores <- chains
-gt <- 3
+gt <- 2
 
 xx <- ineq %>%  
   filter(k_bl_obs > gt)
@@ -17,10 +17,7 @@ xx <- ineq %>%
 x_countries <- unique(xx$country)
 
 rho0 <- rho_obs %>% 
-  filter(country %in% x_countries) %>% 
-  group_by(kwecode) %>% 
-  mutate(n = n()) %>% 
-  ungroup()
+  filter(country %in% x_countries)
 
 rho_obl <- rho0 %>% 
   distinct(country, wdes) %>% 
@@ -40,7 +37,7 @@ x <- xx %>%
          ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)))
 
 rho <- rho0 %>% 
-  select(-matches("code"), -n) %>% 
+  select(-matches("code")) %>% 
   left_join(x %>% select(matches("code"), "country", "year", "wdes"),
             by = c("country", "year", "wdes"))
 
@@ -93,8 +90,8 @@ runtime
 lapply(get_sampler_params(out1, inc_warmup = FALSE),
        summary, digits = 2)
 
-# save(out1, file = str_c("data/all_lis_gt", gt, iter/1000, "k_", 
-                        # str_replace(Sys.time(), " ", "_") %>% str_replace("2017-", ""), ".rda"))
+save(out1, file = str_c("data/all_lis_gt", gt, iter/1000, "k_",
+                        str_replace(Sys.time(), " ", "_") %>% str_replace("2017-", ""), ".rda"))
 
 beep() # chime
 
