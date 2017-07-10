@@ -1908,6 +1908,7 @@ ineq <- bind_rows(ineq_bl, ineq_obl, ineq_nbl) %>%
          rcode = as.integer(factor(region, levels = unique(region))),
          scode = as.integer(factor(series, levels = unique(series))),
          wecode = as.integer(factor(wdes, levels = unique(wdes))),
+         kwecode = as.integer(factor(100*kcode+wecode)),
          wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)),
          ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)))
 
