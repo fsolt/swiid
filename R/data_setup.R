@@ -1828,6 +1828,7 @@ added_data <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/dat
 baseline_series <- "LIS disp sqrt"
 baseline_wd <- str_split(baseline_series, "\\s")[[1]] %>% nth(-2)
 baseline_es <- str_split(baseline_series, "\\s")[[1]] %>% last()
+baseline_wdes <- paste0(baseline_wd, "_", baseline_es)
 baseline <- lis %>% 
   filter(series == baseline_series) %>% 
   rename(gini_b = gini,
@@ -1906,7 +1907,7 @@ ineq <- bind_rows(ineq_bl, ineq_obl, ineq_nbl) %>%
          tcode = as.integer(year - min(year) + 1),
          rcode = as.integer(factor(region, levels = unique(region))),
          scode = as.integer(factor(series, levels = unique(series))),
-         wecode = as.integer(factor(wdes, levels = unique(wdes))),
+         wecode = as.integer(factor(wdes) %>% forcats::fct_relevel(baseline_wdes)),
          kwecode = as.integer(factor(100*kcode+wecode)),
          wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)),
          ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)))
