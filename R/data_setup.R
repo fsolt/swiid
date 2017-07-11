@@ -1892,7 +1892,6 @@ ineq_oth_series <- bind_rows(ineq_obl, ineq_nbl) %>% pull(series) %>% unique()
 
 # combine all
 ineq <- bind_rows(ineq_bl, ineq_obl, ineq_nbl) %>% 
-#  filter(series %in% c(baseline_series, ineq_oth_series)) %>% # i.e., exclude series that overlap completely with baseline
   group_by(series) %>% 
   mutate(s_bl_obs = sum(!is.na(gini_b))) %>% 
   ungroup() %>% 
@@ -1914,12 +1913,10 @@ ineq <- bind_rows(ineq_bl, ineq_obl, ineq_nbl) %>%
 
 wecodes <- ineq %>%
   select(wdes, wecode, wcode, ecode) %>% 
-  distinct()
+  distinct() %>% 
+  mutate(wd = str_replace(wdes, "_.*", ""),
+         es = str_replace(wdes, ".*_", ""))
 
-
-# ineq1 <- bind_rows(ineq_bl, ineq_obl, ineq_nbl) %>%     # including series that overlap completely
-#   mutate(gini_m_se = if_else(!is.na(gini_m_se), gini_m_se,
-#                              .03*gini_m)) %>% 
 ineq1 <- ineq %>% 
   group_by(country, year, welfare_def, equiv_scale) %>% 
   summarize(n_obs = n(),
@@ -1936,7 +1933,9 @@ ineq1 <- ineq %>%
                         wdes = "baseline") %>% 
               ungroup())
 
-rho_cat <- ineq1 %>% 
+## Generate ratios
+# generate ratios of baseline to each wd_es 
+rho_we0 <- ineq1 %>% 
   select(-gini_cat_se, -n_obs) %>% 
   spread(key = wdes, value = gini_cat) %>% 
   mutate_at(vars(matches("_")),
@@ -1946,7 +1945,7 @@ rho_cat <- ineq1 %>%
   filter(!is.na(rho)) %>% 
   arrange(country, year, wdes)
 
-rho_cat_se <- ineq1 %>% 
+rho_we_se <- ineq1 %>% 
   select(-gini_cat, -n_obs) %>% 
   spread(key = wdes, value = gini_cat_se) %>% 
   mutate_at(vars(matches("_")),
@@ -1956,18 +1955,113 @@ rho_cat_se <- ineq1 %>%
   filter(!is.na(rho_se)) %>% 
   arrange(country, year, wdes)
 
-rho_obs <- rho_cat %>% 
-  left_join(rho_cat_se, by = c("country", "year", "wdes")) %>% 
+rho_we <- rho_we0 %>% 
+  left_join(rho_we_se, by = c("country", "year", "wdes")) %>% 
   filter(!rho == 1) %>% 
   left_join(ineq %>% select("country", "year", "kcode", "tcode", "rcode") %>% distinct(),
             by = c("country", "year")) %>% 
   left_join(wecodes, by = "wdes") %>% 
   mutate(kwecode = as.integer(factor(100*kcode+wecode)))
 
+rm(rho_we0, rho_we_se)
 
-rm(rho_cat, rho_cat_se)
+# generate ratios of baseline_wd to each wd (for all constant es)
+rho_wd0 <- map_df(c("pc", "hh", "sqrt", "oecdm", "ae"), function(e) {
+  ineq1 %>% 
+    select(-gini_cat_se, -n_obs) %>% 
+    spread(key = wdes, value = gini_cat) %>% 
+    mutate(bl = get(paste0(baseline_wd, "_", e))) %>% 
+    mutate_at(vars(matches(e)),
+              funs(bl/.)) %>% 
+    select(country, year, matches(e)) %>% 
+    select(-matches(paste0(baseline_wd, "_", e))) %>% 
+    gather(key = wdes, value = rho_wd, -country, -year) %>% 
+    filter(!is.na(rho_wd)) %>% 
+    mutate(wd = str_replace(wdes, "_.*", "")) %>% 
+    select(-wdes) %>% 
+    arrange(country, year, wd)
+})
+
+rho_wd_se <- map_df(c("pc", "hh", "sqrt", "oecdm", "ae"), function(e) {
+  ineq1 %>% 
+    select(-gini_cat, -n_obs) %>% 
+    spread(key = wdes, value = gini_cat_se) %>% 
+    mutate(bl = get(paste0(baseline_wd, "_", e))) %>% 
+    mutate_at(vars(matches(e)),
+              funs(sqrt(bl^2+.^2))) %>% 
+    select(country, year, matches(e)) %>% 
+    select(-matches(paste0(baseline_wd, "_", e))) %>% 
+    gather(key = wdes, value = rho_wd_se, -country, -year) %>% 
+    filter(!is.na(rho_wd_se)) %>% 
+    mutate(wd = str_replace(wdes, "_.*", "")) %>% 
+    select(-wdes) %>% 
+    arrange(country, year, wd)
+})
+
+rho_wd <- rho_wd0 %>% 
+  left_join(rho_wd_se, by = c("country", "year", "wd")) %>% 
+  filter(!rho_wd == 1) %>% 
+  group_by(country, year, wd) %>%
+  summarize(rho_wd = max(rho_wd),
+            rho_wd_se = max(rho_wd_se)) %>%
+  ungroup() %>%
+  left_join(ineq %>% select("country", "year", "kcode", "tcode", "rcode") %>% distinct(),
+            by = c("country", "year")) %>% 
+  left_join(wecodes %>% select("wd", "wcode") %>% distinct(), by = "wd") %>% 
+  mutate(kwcode = as.integer(factor(100*kcode+wcode)))
+
+rm(rho_wd0, rho_wd_se)
+
+# generate ratios of baseline_es to each es (for all constant wd)
+rho_es0 <- map_df(c("market", "gross", "disp", "con"), function(w) {
+  ineq1 %>% 
+    select(-gini_cat_se, -n_obs) %>% 
+    spread(key = wdes, value = gini_cat) %>%
+    mutate(bl = get(paste0(w, "_", baseline_es))) %>% 
+    mutate_at(vars(matches(w)),
+              funs(bl/.)) %>% 
+    select(country, year, matches(w)) %>% 
+    select(-matches(paste0(w, "_", baseline_es))) %>% 
+    gather(key = wdes, value = rho_es, -country, -year) %>% 
+    filter(!is.na(rho_es)) %>% 
+    mutate(es = str_replace(wdes, ".*_", "")) %>% 
+    select(-wdes) %>% 
+    arrange(country, year, es)
+})
+
+rho_es_se <- map_df(c("market", "gross", "disp", "con"), function(w) {
+  ineq1 %>% 
+    select(-gini_cat, -n_obs) %>% 
+    spread(key = wdes, value = gini_cat_se) %>%
+    mutate(bl = get(paste0(w, "_", baseline_es))) %>% 
+    mutate_at(vars(matches(w)),
+              funs(sqrt(bl^2+.^2))) %>% 
+    select(country, year, matches(w)) %>% 
+    select(-matches(paste0(w, "_", baseline_es))) %>% 
+    gather(key = wdes, value = rho_es_se, -country, -year) %>% 
+    filter(!is.na(rho_es_se)) %>% 
+    mutate(es = str_replace(wdes, ".*_", "")) %>% 
+    select(-wdes) %>% 
+    arrange(country, year, es)
+})
+
+rho_es <- rho_es0 %>% 
+  left_join(rho_es_se, by = c("country", "year", "es")) %>% 
+  filter(!rho_es == 1) %>%
+  group_by(country, year, es) %>%
+  summarize(rho_es = max(rho_es),
+            rho_es_se = max(rho_es_se)) %>%
+  ungroup() %>%
+  left_join(ineq %>% select("country", "year", "kcode", "tcode", "rcode") %>% distinct(),
+            by = c("country", "year")) %>% 
+  left_join(wecodes %>% select("es", "ecode") %>% distinct(), by = "es") %>% 
+  mutate(kecode = as.integer(factor(100*kcode+ecode)))
+  
+
+rm(rho_es0, rho_es_se)
 
 
+## Save
 swiid_source <- ineq0 %>% 
   rename(gini = gini_m,
          gini_se = gini_m_se) %>% 
