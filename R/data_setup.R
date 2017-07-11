@@ -1836,7 +1836,7 @@ baseline <- lis %>%
   group_by(country) %>% 
   mutate(k_bl_obs = n()) %>% 
   ungroup() %>% 
-  arrange(desc(k_bl_obs)) 
+  arrange(desc(k_bl_obs))
 
 # turn cross-country series into within-country series
 oecd1 <- oecd %>% 
@@ -1934,6 +1934,7 @@ ineq1 <- ineq %>%
                         wdes = "baseline") %>% 
               ungroup())
 
+
 ## Generate ratios
 # generate ratios of baseline to each wd_es 
 rho_we0 <- ineq1 %>% 
@@ -2009,7 +2010,8 @@ rho_wd <- rho_wd0 %>%
   left_join(ineq %>% select("country", "year", "kcode", "tcode", "rcode") %>% distinct(),
             by = c("country", "year")) %>% 
   left_join(wecodes %>% select("wd", "wcode") %>% distinct(), by = "wd") %>% 
-  mutate(kwcode = as.integer(factor(100*kcode+wcode)))
+  mutate(wkcode = as.integer(factor(kcode)),
+         kwcode = as.integer(factor(100*wkcode+wcode)))
 
 rm(rho_wd0, rho_wd_se)
 

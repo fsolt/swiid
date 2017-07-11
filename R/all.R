@@ -9,31 +9,10 @@ seed <- 324
 iter <- 1000
 chains <- 4
 cores <- chains
-gt <- 0
 
-x <- ineq %>%  
-  filter(k_bl_obs > gt) %>% 
-  mutate(kcode = as.integer(factor(country, levels = unique(country))),  # redo codes for filtered sample
-         tcode = as.integer(year - min(year) + 1),
-         rcode = as.integer(factor(region, levels = unique(region))),
-         scode = as.integer(factor(series, levels = unique(series))),
-         wecode = as.integer(factor(wdes, levels = unique(wdes))),
-         kwecode = as.integer(factor(100*kcode+wecode)),
-         wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)),
-         ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)))
+x <- ineq 
 
-x_countries <- unique(x$country)
-x_wecodes <- x %>%
-  select(wdes, wecode, wcode, ecode) %>% 
-  distinct() 
 
-rho_we <- rho_we %>% 
-  filter(country %in% x_countries) %>% 
-  select(-matches("code")) %>% 
-  left_join(x %>% select("country", "year", "kcode", "tcode", "rcode") %>% distinct(),
-            by = c("country", "year")) %>% 
-  left_join(x_wecodes, by = "wdes") %>% 
-  mutate(kwecode = as.integer(factor(100*kcode+wecode)))
 
 # Format data for Stan
 source_data <- list(  K = max(x$kcode),
@@ -41,12 +20,19 @@ source_data <- list(  K = max(x$kcode),
                       R = max(x$rcode),
                       S = max(x$scode),
                       WE = max(x$wecode),
-                      KWE = max(rho$kwecode),
+                      KWE = max(rho_we$kwecode),
                       W = max(x$wcode),
+                      KW = max(rho_wd$kwcode),
                       E = max(x$ecode),
+                      KE = max(rho_es$kecode),
                       N = length(x$gini_m),
                       N_bl = length(x$gini_b[!is.na(x$gini_b)]),
                       N_obl = length(x$s_bl_obs[x$s_bl_obs>0]),
+                      N_kbl = length(x$k_bl_obs[x$k_bl_obs>0]),
+                      N_kk = ,
+                      N_kr = ,
+                      N_rk = ,
+                      
                       kk = x$kcode,
                       tt = x$tcode,
                       rr = x$rcode,
@@ -65,7 +51,25 @@ source_data <- list(  K = max(x$kcode),
                       wem = rho_we$wecode,
                       kwem = rho_we$kwecode,
                       rho_we = rho_we$rho,
-                      rho_we_se = rho_we$rho_se
+                      rho_we_se = rho_we$rho_se,
+                      
+                      P = length(rho_wd$rho_wd),
+                      kkp = rho_wd$kcode,      
+                      rrp = rho_wd$rcode,
+                      ttp	= rho_wd$tcode,
+                      wdp = rho_wd$wcode,
+                      kwp = rho_wd$kwcode,
+                      rho_wd = rho_wd$rho_wd,
+                      rho_wd_se = rho_wd$rho_wd_se,
+                      
+                      Q = length(rho_es$rho_es),
+                      kkq = rho_es$kcode,      
+                      rrq = rho_es$rcode,
+                      ttq	= rho_es$tcode,
+                      esq = rho_es$ecode,
+                      keq = rho_es$kecode,
+                      rho_es = rho_es$rho_es,
+                      rho_es_se = rho_es$rho_es_se
 )
 
 # Stan
@@ -84,12 +88,12 @@ runtime
 lapply(get_sampler_params(out1, inc_warmup = FALSE),
        summary, digits = 2)
 
-# save(out1, file = str_c("data/all_lis_gt", gt, iter/1000, "k_", 
-                        # str_replace(Sys.time(), " ", "_") %>% str_replace("2017-", ""), ".rda"))
+save(out1, file = str_c("data/all_", iter/1000, "k_",
+                        str_replace(Sys.time(), " ", "_") %>% str_replace("2017-", ""), ".rda"))
 
 beep() # chime
 
 
 # Plots
-plot_tscs(x, out1, save_pdf = "paper/figures/ts_all_lis.pdf")
+plot_tscs(x, out1, save_pdf = "paper/figures/ts_all.pdf")
 plot_tscs(x, out1)
