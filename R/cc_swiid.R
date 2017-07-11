@@ -1,3 +1,7 @@
+regions <- read_csv("data/reg.csv", col_types = "cc") %>%
+  mutate(swiid.name = if_else(swiid.name=="C̫te D'Ivoire", "Côte D'Ivoire", swiid.name))
+write_csv(regions, "data/reg.csv")
+
 cc_swiid <- countrycode::countrycode_data %>% 
   mutate(swiid.name = country.name.en %>% 
            str_replace(" \\(.*", "") %>% 
