@@ -464,8 +464,8 @@ Germany,1988,0.2591,,gross,ae,TRUE,W1999 Germany gross ae 1,Wagstaff et al. 1999
 Germany,1983,0.247,0.001,con,oecdm,FALSE,ZdV2001 Germany con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Germany,1988,0.256,0.001,con,oecdm,FALSE,ZdV2001 Germany con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Ghana,1992,0.381,,con,pc,,FR2008 Ghana con pc,Ferreira and Ravallion 2008,36,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
-Ghana,2006,0.419,,con,ae,FALSE,GSS con ae,Ghana Statistical Service 2014,22,http://www.statsghana.gov.gh/glss6.html
-Ghana,2013,0.423,,con,ae,FALSE,GSS con ae,Ghana Statistical Service 2014,22,http://www.statsghana.gov.gh/glss6.html
+Ghana,2005,0.419,,con,ae,FALSE,GSS con ae,Ghana Statistical Service 2014,22,http://www.statsghana.gov.gh/docfiles/glss6/GLSS6_Poverty%20Profile%20in%20Ghana.pdf
+Ghana,2013,0.423,,con,ae,FALSE,GSS con ae,Ghana Statistical Service 2014,22,http://www.statsghana.gov.gh/docfiles/glss6/GLSS6_Poverty%20Profile%20in%20Ghana.pdf
 Greece,1988,0.245,,con,hh,,Park1995 Greece con hh,Tabatabai 1996; Park 1995,125,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Greece,1988,0.349,,disp,hh,,Park1995 Greece disp hh,Tabatabai 1996; Park 1995,125,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Greece,1982,0.316,0.004,con,oecdm,FALSE,ZdV2001 Greece con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
@@ -1097,7 +1097,7 @@ Myanmar,2010,0.29,,con ,pc,FALSE,WRM2015 Myanmar con pc,"Warr, Rasphone, and Men
 Namibia,1993,0.743,,con,pc,,FR2008 Namibia con pc,Ferreira and Ravallion 2008,38,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Namibia,1994,0.6455,0.0174,con,ae,,NSA Namibia con ae,Namibia Statistics Agency 2012,33,http://cms.my.na/assets/documents/p19dnar71kanl1vfo14gu5rpbkq1.pdf
 Namibia,2004,0.6003,0.0117,con,ae,,NSA Namibia con ae,Namibia Statistics Agency 2012,33,http://cms.my.na/assets/documents/p19dnar71kanl1vfo14gu5rpbkq1.pdf
-Namibia,2010,0.5971,0.0102,con,ae,,NSA Namibia con ae,Namibia Statistics Agency 2012,33,http://cms.my.na/assets/documents/p19dnar71kanl1vfo14gu5rpbkq1.pdf
+Namibia,2009,0.5971,0.0102,con,ae,,NSA Namibia con ae,Namibia Statistics Agency 2012,33,http://cms.my.na/assets/documents/p19dnar71kanl1vfo14gu5rpbkq1.pdf
 Namibia,2016,0.572,,con,ae,,NSA Namibia con ae,Namibia Statistics Agency 2017,12,http://cms.my.na/assets/documents/NHIES_2016_Key_Poverty_Indicators_Preliminary_Figures.pdf
 Nauru,2006,0.48,,con,pc,,ZKM2014 Nauru con pc,"Zhuang, Kanbur, and Maligalig 2014",25,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA25
 Nepal,1996,0.367,,con,pc,,CBS con pc,CBS 2005; Nepal and Bohara 2009,22,http://hdl.handle.net/1928/10227
@@ -1429,9 +1429,9 @@ Russia,2003,0.332,,con,pc,FALSE,MY2006 Russian Federation con pc 3,Mitra and Yem
 Rwanda,1986,0.29,,con,ae,FALSE,NIS Rwanda con ae 1,National Institute of Statistics of Rwanda 2002,27,http://www.statistics.gov.rw/file/714/download?token=J-PX22mI
 Rwanda,2001,0.45,,con,ae,FALSE,NIS Rwanda con ae 1,National Institute of Statistics of Rwanda 2002,27,http://www.statistics.gov.rw/file/714/download?token=J-PX22mI
 Rwanda,2001,0.473,,con,ae,FALSE,NIS Rwanda con ae 2,National Institute of Statistics of Rwanda 2006,25,http://www.statistics.gov.rw/file/710/download?token=F2o-qYal
-Rwanda,2006,0.508,,con,ae,FALSE,NIS Rwanda con ae 2,National Institute of Statistics of Rwanda 2006,25,http://www.statistics.gov.rw/file/710/download?token=F2o-qYal
-Rwanda,2001,0.507,,con,ae,FALSE,NIS Rwanda con ae 3,National Institute of Statistics of Rwanda 2015,25,http://www.statistics.gov.rw/file/4135/download?token=cylGgLRl
-Rwanda,2006,0.522,,con,ae,FALSE,NIS Rwanda con ae 3,National Institute of Statistics of Rwanda 2015,25,http://www.statistics.gov.rw/file/4135/download?token=cylGgLRl
+Rwanda,2005,0.508,,con,ae,FALSE,NIS Rwanda con ae 2,National Institute of Statistics of Rwanda 2006,25,http://www.statistics.gov.rw/file/710/download?token=F2o-qYal
+Rwanda,2005,0.507,,con,ae,FALSE,NIS Rwanda con ae 3,National Institute of Statistics of Rwanda 2015,25,http://www.statistics.gov.rw/file/4135/download?token=cylGgLRl
+Rwanda,2005,0.522,,con,ae,FALSE,NIS Rwanda con ae 3,National Institute of Statistics of Rwanda 2015,25,http://www.statistics.gov.rw/file/4135/download?token=cylGgLRl
 Rwanda,2010,0.49,,con,ae,FALSE,NIS Rwanda con ae 3,National Institute of Statistics of Rwanda 2015,25,http://www.statistics.gov.rw/file/4135/download?token=cylGgLRl
 Rwanda,2014,0.448,,con,ae,FALSE,NIS Rwanda con ae 3,National Institute of Statistics of Rwanda 2015,25,http://www.statistics.gov.rw/file/4135/download?token=cylGgLRl
 Samoa,2002,0.45,,con,pc,,ZKM2014 Samoa con pc,"Zhuang, Kanbur, and Maligalig 2014",25,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA25
@@ -1790,9 +1790,9 @@ Uganda,1993,0.364,,con,ae,FALSE,UBOS con ae,Uganda Bureau of Statistics 2004,21,
 Uganda,1998,0.347,,con,ae,FALSE,UBOS con ae,Uganda Bureau of Statistics 2004,21,http://www.ubos.org/onlinefiles/uploads/ubos/pdf%20documents/abstracts/Statistical%20Abstract%202004.pdf
 Uganda,2000,0.395,,con,ae,FALSE,UBOS con ae,Uganda Bureau of Statistics 2004,21,http://www.ubos.org/onlinefiles/uploads/ubos/pdf%20documents/abstracts/Statistical%20Abstract%202004.pdf
 Uganda,2003,0.428,,con,ae,FALSE,UBOS con ae,Uganda Bureau of Statistics 2004,21,http://www.ubos.org/onlinefiles/uploads/ubos/pdf%20documents/abstracts/Statistical%20Abstract%202004.pdf
-Uganda,2006,0.408,0.007,con,ae,FALSE,UBOS con ae,Uganda Bureau of Statistics 2014,190,http://www.ubos.org/onlinefiles/uploads/ubos/UNHS_12_13/2012_13%20UNHS%20Final%20Report.pdf
-Uganda,2010,0.426,0.009,con,ae,FALSE,UBOS con ae,Uganda Bureau of Statistics 2014,189,http://www.ubos.org/onlinefiles/uploads/ubos/UNHS_12_13/2012_13%20UNHS%20Final%20Report.pdf
-Uganda,2013,0.395,0.006,con,ae,FALSE,UBOS con ae,Uganda Bureau of Statistics 2014,188,http://www.ubos.org/onlinefiles/uploads/ubos/UNHS_12_13/2012_13%20UNHS%20Final%20Report.pdf
+Uganda,2005,0.408,0.007,con,ae,FALSE,UBOS con ae,Uganda Bureau of Statistics 2014,190,http://www.ubos.org/onlinefiles/uploads/ubos/UNHS_12_13/2012_13%20UNHS%20Final%20Report.pdf
+Uganda,2009,0.426,0.009,con,ae,FALSE,UBOS con ae,Uganda Bureau of Statistics 2014,189,http://www.ubos.org/onlinefiles/uploads/ubos/UNHS_12_13/2012_13%20UNHS%20Final%20Report.pdf
+Uganda,2012,0.395,0.006,con,ae,FALSE,UBOS con ae,Uganda Bureau of Statistics 2014,188,http://www.ubos.org/onlinefiles/uploads/ubos/UNHS_12_13/2012_13%20UNHS%20Final%20Report.pdf
 Ukraine,1988,0.248,,gross,pc,,AG1993 Ukraine gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,122,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Ukraine,1990,0.24,,gross,pc,,AG1993 Ukraine gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,122,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Ukraine,1989,0.195,,market,pc,,Cornia1994 Ukraine market pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
