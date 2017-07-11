@@ -3965,11 +3965,11 @@ Ghana,1992,0.381,,con,pc,,FR2008 Ghana con pc,Ferreira and Ravallion 2008,36,htt
 Ghana,1998,0.4007,,con,pc,FALSE,Povcalnet Ghana con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Ghana,1998,0.3589,,con,sqrt,FALSE,World Bank Africa Poverty Database Ghana con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
 Ghana,1999,0.388,,con,pc,,GIDD Ghana con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
+Ghana,2005,0.419,,con,ae,FALSE,GSS con ae,Ghana Statistical Service 2014,22,http://www.statsghana.gov.gh/docfiles/glss6/GLSS6_Poverty%20Profile%20in%20Ghana.pdf
 Ghana,2005,0.4277,,con,pc,FALSE,Povcalnet Ghana con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Ghana,2005,0.3795,,con,sqrt,FALSE,World Bank Africa Poverty Database Ghana con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
-Ghana,2006,0.419,,con,ae,FALSE,GSS con ae,Ghana Statistical Service 2014,22,http://www.statsghana.gov.gh/glss6.html
 Ghana,2013,0.42330000000000007,,con,pc,FALSE,CEQ Ghana con pc,"Younger, Osei-Assibey, and Oppong 2015",7,http://www.commitmentoequity.org/publications_files/Ghana/Fiscal%20Policy%20Inequality%20and%20Poverty%20-%20A%20CEQ%20Assessment%20for%20Ghana%20Oct%2029%202015.pdf
-Ghana,2013,0.423,,con,ae,FALSE,GSS con ae,Ghana Statistical Service 2014,22,http://www.statsghana.gov.gh/glss6.html
+Ghana,2013,0.423,,con,ae,FALSE,GSS con ae,Ghana Statistical Service 2014,22,http://www.statsghana.gov.gh/docfiles/glss6/GLSS6_Poverty%20Profile%20in%20Ghana.pdf
 Greece,1974,0.432,,disp,sqrt,FALSE,"OECD Greece disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Greece,1974,0.413,0.006,disp,sqrt,FALSE,"OECD Greece disp sqrt, previous def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Greece,1982,0.316,0.004,con,oecdm,FALSE,ZdV2001 Greece con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
@@ -6524,9 +6524,9 @@ Namibia,2003,0.6332,,con,pc,FALSE,Povcalnet Namibia con pc 1,World Bank Povcalne
 Namibia,2004,0.6003,0.0117,con,ae,,NSA Namibia con ae,Namibia Statistics Agency 2012,33,http://cms.my.na/assets/documents/p19dnar71kanl1vfo14gu5rpbkq1.pdf
 Namibia,2004,0.5789,,con,sqrt,FALSE,World Bank Africa Poverty Database Namibia con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
 Namibia,2005,0.701,,con,pc,,GIDD Namibia con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
+Namibia,2009,0.5971,0.0102,con,ae,,NSA Namibia con ae,Namibia Statistics Agency 2012,33,http://cms.my.na/assets/documents/p19dnar71kanl1vfo14gu5rpbkq1.pdf
 Namibia,2009,0.6097,,con,pc,FALSE,Povcalnet Namibia con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Namibia,2009,0.5579999999999999,,con,sqrt,FALSE,World Bank Africa Poverty Database Namibia con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
-Namibia,2010,0.5971,0.0102,con,ae,,NSA Namibia con ae,Namibia Statistics Agency 2012,33,http://cms.my.na/assets/documents/p19dnar71kanl1vfo14gu5rpbkq1.pdf
 Namibia,2016,0.572,,con,ae,,NSA Namibia con ae,Namibia Statistics Agency 2017,12,http://cms.my.na/assets/documents/NHIES_2016_Key_Poverty_Indicators_Preliminary_Figures.pdf
 Nauru,2006,0.48,,con,pc,,ZKM2014 Nauru con pc,"Zhuang, Kanbur, and Maligalig 2014",25,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA25
 Nepal,1977,0.53,,disp,hh,,vGP1984 Nepal disp hh,Tabatabai 1996; van Ginneken and Park 1984,100,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -8041,12 +8041,12 @@ Rwanda,2e3,0.4855,,con,pc,FALSE,Povcalnet Rwanda con pc 2,World Bank Povcalnet,"
 Rwanda,2e3,0.49420000000000003,,con,sqrt,FALSE,World Bank Africa Poverty Database Rwanda con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
 Rwanda,2001,0.45,,con,ae,FALSE,NIS Rwanda con ae 1,National Institute of Statistics of Rwanda 2002,27,http://www.statistics.gov.rw/file/714/download?token=J-PX22mI
 Rwanda,2001,0.473,,con,ae,FALSE,NIS Rwanda con ae 2,National Institute of Statistics of Rwanda 2006,25,http://www.statistics.gov.rw/file/710/download?token=F2o-qYal
-Rwanda,2001,0.507,,con,ae,FALSE,NIS Rwanda con ae 3,National Institute of Statistics of Rwanda 2015,25,http://www.statistics.gov.rw/file/4135/download?token=cylGgLRl
 Rwanda,2005,0.428,,con,pc,,GIDD Rwanda con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
+Rwanda,2005,0.508,,con,ae,FALSE,NIS Rwanda con ae 2,National Institute of Statistics of Rwanda 2006,25,http://www.statistics.gov.rw/file/710/download?token=F2o-qYal
+Rwanda,2005,0.507,,con,ae,FALSE,NIS Rwanda con ae 3,National Institute of Statistics of Rwanda 2015,25,http://www.statistics.gov.rw/file/4135/download?token=cylGgLRl
+Rwanda,2005,0.522,,con,ae,FALSE,NIS Rwanda con ae 3,National Institute of Statistics of Rwanda 2015,25,http://www.statistics.gov.rw/file/4135/download?token=cylGgLRl
 Rwanda,2005,0.5204,,con,pc,FALSE,Povcalnet Rwanda con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Rwanda,2005,0.5317000000000001,,con,sqrt,FALSE,World Bank Africa Poverty Database Rwanda con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
-Rwanda,2006,0.508,,con,ae,FALSE,NIS Rwanda con ae 2,National Institute of Statistics of Rwanda 2006,25,http://www.statistics.gov.rw/file/710/download?token=F2o-qYal
-Rwanda,2006,0.522,,con,ae,FALSE,NIS Rwanda con ae 3,National Institute of Statistics of Rwanda 2015,25,http://www.statistics.gov.rw/file/4135/download?token=cylGgLRl
 Rwanda,2010,0.49,,con,ae,FALSE,NIS Rwanda con ae 3,National Institute of Statistics of Rwanda 2015,25,http://www.statistics.gov.rw/file/4135/download?token=cylGgLRl
 Rwanda,2010,0.5134000000000001,,con,pc,FALSE,Povcalnet Rwanda con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Rwanda,2010,0.511,,con,sqrt,FALSE,World Bank Africa Poverty Database Rwanda con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
@@ -8842,23 +8842,18 @@ Spain,2015,0.315,,disp,oecdm,FALSE,Instituto Nacional de Estadistica Spain disp 
 Sri Lanka,1970,0.35,,disp,hh,,vGP1984 Sri Lanka disp hh,Tabatabai 1996; van Ginneken and Park 1984,104,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Sri Lanka,1973,0.36,,gross,hh,,Vidanapathirana2007 gross hh,Vidanapathirana 2007,3,http://www.networkideas.org/ideasact/jun07/Beijing_Conference_07/Upali_Vidanapathirana.pdf
 Sri Lanka,1978,0.42,,gross,hh,,Vidanapathirana2007 gross hh,Vidanapathirana 2007,3,http://www.networkideas.org/ideasact/jun07/Beijing_Conference_07/Upali_Vidanapathirana.pdf
-Sri Lanka,1980,0.31,,con,ae,,GC2005 Sri Lanka con ae,Gunatilaka and Chotikapanich 2005,39,https://www.researchgate.net/profile/Ramani_Gunatilaka2/publication/5179946_Inequality_Trends_and_Determinants_in_Sri_Lanka_1980-2002_A_Shapley_Approach_to_Decomposition/links/0f3175347a7e7d2f75000000/Inequality-Trends-and-Determinants-in-Sri-Lanka-1980-2002-A-Shapley-Approach-to-Decomposition.pdf
 Sri Lanka,1981,0.43,,gross,hh,,Statistics Sri Lanka gross hh,Statistics Sri Lanka 2015,x,http://www.statistics.gov.lk/HIES/HIES2012_13FinalReport.pdf
 Sri Lanka,1981,0.45,,gross,hh,,Vidanapathirana2007 gross hh,Vidanapathirana 2007,3,http://www.networkideas.org/ideasact/jun07/Beijing_Conference_07/Upali_Vidanapathirana.pdf
-Sri Lanka,1985,0.323,,con,ae,,GC2005 Sri Lanka con ae,Gunatilaka and Chotikapanich 2005,39,https://www.researchgate.net/profile/Ramani_Gunatilaka2/publication/5179946_Inequality_Trends_and_Determinants_in_Sri_Lanka_1980-2002_A_Shapley_Approach_to_Decomposition/links/0f3175347a7e7d2f75000000/Inequality-Trends-and-Determinants-in-Sri-Lanka-1980-2002-A-Shapley-Approach-to-Decomposition.pdf
 Sri Lanka,1985,0.3247,,con,pc,FALSE,Povcalnet Sri Lanka con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Sri Lanka,1986,0.285,,con,hh,,Park1995 Sri Lanka con hh,Tabatabai 1996; Park 1995,104,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Sri Lanka,1986,0.437,,disp,hh,,Park1995 Sri Lanka disp hh,Tabatabai 1996; Park 1995,104,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Sri Lanka,1986,0.46,,gross,hh,,Statistics Sri Lanka gross hh,Statistics Sri Lanka 2015,x,http://www.statistics.gov.lk/HIES/HIES2012_13FinalReport.pdf
 Sri Lanka,1986,0.46,,gross,hh,,Vidanapathirana2007 gross hh,Vidanapathirana 2007,3,http://www.networkideas.org/ideasact/jun07/Beijing_Conference_07/Upali_Vidanapathirana.pdf
-Sri Lanka,1990,0.309,,con,ae,,GC2005 Sri Lanka con ae,Gunatilaka and Chotikapanich 2005,39,https://www.researchgate.net/profile/Ramani_Gunatilaka2/publication/5179946_Inequality_Trends_and_Determinants_in_Sri_Lanka_1980-2002_A_Shapley_Approach_to_Decomposition/links/0f3175347a7e7d2f75000000/Inequality-Trends-and-Determinants-in-Sri-Lanka-1980-2002-A-Shapley-Approach-to-Decomposition.pdf
 Sri Lanka,1990,0.3245,,con,pc,FALSE,Povcalnet Sri Lanka con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Sri Lanka,1991,0.43,,gross,hh,,Statistics Sri Lanka gross hh,Statistics Sri Lanka 2015,x,http://www.statistics.gov.lk/HIES/HIES2012_13FinalReport.pdf
 Sri Lanka,1994,0.344,,con,pc,,FR2008 Sri Lanka con pc,Ferreira and Ravallion 2008,39,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
-Sri Lanka,1995,0.336,,con,ae,,GC2005 Sri Lanka con ae,Gunatilaka and Chotikapanich 2005,39,https://www.researchgate.net/profile/Ramani_Gunatilaka2/publication/5179946_Inequality_Trends_and_Determinants_in_Sri_Lanka_1980-2002_A_Shapley_Approach_to_Decomposition/links/0f3175347a7e7d2f75000000/Inequality-Trends-and-Determinants-in-Sri-Lanka-1980-2002-A-Shapley-Approach-to-Decomposition.pdf
 Sri Lanka,1995,0.354,,con,pc,FALSE,Povcalnet Sri Lanka con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Sri Lanka,1996,0.43,,gross,hh,,Vidanapathirana2007 gross hh,Vidanapathirana 2007,3,http://www.networkideas.org/ideasact/jun07/Beijing_Conference_07/Upali_Vidanapathirana.pdf
-Sri Lanka,2e3,0.355,,con,ae,,GC2005 Sri Lanka con ae,Gunatilaka and Chotikapanich 2005,39,https://www.researchgate.net/profile/Ramani_Gunatilaka2/publication/5179946_Inequality_Trends_and_Determinants_in_Sri_Lanka_1980-2002_A_Shapley_Approach_to_Decomposition/links/0f3175347a7e7d2f75000000/Inequality-Trends-and-Determinants-in-Sri-Lanka-1980-2002-A-Shapley-Approach-to-Decomposition.pdf
 Sri Lanka,2002,0.371,,con,pc,,GIDD Sri Lanka con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
 Sri Lanka,2002,0.4096,,con,pc,FALSE,Povcalnet Sri Lanka con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Sri Lanka,2002,0.41,,con,hh,,Statistics Sri Lanka con hh,Statistics Sri Lanka 2015,x,http://www.statistics.gov.lk/HIES/HIES2012_13FinalReport.pdf
@@ -9644,14 +9639,14 @@ Uganda,2002,0.4517,,con,pc,FALSE,Povcalnet Uganda con pc 2,World Bank Povcalnet,
 Uganda,2002,0.4325,,con,sqrt,FALSE,World Bank Africa Poverty Database Uganda con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
 Uganda,2003,0.428,,con,ae,FALSE,UBOS con ae,Uganda Bureau of Statistics 2004,21,http://www.ubos.org/onlinefiles/uploads/ubos/pdf%20documents/abstracts/Statistical%20Abstract%202004.pdf
 Uganda,2005,0.4294,,con,pc,FALSE,Povcalnet Uganda con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Uganda,2005,0.408,0.007,con,ae,FALSE,UBOS con ae,Uganda Bureau of Statistics 2014,190,http://www.ubos.org/onlinefiles/uploads/ubos/UNHS_12_13/2012_13%20UNHS%20Final%20Report.pdf
 Uganda,2005,0.414,,con,sqrt,FALSE,World Bank Africa Poverty Database Uganda con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
-Uganda,2006,0.408,0.007,con,ae,FALSE,UBOS con ae,Uganda Bureau of Statistics 2014,190,http://www.ubos.org/onlinefiles/uploads/ubos/UNHS_12_13/2012_13%20UNHS%20Final%20Report.pdf
 Uganda,2009,0.442,,con,pc,FALSE,Povcalnet Uganda con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Uganda,2009,0.426,0.009,con,ae,FALSE,UBOS con ae,Uganda Bureau of Statistics 2014,189,http://www.ubos.org/onlinefiles/uploads/ubos/UNHS_12_13/2012_13%20UNHS%20Final%20Report.pdf
 Uganda,2009,0.409,,con,sqrt,FALSE,World Bank Africa Poverty Database Uganda con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
-Uganda,2010,0.426,0.009,con,ae,FALSE,UBOS con ae,Uganda Bureau of Statistics 2014,189,http://www.ubos.org/onlinefiles/uploads/ubos/UNHS_12_13/2012_13%20UNHS%20Final%20Report.pdf
 Uganda,2012,0.41009999999999996,,con,pc,FALSE,Povcalnet Uganda con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Uganda,2012,0.395,0.006,con,ae,FALSE,UBOS con ae,Uganda Bureau of Statistics 2014,188,http://www.ubos.org/onlinefiles/uploads/ubos/UNHS_12_13/2012_13%20UNHS%20Final%20Report.pdf
 Uganda,2012,0.3729,,con,sqrt,FALSE,World Bank Africa Poverty Database Uganda con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
-Uganda,2013,0.395,0.006,con,ae,FALSE,UBOS con ae,Uganda Bureau of Statistics 2014,188,http://www.ubos.org/onlinefiles/uploads/ubos/UNHS_12_13/2012_13%20UNHS%20Final%20Report.pdf
 Ukraine,1980,0.3464,,gross,pc,FALSE,Kakwani1996 gross pc,Kakwani 1996,674,http://doi.org/10.1111/j.1467-7660.1996.tb00607.x
 Ukraine,1985,0.3216,,gross,pc,FALSE,Kakwani1996 gross pc,Kakwani 1996,674,http://doi.org/10.1111/j.1467-7660.1996.tb00607.x
 Ukraine,1988,0.248,,gross,pc,,AG1993 Ukraine gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,122,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
