@@ -1904,6 +1904,9 @@ ineq <- bind_rows(ineq_bl, ineq_obl, ineq_nbl) %>%
   mutate(gini_m_se = ifelse(!is.na(gini_m_se), gini_m_se,
                             quantile(gini_m_se/gini_m, .99, na.rm = TRUE)*gini_m),
          wdes = paste(welfare_def, equiv_scale, sep = "_"),
+         bl = (!is.na(gini_b)),
+         obl = (s_bl_obs>0),
+         kbl = (k_bl_obs>0),
          kcode = as.integer(factor(country, levels = unique(country))),
          tcode = as.integer(year - min(year) + 1),
          rcode = as.integer(factor(region, levels = unique(region))),
@@ -1963,7 +1966,7 @@ rho_we_se <- ineq1 %>%
 rho_we <- rho_we0 %>% 
   left_join(rho_we_se, by = c("kcode", "tcode", "wdes")) %>% 
   filter(!rho == 1) %>% 
-  left_join(ineq %>% select("country", "year", "kcode", "tcode", "rcode") %>% distinct(),
+  left_join(ineq %>% select(country, year, kcode, tcode, rcode) %>% distinct(),
             by = c("kcode", "tcode")) %>% 
   left_join(wecodes, by = "wdes") %>% 
   mutate(kwecode = as.integer(factor(100*kcode+wecode)))
@@ -2007,7 +2010,7 @@ rho_wd <- rho_wd0 %>%
   summarize(rho_wd = max(rho_wd),
             rho_wd_se = max(rho_wd_se)) %>%
   ungroup() %>%
-  left_join(ineq %>% select("country", "year", "kcode", "tcode", "rcode") %>% distinct(),
+  left_join(ineq %>% select(country, year, kcode, tcode, rcode, kbl) %>% distinct(),
             by = c("kcode", "tcode")) %>% 
   left_join(wecodes %>% select("wd", "wcode") %>% distinct(), by = "wd") %>% 
   mutate(kwcode = as.integer(factor(100*kcode+wcode)),
@@ -2058,7 +2061,7 @@ rho_es <- rho_es0 %>%
   summarize(rho_es = max(rho_es),
             rho_es_se = max(rho_es_se)) %>%
   ungroup() %>%
-  left_join(ineq %>% select("country", "year", "kcode", "tcode", "rcode") %>% distinct(),
+  left_join(ineq %>% select(country, year, kcode, tcode, rcode, kbl) %>% distinct(),
             by = c("kcode", "tcode")) %>% 
   left_join(wecodes %>% select("es", "ecode") %>% distinct(), by = "es") %>% 
   mutate(kecode = as.integer(factor(100*kcode+ecode)),
@@ -2073,10 +2076,7 @@ rho_es_ke <- rho_es %>%
   unique()
 
 ineq2 <- ineq %>% 
-  mutate(bl = (!is.na(gini_b)),
-         obl = (s_bl_obs>0),
-         kbl = (k_bl_obs>0),
-         kwd = paste(country, str_replace(wdes, "_.*", "")),
+  mutate(kwd = paste(country, str_replace(wdes, "_.*", "")),
          kes = paste(country, str_replace(wdes, ".*_", "")),
          rwd = paste(rcode, str_replace(wdes, "_.*", "")),
          res = paste(rcode, str_replace(wdes, ".*_", "")),
