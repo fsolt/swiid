@@ -51,7 +51,7 @@ data{
   int<lower=1, upper=W> wdp[P];           // wd for rho_wd observation p
   int<lower=1, upper=KW> kwp[P];          // kw for rho_wd observation p
   int<lower=1, upper=RW> rwp[P];          // rw for rho_wd observation p
-  int<lower=0, upper=1> kblp[P];          // kbl for rho_wd observation p
+  // int<lower=0, upper=1> kblp[P];          // kbl for rho_wd observation p
   real<lower=0> rho_wd[P];                // observed ratio of baseline to wd
   real<lower=0> rho_wd_se[P];             // std error of rho_wd
   
@@ -62,7 +62,7 @@ data{
   int<lower=1, upper=E> esq[Q];           // es for rho_es observation q
   int<lower=1, upper=KE> keq[Q];          // ke for rho_es observation q
   int<lower=1, upper=RE> req[Q];          // re fir rho_es observation q
-  int<lower=0, upper=1> kblq[Q];          // kbl for rho_es observation q
+  // int<lower=0, upper=1> kblq[Q];          // kbl for rho_es observation q
   real<lower=0> rho_es[Q];                // observed ratio of baseline to es
   real<lower=0> rho_es_se[Q];             // std error of rho_es
 }  
@@ -83,12 +83,12 @@ parameters {
   
   vector[KW] rho_kw_hat;        // estimated rho_wd by country
   real<lower=0> sigma_kw;       // rho_kw noise
-  vector[R] rho_rw_hat;         // estimated rho_wd by region
+  vector[RE] rho_rw_hat;        // estimated rho_wd by region
   real<lower=0> sigma_rw;       // rho_rw noise
   
   vector[KE] rho_ke_hat;        // estimated rho_es by country
   real<lower=0> sigma_ke;       // rho_ke noise
-  vector[R] rho_re_hat;         // estimated rho_es by region
+  vector[RE] rho_re_hat;        // estimated rho_es by region
   real<lower=0> sigma_re;       // rho_re noise
 }
 
@@ -120,9 +120,9 @@ model {
   sigma_s ~ cauchy(0, .05);
   sigma_we ~ cauchy(0, .05);
   sigma_kw ~ cauchy(0, .05);
-  sigma_rw ~ cauchy(0, .05);
+  sigma_rw ~ cauchy(0, .1);
   sigma_ke ~ cauchy(0, .05);
-  sigma_re ~ cauchy(0, .05);
+  sigma_re ~ cauchy(0, .1);
 
   for (k in 1:K) {
     gini[k][1] ~ normal(.35, .1);                         // a random draw from N(.35, .1) in first year
@@ -136,16 +136,16 @@ model {
 
   for (p in 1:P) {
     rho_rw_hat[rwp[p]] ~ normal(rho_wd_t[p], sigma_rw);  // estimate rho_rw_hat
-    if (kblp[p]==0) {
+    // if (kblp[p]==0) {
       rho_kw_hat[kwp[p]] ~ normal(rho_wd_t[p], sigma_kw);  // estimate rho_kw_hat
-    }
+    // }
   }
 
   for (q in 1:Q) {
     rho_re_hat[req[q]] ~ normal(rho_es_t[q], sigma_re);  // estimate rho_re_hat
-    if (kblq[q]==0) {
+    // if (kblq[q]==0) {
       rho_ke_hat[keq[q]] ~ normal(rho_es_t[q], sigma_ke);  // estimate rho_ke_hat
-    }
+    // }
   }
 
   for (n in 1:N) {

@@ -6,11 +6,18 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 10
-chains <- 1
+iter <- 100
+chains <- 4
 cores <- chains
 
-x <- ineq2 
+x <- ineq2 # %>% 
+  # filter(kbl | (kw & ke))
+
+rho_wd1 <- rho_wd # %>% 
+  # filter(kcode %in% x$kcode)
+
+rho_es1 <- rho_es # %>% 
+  # filter(kcode %in% x$kcode)
 
 # Format data for Stan
 source_data <- list(  K = max(x$kcode),
@@ -21,8 +28,10 @@ source_data <- list(  K = max(x$kcode),
                       KWE = max(x$kwecode),
                       W = max(x$wcode),
                       KW = max(rho_wd$kwcode),
+                      RW = max(rho_wd$rwcode),
                       E = max(x$ecode),
                       KE = max(rho_es$kecode),
+                      RE = max(rho_es$recode),
                       N = nrow(x),
                       N_bl = nrow(x %>% filter(bl)),
                       N_obl = nrow(x %>% filter(obl)),
@@ -55,23 +64,27 @@ source_data <- list(  K = max(x$kcode),
                       rho_we = rho_we$rho,
                       rho_we_se = rho_we$rho_se,
                       
-                      P = length(rho_wd$rho_wd),
-                      kkp = rho_wd$kcode,      
-                      rrp = rho_wd$rcode,
-                      ttp	= rho_wd$tcode,
-                      wdp = rho_wd$wcode,
-                      kwp = rho_wd$kwcode,
-                      rho_wd = rho_wd$rho_wd,
-                      rho_wd_se = rho_wd$rho_wd_se,
+                      P = length(rho_wd1$rho_wd),
+                      kkp = rho_wd1$kcode,      
+                      rrp = rho_wd1$rcode,
+                      ttp	= rho_wd1$tcode,
+                      wdp = rho_wd1$wcode,
+                      kwp = rho_wd1$kwcode,
+                      rwp = rho_wd1$rwcode,
+                      kblp = as.numeric(rho_wd1$kbl),
+                      rho_wd = rho_wd1$rho_wd,
+                      rho_wd_se = rho_wd1$rho_wd_se,
                       
-                      Q = length(rho_es$rho_es),
-                      kkq = rho_es$kcode,      
-                      rrq = rho_es$rcode,
-                      ttq	= rho_es$tcode,
-                      esq = rho_es$ecode,
-                      keq = rho_es$kecode,
-                      rho_es = rho_es$rho_es,
-                      rho_es_se = rho_es$rho_es_se
+                      Q = length(rho_es1$rho_es),
+                      kkq = rho_es1$kcode,      
+                      rrq = rho_es1$rcode,
+                      ttq	= rho_es1$tcode,
+                      esq = rho_es1$ecode,
+                      keq = rho_es1$kecode,
+                      req = rho_es1$recode,
+                      kblq = as.numeric(rho_es1$kbl),
+                      rho_es = rho_es1$rho_es,
+                      rho_es_se = rho_es1$rho_es_se
 )
 
 # Stan
