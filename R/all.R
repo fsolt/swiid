@@ -6,13 +6,11 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 1000
-chains <- 4
+iter <- 10
+chains <- 1
 cores <- chains
 
-x <- ineq 
-
-
+x <- ineq2 
 
 # Format data for Stan
 source_data <- list(  K = max(x$kcode),
@@ -20,18 +18,18 @@ source_data <- list(  K = max(x$kcode),
                       R = max(x$rcode),
                       S = max(x$scode),
                       WE = max(x$wecode),
-                      KWE = max(rho_we$kwecode),
+                      KWE = max(x$kwecode),
                       W = max(x$wcode),
                       KW = max(rho_wd$kwcode),
                       E = max(x$ecode),
                       KE = max(rho_es$kecode),
-                      N = length(x$gini_m),
-                      N_bl = length(x$gini_b[!is.na(x$gini_b)]),
-                      N_obl = length(x$s_bl_obs[x$s_bl_obs>0]),
-                      N_kbl = length(x$k_bl_obs[x$k_bl_obs>0]),
-                      N_kk = ,
-                      N_kr = ,
-                      N_rk = ,
+                      N = nrow(x),
+                      N_bl = nrow(x %>% filter(bl)),
+                      N_obl = nrow(x %>% filter(obl)),
+                      N_kbl = nrow(x %>% filter(kbl)),
+                      N_kk = nrow(x %>% filter(kbl | (kw & ke))),
+                      N_kr = nrow(x %>% filter(kbl | kw)),
+                      N_rk = nrow(x %>% filter(kbl | kw | ke)),
                       
                       kk = x$kcode,
                       tt = x$tcode,
@@ -39,6 +37,10 @@ source_data <- list(  K = max(x$kcode),
                       ss = x$scode,
                       wen = x$wecode,
                       kwen = x$kwecode,
+                      kwn = x$kwcode,
+                      ken = x$kecode,
+                      rwn = x$rwcode,
+                      ren = x$recode,
                       gini_m = x$gini_m,
                       gini_m_se = x$gini_m_se,
                       gini_b = x$gini_b[!is.na(x$gini_b)],
@@ -74,7 +76,7 @@ source_data <- list(  K = max(x$kcode),
 
 # Stan
 start <- proc.time()
-out1 <- stan(file = "R/all_lis.stan",
+out1 <- stan(file = "R/all.stan",
              data = source_data,
              seed = seed,
              iter = iter,
