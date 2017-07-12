@@ -2024,42 +2024,42 @@ rho_wd_kw <- rho_wd %>%
 # generate ratios of baseline_es to each es (for all constant wd)
 rho_es0 <- map_df(c("market", "gross", "disp", "con"), function(w) {
   ineq1 %>% 
-    select(-gini_cat_se, -n_obs) %>% 
+    select(-gini_cat_se) %>% 
     spread(key = wdes, value = gini_cat) %>%
     mutate(bl = get(paste0(w, "_", baseline_es))) %>% 
     mutate_at(vars(matches(w)),
               funs(bl/.)) %>% 
-    select(country, year, matches(w)) %>% 
-    gather(key = wdes, value = rho_es, -country, -year) %>% 
+    select(kcode, tcode, matches(w)) %>% 
+    gather(key = wdes, value = rho_es, -kcode, -tcode) %>% 
     filter(!is.na(rho_es)) %>% 
     mutate(es = str_replace(wdes, ".*_", "")) %>% 
     select(-wdes) %>% 
-    arrange(country, year, es)
+    arrange(kcode, tcode, es)
 })
 
 rho_es_se <- map_df(c("market", "gross", "disp", "con"), function(w) {
   ineq1 %>% 
-    select(-gini_cat, -n_obs) %>% 
+    select(-gini_cat) %>% 
     spread(key = wdes, value = gini_cat_se) %>%
     mutate(bl = get(paste0(w, "_", baseline_es))) %>% 
     mutate_at(vars(matches(w)),
               funs(sqrt(bl^2+.^2))) %>% 
-    select(country, year, matches(w)) %>% 
-    gather(key = wdes, value = rho_es_se, -country, -year) %>% 
+    select(kcode, tcode, matches(w)) %>% 
+    gather(key = wdes, value = rho_es_se, -kcode, -tcode) %>% 
     filter(!is.na(rho_es_se)) %>% 
     mutate(es = str_replace(wdes, ".*_", "")) %>% 
     select(-wdes) %>% 
-    arrange(country, year, es)
+    arrange(kcode, tcode, es)
 })
 
 rho_es <- rho_es0 %>% 
-  left_join(rho_es_se, by = c("country", "year", "es")) %>% 
-  group_by(country, year, es) %>%
+  left_join(rho_es_se, by = c("kcode", "tcode", "es")) %>% 
+  group_by(kcode, tcode, es) %>%
   summarize(rho_es = max(rho_es),
             rho_es_se = max(rho_es_se)) %>%
   ungroup() %>%
   left_join(ineq %>% select("country", "year", "kcode", "tcode", "rcode") %>% distinct(),
-            by = c("country", "year")) %>% 
+            by = c("kcode", "tcode")) %>% 
   left_join(wecodes %>% select("es", "ecode") %>% distinct(), by = "es") %>% 
   mutate(kecode = as.integer(factor(100*kcode+ecode)),
          recode = as.integer(factor(100*rcode+ecode)),
