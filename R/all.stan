@@ -117,12 +117,12 @@ model {
   rho_ke_hat ~ normal(1, .2);
   rho_re_hat ~ normal(1, .2);
   
-  sigma_s ~ cauch(0, .05)
-  sigma_we ~ cauchy(0, .05)
-  sigma_kw ~ cauchy(0, .05)
-  sigma_rw ~ cauchy(0, .05)
-  sigma_ke ~ cauchy(0, .05)
-  sigma_re ~ cauchy(0, .05)
+  sigma_s ~ cauchy(0, .05);
+  sigma_we ~ cauchy(0, .05);
+  sigma_kw ~ cauchy(0, .05);
+  sigma_rw ~ cauchy(0, .05);
+  sigma_ke ~ cauchy(0, .05);
+  sigma_re ~ cauchy(0, .05);
 
   for (k in 1:K) {
     gini[k][1] ~ normal(.35, .1);                         // a random draw from N(.35, .1) in first year
@@ -135,14 +135,14 @@ model {
   }
 
   for (p in 1:P) {
-    // rho_rw_hat[rwp[p]] ~ normal(rho_wd_t[p], sigma_rw);  // estimate rho_rw_hat
+    rho_rw_hat[rwp[p]] ~ normal(rho_wd_t[p], sigma_rw);  // estimate rho_rw_hat
     if (kblp[p]==0) {
       rho_kw_hat[kwp[p]] ~ normal(rho_wd_t[p], sigma_kw);  // estimate rho_kw_hat
     }
   }
 
   for (q in 1:Q) {
-    // rho_re_hat[req[q]] ~ normal(rho_es_t[q], sigma_re);  // estimate rho_re_hat
+    rho_re_hat[req[q]] ~ normal(rho_es_t[q], sigma_re);  // estimate rho_re_hat
     if (kblq[q]==0) {
       rho_ke_hat[keq[q]] ~ normal(rho_es_t[q], sigma_ke);  // estimate rho_ke_hat
     }
@@ -158,12 +158,12 @@ model {
       gini[kk[n]][tt[n]] ~ normal(rho_we_hat[kwen[n]] * gini_t[n], sigma_we);  // estimate gini
     } else if (n <= N_kk) {               // obs in countries with both rho_kw and rho_ke
       gini[kk[n]][tt[n]] ~ normal(rho_kw_hat[kwn[n]] * rho_ke_hat[ken[n]] * gini_t[n], sigma_kkcat); // estimate gini
-    // } else if (n <= N_kr) {               // obs in countries with rho_kw only
-    //   gini[kk[n]][tt[n]] ~ normal(rho_kw_hat[kwn[n]] * rho_re_hat[ren[n]] * gini_t[n], sigma_krcat); // estimate gini
-    // } else if (n <= N_rk) {               // obs in countries with rho_ke only
-    //   gini[kk[n]][tt[n]] ~ normal(rho_rw_hat[rwn[n]] * rho_ke_hat[ken[n]] * gini_t[n], sigma_rkcat); // estimate gini
-    // } else {
-    //   gini[kk[n]][tt[n]] ~ normal(rho_rw_hat[rwn[n]] * rho_re_hat[ren[n]] * gini_t[n], sigma_rrcat); // estimate gini
+    } else if (n <= N_kr) {               // obs in countries with rho_kw only
+      gini[kk[n]][tt[n]] ~ normal(rho_kw_hat[kwn[n]] * rho_re_hat[ren[n]] * gini_t[n], sigma_krcat); // estimate gini
+    } else if (n <= N_rk) {               // obs in countries with rho_ke only
+      gini[kk[n]][tt[n]] ~ normal(rho_rw_hat[rwn[n]] * rho_ke_hat[ken[n]] * gini_t[n], sigma_rkcat); // estimate gini
+    } else {
+      gini[kk[n]][tt[n]] ~ normal(rho_rw_hat[rwn[n]] * rho_re_hat[ren[n]] * gini_t[n], sigma_rrcat); // estimate gini
     }
   }
 }
