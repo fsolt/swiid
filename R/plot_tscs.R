@@ -8,11 +8,11 @@ plot_tscs <- function(input, output, kt = FALSE, pars="gini", probs=c(.025, .975
               lastyr = max(year)) %>%
     ungroup()
   
-  ktcodes <- tibble(kcode = rep(1:max(x$kcode), each = max(x$tcode)),
-                    tcode = rep(1:max(x$tcode), times = max(x$kcode)),
+  ktcodes <- tibble(kcode = rep(1:max(input$kcode), each = max(input$tcode)),
+                    tcode = rep(1:max(input$tcode), times = max(input$kcode)),
                     ktcode = (kcode-1)*max(tcode)+tcode) %>%
     left_join(kcodes, by = "kcode") %>%
-    mutate(year = min(firstyr) + tcode - 1)  
+    mutate(year = min(firstyr, na.rm = TRUE) + tcode - 1)  
   
   lb <- paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[1]
   ub <- paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[2]
