@@ -14,4 +14,5 @@ vignette/reference/*
 vignette/*.dta
 data/lis_only_*.rda
 data/lis_gt*.rda
+data/all_*.rda
 data/series_gt*.rda
