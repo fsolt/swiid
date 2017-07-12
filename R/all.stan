@@ -51,7 +51,6 @@ data{
   int<lower=1, upper=W> wdp[P];           // wd for rho_wd observation p
   int<lower=1, upper=KW> kwp[P];          // kw for rho_wd observation p
   int<lower=1, upper=RW> rwp[P];          // rw for rho_wd observation p
-  // int<lower=0, upper=1> kblp[P];          // kbl for rho_wd observation p
   real<lower=0> rho_wd[P];                // observed ratio of baseline to wd
   real<lower=0> rho_wd_se[P];             // std error of rho_wd
   
@@ -62,7 +61,6 @@ data{
   int<lower=1, upper=E> esq[Q];           // es for rho_es observation q
   int<lower=1, upper=KE> keq[Q];          // ke for rho_es observation q
   int<lower=1, upper=RE> req[Q];          // re fir rho_es observation q
-  // int<lower=0, upper=1> kblq[Q];          // kbl for rho_es observation q
   real<lower=0> rho_es[Q];                // observed ratio of baseline to es
   real<lower=0> rho_es_se[Q];             // std error of rho_es
 }  
@@ -129,24 +127,13 @@ model {
     gini[k][2:T] ~ normal(gini[k][1:T-1], sigma_gini[k]); // otherwise a random walk from previous year 
   }
 
+  rho_we_hat[kwem] ~ normal(rho_we_t, sigma_we);  // estimate rho_we_hat
 
-  for (m in 1:M) {
-    rho_we_hat[kwem[m]] ~ normal(rho_we_t[m], sigma_we);  // estimate rho_we_hat
-  }
+  rho_rw_hat[rwp] ~ normal(rho_wd_t, sigma_rw);   // estimate rho_rw_hat
+  rho_kw_hat[kwp] ~ normal(rho_wd_t, sigma_kw);   // estimate rho_kw_hat
 
-  for (p in 1:P) {
-    rho_rw_hat[rwp[p]] ~ normal(rho_wd_t[p], sigma_rw);  // estimate rho_rw_hat
-    // if (kblp[p]==0) {
-      rho_kw_hat[kwp[p]] ~ normal(rho_wd_t[p], sigma_kw);  // estimate rho_kw_hat
-    // }
-  }
-
-  for (q in 1:Q) {
-    rho_re_hat[req[q]] ~ normal(rho_es_t[q], sigma_re);  // estimate rho_re_hat
-    // if (kblq[q]==0) {
-      rho_ke_hat[keq[q]] ~ normal(rho_es_t[q], sigma_ke);  // estimate rho_ke_hat
-    // }
-  }
+  rho_re_hat[req] ~ normal(rho_es_t, sigma_re);   // estimate rho_re_hat
+  rho_ke_hat[keq] ~ normal(rho_es_t, sigma_ke);   // estimate rho_ke_hat
 
   for (n in 1:N) {
     if (n <= N_bl) { // lis obs
