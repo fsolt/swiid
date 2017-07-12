@@ -1,8 +1,8 @@
-if (!require(pacman)) install.packages("pacman")
+if (!require(pacman)) install.packages("pacman"); library(pacman)
 p_load(tidyverse, readxl, 
        eurostat, rsdmx, xml2, CANSIM2R, pxweb, rvest,
        stringr, magrittr, countrycode, pdftools)
-p_load_gh("ropensci/tabulizerjars", "ropensci/tabulizer") # read PDF tables
+p_load_gh("ropensci/tabulizerjars", "ropensci/tabulizer") # read PDF tables; see https://github.com/ropensci/tabulizer for installation help if needed
 p_load_gh("ropengov/dkstat")
 
 # Custom country codes (defined in R/cc_swiid.R)
@@ -1900,6 +1900,7 @@ ineq <- bind_rows(ineq_bl, ineq_obl, ineq_nbl) %>%
   mutate(k_bl_obs = if_else(!is.na(mean(k_bl_obs, na.rm = TRUE)),
                             mean(k_bl_obs, na.rm = TRUE), 0)) %>% 
   ungroup() %>% 
+  arrange(desc(k_bl_obs), desc(country_obs)) %>% 
   mutate(gini_m_se = ifelse(!is.na(gini_m_se), gini_m_se,
                             quantile(gini_m_se/gini_m, .99, na.rm = TRUE)*gini_m),
          wdes = paste(welfare_def, equiv_scale, sep = "_"),
@@ -1907,28 +1908,30 @@ ineq <- bind_rows(ineq_bl, ineq_obl, ineq_nbl) %>%
          tcode = as.integer(year - min(year) + 1),
          rcode = as.integer(factor(region, levels = unique(region))),
          scode = as.integer(factor(series, levels = unique(series))),
-         wecode = as.integer(factor(wdes) %>% forcats::fct_relevel(baseline_wdes)),
-         kwecode = as.integer(factor(100*kcode+wecode)),
          wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)),
-         ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)))
+         ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)),
+         wecode = as.integer(factor(paste(wcode, ecode))),
+         kwecode = as.integer(factor(100*kcode+wecode)))
 
 wecodes <- ineq %>%
   select(wdes, wecode, wcode, ecode) %>% 
   distinct() %>% 
   mutate(wd = str_replace(wdes, "_.*", ""),
-         es = str_replace(wdes, ".*_", ""))
+         es = str_replace(wdes, ".*_", "")) %>% 
+  arrange(wecode)
 
 ineq1 <- ineq %>% 
-  group_by(country, year, welfare_def, equiv_scale) %>% 
+  group_by(kcode, tcode, welfare_def, equiv_scale) %>% 
   summarize(n_obs = n(),
             gini_cat = mean(gini_m), 
             gini_cat_se = ifelse(n_obs == 1,
                                  gini_m_se,
                                  sqrt(mean(gini_m_se^2) + (1+1/n_obs)*var(gini_m)))) %>%  # per Rubin (1987)
   ungroup() %>% 
+  select(-n_obs) %>% 
   unite(wdes, welfare_def, equiv_scale) %>% 
   bind_rows(ineq %>%
-              group_by(country, year) %>% 
+              group_by(kcode, tcode) %>% 
               summarize(gini_cat = first(gini_b),
                         gini_cat_se = first(gini_b_se),
                         wdes = "baseline") %>% 
@@ -1938,30 +1941,30 @@ ineq1 <- ineq %>%
 ## Generate ratios
 # generate ratios of baseline to each wd_es 
 rho_we0 <- ineq1 %>% 
-  select(-gini_cat_se, -n_obs) %>% 
+  select(-gini_cat_se) %>% 
   spread(key = wdes, value = gini_cat) %>% 
   mutate_at(vars(matches("_")),
             funs(baseline/.)) %>% 
   select(-baseline) %>% 
-  gather(key = wdes, value = rho, -country, -year) %>% 
+  gather(key = wdes, value = rho, -kcode, -tcode) %>% 
   filter(!is.na(rho)) %>% 
-  arrange(country, year, wdes)
+  arrange(kcode, tcode, wdes)
 
 rho_we_se <- ineq1 %>% 
-  select(-gini_cat, -n_obs) %>% 
+  select(-gini_cat) %>% 
   spread(key = wdes, value = gini_cat_se) %>% 
   mutate_at(vars(matches("_")),
             funs(sqrt(baseline^2+.^2))) %>% 
   select(-matches("baseline")) %>% 
-  gather(key = wdes, value = rho_se, -country, -year) %>% 
+  gather(key = wdes, value = rho_se, -kcode, -tcode) %>% 
   filter(!is.na(rho_se)) %>% 
-  arrange(country, year, wdes)
+  arrange(kcode, tcode, wdes)
 
 rho_we <- rho_we0 %>% 
-  left_join(rho_we_se, by = c("country", "year", "wdes")) %>% 
+  left_join(rho_we_se, by = c("kcode", "tcode", "wdes")) %>% 
   filter(!rho == 1) %>% 
   left_join(ineq %>% select("country", "year", "kcode", "tcode", "rcode") %>% distinct(),
-            by = c("country", "year")) %>% 
+            by = c("kcode", "tcode")) %>% 
   left_join(wecodes, by = "wdes") %>% 
   mutate(kwecode = as.integer(factor(100*kcode+wecode)))
 
@@ -1970,42 +1973,42 @@ rm(rho_we0, rho_we_se)
 # generate ratios of baseline_wd to each wd (for all constant es)
 rho_wd0 <- map_df(c("pc", "hh", "sqrt", "oecdm", "ae"), function(e) {
   ineq1 %>% 
-    select(-gini_cat_se, -n_obs) %>% 
+    select(-gini_cat_se) %>% 
     spread(key = wdes, value = gini_cat) %>% 
     mutate(bl = get(paste0(baseline_wd, "_", e))) %>% 
     mutate_at(vars(matches(e)),
               funs(bl/.)) %>% 
-    select(country, year, matches(e)) %>% 
-    gather(key = wdes, value = rho_wd, -country, -year) %>% 
+    select(kcode, tcode, matches(e)) %>% 
+    gather(key = wdes, value = rho_wd, -kcode, -tcode) %>% 
     filter(!is.na(rho_wd)) %>% 
     mutate(wd = str_replace(wdes, "_.*", "")) %>% 
     select(-wdes) %>% 
-    arrange(country, year, wd)
+    arrange(kcode, tcode, wd)
 })
 
 rho_wd_se <- map_df(c("pc", "hh", "sqrt", "oecdm", "ae"), function(e) {
   ineq1 %>% 
-    select(-gini_cat, -n_obs) %>% 
+    select(-gini_cat) %>% 
     spread(key = wdes, value = gini_cat_se) %>% 
     mutate(bl = get(paste0(baseline_wd, "_", e))) %>% 
     mutate_at(vars(matches(e)),
               funs(sqrt(bl^2+.^2))) %>% 
-    select(country, year, matches(e)) %>% 
-    gather(key = wdes, value = rho_wd_se, -country, -year) %>% 
+    select(kcode, tcode, matches(e)) %>% 
+    gather(key = wdes, value = rho_wd_se, -kcode, -tcode) %>% 
     filter(!is.na(rho_wd_se)) %>% 
     mutate(wd = str_replace(wdes, "_.*", "")) %>% 
     select(-wdes) %>% 
-    arrange(country, year, wd)
+    arrange(kcode, tcode, wd)
 })
 
 rho_wd <- rho_wd0 %>% 
-  left_join(rho_wd_se, by = c("country", "year", "wd")) %>% 
-  group_by(country, year, wd) %>%
+  left_join(rho_wd_se, by = c("kcode", "tcode", "wd")) %>% 
+  group_by(kcode, tcode, wd) %>%
   summarize(rho_wd = max(rho_wd),
             rho_wd_se = max(rho_wd_se)) %>%
   ungroup() %>%
   left_join(ineq %>% select("country", "year", "kcode", "tcode", "rcode") %>% distinct(),
-            by = c("country", "year")) %>% 
+            by = c("kcode", "tcode")) %>% 
   left_join(wecodes %>% select("wd", "wcode") %>% distinct(), by = "wd") %>% 
   mutate(kwcode = as.integer(factor(100*kcode+wcode)),
          rwcode = as.integer(factor(100*rcode+wcode)),
@@ -2079,13 +2082,14 @@ ineq2 <- ineq %>%
          res = paste(rcode, str_replace(wdes, ".*_", "")),
          kw = (kwd %in% rho_wd_kw),
          ke = (kes %in% rho_es_ke)) %>% 
-  arrange(desc(bl), desc(obl), desc(kbl), desc(kw), desc(ke)) %>% 
   left_join(rho_wd %>% select(kwd, kwcode) %>% unique(), by = "kwd") %>% 
   left_join(rho_wd %>% select(rwd, rwcode) %>% unique(), by = "rwd") %>% 
   left_join(rho_es %>% select(kes, kecode) %>% unique(), by = "kes") %>% 
   left_join(rho_es %>% select(res, recode) %>% unique(), by = "res") %>% 
   mutate(kwcode = if_else(is.na(kwcode), 0L, kwcode),
-         kecode = if_else(is.na(kecode), 0L, kecode))
+         kecode = if_else(is.na(kecode), 0L, kecode)) %>% 
+  arrange(desc(bl), desc(obl), desc(kbl), desc(kw), desc(ke), desc(k_bl_obs), desc(country_obs))
+  
 
 ## Save
 swiid_source <- ineq0 %>% 
