@@ -1,7 +1,7 @@
 if (!require(pacman)) install.packages("pacman"); library(pacman)
 p_load(tidyverse, readxl, 
        eurostat, rsdmx, xml2, CANSIM2R, pxweb, rvest,
-       stringr, magrittr, countrycode, pdftools)
+       stringr, magrittr, countrycode, janitor, pdftools)
 p_load_gh("ropensci/tabulizerjars", "ropensci/tabulizer") # read PDF tables; see https://github.com/ropensci/tabulizer for installation help if needed
 p_load_gh("ropengov/dkstat")
 
@@ -365,7 +365,7 @@ wb <- read_csv(unz("data-raw/wb.zip", "WDIData.csv")) %>%
             link = wb_zip)
 
 rm(wb_fn)
-unlink("data-raw/wb.zip")
+unlink("data-raw/wb.zip")   # too big to keep around
 
 
 ## National Statistics Offices
@@ -733,7 +733,7 @@ insee <- readLines(insee_link) %>%              # kickin' it old skool . . .
 geostat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/geostat.csv",
                     skip = 3, 
                     col_names = c("year", "gross", "con"),
-                    col_types = "cdd") %>% 
+                    col_types = "cdd") %>%                  # throws warnings; they are irrelevant
   filter(!is.na(gross)) %>% 
   gather(key = "welfare_def", value = "gini", gross:con) %>% 
   transmute(country = "Georgia",
@@ -1106,19 +1106,18 @@ snz <- read_excel("data-raw/snz.xls",
             link = "https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf")
 
 
-# Statistics Norway (automated)
-ssb_link <- "https://www.ssb.no/en/inntekt-og-forbruk/statistikker/ifhus/aar/2016-12-16?fane=tabell&sort=nummer&tabell=288299"
+# Statistics Norway (update file)
+# Gini & std.err.; total population; all years > rotate clockwise 2x > save as semicolon delimited
 
-ssb <- get_pxweb_data(url = "http://data.ssb.no/api/v0/en/table/if/if02/ifhus/SBMENU2486/InntUlikhet",
-                      dims = list(Forbruksenhet2 = c('01'),
-                                  ContentsCode = c('Ginikoeffisient', 'StandardavvikGini'),
-                                  Tid = c('*')),
-                      clean = TRUE) %>%
-  spread(contents, values) %>% 
+ssb_link <- "https://www.ssb.no/statistikkbanken/selectvarval/Define.asp?MainTable=InntUlikhet&PLanguage=1&nyTmpVar=true&CMSSubjectArea=inntekt-og-forbruk&KortNavnWeb=ifhus&StatVariant=&checked=true"
+
+ssb <- read_csv2("data-raw/ssb.csv", skip = 2) %>%  # throws warnings; they are irrelevant
+  filter(!is.na(X1)) %>% 
+  filter(!is.na(`Gini coefficient`)) %>% 
   transmute(country = "Norway",
-            year = as.numeric(as.character(year)),
-            gini = `Gini coefficient`,
-            gini_se = `Standard error of the Gini coefficient`,
+            year = as.numeric(X1),
+            gini = as.numeric(`Gini coefficient`),
+            gini_se = as.numeric(`Standard error of the Gini coefficient`),
             welfare_def = "disp",
             equiv_scale = "oecdm",
             monetary = TRUE,
