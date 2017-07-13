@@ -1820,7 +1820,7 @@ rm(gidd_raw)
 
 
 ## Added data
-added_data <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/article_data/fs_added_data.csv",
+added_data <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/fs_added_data.csv",
                        col_types = "ciddcclcccc")
 
 ## Combine
