@@ -6,18 +6,13 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 100
+iter <- 1000
 chains <- 4
 cores <- chains
 
-x <- ineq2 # %>% 
-  # filter(kbl | (kw & ke))
-
-rho_wd1 <- rho_wd # %>% 
-  # filter(kcode %in% x$kcode)
-
-rho_es1 <- rho_es # %>% 
-  # filter(kcode %in% x$kcode)
+x <- ineq2 
+rho_wd1 <- rho_wd
+rho_es1 <- rho_es
 
 # Format data for Stan
 source_data <- list(  K = max(x$kcode),
@@ -71,7 +66,6 @@ source_data <- list(  K = max(x$kcode),
                       wdp = rho_wd1$wcode,
                       kwp = rho_wd1$kwcode,
                       rwp = rho_wd1$rwcode,
-                      kblp = as.numeric(rho_wd1$kbl),
                       rho_wd = rho_wd1$rho_wd,
                       rho_wd_se = rho_wd1$rho_wd_se,
                       
@@ -82,7 +76,6 @@ source_data <- list(  K = max(x$kcode),
                       esq = rho_es1$ecode,
                       keq = rho_es1$kecode,
                       req = rho_es1$recode,
-                      kblq = as.numeric(rho_es1$kbl),
                       rho_es = rho_es1$rho_es,
                       rho_es_se = rho_es1$rho_es_se
 )
