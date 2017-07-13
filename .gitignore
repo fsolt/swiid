@@ -4,7 +4,7 @@
 *.Rproj
 data-raw/from_Hu.csv
 data-raw/LISSY/net_sqrt_ru_all.txt
-data-raw/article_data/fs_reviewing.csv
+data-raw/article_data/*
 data-raw/OECD2008.pdf
 dev/*
 R/dcpo.R
