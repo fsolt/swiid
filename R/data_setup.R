@@ -2075,16 +2075,15 @@ rho_es_ke <- rho_es %>%
   pull(kes) %>% 
   unique()
 
-kyears <- ineq %>%
-  group_by(country) %>%
-  summarize(kcode = first(kcode),
-            firstyr = min(year),
+kyrs <- ineq %>%
+  group_by(kcode) %>%
+  summarize(firstyr = min(year),
             lastyr = max(year),
             n_yrs = year %>% unique() %>% length()) %>% 
   ungroup()
 
 ineq2 <- ineq %>% 
-  left_join(kyears, by = "country") %>% 
+  left_join(kyrs, by = "kcode") %>% 
   mutate(kwd = paste(country, str_replace(wdes, "_.*", "")),
          kes = paste(country, str_replace(wdes, ".*_", "")),
          rwd = paste(rcode, str_replace(wdes, "_.*", "")),
