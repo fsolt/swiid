@@ -35,6 +35,8 @@ data{
   vector<lower=0, upper=1>[N_bl] gini_b;  // baseline gini for obs n
   vector<lower=0, upper=1>[N_bl] gini_b_se; // std error of baseline gini for obs n
   
+  int<lower=1, upper=T> kyrs[K];          // number of years with observations in country k
+  
   int<lower=1> M;                         // number of observed ratios of baseline to wd_es (rho_we)
   int<lower=1, upper=K> kkm[M]; 	        // country for rho_we observation m
   int<lower=1, upper=R> rrm[M];           // region for rho_we observation m
@@ -123,7 +125,7 @@ model {
   sigma_re ~ cauchy(0, .1);
 
   for (k in 1:K) {
-    if (n_years > 1) {
+    if (kyrs[k] > 1) {
       gini[k][1] ~ normal(.35, .1);                         // a random draw from N(.35, .1) in first year
       gini[k][2:T] ~ normal(gini[k][1:T-1], sigma_gini[k]); // otherwise a random walk from previous year 
     } else {
