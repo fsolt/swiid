@@ -123,8 +123,12 @@ model {
   sigma_re ~ cauchy(0, .1);
 
   for (k in 1:K) {
-    gini[k][1] ~ normal(.35, .1);                         // a random draw from N(.35, .1) in first year
-    gini[k][2:T] ~ normal(gini[k][1:T-1], sigma_gini[k]); // otherwise a random walk from previous year 
+    if (n_years > 1) {
+      gini[k][1] ~ normal(.35, .1);                         // a random draw from N(.35, .1) in first year
+      gini[k][2:T] ~ normal(gini[k][1:T-1], sigma_gini[k]); // otherwise a random walk from previous year 
+    } else {
+      gini[k] ~ normal(.35, .1);                            // a random draw from N(.35, .1)
+    }
   }
 
   rho_we_hat[kwem] ~ normal(rho_we_t, sigma_we);  // estimate rho_we_hat
