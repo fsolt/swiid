@@ -1,23 +1,51 @@
-plot_tscs <- function(input, output, kt = FALSE, pars="gini", probs=c(.025, .975),
+plot_tscs <- function(input, output, kt = TRUE, pars="gini", probs=c(.025, .975),
                       dims, year_bounds, y_label, save_pdf = NA) {
-  
-  kcodes <- input %>%
-    group_by(country) %>%
-    summarize(kcode = first(kcode),
-              firstyr = min(year),
-              lastyr = max(year)) %>%
-    ungroup()
-  
-  ktcodes <- tibble(kcode = rep(1:max(input$kcode), each = max(input$tcode)),
-                    tcode = rep(1:max(input$tcode), times = max(input$kcode)),
-                    ktcode = (kcode-1)*max(tcode)+tcode) %>%
-    left_join(kcodes, by = "kcode") %>%
-    mutate(year = min(firstyr, na.rm = TRUE) + tcode - 1)  
   
   lb <- paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[1]
   ub <- paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[2]
   
-  if (!kt) {
+  if (kt) {
+    ktcodes <- input %>%     
+      group_by(kcode) %>%
+      summarize(country = first(country),
+                firstyr = min(year),
+                lastyr = max(year),
+                yrspan = (lastyr - firstyr) + 1) %>% 
+      ungroup() %>%  
+      slice(rep(1:n(), yrspan)) %>% 
+      group_by(kcode) %>% 
+      mutate(tcode = 1:n(),
+             year = firstyr + tcode - 1) %>% 
+      ungroup() %>% 
+      mutate(ktcode = 1:n()) %>%
+      
+    
+    gini_res <- rstan::summary(output, pars=pars, probs=probs) %>%
+      first() %>%
+      as.data.frame() %>%
+      rownames_to_column("parameter") %>%
+      as_tibble() %>%
+      janitor::clean_names() %>% 
+      mutate(estimate = mean,
+             lb = get(paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[1]),
+             ub = get(paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[2]),
+             ktcode = as.numeric(str_extract(parameter, "(?<=\\[)\\d+"))) %>%
+      left_join(ktcodes, by="ktcode") %>% 
+      arrange(kcode, tcode)
+  } else {
+    kcodes <- input %>%
+      group_by(country) %>%
+      summarize(kcode = first(kcode),
+                firstyr = min(year),
+                lastyr = max(year)) %>%
+      ungroup()
+    
+    ktcodes <- tibble(kcode = rep(1:max(input$kcode), each = max(input$tcode)),
+                      tcode = rep(1:max(input$tcode), times = max(input$kcode)),
+                      ktcode = (kcode-1)*max(tcode)+tcode) %>%
+      left_join(kcodes, by = "kcode") %>%
+      mutate(year = min(firstyr, na.rm = TRUE) + tcode - 1)  
+    
     gini_res <- rstan::summary(output, pars=pars, probs=probs) %>%
       first() %>%
       as.data.frame() %>%
@@ -31,19 +59,6 @@ plot_tscs <- function(input, output, kt = FALSE, pars="gini", probs=c(.025, .975
              tcode = as.numeric(str_extract(parameter, "(?<=,)\\d+"))) %>%
       left_join(ktcodes, by=c("kcode", "tcode")) %>%
       arrange(kcode, tcode)
-  } else {
-    gini_res <- rstan::summary(output, pars=pars, probs=probs) %>%
-      first() %>%
-      as.data.frame() %>%
-      rownames_to_column("parameter") %>%
-      as_tibble() %>%
-      janitor::clean_names() %>% 
-      mutate(estimate = mean,
-             lb = get(paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[1]),
-             ub = get(paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[2]),
-             ktcode = as.numeric(str_extract(parameter, "(?<=\\[)\\d+"))) %>%
-      left_join(ktcodes, by="ktcode")
-    arrange(kcode, tcode)
   }
   
   if (missing(dims)) {
