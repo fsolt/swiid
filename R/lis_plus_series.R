@@ -19,12 +19,10 @@ x0 <- ineq2 %>%
   mutate(tcode = as.integer(year - min(year) + 1)) %>% 
   ungroup()
 
-kt <- x0 %>%     
-  group_by(kcode) %>%
-  summarize(firstyr = min(year),
-            lastyr = max(year),
+kt <- x0 %>%  
+  transmute(kcode = kcode,
             yrspan = (lastyr - firstyr) + 1) %>% 
-  ungroup() %>%  
+  distinct(kcode, yrspan) %>% 
   slice(rep(1:n(), yrspan)) %>% 
   group_by(kcode) %>% 
   mutate(tcode = 1:n()) %>% 
@@ -36,7 +34,7 @@ x <- x0 %>%
 
 kn <- x %>% 
   group_by(kcode) %>% 
-  summarize(kt1 = first(ktcode),
+  summarize(kt1 = min(ktcode),
             yrspan = first(yrspan)) %>% 
   ungroup()
 

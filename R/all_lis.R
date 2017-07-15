@@ -15,7 +15,8 @@ x0 <- ineq2 %>%
   filter(k_bl_obs > gt) %>% 
   mutate(kcode = as.integer(factor(country, levels = unique(country))),
          rcode = as.integer(factor(region, levels = unique(region))),
-         scode = as.integer(factor(series, levels = unique(series))),wecode = as.integer(factor(wdes, levels = unique(wdes))),
+         scode = as.integer(factor(series, levels = unique(series))),
+         wecode = as.integer(factor(wdes, levels = unique(wdes))),
          kwecode = as.integer(factor(100*kcode+wecode)),
          wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)),
          ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es))) %>%  # redo codes for filtered sample
@@ -23,12 +24,10 @@ x0 <- ineq2 %>%
   mutate(tcode = as.integer(year - min(year) + 1)) %>% 
   ungroup()
 
-kt <- x0 %>%     
-  group_by(kcode) %>%
-  summarize(firstyr = min(year),
-            lastyr = max(year),
+kt <- x0 %>%  
+  transmute(kcode = kcode,
             yrspan = (lastyr - firstyr) + 1) %>% 
-  ungroup() %>%  
+  distinct(kcode, yrspan) %>% 
   slice(rep(1:n(), yrspan)) %>% 
   group_by(kcode) %>% 
   mutate(tcode = 1:n()) %>% 
@@ -40,7 +39,7 @@ x <- x0 %>%
 
 kn <- x %>% 
   group_by(kcode) %>% 
-  summarize(kt1 = first(ktcode),
+  summarize(kt1 = min(ktcode),
             yrspan = first(yrspan)) %>% 
   ungroup()
 
@@ -52,10 +51,11 @@ x_wecodes <- x %>%
 rho_we <- rho_we %>% 
   filter(country %in% x_countries) %>% 
   select(-matches("code")) %>% 
-  left_join(x %>% select("country", "year", "kcode", "tcode", "rcode") %>% distinct(),
-            by = c("country", "year")) %>% 
-  left_join(x_wecodes, by = "wdes") %>% 
-  mutate(kwecode = as.integer(factor(100*kcode+wecode)))
+  left_join(x %>% 
+              select("country", "year", "kcode", "tcode", "rcode", 
+                     "wdes", "wecode", "wcode", "ecode", "kwecode") %>%
+              distinct(),
+            by = c("country", "year", "wdes")) 
 
 # Format data for Stan
 source_data <- list(  K = max(x$kcode),
