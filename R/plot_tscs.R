@@ -5,20 +5,18 @@ plot_tscs <- function(input, output, kt = TRUE, pars="gini", probs=c(.025, .975)
   ub <- paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[2]
   
   if (kt) {
-    ktcodes <- input %>%     
-      group_by(kcode) %>%
-      summarize(country = first(country),
-                firstyr = min(year),
-                lastyr = max(year),
+    ktcodes <- input %>%  
+      transmute(kcode = kcode,
+                country = country,
+                firstyr = firstyr,
                 yrspan = (lastyr - firstyr) + 1) %>% 
-      ungroup() %>%  
+      distinct() %>% 
       slice(rep(1:n(), yrspan)) %>% 
       group_by(kcode) %>% 
       mutate(tcode = 1:n(),
              year = firstyr + tcode - 1) %>% 
       ungroup() %>% 
       mutate(ktcode = 1:n())
-      
     
     gini_res <- rstan::summary(output, pars=pars, probs=probs) %>%
       first() %>%
