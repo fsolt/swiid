@@ -10,13 +10,34 @@ iter <- 1000
 chains <- 4
 cores <- chains
 
-x <- ineq2 
+kt <- ineq2 %>%     
+  group_by(kcode) %>%
+  summarize(firstyr = min(year),
+            lastyr = max(year),
+            yrspan = (lastyr - firstyr) + 1) %>% 
+  ungroup() %>%  
+  slice(rep(1:n(), yrspan)) %>% 
+  group_by(kcode) %>% 
+  mutate(tcode = 1:n()) %>% 
+  ungroup() %>% 
+  mutate(ktcode = 1:n())
+
+x <- ineq2 %>% 
+  left_join(kt, by = c("kcode", "tcode"))
+
+kn <- x %>% 
+  group_by(kcode) %>% 
+  summarize(kt1 = first(ktcode),
+            yrspan = first(yrspan)) %>% 
+  ungroup()
+
 rho_wd1 <- rho_wd
 rho_es1 <- rho_es
 
 # Format data for Stan
 source_data <- list(  K = max(x$kcode),
                       T = max(x$tcode),
+                      KT = nrow(kt),
                       R = max(x$rcode),
                       S = max(x$scode),
                       WE = max(x$wecode),
@@ -37,6 +58,13 @@ source_data <- list(  K = max(x$kcode),
                       
                       kk = x$kcode,
                       tt = x$tcode,
+                      kk = x$kcode,
+                      tt = x$tcode,
+                      kktt = x$ktcode,
+                      ktt = kt$tcode,
+                      ktk = kt$kcode,
+                      kn = kn$yrspan,
+                      kt1 = kn$kt1,
                       rr = x$rcode,
                       ss = x$scode,
                       wen = x$wecode,

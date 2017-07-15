@@ -1,6 +1,7 @@
 data{
   int<lower=1> K;     		                // number of countries
-  int<lower=1> T; 				                // number of years
+  int<lower=1> T;     		                // (maximum) number of years
+  int<lower=1> KT;                        // number of observed & interpolated country-years
   int<lower=1> R;                         // number of regions
   int<lower=1> S; 				                // number of series (in countries with baseline)
   int<lower=1> WE;                        // number of combos of welfare def and eq scale ("wd_es")
@@ -21,8 +22,13 @@ data{
   int<lower=1> N_rk;                      // last n of obs with ratios to baseline equiv scale only
   
   int<lower=1, upper=K> kk[N]; 	          // country for observation n
-  int<lower=1, upper=R> rr[N];            // region for observation n
   int<lower=1, upper=T> tt[N]; 	          // year for observation n
+  int<lower=1, upper=KT> kktt[N];         // country-year for observation n
+  int<lower=1, upper=T> ktt[KT]; 	        // year for country-year kt ("country-year-year")
+  int<lower=1, upper=K> ktk[KT]; 	        // country for country-year kt ("country-year-country")
+  int<lower=1, upper=T> kn[K];            // number of observed & interpolated country-years by country
+  int<lower=1, upper=KT> kt1[K];          // location of first kt for country k
+  int<lower=1, upper=R> rr[N];            // region for observation n
   int<lower=1, upper=S> ss[N];            // series for observation n
   int<lower=1, upper=WE> wen[N];          // wd_es for observation n
   int<lower=1, upper=KWE> kwen[N];        // kwe for observation n
@@ -125,11 +131,11 @@ model {
   sigma_re ~ cauchy(0, .1);
 
   for (k in 1:K) {
-    if (kyrs[k] > 1) {
-      gini[k][1] ~ normal(.35, .1);                         // a random draw from N(.35, .1) in first year
-      gini[k][2:T] ~ normal(gini[k][1:T-1], sigma_gini[k]); // otherwise a random walk from previous year 
+    if (kn[k] > 1) {
+      gini[kt1[k]] ~ normal(.35, .1);                         // a random draw from N(.35, .1) in first year
+      gini[(kt1[k]+1):(kt1[k]+kn[k]-1)] ~ normal(gini[(kt1[k]):(kt1[k]+kn[k]-2)], sigma_gini[k]); // otherwise a random walk from previous year 
     } else {
-      gini[k] ~ normal(.35, .1);                            // a random draw from N(.35, .1)
+      gini[kt1[k]] ~ normal(.35, .1);                            // a random draw from N(.35, .1)
     }
   }
 
@@ -143,20 +149,20 @@ model {
 
   for (n in 1:N) {
     if (n <= N_bl) { // lis obs
-      gini[kk[n]][tt[n]] ~ normal(gini_b[n], gini_b_se[n]); // use baseline series where observed
+      gini[kktt[n]] ~ normal(gini_b[n], gini_b_se[n]); // use baseline series where observed
       gini_b[n] ~ normal(rho_s[ss[n]] * gini_t[n], sigma_s); // estimate rho_s, sigma_s
     } else if (n <= N_obl) {              // obs in series that overlap lis
-      gini[kk[n]][tt[n]] ~ normal(gini_t[n] * rho_s[ss[n]], sigma_s); // estimate gini
+      gini[kktt[n]] ~ normal(gini_t[n] * rho_s[ss[n]], sigma_s); // estimate gini
     } else if (n <= N_kbl) {              // obs in lis countries that do not overlap lis
-      gini[kk[n]][tt[n]] ~ normal(rho_we_hat[kwen[n]] * gini_t[n], sigma_we);  // estimate gini
+      gini[kktt[n]] ~ normal(rho_we_hat[kwen[n]] * gini_t[n], sigma_we);  // estimate gini
     } else if (n <= N_kk) {               // obs in countries with both rho_kw and rho_ke
-      gini[kk[n]][tt[n]] ~ normal(rho_kw_hat[kwn[n]] * rho_ke_hat[ken[n]] * gini_t[n], sigma_kkcat); // estimate gini
+      gini[kktt[n]] ~ normal(rho_kw_hat[kwn[n]] * rho_ke_hat[ken[n]] * gini_t[n], sigma_kkcat); // estimate gini
     } else if (n <= N_kr) {               // obs in countries with rho_kw only
-      gini[kk[n]][tt[n]] ~ normal(rho_kw_hat[kwn[n]] * rho_re_hat[ren[n]] * gini_t[n], sigma_krcat); // estimate gini
+      gini[kktt[n]] ~ normal(rho_kw_hat[kwn[n]] * rho_re_hat[ren[n]] * gini_t[n], sigma_krcat); // estimate gini
     } else if (n <= N_rk) {               // obs in countries with rho_ke only
-      gini[kk[n]][tt[n]] ~ normal(rho_rw_hat[rwn[n]] * rho_ke_hat[ken[n]] * gini_t[n], sigma_rkcat); // estimate gini
+      gini[kktt[n]] ~ normal(rho_rw_hat[rwn[n]] * rho_ke_hat[ken[n]] * gini_t[n], sigma_rkcat); // estimate gini
     } else {
-      gini[kk[n]][tt[n]] ~ normal(rho_rw_hat[rwn[n]] * rho_re_hat[ren[n]] * gini_t[n], sigma_rrcat); // estimate gini
+      gini[kktt[n]] ~ normal(rho_rw_hat[rwn[n]] * rho_re_hat[ren[n]] * gini_t[n], sigma_rrcat); // estimate gini
     }
   }
 }
