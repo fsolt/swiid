@@ -17,7 +17,7 @@ plot_tscs <- function(input, output, kt = TRUE, pars="gini", probs=c(.025, .975)
       mutate(tcode = 1:n(),
              year = firstyr + tcode - 1) %>% 
       ungroup() %>% 
-      mutate(ktcode = 1:n()) %>%
+      mutate(ktcode = 1:n())
       
     
     gini_res <- rstan::summary(output, pars=pars, probs=probs) %>%
