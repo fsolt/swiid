@@ -1,5 +1,6 @@
 data{
   int<lower=1> K;     		                // number of countries
+  int<lower=1> T;     		                // (maximum) number of years
   int<lower=1> KT;                        // number of observed & interpolated country-years
   int<lower=0> N;                         // total number of observations
   int<lower=0> N_b;                       // total number of observations with baseline
@@ -25,7 +26,7 @@ model {
   for (k in 1:K) {
     if (kn[k] > 1) {
       gini[kt1[k]] ~ normal(.35, .1);                         // a random draw from N(.35, .1) in first year
-      gini[(kt1[k]+1):(kt1[k+1]-1)] ~ normal(gini[kt-1], sigma_gini[k]); // otherwise a random walk from previous year 
+      gini[(kt1[k]+1):(kt1[k]+kn[k]-1)] ~ normal(gini[(kt1[k]):(kt1[k]+kn[k]-2)], sigma_gini[k]); // otherwise a random walk from previous year 
     } else {
       gini[kt1[k]] ~ normal(.35, .1);                            // a random draw from N(.35, .1)
     }
