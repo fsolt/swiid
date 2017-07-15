@@ -11,7 +11,7 @@ chains <- 4
 cores <- chains
 gt <- 0
 
-x <- ineq %>%  
+x0 <- ineq2 %>%  
   filter(k_bl_obs > gt) %>% 
   mutate(kcode = as.integer(factor(country, levels = unique(country)))) %>%  # redo codes for filtered sample
   group_by(country) %>% 
