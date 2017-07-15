@@ -11,20 +11,43 @@ chains <- 4
 cores <- chains
 gt <- 4
 
-x <- baseline %>% 
+x0 <- baseline %>% 
   filter(k_bl_obs > gt) %>% 
-  mutate(kcode = as.integer(factor(country, levels = unique(country))), # redo codes for filtered sample
-         tcode = as.integer(year - min(year) + 1))
+  mutate(kcode = as.integer(factor(country, levels = unique(country)))) %>%  # redo codes for filtered sample
+  group_by(country) %>% 
+    mutate(tcode = as.integer(year - min(year) + 1)) %>% 
+  ungroup()
+
+kt <- x0 %>%     
+  group_by(kcode) %>%
+  summarize(firstyr = min(year),
+            lastyr = max(year),
+            yrspan = (lastyr - firstyr) + 1) %>% 
+  ungroup() %>%  
+  slice(rep(1:n(), each = yrspan)) %>% 
+  group_by(kcode) %>% 
+  mutate(tcode = 1:n()) %>% 
+  ungroup() %>% 
+  mutate(ktcode = 1:n())
+
+kn = kt %>% 
+  select(kcode, yrspan) %>% 
+  distinct()
+
+x <- x0 %>% 
+  left_join(kt, by = c("kcode", "tcode"))
 
 source_data <- list(  K = max(x$kcode),
                       T = max(x$tcode),
+                      KT = nrow(kt),
                       N = length(x$gini_b),
                       N_b = length(x$gini_b[!is.na(x$gini_b)]),
                       kk = x$kcode,
                       tt = x$tcode,
-                      kktt = (x$kcode-1)*max(x$tcode)+x$tcode,
-                      ktt = rep(1:max(x$tcode), times = max(x$kcode)),
-                      ktk = rep(1:max(x$kcode), each = max(x$tcode)),
+                      kktt = x$ktcode,
+                      ktt = kt$kcode,
+                      ktk = kt$tcode,
+                      kn = kn$yrspan,
                       gini_b = x$gini_b[!is.na(x$gini_b)],
                       gini_b_se = x$gini_b_se[!is.na(x$gini_b_se)]
 )
