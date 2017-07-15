@@ -6,14 +6,19 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 1000
-chains <- 4
+iter <- 10
+chains <- 1
 cores <- chains
 gt <- 0
 
 x0 <- ineq2 %>%  
   filter(k_bl_obs > gt) %>% 
-  mutate(kcode = as.integer(factor(country, levels = unique(country)))) %>%  # redo codes for filtered sample
+  mutate(kcode = as.integer(factor(country, levels = unique(country))),
+         rcode = as.integer(factor(region, levels = unique(region))),
+         scode = as.integer(factor(series, levels = unique(series))),wecode = as.integer(factor(wdes, levels = unique(wdes))),
+         kwecode = as.integer(factor(100*kcode+wecode)),
+         wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)),
+         ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es))) %>%  # redo codes for filtered sample
   group_by(country) %>% 
   mutate(tcode = as.integer(year - min(year) + 1)) %>% 
   ungroup()
@@ -59,7 +64,7 @@ source_data <- list(  K = max(x$kcode),
                       R = max(x$rcode),
                       S = max(x$scode),
                       WE = max(x$wecode),
-                      KWE = max(rho$kwecode),
+                      KWE = max(rho_we$kwecode),
                       W = max(x$wcode),
                       E = max(x$ecode),
                       N = length(x$gini_m),

@@ -13,7 +13,8 @@ gt <- 3
 
 x0 <- ineq2 %>%  
   filter(k_bl_obs > gt & s_bl_obs > 1) %>% 
-  mutate(kcode = as.integer(factor(country, levels = unique(country)))) %>%  # redo codes for filtered sample
+  mutate(kcode = as.integer(factor(country, levels = unique(country))),
+         scode = as.integer(factor(series, levels = unique(series)))) %>%  # redo codes for filtered sample
   group_by(country) %>% 
   mutate(tcode = as.integer(year - min(year) + 1)) %>% 
   ungroup()
