@@ -13,14 +13,31 @@ gt <- 0
 
 x <- ineq %>%  
   filter(k_bl_obs > gt) %>% 
-  mutate(kcode = as.integer(factor(country, levels = unique(country))),  # redo codes for filtered sample
-         tcode = as.integer(year - min(year) + 1),
-         rcode = as.integer(factor(region, levels = unique(region))),
-         scode = as.integer(factor(series, levels = unique(series))),
-         wecode = as.integer(factor(wdes, levels = unique(wdes))),
-         kwecode = as.integer(factor(100*kcode+wecode)),
-         wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)),
-         ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)))
+  mutate(kcode = as.integer(factor(country, levels = unique(country)))) %>%  # redo codes for filtered sample
+  group_by(country) %>% 
+  mutate(tcode = as.integer(year - min(year) + 1)) %>% 
+  ungroup()
+
+kt <- x0 %>%     
+  group_by(kcode) %>%
+  summarize(firstyr = min(year),
+            lastyr = max(year),
+            yrspan = (lastyr - firstyr) + 1) %>% 
+  ungroup() %>%  
+  slice(rep(1:n(), yrspan)) %>% 
+  group_by(kcode) %>% 
+  mutate(tcode = 1:n()) %>% 
+  ungroup() %>% 
+  mutate(ktcode = 1:n())
+
+x <- x0 %>% 
+  left_join(kt, by = c("kcode", "tcode"))
+
+kn <- x %>% 
+  group_by(kcode) %>% 
+  summarize(kt1 = first(ktcode),
+            yrspan = first(yrspan)) %>% 
+  ungroup()
 
 x_countries <- unique(x$country)
 x_wecodes <- x %>%
@@ -38,6 +55,7 @@ rho_we <- rho_we %>%
 # Format data for Stan
 source_data <- list(  K = max(x$kcode),
                       T = max(x$tcode),
+                      KT = nrow(kt),
                       R = max(x$rcode),
                       S = max(x$scode),
                       WE = max(x$wecode),
@@ -49,6 +67,11 @@ source_data <- list(  K = max(x$kcode),
                       N_obl = length(x$s_bl_obs[x$s_bl_obs>0]),
                       kk = x$kcode,
                       tt = x$tcode,
+                      kktt = x$ktcode,
+                      ktt = kt$tcode,
+                      ktk = kt$kcode,
+                      kn = kn$yrspan,
+                      kt1 = kn$kt1,
                       rr = x$rcode,
                       ss = x$scode,
                       wen = x$wecode,
