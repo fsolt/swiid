@@ -6,7 +6,7 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 1000
+iter <- 2000
 chains <- 4
 cores <- chains
 
@@ -49,6 +49,8 @@ source_data <- list(  K = max(x$kcode),
                       gini_m_se = x$gini_m_se,
                       gini_b = x$gini_b[!is.na(x$gini_b)],
                       gini_b_se = x$gini_b_se[!is.na(x$gini_b_se)],
+                      
+                      kyrs = kyrs$n_yrs,
                       
                       M = length(rho_we$rho),
                       kkm = rho_we$kcode,      
