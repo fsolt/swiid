@@ -69,7 +69,7 @@ data{
   
 parameters {
   row_vector<lower=0, upper=1>[T] gini[K];  // SWIID gini estimate of baseline in country k at time t
-  real<lower=0, upper=.02> sigma_gini[K]; 	// country variance parameter (see Linzer and Stanton 2012, 12)
+  real<lower=0> sigma_gini[K]; 	// country variance parameter (see Linzer and Stanton 2012, 12)
   vector<lower=0, upper=1>[N] gini_t;       // unknown "true" gini given gini_m and gini_m_se
   vector<lower=0>[M] rho_we_t;     // unknown "true" rho_we given rho_we and rho_we_se
   vector<lower=0>[P] rho_wd_t;     // unknown "true" rho_wd given rho_wd and rho_wd_se
