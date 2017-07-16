@@ -6,7 +6,7 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 10
+iter <- 2000
 chains <- 1
 cores <- chains
 
@@ -124,7 +124,7 @@ runtime
 lapply(get_sampler_params(out1, inc_warmup = FALSE),
        summary, digits = 2)
 
-save(out1, file = str_c("data/all_", iter/1000, "k_",
+save(out1, file = str_c("data/all_kt_", iter/1000, "k_",
                         str_replace(Sys.time(), " ", "_") %>% str_replace("2017-", ""), ".rda"))
 
 beep() # chime

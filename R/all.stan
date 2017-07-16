@@ -41,8 +41,6 @@ data{
   vector<lower=0, upper=1>[N_bl] gini_b;  // baseline gini for obs n
   vector<lower=0, upper=1>[N_bl] gini_b_se; // std error of baseline gini for obs n
   
-  int<lower=1, upper=T> kyrs[K];          // number of years with observations in country k
-  
   int<lower=1> M;                         // number of observed ratios of baseline to wd_es (rho_we)
   int<lower=1, upper=K> kkm[M]; 	        // country for rho_we observation m
   int<lower=1, upper=R> rrm[M];           // region for rho_we observation m
@@ -74,7 +72,7 @@ data{
 }  
   
 parameters {
-  row_vector<lower=0, upper=1>[T] gini[K];  // SWIID gini estimate of baseline in country k at time t
+  real<lower=0, upper=1> gini[KT];        // SWIID gini estimate for baseline in country k at time t
   real<lower=0, upper=.02> sigma_gini[K]; 	// country variance parameter (see Linzer and Stanton 2012, 12)
   vector<lower=0, upper=1>[N] gini_t;       // unknown "true" gini given gini_m and gini_m_se
   vector<lower=0>[M] rho_we_t;     // unknown "true" rho_we given rho_we and rho_we_se
