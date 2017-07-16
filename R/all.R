@@ -6,16 +6,14 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 2000
-chains <- 1
+iter <- 100
+chains <- 4
 cores <- chains
 
-kt <- ineq2 %>%     
-  group_by(kcode) %>%
-  summarize(firstyr = min(year),
-            lastyr = max(year),
+kt <- ineq2 %>%  
+  transmute(kcode = kcode,
             yrspan = (lastyr - firstyr) + 1) %>% 
-  ungroup() %>%  
+  distinct(kcode, yrspan) %>% 
   slice(rep(1:n(), yrspan)) %>% 
   group_by(kcode) %>% 
   mutate(tcode = 1:n()) %>% 
@@ -124,12 +122,13 @@ runtime
 lapply(get_sampler_params(out1, inc_warmup = FALSE),
        summary, digits = 2)
 
-save(out1, file = str_c("data/all_kt_", iter/1000, "k_",
+save(out1, file = str_c("data/all_kt1_", iter/1000, "k_",
                         str_replace(Sys.time(), " ", "_") %>% str_replace("2017-", ""), ".rda"))
 
 beep() # chime
 
 
 # Plots
+source("R/plot_tscs.R")
 plot_tscs(x, out1, save_pdf = "paper/figures/ts_all.pdf")
 plot_tscs(x, out1)
