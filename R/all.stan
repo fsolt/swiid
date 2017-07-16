@@ -80,41 +80,27 @@ parameters {
   vector<lower=0>[Q] rho_es_t;     // unknown "true" rho_es given rho_es and rho_es_se
   
   vector<lower=0>[S] rho_s;     // ratio of baseline to series s
-  real<lower=0> sigma_s0; 	      // series noise 
+  real<lower=0> sigma_s; 	      // series noise 
   
   vector[KWE] rho_we_hat;       // estimated rho_we 
-  real<lower=0> sigma_we0;       // rho_we noise
+  real<lower=0> sigma_we;       // rho_we noise
   
   vector[KW] rho_kw_hat;        // estimated rho_wd by country
-  real<lower=0> sigma_kw0;       // rho_kw noise
+  real<lower=0> sigma_kw;       // rho_kw noise
   vector[RE] rho_rw_hat;        // estimated rho_wd by region
-  real<lower=0> sigma_rw0;       // rho_rw noise
+  real<lower=0> sigma_rw;       // rho_rw noise
   
   vector[KE] rho_ke_hat;        // estimated rho_es by country
-  real<lower=0> sigma_ke0;       // rho_ke noise
+  real<lower=0> sigma_ke;       // rho_ke noise
   vector[RE] rho_re_hat;        // estimated rho_es by region
-  real<lower=0> sigma_re0;       // rho_re noise
+  real<lower=0> sigma_re;       // rho_re noise
 }
 
 transformed parameters {
-  real<lower=0> sigma_s;
-  real<lower=0> sigma_we;
-  real<lower=0> sigma_kw;
-  real<lower=0> sigma_rw;
-  real<lower=0> sigma_ke;
-  real<lower=0> sigma_re;
-
   real<lower=0> sigma_kkcat;
   real<lower=0> sigma_krcat;
   real<lower=0> sigma_rkcat;
   real<lower=0> sigma_rrcat;
-  
-  sigma_s  = sigma_s0 * .05;
-  sigma_we = sigma_we0 * .05;
-  sigma_kw = sigma_kw0 * .05;
-  sigma_rw = sigma_rw0 * .1;
-  sigma_ke = sigma_ke0 * .05;
-  sigma_re = sigma_re0 * .1;
   
   sigma_kkcat = sqrt(square(sigma_kw) + square(sigma_ke));
   sigma_krcat = sqrt(square(sigma_kw) + sqrt(square(sigma_re) + square(sigma_ke)));
@@ -137,12 +123,12 @@ model {
   rho_ke_hat ~ normal(1, .2);
   rho_re_hat ~ normal(1, .2);
   
-  sigma_s0 ~ cauchy(0, 1);
-  sigma_we0 ~ cauchy(0, 1);
-  sigma_kw0 ~ cauchy(0, 1);
-  sigma_rw0 ~ cauchy(0, 1);
-  sigma_ke0 ~ cauchy(0, 1);
-  sigma_re0 ~ cauchy(0, 1);
+  sigma_s ~ cauchy(0, .05);
+  sigma_we ~ cauchy(0, .05);
+  sigma_kw ~ cauchy(0, .05);
+  sigma_rw ~ cauchy(0, .1);
+  sigma_ke ~ cauchy(0, .05);
+  sigma_re ~ cauchy(0, .1);
 
   for (k in 1:K) {
     if (kn[k] > 1) {
