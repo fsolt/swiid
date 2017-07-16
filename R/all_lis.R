@@ -116,5 +116,6 @@ beep() # chime
 
 
 # Plots
+source("R/plot_tscs.R")
 plot_tscs(x, out1, save_pdf = "paper/figures/ts_all_lis.pdf")
 plot_tscs(x, out1)
