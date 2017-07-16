@@ -67,11 +67,9 @@ model {
       gini[kt1[k]] ~ normal(.35, .1);                            // a random draw from N(.35, .1)
     }
   }
-  
-  for (m in 1:M) {
-    rho_we_hat[kwem[m]] ~ normal(rho_we_t[m], sigma_we);  // estimate rho_we_hat
-  }
-  
+
+  rho_we_hat[kwem] ~ normal(rho_we_t, sigma_we);  // estimate rho_we_hat
+
   for (n in 1:N) {
     if (n <= N_bl) {
       gini[kktt[n]] ~ normal(gini_b[n], gini_b_se[n]); // use baseline series where observed
