@@ -2939,18 +2939,24 @@ Egypt,1995,0.326,,con,pc,,FR2008 Egypt con pc,Ferreira and Ravallion 2008,36,htt
 Egypt,1996,0.345,,con,pc,,AP2003 Egypt con pc,Adams and Page 2003,2040,https://doi.org/10.1016/j.worlddev.2003.04.004
 Egypt,1996,0.301,,con,pc,,Shaban2016 Egypt con pc,Povcalnet; Shaban 2016,196,https://link.springer.com/chapter/10.1057/9781137554598_6
 Egypt,1997,0.35,,con,pc,,AP2003 Egypt con pc,Adams and Page 2003,2040,https://doi.org/10.1016/j.worlddev.2003.04.004
+Egypt,1998,0.327,0.01,con,pc,,KANRVZ2017 Egypt con pc 2,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
 Egypt,2e3,0.378,,con,pc,,AP2003 Egypt con pc,Adams and Page 2003,2040,https://doi.org/10.1016/j.worlddev.2003.04.004
 Egypt,2e3,0.36100000000000004,,con,pc,FALSE,CAPMAS con pc,Central Agency for Public Mobilization and Statistics Egypt,"",http://www.msrintranet.capmas.gov.eg/pdf/studies/inds/EG-LIV-E-I.xls
 Egypt,2e3,0.335,,con,pc,,Hassine2015 Egypt con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
+Egypt,2e3,0.339,0.033,con,pc,,KANRVZ2017 Egypt con pc,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
 Egypt,2e3,0.328,,con,pc,,Shaban2016 Egypt con pc,Povcalnet; Shaban 2016,196,https://link.springer.com/chapter/10.1057/9781137554598_6
 Egypt,2004,0.332,,con,pc,FALSE,CAPMAS con pc,Central Agency for Public Mobilization and Statistics Egypt,"",http://www.msrintranet.capmas.gov.eg/pdf/studies/inds/EG-LIV-E-I.xls
 Egypt,2005,0.318,,con,pc,,GIDD Egypt con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
 Egypt,2005,0.317,,con,pc,,Hassine2015 Egypt con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
+Egypt,2005,0.32,0.028,con,pc,,KANRVZ2017 Egypt con pc,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
 Egypt,2005,0.321,,con,pc,,Shaban2016 Egypt con pc,Povcalnet; Shaban 2016,196,https://link.springer.com/chapter/10.1057/9781137554598_6
+Egypt,2006,0.328,0.009,con,pc,,KANRVZ2017 Egypt con pc 2,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
 Egypt,2008,0.311,,con,pc,FALSE,CAPMAS con pc,Central Agency for Public Mobilization and Statistics Egypt,"",http://www.msrintranet.capmas.gov.eg/pdf/studies/inds/EG-LIV-E-I.xls
 Egypt,2008,0.308,,con,pc,,Shaban2016 Egypt con pc,Povcalnet; Shaban 2016,196,https://link.springer.com/chapter/10.1057/9781137554598_6
 Egypt,2009,0.306,,con,pc,,Hassine2015 Egypt con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Egypt,2010,0.31,,con,pc,FALSE,CAPMAS con pc,Central Agency for Public Mobilization and Statistics Egypt,"",http://www.msrintranet.capmas.gov.eg/pdf/studies/inds/EG-LIV-E-I.xls
+Egypt,2012,0.297,0.02,con,pc,,KANRVZ2017 Egypt con pc,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
+Egypt,2012,0.295,0.02,con,pc,,KANRVZ2017 Egypt con pc 2,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
 Egypt,2012,0.4816,0.0035,disp,hh,FALSE,LIS disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/eg.txt
 Egypt,2012,0.4973,0.0038,disp,pc,FALSE,LIS disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/eg.txt
 Egypt,2012,0.4693,0.0039,disp,sqrt,FALSE,LIS disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/eg.txt
@@ -5462,7 +5468,9 @@ Jordan,2006,0.377,,con,pc,,Shaban2016 Jordan con pc,Povcalnet; Shaban 2016,196,h
 Jordan,2008,0.326,,con,pc,,Hassine2015 Jordan con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Jordan,2008,0.338,,con,pc,,Shaban2016 Jordan con pc,Povcalnet; Shaban 2016,196,https://link.springer.com/chapter/10.1057/9781137554598_6
 Jordan,2009,0.3254,,con,pc,FALSE,CEQ Jordan con pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_April27_2017.xlsx
+Jordan,2010,0.362,0.034,con,pc,,KANRCZ2017 Jordan con pc,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
 Jordan,2010,0.354,,con,pc,,Shaban2016 Jordan con pc,Povcalnet; Shaban 2016,196,https://link.springer.com/chapter/10.1057/9781137554598_6
+Jordan,2014,0.353,0.012,con,pc,,KANRCZ2017 Jordan con pc 2,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
 Kazakhstan,1988,0.291,,gross,pc,,AG1993 Kazakstan gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,120,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Kazakhstan,1988,0.25739999999999996,,gross,pc,FALSE,Povcalnet Kazakhstan gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Kazakhstan,1989,0.281,,disp,pc,FALSE,Transmonee Kazakhstan disp pc,Transmonee 2012,"",https://web.archive.org/web/20130401075747/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
@@ -9552,7 +9560,9 @@ Tunisia,2005,0.406,,con,pc,,Hassine2015 Tunisia con pc,Hassine 2015,537,https://
 Tunisia,2005,0.37729999999999997,,con,pc,FALSE,Povcalnet Tunisia con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Tunisia,2010,0.3812,,con,pc,FALSE,CEQ Tunisia con pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_April27_2017.xlsx
 Tunisia,2010,0.383,,con,pc,,Hassine2015 Tunisia con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
+Tunisia,2010,0.385,0.017,con,pc,,KANRCZ2017 Tunisia con pc,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
 Tunisia,2010,0.35810000000000003,,con,pc,FALSE,Povcalnet Tunisia con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Tunisia,2012,0.337,0.011,con,pc,,KANRCZ2017 Tunisia con pc 2,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
 Turkey,1987,0.434,,disp,sqrt,FALSE,"OECD Turkey disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,1987,0.435,,disp,sqrt,FALSE,"OECD Turkey disp sqrt, previous def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,1987,0.33,,con,hh,,Park1995 Turkey con hh,Tabatabai 1996; Park 1995,118,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
