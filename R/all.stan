@@ -110,7 +110,7 @@ transformed parameters {
 
 model {
   sigma_gini ~ normal(0, .015);
-  
+
   gini_t ~ normal(gini_m, gini_m_se);
   rho_we_t ~ normal(rho_we, rho_we_se);
   rho_wd_t ~ normal(rho_wd, rho_wd_se);
@@ -146,23 +146,13 @@ model {
 
   rho_re_hat[req] ~ normal(rho_es_t, sigma_re);   // estimate rho_re_hat
   rho_ke_hat[keq] ~ normal(rho_es_t, sigma_ke);   // estimate rho_ke_hat
-
-  for (n in 1:N) {
-    if (n <= N_bl) { // lis obs
-      gini[kktt[n]] ~ normal(gini_b[n], gini_b_se[n]); // use baseline series where observed
-      gini_b[n] ~ normal(rho_s[ss[n]] * gini_t[n], sigma_s); // estimate rho_s, sigma_s
-    } else if (n <= N_obl) {              // obs in series that overlap lis
-      gini[kktt[n]] ~ normal(gini_t[n] * rho_s[ss[n]], sigma_s); // estimate gini
-    } else if (n <= N_kbl) {              // obs in lis countries that do not overlap lis
-      gini[kktt[n]] ~ normal(rho_we_hat[kwen[n]] * gini_t[n], sigma_we);  // estimate gini
-    } else if (n <= N_kk) {               // obs in countries with both rho_kw and rho_ke
-      gini[kktt[n]] ~ normal(rho_kw_hat[kwn[n]] * rho_ke_hat[ken[n]] * gini_t[n], sigma_kkcat); // estimate gini
-    } else if (n <= N_kr) {               // obs in countries with rho_kw only
-      gini[kktt[n]] ~ normal(rho_kw_hat[kwn[n]] * rho_re_hat[ren[n]] * gini_t[n], sigma_krcat); // estimate gini
-    } else if (n <= N_rk) {               // obs in countries with rho_ke only
-      gini[kktt[n]] ~ normal(rho_rw_hat[rwn[n]] * rho_ke_hat[ken[n]] * gini_t[n], sigma_rkcat); // estimate gini
-    } else {
-      gini[kktt[n]] ~ normal(rho_rw_hat[rwn[n]] * rho_re_hat[ren[n]] * gini_t[n], sigma_rrcat); // estimate gini
-    }
-  }
+ 
+  gini[kktt[1:N_bl]] ~ normal(gini_b[1:N_bl], gini_b_se[1:N_bl]); // use baseline series where observed
+  gini_b[1:N_bl] ~ normal(rho_s[ss[1:N_bl]] .* gini_t[1:N_bl], sigma_s); // estimate rho_s
+  gini[kktt[(N_bl+1):N_obl]] ~ normal(gini_t[(N_bl+1):N_obl] .* rho_s[ss[(N_bl+1):N_obl]], sigma_s); // estimate gini with rho_s (for series w/ overlap)
+  gini[kktt[(N_obl+1):N_kbl]] ~ normal(rho_we_hat[kwen[(N_obl+1):N_kbl]] .* gini_t[(N_obl+1):N_kbl], sigma_we); // estimate gini with rho_we_hat (for series w/o overlap)
+  gini[kktt[(N_kbl+1):N_kk]] ~ normal(rho_kw_hat[kwn[(N_kbl+1):N_kk]] .* rho_ke_hat[ken[(N_kbl+1):N_kk]] .* gini_t[(N_kbl+1):N_kk], sigma_kkcat); // estimate gini with rho_kw_hat & rho_ke_hat (all country ratios)
+  gini[kktt[(N_kk+1):N_kr]] ~ normal(rho_kw_hat[kwn[(N_kk+1):N_kr]] .* rho_re_hat[ren[(N_kk+1):N_kr]] .* gini_t[(N_kk+1):N_kr], sigma_krcat); // estimate gini with rho_kw_hat & rho_re_hat (country & region ratios)
+  gini[kktt[(N_kr+1):N_rk]] ~ normal(rho_rw_hat[rwn[(N_kr+1):N_rk]] .* rho_ke_hat[ken[(N_kr+1):N_rk]] .* gini_t[(N_kr+1):N_rk], sigma_rkcat); // estimate gini with rho_rw_hat & rho_ke_hat (region & country ratios)
+  gini[kktt[(N_rk+1):N]] ~ normal(rho_rw_hat[rwn[(N_rk+1):N]] .* rho_re_hat[ren[(N_rk+1):N]] .* gini_t[(N_rk+1):N], sigma_rrcat);  // estimate gini with rho_rw_hat & rho_re_hat (all region ratios)
 }
