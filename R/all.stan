@@ -72,16 +72,8 @@ data{
 }  
   
 parameters {
-<<<<<<< HEAD
-  row_vector<lower=0, upper=1>[T] gini[K];  // SWIID gini estimate of baseline in country k at time t
-  real<lower=0> sigma_gini[K]; 	// country variance parameter (see Linzer and Stanton 2012, 12)
-||||||| merged common ancestors
-  row_vector<lower=0, upper=1>[T] gini[K];  // SWIID gini estimate of baseline in country k at time t
-  real<lower=0, upper=.02> sigma_gini[K]; 	// country variance parameter (see Linzer and Stanton 2012, 12)
-=======
   real<lower=0, upper=1> gini[KT];          // SWIID gini estimate for baseline in country k at time t
   real<lower=0> sigma_gini[K]; 	            // country variance parameter (see Linzer and Stanton 2012, 12)
->>>>>>> kt
   vector<lower=0, upper=1>[N] gini_t;       // unknown "true" gini given gini_m and gini_m_se
   vector<lower=.3, upper=1.7>[M] rho_we_t;  // unknown "true" rho_we given rho_we and rho_we_se
   vector<lower=.3, upper=1.7>[P] rho_wd_t;     // unknown "true" rho_wd given rho_wd and rho_wd_se
@@ -151,7 +143,7 @@ model {
   gini[kktt[1:N_bl]] ~ normal(gini_b[1:N_bl], gini_b_se[1:N_bl]); // use baseline series where observed
   gini_b[1:N_bl] ~ normal(rho_s[ss[1:N_bl]] .* gini_t[1:N_bl], sigma_s); // estimate rho_s
   gini[kktt[(N_bl+1):N_obl]] ~ normal(gini_t[(N_bl+1):N_obl] .* rho_s[ss[(N_bl+1):N_obl]], sigma_s); // estimate gini with rho_s (for series w/ overlap)
-  gini[kktt[(N_obl+1):N_kbl]] ~ normal(rho_kwe_hat[kwen[(N_obl+1):N_kbl]] .* gini_t[(N_obl+1):N_kbl], sigma_kwe); // estimate gini with rho_we_hat (for series w/o overlap)
+  gini[kktt[(N_obl+1):N_kbl]] ~ normal(rho_kwe_hat[kwen[(N_obl+1):N_kbl]] .* gini_t[(N_obl+1):N_kbl], sigma_kwe); // estimate gini with rho_kwe_hat (for series w/o overlap)
   gini[kktt[(N_kbl+1):N_kk]] ~ normal(rho_kw_hat[kwn[(N_kbl+1):N_kk]] .* rho_ke_hat[ken[(N_kbl+1):N_kk]] .* gini_t[(N_kbl+1):N_kk], sigma_kkcat); // estimate gini with rho_kw_hat & rho_ke_hat (all country ratios)
   gini[kktt[(N_kk+1):N_kr]] ~ normal(rho_kw_hat[kwn[(N_kk+1):N_kr]] .* rho_re_hat[ren[(N_kk+1):N_kr]] .* gini_t[(N_kk+1):N_kr], sigma_krcat); // estimate gini with rho_kw_hat & rho_re_hat (country & region ratios)
   gini[kktt[(N_kr+1):N_rk]] ~ normal(rho_rw_hat[rwn[(N_kr+1):N_rk]] .* rho_ke_hat[ken[(N_kr+1):N_rk]] .* gini_t[(N_kr+1):N_rk], sigma_rkcat); // estimate gini with rho_rw_hat & rho_ke_hat (region & country ratios)
