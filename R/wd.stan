@@ -12,7 +12,9 @@ data{
   int<lower=1> E;                         // number of equivalence scales
   int<lower=1> KE;                        // number of combos of country and equivalence scale
   int<lower=1> RE;                        // number of combos of region and equivalence scale
-  
+  int<lower=1> KWE2;                      // number of combos of country and wd_es
+  int<lower=1> RWE2;                      // number of combos of region and wd_es
+
   int<lower=1> N;                         // total number of obs
   int<lower=1> N_bl;                      // number of obs with baseline
   int<lower=1> N_obl;                     // number of obs in series with some baseline ("overlap baseline")
@@ -69,10 +71,21 @@ data{
   int<lower=1, upper=RE> req[Q];          // re fir rho_es observation q
   real<lower=0> rho_es[Q];                // observed ratio of baseline to es
   real<lower=0> rho_es_se[Q];             // std error of rho_es
+  
+  int<lower=1> Z;                         // number of observed ratios of baseline to wd_es (rho_we2)
+  int<lower=1, upper=K> kkz[Z]; 	        // country for rho_we2 observation z
+  int<lower=1, upper=R> rrz[Z];           // region for rho_we2 observation z
+  int<lower=1, upper=T> ttz[Z];	          // year for rho_we2 observation z
+  int<lower=1, upper=WE> wez[Z];           // we for rho_we2 observation z
+  int<lower=1, upper=KWE2> kwez[Z];          // kwe for rho_we2 observation z
+  int<lower=1, upper=RWE2> rwez[Z];          // rwe fir rho_we2 observation z
+  real<lower=0> rho_we2[Z];                // observed ratio of baseline to wd_es
+  real<lower=0> rho_we2_se[Z];             // std error of rho_es
 }  
   
 parameters {
   vector<lower=0>[M] rho_we_t;     // unknown "true" rho_we given rho_we and rho_we_se
+  vector<lower=0>[Z] rho_we2_t;     // unknown "true" rho_we given rho_we and rho_we_se
   vector<lower=0>[P] rho_wd_t;     // unknown "true" rho_wd given rho_wd and rho_wd_se
   vector<lower=0>[Q] rho_es_t;     // unknown "true" rho_es given rho_es and rho_es_se
   
@@ -81,6 +94,11 @@ parameters {
   
   vector[KWE] rho_we_hat;       // estimated rho_we 
   real<lower=0> sigma_we;       // rho_we noise
+  
+  vector[KWE2] rho_kwe2_hat;    // estimated rho_we 
+  real<lower=0> sigma_kwe2;     // rho_we noise
+  vector[RWE2] rho_rwe2_hat;    // estimated rho_we 
+  real<lower=0> sigma_rwe2;     // rho_we noise
   
   vector[KW] rho_kw_hat;        // estimated rho_wd by country
   real<lower=0> sigma_kw;       // rho_kw noise
@@ -112,12 +130,19 @@ model {
   sigma_ke ~ cauchy(0, .05);
   sigma_re ~ cauchy(0, .1);
 
+  sigma_kwe2 ~ cauchy(0, .05);
+  sigma_rwe2 ~ cauchy(0, .1);
+
   rho_we_hat[kwem] ~ normal(rho_we_t, sigma_we);  // estimate rho_we_hat
+  
+  rho_we2_hat[kwez] ~ normal(rho_we2_t, sigma_kwe2);
+  rho_we2_hat[rwez] ~ normal(rho_we2_t, sigma_rwe2);
 
   rho_rw_hat[rwp] ~ normal(rho_wd_t, sigma_rw);   // estimate rho_rw_hat
   rho_kw_hat[kwp] ~ normal(rho_wd_t, sigma_kw);   // estimate rho_kw_hat
 
   rho_re_hat[req] ~ normal(rho_es_t, sigma_re);   // estimate rho_re_hat
   rho_ke_hat[keq] ~ normal(rho_es_t, sigma_ke);   // estimate rho_ke_hat
+ 
  
 }
