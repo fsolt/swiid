@@ -1898,7 +1898,8 @@ ineq <- bind_rows(ineq_bl, ineq_obl, ineq_nbl) %>%
   ungroup() %>% 
   group_by(country) %>% 
   mutate(k_bl_obs = if_else(!is.na(mean(k_bl_obs, na.rm = TRUE)),
-                            mean(k_bl_obs, na.rm = TRUE), 0)) %>% 
+                            mean(k_bl_obs, na.rm = TRUE), 0),
+         tcode0 = year - min(year) + 1) %>% 
   ungroup() %>% 
   arrange(desc(k_bl_obs), desc(country_obs)) %>% 
   mutate(gini_m_se = ifelse(!is.na(gini_m_se), gini_m_se,
@@ -1908,13 +1909,15 @@ ineq <- bind_rows(ineq_bl, ineq_obl, ineq_nbl) %>%
          obl = (s_bl_obs>0),
          kbl = (k_bl_obs>0),
          kcode = as.integer(factor(country, levels = unique(country))),
-         tcode = as.integer(year - min(year) + 1),
+         tcode = tcode0,
          rcode = as.integer(factor(region, levels = unique(region))),
          scode = as.integer(factor(series, levels = unique(series))),
          wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)),
          ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)),
          wecode = as.integer(factor(paste(wcode, ecode))),
-         kwecode = as.integer(factor(100*kcode+wecode)))
+         kwecode = as.integer(factor(100*kcode+wecode)),
+         rwecode = as.integer(factor(100*rcode+wecode))) %>% 
+  select(-tcode0) # tcode0 is only used to facilitate getting tcode into its customary column position
 
 wecodes <- ineq %>%
   select(wdes, wecode, wcode, ecode) %>% 
@@ -1969,7 +1972,8 @@ rho_we <- rho_we0 %>%
   left_join(ineq %>% select(country, year, kcode, tcode, rcode) %>% distinct(),
             by = c("kcode", "tcode")) %>% 
   left_join(wecodes, by = "wdes") %>% 
-  mutate(kwecode = as.integer(factor(100*kcode+wecode)))
+  mutate(kwecode = as.integer(factor(100*kcode+wecode)),
+         rwecode = as.integer(factor(100*rcode+wecode)))
 
 rm(rho_we0, rho_we_se)
 
