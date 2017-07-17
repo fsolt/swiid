@@ -6,27 +6,48 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 1000
-chains <- 4
+iter <- 20
+chains <- 1
 cores <- chains
 
-x <- ineq2 
+kt <- ineq2 %>%  
+  transmute(kcode = kcode,
+            yrspan = (lastyr - firstyr) + 1) %>% 
+  distinct(kcode, yrspan) %>% 
+  slice(rep(1:n(), yrspan)) %>% 
+  group_by(kcode) %>% 
+  mutate(tcode = 1:n()) %>% 
+  ungroup() %>% 
+  mutate(ktcode = 1:n())
+
+x <- ineq2 %>% 
+  left_join(kt, by = c("kcode", "tcode"))
+
+kn <- x %>% 
+  group_by(kcode) %>% 
+  summarize(kt1 = first(ktcode),
+            yrspan = first(yrspan)) %>% 
+  ungroup()
+
 rho_wd1 <- rho_wd
 rho_es1 <- rho_es
 
 # Format data for Stan
 source_data <- list(  K = max(x$kcode),
                       T = max(x$tcode),
+                      KT = nrow(kt),
                       R = max(x$rcode),
                       S = max(x$scode),
                       WE = max(x$wecode),
                       KWE = max(x$kwecode),
+                      RWE = max(x$rwecode),
                       W = max(x$wcode),
                       KW = max(rho_wd$kwcode),
                       RW = max(rho_wd$rwcode),
                       E = max(x$ecode),
                       KE = max(rho_es$kecode),
                       RE = max(rho_es$recode),
+                      
                       N = nrow(x),
                       N_bl = nrow(x %>% filter(bl)),
                       N_obl = nrow(x %>% filter(obl)),
@@ -37,14 +58,23 @@ source_data <- list(  K = max(x$kcode),
                       
                       kk = x$kcode,
                       tt = x$tcode,
+                      kk = x$kcode,
+                      tt = x$tcode,
+                      kktt = x$ktcode,
+                      ktt = kt$tcode,
+                      ktk = kt$kcode,
+                      kn = kn$yrspan,
+                      kt1 = kn$kt1,
                       rr = x$rcode,
                       ss = x$scode,
                       wen = x$wecode,
                       kwen = x$kwecode,
+                      rwen = x$rwecode,
                       kwn = x$kwcode,
                       ken = x$kecode,
                       rwn = x$rwcode,
                       ren = x$recode,
+                      
                       gini_m = x$gini_m,
                       gini_m_se = x$gini_m_se,
                       gini_b = x$gini_b[!is.na(x$gini_b)],
@@ -58,6 +88,7 @@ source_data <- list(  K = max(x$kcode),
                       ttm	= rho_we$tcode,
                       wem = rho_we$wecode,
                       kwem = rho_we$kwecode,
+                      rwem = rho_we$rwecode,
                       rho_we = rho_we$rho,
                       rho_we_se = rho_we$rho_se,
                       
@@ -98,12 +129,13 @@ runtime
 lapply(get_sampler_params(out1, inc_warmup = FALSE),
        summary, digits = 2)
 
-save(out1, file = str_c("data/all_", iter/1000, "k_",
+save(out1, file = str_c("data/all_kt1_", iter/1000, "k_",
                         str_replace(Sys.time(), " ", "_") %>% str_replace("2017-", ""), ".rda"))
 
 beep() # chime
 
 
 # Plots
+source("R/plot_tscs.R")
 plot_tscs(x, out1, save_pdf = "paper/figures/ts_all.pdf")
 plot_tscs(x, out1)

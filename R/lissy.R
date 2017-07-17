@@ -40,15 +40,33 @@ topBottom <- function(var, botline, topline) {
 setups <- function(df) {
   botline <- 0
   topline <- 10 * wNtile(df$dhi, df$hpopwgt, 0.5)
+  df$oecdm <- 1 + .5 * (df$nhhmem - df$nhhmem13 - 1) + .3 * df$nhhmem13
+  df$ae <- 1 + .7 * (df$nhhmem - df$nhhmem13 - 1) + .5 * df$nhhmem13
+  
   df$disp_hh <- topBottom(df$dhi, botline, topline)
   df$disp_sqrt <- df$disp_hh / (df$nhhmem ^ 0.5)
   df$disp_pc <- df$disp_hh / df$nhhmem
+  df$disp_oecdm <- df$disp_hh / df$oecdm
+  df$disp_ae <- df$disp_hh / df$ae
+  
+  df$gross_hh <- topBottom(df$hi, botline, topline)
+  df$gross_sqrt <- df$gross_hh / (df$nhhmem ^ 0.5)
+  df$gross_pc <- df$gross_hh / df$nhhmem
+  df$gross_oecdm <- df$gross_hh / df$oecdm
+  df$gross_ae <- df$gross_hh / df$ae
+  
   df$market_hh <- topBottom(ifelse(!is.na(df$hitp), (df$factor + df$hitp), df$factor), botline, topline)
   df$market_sqrt <- df$market_hh / (df$nhhmem ^ 0.5)
   df$market_pc <- df$market_hh / df$nhhmem
+  df$market_oecdm <- df$market_hh / df$oecdm
+  df$market_ae <- df$market_hh / df$ae
+  
   df$con_hh <- topBottom(df$hc, botline, topline)
   df$con_sqrt <- df$con_hh / (df$nhhmem ^ 0.5)
-  df$con_pc <- df$con_hh / df$nhhmem  
+  df$con_pc <- df$con_hh / df$nhhmem
+  df$con_oecdm <- df$con_hh / df$oecdm
+  df$con_ae <- df$con_hh / df$ae
+  
   return(df)
 }
 
@@ -85,11 +103,12 @@ get_ginis <- function(cc, reps = 100) {
   yy <- as.character(c(c(67, 69, 71, 73:75, 78:99), paste0("0", 0:9), c(10:17)))
 
   datasets <- paste0(rep(cc, each = length(yy)), rep(yy, times = length(cc)), "h")
-  vars <- c("dhi", "factor", "hitp", "hc", "hpopwgt", "nhhmem", "grossnet")
+  vars <- c("dhi", "hi", "factor", "hitp", "hc", "hpopwgt", "nhhmem", "nhhmem13", "grossnet")
 
-  v <- c("market_hh", "market_sqrt", "market_pc",
-        "disp_hh", "disp_sqrt", "disp_pc",
-        "con_hh", "con_sqrt", "con_pc")
+  v <- c("market_hh", "market_sqrt", "market_pc", "market_oecdm", "market_ae",
+         "gross_hh", "gross_sqrt", "gross_pc", "gross_oecdm", "gross_ae",
+         "disp_hh", "disp_sqrt", "disp_pc", "disp_oecdm", "disp_ae",
+         "con_hh", "con_sqrt", "con_pc", "con_oecdm", "con_ae")
   
   for (ccyy in datasets) {
     cat("")
