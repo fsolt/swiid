@@ -4,7 +4,7 @@ library(mailR)
 
 ccs <- c("au", "at", "be", "br", "ca", "cl", "cn", "co", "cz", "dk", 
          "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", 
-         "in", "ie", "il", "it", "jp", "lu", "mx", "nl", "no", "pa", "py", 
+         "in", "ie", "il", "it", "jp", "lt", "lu", "mx", "nl", "no", "pa", "py", 
          "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se", 
          "ch", "tw", "uk", "us", "uy")
 
@@ -37,4 +37,4 @@ get_lis_ginis <- function(ccs, wait = 180) {
   })
 } 
 
-get_lis_ginis(ccs)
+get_lis_ginis(ccs, wait = 60)
