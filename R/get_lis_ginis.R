@@ -37,4 +37,4 @@ get_lis_ginis <- function(ccs, wait = 180) {
   })
 } 
 
-get_lis_ginis(ccs, wait = 60)
+get_lis_ginis(ccs)
