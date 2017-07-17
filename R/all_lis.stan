@@ -46,8 +46,8 @@ parameters {
   vector<lower=0>[S] rho_s;                 // ratio of baseline to series s
   real<lower=0, upper=.1> sigma_s; 	        // series noise 
   
-  vector<lower=.3, upper=1.7>[KWE] rho_we_hat;  // estimated rho_kwe by country
-  real<lower=0, upper=.1> sigma_we;         // rho_we noise
+  vector<lower=.3, upper=1.7>[KWE] rho_kwe_hat;  // estimated rho_kwe by country
+  real<lower=0, upper=.1> sigma_kwe;         // rho_we noise
 }
 
 model {
@@ -57,7 +57,7 @@ model {
   rho_we_t ~ normal(rho_we, rho_we_se);
   
   rho_s ~ normal(1, .25);
-  rho_we_hat ~ normal(1, .25);
+  rho_kwe_hat ~ normal(1, .25);
 
   for (k in 1:K) {
     if (kn[k] > 1) {
@@ -68,10 +68,11 @@ model {
     }
   }
 
-  rho_we_hat[kwem] ~ normal(rho_we_t, sigma_we);  // estimate rho_we_hat
+  rho_kwe_hat[kwem] ~ normal(rho_we_t, sigma_kwe);  // estimate rho_kwe_hat
 
   gini[kktt[1:N_bl]] ~ normal(gini_b[1:N_bl], gini_b_se[1:N_bl]); // use baseline series where observed
   gini_b[1:N_bl] ~ normal(rho_s[ss[1:N_bl]] .* gini_t[1:N_bl], sigma_s); // estimate rho_s
   gini[kktt[(N_bl+1):N_obl]] ~ normal(gini_t[(N_bl+1):N_obl] .* rho_s[ss[(N_bl+1):N_obl]], sigma_s); // estimate gini with rho_s (for series w/ overlap)
-  gini[kktt[(N_obl+1):N]] ~ normal(rho_we_hat[kwen[(N_obl+1):N]] .* gini_t[(N_obl+1):N], sigma_we); // estimate gini with rho_we_hat (for series w/o overlap)
+  gini[kktt[(N_obl+1):N]] ~ normal(rho_kwe_hat[kwen[(N_obl+1):N]] .* gini_t[(N_obl+1):N], sigma_kwe); // estimate gini with rho_we_hat (one-step, for wdes w/ overlap)
+  gini[kktt[(N_obl+1):N]] ~ normal(rho_kwe_hat[kwen[(N_obl+1):N]] .* gini_t[(N_obl+1):N], sigma_kwe); // estimate gini with rho_we_hat (for wdes w/ overlap)
 }
