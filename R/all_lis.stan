@@ -70,14 +70,8 @@ model {
 
   rho_we_hat[kwem] ~ normal(rho_we_t, sigma_we);  // estimate rho_we_hat
 
-  for (n in 1:N) {
-    if (n <= N_bl) {
-      gini[kktt[n]] ~ normal(gini_b[n], gini_b_se[n]); // use baseline series where observed
-      gini_b[n] ~ normal(rho_s[ss[n]] * gini_t[n], sigma_s); // estimate rho_s
-    } else if (n <= N_obl) {
-      gini[kktt[n]] ~ normal(gini_t[n] * rho_s[ss[n]], sigma_s); // estimate gini for series with overlap
-    } else {
-      gini[kktt[n]] ~ normal(rho_we_hat[kwen[n]] * gini_t[n], sigma_we); // estimate gini for series w/o overlap
-    }
-  }
+  gini[kktt[1:N_bl]] ~ normal(gini_b[1:N_bl], gini_b_se[1:N_bl]); // use baseline series where observed
+  gini_b[1:N_bl] ~ normal(rho_s[ss[1:N_bl]] .* gini_t[1:N_bl], sigma_s); // estimate rho_s
+  gini[kktt[(N_bl+1):N_obl]] ~ normal(gini_t[(N_bl+1):N_obl] .* rho_s[ss[(N_bl+1):N_obl]], sigma_s); // estimate gini with rho_s (for series w/ overlap)
+  gini[kktt[(N_obl+1):N]] ~ normal(rho_we_hat[kwen[(N_obl+1):N]] .* gini_t[(N_obl+1):N], sigma_we); // estimate gini with rho_we_hat (for series w/o overlap)
 }
