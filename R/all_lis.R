@@ -109,8 +109,8 @@ runtime
 lapply(get_sampler_params(out1, inc_warmup = FALSE),
        summary, digits = 2)
 
-# save(out1, file = str_c("data/all_lis_gt", gt, iter/1000, "k_", 
-                        # str_replace(Sys.time(), " ", "_") %>% str_replace("2017-", ""), ".rda"))
+save(out1, file = str_c("data/all_lis_gt", gt, iter/1000, "k_", 
+                        str_replace(Sys.time(), " ", "_") %>% str_replace("2017-", ""), ".rda"))
 
 beep() # chime
 
