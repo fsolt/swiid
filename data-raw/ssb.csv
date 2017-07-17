@@ -1,0 +1,43 @@
+"Measures of income despersion. Household equivalent income (EU-scale)"
+"between persons, by time, contents and person"
+
+" ";"Gini coefficient";"Standard error of the Gini coefficient"
+" ";"Total population";"Total population"
+"1986";0.210;0.002
+"1987";0.210;0.003
+"1988";0.211;0.002
+"1989";0.228;0.004
+"1990";0.217;0.002
+"1991";0.219;0.003
+"1992";0.223;0.003
+"1993";0.229;0.004
+"1994";0.241;0.002
+"1995";0.236;0.003
+"1996";0.245;0.004
+"1997";0.249;0.004
+"1998";0.238;0.003
+"1999";0.242;0.004
+"2000";0.262;0.004
+"2001";0.229;0.002
+"2002";0.264;0.004
+"2003";0.274;0.003
+"2004";0.283;..
+"2005";0.327;..
+"2006";0.243;..
+"2007";0.252;..
+"2008";0.248;..
+"2009";0.241;..
+"2010";0.245;..
+"2011";0.247;..
+"2012";0.249;..
+"2013";0.250;..
+"2014";0.256;..
+"2015";0.271;..
+
+"Negative amounts have been set to zero. Students are not included."
+
+"The Gini coefficient is a number between 0 and 1 that measures the "
+"degree of inequality in the distribution of income, where 0 "
+"corresponds with perfect equality and 1 corresponds with perfect "
+"inequality.  "
+
