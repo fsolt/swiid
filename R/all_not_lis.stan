@@ -49,25 +49,28 @@ parameters {
   real<lower=0> sigma_gini[K]; 	            // country variance parameter (see Linzer and Stanton 2012, 12)
   vector<lower=0, upper=1>[N] gini_t;       // unknown "true" gini given gini_m and gini_m_se
   vector<lower=.3, upper=1.7>[M] rho_we_t;  // unknown "true" rho_we given rho_we and rho_we_se
-  vector<lower=.3, upper=1.7>[P] rho_wd_t;     // unknown "true" rho_wd given rho_wd and rho_wd_se
+  vector<lower=.3, upper=1.7>[P] rho_wd_t;  // unknown "true" rho_wd given rho_wd and rho_wd_se
 
   vector<lower=.3, upper=1.7>[RWE] rho_rwe_hat; // estimated rho_rwe by country
-  real<lower=0, upper=.1> sigma_rwe;                      // rho_rwe noise
+  real<lower=0, upper=.25> sigma_rwe[R];        // rho_rwe noise
   
   vector<lower=.3, upper=1.7>[KW] rho_kw_hat;   // estimated rho_wd by country
-  real<lower=0, upper=.1> sigma_kw;                       // rho_kw noise
+  real<lower=0, upper=.1> sigma_kw;             // rho_kw noise
 }
 
 transformed parameters {
-  real<lower=0> sigma_krcat;
-  real<lower=0> sigma_rrcat;
+  real<lower=0> sigma_krcat[R];
+  real<lower=0> sigma_rrcat[R];
   
-  sigma_krcat = sqrt(square(sigma_kw) + 2 * square(sigma_rwe)); 
-  sigma_rrcat = sqrt(2 * square(sigma_kw) + 2 * square(sigma_rwe));
+  for (r in 1:R) {
+    sigma_krcat[r] = sqrt(square(sigma_kw) + 2 * square(sigma_rwe[r])); 
+    sigma_rrcat[r] = sqrt(2 * square(sigma_kw) + 2 * square(sigma_rwe[r])); 
+  }
 }
 
 model {
   sigma_gini ~ normal(0, .015);
+  sigma_rwe ~ normal(0, .05);
 
   gini_t ~ normal(gini_m, gini_m_se);
   rho_we_t ~ normal(rho_we, rho_we_se);
@@ -85,14 +88,14 @@ model {
     }
   }
 
-  rho_rwe_hat[rwem] ~ normal(rho_we_t, sigma_rwe);  // estimate rho_kwe_hat (over 1:M)
+  rho_rwe_hat[rwem] ~ normal(rho_we_t, sigma_rwe[rrm]);  // estimate rho_rwe_hat (over 1:M)
   rho_kw_hat[kwp] ~ normal(rho_wd_t, sigma_kw);   // estimate rho_kw_hat (over 1:P)
 
   // observations with rho_kw_hat use two-step estimates from rho_kw_hat and rho_rwe_hat
-  gini[kktt[1:N_kr]] ~ normal(rho_kw_hat[kwn[1:N_kr]] .* rho_rwe_hat[rwen2[1:N_kr]] .* gini_t[1:N_kr], sigma_krcat);
+  gini[kktt[1:N_kr]] ~ normal(rho_kw_hat[kwn[1:N_kr]] .* rho_rwe_hat[rwen2[1:N_kr]] .* gini_t[1:N_kr], sigma_krcat[rr[1:N_kr]]);
 
   // observations without rho_kw_hat use one-step estimates from rho_rwe_hat
-  gini[kktt[(N_kr+1):N]] ~ normal(rho_rwe_hat[rwen[(N_kr+1):N]] .* gini_t[(N_kr+1):N], sigma_rrcat);
+  gini[kktt[(N_kr+1):N]] ~ normal(rho_rwe_hat[rwen[(N_kr+1):N]] .* gini_t[(N_kr+1):N], sigma_rrcat[rr[(N_kr+1):N]]);
 
 
 }
