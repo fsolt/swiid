@@ -1905,6 +1905,7 @@ ineq <- bind_rows(ineq_bl, ineq_obl, ineq_nbl) %>%
   mutate(gini_m_se = ifelse(!is.na(gini_m_se), gini_m_se,
                             quantile(gini_m_se/gini_m, .99, na.rm = TRUE)*gini_m),
          wdes = paste(welfare_def, equiv_scale, sep = "_"),
+         ibl = (gini_m == gini_b & series == first(baseline$series)),
          bl = (!is.na(gini_b)),
          obl = (s_bl_obs>0),
          kbl = (k_bl_obs>0),
@@ -2100,7 +2101,7 @@ ineq2 <- ineq %>%
   left_join(rho_es %>% select(res, recode) %>% unique(), by = "res") %>% 
   mutate(kwcode = if_else(is.na(kwcode), 0L, kwcode),
          kecode = if_else(is.na(kecode), 0L, kecode)) %>% 
-  arrange(desc(bl), desc(obl), desc(kbl), desc(kw), desc(ke), desc(k_bl_obs), desc(country_obs))
+  arrange(desc(ibl), desc(bl), desc(obl), desc(kbl), desc(kw), desc(ke), desc(k_bl_obs), desc(country_obs))
   
 
 ## Save

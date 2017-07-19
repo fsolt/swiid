@@ -6,8 +6,8 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 1000
-chains <- 4
+iter <- 20
+chains <- 1
 cores <- chains
 gt <- 0
 
@@ -64,9 +64,12 @@ source_data <- list(  K = max(x$kcode),
                       KWE = max(rho_we$kwecode),
                       W = max(x$wcode),
                       E = max(x$ecode),
+                      
                       N = length(x$gini_m),
+                      N_ibl = length(x$ibl[x$ibl == TRUE]),
                       N_bl = length(x$gini_b[!is.na(x$gini_b)]),
                       N_obl = length(x$s_bl_obs[x$s_bl_obs>0]),
+                      
                       kk = x$kcode,
                       tt = x$tcode,
                       kktt = x$ktcode,
@@ -109,7 +112,7 @@ runtime
 lapply(get_sampler_params(out1, inc_warmup = FALSE),
        summary, digits = 2)
 
-save(out1, file = str_c("data/all_lis_gt", gt, iter/1000, "k_", 
+save(x, out1, file = str_c("data/all_lis_gt", gt, iter/1000, "k_", 
                         str_replace(Sys.time(), " ", "_") %>% str_replace("2017-", ""), ".rda"))
 
 beep() # chime

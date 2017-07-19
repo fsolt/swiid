@@ -9,6 +9,7 @@ data{
   int<lower=1> W;                         // number of welfare definitions
   int<lower=1> E;                         // number of equivalence scales
   int<lower=1> N;                         // total number of obs
+  int<lower=1> N_ibl;                     // number of baseline obs ("is baseline")
   int<lower=1> N_bl;                      // number of obs with baseline
   int<lower=1> N_obl;                     // number of obs in series with some baseline ("overlap baseline")
   int<lower=1, upper=K> kk[N]; 	          // country for observation n
@@ -70,8 +71,8 @@ model {
 
   rho_kwe_hat[kwem] ~ normal(rho_we_t, sigma_kwe);  // estimate rho_kwe_hat
 
-  gini[kktt[1:N_bl]] ~ normal(gini_b[1:N_bl], gini_b_se[1:N_bl]); // use baseline series where observed
-  gini_b[1:N_bl] ~ normal(rho_s[ss[1:N_bl]] .* gini_t[1:N_bl], sigma_s); // estimate rho_s
+  gini[kktt[1:N_ibl]] ~ normal(gini_b[1:N_ibl], gini_b_se[1:N_ibl]); // use baseline series where observed
+  gini_b[N_ibl+1:N_bl] ~ normal(rho_s[ss[N_ibl+1:N_bl]] .* gini_t[N_ibl+1:N_bl], sigma_s); // estimate rho_s
   gini[kktt[(N_bl+1):N_obl]] ~ normal(gini_t[(N_bl+1):N_obl] .* rho_s[ss[(N_bl+1):N_obl]], sigma_s); // estimate gini with rho_s (for series w/ overlap)
   gini[kktt[(N_obl+1):N]] ~ normal(rho_kwe_hat[kwen[(N_obl+1):N]] .* gini_t[(N_obl+1):N], sigma_kwe); // estimate gini with rho_we_hat (one-step, for wdes w/ overlap)
   gini[kktt[(N_obl+1):N]] ~ normal(rho_kwe_hat[kwen[(N_obl+1):N]] .* gini_t[(N_obl+1):N], sigma_kwe); // estimate gini with rho_we_hat (for wdes w/ overlap)
