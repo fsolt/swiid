@@ -75,5 +75,4 @@ model {
   gini_b[N_ibl+1:N_bl] ~ normal(rho_s[ss[N_ibl+1:N_bl]] .* gini_t[N_ibl+1:N_bl], sigma_s); // estimate rho_s
   gini[kktt[(N_bl+1):N_obl]] ~ normal(gini_t[(N_bl+1):N_obl] .* rho_s[ss[(N_bl+1):N_obl]], sigma_s); // estimate gini with rho_s (for series w/ overlap)
   gini[kktt[(N_obl+1):N]] ~ normal(rho_kwe_hat[kwen[(N_obl+1):N]] .* gini_t[(N_obl+1):N], sigma_kwe); // estimate gini with rho_we_hat (one-step, for wdes w/ overlap)
-  gini[kktt[(N_obl+1):N]] ~ normal(rho_kwe_hat[kwen[(N_obl+1):N]] .* gini_t[(N_obl+1):N], sigma_kwe); // estimate gini with rho_we_hat (for wdes w/ overlap)
 }
