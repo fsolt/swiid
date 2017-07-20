@@ -105,7 +105,7 @@ out1 <- stan(file = "R/all_lis.stan",
              cores = cores,
              chains = chains,
              control = list(max_treedepth = 20,
-                            adapt_delta = .8))
+                            adapt_delta = .99))
 runtime <- proc.time() - start
 runtime
 
