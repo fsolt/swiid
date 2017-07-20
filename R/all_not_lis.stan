@@ -46,13 +46,13 @@ data{
   
 parameters {
   real<lower=0, upper=1> gini[KT];          // SWIID gini estimate for baseline in country k at time t
-  real<lower=0> sigma_gini[K]; 	            // country variance parameter (see Linzer and Stanton 2012, 12)
+  real<lower=0, upper=.1> sigma_gini[K]; 	            // country variance parameter (see Linzer and Stanton 2012, 12)
   vector<lower=0, upper=1>[N] gini_t;       // unknown "true" gini given gini_m and gini_m_se
   vector<lower=.3, upper=1.7>[M] rho_we_t;  // unknown "true" rho_we given rho_we and rho_we_se
   vector<lower=.3, upper=1.7>[P] rho_wd_t;  // unknown "true" rho_wd given rho_wd and rho_wd_se
 
   vector<lower=.3, upper=1.7>[RWE] rho_rwe_hat; // estimated rho_rwe by country
-  real<lower=0, upper=.25> sigma_rwe[R];        // rho_rwe noise
+  real<lower=0, upper=.1> sigma_rwe[R];        // rho_rwe noise
   
   vector<lower=.3, upper=1.7>[KW] rho_kw_hat;   // estimated rho_wd by country
   real<lower=0, upper=.1> sigma_kw;             // rho_kw noise
@@ -69,8 +69,8 @@ transformed parameters {
 }
 
 model {
-  sigma_gini ~ normal(0, .015);
-  sigma_rwe ~ normal(0, .05);
+  sigma_gini ~ normal(0.015, .01);
+  sigma_rwe ~ normal(0.04, .02);
 
   gini_t ~ normal(gini_m, gini_m_se);
   rho_we_t ~ normal(rho_we, rho_we_se);
