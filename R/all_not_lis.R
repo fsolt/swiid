@@ -7,8 +7,9 @@ load("data/ineq.rda")
 
 seed <- 324
 iter <- 1000
-chains <- 4
+chains <- 3
 cores <- chains
+adapt_delta <- .99
 
 x0 <- ineq2 %>%  
   filter(k_bl_obs == 0) %>%   # only non-baseline countries
@@ -118,7 +119,7 @@ out1 <- stan(file = "R/all_not_lis.stan",
              cores = cores,
              chains = chains,
              control = list(max_treedepth = 20,
-                            adapt_delta = .8))
+                            adapt_delta = adapt_delta))
 runtime <- proc.time() - start
 runtime
 
