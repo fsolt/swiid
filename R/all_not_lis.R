@@ -6,14 +6,26 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 1000
-chains <- 3
+iter <- 2000
+chains <- 4
 cores <- chains
 adapt_delta <- .99
 
 x0 <- ineq2 %>%  
   filter(k_bl_obs == 0) %>%   # only non-baseline countries
   mutate(kcode = as.integer(factor(country, levels = unique(country))))  # redo codes for filtered sample
+
+x0_wdes <- x0 %>%
+  select(region, wdes) %>% 
+  unite("r_weldef_eqsc", c("region", "wdes")) %>% 
+  pull(r_weldef_eqsc) %>% 
+  unique()
+
+rho_we0 <- rho_we %>% 
+  mutate(region = countrycode(country, "swiid.name", "swiid.region", custom_dict = cc_swiid)) %>% 
+  unite("r_w_e", c("region", "wdes"), remove = FALSE) %>% 
+  filter(r_w_e %in% x0_wdes) %>% 
+  select(-matches("code"), -r_w_e)  
 
 rwe2codes <- rho_we %>%
   filter(wcode == 1) %>%        # baseline_wd is always coded 1
@@ -43,12 +55,17 @@ kn <- x %>%
             yrspan = first(yrspan)) %>% 
   ungroup()
 
+rho_we1 <- rho_we0 %>% 
+  left_join(x %>% 
+              select("region", "wdes", "rcode", "wecode", "rwecode") %>%
+              distinct(),
+            by = c("region", "wdes"))
+
 rho_wd1 <- rho_wd %>% 
   filter(country %in% x$country) %>% 
   select(-matches("code")) %>% 
   left_join(x %>% 
-              select("country", "year", "kcode", "tcode", "rcode", 
-                     "wcode", "kwcode", "rwcode", "kwd") %>%
+              select("country", "year", "kwd", matches("code")) %>%
               distinct(),
             by = c("country", "year", "kwd")) 
 
@@ -92,12 +109,12 @@ source_data <- list(  K = max(x$kcode),
                       gini_m = x$gini_m,
                       gini_m_se = x$gini_m_se,
                       
-                      M = length(rho_we$rho),
-                      rrm = rho_we$rcode,
-                      wem = rho_we$wecode,
-                      rwem = rho_we$rwecode,
-                      rho_we = rho_we$rho,
-                      rho_we_se = rho_we$rho_se,
+                      M = length(rho_we1$rho),
+                      rrm = rho_we1$rcode,
+                      wem = rho_we1$wecode,
+                      rwem = rho_we1$rwecode,
+                      rho_we = rho_we1$rho,
+                      rho_we_se = rho_we1$rho_se,
                       
                       P = length(rho_wd1$rho_wd),
                       kkp = rho_wd1$kcode,      
