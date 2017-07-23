@@ -2018,9 +2018,7 @@ make_inputs <- function(baseline_series) {
     left_join(ineq %>% select(country, year, kcode, tcode, rcode, kbl) %>% distinct(),
               by = c("kcode", "tcode")) %>% 
     left_join(wecodes %>% select("wd", "wcode") %>% distinct(), by = "wd") %>% 
-    mutate(kwcode = as.integer(factor(100*kcode+wcode)),
-           rwcode = as.integer(factor(100*rcode+wcode)),
-           kwd = paste(country, wd),
+    mutate(kwd = paste(country, wd),
            rwd = paste(rcode, wd))
   
   rm(rho_wd0, rho_wd_se)
