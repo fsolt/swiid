@@ -6,9 +6,10 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 2000
+iter <- 1000
 chains <- 3
 cores <- chains
+adapt_delta <- .8
 gt <- 0
 
 x0 <- ineq2_m %>%  
@@ -41,18 +42,22 @@ kn <- x %>%
   ungroup()
 
 x_countries <- unique(x$country)
-x_wecodes <- x %>%
-  select(wdes, wecode, wcode, ecode) %>% 
-  distinct() 
+x_wdes <- x %>%
+  select(country, wdes) %>% 
+  unite("k_weldef_eqsc", c("country", "wdes")) %>% 
+  pull(k_weldef_eqsc) %>% 
+  unique()
 
 rho_we <- rho_we_m %>% 
   filter(country %in% x_countries) %>% 
-  select(-matches("code")) %>% 
+  unite("k_w_e", c("country", "wdes"), remove = FALSE) %>% 
+  filter(k_w_e %in% x_wdes) %>% 
+  select(-matches("code"), -k_w_e) %>% 
   left_join(x %>% 
-              select("country", "year", "kcode", "tcode", "rcode", 
-                     "wdes", "wecode", "wcode", "ecode", "kwecode") %>%
+              select("country", "year", "wdes", matches("code")) %>%
               distinct(),
             by = c("country", "year", "wdes")) 
+
 
 # Format data for Stan
 source_data <- list(  K = max(x$kcode),
@@ -105,7 +110,7 @@ out1 <- stan(file = "R/all_lis.stan",
              cores = cores,
              chains = chains,
              control = list(max_treedepth = 20,
-                            adapt_delta = .99))
+                            adapt_delta = adapt_delta))
 runtime <- proc.time() - start
 runtime
 
