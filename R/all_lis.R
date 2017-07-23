@@ -41,18 +41,21 @@ kn <- x %>%
   ungroup()
 
 x_countries <- unique(x$country)
-x_wecodes <- x %>%
-  select(wdes, wecode, wcode, ecode) %>% 
-  distinct() 
+x_wdes <- x %>%
+    select(country, wdes) %>% 
+    unite("k_weldef_eqsc", c("country", "wdes")) %>% 
+    pull(k_weldef_eqsc) %>% 
+    unique()
 
 rho_we <- rho_we %>% 
-  filter(country %in% x_countries) %>% 
-  select(-matches("code")) %>% 
-  left_join(x %>% 
-              select("country", "year", "kcode", "tcode", "rcode", 
-                     "wdes", "wecode", "wcode", "ecode", "kwecode") %>%
-              distinct(),
-            by = c("country", "year", "wdes")) 
+    filter(country %in% x_countries) %>% 
+    unite("k_w_e", c("country", "wdes"), remove = FALSE) %>% 
+    filter(k_w_e %in% x_wdes) %>% 
+    select(-matches("code"), -k_w_e) %>% 
+    left_join(x %>% 
+                  select("country", "year", "wdes", matches("code")) %>%
+                  distinct(),
+              by = c("country", "year", "wdes")) 
 
 # Format data for Stan
 source_data <- list(  K = max(x$kcode),
@@ -105,7 +108,7 @@ out1 <- stan(file = "R/all_lis.stan",
              cores = cores,
              chains = chains,
              control = list(max_treedepth = 20,
-                            adapt_delta = .99))
+                            adapt_delta = .8))
 runtime <- proc.time() - start
 runtime
 
