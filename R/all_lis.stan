@@ -41,7 +41,7 @@ data{
 parameters {
   real<lower=0, upper=1> gini[KT];          // SWIID gini estimate for baseline in country k at time t
   real<lower=0> sigma_gini[K]; 	            // country variance parameter (see Linzer and Stanton 2012, 12)
-  vector<lower=0, upper=1>[N] gini_t;       // unknown "true" gini given gini_m and gini_m_se
+  vector<lower=.1, upper=.8>[N] gini_t;       // unknown "true" gini given gini_m and gini_m_se
   vector<lower=.3, upper=1.7>[M] rho_we_t;  // unknown "true" rho_we given rho_we and rho_we_se
   
   vector<lower=0>[S] rho_s;                 // ratio of baseline to series s
@@ -53,9 +53,9 @@ parameters {
 
 model {
   sigma_gini ~ normal(0, .015);
-
-  gini_t ~ normal(gini_m, gini_m_se);
-  rho_we_t ~ normal(rho_we, rho_we_se);
+ 
+  gini_m ~ normal(gini_t, gini_m_se);
+  rho_we ~ normal(rho_we_t, rho_we_se);
   
   rho_s ~ normal(1, .25);
   rho_kwe_hat ~ normal(1, .25);
@@ -68,7 +68,7 @@ model {
       gini[kt1[k]] ~ normal(.35, .1);                            // a random draw from N(.35, .1)
     }
   }
-
+  
   rho_kwe_hat[kwem] ~ normal(rho_we_t, sigma_kwe);  // estimate rho_kwe_hat
 
   gini[kktt[1:N_ibl]] ~ normal(gini_b[1:N_ibl], gini_b_se[1:N_ibl]); // use baseline series where observed
