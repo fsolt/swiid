@@ -6,13 +6,13 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 1000
-chains <- 4
+iter <- 1500
+chains <- 3
 cores <- chains
-gt <- 0
+adapt_delta <- .95
 
 x0 <- ineq2 %>%  
-  filter(k_bl_obs > gt) %>% 
+  filter(k_bl_obs > 0) %>% 
   mutate(kcode = as.integer(factor(country, levels = unique(country))),
          rcode = as.integer(factor(region, levels = unique(region))),
          scode = as.integer(factor(series, levels = unique(series))),
@@ -108,14 +108,14 @@ out1 <- stan(file = "R/all_lis.stan",
              cores = cores,
              chains = chains,
              control = list(max_treedepth = 20,
-                            adapt_delta = .8))
+                            adapt_delta = adapt_delta))
 runtime <- proc.time() - start
 runtime
 
 lapply(get_sampler_params(out1, inc_warmup = FALSE),
        summary, digits = 2)
 
-save(x, out1, file = str_c("data/all_lis_gt", gt, iter/1000, "k_", 
+save(x, out1, file = str_c("data/all_lis_", iter/1000, "k_", 
                         str_replace(Sys.time(), " ", "_") %>% str_replace("2017-", ""), ".rda"))
 
 beep() # chime
