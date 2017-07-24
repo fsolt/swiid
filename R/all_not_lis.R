@@ -6,10 +6,10 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 2000
-chains <- 4
+iter <- 1500
+chains <- 3
 cores <- chains
-adapt_delta <- .99
+adapt_delta <- .95
 
 x0 <- ineq2 %>%  
   filter(k_bl_obs == 0) %>%   # only non-baseline countries
