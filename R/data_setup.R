@@ -1823,16 +1823,17 @@ rm(gidd_raw)
 added_data <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/fs_added_data.csv",
                        col_types = "ciddcclcccc")
 
+## Combine
 make_inputs <- function(baseline_series) {
-  ## Combine
   # first, get baseline series and order by data-richness
   baseline_wd <- str_split(baseline_series, "\\s")[[1]] %>% nth(-2)
   baseline_es <- str_split(baseline_series, "\\s")[[1]] %>% last()
   baseline_wdes <- paste0(baseline_wd, "_", baseline_es)
   baseline <- lis %>% 
     filter(series == baseline_series) %>% 
-    rename(gini_b = gini,
-           gini_b_se = gini_se) %>%
+    mutate(gini_b = gini,
+           gini_b_se = gini_se * 2) %>%
+    select(-gini, -gini_se) %>% 
     group_by(country) %>% 
     mutate(k_bl_obs = n()) %>% 
     ungroup() %>% 
@@ -1902,8 +1903,8 @@ make_inputs <- function(baseline_series) {
            tcode0 = year - min(year) + 1) %>% 
     ungroup() %>% 
     arrange(desc(k_bl_obs), desc(country_obs)) %>% 
-    mutate(gini_m_se = ifelse(!is.na(gini_m_se), gini_m_se,
-                              quantile(gini_m_se/gini_m, .99, na.rm = TRUE)*gini_m),
+    mutate(gini_m_se = ifelse(!is.na(gini_m_se), gini_m_se * 2,
+                              quantile(gini_m_se/gini_m, .99, na.rm = TRUE) * gini_m * 2),
            wdes = paste(welfare_def, equiv_scale, sep = "_"),
            ibl = (gini_m == gini_b & series == first(baseline$series)),
            bl = (!is.na(gini_b)),
@@ -2018,7 +2019,9 @@ make_inputs <- function(baseline_series) {
     left_join(ineq %>% select(country, year, kcode, tcode, rcode, kbl) %>% distinct(),
               by = c("kcode", "tcode")) %>% 
     left_join(wecodes %>% select("wd", "wcode") %>% distinct(), by = "wd") %>% 
-    mutate(kwd = paste(country, wd),
+    mutate(kwcode = as.integer(factor(100*kcode+wcode)),
+           rwcode = as.integer(factor(100*rcode+wcode)),
+           kwd = paste(country, wd),
            rwd = paste(rcode, wd))
   
   rm(rho_wd0, rho_wd_se)
