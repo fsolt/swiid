@@ -9,7 +9,7 @@ seed <- 324
 iter <- 1000
 chains <- 3
 cores <- chains
-adapt_delta <- .8
+adapt_delta <- .9
 gt <- 0
 
 x0 <- ineq2_m %>%  
