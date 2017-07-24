@@ -6,10 +6,10 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 1000
+iter <- 1500
 chains <- 3
 cores <- chains
-adapt_delta <- .9
+adapt_delta <- .95
 gt <- 0
 
 x0 <- ineq2_m %>%  
