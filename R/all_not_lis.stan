@@ -23,7 +23,7 @@ data{
   int<lower=1, upper=WE> wen[N];          // wd_es for observation n
   int<lower=1, upper=KWE> kwen[N];        // kwe for observation n
   int<lower=1, upper=RWE> rwen[N];        // rwe for region-welfare_def-equiv_sc of observation n
-  int<lower=1, upper=RWE> rwen2[N];       // rwe for region-*baseline_wd*-equiv_sc of observation n
+  int<lower=0, upper=RWE> rwen2[N];       // rwe for region-*baseline_wd*-equiv_sc of observation n
   int<lower=0, upper=KW> kwn[N];          // kw for observation n
 
   vector<lower=0, upper=1>[N] gini_m; 	  // measured gini for observation n
@@ -46,7 +46,7 @@ data{
   
 parameters {
   real<lower=0, upper=1> gini[KT];          // SWIID gini estimate for baseline in country k at time t
-  real<lower=0, upper=.1> sigma_gini[K]; 	  // country variance parameter (see Linzer and Stanton 2012, 12)
+  real<lower=0, upper=.05> sigma_gini[K]; 	  // country variance parameter (see Linzer and Stanton 2012, 12)
   real<lower=0, upper=.02> msg;              // hyperprior for mean of sigma_gini
   real<lower=0, upper=.01> ssg;              // hyperprior for scale of sigma_gini
   vector<lower=0.1, upper=0.8>[N] gini_t;   // unknown "true" gini given gini_m and gini_m_se
