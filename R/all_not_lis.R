@@ -13,7 +13,8 @@ adapt_delta <- .99
 
 x0 <- ineq2 %>%  
   filter(k_bl_obs == 0) %>%   # only non-baseline countries
-  mutate(kcode = as.integer(factor(country, levels = unique(country))))  # redo codes for filtered sample
+  mutate(kcode = as.integer(factor(country, levels = unique(country))),
+         rcode = as.integer(factor(region, levels = unique(region))))  # redo codes for filtered sample
 
 x0_wdes <- x0 %>%
   select(region, wdes) %>% 
@@ -68,7 +69,6 @@ rho_wd1 <- rho_wd %>%
               select("country", "year", "kwd", matches("code")) %>%
               distinct(),
             by = c("country", "year", "kwd")) 
-
 
 
 # Format data for Stan
