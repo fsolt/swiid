@@ -1824,7 +1824,7 @@ added_data <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/dat
                        col_types = "ciddcclcccc")
 
 ## Combine
-make_inputs <- function(baseline_series) {
+make_inputs <- function(baseline_series, nbl = FALSE) {
   # first, get baseline series and order by data-richness
   baseline_wd <- str_split(baseline_series, "\\s")[[1]] %>% nth(-2)
   baseline_es <- str_split(baseline_series, "\\s")[[1]] %>% last()
@@ -1868,6 +1868,11 @@ make_inputs <- function(baseline_series) {
     mutate(series_obs = n()) %>%
     ungroup() %>% 
     arrange(desc(country_obs), desc(series_obs))  
+  
+  if (str_detect(baseline_series, "market") & nbl == TRUE) {
+    ineq0 <- ineq0 %>% 
+      filter(welfare_def == "market")
+  } 
   
   # obs with baseline data
   ineq_bl <- ineq0 %>% 
@@ -1957,7 +1962,7 @@ make_inputs <- function(baseline_series) {
     gather(key = wdes, value = rho, -kcode, -tcode) %>% 
     filter(!is.na(rho)) %>% 
     arrange(kcode, tcode, wdes)
-  
+    
   rho_we_se <- ineq1 %>% 
     select(-gini_cat) %>% 
     spread(key = wdes, value = gini_cat_se) %>% 
@@ -2030,56 +2035,56 @@ make_inputs <- function(baseline_series) {
     pull(kwd) %>% 
     unique()
   
-  # generate ratios of baseline_es to each es (for all constant wd)
-  rho_es0 <- map_df(c("market", "gross", "disp", "con"), function(w) {
-    ineq1 %>% 
-      select(-gini_cat_se) %>% 
-      spread(key = wdes, value = gini_cat) %>%
-      mutate(bl = get(paste0(w, "_", baseline_es))) %>% 
-      mutate_at(vars(matches(w)),
-                funs(bl/.)) %>% 
-      select(kcode, tcode, matches(w)) %>% 
-      gather(key = wdes, value = rho_es, -kcode, -tcode) %>% 
-      filter(!is.na(rho_es)) %>% 
-      mutate(es = str_replace(wdes, ".*_", "")) %>% 
-      select(-wdes) %>% 
-      arrange(kcode, tcode, es)
-  })
-  
-  rho_es_se <- map_df(c("market", "gross", "disp", "con"), function(w) {
-    ineq1 %>% 
-      select(-gini_cat) %>% 
-      spread(key = wdes, value = gini_cat_se) %>%
-      mutate(bl = get(paste0(w, "_", baseline_es))) %>% 
-      mutate_at(vars(matches(w)),
-                funs(sqrt(bl^2+.^2))) %>% 
-      select(kcode, tcode, matches(w)) %>% 
-      gather(key = wdes, value = rho_es_se, -kcode, -tcode) %>% 
-      filter(!is.na(rho_es_se)) %>% 
-      mutate(es = str_replace(wdes, ".*_", "")) %>% 
-      select(-wdes) %>% 
-      arrange(kcode, tcode, es)
-  })
-  
-  rho_es <- rho_es0 %>% 
-    left_join(rho_es_se, by = c("kcode", "tcode", "es")) %>% 
-    group_by(kcode, tcode, es) %>%
-    summarize(rho_es = max(rho_es),
-              rho_es_se = max(rho_es_se)) %>%
-    ungroup() %>%
-    left_join(ineq %>% select(country, year, kcode, tcode, rcode, kbl) %>% distinct(),
-              by = c("kcode", "tcode")) %>% 
-    left_join(wecodes %>% select("es", "ecode") %>% distinct(), by = "es") %>% 
-    mutate(kecode = as.integer(factor(100*kcode+ecode)),
-           recode = as.integer(factor(100*rcode+ecode)),
-           kes = paste(country, es),
-           res = paste(rcode, es))
-  
-  rm(rho_es0, rho_es_se)
-  
-  rho_es_ke <- rho_es %>% 
-    pull(kes) %>% 
-    unique()
+  # # generate ratios of baseline_es to each es (for all constant wd)
+  # rho_es0 <- map_df(c("market", "gross", "disp", "con"), function(w) {
+  #   ineq1 %>% 
+  #     select(-gini_cat_se) %>% 
+  #     spread(key = wdes, value = gini_cat) %>%
+  #     mutate(bl = get(paste0(w, "_", baseline_es))) %>% 
+  #     mutate_at(vars(matches(w)),
+  #               funs(bl/.)) %>% 
+  #     select(kcode, tcode, matches(w)) %>% 
+  #     gather(key = wdes, value = rho_es, -kcode, -tcode) %>% 
+  #     filter(!is.na(rho_es)) %>% 
+  #     mutate(es = str_replace(wdes, ".*_", "")) %>% 
+  #     select(-wdes) %>% 
+  #     arrange(kcode, tcode, es)
+  # })
+  # 
+  # rho_es_se <- map_df(c("market", "gross", "disp", "con"), function(w) {
+  #   ineq1 %>% 
+  #     select(-gini_cat) %>% 
+  #     spread(key = wdes, value = gini_cat_se) %>%
+  #     mutate(bl = get(paste0(w, "_", baseline_es))) %>% 
+  #     mutate_at(vars(matches(w)),
+  #               funs(sqrt(bl^2+.^2))) %>% 
+  #     select(kcode, tcode, matches(w)) %>% 
+  #     gather(key = wdes, value = rho_es_se, -kcode, -tcode) %>% 
+  #     filter(!is.na(rho_es_se)) %>% 
+  #     mutate(es = str_replace(wdes, ".*_", "")) %>% 
+  #     select(-wdes) %>% 
+  #     arrange(kcode, tcode, es)
+  # })
+  # 
+  # rho_es <- rho_es0 %>% 
+  #   left_join(rho_es_se, by = c("kcode", "tcode", "es")) %>% 
+  #   group_by(kcode, tcode, es) %>%
+  #   summarize(rho_es = max(rho_es),
+  #             rho_es_se = max(rho_es_se)) %>%
+  #   ungroup() %>%
+  #   left_join(ineq %>% select(country, year, kcode, tcode, rcode, kbl) %>% distinct(),
+  #             by = c("kcode", "tcode")) %>% 
+  #   left_join(wecodes %>% select("es", "ecode") %>% distinct(), by = "es") %>% 
+  #   mutate(kecode = as.integer(factor(100*kcode+ecode)),
+  #          recode = as.integer(factor(100*rcode+ecode)),
+  #          kes = paste(country, es),
+  #          res = paste(rcode, es))
+  # 
+  # rm(rho_es0, rho_es_se)
+  # 
+  # rho_es_ke <- rho_es %>% 
+  #   pull(kes) %>% 
+  #   unique()
   
   kyrs <- ineq %>%
     group_by(kcode) %>%
@@ -2117,6 +2122,9 @@ ineq2_m <- market[[1]]
 rho_we_m <- market[[2]]
 rho_wd_m <- market[[3]]
 
+market2 <- make_inputs("LIS market sqrt", nbl = TRUE)
+ineq2_m2 <- market2[[1]]
+rho_we_m2 <- market2[[2]]
 
 ## Save
 swiid_source <- disp[[4]] %>% 
@@ -2125,5 +2133,6 @@ swiid_source <- disp[[4]] %>%
   select(-country_obs, -series_obs, -region) %>% 
   arrange(country, year, series)
 
+rm(disp, market, market2)
 write_csv(swiid_source, "data/swiid_source.csv", na = "")
 save.image(file = "data/ineq.rda")

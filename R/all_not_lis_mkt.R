@@ -7,13 +7,21 @@ load("data/ineq.rda")
 
 seed <- 324
 iter <- 2000
-chains <- 3
+chains <- 4
 cores <- chains
 adapt_delta <- .99
 
-x0 <- ineq2_m %>%  
+x0 <- ineq2_m2 %>%  
   filter(k_bl_obs == 0) %>%   # only non-baseline countries
-  mutate(kcode = as.integer(factor(country, levels = unique(country))))  # redo codes for filtered sample
+  group_by(country) %>% 
+  mutate(tcode = year - min(year) + 1,      # redo tcodes for filtered sample
+         country_obs = n()) %>%
+  ungroup() %>% 
+  arrange(country_obs, country, tcode) %>% 
+  mutate(kcode = as.integer(forcats::fct_rev(factor(paste(country_obs, country), 
+                                                    levels = unique(paste(country_obs, country)))))) %>%    # redo kcode for filtered sample
+  arrange(kcode, tcode)
+
 
 x0_wdes <- x0 %>%
   select(region, wdes) %>% 
@@ -21,13 +29,13 @@ x0_wdes <- x0 %>%
   pull(r_weldef_eqsc) %>% 
   unique()
 
-rho_we0 <- rho_we_m %>% 
+rho_we0 <- rho_we_m2 %>% 
   mutate(region = countrycode(country, "swiid.name", "swiid.region", custom_dict = cc_swiid)) %>% 
   unite("r_w_e", c("region", "wdes"), remove = FALSE) %>% 
   filter(r_w_e %in% x0_wdes) %>% 
   select(-matches("code"), -r_w_e)  
 
-rwe2codes <- rho_we_m %>%
+rwe2codes <- rho_we_m2 %>%
   filter(wcode == 1) %>%        # baseline_wd is always coded 1
   transmute(wdes2 = wdes,
             rwe2code = rwecode,
@@ -63,14 +71,6 @@ rho_we1 <- rho_we0 %>%
               select("region", "wdes", "rcode", "wecode", "rwecode") %>%
               distinct(),
             by = c("region", "wdes"))
-
-rho_wd1 <- rho_wd_m %>% 
-  filter(country %in% x$country) %>% 
-  select(-matches("code")) %>% 
-  left_join(x %>% 
-              select("country", "year", "kwd", matches("code")) %>%
-              distinct(),
-            by = c("country", "year", "kwd")) 
 
 
 
@@ -117,22 +117,12 @@ source_data <- list(  K = max(x$kcode),
                       wem = rho_we1$wecode,
                       rwem = rho_we1$rwecode,
                       rho_we = rho_we1$rho,
-                      rho_we_se = rho_we1$rho_se,
-                      
-                      P = length(rho_wd1$rho_wd),
-                      kkp = rho_wd1$kcode,      
-                      rrp = rho_wd1$rcode,
-                      ttp	= rho_wd1$tcode,
-                      wdp = rho_wd1$wcode,
-                      kwp = rho_wd1$kwcode,
-                      rwp = rho_wd1$rwcode,
-                      rho_wd = rho_wd1$rho_wd,
-                      rho_wd_se = rho_wd1$rho_wd_se
+                      rho_we_se = rho_we1$rho_se
 )
 
 # Stan
 start <- proc.time()
-out1 <- stan(file = "R/all_not_lis.stan",
+out1 <- stan(file = "R/all_not_lis_mkt.stan",
              data = source_data,
              seed = seed,
              iter = iter,
