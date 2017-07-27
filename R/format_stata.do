@@ -21,6 +21,6 @@ mi passive: gen abs_red=gini_mkt-gini_disp // if !no_redist
 order country year gini_disp _*gini_disp gini_mkt _*gini_mkt rel_red _*rel_red abs_red _*abs_red
 sort country year
 label data "SWIID v6.0, July 2017. Refer to the stata_swiid.pdf file for usage instructions." 
-saveold "data/SWIIDv6_0.dta", replace
+saveold "data/swiid6_0.dta", replace
 
 set more on
