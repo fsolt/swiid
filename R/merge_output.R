@@ -90,6 +90,7 @@ swiid_summary <- left_join(swiid_disp_summary, swiid_mkt_summary, by = c("countr
          rel_red = (abs_red/gini_mkt)*100,
          rel_red_se = sqrt(abs_red_se^2 + gini_mkt_se^2))
 
+write_csv(swiid_summary, "data/swiid6_0_summary.csv")
 
 # R formatted
 swiid_kt <- function(input, output, probs = c(.025, .975)) {
@@ -123,7 +124,7 @@ swiid_kt <- function(input, output, probs = c(.025, .975)) {
 }
 
 res <- bind_rows(swiid_kt(lis_in, lis_out), swiid_kt(not_lis_in, not_lis_out)) %>%  
-  left_join(swiid_kt(lis_mkt_in, lis_mkt_out), by = c("country", "year")) %>%         # add not_lis_mkt data
+  left_join(swiid_kt(lis_mkt_in, lis_mkt_out), by = c("country", "year")) %>%         # no not_lis_mkt data at this time
   arrange(country, year)
 
 haven::write_dta(res, "data/for_stata.dta", version = 12)
@@ -140,4 +141,4 @@ for (i in 1:100) {
   swiid[[i]] <- stemp
 }
 
-save(swiid, file = "data/SWIIDv6_0.rda") # for release
+save(swiid, swiid_summary, file = "data/swiid6_0.rda") # for release
