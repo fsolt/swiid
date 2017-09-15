@@ -93,9 +93,9 @@ boot_gini_se <- function(data, var, reps=100) {
 get_ginis <- function(cc, reps = 100) {
   ccs <- c("au", "at", "be", "br", "ca", "cl", "cn", "co", "cz", "dk", 
            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", 
-           "in", "ie", "il", "it", "jp", "lu", "mx", "nl", "no", "pa", "py", 
-           "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se", 
-           "ch", "tw", "uk", "us", "uy")
+           "in", "ie", "il", "it", "jp", "lu", "lt", "mx", "nl", "no", "pa",  
+           "py", "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es",  
+           "se", "ch", "tw", "uk", "us", "uy")
   cc <- tolower(cc)
   if (!cc %in% ccs) {
     stop("Please specify a LIS country in iso2c format")
