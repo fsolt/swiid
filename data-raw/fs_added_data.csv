@@ -1511,12 +1511,14 @@ South Africa,1995,0.65,,gross,pc,,SN2005 gross pc 2,Seekings and Nattrass 2005,3
 South Africa,2000,0.69,,gross,pc,,SN2005 gross pc 2,Seekings and Nattrass 2005,307,https://books.google.com/books?hl=en&lr=&id=_lLHLuDgzG0C&oi=fnd&pg=PA307
 South Africa,1995,0.56,,con,hh,FALSE,SSA2002 con hh,Statistics South Africa 2002,48,https://web.archive.org/web/20060609011155/http://www.statssa.gov.za/publications/earningspending2000/earningspending2000October2000.pdf
 South Africa,2000,0.57,,con,hh,FALSE,SSA2002 con hh,Statistics South Africa 2002,48,https://web.archive.org/web/20060609011155/http://www.statssa.gov.za/publications/earningspending2000/earningspending2000October2000.pdf
-South Africa,2006,0.67,,con,pc,FALSE,SSA2014 con pc,Statistics South Africa 2014,14,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-06March2014.pdf
-South Africa,2009,0.65,,con,pc,FALSE,SSA2014 con pc,Statistics South Africa 2014,14,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-06March2014.pdf
-South Africa,2011,0.65,,con,pc,FALSE,SSA2014 con pc,Statistics South Africa 2014,14,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-06March2014.pdf
-South Africa,2006,0.72,,gross,pc,FALSE,SSA2014 gross pc,Statistics South Africa 2014,14,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-06March2014.pdf
-South Africa,2009,0.7,,gross,pc,FALSE,SSA2014 gross pc,Statistics South Africa 2014,14,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-06March2014.pdf
-South Africa,2011,0.69,,gross,pc,FALSE,SSA2014 gross pc,Statistics South Africa 2014,14,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-06March2014.pdf
+South Africa,2006,0.67,,con,pc,FALSE,SSA2017 con pc,Statistics South Africa 2017,21,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-062015.pdf
+South Africa,2009,0.65,,con,pc,FALSE,SSA2017 con pc,Statistics South Africa 2017,21,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-062015.pdf
+South Africa,2011,0.65,,con,pc,FALSE,SSA2017 con pc,Statistics South Africa 2017,21,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-062015.pdf
+South Africa,2015,0.64,,con,pc,FALSE,SSA2017 con pc,Statistics South Africa 2017,21,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-062015.pdf
+South Africa,2006,0.72,,gross,pc,FALSE,SSA2017 gross pc,Statistics South Africa 2017,21,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-062015.pdf
+South Africa,2009,0.69,,gross,pc,FALSE,SSA2017 gross pc,Statistics South Africa 2017,21,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-062015.pdf
+South Africa,2011,0.69,,gross,pc,FALSE,SSA2017 gross pc,Statistics South Africa 2017,21,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-062015.pdf
+South Africa,2015,0.68,,gross,pc,FALSE,SSA2017 gross pc,Statistics South Africa 2017,21,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-062015.pdf
 Spain,1974,0.3762,NA,con,hh,FALSE,IVIE con hh,Caixa Galicia Foundation and Ivie (Valencian Institute of Economic Research) 2009,bloque2/GTH_ID_7374.xls,http://www.ivie.es/downloads/desigualdad/desigualdad.zip
 Spain,1981,0.3562,NA,con,hh,FALSE,IVIE con hh,Caixa Galicia Foundation and Ivie (Valencian Institute of Economic Research) 2009,bloque2/GTH_ID_8081.xls,http://www.ivie.es/downloads/desigualdad/desigualdad.zip
 Spain,1991,0.3488,NA,con,hh,FALSE,IVIE con hh,Caixa Galicia Foundation and Ivie (Valencian Institute of Economic Research) 2009,bloque2/GTH_ID_9091.xls,http://www.ivie.es/downloads/desigualdad/desigualdad.zip
