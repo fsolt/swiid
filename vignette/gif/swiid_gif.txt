@@ -1,0 +1,4 @@
+1. record screencast with QuickTime
+
+2. in Terminal:
+ffmpeg -i swiid.mov -s 840x400 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > swiid.gif
