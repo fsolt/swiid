@@ -14,14 +14,14 @@ HEADING="YEAR";
 VALUES("INCOME")="Equivalised disposable income after social transfers",
 "Equivalised disposable income before social transfers (pensions are not included in social transfers)",
 "Equivalised disposable income before social transfers (pensions are included in social transfers)";
-VALUES("YEAR")="2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015";
-TIMEVAL("YEAR")=TLIST(A1,"2005"-"2015");
+VALUES("YEAR")="2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016";
+TIMEVAL("YEAR")=TLIST(A1,"2005"-"2016");
 CODES("INCOME")="1","2","3";
-CODES("YEAR")="2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015";
+CODES("YEAR")="2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016";
 ELIMINATION("INCOME")="Equivalised disposable income after social transfers";
 DECIMALS=1;
 SHOWDECIMALS=1;
-LAST-UPDATED="20160909 10:30";
+LAST-UPDATED="20170713 10:30";
 SOURCE="Statistical Office of the Republic of Slovenia";
 CONTACT="Stanka Intihar, +386 (0)1 23 40 808, stanka.intihar@gov.si";
 COPYRIGHT=YES;
@@ -57,6 +57,6 @@ DATASYMBOL2="-";
 DATASYMBOL3="...";
 DATASYMBOL4="z";
 DATA=
-23.8 23.7 23.2 23.4 22.7 23.8 23.8 23.7 24.4 25 24.5 
-30.7 29.9 29.3 28.9 28 29.8 30 30.1 30.6 31 30.3 
-42.6 41.8 41 40.4 39.4 42.1 42.6 43.1 44.1 44.3 43.9; 
+23.8 23.7 23.2 23.4 22.7 23.8 23.8 23.7 24.4 25 24.5 24.4 
+30.7 29.9 29.3 28.9 28 29.8 30 30.1 30.6 31 30.3 30.1 
+42.6 41.8 41 40.4 39.4 42.1 42.6 43.1 44.1 44.3 43.9 43.6; 
