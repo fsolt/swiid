@@ -89,7 +89,7 @@ lis <- lis_files %>%
   arrange(country, year, welfare_def, equiv_scale)
 
 
-# Socio-Economic Database for Latin America and the Caribbean (SEDLAC) (automated)
+# Socio-Economic Database for Latin America and the Caribbean (SEDLAC) (update link)
 format_sedlac <- function(df, sheet, link, es) {
   x <- df
   if(ncol(x)==2) {
@@ -132,28 +132,24 @@ format_sedlac <- function(df, sheet, link, es) {
   return(x)
 }
 
-sedlac <- "http://sedlac.econo.unlp.edu.ar/eng/statistics.php" %>% 
-  html_session() %>% 
-  follow_link("Inequality") %>% 
-  follow_link("Inequality")
-writeBin(httr::content(sedlac$response, "raw"), "data-raw/sedlac.xls")
-sedlac_link <- sedlac$response$url
+sedlac_link <- "http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx"
+download.file(sedlac_link, "data-raw/sedlac.xlsx")
 
-sedlac_pc <- read_excel(path = "data-raw/sedlac.xls", 
+sedlac_pc <- read_excel(path = "data-raw/sedlac.xlsx", 
                         sheet = "intervals pci",
                         skip = 8)[1:3] %>%
   format_sedlac(sheet = "intervals pci",
                 link = sedlac_link,
                 es = "pc") 
 
-sedlac_ei <- read_excel(path = "data-raw/sedlac.xls",
+sedlac_ei <- read_excel(path = "data-raw/sedlac.xlsx",
                         sheet = "intervals ei",
                         skip = 8)[1:3] %>%
   format_sedlac(sheet = "intervals ei",
                 link = sedlac_link,
                 es = "ae")
 
-sedlac_hh <- read_excel(path = "data-raw/sedlac.xls",
+sedlac_hh <- read_excel(path = "data-raw/sedlac.xlsx",
                         sheet = "gini1",
                         skip = 7)[c(1,8)] %>%
   format_sedlac(sheet = "gini1",
@@ -2037,55 +2033,55 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
     unique()
   
   # # generate ratios of baseline_es to each es (for all constant wd)
-  # rho_es0 <- map_df(c("market", "gross", "disp", "con"), function(w) {
-  #   ineq1 %>% 
-  #     select(-gini_cat_se) %>% 
-  #     spread(key = wdes, value = gini_cat) %>%
-  #     mutate(bl = get(paste0(w, "_", baseline_es))) %>% 
-  #     mutate_at(vars(matches(w)),
-  #               funs(bl/.)) %>% 
-  #     select(kcode, tcode, matches(w)) %>% 
-  #     gather(key = wdes, value = rho_es, -kcode, -tcode) %>% 
-  #     filter(!is.na(rho_es)) %>% 
-  #     mutate(es = str_replace(wdes, ".*_", "")) %>% 
-  #     select(-wdes) %>% 
-  #     arrange(kcode, tcode, es)
-  # })
-  # 
-  # rho_es_se <- map_df(c("market", "gross", "disp", "con"), function(w) {
-  #   ineq1 %>% 
-  #     select(-gini_cat) %>% 
-  #     spread(key = wdes, value = gini_cat_se) %>%
-  #     mutate(bl = get(paste0(w, "_", baseline_es))) %>% 
-  #     mutate_at(vars(matches(w)),
-  #               funs(sqrt(bl^2+.^2))) %>% 
-  #     select(kcode, tcode, matches(w)) %>% 
-  #     gather(key = wdes, value = rho_es_se, -kcode, -tcode) %>% 
-  #     filter(!is.na(rho_es_se)) %>% 
-  #     mutate(es = str_replace(wdes, ".*_", "")) %>% 
-  #     select(-wdes) %>% 
-  #     arrange(kcode, tcode, es)
-  # })
-  # 
-  # rho_es <- rho_es0 %>% 
-  #   left_join(rho_es_se, by = c("kcode", "tcode", "es")) %>% 
-  #   group_by(kcode, tcode, es) %>%
-  #   summarize(rho_es = max(rho_es),
-  #             rho_es_se = max(rho_es_se)) %>%
-  #   ungroup() %>%
-  #   left_join(ineq %>% select(country, year, kcode, tcode, rcode, kbl) %>% distinct(),
-  #             by = c("kcode", "tcode")) %>% 
-  #   left_join(wecodes %>% select("es", "ecode") %>% distinct(), by = "es") %>% 
-  #   mutate(kecode = as.integer(factor(100*kcode+ecode)),
-  #          recode = as.integer(factor(100*rcode+ecode)),
-  #          kes = paste(country, es),
-  #          res = paste(rcode, es))
-  # 
-  # rm(rho_es0, rho_es_se)
-  # 
-  # rho_es_ke <- rho_es %>% 
-  #   pull(kes) %>% 
-  #   unique()
+  rho_es0 <- map_df(c("market", "gross", "disp", "con"), function(w) {
+    ineq1 %>%
+      select(-gini_cat_se) %>%
+      spread(key = wdes, value = gini_cat) %>%
+      mutate(bl = get(paste0(w, "_", baseline_es))) %>%
+      mutate_at(vars(matches(w)),
+                funs(bl/.)) %>%
+      select(kcode, tcode, matches(w)) %>%
+      gather(key = wdes, value = rho_es, -kcode, -tcode) %>%
+      filter(!is.na(rho_es)) %>%
+      mutate(es = str_replace(wdes, ".*_", "")) %>%
+      select(-wdes) %>%
+      arrange(kcode, tcode, es)
+  })
+
+  rho_es_se <- map_df(c("market", "gross", "disp", "con"), function(w) {
+    ineq1 %>%
+      select(-gini_cat) %>%
+      spread(key = wdes, value = gini_cat_se) %>%
+      mutate(bl = get(paste0(w, "_", baseline_es))) %>%
+      mutate_at(vars(matches(w)),
+                funs(sqrt(bl^2+.^2))) %>%
+      select(kcode, tcode, matches(w)) %>%
+      gather(key = wdes, value = rho_es_se, -kcode, -tcode) %>%
+      filter(!is.na(rho_es_se)) %>%
+      mutate(es = str_replace(wdes, ".*_", "")) %>%
+      select(-wdes) %>%
+      arrange(kcode, tcode, es)
+  })
+
+  rho_es <- rho_es0 %>%
+    left_join(rho_es_se, by = c("kcode", "tcode", "es")) %>%
+    group_by(kcode, tcode, es) %>%
+    summarize(rho_es = max(rho_es),
+              rho_es_se = max(rho_es_se)) %>%
+    ungroup() %>%
+    left_join(ineq %>% select(country, year, kcode, tcode, rcode, kbl) %>% distinct(),
+              by = c("kcode", "tcode")) %>%
+    left_join(wecodes %>% select("es", "ecode") %>% distinct(), by = "es") %>%
+    mutate(kecode = as.integer(factor(100*kcode+ecode)),
+           recode = as.integer(factor(100*rcode+ecode)),
+           kes = paste(country, es),
+           res = paste(rcode, es))
+
+  rm(rho_es0, rho_es_se)
+
+  rho_es_ke <- rho_es %>%
+    pull(kes) %>%
+    unique()
   
   kyrs <- ineq %>%
     group_by(kcode) %>%
@@ -2123,9 +2119,9 @@ ineq2_m <- market[[1]]
 rho_we_m <- market[[2]]
 rho_wd_m <- market[[3]]
 
-market2 <- make_inputs("LIS market sqrt", nbl = TRUE)
-ineq2_m2 <- market2[[1]]
-rho_we_m2 <- market2[[2]]
+# market2 <- make_inputs("LIS market sqrt", nbl = TRUE)
+# ineq2_m2 <- market2[[1]]
+# rho_we_m2 <- market2[[2]]
 
 ## Save
 swiid_source <- disp[[4]] %>% 
