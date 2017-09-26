@@ -1455,8 +1455,8 @@ turkstat_links <- paste0("http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab
 download.file(turkstat_links[1], "data-raw/turkstat_oecdm.xls")
 download.file(turkstat_links[2], "data-raw/turkstat_hh.xls")
 
-turkstat_oecdm <- read_excel("data-raw/turkstat_oecdm.xls", skip = 5) 
-turkstat_hh <- read_excel("data-raw/turkstat_hh.xls", skip = 5) 
+turkstat_oecdm <- read_excel("data-raw/turkstat_oecdm.xls", skip = 3) 
+turkstat_hh <- read_excel("data-raw/turkstat_hh.xls", skip = 3) 
 turkstat_list <- list(turkstat_oecdm = turkstat_oecdm, turkstat_hh = turkstat_hh)
 
 turkstat <- pmap_df(list(turkstat_list, names(turkstat_list), turkstat_links),
@@ -1959,7 +1959,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
     gather(key = wdes, value = rho, -kcode, -tcode) %>% 
     filter(!is.na(rho)) %>% 
     arrange(kcode, tcode, wdes)
-    
+  
   rho_we_se <- ineq1 %>% 
     select(-gini_cat) %>% 
     spread(key = wdes, value = gini_cat_se) %>% 
@@ -2047,7 +2047,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
       select(-wdes) %>%
       arrange(kcode, tcode, es)
   })
-
+  
   rho_es_se <- map_df(c("market", "gross", "disp", "con"), function(w) {
     ineq1 %>%
       select(-gini_cat) %>%
@@ -2062,7 +2062,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
       select(-wdes) %>%
       arrange(kcode, tcode, es)
   })
-
+  
   rho_es <- rho_es0 %>%
     left_join(rho_es_se, by = c("kcode", "tcode", "es")) %>%
     group_by(kcode, tcode, es) %>%
@@ -2076,9 +2076,9 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
            recode = as.integer(factor(100*rcode+ecode)),
            kes = paste(country, es),
            res = paste(rcode, es))
-
+  
   rm(rho_es0, rho_es_se)
-
+  
   rho_es_ke <- rho_es %>%
     pull(kes) %>%
     unique()
