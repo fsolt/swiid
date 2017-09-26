@@ -9,6 +9,7 @@ data-raw/OECD2008.pdf
 dev/*
 R/dcpo.R
 R/temp.stan
+R/ notes.txt
 SWIIDv5_0.RData
 vignette/reference/*
 vignette/*.dta
@@ -30,5 +31,6 @@ data/series_gt*.rda
 *.blg
 *.fls
 *.aux
+release/*
 
 
