@@ -69,7 +69,7 @@ library(stringr)
 # Load the SWIID
 load("swiid6_0.rda")
 
-# Plot SWIID gini_net estimates for the United States
+# Plot SWIID gini_disp estimates for the United States
 swiid_summary %>% 
     filter(country == "United States") %>% 
     ggplot(aes(x=year, y=gini_disp)) + 
