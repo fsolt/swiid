@@ -12,6 +12,10 @@ cores <- chains
 adapt_delta <- .95
 gt <- 0
 
+baseline_series <- "LIS market sqrt"
+baseline_wd <- str_split(baseline_series, "\\s")[[1]] %>% nth(-2)
+baseline_es <- str_split(baseline_series, "\\s")[[1]] %>% last()
+
 x0 <- ineq2_m %>%  
   filter(k_bl_obs > gt) %>% 
   mutate(kcode = as.integer(factor(country, levels = unique(country))),
