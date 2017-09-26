@@ -103,9 +103,9 @@ transformed parameters {
   real<lower=0> sigma_rrcat;
   
   sigma_kkcat = sqrt(square(sigma_kw) + square(sigma_ke));
-  sigma_krcat = sqrt(square(sigma_kw) + sqrt(square(sigma_re) + square(sigma_ke)));
-  sigma_rkcat = sqrt(sqrt(square(sigma_rw) + square(sigma_kw)) + square(sigma_ke));
-  sigma_rrcat = sqrt(sqrt(square(sigma_rw) + square(sigma_kw)) + sqrt(square(sigma_re) + square(sigma_ke)));
+  sigma_krcat = sqrt(square(sigma_kw) + square(sigma_re) + square(sigma_ke));
+  sigma_rkcat = sqrt(square(sigma_rw) + square(sigma_kw) + square(sigma_ke));
+  sigma_rrcat = sqrt(square(sigma_rw) + square(sigma_kw) + square(sigma_re) + square(sigma_ke));
 }
 
 model {
