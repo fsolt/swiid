@@ -78,9 +78,9 @@ format_lis_xtra <- function(x) {
 
 lis_files <- c("au", "at", "be", "br", "ca", "cn", "co", "cz", "dk",   # add "cl" when LIS releases data
                "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", 
-               "in", "ie", "il", "it", "jp", "lu", "mx", "nl", "no", "pa", "py", 
+               "in", "ie", "il", "it", "jp", "lt", "lu", "mx", "nl", "no", "pa", "py", 
                "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se", 
-               "ch", "tw", "uk", "us", "uy")
+               "ch", "tw", "uk", "us", "uy") # add "tn" when LIS releases data
 
 lis <- lis_files %>% 
   map_df(format_lis) %>% 
@@ -2032,7 +2032,11 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
     pull(kwd) %>% 
     unique()
   
-  # # generate ratios of baseline_es to each es (for all constant wd)
+  # generate ratios of baseline_es to each es (for all constant wd)
+  wdes <- c("market", "gross", "disp", "con")
+  if (str_detect(baseline_series, "market") & nbl == TRUE) {
+    wdes <- "market"
+  }
   rho_es0 <- map_df(c("market", "gross", "disp", "con"), function(w) {
     ineq1 %>%
       select(-gini_cat_se) %>%
@@ -2119,9 +2123,9 @@ ineq2_m <- market[[1]]
 rho_we_m <- market[[2]]
 rho_wd_m <- market[[3]]
 
-# market2 <- make_inputs("LIS market sqrt", nbl = TRUE)
-# ineq2_m2 <- market2[[1]]
-# rho_we_m2 <- market2[[2]]
+market2 <- make_inputs("LIS market sqrt", nbl = TRUE)
+ineq2_m2 <- market2[[1]]
+rho_we_m2 <- market2[[2]]
 
 ## Save
 swiid_source <- disp[[4]] %>% 

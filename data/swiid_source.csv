@@ -7240,12 +7240,42 @@ Lithuania,2008,0.3577,,gross,pc,FALSE,Povcalnet Lithuania gross pc 4,World Bank 
 Lithuania,2009,0.37,,disp,oecdm,TRUE,Eurostat Lithuania disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Lithuania,2009,0.3738,,gross,pc,FALSE,Povcalnet Lithuania gross pc 4,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Lithuania,2010,0.33,,disp,oecdm,TRUE,Eurostat Lithuania disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Lithuania,2010,0.3183,0.0054,disp,ae,FALSE,LIS disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2010,0.4013,0.0047,disp,hh,FALSE,LIS disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2010,0.3198,0.0056,disp,oecdm,FALSE,LIS disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2010,0.3269,0.0047,disp,pc,FALSE,LIS disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2010,0.3253,0.0054,disp,sqrt,FALSE,LIS disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2010,0.3479,0.0058,gross,ae,FALSE,LIS gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2010,0.4331,0.0048,gross,hh,FALSE,LIS gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2010,0.3508,0.005,gross,oecdm,FALSE,LIS gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2010,0.3524,0.0059,gross,pc,FALSE,LIS gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2010,0.356,0.0053,gross,sqrt,FALSE,LIS gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2010,0.5338,0.0068,market,ae,FALSE,LIS market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2010,0.6238,0.0065,market,hh,FALSE,LIS market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2010,0.5295,0.0075,market,oecdm,FALSE,LIS market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2010,0.544,0.0061,market,pc,FALSE,LIS market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2010,0.5271,0.0068,market,sqrt,FALSE,LIS market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
 Lithuania,2010,0.33759999999999996,,gross,pc,FALSE,Povcalnet Lithuania gross pc 4,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Lithuania,2011,0.32,,disp,oecdm,TRUE,Eurostat Lithuania disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Lithuania,2011,0.32630000000000003,,gross,pc,FALSE,Povcalnet Lithuania gross pc 4,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Lithuania,2012,0.34600000000000003,,disp,oecdm,TRUE,Eurostat Lithuania disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Lithuania,2012,0.3515,,gross,pc,FALSE,Povcalnet Lithuania gross pc 4,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Lithuania,2013,0.35,,disp,oecdm,TRUE,Eurostat Lithuania disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Lithuania,2013,0.3422,0.0059,disp,ae,FALSE,LIS disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2013,0.424,0.006,disp,hh,FALSE,LIS disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2013,0.3447,0.006,disp,oecdm,FALSE,LIS disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2013,0.3474,0.0065,disp,pc,FALSE,LIS disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2013,0.3487,0.0062,disp,sqrt,FALSE,LIS disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2013,0.3628,0.005,gross,ae,FALSE,LIS gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2013,0.446,0.006,gross,hh,FALSE,LIS gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2013,0.3657,0.0066,gross,oecdm,FALSE,LIS gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2013,0.3663,0.0052,gross,pc,FALSE,LIS gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2013,0.369,0.0058,gross,sqrt,FALSE,LIS gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2013,0.5148,0.007,market,ae,FALSE,LIS market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2013,0.6019,0.0071,market,hh,FALSE,LIS market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2013,0.511,0.0067,market,oecdm,FALSE,LIS market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2013,0.5243,0.0071,market,pc,FALSE,LIS market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
+Lithuania,2013,0.5086,0.0068,market,sqrt,FALSE,LIS market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lt.txt
 Lithuania,2014,0.379,,disp,oecdm,TRUE,Eurostat Lithuania disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Lithuania,2015,0.37,,disp,oecdm,TRUE,Eurostat Lithuania disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Luxembourg,1985,0.2395,0.0049,disp,ae,FALSE,LIS disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lu.txt
