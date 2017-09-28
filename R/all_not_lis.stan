@@ -53,7 +53,7 @@ parameters {
   vector<lower=.3, upper=1.7>[M] rho_we_t;  // unknown "true" rho_we given rho_we and rho_we_se
   vector<lower=.3, upper=1.7>[P] rho_wd_t;  // unknown "true" rho_wd given rho_wd and rho_wd_se
 
-  vector<lower=.3, upper=1.7>[RWE] rho_rwe_hat; // estimated rho_rwe by country
+  vector<lower=.3, upper=1.7>[RWE] rho_rwe_hat; // estimated rho_we by region
   real<lower=0, upper=.1> sigma_rwe[R];         // rho_rwe noise
   
   vector<lower=.3, upper=1.7>[KW] rho_kw_hat;   // estimated rho_wd by country

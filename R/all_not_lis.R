@@ -14,7 +14,18 @@ adapt_delta <- .99
 x0 <- ineq2 %>%  
   filter(k_bl_obs == 0) %>%   # only non-baseline countries
   mutate(kcode = as.integer(factor(country, levels = unique(country))),
-         rcode = as.integer(factor(region, levels = unique(region))))  # redo codes for filtered sample
+         tcode = year - min(year) + 1,
+         rcode = as.integer(factor(region, levels = unique(region))),
+         wecode = as.integer(factor(wdes, levels = unique(wdes))),
+         kwecode = as.integer(factor(100*kcode+wecode)),
+         wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)),
+         ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)),
+         wecode = as.integer(factor(paste(wcode, ecode))),
+         kwecode = as.integer(factor(100*kcode+wecode)),
+         rwecode = as.integer(factor(100*rcode+wecode)),
+         rwcode = as.integer(factor(100*rcode+wcode)),
+         kecode = as.integer(factor(100*kcode+ecode)),
+         recode = as.integer(factor(100*rcode+ecode)))  # redo codes for filtered sample
 
 x0_wdes <- x0 %>%
   select(region, wdes) %>% 
@@ -96,7 +107,6 @@ source_data <- list(  K = max(x$kcode),
                       kn = kn$yrspan,
                       kt1 = kn$kt1,
                       rr = x$rcode,
-                      ss = x$scode,
                       wen = x$wecode,
                       kwen = x$kwecode,
                       rwen = x$rwecode,
