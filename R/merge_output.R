@@ -90,7 +90,7 @@ swiid_summary <- left_join(swiid_disp_summary, swiid_mkt_summary, by = c("countr
          rel_red = (abs_red/gini_mkt)*100,
          rel_red_se = sqrt(abs_red_se^2 + gini_mkt_se^2))
 
-write_csv(swiid_summary, "data/swiid6_0_summary.csv")
+write_csv(swiid_summary, "data/swiid6_1_summary.csv")
 
 # R formatted
 swiid_kt <- function(input, output, probs = c(.025, .975)) {
@@ -141,4 +141,4 @@ for (i in 1:100) {
   swiid[[i]] <- stemp
 }
 
-save(swiid, swiid_summary, file = "data/swiid6_0.rda") # for release
+save(swiid, swiid_summary, file = "data/swiid6_1.rda") # for release
