@@ -1930,6 +1930,10 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
            es = str_replace(wdes, ".*_", "")) %>% 
     arrange(wecode)
   
+  kwecodes <- ineq %>%
+    select(wecode, kcode, kwecode, rwecode) %>% 
+    distinct()
+  
   ineq1 <- ineq %>% 
     group_by(kcode, tcode, welfare_def, equiv_scale) %>% 
     summarize(n_obs = n(),
@@ -1976,8 +1980,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
     left_join(ineq %>% select(country, year, kcode, tcode, rcode) %>% distinct(),
               by = c("kcode", "tcode")) %>% 
     left_join(wecodes, by = "wdes") %>% 
-    mutate(kwecode = as.integer(factor(100*kcode+wecode)),
-           rwecode = as.integer(factor(100*rcode+wecode)))
+    left_join(kwecodes, by = c("kcode", "wecode"))
   
   rm(rho_we0, rho_we_se)
   
