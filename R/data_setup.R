@@ -1974,13 +1974,23 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
     filter(!is.na(rho_se)) %>% 
     arrange(kcode, tcode, wdes)
   
-  rho_we <- rho_we0 %>% 
+  rho_we00 <- rho_we0 %>% 
     left_join(rho_we_se, by = c("kcode", "tcode", "wdes")) %>% 
-    filter(!rho == 1) %>% 
+    mutate(rho_se = if_else(rho == 1, .1, rho_se)) %>%            # placeholder for baseline series
     left_join(ineq %>% select(country, year, kcode, tcode, rcode) %>% distinct(),
               by = c("kcode", "tcode")) %>% 
     left_join(wecodes, by = "wdes") %>% 
     left_join(kwecodes, by = c("kcode", "wecode"))
+  
+  rcodes_not_miss <- rho_we00 %>%                       # regions with no observed ratios to baseline series
+    filter(!rho == 1) %>%
+    select(rcode, wdes) %>% 
+    filter(wdes == baseline_wdes) %>% 
+    unique() %>% 
+    pull(rcode)
+  
+  rho_we <- rho_we00 %>% 
+    filter(!(rho == 1 & (rcode %in% rcodes_not_miss)))  # use placeholder if no observed ratios to baseline series
   
   rm(rho_we0, rho_we_se)
   
@@ -2126,9 +2136,9 @@ ineq2_m <- market[[1]]
 rho_we_m <- market[[2]]
 rho_wd_m <- market[[3]]
 
-market2 <- make_inputs("LIS market sqrt", nbl = TRUE)
-ineq2_m2 <- market2[[1]]
-rho_we_m2 <- market2[[2]]
+# market2 <- make_inputs("LIS market sqrt", nbl = TRUE)
+# ineq2_m2 <- market2[[1]]
+# rho_we_m2 <- market2[[2]]
 
 ## Save
 swiid_source <- disp[[4]] %>% 
