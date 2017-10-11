@@ -84,10 +84,14 @@ lis_files <- c("au", "at", "be", "br", "ca", "cn", "co", "cz", "dk",   # add "cl
 
 lis <- lis_files %>% 
   map_df(format_lis) %>% 
-  filter(!country=="Russia") %>% 
+  filter(!(country=="Russia" & 
+             (year > 2004 | (welfare_def == ("disp") & equiv_scale == "sqrt")))) %>% 
   rbind(format_lis_xtra("nz"), format_lis_xtra("ru_old")) %>% 
   arrange(country, year, welfare_def, equiv_scale)
 
+ru_lissy <- format_lis("ru") %>% 
+  filter(year > 2004) %>% 
+  mutate(series = paste("RLMS", series))
 
 # Socio-Economic Database for Latin America and the Caribbean (SEDLAC) (update link)
 format_sedlac <- function(df, sheet, link, es) {
@@ -677,17 +681,17 @@ statee <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data-ra
 
 
 # Statistics Finland (automated)
-statfi <- get_pxweb_data(url = "http://pxnet2.stat.fi/PXWeb/api/v1/en/StatFin/tul/tjt/270_tjt_tau_117.px",
-                         dims = list(Tulokäsite = c("SL2", "4L2", "6L2"),
-                                     Vuosi = c("*"),
-                                     Tiedot = c("Gini")),
+statfi <- get_pxweb_data(url = "http://pxnet2.stat.fi/PXWeb/api/v1/fi/StatFin/tul/tjt/statfin_tjt_pxt_015.px",
+                         dims = list(Tulokäsite = c('SL2', '4L2', '6L2'),
+                                     Tiedot = c('Gini'),
+                                     Vuosi = c('*')),
                          clean = TRUE) %>% 
   transmute(country = "Finland",
-            year = as.numeric(as.character(Year)),
+            year = as.numeric(as.character(Vuosi)),
             gini = values/100,
             gini_se = NA,
-            welfare_def = ifelse(str_detect(`Income concept`, "Disposable"), "disp",
-                                 ifelse(str_detect(`Income concept`, "Gross"), "gross",
+            welfare_def = ifelse(str_detect(`Tulokäsite`, "Käytettävissä"), "disp",
+                                 ifelse(str_detect(`Tulokäsite`, "Bruttotulot"), "gross",
                                         "market")),
             equiv_scale = "oecdm",
             monetary = FALSE,
@@ -1850,7 +1854,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
                      capmas, statee, statfi, insee, geostat,
                      stathk, bpsid, amar, cso_ie, istat, kazstat, kostat, nsck,
                      snz, nbs, monstat, ssb, dgeec, psa,
-                     rosstat, singstat, ssi, ine, statslk, scb, 
+                     rosstat, ru_lissy, singstat, ssi, ine, statslk, scb, 
                      nso_thailand, tdgbas, turkstat, ons, ifs, cbo, uscb, uine, inev, gso_vn,
                      atg, gidd,
                      added_data) %>% 
