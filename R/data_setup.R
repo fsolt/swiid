@@ -1131,7 +1131,7 @@ ssb <- read_csv2("data-raw/ssb.csv", skip = 2) %>%  # throws warnings; they are 
 # DGEEC Paraguay (update link and, probably, wrangle)
 # http://www.dgeec.gov.py > Publicaciones > Pobreza
 
-dgeec_link <- "http://www.dgeec.gov.py/Publicaciones/Biblioteca/eph2015/Boletin%20de%20pobreza%202015.pdf"
+dgeec_link <- "https://web.archive.org/web/20170313125847/http://www.dgeec.gov.py/Publicaciones/Biblioteca/eph2015/Boletin%20de%20pobreza%202015.pdf"
 download.file(dgeec_link, "data-raw/dgeec.pdf")
 
 dgeec <- extract_tables("data-raw/dgeec.pdf", pages = 15)[[1]][-1, ] %>%
@@ -2140,10 +2140,6 @@ ineq2_m <- market[[1]]
 rho_we_m <- market[[2]]
 rho_wd_m <- market[[3]]
 
-# market2 <- make_inputs("LIS market sqrt", nbl = TRUE)
-# ineq2_m2 <- market2[[1]]
-# rho_we_m2 <- market2[[2]]
-
 ## Save
 swiid_source <- disp[[4]] %>% 
   rename(gini = gini_m,
@@ -2151,6 +2147,6 @@ swiid_source <- disp[[4]] %>%
   select(-country_obs, -series_obs, -region) %>% 
   arrange(country, year, series)
 
-rm(disp, market, market2)
+rm(disp, market)
 write_csv(swiid_source, "data/swiid_source.csv", na = "")
 save.image(file = "data/ineq.rda")
