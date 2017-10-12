@@ -9,7 +9,7 @@ seed <- 324
 iter <- 1500
 chains <- 3
 cores <- chains
-adapt_delta <- .95
+adapt_delta <- .99
 gt <- 0
 
 baseline_series <- "LIS market sqrt"
