@@ -6,7 +6,7 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 2000
+iter <- 3000
 chains <- 3
 cores <- chains
 adapt_delta <- .99
@@ -165,7 +165,7 @@ source_data <- list(  K = max(x$kcode2),
 
 # Stan
 start <- proc.time()
-out1 <- stan(file = "R/all_not_lis.stan",
+out1 <- stan(file = "R/all_not_lis_mkt.stan",
              data = source_data,
              seed = seed,
              iter = iter,
