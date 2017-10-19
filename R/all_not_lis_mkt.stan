@@ -47,17 +47,15 @@ data{
 parameters {
   real<lower=0, upper=1> gini[KT];          // SWIID gini estimate for baseline in country k at time t
   real<lower=0, upper=.1> sigma_gini[K]; 	  // country variance parameter (see Linzer and Stanton 2012, 12)
-  real<lower=0, upper=.02> msg;              // hyperprior for mean of sigma_gini
-  real<lower=0, upper=.01> ssg;              // hyperprior for scale of sigma_gini
   vector<lower=0.1, upper=0.8>[N] gini_t;   // unknown "true" gini given gini_m and gini_m_se
   vector<lower=.3, upper=1.7>[M] rho_we_t;  // unknown "true" rho_we given rho_we and rho_we_se
   vector<lower=.3, upper=1.7>[P] rho_wd_t;  // unknown "true" rho_wd given rho_wd and rho_wd_se
 
   vector<lower=.3, upper=1.7>[RWE] rho_rwe_hat; // estimated rho_we by region
-  real<lower=0, upper=.1> sigma_rwe[R];         // rho_rwe noise
+  real<lower=0> sigma_rwe[R];         // rho_rwe noise
   
   vector<lower=.3, upper=1.7>[KW] rho_kw_hat;   // estimated rho_wd by country
-  real<lower=0, upper=.1> sigma_kw;             // rho_kw noise
+  real<lower=0> sigma_kw;             // rho_kw noise
 }
 
 transformed parameters {
@@ -65,14 +63,15 @@ transformed parameters {
   real<lower=0> sigma_rrcat[R];
   
   for (r in 1:R) {
-    sigma_krcat[r] = sqrt(square(sigma_kw) + 2 * square(sigma_rwe[r])); 
-    sigma_rrcat[r] = sqrt(2 * square(sigma_kw) + 2 * square(sigma_rwe[r]));
+    sigma_krcat[r] = sqrt(square(sigma_kw) + square(sigma_rwe[r])); 
+    sigma_rrcat[r] = sqrt(2 * square(sigma_rwe[r])); 
   }
 }
 
 model {
-  sigma_gini ~ normal(msg, ssg);
-  sigma_rwe ~ normal(0.04, 0.02);
+  sigma_gini ~ gamma(2, 100);
+  sigma_rwe ~ gamma(2, 60);
+  sigma_kw ~ gamma(2, 300);
 
   gini_m ~ normal(gini_t, gini_m_se);
   rho_we ~ normal(rho_we_t, rho_we_se);
