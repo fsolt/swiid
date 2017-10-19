@@ -9973,20 +9973,6 @@ Russia,2003,0.4,,con,pc,FALSE,Povcalnet Russia con pc 2,World Bank Povcalnet,"",
 Russia,2003,0.403,,gross,pc,TRUE,Rosstat gross pc,Russian Federal State Statistics Service,Sec.5,http://www.gks.ru/free_doc/doc_2016/year/pril-year_2016_eng.xls
 Russia,2004,0.51,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en
 Russia,2004,0.5,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en
-Russia,2004,0.3828,0.0061,disp,ae,FALSE,LIS disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.4536,0.0055,disp,hh,FALSE,LIS disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.3845,0.0057,disp,oecdm,FALSE,LIS disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.3863,0.0051,disp,pc,FALSE,LIS disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.3828,0.0055,gross,ae,FALSE,LIS gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.4536,0.0052,gross,hh,FALSE,LIS gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.3845,0.0062,gross,oecdm,FALSE,LIS gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.3863,0.0048,gross,pc,FALSE,LIS gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.3915,0.006,gross,sqrt,FALSE,LIS gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.5004,0.0063,market,ae,FALSE,LIS market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.5843,0.0062,market,hh,FALSE,LIS market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.4985,0.006,market,oecdm,FALSE,LIS market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.5064,0.0066,market,pc,FALSE,LIS market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.5001,0.0063,market,sqrt,FALSE,LIS market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
 Russia,2004,0.40299999999999997,,con,pc,FALSE,Povcalnet Russia con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Russia,2004,0.409,,gross,pc,TRUE,Rosstat gross pc,Russian Federal State Statistics Service,Sec.5,http://www.gks.ru/free_doc/doc_2016/year/pril-year_2016_eng.xls
 Russia,2005,0.43,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en
