@@ -41,8 +41,8 @@ data{
 parameters {
   real<lower=0, upper=1> gini[KT];          // SWIID gini estimate for baseline in country k at time t
   real<lower=0, upper=.1> sigma_gini[K]; 	  // country variance parameter (see Linzer and Stanton 2012, 12)
-  real<lower=3, upper=6> asg;               // hyperprior for shape of sigma_gini
-  real<lower=40, upper=60> bsg;            // hyperprior for scale of sigma_gini
+  real<lower=.1, upper=2> asg;             // hyperprior for shape of sigma_gini
+  real<lower=70, upper=100> bsg;             // hyperprior for scale of sigma_gini
   vector<lower=.1, upper=.8>[N] gini_t;     // unknown "true" gini given gini_m and gini_m_se
   vector<lower=.3, upper=1.7>[M] rho_we_t;  // unknown "true" rho_we given rho_we and rho_we_se
   
