@@ -17,7 +17,7 @@ baseline_wd <- str_split(baseline_series, "\\s")[[1]] %>% nth(-2)
 baseline_es <- str_split(baseline_series, "\\s")[[1]] %>% last()
 
 x0 <- ineq2 %>%  
-  filter(k_bl_obs > 0) %>% 
+  filter(k_bl_obs > 0) %>%        # use only data for countries with some baseline obs
   mutate(kcode = as.integer(factor(country, levels = unique(country))),
          rcode = as.integer(factor(region, levels = unique(region))),
          scode = as.integer(factor(series, levels = unique(series))),
