@@ -6,7 +6,8 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 3000
+iter <- 2000
+warmup <- 1500
 chains <- 3
 cores <- chains
 adapt_delta <- .99
@@ -109,6 +110,7 @@ out1 <- stan(file = "R/all_lis.stan",
              data = source_data,
              seed = seed,
              iter = iter,
+             warmup = warmup,
              cores = cores,
              chains = chains,
              control = list(max_treedepth = 20,
