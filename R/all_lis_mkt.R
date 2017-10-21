@@ -6,8 +6,8 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 2000
-warmup <- 1500
+iter <- 1500
+warmup <- iter - 500
 chains <- 3
 cores <- chains
 adapt_delta <- .99
@@ -17,7 +17,8 @@ baseline_wd <- str_split(baseline_series, "\\s")[[1]] %>% nth(-2)
 baseline_es <- str_split(baseline_series, "\\s")[[1]] %>% last()
 
 x0 <- ineq2_m %>%  
-  filter(k_bl_obs > 0) %>%        # use only data for countries with some baseline obs
+  filter(k_bl_obs > 0) %>%                    # use only data for countries with some baseline obs
+  filter(!str_detect(source, "RLMS")) %>%     # exclude ru_lissy data (until time-varying ratios are modeled)
   mutate(kcode = as.integer(factor(country, levels = unique(country))),
          rcode = as.integer(factor(region, levels = unique(region))),
          scode = as.integer(factor(series, levels = unique(series))),
