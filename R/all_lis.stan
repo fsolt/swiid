@@ -39,35 +39,35 @@ data{
 }  
   
 parameters {
-  real<lower=0, upper=1> gini[KT];          // SWIID gini estimate for baseline in country k at time t
-  real<lower=0, upper=.1> sigma_gini[K]; 	  // country variance parameter (see Linzer and Stanton 2012, 12)
-  real<lower=1, upper=2> asg;             // hyperprior for shape of sigma_gini
-  real<lower=70, upper=110> bsg;             // hyperprior for scale of sigma_gini
-  vector<lower=.1, upper=.8>[N] gini_t;     // unknown "true" gini given gini_m and gini_m_se
-  vector<lower=.3, upper=1.7>[M] rho_we_t;  // unknown "true" rho_we given rho_we and rho_we_se
+  real<lower=0, upper=1> gini[KT];        // SWIID gini estimate for baseline in country k at time t
+  real<lower=0> sigma_gini; 	            // random-walk variance parameter
+  vector[N] gini_t;                       // unknown "true" gini given gini_m and gini_m_se
+  vector[M] rho_we_t;                     // unknown "true" rho_we given rho_we and rho_we_se
   
-  vector<lower=0>[S] rho_s;                 // ratio of baseline to series s
-  real<lower=0, upper=.1> sigma_s; 	        // series noise 
+  vector<lower=0>[S] rho_s;               // ratio of baseline to series s
+  real<lower=0> sigma_s; 	                // series noise 
   
-  vector<lower=.3, upper=1.7>[KWE] rho_kwe_hat;  // estimated rho_kwe by country
-  real<lower=0, upper=.1> sigma_kwe;         // rho_we noise
+  vector<lower=0>[KWE] rho_kwe_hat;       // estimated rho_kwe by country
+  real<lower=0> sigma_kwe;                // rho_we noise
 }
 
 model {
-  sigma_gini ~ gamma(asg, bsg);
+  sigma_gini ~ normal(0, .01);
+  sigma_s ~ normal(0, .05);
+  sigma_kwe ~ normal(0, .05);
  
   gini_m ~ normal(gini_t, gini_m_se);
   rho_we ~ normal(rho_we_t, rho_we_se);
   
-  rho_s ~ normal(1, .25);
-  rho_kwe_hat ~ normal(1, .25);
+  rho_s ~ gamma(4, 3);
+  rho_kwe_hat ~ gamma(4, 3);
 
   for (k in 1:K) {
     if (kn[k] > 1) {
       gini[kt1[k]] ~ normal(.35, .1);                         // a random draw from N(.35, .1) in first year
-      gini[(kt1[k]+1):(kt1[k]+kn[k]-1)] ~ normal(gini[(kt1[k]):(kt1[k]+kn[k]-2)], sigma_gini[k]); // otherwise a random walk from previous year 
+      gini[(kt1[k]+1):(kt1[k]+kn[k]-1)] ~ cauchy(gini[(kt1[k]):(kt1[k]+kn[k]-2)], sigma_gini); // otherwise a random walk from previous year 
     } else {
-      gini[kt1[k]] ~ normal(.35, .1);                            // a random draw from N(.35, .1)
+      gini[kt1[k]] ~ normal(.35, .1);                         // a random draw from N(.35, .1)
     }
   }
   
