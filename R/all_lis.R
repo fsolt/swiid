@@ -18,7 +18,7 @@ baseline_es <- str_split(baseline_series, "\\s")[[1]] %>% last()
 
 x0 <- ineq2 %>%  
   filter(k_bl_obs > 0) %>%                    # use only data for countries with some baseline obs
-  filter(!str_detect(source, "RLMS")) %>%     # exclude ru_lissy data (until time-varying ratios are modeled)
+  filter(!str_detect(series, "RLMS")) %>%     # exclude ru_lissy data (until time-varying ratios are modeled)
   mutate(kcode = as.integer(factor(country, levels = unique(country))),
          rcode = as.integer(factor(region, levels = unique(region))),
          scode = as.integer(factor(series, levels = unique(series))),
