@@ -6,11 +6,11 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 1500
-warmup <- iter - 500
+iter <- 2500
+warmup <- iter - 1000
 chains <- 3
 cores <- chains
-adapt_delta <- .99
+adapt_delta <- .9
 
 baseline_series <- "LIS market sqrt"
 baseline_wd <- str_split(baseline_series, "\\s")[[1]] %>% nth(-2)
