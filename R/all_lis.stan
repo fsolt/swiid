@@ -65,7 +65,7 @@ model {
   for (k in 1:K) {
     if (kn[k] > 1) {
       gini[kt1[k]] ~ normal(.35, .1);                         // a random draw from N(.35, .1) in first year
-      gini[(kt1[k]+1):(kt1[k]+kn[k]-1)] ~ cauchy(gini[(kt1[k]):(kt1[k]+kn[k]-2)], sigma_gini); // otherwise a random walk from previous year 
+      gini[(kt1[k]+1):(kt1[k]+kn[k]-1)] ~ normal(gini[(kt1[k]):(kt1[k]+kn[k]-2)], sigma_gini); // otherwise a random walk from previous year 
     } else {
       gini[kt1[k]] ~ normal(.35, .1);                         // a random draw from N(.35, .1)
     }
