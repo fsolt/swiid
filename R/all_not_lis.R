@@ -6,10 +6,11 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 3000
+iter <- 2500
+warmup <- iter - 1000
 chains <- 3
 cores <- chains
-adapt_delta <- .99
+adapt_delta <- .9
 
 baseline_series <- "LIS disp sqrt"
 baseline_wd <- str_split(baseline_series, "\\s")[[1]] %>% nth(-2)
@@ -169,6 +170,7 @@ out1 <- stan(file = "R/all_not_lis.stan",
              data = source_data,
              seed = seed,
              iter = iter,
+             warmup = warmup,
              cores = cores,
              chains = chains,
              control = list(max_treedepth = 20,
