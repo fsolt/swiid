@@ -71,7 +71,7 @@ transformed parameters {
 model {
   sigma_gini ~ normal(0, .01);
   sigma_rwe ~ normal(0, .05);
-  sigma_kw ~ normal(0, .003);
+  sigma_kw ~ normal(0, .001);
 
   gini_m ~ normal(gini_t, gini_m_se);
   rho_we ~ normal(rho_we_t, rho_we_se);
