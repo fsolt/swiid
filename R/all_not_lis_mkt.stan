@@ -71,7 +71,7 @@ transformed parameters {
 model {
   sigma_gini ~ normal(0, .01);
   sigma_rwe ~ normal(0, .05);
-  sigma_kw ~ normal(0, .0005);
+  sigma_kw ~ normal(0, .001);
 
   gini_m ~ normal(gini_t, gini_m_se);
   rho_we ~ normal(rho_we_t, rho_we_se);
@@ -97,4 +97,4 @@ model {
 
   // observations without rho_kw_hat use one-step estimates from rho_rwe_hat
   gini[kktt[(N_kr+1):N]] ~ normal(rho_rwe_hat[rwen[(N_kr+1):N]] .* gini_t[(N_kr+1):N], sigma_rrcat[rr[(N_kr+1):N]]);
-}
+} 
