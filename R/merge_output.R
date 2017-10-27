@@ -171,9 +171,7 @@ res_stata <- res_stata %>% select(country, year,
                                   starts_with("abs_red"),
                                   starts_with("rel_red"))
 
-names(res_stata) <- names(res_stata) %>% str_replace("(.*)_(\\d+)", "_\\2_\\1")
-
-haven::write_dta(res_stata, "data/swiid6_1.dta", version = 12)
+haven::write_dta(res_stata, "data/for_stata.dta", version = 12) # for format_stata.do
 
 
 swiid <- list()
