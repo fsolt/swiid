@@ -88,7 +88,7 @@ swiid_mkt_summary <- bind_rows(lis_mkt_summary, not_lis_mkt_summary) %>%
 
 swiid_source <- read_csv("data/swiid_source.csv")
 
-kt_redist <- rho_wd_m %>% 
+k_redist <- rho_wd_m %>% 
   filter(wd == "disp" | wd == "con") %>% 
   distinct(country) %>%
   mutate(region = countrycode(country, "swiid.name", "swiid.region", custom_dict = cc_swiid),
@@ -104,17 +104,18 @@ kt_redist <- rho_wd_m %>%
   select(-region)
 
 swiid_summary <- left_join(swiid_disp_summary, swiid_mkt_summary, by = c("country", "year")) %>% 
-  left_join(kt_redist, by = c("country")) %>% 
+  left_join(k_redist, by = c("country")) %>% 
   mutate(redist = (year >= redist_after),
          abs_red = ifelse(redist, gini_mkt - gini_disp, NA_real_),
          abs_red_se = ifelse(redist, sqrt(gini_mkt_se^2 + gini_disp_se^2) %>% round(1), NA_real_),
          rel_red = ifelse(redist, ((abs_red/gini_mkt)*100) %>% round(1), NA_real_),
-         rel_red_se = ifelse(redist, sqrt(abs_red_se^2 + gini_mkt_se^2) %>% round(1), NA_real_)) %>% 
-  select(-redist, -redist_after)
+         rel_red_se = ifelse(redist, sqrt(abs_red_se^2 + gini_mkt_se^2) %>% round(1), NA_real_))
 
-write_csv(swiid_summary, "data/swiid6_1_summary.csv")
+kt_redist <- swiid_summary %>%
+  select(country, year, redist)
+  
+write_csv(swiid_summary %>% select(-redist, -redist_after), "data/swiid6_1_summary.csv", na = "")
 
-# R formatted
 swiid_kt <- function(input, output, probs = c(.025, .975)) {
   ktcodes <- input %>%  
     transmute(kcode = kcode,
@@ -149,31 +150,21 @@ res <- bind_rows(swiid_kt(lis_in, lis_out),
                  swiid_kt(not_lis_in, not_lis_out)) %>%  
   left_join(bind_rows(swiid_kt(lis_mkt_in, lis_mkt_out),
                       swiid_kt(not_lis_mkt_in, not_lis_mkt_out)), by = c("country", "year")) %>% 
+  left_join(kt_redist, by = c("country", "year")) %>% 
   arrange(country, year)
 
-make_redist <- function(df, n) {
-  abs_var <- paste0("abs_red_", n)
-  rel_var <- paste0("rel_red_", n)
-  
-  df[[abs_var]] <-  df[[paste0("gini_mkt_", n)]]- df[[paste0("gini_disp_", n)]]
-  df[[rel_var]] <- df[[abs_var]]/df[[paste0("gini_mkt_", n)]]
-  return(df)
-}
+# Stata formatted
+res_stata <- res %>% select(country, year, 
+                            starts_with("gini_disp"), 
+                            starts_with("gini_mkt"), 
+                            redist,
+                            starts_with("abs_red"),
+                            starts_with("rel_red"))
 
-res_stata <- res
-for (i in 1:100) {
-  res_stata <- make_redist(res_stata, i)
-}
+haven::write_dta(res_stata, "data/for_stata.dta", version = 12)   # for format_stata.do
+RStata::stata("R/format_stata.do")    # see https://github.com/lbraglia/RStata for setup instructions
 
-res_stata <- res_stata %>% select(country, year, 
-                                  starts_with("gini_disp"), 
-                                  starts_with("gini_mkt"), 
-                                  starts_with("abs_red"),
-                                  starts_with("rel_red"))
-
-haven::write_dta(res_stata, "data/for_stata.dta", version = 12) # for format_stata.do
-
-
+# R formatted
 swiid <- list()
 for (i in 1:100) {
   stemp <- res %>%
@@ -186,4 +177,21 @@ for (i in 1:100) {
   swiid[[i]] <- stemp
 }
 
-save(swiid, swiid_summary, file = "data/swiid6_1.rda") # for release
+save(swiid, swiid_summary, file = "data/swiid6_1.rda") 
+
+# for release
+dir.create("release/swiid6_1", recursive = TRUE)
+final_files <- c("data/swiid6_1_summary.csv", "data/swiid6_1.rda", "data/swiid6_1.dta")
+file.copy(from = final_files,
+          to = str_replace(final_files, "data/", "release/swiid6_1/"),
+          overwrite = TRUE)
+documentation_files <- c("vignette/R_swiid.pdf", "vignette/stata_swiid.pdf")
+file.copy(from = documentation_files,
+          to = str_replace(documentation_files, "vignette/", "release/swiid6_1/"),
+          overwrite = TRUE)
+setwd("release")
+zip("swiid6_1.zip", "swiid6_1")
+dir.create("s61")
+file.copy("swiid6_1.zip", "s61/swiid6_1.zip", overwrite = TRUE)
+zip("s61.zip", "s61")
+setwd("..")
