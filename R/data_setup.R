@@ -250,7 +250,7 @@ oecd0 <- oecd_link %>%
             measure = MEASURE)
 
 oecd_se <- oecd0 %>% filter(measure=="STDG" & gini!=0) %>% 
-  mutate(gini_se = gini) %>% 
+  mutate(gini_se = if_else(gini < 0.1, gini, gini/100)) %>%   # data for Chile and China obv on wrong scale
   select(-gini, -measure)
 
 oecd <- oecd0 %>% filter(measure!="STDG") %>% 
