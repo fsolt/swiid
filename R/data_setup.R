@@ -231,7 +231,7 @@ cepal_sdi <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data
 
 
 # OECD Income Distribution Database (automated)
-oecd_link <- "http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/AUS+AUT+BEL+CAN+CHL+CZE+DNK+EST+FIN+FRA+DEU+GRC+HUN+ISL+IRL+ISR+ITA+JPN+KOR+LUX+MEX+NLD+NZL+NOR+POL+PRT+SVK+SVN+ESP+SWE+CHE+TUR+GBR+USA+RUS.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all"
+oecd_link <- "http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all"
 oecd0 <- oecd_link %>% 
   readSDMX() %>% 
   as.data.frame() %>% 
