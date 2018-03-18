@@ -1,6 +1,6 @@
 From: postbox@lisdatacenter.org
-Subject: job 472317 in
-Date: July 17, 2017 at 3:57:22 PM CDT
+Subject: job 510466 in
+Date: March 18, 2018 at 2:39:05 PM CDT
 To: fsolt@mac.com
 
 ############################### NOTICE TO USERS ###############################
@@ -113,9 +113,9 @@ Loading required package: readstata13
 > get_ginis <- function(cc, reps = 100) { 
 +   ccs <- c("au", "at", "be", "br", "ca", "cl", "cn", "co", "cz", "dk",  
 +            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is",  
-+            "in", "ie", "il", "it", "jp", "lu", "mx", "nl", "no", "pa", "py",  
-+            "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
-+            "ch", "tw", "uk", "us", "uy") 
++            "in", "ie", "il", "it", "jp", "lu", "lt", "mx", "nl", "no", "pa",   
++            "py", "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es",   
++            "se", "ch", "tw", "uk", "us", "uy") 
 +   cc <- tolower(cc) 
 +   if (!cc %in% ccs) { 
 +     stop("Please specify a LIS country in iso2c format") 
@@ -160,40 +160,40 @@ Loading required package: readstata13
 > # Call 
 > get_ginis("in") 
 [1] "Loading dataset in04h..."
-in04h,market_hh,0.5046,0.0021,200
-in04h,market_sqrt,0.4797,0.0023,200
-in04h,market_pc,0.4953,0.0023,200
-in04h,market_oecdm,0.4766,0.0021,200
+in04h,market_hh,0.5046,0.0018,200
+in04h,market_sqrt,0.4797,0.0021,200
+in04h,market_pc,0.4953,0.0022,200
+in04h,market_oecdm,0.4766,0.0024,200
 in04h,market_ae,0.4826,0.0022,200
-in04h,gross_hh,0.4932,0.0021,200
-in04h,gross_sqrt,0.471,0.002,200
-in04h,gross_pc,0.4875,0.0022,200
-in04h,gross_oecdm,0.4677,0.002,200
-in04h,gross_ae,0.474,0.002,200
-in04h,disp_hh,0.4932,0.0018,200
-in04h,disp_sqrt,0.471,0.0019,200
-in04h,disp_pc,0.4875,0.002,200
-in04h,disp_oecdm,0.4677,0.0017,200
+in04h,gross_hh,0.4932,0.0019,200
+in04h,gross_sqrt,0.471,0.0023,200
+in04h,gross_pc,0.4875,0.0019,200
+in04h,gross_oecdm,0.4677,0.0022,200
+in04h,gross_ae,0.474,0.0021,200
+in04h,disp_hh,0.4932,0.0019,200
+in04h,disp_sqrt,0.471,0.0018,200
+in04h,disp_pc,0.4875,0.0023,200
+in04h,disp_oecdm,0.4677,0.0022,200
 in04h,disp_ae,0.474,0.0022,200
 [1] "Loading dataset in11h..."
-in11h,market_hh,0.5241,0.002,200
+in11h,market_hh,0.5241,0.0022,200
 in11h,market_sqrt,0.4965,0.0021,200
-in11h,market_pc,0.5097,0.0024,200
+in11h,market_pc,0.5097,0.0023,200
 in11h,market_oecdm,0.492,0.0024,200
-in11h,market_ae,0.4974,0.0024,200
-in11h,gross_hh,0.5028,0.002,200
+in11h,market_ae,0.4974,0.0023,200
+in11h,gross_hh,0.5028,0.0019,200
 in11h,gross_sqrt,0.4791,0.0022,200
-in11h,gross_pc,0.4941,0.0021,200
-in11h,gross_oecdm,0.475,0.0018,200
-in11h,gross_ae,0.4808,0.0022,200
+in11h,gross_pc,0.4941,0.0022,200
+in11h,gross_oecdm,0.475,0.0021,200
+in11h,gross_ae,0.4808,0.0019,200
 in11h,disp_hh,0.5028,0.0019,200
-in11h,disp_sqrt,0.4791,0.0021,200
-in11h,disp_pc,0.4941,0.0022,200
-in11h,disp_oecdm,0.475,0.0021,200
+in11h,disp_sqrt,0.4791,0.002,200
+in11h,disp_pc,0.4941,0.0017,200
+in11h,disp_oecdm,0.475,0.0022,200
 in11h,disp_ae,0.4808,0.0023,200
 > 
 > proc.time()
    user  system elapsed 
-231.728   0.741 299.852 
+206.400   0.988 211.983 
 
 

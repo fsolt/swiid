@@ -1,6 +1,6 @@
 From: postbox@lisdatacenter.org
-Subject: job 472332 ru
-Date: July 17, 2017 at 5:04:59 PM CDT
+Subject: job 510483 ru
+Date: March 18, 2018 at 3:19:01 PM CDT
 To: fsolt@mac.com
 
 ############################### NOTICE TO USERS ###############################
@@ -113,9 +113,9 @@ Loading required package: readstata13
 > get_ginis <- function(cc, reps = 100) { 
 +   ccs <- c("au", "at", "be", "br", "ca", "cl", "cn", "co", "cz", "dk",  
 +            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is",  
-+            "in", "ie", "il", "it", "jp", "lu", "mx", "nl", "no", "pa", "py",  
-+            "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
-+            "ch", "tw", "uk", "us", "uy") 
++            "in", "ie", "il", "it", "jp", "lu", "lt", "mx", "nl", "no", "pa",   
++            "py", "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es",   
++            "se", "ch", "tw", "uk", "us", "uy") 
 +   cc <- tolower(cc) 
 +   if (!cc %in% ccs) { 
 +     stop("Please specify a LIS country in iso2c format") 
@@ -160,88 +160,88 @@ Loading required package: readstata13
 > # Call 
 > get_ginis("ru") 
 [1] "Loading dataset ru00h..."
-ru00h,market_hh,0.5879,0.0063,200
-ru00h,market_sqrt,0.515,0.0068,200
-ru00h,market_pc,0.5203,0.0062,200
-ru00h,market_oecdm,0.516,0.0066,200
-ru00h,market_ae,0.517,0.0071,200
-ru00h,gross_hh,0.4659,0.0063,200
-ru00h,gross_sqrt,0.4119,0.0073,200
-ru00h,gross_pc,0.4105,0.0065,200
-ru00h,gross_oecdm,0.4095,0.0067,200
-ru00h,gross_ae,0.408,0.0073,200
-ru00h,disp_hh,0.4659,0.0058,200
-ru00h,disp_sqrt,0.4119,0.0063,200
+ru00h,market_hh,0.5879,0.0057,200
+ru00h,market_sqrt,0.515,0.0061,200
+ru00h,market_pc,0.5203,0.008,200
+ru00h,market_oecdm,0.516,0.0075,200
+ru00h,market_ae,0.517,0.0065,200
+ru00h,gross_hh,0.4659,0.0062,200
+ru00h,gross_sqrt,0.4119,0.0052,200
+ru00h,gross_pc,0.4105,0.0061,200
+ru00h,gross_oecdm,0.4095,0.0052,200
+ru00h,gross_ae,0.408,0.0068,200
+ru00h,disp_hh,0.4659,0.0061,200
+ru00h,disp_sqrt,0.4119,0.0064,200
 ru00h,disp_pc,0.4105,0.0065,200
-ru00h,disp_oecdm,0.4095,0.0068,200
-ru00h,disp_ae,0.408,0.0061,200
+ru00h,disp_oecdm,0.4095,0.0069,200
+ru00h,disp_ae,0.408,0.0058,200
 [1] "Loading dataset ru04h..."
-ru04h,market_hh,0.5843,0.0062,200
-ru04h,market_sqrt,0.5001,0.0063,200
-ru04h,market_pc,0.5064,0.0066,200
-ru04h,market_oecdm,0.4985,0.006,200
-ru04h,market_ae,0.5004,0.0063,200
-ru04h,gross_hh,0.4536,0.0052,200
-ru04h,gross_sqrt,0.3915,0.006,200
-ru04h,gross_pc,0.3863,0.0048,200
-ru04h,gross_oecdm,0.3845,0.0062,200
-ru04h,gross_ae,0.3828,0.0055,200
-ru04h,disp_hh,0.4536,0.0055,200
-ru04h,disp_sqrt,0.3915,0.006,200
-ru04h,disp_pc,0.3863,0.0051,200
-ru04h,disp_oecdm,0.3845,0.0057,200
-ru04h,disp_ae,0.3828,0.0061,200
+ru04h,market_hh,0.5843,0.0056,200
+ru04h,market_sqrt,0.5001,0.0059,200
+ru04h,market_pc,0.5064,0.0062,200
+ru04h,market_oecdm,0.4985,0.0057,200
+ru04h,market_ae,0.5004,0.006,200
+ru04h,gross_hh,0.4536,0.0058,200
+ru04h,gross_sqrt,0.3915,0.0049,200
+ru04h,gross_pc,0.3863,0.0054,200
+ru04h,gross_oecdm,0.3845,0.0056,200
+ru04h,gross_ae,0.3828,0.0061,200
+ru04h,disp_hh,0.4536,0.0052,200
+ru04h,disp_sqrt,0.3915,0.0051,200
+ru04h,disp_pc,0.3863,0.006,200
+ru04h,disp_oecdm,0.3845,0.0058,200
+ru04h,disp_ae,0.3828,0.0062,200
 [1] "Loading dataset ru07h..."
-ru07h,market_hh,0.5476,0.0057,200
-ru07h,market_sqrt,0.4562,0.0053,200
-ru07h,market_pc,0.4631,0.0064,200
-ru07h,market_oecdm,0.4553,0.0054,200
-ru07h,market_ae,0.4569,0.0059,200
-ru07h,gross_hh,0.4236,0.0054,200
-ru07h,gross_sqrt,0.3538,0.0059,200
-ru07h,gross_pc,0.3504,0.0045,200
-ru07h,gross_oecdm,0.348,0.0047,200
-ru07h,gross_ae,0.3462,0.0049,200
-ru07h,disp_hh,0.4236,0.0045,200
-ru07h,disp_sqrt,0.3538,0.0057,200
-ru07h,disp_pc,0.3504,0.0047,200
-ru07h,disp_oecdm,0.348,0.0046,200
-ru07h,disp_ae,0.3462,0.0048,200
+ru07h,market_hh,0.5476,0.0053,200
+ru07h,market_sqrt,0.4562,0.0054,200
+ru07h,market_pc,0.4631,0.0054,200
+ru07h,market_oecdm,0.4553,0.0055,200
+ru07h,market_ae,0.4569,0.0055,200
+ru07h,gross_hh,0.4236,0.0048,200
+ru07h,gross_sqrt,0.3538,0.0048,200
+ru07h,gross_pc,0.3504,0.0055,200
+ru07h,gross_oecdm,0.348,0.0048,200
+ru07h,gross_ae,0.3462,0.0053,200
+ru07h,disp_hh,0.4236,0.0055,200
+ru07h,disp_sqrt,0.3538,0.0043,200
+ru07h,disp_pc,0.3504,0.0054,200
+ru07h,disp_oecdm,0.348,0.0051,200
+ru07h,disp_ae,0.3462,0.0045,200
 [1] "Loading dataset ru10h..."
-ru10h,market_hh,0.5423,0.0042,200
+ru10h,market_hh,0.5423,0.0048,200
 ru10h,market_sqrt,0.4585,0.0046,200
-ru10h,market_pc,0.4647,0.0046,200
-ru10h,market_oecdm,0.4547,0.0049,200
-ru10h,market_ae,0.4567,0.0048,200
-ru10h,gross_hh,0.4001,0.0039,200
-ru10h,gross_sqrt,0.3425,0.004,200
+ru10h,market_pc,0.4647,0.005,200
+ru10h,market_oecdm,0.4547,0.0044,200
+ru10h,market_ae,0.4567,0.0047,200
+ru10h,gross_hh,0.4001,0.004,200
+ru10h,gross_sqrt,0.3425,0.0047,200
 ru10h,gross_pc,0.3434,0.0041,200
 ru10h,gross_oecdm,0.3337,0.0042,200
-ru10h,gross_ae,0.3338,0.0036,200
-ru10h,disp_hh,0.4001,0.004,200
+ru10h,gross_ae,0.3338,0.0039,200
+ru10h,disp_hh,0.4001,0.0039,200
 ru10h,disp_sqrt,0.3425,0.0042,200
-ru10h,disp_pc,0.3434,0.0039,200
-ru10h,disp_oecdm,0.3337,0.0045,200
-ru10h,disp_ae,0.3338,0.0039,200
+ru10h,disp_pc,0.3434,0.0045,200
+ru10h,disp_oecdm,0.3337,0.0041,200
+ru10h,disp_ae,0.3338,0.0045,200
 [1] "Loading dataset ru13h..."
-ru13h,market_hh,0.5659,0.0043,200
-ru13h,market_sqrt,0.4653,0.0052,200
-ru13h,market_pc,0.4695,0.0046,200
+ru13h,market_hh,0.5659,0.0049,200
+ru13h,market_sqrt,0.4653,0.0048,200
+ru13h,market_pc,0.4695,0.0053,200
 ru13h,market_oecdm,0.462,0.0049,200
-ru13h,market_ae,0.463,0.0045,200
-ru13h,gross_hh,0.4033,0.0045,200
-ru13h,gross_sqrt,0.3323,0.004,200
+ru13h,market_ae,0.463,0.005,200
+ru13h,gross_hh,0.4033,0.0041,200
+ru13h,gross_sqrt,0.3323,0.0043,200
 ru13h,gross_pc,0.3282,0.0042,200
-ru13h,gross_oecdm,0.3227,0.0041,200
-ru13h,gross_ae,0.3208,0.0045,200
-ru13h,disp_hh,0.4033,0.0036,200
-ru13h,disp_sqrt,0.3323,0.0047,200
-ru13h,disp_pc,0.3282,0.0043,200
-ru13h,disp_oecdm,0.3227,0.0049,200
-ru13h,disp_ae,0.3208,0.0039,200
+ru13h,gross_oecdm,0.3227,0.004,200
+ru13h,gross_ae,0.3208,0.0048,200
+ru13h,disp_hh,0.4033,0.0043,200
+ru13h,disp_sqrt,0.3323,0.0044,200
+ru13h,disp_pc,0.3282,0.0041,200
+ru13h,disp_oecdm,0.3227,0.0039,200
+ru13h,disp_ae,0.3208,0.0044,200
 > 
 > proc.time()
    user  system elapsed 
- 60.051   1.800  86.707 
+ 67.428   0.228  68.761 
 
 

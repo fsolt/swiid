@@ -1,6 +1,6 @@
 From: postbox@lisdatacenter.org
-Subject: job 472321 jp
-Date: July 17, 2017 at 3:57:35 PM CDT
+Subject: job 510470 jp
+Date: March 18, 2018 at 2:44:54 PM CDT
 To: fsolt@mac.com
 
 ############################### NOTICE TO USERS ###############################
@@ -113,9 +113,9 @@ Loading required package: readstata13
 > get_ginis <- function(cc, reps = 100) { 
 +   ccs <- c("au", "at", "be", "br", "ca", "cl", "cn", "co", "cz", "dk",  
 +            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is",  
-+            "in", "ie", "il", "it", "jp", "lu", "mx", "nl", "no", "pa", "py",  
-+            "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
-+            "ch", "tw", "uk", "us", "uy") 
++            "in", "ie", "il", "it", "jp", "lu", "lt", "mx", "nl", "no", "pa",   
++            "py", "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es",   
++            "se", "ch", "tw", "uk", "us", "uy") 
 +   cc <- tolower(cc) 
 +   if (!cc %in% ccs) { 
 +     stop("Please specify a LIS country in iso2c format") 
@@ -160,24 +160,24 @@ Loading required package: readstata13
 > # Call 
 > get_ginis("jp") 
 [1] "Loading dataset jp08h..."
-jp08h,market_hh,0.4854,0.0059,120
-jp08h,market_sqrt,0.4519,0.006,120
-jp08h,market_pc,0.4701,0.006,120
-jp08h,market_oecdm,0.4465,0.0055,120
-jp08h,market_ae,0.4521,0.0054,120
-jp08h,gross_hh,0.4108,0.0057,120
-jp08h,gross_sqrt,0.3948,0.0061,120
-jp08h,gross_pc,0.4124,0.0055,120
-jp08h,gross_oecdm,0.3867,0.0059,120
-jp08h,gross_ae,0.3923,0.0063,120
-jp08h,disp_hh,0.3341,0.0059,120
-jp08h,disp_sqrt,0.3018,0.0049,120
-jp08h,disp_pc,0.3211,0.0044,120
-jp08h,disp_oecdm,0.297,0.0045,120
+jp08h,market_hh,0.4854,0.0053,120
+jp08h,market_sqrt,0.4519,0.0057,120
+jp08h,market_pc,0.4701,0.0069,120
+jp08h,market_oecdm,0.4465,0.0059,120
+jp08h,market_ae,0.4521,0.0064,120
+jp08h,gross_hh,0.4108,0.0048,120
+jp08h,gross_sqrt,0.3948,0.0053,120
+jp08h,gross_pc,0.4124,0.0057,120
+jp08h,gross_oecdm,0.3867,0.0057,120
+jp08h,gross_ae,0.3923,0.0058,120
+jp08h,disp_hh,0.3341,0.005,120
+jp08h,disp_sqrt,0.3018,0.0047,120
+jp08h,disp_pc,0.3211,0.0055,120
+jp08h,disp_oecdm,0.297,0.0055,120
 jp08h,disp_ae,0.3034,0.0051,120
 > 
 > proc.time()
    user  system elapsed 
- 10.983   0.058  11.585 
+ 14.648   0.120  15.567 
 
 

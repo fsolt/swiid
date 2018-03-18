@@ -1,6 +1,6 @@
 From: postbox@lisdatacenter.org
-Subject: job 472337 kr
-Date: July 17, 2017 at 5:14:22 PM CDT
+Subject: job 510489 kr
+Date: March 18, 2018 at 3:35:19 PM CDT
 To: fsolt@mac.com
 
 ############################### NOTICE TO USERS ###############################
@@ -113,9 +113,9 @@ Loading required package: readstata13
 > get_ginis <- function(cc, reps = 100) { 
 +   ccs <- c("au", "at", "be", "br", "ca", "cl", "cn", "co", "cz", "dk",  
 +            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is",  
-+            "in", "ie", "il", "it", "jp", "lu", "mx", "nl", "no", "pa", "py",  
-+            "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
-+            "ch", "tw", "uk", "us", "uy") 
++            "in", "ie", "il", "it", "jp", "lu", "lt", "mx", "nl", "no", "pa",   
++            "py", "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es",   
++            "se", "ch", "tw", "uk", "us", "uy") 
 +   cc <- tolower(cc) 
 +   if (!cc %in% ccs) { 
 +     stop("Please specify a LIS country in iso2c format") 
@@ -160,72 +160,72 @@ Loading required package: readstata13
 > # Call 
 > get_ginis("kr") 
 [1] "Loading dataset kr06h..."
-kr06h,market_hh,0.3909,0.0029,110
-kr06h,market_sqrt,0.3311,0.0026,110
+kr06h,market_hh,0.3909,0.0026,110
+kr06h,market_sqrt,0.3311,0.003,110
 kr06h,market_pc,0.3434,0.003,110
-kr06h,market_oecdm,0.3311,0.0027,110
-kr06h,market_ae,0.3335,0.0029,110
-kr06h,gross_hh,0.3707,0.0026,110
-kr06h,gross_sqrt,0.3139,0.0027,110
-kr06h,gross_pc,0.3262,0.0027,110
+kr06h,market_oecdm,0.3311,0.0032,110
+kr06h,market_ae,0.3335,0.0028,110
+kr06h,gross_hh,0.3707,0.0028,110
+kr06h,gross_sqrt,0.3139,0.0026,110
+kr06h,gross_pc,0.3262,0.0026,110
 kr06h,gross_oecdm,0.3134,0.0025,110
-kr06h,gross_ae,0.3158,0.0025,110
-kr06h,disp_hh,0.3623,0.0025,110
+kr06h,gross_ae,0.3158,0.0026,110
+kr06h,disp_hh,0.3623,0.0031,110
 kr06h,disp_sqrt,0.3065,0.0029,110
-kr06h,disp_pc,0.3205,0.0027,110
-kr06h,disp_oecdm,0.3058,0.0025,110
-kr06h,disp_ae,0.3088,0.0027,110
+kr06h,disp_pc,0.3205,0.0026,110
+kr06h,disp_oecdm,0.3058,0.0027,110
+kr06h,disp_ae,0.3088,0.0025,110
 [1] "Loading dataset kr08h..."
 kr08h,market_hh,0.411,0.0037,110
-kr08h,market_sqrt,0.3445,0.0031,110
-kr08h,market_pc,0.3558,0.0037,110
-kr08h,market_oecdm,0.3445,0.0032,110
-kr08h,market_ae,0.3464,0.0035,110
-kr08h,gross_hh,0.3865,0.0033,110
-kr08h,gross_sqrt,0.3233,0.0035,110
-kr08h,gross_pc,0.3346,0.0031,110
-kr08h,gross_oecdm,0.3229,0.0029,110
-kr08h,gross_ae,0.3248,0.0033,110
-kr08h,disp_hh,0.3775,0.003,110
-kr08h,disp_sqrt,0.3146,0.0031,110
-kr08h,disp_pc,0.3278,0.0034,110
-kr08h,disp_oecdm,0.3142,0.0029,110
+kr08h,market_sqrt,0.3445,0.0034,110
+kr08h,market_pc,0.3558,0.0036,110
+kr08h,market_oecdm,0.3445,0.0034,110
+kr08h,market_ae,0.3464,0.0032,110
+kr08h,gross_hh,0.3865,0.0035,110
+kr08h,gross_sqrt,0.3233,0.0032,110
+kr08h,gross_pc,0.3346,0.0034,110
+kr08h,gross_oecdm,0.3229,0.003,110
+kr08h,gross_ae,0.3248,0.0032,110
+kr08h,disp_hh,0.3775,0.0035,110
+kr08h,disp_sqrt,0.3146,0.0028,110
+kr08h,disp_pc,0.3278,0.0036,110
+kr08h,disp_oecdm,0.3142,0.003,110
 kr08h,disp_ae,0.3166,0.0031,110
 [1] "Loading dataset kr10h..."
-kr10h,market_hh,0.4132,0.0035,110
-kr10h,market_sqrt,0.3406,0.003,110
+kr10h,market_hh,0.4132,0.004,110
+kr10h,market_sqrt,0.3406,0.0034,110
 kr10h,market_pc,0.3535,0.0031,110
-kr10h,market_oecdm,0.3397,0.0031,110
-kr10h,market_ae,0.3424,0.0034,110
-kr10h,gross_hh,0.3839,0.0035,110
-kr10h,gross_sqrt,0.3164,0.0032,110
-kr10h,gross_pc,0.3284,0.0033,110
-kr10h,gross_oecdm,0.3147,0.0033,110
+kr10h,market_oecdm,0.3397,0.0035,110
+kr10h,market_ae,0.3424,0.0032,110
+kr10h,gross_hh,0.3839,0.0034,110
+kr10h,gross_sqrt,0.3164,0.0028,110
+kr10h,gross_pc,0.3284,0.0031,110
+kr10h,gross_oecdm,0.3147,0.0031,110
 kr10h,gross_ae,0.3171,0.0031,110
-kr10h,disp_hh,0.3766,0.0037,110
-kr10h,disp_sqrt,0.3093,0.0032,110
-kr10h,disp_pc,0.3234,0.0032,110
-kr10h,disp_oecdm,0.3077,0.0031,110
-kr10h,disp_ae,0.3108,0.0031,110
+kr10h,disp_hh,0.3766,0.0036,110
+kr10h,disp_sqrt,0.3093,0.003,110
+kr10h,disp_pc,0.3234,0.003,110
+kr10h,disp_oecdm,0.3077,0.0027,110
+kr10h,disp_ae,0.3108,0.0027,110
 [1] "Loading dataset kr12h..."
 kr12h,market_hh,0.4148,0.0038,110
-kr12h,market_sqrt,0.3376,0.0036,110
-kr12h,market_pc,0.3481,0.0039,110
-kr12h,market_oecdm,0.336,0.0038,110
+kr12h,market_sqrt,0.3376,0.0033,110
+kr12h,market_pc,0.3481,0.0032,110
+kr12h,market_oecdm,0.336,0.003,110
 kr12h,market_ae,0.338,0.0034,110
-kr12h,gross_hh,0.3853,0.0037,110
-kr12h,gross_sqrt,0.3142,0.003,110
-kr12h,gross_pc,0.3239,0.0035,110
-kr12h,gross_oecdm,0.3118,0.0037,110
-kr12h,gross_ae,0.3136,0.0032,110
-kr12h,disp_hh,0.3772,0.0034,110
+kr12h,gross_hh,0.3853,0.0034,110
+kr12h,gross_sqrt,0.3142,0.0032,110
+kr12h,gross_pc,0.3239,0.0034,110
+kr12h,gross_oecdm,0.3118,0.0028,110
+kr12h,gross_ae,0.3136,0.0035,110
+kr12h,disp_hh,0.3772,0.0036,110
 kr12h,disp_sqrt,0.3067,0.0027,110
-kr12h,disp_pc,0.3185,0.0035,110
-kr12h,disp_oecdm,0.3044,0.0033,110
-kr12h,disp_ae,0.3068,0.0033,110
+kr12h,disp_pc,0.3185,0.0033,110
+kr12h,disp_oecdm,0.3044,0.0032,110
+kr12h,disp_ae,0.3068,0.0028,110
 > 
 > proc.time()
    user  system elapsed 
-136.070   0.341 142.940 
+138.460   0.412 140.680 
 
 
