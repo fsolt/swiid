@@ -1005,8 +1005,8 @@ kostat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-ra
             link = "http://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1L6E001&conn_path=I2&language=en")
 
 
-# National Bureau of Statistics Moldova (automated)
-nbs_link <- "http://www.statistica.md/public/files/serii_de_timp/venituri_cheltuieli/veniturile_gospodariilor/4.2.4.xls"
+# National Bureau of Statistics Moldova (update link: check Statistical Yearbook to find table number)
+nbs_link <- "http://www.statistica.md/public/files/serii_de_timp/venituri_cheltuieli/veniturile_gospodariilor/4.2.5.xls"
 download.file(nbs_link, "data-raw/nbs.xls")
 
 nbs <- read_excel("data-raw/nbs.xls", skip = 2, sheet = "Лист1") %>%
@@ -1175,9 +1175,9 @@ psa <- read_csv("data-raw/psa.csv", skip = 3, col_types = "cccdddddcc") %>%
 
 # Russian Federal State Statistics Service (update link)
 # http://www.gks.ru/wps/wcm/connect/rosstat_main/rosstat/en/main/
-# Social and Economic Indicators of the Russian Federation (Appendix to the 'Statistical Yearbook of Russia')
+# Social and Economic Indicators of the Russian Federation ('Attachment to the Yearbook')
 
-rosstat_link <- "http://www.gks.ru/free_doc/doc_2016/year/pril-year_2016_eng.xls"
+rosstat_link <- "http://www.gks.ru/free_doc/doc_2017/year/pril_year17-eng.xls"
 download.file(rosstat_link, "data-raw/rosstat.xls")
 
 rosstat <- read_excel("data-raw/rosstat.xls", sheet = "Sec.5", skip = 1) %>% 
