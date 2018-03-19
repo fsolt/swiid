@@ -980,27 +980,23 @@ kazstat <- read_excel("data-raw/kazstat.xls", skip = 3) %>%
 
 # Statistics Korea (update file)
 # http://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1L6E001&conn_path=I2&language=en
-# Item: all households; By index of distribution: Gini's; Time: all 
+# Item: all households and urban; By index of distribution: Gini's; Time: all; Pivot By income, Time Period, Item x By index of distribution 
 
 kostat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/kostat.csv",
                    col_types = cols(
                      .default = col_double(),
-                     `By index of distribution` = col_character(),
                      Item = col_character(),
                      `By income` = col_character()
                    )) %>%
-  select(-`By index of distribution`) %>% 
-  filter(!`By income`=="By income") %>% 
-  gather(key = year, value = gini, -`By income`, -Item) %>% 
-  filter(!is.na(gini)) %>% 
+  filter(!is.na(`Gini's coefficient`)) %>% 
   transmute(country = "Korea",
-            year = as.numeric(year),
-            gini = gini,
+            year = as.numeric(Period),
+            gini = `Gini's coefficient`,
             gini_se = NA,
             welfare_def = if_else(str_detect(`By income`, "Disposable"), "disp", "market"),
             equiv_scale = "ae",
             monetary = NA,
-            series = paste("Kostat", welfare_def, equiv_scale, if_else(Item == "All households", 2, 1)),
+            series = paste("Kostat", welfare_def, equiv_scale, if_else(Item == "All households", "national", "urban")),
             source1 = "Statistics Korea",
             page = "",
             link = "http://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1L6E001&conn_path=I2&language=en")
