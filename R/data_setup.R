@@ -727,14 +727,15 @@ insee <- readLines(insee_link) %>%              # kickin' it old skool . . .
 
 
 # Statistics Georgia (update file)
-# http://91.208.144.188/Menu.aspx?rxid=c8ca81e9-2824-4c5b-a46a-c80202913531&px_db=Database&px_type=PX&px_language=en
+# http://pc-axis.geostat.ge/PXWeb/pxweb/ka/Database
 # Social Statistics > Standard of Living, Subsistance Minimum > Gini Coefficients by Year and Indicator
 # All years, "By total incomes" and "By total expenditures"
 
-geostat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/geostat.csv",
-                    skip = 3, 
-                    col_names = c("year", "gross", "con"),
-                    col_types = "cdd") %>%                  # throws warnings; they are irrelevant
+geostat <- read_delim("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/geostat.csv",
+                      delim = ";",
+                      skip = 3, 
+                      col_names = c("year", "gross", "con"),
+                      col_types = "cdd") %>%
   filter(!is.na(gross)) %>% 
   gather(key = "welfare_def", value = "gini", gross:con) %>% 
   transmute(country = "Georgia",
