@@ -441,7 +441,7 @@ armstat <- arm_reports %>%
             monetary = FALSE,
             series = paste("NSS Armenia", welfare_def, equiv_scale),
             source1 = "National Statistical Service of Armenia",
-            page = "11",
+            page = "95",
             link = link)
 
 rm(arm_page, arm_reports)
@@ -1854,7 +1854,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
   ineq0 <- bind_rows(lis, 
                      sedlac, cepal, cepal_sdi, oecd1, eurostat,
                      transmonee, ceq1, afr_gini, wb,
-                     abs, inebo, belstat, statcan, dane, ineccr, dkstat,
+                     armstat, abs, inebo, belstat, statcan, dane, ineccr, dkstat,
                      capmas, statee, statfi, insee, geostat,
                      stathk, bpsid, amar, cso_ie, istat, kazstat, kostat, nsck,
                      snz, nbs, monstat, ssb, dgeec, psa,
