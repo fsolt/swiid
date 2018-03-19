@@ -1107,18 +1107,16 @@ snz <- read_excel("data-raw/snz.xls",
             link = "https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf")
 
 
-# Statistics Norway (update file)
-# Gini & std.err.; total population; all years > rotate clockwise 2x > save as semicolon delimited
+# Statistics Norway (update file and wrangle)
+# Gini & std.err.; total population; all years > pivot clockwise > save as semicolon delimited
 
 ssb_link <- "https://www.ssb.no/statistikkbanken/selectvarval/Define.asp?MainTable=InntUlikhet&PLanguage=1&nyTmpVar=true&CMSSubjectArea=inntekt-og-forbruk&KortNavnWeb=ifhus&StatVariant=&checked=true"
 
 ssb <- read_csv2("data-raw/ssb.csv", skip = 2) %>%  # throws warnings; they are irrelevant
-  filter(!is.na(X1)) %>% 
-  filter(!is.na(`Gini coefficient`)) %>% 
   transmute(country = "Norway",
-            year = as.numeric(X1),
-            gini = as.numeric(`Gini coefficient`),
-            gini_se = as.numeric(`Standard error of the Gini coefficient`),
+            year = year,
+            gini = as.numeric(`Total population Gini coefficient`),
+            gini_se = as.numeric(`Total population Standard error of the Gini coefficient`),
             welfare_def = "disp",
             equiv_scale = "oecdm",
             monetary = TRUE,
