@@ -877,10 +877,11 @@ bpsid2 <- read_excel("data-raw/bpsid2.xls", skip = 2) %>%
             series = paste("Statistics Indonesia", welfare_def, equiv_scale),
             source1 = "Statistics Indonesia",
             page = "",
-            link = bpsid2_link) %>% 
-  filter(year > 2013)   # usually prefer newer source, but bpsid1 includes 3 sig. fig.
+            link = bpsid2_link) 
 
-bpsid <- bind_rows(bpsid1, bpsid2)
+bpsid <- bind_rows(bpsid1, bpsid2) %>% 
+  arrange(year, link) %>% 
+  distinct(year, .keep_all = TRUE)
 
 rm(bpsid1, bpsid2)
 
