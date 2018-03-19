@@ -1005,6 +1005,28 @@ kostat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-ra
             link = "http://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1L6E001&conn_path=I2&language=en")
 
 
+# Economy Planning Unit of Malaysia (update link--http://www.epu.gov.my/ms/search/node/gini)
+epumy_link <- "http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf"
+download.file(epumy_link, "data-raw/epumy.pdf")
+
+epumy <- extract_tables("data-raw/epumy.pdf") %>% 
+  first() %>% 
+  t() %>% 
+  as_tibble() %>% 
+  transmute(country = "Malaysia",
+            year = as.numeric(V1),
+            gini = as.numeric(V2),
+            gini_se = NA,
+            welfare_def = "gross",
+            equiv_scale = "hh",
+            monetary = FALSE,
+            series = paste("EPU Malaysia", welfare_def, equiv_scale),
+            source1 = "Economy Planning Unit of Malaysia",
+            page = "1",
+            link = epumy_link) %>% 
+  filter(!is.na(gini))
+
+
 # National Bureau of Statistics Moldova (update link: check Statistical Yearbook to find table number)
 nbs_link <- "http://www.statistica.md/public/files/serii_de_timp/venituri_cheltuieli/veniturile_gospodariilor/4.2.5.xls"
 download.file(nbs_link, "data-raw/nbs.xls")
@@ -1857,7 +1879,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
                      armstat, abs, inebo, belstat, statcan, dane, ineccr, dkstat,
                      capmas, statee, statfi, insee, geostat,
                      stathk, bpsid, amar, cso_ie, istat, kazstat, kostat, nsck,
-                     snz, nbs, monstat, ssb, dgeec, psa,
+                     snz, epumy, nbs, monstat, ssb, dgeec, psa,
                      rosstat, ru_lissy, singstat, ssi, ine, statslk, scb, 
                      nso_thailand, tdgbas, turkstat, ons, ifs, cbo, uscb, uine, inev, gso_vn,
                      atg, gidd,
