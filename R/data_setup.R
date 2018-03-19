@@ -702,7 +702,7 @@ statfi <- get_pxweb_data(url = "http://pxnet2.stat.fi/PXWeb/api/v1/fi/StatFin/tu
 
 
 # Insee France (archived)
-insee_link <- "https://web-beta.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie"
+insee_link <- "https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie"
 
 insee <- readLines(insee_link) %>%              # kickin' it old skool . . .
   str_subset("etendue-ligne|tab-chiffre") %>% 
