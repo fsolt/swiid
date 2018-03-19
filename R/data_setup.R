@@ -1131,24 +1131,30 @@ ssb <- read_csv2("data-raw/ssb.csv", skip = 2) %>%  # throws warnings; they are 
 # DGEEC Paraguay (update link and, probably, wrangle)
 # http://www.dgeec.gov.py > Publicaciones > Pobreza
 
-dgeec_link <- "https://web.archive.org/web/20170313125847/http://www.dgeec.gov.py/Publicaciones/Biblioteca/eph2015/Boletin%20de%20pobreza%202015.pdf"
+dgeec_link <- "https://web.archive.org/web/20180319151156/http://www.dgeec.gov.py/Publicaciones/Biblioteca/diptico%20desigualdad%20ingreso/diptico%20DESIGUALDAD%20DE%20INGRESOS.pdf"
 download.file(dgeec_link, "data-raw/dgeec.pdf")
 
-dgeec <- extract_tables("data-raw/dgeec.pdf", pages = 15)[[1]][-1, ] %>%
+dgeec <- extract_tables("data-raw/dgeec.pdf", pages = 2) %>% 
+  first() %>% 
   as_tibble() %>% 
   transmute(country = "Paraguay",
-            year = ifelse(str_trim(V1) %>% str_extract("\\d{2}$") %>% as.numeric() > 50,
-                          str_trim(V1) %>% str_extract("\\d{2}$") %>% as.numeric() + 1900,
-                          str_trim(V1) %>% str_extract("\\d{2}$") %>% as.numeric() + 2000),
-            gini = as.numeric(sub(",", ".", V4, fixed = TRUE)),
+            year = str_trim(V1) %>% 
+              str_extract("\\d{4}/?\\d{0,2}") %>% 
+              str_replace("(\\d{2})\\d{2}/(\\d{2})", "\\1\\2") %>% 
+              as.numeric(),
+            gini = str_trim(V1) %>% 
+              str_extract("01?,\\d{3}") %>% 
+              str_replace("1?,", ".") %>% 
+              as.numeric(),
             gini_se = NA,
             welfare_def = "gross",
             equiv_scale = "pc",
             monetary = TRUE,
             series = paste("DGEEC", welfare_def, equiv_scale),
-            source1 = "Dirección General de Estadística, Encuestas y Censos 2016",
-            page = "14",
-            link = dgeec_link)
+            source1 = "Dirección General de Estadística, Encuestas y Censos 2017",
+            page = "2",
+            link = dgeec_link) %>% 
+  filter(!is.na(year))
 
 
 # Philippines Statistical Agency (automated)
