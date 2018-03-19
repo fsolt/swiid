@@ -1,19 +1,14 @@
 ﻿"Gini Coefficients by Year and Indicator"
 
-" ","By total incomes","By total expenditures"
-"2006",0.45,0.42
-"2007",0.46,0.43
-"2008",0.45,0.44
-"2009",0.46,0.44
-"2010",0.46,0.46
-"2011",0.46,0.46
-"2012",0.43,0.45
-"2013",0.42,0.44
-"2014",0.41,0.45
-"2015",0.42,0.45
-
-"Total incomes include cash incomes and transfers and non-cash "
-"incomes"
-
-"Total expenditures include cash expenditures and non-cash expenditures"
-
+"Year";"By total incomes";"By total expenditures"
+"2006";0.43;0.40
+"2007";0.44;0.42
+"2008";0.43;0.42
+"2009";0.43;0.43
+"2010";0.43;0.44
+"2011";0.43;0.45
+"2012";0.41;0.44
+"2013";0.40;0.42
+"2014";0.39;0.44
+"2015";0.39;0.43
+"2016";0.40;0.43
