@@ -599,9 +599,11 @@ dane <- read_excel("data-raw/dane.xls", sheet = "Gini", skip = 9) %>%
 
 # Costa Rica (update file; as of 2017-05 page not sufficiently responsive to automate)
 # http://www.inec.go.cr/pobreza-y-desigualdad/desigualdad
-ineccr_link <- "http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2016.01.xlsx"
+ineccr_link <- "http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx"
 
-ineccr <- read_excel("data-raw/ineccr.xlsx", skip = 5) %>%
+ineccr <- read_excel("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/ineccr.xlsx",
+                     skip = 4,
+                     sheet = "1") %>%
   janitor::clean_names() %>% 
   select(año, total) %>% 
   filter(!is.na(año)) %>% 
