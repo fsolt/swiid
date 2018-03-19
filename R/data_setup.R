@@ -1129,6 +1129,31 @@ snz <- read_excel("data-raw/snz.xls",
             link = "https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf")
 
 
+# New Zealand Ministry of Social Development
+# update link from http://www.msd.govt.nz/about-msd-and-our-work/publications-resources/monitoring/household-incomes/index.html
+# and wrangle (including publication year)
+
+nzmsd_link <- "http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2017/2017-incomes-report-wed-19-july-2017.pdf"
+download.file(nzmsd_link, "data-raw/nzmsd.pdf")
+
+nzmsd <- extract_tables("data-raw/nzmsd.pdf", pages = 92) %>% 
+  first() %>% 
+  t() %>% 
+  as_tibble() %>% 
+  transmute(country = "New Zealand",
+            year = if_else(as.numeric(V1) < 50, as.numeric(paste0("20", V1)), as.numeric(paste0("19", V1))),
+            gini = as.numeric(V3)/100,
+            gini_se = NA,
+            welfare_def = "disp",
+            equiv_scale = "sqrt",
+            monetary = NA,
+            series = paste("Perry 2017", welfare_def, equiv_scale),
+            source1 = "Perry 2017",
+            page = "92",
+            link = nzmsd_link) %>% 
+  filter(!is.na(gini))
+
+
 # Statistics Norway (update file and wrangle)
 # Gini & std.err.; total population; all years > pivot clockwise > save as semicolon delimited
 
