@@ -248,6 +248,7 @@ China,2011,0.477,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2013,,htt
 China,2012,0.474,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2013,,http://www.stats.gov.cn/tjgz/tjdt/201301/t20130118_17719.html
 China,2013,0.473,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2014,,http://www.stats.gov.cn/english/PressRelease/201401/t20140120_502079.html
 China,2014,0.469,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2015,,http://www.stats.gov.cn/english/PressRelease/201501/t20150120_671038.html
+China,2015,0.462,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2015,,http://www.stats.gov.cn/english/PressRelease/201601/t20160119_1306072.html
 China,1981,0.2798,,disp,hh,FALSE,RC2007 disp hh,Ravallion and Chen 2007,20,https://doi.org/10.1016/j.jdeveco.2005.07.003
 China,1982,0.2591,,disp,hh,FALSE,RC2007 disp hh,Ravallion and Chen 2007,20,https://doi.org/10.1016/j.jdeveco.2005.07.003
 China,1983,0.2602,,disp,hh,FALSE,RC2007 disp hh,Ravallion and Chen 2007,20,https://doi.org/10.1016/j.jdeveco.2005.07.003
@@ -1710,9 +1711,9 @@ Sweden,1990,0.2608,,disp,ae,TRUE,W1999 Sweden disp ae 1,Wagstaff et al. 1999,82,
 Sweden,1990,0.256,,disp,ae,TRUE,W1999 Sweden disp ae 2,Wagstaff et al. 1999,86,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 Sweden,1990,0.3004,,gross,ae,TRUE,W1999 Sweden gross ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 Sweden,1990,0.296,,gross,ae,TRUE,W1999 Sweden gross ae 2,Wagstaff et al. 1999,86,http://www.sciencedirect.com/science/article/pii/S0047272798000851
-Switzerland,1980,0.361,,disp,hh,FALSE,LF1985 hh disp,Leu and Frey 1985,201,http://dx.doi.org/10.1068/030199
-Switzerland,1980,0.399,,gross,hh,FALSE,LF1985 hh gross,Leu and Frey 1985,201,http://dx.doi.org/10.1068/030199
-Switzerland,1980,0.452,,market,hh,FALSE,LF1985 hh market,Leu and Frey 1985,201,http://dx.doi.org/10.1068/030199
+Switzerland,1980,0.361,,disp,hh,FALSE,LF1985 hh disp,Leu and Frey 1985,201,https://doi.org/10.1068/c030199
+Switzerland,1980,0.399,,gross,hh,FALSE,LF1985 hh gross,Leu and Frey 1985,201,https://doi.org/10.1068/c030199
+Switzerland,1980,0.452,,market,hh,FALSE,LF1985 hh market,Leu and Frey 1985,201,https://doi.org/10.1068/c030199
 Switzerland,1992,0.2541,,disp,ae,TRUE,W1999 Switzerland disp ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 Switzerland,1992,0.2716,,gross,ae,TRUE,W1999 Switzerland gross ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 Syria,1997,0.326,,con,pc,,AIAGEL2011 con pc,"Abu-Ismail, Abdel-Gadir, and El-Laithy 2011",11,http://www.undp.org/content/dam/rbas/doc/poverty/BG_15_Poverty%20and%20Inequality%20in%20Syria_FeB.pdf
