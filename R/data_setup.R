@@ -1713,11 +1713,13 @@ inev <- read_excel("data-raw/inev.xls", skip = 3) %>%
             link = inev_link)
 
 
-# General Statistics Office of Vietnam (update link for gso_vn2)
+# General Statistics Office of Vietnam (update file for gso_vn2; check 'page')
+# http://www.gso.gov.vn/default_en.aspx?tabid=783 > Index of income inequality
+# WHOLE COUNTRY, all years > Comma delimited with heading
+
 gso_vn1_link <- "http://www.gso.gov.vn/Modules/Doc_Download.aspx?DocID=16773"
-gso_vn2_link <- "http://www.gso.gov.vn/Modules/Doc_Download.aspx?DocID=19990"
+gso_vn2_link <- "http://www.gso.gov.vn/default_en.aspx?tabid=783"
 download.file(gso_vn1_link, "data-raw/gso_vn2013.pdf")
-download.file(gso_vn2_link, "data-raw/gso_vn.pdf") # 2016 Stats Yearbook: Health, Culture, Sport and Living Standards
 
 gso_vn1 <- extract_tables("data-raw/gso_vn2013.pdf", pages = 84)[[1]][-1, ] %>% 
   as_tibble() %>% 
@@ -1737,11 +1739,9 @@ gso_vn1 <- extract_tables("data-raw/gso_vn2013.pdf", pages = 84)[[1]][-1, ] %>%
             page = "",
             link = gso_vn1_link)
 
-gso_vn2 <- extract_tables("data-raw/gso_vn.pdf", pages = 61)[[1]] %>% 
-  as_tibble() %>% 
-  filter(str_detect(V1, "GENERAL") | V1 == "") %>%
-  select(-V1) %>% 
-  first_row_to_names() %>% 
+gso_vn2 <- read_csv("data-raw/gso_vn2.csv", skip = 1) %>% 
+  filter(Iterms == "WHOLE COUNTRY") %>% 
+  select(-Iterms) %>% 
   gather(key = year, value = gini) %>% 
   transmute(country = "Vietnam",
             year = as.numeric(str_extract(year, "\\d{4}")),
@@ -1752,7 +1752,7 @@ gso_vn2 <- extract_tables("data-raw/gso_vn.pdf", pages = 61)[[1]] %>%
             monetary = TRUE,
             series = paste("GSO Vietnam", welfare_def, equiv_scale),
             source1 = "General Statistics Office of Vietnam",
-            page = "",
+            page = "28",
             link = gso_vn2_link)  
 
 gso_vn <- bind_rows(gso_vn1, gso_vn2)
