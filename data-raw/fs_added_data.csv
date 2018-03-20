@@ -1120,6 +1120,14 @@ Netherlands,1980,0.21,0.003,con,oecdm,FALSE,ZdV2001 Netherlands con oecdm,Zaida 
 Netherlands,1988,0.214,0.004,con,oecdm,FALSE,ZdV2001 Netherlands con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 New Zealand,1990,0.229,,con,hh,,Park1995 New Zealand con hh,Tabatabai 1996; Park 1995,127,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 New Zealand,1990,0.377,,disp,hh,,Park1995 New Zealand disp hh,Tabatabai 1996; Park 1995,127,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+New Zealand,2007,0.533,,market,hh,,CE2016 market hh ,Creedy and Eedrah 2016,141,https://doi.org/10.1080/00779954.2014.997455 
+New Zealand,2007,0.382,,disp,hh,,CE2016 disp hh ,Creedy and Eedrah 2016,141,https://doi.org/10.1080/00779954.2014.997455 
+New Zealand,2007,0.489,,market,ae,,CE2016 market ae,Creedy and Eedrah 2016,141,https://doi.org/10.1080/00779954.2014.997455 
+New Zealand,2007,0.324,,disp,ae,,CE2016 disp ae ,Creedy and Eedrah 2016,141,https://doi.org/10.1080/00779954.2014.997455 
+New Zealand,2010,0.513,,market,hh,,CE2016 market hh ,Creedy and Eedrah 2016,141,https://doi.org/10.1080/00779954.2014.997455 
+New Zealand,2010,0.356,,disp,hh,,CE2016 disp hh ,Creedy and Eedrah 2016,141,https://doi.org/10.1080/00779954.2014.997455 
+New Zealand,2010,0.477,,market,ae,,CE2016 market ae,Creedy and Eedrah 2016,141,https://doi.org/10.1080/00779954.2014.997455 
+New Zealand,2010,0.302,,disp,ae,,CE2016 disp ae ,Creedy and Eedrah 2016,141,https://doi.org/10.1080/00779954.2014.997455 
 Nigeria,2004,0.3898,,con,hh,,NBS Nigeria con hh,National Bureau of Statistics Nigeria 2013,107,http://www.nigerianstat.gov.ng/pdfuploads/annual_abstract_2012.pdf
 Nigeria,2010,0.4161,,con,hh,,NBS Nigeria con hh,National Bureau of Statistics Nigeria 2013,107,http://www.nigerianstat.gov.ng/pdfuploads/annual_abstract_2012.pdf
 Nigeria,2004,0.4296,,con,pc,,NBS Nigeria con pc,National Bureau of Statistics Nigeria 2012,11,http://www.nigerianstat.gov.ng/pdfuploads/Nigeria%20Poverty%20Profile%202010.pdf
@@ -1337,6 +1345,7 @@ Puerto Rico,2012,0.5325,0.0077,gross,hh,TRUE,USCB Puerto Rico gross hh,U.S. Cens
 Puerto Rico,2013,0.547,0.0072,gross,hh,TRUE,USCB Puerto Rico gross hh,U.S. Census Bureau,,https://factfinder.census.gov/bkmk/table/1.0/en/ACS/13_1YR/B19083/0400000US72
 Puerto Rico,2014,0.5472,0.0067,gross,hh,TRUE,USCB Puerto Rico gross hh,U.S. Census Bureau,,https://factfinder.census.gov/bkmk/table/1.0/en/ACS/14_1YR/B19083/0400000US72
 Puerto Rico,2015,0.5589,0.0077,gross,hh,TRUE,USCB Puerto Rico gross hh,U.S. Census Bureau,,https://factfinder.census.gov/bkmk/table/1.0/en/ACS/15_1YR/B19083/0400000US72
+Puerto Rico,2016,0.5419,0.0073,gross,hh,TRUE,USCB Puerto Rico gross hh,U.S. Census Bureau,,https://factfinder.census.gov/bkmk/table/1.0/en/ACS/16_1YR/B19083/0400000US72
 Qatar,2013,0.404,,disp,oecdm,,MDPS Qatar disp oecdm,Ministry of Development Planning and Statistics Qatar 2014,43-3,http://www.mdps.gov.qa/en/statistics/Surveys/Household_Expenditure_Eng.pdf
 Qatar,1988,0.379,,con,pc,,Park1995 Qatar con pc,Tabatabai 1996; Park 1995,110,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Qatar,2007,0.411,,con,pc,,Shaban2016 Qatar con pc,Povcalnet; Shaban 2016,196,https://link.springer.com/chapter/10.1057/9781137554598_6
