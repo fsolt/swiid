@@ -1425,7 +1425,7 @@ scb <- scb %>%
 # update tdfbas_link [adding 1 to number after 'doc/result/' should work]
 # update file from tdfbas_link2
 
-tdgbas_link <- "http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls"
+tdgbas_link <- "http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls"
 download.file(tdgbas_link, "data-raw/tdgbas1.xls")
 
 tdgbas_link2 <- "http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L"
