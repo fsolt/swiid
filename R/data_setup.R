@@ -1005,6 +1005,29 @@ kostat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-ra
             link = "http://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1L6E001&conn_path=I2&language=en")
 
 
+# National Statistical Committee of Kyrgyzstan (automated)
+nsck_link <- "http://www.stat.kg/en/statistics/download/dynamic/543/"
+download.file(nsck_link, "data-raw/nsck.xls")
+
+nsck <- read_excel("data-raw/nsck.xls") %>% 
+  filter(str_detect(`5.04.00.14 Additional tables- incomes`, "Items|Gini")) %>% 
+  first_row_to_names() %>% 
+  select(matches("\\d{4}")) %>% 
+  gather(key = year, value = gini) %>% 
+  filter(!is.na(gini)) %>% 
+  transmute(country = "Kyrgyzstan",
+            year = as.numeric(year),
+            gini = gini,
+            gini_se = NA,
+            welfare_def = "gross",
+            equiv_scale = "pc",
+            monetary = TRUE,
+            series = paste("NSC Kyrgyzstan", welfare_def, equiv_scale),
+            source1 = "National Statistical Committee of Kyrgyzstan",
+            page = "5.04.00.14",
+            link = nsck_link)
+
+
 # Economy Planning Unit of Malaysia (update link--http://www.epu.gov.my/ms/search/node/gini)
 epumy_link <- "http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf"
 download.file(epumy_link, "data-raw/epumy.pdf")
@@ -1049,28 +1072,6 @@ nbs <- read_excel("data-raw/nbs.xls", skip = 2, sheet = "Лист1") %>%
             link = nbs_link)
 
 
-# National Statistical Committee of Kyrgyzstan (automated)
-nsck_link <- "http://www.stat.kg/en/statistics/download/dynamic/543/"
-download.file(nsck_link, "data-raw/nsck.xls")
-
-nsck <- read_excel("data-raw/nsck.xls") %>% 
-  filter(str_detect(`5.04.00.14 Additional tables- incomes`, "Items|Gini")) %>% 
-  first_row_to_names() %>% 
-  select(matches("\\d{4}")) %>% 
-  gather(key = year, value = gini) %>% 
-  filter(!is.na(gini)) %>% 
-  transmute(country = "Kyrgyzstan",
-            year = as.numeric(year),
-            gini = gini,
-            gini_se = NA,
-            welfare_def = "gross",
-            equiv_scale = "pc",
-            monetary = TRUE,
-            series = paste("NSC Kyrgyzstan", welfare_def, equiv_scale),
-            source1 = "National Statistical Committee of Kyrgyzstan",
-            page = "5.04.00.14",
-            link = nsck_link)
-
 
 # Statistics Office of Montenegro (automated, but update backup Internet Archive link)
 # Slow server, so get from Internet Archive if it times out
@@ -1108,8 +1109,6 @@ monstat <- read_excel("data-raw/monstat.xls", skip = 1) %>%
 
 
 # Statistics New Zealand (archived)
-# Note: Perry's annual work for Ministry of Social Development is included in added_data.csv because 
-# it is published as a .doc(!) file
 
 snz_link <- "https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Income.xls"
 download.file(snz_link, "data-raw/snz.xls")
@@ -1904,9 +1903,9 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
                      armstat, abs, inebo, belstat, statcan, dane, ineccr, dkstat,
                      capmas, statee, statfi, insee, geostat,
                      stathk, bpsid, amar, cso_ie, istat, kazstat, kostat, nsck,
-                     snz, epumy, nbs, monstat, ssb, dgeec, psa,
+                     epumy, nbs, monstat, snz, nzmsd, ssb, dgeec, psa,
                      rosstat, ru_lissy, singstat, ssi, ine, statslk, scb, 
-                     nso_thailand, tdgbas, turkstat, ons, ifs, cbo, uscb, uine, inev, gso_vn,
+                     tdgbas, nso_thailand, turkstat, ons, ifs, cbo, uscb, uine, inev, gso_vn,
                      atg, gidd,
                      added_data) %>% 
     rename(gini_m = gini,
