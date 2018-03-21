@@ -10,7 +10,7 @@ iter <- 3000
 warmup <- iter - 1000
 chains <- 3
 cores <- chains
-adapt_delta <- .9
+adapt_delta <- .99
 
 baseline_series <- "LIS disp sqrt"
 baseline_wd <- str_split(baseline_series, "\\s")[[1]] %>% nth(-2)
