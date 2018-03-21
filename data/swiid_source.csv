@@ -150,12 +150,12 @@ Argentina,2011,0.408539,0.00178231,disp,ae,TRUE,SEDLAC Argentina disp ae 4,SEDLA
 Argentina,2011,0.40239536,,disp,hh,TRUE,SEDLAC Argentina disp hh 4,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Argentina,2011,0.43135344,0.00174436,disp,pc,TRUE,SEDLAC Argentina disp pc 4,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Argentina,2012,0.475,,disp,pc,TRUE,CEPAL Argentina disp pc 8,CEPALStat,Urban,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Argentina,2012,0.404,,disp,pc,FALSE,CEQ Argentina disp pc,Rossignolo 2017,17,http://www.commitmentoequity.org/wp-content/uploads/2017/08/CEQ_WP45_Rossignolo__ImpactTaxesExpendituresinArgentina_June2017.pdf
+Argentina,2012,0.502,,market,pc,FALSE,CEQ Argentina market pc,Rossignolo 2017,17,http://www.commitmentoequity.org/wp-content/uploads/2017/08/CEQ_WP45_Rossignolo__ImpactTaxesExpendituresinArgentina_June2017.pdf
 Argentina,2012,0.40247531,0.00186792,disp,ae,TRUE,SEDLAC Argentina disp ae 4,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Argentina,2012,0.39780519,,disp,hh,TRUE,SEDLAC Argentina disp hh 4,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Argentina,2012,0.42575892,0.0019731,disp,pc,TRUE,SEDLAC Argentina disp pc 4,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Argentina,2013,0.472,,disp,pc,TRUE,CEPAL Argentina disp pc 8,CEPALStat,Urban,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Argentina,2013,0.403,,disp,pc,FALSE,CEQ Argentina disp pc,Rossignolo 2016,,http://www.commitmentoequity.org/publications_files/Argentina/CEQ_WP45_TAXES_EXPENDITURES_POVERTY_AND_INCOME_DISTRIBUTION_IN_ARGENTINA.pdf
-Argentina,2013,0.48100000000000004,,market,pc,FALSE,CEQ Argentina market pc,Rossignolo 2016,,http://www.commitmentoequity.org/publications_files/Argentina/CEQ_WP45_TAXES_EXPENDITURES_POVERTY_AND_INCOME_DISTRIBUTION_IN_ARGENTINA.pdf
 Argentina,2013,0.39468028,0.00222764,disp,ae,TRUE,SEDLAC Argentina disp ae 4,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Argentina,2013,0.38796774,,disp,hh,TRUE,SEDLAC Argentina disp hh 4,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Argentina,2013,0.42007522,0.0025828,disp,pc,TRUE,SEDLAC Argentina disp pc 4,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
@@ -215,25 +215,25 @@ Armenia,2009,0.4,,disp,pc,FALSE,Transmonee Armenia disp pc,Transmonee 2012,"",ht
 Armenia,2010,0.265,,con,pc,FALSE,National Statistical Service of Armenia con pc,National Statistical Service of Armenia 2013,11,http://www.armstat.am/file/article/f_sec_4_13_8.doc.pdf
 Armenia,2010,0.362,,gross,pc,FALSE,National Statistical Service of Armenia gross pc,National Statistical Service of Armenia 2013,11,http://www.armstat.am/file/article/f_sec_4_13_8.doc.pdf
 Armenia,2010,0.311,,con,pc,FALSE,Povcalnet Armenia con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Armenia,2011,0.373,,disp,pc,FALSE,CEQ Armenia disp pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_April27_2017.xlsx
-Armenia,2011,0.403,,market,pc,FALSE,CEQ Armenia market pc,Lustig 2015,,http://www.commitmentoequity.org/publications_files/Comparative/CEQWPNo30%20RedisImpactGovntSpendEducHealth%20March%202015.pdf
+Armenia,2011,0.373,,disp,pc,FALSE,CEQ Armenia disp pc,Younger and Khachatryan 2017,18,http://www.commitmentoequity.org/wp-content/uploads/2017/09/CEQ-WP43_Younger-Khachatryan__Armenia_April-2017.pdf
+Armenia,2011,0.46900000000000003,,market,pc,FALSE,CEQ Armenia market pc,Younger and Khachatryan 2017,18,http://www.commitmentoequity.org/wp-content/uploads/2017/09/CEQ-WP43_Younger-Khachatryan__Armenia_April-2017.pdf
 Armenia,2011,0.267,,con,pc,FALSE,National Statistical Service of Armenia con pc,National Statistical Service of Armenia 2014,11,http://www.armstat.am/file/article/f_sec_4_2014_5.pdf
 Armenia,2011,0.272,,gross,pc,FALSE,National Statistical Service of Armenia gross pc,National Statistical Service of Armenia 2014,11,http://www.armstat.am/file/article/f_sec_4_2014_5.pdf
 Armenia,2011,0.313,,con,pc,FALSE,Povcalnet Armenia con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Armenia,2012,0.269,,con,pc,FALSE,National Statistical Service of Armenia con pc,National Statistical Service of Armenia 2015,11,http://www.armstat.am/file/article/f_sec_4_2015_5.pdf
 Armenia,2012,0.372,,gross,pc,FALSE,National Statistical Service of Armenia gross pc,National Statistical Service of Armenia 2015,11,http://www.armstat.am/file/article/f_sec_4_2015_5.pdf
 Armenia,2012,0.305,,con,pc,FALSE,Povcalnet Armenia con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Armenia,2013,0.271,,con,pc,FALSE,NSS Armenia con pc,National Statistical Service of Armenia,11,http://www.armstat.am/file/article/f_sec_4_2016_5.pdf
-Armenia,2013,0.372,,gross,pc,FALSE,NSS Armenia gross pc,National Statistical Service of Armenia,11,http://www.armstat.am/file/article/f_sec_4_2016_5.pdf
+Armenia,2013,0.271,,con,pc,FALSE,NSS Armenia con pc,National Statistical Service of Armenia,95,http://www.armstat.am/file/article/f_sec_4_2016_5.pdf
+Armenia,2013,0.372,,gross,pc,FALSE,NSS Armenia gross pc,National Statistical Service of Armenia,95,http://www.armstat.am/file/article/f_sec_4_2016_5.pdf
 Armenia,2013,0.315,,con,pc,FALSE,Povcalnet Armenia con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Armenia,2014,0.277,,con,pc,FALSE,NSS Armenia con pc,National Statistical Service of Armenia,11,http://www.armstat.am/file/article/f_sec_4_2017_5.pdf
-Armenia,2014,0.373,,gross,pc,FALSE,NSS Armenia gross pc,National Statistical Service of Armenia,11,http://www.armstat.am/file/article/f_sec_4_2017_5.pdf
+Armenia,2014,0.277,,con,pc,FALSE,NSS Armenia con pc,National Statistical Service of Armenia,95,http://www.armstat.am/file/article/f_sec_4_2017_5.pdf
+Armenia,2014,0.373,,gross,pc,FALSE,NSS Armenia gross pc,National Statistical Service of Armenia,95,http://www.armstat.am/file/article/f_sec_4_2017_5.pdf
 Armenia,2014,0.315,,con,pc,FALSE,Povcalnet Armenia con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Armenia,2015,0.279,,con,pc,FALSE,NSS Armenia con pc,National Statistical Service of Armenia,11,http://www.armstat.am/file/article/f_sec_4_2017_5.pdf
-Armenia,2015,0.374,,gross,pc,FALSE,NSS Armenia gross pc,National Statistical Service of Armenia,11,http://www.armstat.am/file/article/f_sec_4_2017_5.pdf
+Armenia,2015,0.279,,con,pc,FALSE,NSS Armenia con pc,National Statistical Service of Armenia,95,http://www.armstat.am/file/article/f_sec_4_2017_5.pdf
+Armenia,2015,0.374,,gross,pc,FALSE,NSS Armenia gross pc,National Statistical Service of Armenia,95,http://www.armstat.am/file/article/f_sec_4_2017_5.pdf
 Armenia,2015,0.324,,con,pc,FALSE,Povcalnet Armenia con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Armenia,2016,0.286,,con,pc,FALSE,NSS Armenia con pc,National Statistical Service of Armenia,11,http://www.armstat.am/file/article/f_sec_4_2017_5.pdf
-Armenia,2016,0.375,,gross,pc,FALSE,NSS Armenia gross pc,National Statistical Service of Armenia,11,http://www.armstat.am/file/article/f_sec_4_2017_5.pdf
+Armenia,2016,0.286,,con,pc,FALSE,NSS Armenia con pc,National Statistical Service of Armenia,95,http://www.armstat.am/file/article/f_sec_4_2017_5.pdf
+Armenia,2016,0.375,,gross,pc,FALSE,NSS Armenia gross pc,National Statistical Service of Armenia,95,http://www.armstat.am/file/article/f_sec_4_2017_5.pdf
 Australia,1975,0.206,,con,hh,TRUE,BCW2000 con hh 1,"Barrett, Crossley, and Worswick 2000",133,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
 Australia,1975,0.218,,con,oecdm,TRUE,BCW2000 con oecd 1,"Barrett, Crossley, and Worswick 2000",133,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
 Australia,1975,0.259,,con,pc,TRUE,BCW2000 con pc 1,"Barrett, Crossley, and Worswick 2000",133,http://onlinelibrary.wiley.com/doi/10.1111/j.1475-4932.2000.tb00011.x/epdf
@@ -2243,8 +2243,8 @@ Chile,2011,0.49442316,0.00248628,disp,ae,TRUE,SEDLAC Chile disp ae 1,SEDLAC,inte
 Chile,2011,0.51037485,,disp,hh,TRUE,SEDLAC Chile disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Chile,2011,0.50778745,0.00258967,disp,pc,TRUE,SEDLAC Chile disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Chile,2013,0.509,,disp,pc,TRUE,CEPAL Chile disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Chile,2013,0.46680000000000005,,disp,pc,FALSE,CEQ Chile disp pc,Lustig 2017,21,http://www.commitmentoequity.org/publications_files/Latin%20America/CEQ_WP62_Lustig_Feb22_2017.pdf
-Chile,2013,0.4936,,market,pc,FALSE,CEQ Chile market pc,Lustig 2017,21,http://www.commitmentoequity.org/publications_files/Latin%20America/CEQ_WP62_Lustig_Feb22_2017.pdf
+Chile,2013,0.46680000000000005,,disp,pc,FALSE,CEQ Chile disp pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
+Chile,2013,0.5028,,market,pc,FALSE,CEQ Chile market pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
 Chile,2013,0.465,0.0022400000000000002,disp,sqrt,FALSE,"OECD Chile disp sqrt, current def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Chile,2013,0.475,,gross,sqrt,FALSE,"OECD Chile gross sqrt, current def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Chile,2013,0.498,,market,sqrt,FALSE,"OECD Chile market sqrt, current def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -2367,6 +2367,7 @@ China,2013,0.4953,0.0044,market,pc,FALSE,LIS market pc,LISSY,"",https://raw.gith
 China,2013,0.4696,0.0034,market,sqrt,FALSE,LIS market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cn.txt
 China,2013,0.473,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2014,,http://www.stats.gov.cn/english/PressRelease/201401/t20140120_502079.html
 China,2014,0.469,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2015,,http://www.stats.gov.cn/english/PressRelease/201501/t20150120_671038.html
+China,2015,0.462,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2015,,http://www.stats.gov.cn/english/PressRelease/201601/t20160119_1306072.html
 Colombia,1970,0.56,,gross,hh,FALSE,CEPAL SDI Colombia gross hh McLure,CEPAL Serie Distribucion del Ingreso 1 (1986),,http://hdl.handle.net/11362/8916
 Colombia,1971,0.51,,gross,hh,FALSE,CEPAL SDI Colombia gross hh EH/PF,CEPAL Serie Distribucion del Ingreso 1 (1986),,http://hdl.handle.net/11362/8916
 Colombia,1972,0.51,,gross,hh,FALSE,CEPAL SDI Colombia gross hh EH/PF,CEPAL Serie Distribucion del Ingreso 1 (1986),,http://hdl.handle.net/11362/8916
@@ -2650,8 +2651,8 @@ Costa Rica,2009,0.50446682,0.00312671,disp,pc,TRUE,SEDLAC Costa Rica disp pc 3,S
 Costa Rica,2010,0.492,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Costa Rica,2010,0.48900000000000005,,disp,pc,FALSE,CEQ Costa Rica disp pc,Sauma and Trejos 2014,,http://www.commitmentoequity.org/publications_files/Costa%20Rica/CEQWPNo18%20PubSpendTaxRedistIncandPover%20Costa%20Rica.pdf
 Costa Rica,2010,0.508,,market,pc,FALSE,CEQ Costa Rica market pc,Sauma and Trejos 2014,,http://www.commitmentoequity.org/publications_files/Costa%20Rica/CEQWPNo18%20PubSpendTaxRedistIncandPover%20Costa%20Rica.pdf
-Costa Rica,2010,0.5032621,,gross,hh,,INEC gross hh,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2016.01.xlsx
-Costa Rica,2010,0.50663163,,gross,pc,,INEC gross pc,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2016.01.xlsx
+Costa Rica,2010,0.5032621,,gross,hh,,INEC gross hh,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
+Costa Rica,2010,0.50663163,,gross,pc,,INEC gross pc,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
 Costa Rica,2010,0.472,0.003,disp,sqrt,FALSE,"OECD Costa Rica disp sqrt, current def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Costa Rica,2010,0.48100000000000004,,gross,pc,FALSE,Povcalnet Costa Rica gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Costa Rica,2010,0.48280906,0.00304962,disp,ae,TRUE,SEDLAC Costa Rica disp ae 4,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
@@ -2661,49 +2662,49 @@ Costa Rica,2010,0.46810234,,disp,hh,TRUE,SEDLAC Costa Rica disp hh 4,SEDLAC,gini
 Costa Rica,2010,0.49921038,0.00346106,disp,pc,TRUE,SEDLAC Costa Rica disp pc 4,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Costa Rica,2010,0.4799083,0.00340929,disp,pc,TRUE,SEDLAC Costa Rica disp pc 4,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Costa Rica,2011,0.503,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Costa Rica,2011,0.50777366,,gross,hh,,INEC gross hh,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2016.01.xlsx
-Costa Rica,2011,0.51496215,,gross,pc,,INEC gross pc,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2016.01.xlsx
+Costa Rica,2011,0.50777366,,gross,hh,,INEC gross hh,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
+Costa Rica,2011,0.51496215,,gross,pc,,INEC gross pc,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
 Costa Rica,2011,0.48,0.003,disp,sqrt,FALSE,"OECD Costa Rica disp sqrt, current def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Costa Rica,2011,0.486,,gross,pc,FALSE,Povcalnet Costa Rica gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Costa Rica,2011,0.46545229,0.00376018,disp,ae,TRUE,SEDLAC Costa Rica disp ae 4,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Costa Rica,2011,0.46953952,,disp,hh,TRUE,SEDLAC Costa Rica disp hh 4,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Costa Rica,2011,0.48500577,0.00425872,disp,pc,TRUE,SEDLAC Costa Rica disp pc 4,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Costa Rica,2012,0.504,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Costa Rica,2012,0.51045977,,gross,hh,,INEC gross hh,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2016.01.xlsx
-Costa Rica,2012,0.51544875,,gross,pc,,INEC gross pc,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2016.01.xlsx
+Costa Rica,2012,0.51045977,,gross,hh,,INEC gross hh,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
+Costa Rica,2012,0.51544875,,gross,pc,,INEC gross pc,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
 Costa Rica,2012,0.483,0.003,disp,sqrt,FALSE,"OECD Costa Rica disp sqrt, current def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Costa Rica,2012,0.486,,gross,pc,FALSE,Povcalnet Costa Rica gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Costa Rica,2012,0.46641146,0.00363371,disp,ae,TRUE,SEDLAC Costa Rica disp ae 4,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Costa Rica,2012,0.47162249,,disp,hh,TRUE,SEDLAC Costa Rica disp hh 4,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Costa Rica,2012,0.48541279,0.00397607,disp,pc,TRUE,SEDLAC Costa Rica disp pc 4,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Costa Rica,2013,0.512,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Costa Rica,2013,0.51853308,,gross,hh,,INEC gross hh,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2016.01.xlsx
-Costa Rica,2013,0.52243001,,gross,pc,,INEC gross pc,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2016.01.xlsx
+Costa Rica,2013,0.51853308,,gross,hh,,INEC gross hh,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
+Costa Rica,2013,0.52243001,,gross,pc,,INEC gross pc,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
 Costa Rica,2013,0.494,0.004,disp,sqrt,FALSE,"OECD Costa Rica disp sqrt, current def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Costa Rica,2013,0.49200000000000005,,gross,pc,FALSE,Povcalnet Costa Rica gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Costa Rica,2013,0.47404793,0.00355594,disp,ae,TRUE,SEDLAC Costa Rica disp ae 4,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Costa Rica,2013,0.47741609,,disp,hh,TRUE,SEDLAC Costa Rica disp hh 4,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Costa Rica,2013,0.4914406,0.00338377,disp,pc,TRUE,SEDLAC Costa Rica disp pc 4,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Costa Rica,2014,0.505,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Costa Rica,2014,0.51160138,,gross,hh,,INEC gross hh,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2016.01.xlsx
-Costa Rica,2014,0.51648859,,gross,pc,,INEC gross pc,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2016.01.xlsx
+Costa Rica,2014,0.51160138,,gross,hh,,INEC gross hh,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
+Costa Rica,2014,0.51648859,,gross,pc,,INEC gross pc,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
 Costa Rica,2014,0.485,0.003,disp,sqrt,FALSE,"OECD Costa Rica disp sqrt, current def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Costa Rica,2014,0.485,,gross,pc,FALSE,Povcalnet Costa Rica gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Costa Rica,2014,0.46633214,0.00299264,disp,ae,TRUE,SEDLAC Costa Rica disp ae 4,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Costa Rica,2014,0.46926996,,disp,hh,TRUE,SEDLAC Costa Rica disp hh 4,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Costa Rica,2014,0.48423878,0.00313516,disp,pc,TRUE,SEDLAC Costa Rica disp pc 4,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
-Costa Rica,2015,0.50996528,,gross,hh,,INEC gross hh,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2016.01.xlsx
-Costa Rica,2015,0.5159259,,gross,pc,,INEC gross pc,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2016.01.xlsx
+Costa Rica,2015,0.50996528,,gross,hh,,INEC gross hh,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
+Costa Rica,2015,0.5159259,,gross,pc,,INEC gross pc,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
 Costa Rica,2015,0.479,0.002,disp,sqrt,FALSE,"OECD Costa Rica disp sqrt, current def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Costa Rica,2015,0.48200000000000004,,gross,pc,FALSE,Povcalnet Costa Rica gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Costa Rica,2015,0.46301976,0.00213089,disp,ae,TRUE,SEDLAC Costa Rica disp ae 4,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Costa Rica,2015,0.46440967,,disp,hh,TRUE,SEDLAC Costa Rica disp hh 4,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Costa Rica,2015,0.48088846,0.00209909,disp,pc,TRUE,SEDLAC Costa Rica disp pc 4,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
-Costa Rica,2016,0.51508781,,gross,hh,,INEC gross hh,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2016.01.xlsx
-Costa Rica,2016,0.52117924,,gross,pc,,INEC gross pc,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2016.01.xlsx
+Costa Rica,2016,0.51508781,,gross,hh,,INEC gross hh,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
+Costa Rica,2016,0.52117924,,gross,pc,,INEC gross pc,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
 Costa Rica,2016,0.484,0.002,disp,sqrt,FALSE,"OECD Costa Rica disp sqrt, current def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Costa Rica,2017,0.51372925,,gross,hh,,INEC gross hh,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2016.01.xlsx
-Costa Rica,2017,0.51384433,,gross,pc,,INEC gross pc,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2016.01.xlsx
+Costa Rica,2017,0.51372925,,gross,hh,,INEC gross hh,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
+Costa Rica,2017,0.51384433,,gross,pc,,INEC gross pc,Instituto Naciónal de Estadística y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
 Côte D'Ivoire,1985,0.455,,con,pc,FALSE,Povcalnet Côte D'Ivoire con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Côte D'Ivoire,1985,0.42090000000000005,,con,sqrt,FALSE,World Bank Africa Poverty Database Côte D'Ivoire con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
 Côte D'Ivoire,1986,0.38,,con,pc,FALSE,Povcalnet Côte D'Ivoire con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
@@ -3320,7 +3321,8 @@ Dominican Republic,2006,0.50275778,0.00498519,disp,ae,TRUE,SEDLAC Dominican Repu
 Dominican Republic,2006,0.51519308,,disp,hh,TRUE,SEDLAC Dominican Republic disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Dominican Republic,2006,0.51875709,0.00550701,disp,pc,TRUE,SEDLAC Dominican Republic disp pc 3,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Dominican Republic,2007,0.556,,disp,pc,TRUE,CEPAL Dominican Republic disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Dominican Republic,2007,0.502,,market,pc,FALSE,CEQ Dominican Republic market pc,Lustig 2016,6,http://www.fes-globalization.org/new_york/wp-content/uploads/2016/06/Nora-Lustig-Domestic-Resource-Mobilization-Poor-May-27-2016.pdf
+Dominican Republic,2007,0.502,,disp,pc,FALSE,CEQ Dominican Republic disp pc,"Aristy-Escuder, Cabrera, Moreno-Dodson, and Sa_nchez-Mart�n 2017/",41,http://www.commitmentoequity.org/wp-content/uploads/2017/07/CEQ_WP47_AristyEscuder-et-al_Fiscal-Policy-and-Redistribution-in-DR_June-2017.pdf
+Dominican Republic,2007,0.514,,market,pc,FALSE,CEQ Dominican Republic market pc,"Aristy-Escuder, Cabrera, Moreno-Dodson, and Sa_nchez-Mart�n 2017W",41,http://www.commitmentoequity.org/wp-content/uploads/2017/07/CEQ_WP47_AristyEscuder-et-al_Fiscal-Policy-and-Redistribution-in-DR_June-2017.pdf
 Dominican Republic,2007,0.4075,0.0065,con,ae,FALSE,LIS con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/do.txt
 Dominican Republic,2007,0.4141,0.0066,con,hh,FALSE,LIS con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/do.txt
 Dominican Republic,2007,0.396,0.0065,con,oecdm,FALSE,LIS con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/do.txt
@@ -3581,8 +3583,8 @@ El Salvador,2010,0.445,,gross,pc,FALSE,Povcalnet El Salvador gross pc 1,World Ba
 El Salvador,2010,0.42412381,0.00224398,disp,ae,TRUE,SEDLAC El Salvador disp ae 1,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 El Salvador,2010,0.43318941,,disp,hh,TRUE,SEDLAC El Salvador disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 El Salvador,2010,0.44507532,0.00245302,disp,pc,TRUE,SEDLAC El Salvador disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
-El Salvador,2011,0.43000000000000005,,disp,pc,FALSE,CEQ El Salvador disp pc,"Beneke, Lustig, and Oliva 2015",,http://www.commitmentoequity.org/publications_files/ElSalvador/CEQWPNo26%20ImpactoImpuestosGastoSocialElSalvador%20Marzo%202015.pdf
-El Salvador,2011,0.43960000000000005,,market,pc,FALSE,CEQ El Salvador market pc,Lustig 2015,,http://www.commitmentoequity.org/publications_files/Comparative/CEQWPNo30%20RedisImpactGovntSpendEducHealth%20March%202015.pdf
+El Salvador,2011,0.42400000000000004,,disp,pc,FALSE,CEQ El Salvador disp pc,"Beneke, Lustig, and Oliva 2017",20,http://www.commitmentoequity.org/wp-content/uploads/2017/08/CEQ_WP57_Margarita-Beneke-Nora-Lustig-Jose-Andres-Oliva_June2017.pdf
+El Salvador,2011,0.43690000000000007,,market,pc,FALSE,CEQ El Salvador market pc,"Beneke, Lustig, and Oliva 2017",20,http://www.commitmentoequity.org/wp-content/uploads/2017/08/CEQ_WP57_Margarita-Beneke-Nora-Lustig-Jose-Andres-Oliva_June2017.pdf
 El Salvador,2011,0.424,,gross,pc,FALSE,Povcalnet El Salvador gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 El Salvador,2011,0.40134178,0.00289105,disp,ae,TRUE,SEDLAC El Salvador disp ae 1,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 El Salvador,2011,0.41273093,,disp,hh,TRUE,SEDLAC El Salvador disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
@@ -3827,7 +3829,7 @@ Ethiopia,2004,0.298,,con,pc,FALSE,Povcalnet Ethiopia con pc 1,World Bank Povcaln
 Ethiopia,2004,0.271,,con,sqrt,FALSE,World Bank Africa Poverty Database Ethiopia con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
 Ethiopia,2010,0.332,,con,pc,FALSE,Povcalnet Ethiopia con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Ethiopia,2010,0.2973,,con,sqrt,FALSE,World Bank Africa Poverty Database Ethiopia con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
-Ethiopia,2011,0.302,,con,pc,FALSE,CEQ Ethiopia con pc,World Bank 2015,81,http://www.commitmentoequity.org/publications_files/Ethiopia/WorldBank%202014EthiopiaPovAssess%20CEQChapt5%20Feb%202015.pdf
+Ethiopia,2011,0.302,,con,pc,FALSE,CEQ Ethiopia con pc,"Hill, Inchauste, Lustig, Tsehaye, and Woldehanna 2017",16,http://www.commitmentoequity.org/wp-content/uploads/2017/09/CEQ-WP41_Hill-Inchauste-Lustig-Tsehaye-Woldehanna_Ethiopia_April2017.pdf
 Fiji,1977,0.43,,gross,pc,FALSE,BJ2008 Fiji con pc 1,Brown and Jimenez 2008,551,http://doi.org/10.1002/jid.1474
 Fiji,1977,0.47,,disp,hh,,vGP1984 Fiji disp hh,Tabatabai 1996; van Ginneken and Park 1984,92,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Fiji,1977,0.46,,disp,pc,,vGP1984 Fiji disp pc,Tabatabai 1996; van Ginneken and Park 1984,92,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -4543,6 +4545,8 @@ Georgia,2011,0.41600000000000004,,con,pc,FALSE,Povcalnet Georgia con pc 2,World 
 Georgia,2012,0.44,,con,pc,FALSE,Geostat con pc,Statistics Georgia,"",http://pc-axis.geostat.ge
 Georgia,2012,0.41,,gross,pc,FALSE,Geostat gross pc,Statistics Georgia,"",http://pc-axis.geostat.ge
 Georgia,2012,0.413,,con,pc,FALSE,Povcalnet Georgia con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Georgia,2013,0.395,,disp,pc,FALSE,CEQ Georgia disp pc,Cancho and Bondarenko 2017,25,http://www.commitmentoequity.org/wp-content/uploads/2017/09/CEQ-WP42_Cancho-Bondarenko_Georgia_May2017.pdf
+Georgia,2013,0.507,,market,pc,FALSE,CEQ Georgia market pc,Cancho and Bondarenko 2017,25,http://www.commitmentoequity.org/wp-content/uploads/2017/09/CEQ-WP42_Cancho-Bondarenko_Georgia_May2017.pdf
 Georgia,2013,0.42,,con,pc,FALSE,Geostat con pc,Statistics Georgia,"",http://pc-axis.geostat.ge
 Georgia,2013,0.4,,gross,pc,FALSE,Geostat gross pc,Statistics Georgia,"",http://pc-axis.geostat.ge
 Georgia,2013,0.3989,0.007,disp,ae,FALSE,LIS disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ge.txt
@@ -5243,8 +5247,8 @@ Guatemala,2006,0.51748512,,disp,hh,TRUE,SEDLAC Guatemala disp hh 1,SEDLAC,gini1,
 Guatemala,2006,0.54849315,0.00540624,disp,pc,TRUE,SEDLAC Guatemala disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Guatemala,2010,0.546,,disp,pc,FALSE,CEQ Guatemala disp pc,"Cabrera, Lustig, and Moran 2014",,http://www.commitmentoequity.org/publications_files/Guatemala/Cabrera_Lustig_Moran_Oct_17_2014.pdf
 Guatemala,2010,0.5509000000000001,,market,pc,FALSE,CEQ Guatemala market pc,Lustig 2015,,http://www.commitmentoequity.org/publications_files/Comparative/CEQWPNo30%20RedisImpactGovntSpendEducHealth%20March%202015.pdf
-Guatemala,2011,0.505,,disp,pc,FALSE,CEQ Guatemala disp pc,Lustig 2017,21,http://www.commitmentoequity.org/publications_files/Latin%20America/CEQ_WP62_Lustig_Feb22_2017.pdf
-Guatemala,2011,0.5129,,market,pc,FALSE,CEQ Guatemala market pc,Lustig 2017,21,http://www.commitmentoequity.org/publications_files/Latin%20America/CEQ_WP62_Lustig_Feb22_2017.pdf
+Guatemala,2011,0.5031,,disp,pc,FALSE,CEQ Guatemala disp pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
+Guatemala,2011,0.5144,,market,pc,FALSE,CEQ Guatemala market pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
 Guatemala,2011,0.3592,0.0041,con,ae,FALSE,LIS con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/gt.txt
 Guatemala,2011,0.3527,0.0048,con,hh,FALSE,LIS con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/gt.txt
 Guatemala,2011,0.3455,0.0055,con,oecdm,FALSE,LIS con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/gt.txt
@@ -5425,8 +5429,8 @@ Honduras,2010,0.534,,gross,pc,FALSE,Povcalnet Honduras gross pc 2,World Bank Pov
 Honduras,2010,0.51552904,0.00310172,disp,ae,TRUE,SEDLAC Honduras disp ae 4,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Honduras,2010,0.51409628,,disp,hh,TRUE,SEDLAC Honduras disp hh 4,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Honduras,2010,0.53371983,0.00299154,disp,pc,TRUE,SEDLAC Honduras disp pc 4,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
-Honduras,2011,0.5566000000000001,,disp,pc,FALSE,CEQ Honduras disp pc,Lustig 2017,21,http://www.commitmentoequity.org/publications_files/Latin%20America/CEQ_WP62_Lustig_Feb22_2017.pdf
-Honduras,2011,0.5641,,market,pc,FALSE,CEQ Honduras market pc,Lustig 2017,21,http://www.commitmentoequity.org/publications_files/Latin%20America/CEQ_WP62_Lustig_Feb22_2017.pdf
+Honduras,2011,0.5563,,disp,pc,FALSE,CEQ Honduras disp pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
+Honduras,2011,0.5612,,market,pc,FALSE,CEQ Honduras market pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
 Honduras,2011,0.574,,gross,pc,FALSE,Povcalnet Honduras gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Honduras,2011,0.5574381,0.00699077,disp,ae,TRUE,SEDLAC Honduras disp ae 4,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Honduras,2011,0.55827325,,disp,hh,TRUE,SEDLAC Honduras disp hh 4,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
@@ -5969,7 +5973,7 @@ Indonesia,2008,0.35,,con,pc,,Statistics Indonesia con pc,Statistics Indonesia,""
 Indonesia,2009,0.37,,con,pc,,Statistics Indonesia con pc,Statistics Indonesia,"",https://www.bps.go.id/website/tabelExcelIndo/indo_23_6.xls
 Indonesia,2010,0.38,,con,pc,,Statistics Indonesia con pc,Statistics Indonesia,"",https://www.bps.go.id/website/tabelExcelIndo/indo_05_21.xls
 Indonesia,2011,0.41,,con,pc,,Statistics Indonesia con pc,Statistics Indonesia,"",https://www.bps.go.id/website/tabelExcelIndo/indo_05_21.xls
-Indonesia,2012,0.398,,con,pc,FALSE,CEQ Indonesia con pc,Lustig 2016,6,http://www.fes-globalization.org/new_york/wp-content/uploads/2016/06/Nora-Lustig-Domestic-Resource-Mobilization-Poor-May-27-2016.pdf
+Indonesia,2012,0.389,,con,pc,FALSE,CEQ Indonesia con pc,"Jellama, Wai-Poi, and Afkar 2017",18,http://www.commitmentoequity.org/wp-content/uploads/2017/09/CEQ-WP40_Jellema-WaiPoi-Afkar_Indonesia_May2017.pdf
 Indonesia,2012,0.41,,con,pc,,Statistics Indonesia con pc,Statistics Indonesia,"",https://www.bps.go.id/website/tabelExcelIndo/indo_05_21.xls
 Indonesia,2013,0.41,,con,pc,,Statistics Indonesia con pc,Statistics Indonesia,"",https://www.bps.go.id/website/tabelExcelIndo/indo_05_21.xls
 Indonesia,2014,0.41,,con,pc,,Statistics Indonesia con pc,Statistics Indonesia,"",https://www.bps.go.id/website/tabelExcelIndo/indo_05_21.xls
@@ -6071,8 +6075,8 @@ Iran,2009,0.42,,con,pc,FALSE,Povcalnet Iran con pc 2,World Bank Povcalnet,"",htt
 Iran,2009,0.4111,,con,pc,,Statistical Center of Iran con pc,Statistical Center of Iran,"",https://www.amar.org.ir/english/Latest-Releases-Page/articleType/ArticleView/articleId/475
 Iran,2010,0.4099,,con,pc,,Statistical Center of Iran con pc,Statistical Center of Iran,"",https://www.amar.org.ir/english/Latest-Releases-Page/articleType/ArticleView/articleId/475
 Iran,2011,0.37,,con,pc,,Statistical Center of Iran con pc,Statistical Center of Iran,"",https://www.amar.org.ir/english/Latest-Releases-Page/articleType/ArticleView/articleId/475
-Iran,2012,0.3721,,disp,pc,FALSE,CEQ Iran disp pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_April27_2017.xlsx
-Iran,2012,0.43120000000000003,,market,pc,FALSE,CEQ Iran market pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_April27_2017.xlsx
+Iran,2012,0.3686,,disp,pc,FALSE,CEQ Iran disp pc,"Enami, Lustig, and Taqdiri 2017",18,http://www.commitmentoequity.org/wp-content/uploads/2017/09/CEQ_WP48_Ali-Enami-Nora-Lustig-Alireza-Taqdiri_Iran_Sept2017.pdf
+Iran,2012,0.42860000000000004,,market,pc,FALSE,CEQ Iran market pc,"Enami, Lustig, and Taqdiri 2017",18,http://www.commitmentoequity.org/wp-content/uploads/2017/09/CEQ_WP48_Ali-Enami-Nora-Lustig-Alireza-Taqdiri_Iran_Sept2017.pdf
 Iran,2012,0.3643,,con,pc,,Statistical Center of Iran con pc,Statistical Center of Iran,"",https://www.amar.org.ir/english/Latest-Releases-Page/articleType/ArticleView/articleId/475
 Iran,2013,0.374,,con,pc,FALSE,Povcalnet Iran con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Iran,2014,0.38799999999999996,,con,pc,FALSE,Povcalnet Iran con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
@@ -7048,7 +7052,7 @@ Jordan,2006,0.377,,con,pc,,Shaban2016 Jordan con pc,Povcalnet; Shaban 2016,196,h
 Jordan,2008,0.326,,con,pc,,Hassine2015 Jordan con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Jordan,2008,0.326,,con,pc,FALSE,Povcalnet Jordan con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Jordan,2008,0.338,,con,pc,,Shaban2016 Jordan con pc,Povcalnet; Shaban 2016,196,https://link.springer.com/chapter/10.1057/9781137554598_6
-Jordan,2009,0.3254,,con,pc,FALSE,CEQ Jordan con pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_April27_2017.xlsx
+Jordan,2010,0.328,,con,pc,FALSE,CEQ Jordan con pc,"Alam, Inchauste, and Serajuddin 2017",17,http://www.commitmentoequity.org/wp-content/uploads/2017/11/CEQ-WP44_Shamma-Inchauste-Serajuddin_Jordan_May2017.pdf
 Jordan,2010,0.362,0.034,con,pc,,KANRCZ2017 Jordan con pc,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
 Jordan,2010,0.337,,con,pc,FALSE,Povcalnet Jordan con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Jordan,2010,0.354,,con,pc,,Shaban2016 Jordan con pc,Povcalnet; Shaban 2016,196,https://link.springer.com/chapter/10.1057/9781137554598_6
@@ -7946,31 +7950,40 @@ Malawi,2010,0.4424,,con,sqrt,FALSE,World Bank Africa Poverty Database Malawi con
 Malawi,2011,0.452,,con,pc,,NSO Malawi con pc 1,National Statistical Office Malawi 2012,218,http://www.nsomalawi.mw/images/stories/data_on_line/economics/ihs/IHS3/IHS3_Report.pdf
 Malawi,2013,0.39,,con,pc,,NSO Malawi con pc 2,National Statistical Office Malawi 2014,105,http://www.nsomalawi.mw/images/stories/data_on_line/economics/ihs/IHPS%202013/IHPS%20Report.pdf
 Malaysia,1970,0.421,,gross,hh,,Bruton1992 Malaysia gross hh,Tabatabai 1996; Bruton 1992,99,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Malaysia,1970,0.513,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,1974,0.53,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1976,0.499,,gross,hh,,Bruton1992 Malaysia gross hh,Tabatabai 1996; Bruton 1992,99,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Malaysia,1976,0.557,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1979,0.529,,gross,hh,,Bruton1992 Malaysia gross hh,Tabatabai 1996; Bruton 1992,99,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Malaysia,1979,0.505,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1980,0.419,,con,hh,,Park1995 Malaysia con hh,Tabatabai 1996; Park 1995,100,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Malaysia,1984,0.508,,gross,hh,,Bruton1992 Malaysia gross hh,Tabatabai 1996; Bruton 1992,99,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Malaysia,1984,0.483,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1984,0.486,,gross,pc,FALSE,Povcalnet Malaysia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Malaysia,1987,0.456,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1987,0.47,,gross,pc,FALSE,Povcalnet Malaysia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Malaysia,1989,0.445,,gross,hh,,Bruton1992 Malaysia gross hh,Tabatabai 1996; Bruton 1992,99,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Malaysia,1989,0.446,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1989,0.462,,gross,pc,FALSE,Povcalnet Malaysia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Malaysia,1992,0.459,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1992,0.47700000000000004,,gross,pc,FALSE,Povcalnet Malaysia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Malaysia,1995,0.456,,gross,hh,,DOSM gross hh,Department of Statistics Malaysia 2010,,https://www.dosm.gov.my/v1/images/stories/files/LatestReleases/household/Press_Release_household2009_BI.pdf
+Malaysia,1995,0.456,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1995,0.485,,gross,pc,FALSE,Povcalnet Malaysia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Malaysia,1997,0.459,,gross,hh,,DOSM gross hh,Department of Statistics Malaysia 2010,,https://www.dosm.gov.my/v1/images/stories/files/LatestReleases/household/Press_Release_household2009_BI.pdf
+Malaysia,1997,0.459,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1997,0.49200000000000005,,gross,pc,FALSE,Povcalnet Malaysia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Malaysia,1999,0.443,,gross,hh,,DOSM gross hh,Department of Statistics Malaysia 2010,,https://www.dosm.gov.my/v1/images/stories/files/LatestReleases/household/Press_Release_household2009_BI.pdf
-Malaysia,2002,0.461,,gross,hh,,DOSM gross hh,Department of Statistics Malaysia 2010,,https://www.dosm.gov.my/v1/images/stories/files/LatestReleases/household/Press_Release_household2009_BI.pdf
-Malaysia,2004,0.46,,gross,hh,,DOSM gross hh,Department of Statistics Malaysia 2010,,https://www.dosm.gov.my/v1/images/stories/files/LatestReleases/household/Press_Release_household2009_BI.pdf
+Malaysia,1999,0.443,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,2002,0.461,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,2004,0.462,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,2004,0.46,,gross,pc,FALSE,Povcalnet Malaysia gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Malaysia,2005,0.377,,con,pc,,GIDD Malaysia con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
-Malaysia,2007,0.44,,gross,hh,,DOSM gross hh,Department of Statistics Malaysia 2010,,https://www.dosm.gov.my/v1/images/stories/files/LatestReleases/household/Press_Release_household2009_BI.pdf
+Malaysia,2007,0.441,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,2007,0.46,,gross,pc,FALSE,Povcalnet Malaysia gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Malaysia,2009,0.441,,gross,hh,,DOSM gross hh,Department of Statistics Malaysia 2010,,https://www.dosm.gov.my/v1/images/stories/files/LatestReleases/household/Press_Release_household2009_BI.pdf
+Malaysia,2009,0.441,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,2009,0.46299999999999997,,gross,pc,FALSE,Povcalnet Malaysia gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Malaysia,2009,0.462,,gross,pc,,ZKM2014 Malaysia gross pc,"Zhuang, Kanbur, and Maligalig 2014",25,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA25
-Malaysia,2012,0.431,,gross,hh,,DOSM gross hh,Department of Statistics Malaysia 2015,,https://www.dosm.gov.my/v1/index.php?r=column/cthemeByCat&cat=120&bul_id=aHhtTHVWNVYzTFBua2dSUlBRL1Rjdz09&menu_id=amVoWU54UTl0a21NWmdhMjFMMWcyZz09
-Malaysia,2014,0.401,,gross,hh,,DOSM gross hh,Department of Statistics Malaysia 2015,,https://www.dosm.gov.my/v1/index.php?r=column/cthemeByCat&cat=120&bul_id=aHhtTHVWNVYzTFBua2dSUlBRL1Rjdz09&menu_id=amVoWU54UTl0a21NWmdhMjFMMWcyZz09
+Malaysia,2012,0.431,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,2014,0.401,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,2016,0.399,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Maldives,2002,0.413,,con,pc,FALSE,Povcalnet Maldives con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Maldives,2003,0.38,,con,pc,,NBS Maldives con pc,National Bureau of Statistics Maldives 2011,35,http://www.planning.gov.mv/en/images/stories/news/2011/June/HIES-Preliminary_Findings-Presentation.pdf
 Maldives,2004,0.374,,con,pc,,ZKM2014 Maldives con pc,"Zhuang, Kanbur, and Maligalig 2014",24,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA24
@@ -8760,18 +8773,18 @@ Netherlands,2015,0.303,,disp,sqrt,FALSE,"OECD Netherlands disp sqrt, current def
 Netherlands,2015,0.346,,gross,sqrt,FALSE,"OECD Netherlands gross sqrt, current def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Netherlands,2015,0.457,,market,sqrt,FALSE,"OECD Netherlands market sqrt, current def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 New Zealand,1982,0.269,0.00118,disp,sqrt,FALSE,LIS disp sqrt,Statistics New Zealand 1999,73,https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf
+New Zealand,1982,0.272,,disp,sqrt,,Perry 2017 disp sqrt,Perry 2017,92,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2017/2017-incomes-report-wed-19-july-2017.pdf
 New Zealand,1982,0.259,,disp,oecdm,,Statistics New Zealand 1999 disp oecdm,Statistics New Zealand 1999,100,https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf
-New Zealand,1984,0.272,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
-New Zealand,1984,0.275,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
+New Zealand,1984,0.275,,disp,sqrt,,Perry 2017 disp sqrt,Perry 2017,92,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2017/2017-incomes-report-wed-19-july-2017.pdf
 New Zealand,1984,0.26,,disp,oecdm,,Statistics New Zealand 1999 disp oecdm,Statistics New Zealand 1999,100,https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf
 New Zealand,1985,0.271,,disp,sqrt,FALSE,"OECD New Zealand disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 New Zealand,1985,0.271,,disp,sqrt,FALSE,"OECD New Zealand disp sqrt, previous def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 New Zealand,1985,0.408,,market,sqrt,FALSE,"OECD New Zealand market sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 New Zealand,1985,0.408,,market,sqrt,FALSE,"OECD New Zealand market sqrt, previous def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 New Zealand,1986,0.264,0.00118,disp,sqrt,FALSE,LIS disp sqrt,Statistics New Zealand 1999,73,https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf
-New Zealand,1986,0.27,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
+New Zealand,1986,0.27,,disp,sqrt,,Perry 2017 disp sqrt,Perry 2017,92,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2017/2017-incomes-report-wed-19-july-2017.pdf
 New Zealand,1986,0.253,,disp,oecdm,,Statistics New Zealand 1999 disp oecdm,Statistics New Zealand 1999,100,https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf
-New Zealand,1988,0.271,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
+New Zealand,1988,0.271,,disp,sqrt,,Perry 2017 disp sqrt,Perry 2017,92,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2017/2017-incomes-report-wed-19-july-2017.pdf
 New Zealand,1988,0.258,,disp,oecdm,,Statistics New Zealand 1999 disp oecdm,Statistics New Zealand 1999,100,https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf
 New Zealand,1989,0.28,,disp,oecdm,,Statistics New Zealand 1999 disp oecdm,Statistics New Zealand 1999,100,https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf
 New Zealand,1990,0.318,,disp,sqrt,FALSE,"OECD New Zealand disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -8780,14 +8793,14 @@ New Zealand,1990,0.468,,market,sqrt,FALSE,"OECD New Zealand market sqrt, current
 New Zealand,1990,0.468,,market,sqrt,FALSE,"OECD New Zealand market sqrt, previous def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 New Zealand,1990,0.229,,con,hh,,Park1995 New Zealand con hh,Tabatabai 1996; Park 1995,127,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 New Zealand,1990,0.377,,disp,hh,,Park1995 New Zealand disp hh,Tabatabai 1996; Park 1995,127,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-New Zealand,1990,0.302,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
+New Zealand,1990,0.302,,disp,sqrt,,Perry 2017 disp sqrt,Perry 2017,92,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2017/2017-incomes-report-wed-19-july-2017.pdf
 New Zealand,1990,0.299,,disp,oecdm,,Statistics New Zealand 1999 disp oecdm,Statistics New Zealand 1999,100,https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf
 New Zealand,1991,0.316,0.00118,disp,sqrt,FALSE,LIS disp sqrt,Statistics New Zealand 1999,73,https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf
 New Zealand,1991,0.307,,disp,oecdm,,Statistics New Zealand 1999 disp oecdm,Statistics New Zealand 1999,100,https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf
-New Zealand,1992,0.319,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
+New Zealand,1992,0.319,,disp,sqrt,,Perry 2017 disp sqrt,Perry 2017,92,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2017/2017-incomes-report-wed-19-july-2017.pdf
 New Zealand,1992,0.299,,disp,oecdm,,Statistics New Zealand 1999 disp oecdm,Statistics New Zealand 1999,100,https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf
 New Zealand,1993,0.318,,disp,oecdm,,Statistics New Zealand 1999 disp oecdm,Statistics New Zealand 1999,100,https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf
-New Zealand,1994,0.332,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
+New Zealand,1994,0.322,,disp,sqrt,,Perry 2017 disp sqrt,Perry 2017,92,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2017/2017-incomes-report-wed-19-july-2017.pdf
 New Zealand,1994,0.31,,disp,oecdm,,Statistics New Zealand 1999 disp oecdm,Statistics New Zealand 1999,100,https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf
 New Zealand,1995,0.335,,disp,sqrt,FALSE,"OECD New Zealand disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 New Zealand,1995,0.335,,disp,sqrt,FALSE,"OECD New Zealand disp sqrt, previous def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -8795,46 +8808,55 @@ New Zealand,1995,0.488,,market,sqrt,FALSE,"OECD New Zealand market sqrt, current
 New Zealand,1995,0.488,,market,sqrt,FALSE,"OECD New Zealand market sqrt, previous def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 New Zealand,1995,0.318,,disp,oecdm,,Statistics New Zealand 1999 disp oecdm,Statistics New Zealand 1999,100,https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf
 New Zealand,1996,0.331,0.00118,disp,sqrt,FALSE,LIS disp sqrt,Statistics New Zealand 1999,73,https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf
-New Zealand,1996,0.331,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
+New Zealand,1996,0.331,,disp,sqrt,,Perry 2017 disp sqrt,Perry 2017,92,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2017/2017-incomes-report-wed-19-july-2017.pdf
 New Zealand,1996,0.322,,disp,oecdm,,Statistics New Zealand 1999 disp oecdm,Statistics New Zealand 1999,100,https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf
 New Zealand,1997,0.331,,disp,oecdm,,Statistics New Zealand 1999 disp oecdm,Statistics New Zealand 1999,100,https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf
-New Zealand,1998,0.33,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
+New Zealand,1998,0.33,,disp,sqrt,,Perry 2017 disp sqrt,Perry 2017,92,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2017/2017-incomes-report-wed-19-july-2017.pdf
 New Zealand,2e3,0.339,,disp,sqrt,FALSE,"OECD New Zealand disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 New Zealand,2e3,0.339,,disp,sqrt,FALSE,"OECD New Zealand disp sqrt, previous def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 New Zealand,2e3,0.484,,market,sqrt,FALSE,"OECD New Zealand market sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 New Zealand,2e3,0.484,,market,sqrt,FALSE,"OECD New Zealand market sqrt, previous def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-New Zealand,2001,0.338,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
+New Zealand,2001,0.33799999999999997,,disp,sqrt,,Perry 2017 disp sqrt,Perry 2017,92,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2017/2017-incomes-report-wed-19-july-2017.pdf
 New Zealand,2003,0.335,,disp,sqrt,FALSE,"OECD New Zealand disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 New Zealand,2003,0.335,,disp,sqrt,FALSE,"OECD New Zealand disp sqrt, previous def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 New Zealand,2003,0.473,,market,sqrt,FALSE,"OECD New Zealand market sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 New Zealand,2003,0.473,,market,sqrt,FALSE,"OECD New Zealand market sqrt, previous def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-New Zealand,2004,0.334,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
-New Zealand,2007,0.32,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
+New Zealand,2004,0.33399999999999996,,disp,sqrt,,Perry 2017 disp sqrt,Perry 2017,92,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2017/2017-incomes-report-wed-19-july-2017.pdf
+New Zealand,2007,0.324,,disp,ae,,CE2016 disp ae,Creedy and Eedrah 2016,141,https://doi.org/10.1080/00779954.2014.997455
+New Zealand,2007,0.382,,disp,hh,,CE2016 disp hh,Creedy and Eedrah 2016,141,https://doi.org/10.1080/00779954.2014.997455
+New Zealand,2007,0.489,,market,ae,,CE2016 market ae,Creedy and Eedrah 2016,141,https://doi.org/10.1080/00779954.2014.997455
+New Zealand,2007,0.533,,market,hh,,CE2016 market hh,Creedy and Eedrah 2016,141,https://doi.org/10.1080/00779954.2014.997455
+New Zealand,2007,0.32,,disp,sqrt,,Perry 2017 disp sqrt,Perry 2017,92,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2017/2017-incomes-report-wed-19-july-2017.pdf
 New Zealand,2008,0.33,,disp,sqrt,FALSE,"OECD New Zealand disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 New Zealand,2008,0.33,,disp,sqrt,FALSE,"OECD New Zealand disp sqrt, previous def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 New Zealand,2008,0.455,,market,sqrt,FALSE,"OECD New Zealand market sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 New Zealand,2008,0.455,,market,sqrt,FALSE,"OECD New Zealand market sqrt, previous def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-New Zealand,2008,0.333,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
+New Zealand,2008,0.33299999999999996,,disp,sqrt,,Perry 2017 disp sqrt,Perry 2017,92,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2017/2017-incomes-report-wed-19-july-2017.pdf
 New Zealand,2009,0.324,,disp,sqrt,FALSE,"OECD New Zealand disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 New Zealand,2009,0.454,,market,sqrt,FALSE,"OECD New Zealand market sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-New Zealand,2009,0.329,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
-New Zealand,2010,0.324,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
+New Zealand,2009,0.32899999999999996,,disp,sqrt,,Perry 2017 disp sqrt,Perry 2017,92,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2017/2017-incomes-report-wed-19-july-2017.pdf
+New Zealand,2010,0.302,,disp,ae,,CE2016 disp ae,Creedy and Eedrah 2016,141,https://doi.org/10.1080/00779954.2014.997455
+New Zealand,2010,0.356,,disp,hh,,CE2016 disp hh,Creedy and Eedrah 2016,141,https://doi.org/10.1080/00779954.2014.997455
+New Zealand,2010,0.477,,market,ae,,CE2016 market ae,Creedy and Eedrah 2016,141,https://doi.org/10.1080/00779954.2014.997455
+New Zealand,2010,0.513,,market,hh,,CE2016 market hh,Creedy and Eedrah 2016,141,https://doi.org/10.1080/00779954.2014.997455
+New Zealand,2010,0.324,,disp,sqrt,,Perry 2017 disp sqrt,Perry 2017,92,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2017/2017-incomes-report-wed-19-july-2017.pdf
 New Zealand,2011,0.323,,disp,sqrt,FALSE,"OECD New Zealand disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 New Zealand,2011,0.323,,disp,sqrt,FALSE,"OECD New Zealand disp sqrt, current def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 New Zealand,2011,0.349,,gross,sqrt,FALSE,"OECD New Zealand gross sqrt, current def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 New Zealand,2011,0.453,,market,sqrt,FALSE,"OECD New Zealand market sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 New Zealand,2011,0.454,,market,sqrt,FALSE,"OECD New Zealand market sqrt, current def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-New Zealand,2011,0.351,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
+New Zealand,2011,0.35100000000000003,,disp,sqrt,,Perry 2017 disp sqrt,Perry 2017,92,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2017/2017-incomes-report-wed-19-july-2017.pdf
 New Zealand,2012,0.333,0.005,disp,sqrt,FALSE,"OECD New Zealand disp sqrt, current def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 New Zealand,2012,0.36,,gross,sqrt,FALSE,"OECD New Zealand gross sqrt, current def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 New Zealand,2012,0.461,,market,sqrt,FALSE,"OECD New Zealand market sqrt, current def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-New Zealand,2012,0.324,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
-New Zealand,2013,0.334,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
+New Zealand,2012,0.324,,disp,sqrt,,Perry 2017 disp sqrt,Perry 2017,92,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2017/2017-incomes-report-wed-19-july-2017.pdf
+New Zealand,2013,0.33399999999999996,,disp,sqrt,,Perry 2017 disp sqrt,Perry 2017,92,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2017/2017-incomes-report-wed-19-july-2017.pdf
 New Zealand,2014,0.349,0.005,disp,sqrt,FALSE,"OECD New Zealand disp sqrt, current def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 New Zealand,2014,0.372,,gross,sqrt,FALSE,"OECD New Zealand gross sqrt, current def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 New Zealand,2014,0.462,,market,sqrt,FALSE,"OECD New Zealand market sqrt, current def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-New Zealand,2014,0.342,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
-New Zealand,2015,0.35,,disp,sqrt,TRUE,Perry 2016 disp sqrt,Perry 2016,84,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2016/2016-household-incomes-report.doc
+New Zealand,2014,0.342,,disp,sqrt,,Perry 2017 disp sqrt,Perry 2017,92,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2017/2017-incomes-report-wed-19-july-2017.pdf
+New Zealand,2015,0.35,,disp,sqrt,,Perry 2017 disp sqrt,Perry 2017,92,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2017/2017-incomes-report-wed-19-july-2017.pdf
+New Zealand,2016,0.33799999999999997,,disp,sqrt,,Perry 2017 disp sqrt,Perry 2017,92,http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2017/2017-incomes-report-wed-19-july-2017.pdf
 Nicaragua,1993,0.582,,disp,pc,TRUE,CEPAL Nicaragua disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Nicaragua,1993,0.574,,gross,pc,FALSE,Povcalnet Nicaragua gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Nicaragua,1993,0.5438027,0.00444974,disp,ae,TRUE,SEDLAC Nicaragua disp ae 1,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
@@ -8856,8 +8878,8 @@ Nicaragua,2005,0.46779319,0.00531669,disp,ae,TRUE,SEDLAC Nicaragua disp ae 1,SED
 Nicaragua,2005,0.47445852,,disp,hh,TRUE,SEDLAC Nicaragua disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Nicaragua,2005,0.49144415,0.00565768,disp,pc,TRUE,SEDLAC Nicaragua disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Nicaragua,2009,0.478,,disp,pc,TRUE,CEPAL Nicaragua disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Nicaragua,2009,0.4672,,disp,pc,FALSE,CEQ Nicaragua disp pc,Lustig 2017,21,http://www.commitmentoequity.org/publications_files/Latin%20America/CEQ_WP62_Lustig_Feb22_2017.pdf
-Nicaragua,2009,0.48180000000000006,,market,pc,FALSE,CEQ Nicaragua market pc,Lustig 2017,21,http://www.commitmentoequity.org/publications_files/Latin%20America/CEQ_WP62_Lustig_Feb22_2017.pdf
+Nicaragua,2009,0.468,,disp,pc,FALSE,CEQ Nicaragua disp pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
+Nicaragua,2009,0.48200000000000004,,market,pc,FALSE,CEQ Nicaragua market pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
 Nicaragua,2009,0.442,,gross,pc,FALSE,Povcalnet Nicaragua gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Nicaragua,2009,0.41973103,0.00391722,disp,ae,TRUE,SEDLAC Nicaragua disp ae 1,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Nicaragua,2009,0.42129685,,disp,hh,TRUE,SEDLAC Nicaragua disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
@@ -9540,6 +9562,8 @@ Paraguay,2013,0.46448173,0.00508826,disp,ae,TRUE,SEDLAC Paraguay disp ae 2,SEDLA
 Paraguay,2013,0.47733948,,disp,hh,TRUE,SEDLAC Paraguay disp hh 2,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Paraguay,2013,0.48230345,0.00478169,disp,pc,TRUE,SEDLAC Paraguay disp pc 2,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Paraguay,2014,0.536,,disp,pc,TRUE,CEPAL Paraguay disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Paraguay,2014,0.5126000000000001,,disp,pc,FALSE,CEQ Paraguay disp pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
+Paraguay,2014,0.5216000000000001,,market,pc,FALSE,CEQ Paraguay market pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
 Paraguay,2014,0.511,,gross,pc,TRUE,DGEEC gross pc,"Dirección General de Estadística, Encuestas y Censos 2017",2,https://web.archive.org/web/20180319151156/http://www.dgeec.gov.py/Publicaciones/Biblioteca/diptico%20desigualdad%20ingreso/diptico%20DESIGUALDAD%20DE%20INGRESOS.pdf
 Paraguay,2014,0.517,,gross,pc,FALSE,Povcalnet Paraguay gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Paraguay,2014,0.50020278,0.00704825,disp,ae,TRUE,SEDLAC Paraguay disp ae 2,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
@@ -10243,6 +10267,7 @@ Puerto Rico,2012,0.5325,0.0077,gross,hh,TRUE,USCB Puerto Rico gross hh,U.S. Cens
 Puerto Rico,2013,0.547,0.0072,gross,hh,TRUE,USCB Puerto Rico gross hh,U.S. Census Bureau,,https://factfinder.census.gov/bkmk/table/1.0/en/ACS/13_1YR/B19083/0400000US72
 Puerto Rico,2014,0.5472,0.0067,gross,hh,TRUE,USCB Puerto Rico gross hh,U.S. Census Bureau,,https://factfinder.census.gov/bkmk/table/1.0/en/ACS/14_1YR/B19083/0400000US72
 Puerto Rico,2015,0.5589,0.0077,gross,hh,TRUE,USCB Puerto Rico gross hh,U.S. Census Bureau,,https://factfinder.census.gov/bkmk/table/1.0/en/ACS/15_1YR/B19083/0400000US72
+Puerto Rico,2016,0.5419,0.0073,gross,hh,TRUE,USCB Puerto Rico gross hh,U.S. Census Bureau,,https://factfinder.census.gov/bkmk/table/1.0/en/ACS/16_1YR/B19083/0400000US72
 Qatar,1988,0.379,,con,pc,,Park1995 Qatar con pc,Tabatabai 1996; Park 1995,110,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Qatar,2007,0.411,,con,pc,,Shaban2016 Qatar con pc,Povcalnet; Shaban 2016,196,https://link.springer.com/chapter/10.1057/9781137554598_6
 Qatar,2013,0.404,,disp,oecdm,,MDPS Qatar disp oecdm,Ministry of Development Planning and Statistics Qatar 2014,43-3,http://www.mdps.gov.qa/en/statistics/Surveys/Household_Expenditure_Eng.pdf
@@ -10484,6 +10509,8 @@ Russia,2009,0.42,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.o
 Russia,2009,0.35,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en
 Russia,2009,0.39799999999999996,,con,pc,FALSE,Povcalnet Russia con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Russia,2009,0.421,,gross,pc,TRUE,Rosstat gross pc,Russian Federal State Statistics Service,Sec.5,http://www.gks.ru/free_doc/doc_2017/year/pril_year17-eng.xls
+Russia,2010,0.359,,disp,pc,FALSE,CEQ Russia disp pc,"Lopez-Calva, Lustig, Matytsin, and Popova 2017",28,http://www.commitmentoequity.org/wp-content/uploads/2017/09/CEQ_WP39_LopezCalva-Lustig-Matytsin-Popova_Russia_May2017.pdf
+Russia,2010,0.491,,market,pc,FALSE,CEQ Russia market pc,"Lopez-Calva, Lustig, Matytsin, and Popova 2017",28,http://www.commitmentoequity.org/wp-content/uploads/2017/09/CEQ_WP39_LopezCalva-Lustig-Matytsin-Popova_Russia_May2017.pdf
 Russia,2010,0.396,,disp,sqrt,FALSE,"OECD Russia disp sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Russia,2010,0.481,,market,sqrt,FALSE,"OECD Russia market sqrt, current def, 2011 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Russia,2010,0.395,,con,pc,FALSE,Povcalnet Russia con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
@@ -11632,7 +11659,7 @@ Sri Lanka,2006,0.403,,con,pc,,ZKM2014 Sri Lanka con pc,"Zhuang, Kanbur, and Mali
 Sri Lanka,2007,0.41,,con,hh,,Statistics Sri Lanka con hh,Statistics Sri Lanka 2015,x,http://www.statistics.gov.lk/HIES/HIES2012_13FinalReport.pdf
 Sri Lanka,2007,0.49,,gross,hh,,Statistics Sri Lanka gross hh,Statistics Sri Lanka 2015,x,http://www.statistics.gov.lk/HIES/HIES2012_13FinalReport.pdf
 Sri Lanka,2009,0.364,,con,pc,FALSE,Povcalnet Sri Lanka con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Sri Lanka,2010,0.3598,,con,pc,FALSE,CEQ Sri Lanka con pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_April27_2017.xlsx
+Sri Lanka,2010,0.3646,,con,pc,FALSE,CEQ Sri Lanka con pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
 Sri Lanka,2010,0.37,,con,hh,,Statistics Sri Lanka con hh,Statistics Sri Lanka 2015,x,http://www.statistics.gov.lk/HIES/HIES2012_13FinalReport.pdf
 Sri Lanka,2010,0.49,,gross,hh,,Statistics Sri Lanka gross hh,Statistics Sri Lanka 2015,x,http://www.statistics.gov.lk/HIES/HIES2012_13FinalReport.pdf
 Sri Lanka,2012,0.392,,con,pc,FALSE,Povcalnet Sri Lanka con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
@@ -11960,9 +11987,9 @@ Sweden,2015,0.276,,disp,oecdm,TRUE,Eurostat Sweden disp oecdm 4,Eurostat,"",http
 Sweden,2015,0.278,,disp,sqrt,FALSE,"OECD Sweden disp sqrt, current def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Sweden,2015,0.307,,gross,sqrt,FALSE,"OECD Sweden gross sqrt, current def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Sweden,2015,0.432,,market,sqrt,FALSE,"OECD Sweden market sqrt, current def, 2012 method",OECD,,http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Switzerland,1980,0.361,,disp,hh,FALSE,LF1985 hh disp,Leu and Frey 1985,201,http://dx.doi.org/10.1068/030199
-Switzerland,1980,0.399,,gross,hh,FALSE,LF1985 hh gross,Leu and Frey 1985,201,http://dx.doi.org/10.1068/030199
-Switzerland,1980,0.452,,market,hh,FALSE,LF1985 hh market,Leu and Frey 1985,201,http://dx.doi.org/10.1068/030199
+Switzerland,1980,0.361,,disp,hh,FALSE,LF1985 hh disp,Leu and Frey 1985,201,https://doi.org/10.1068/c030199
+Switzerland,1980,0.399,,gross,hh,FALSE,LF1985 hh gross,Leu and Frey 1985,201,https://doi.org/10.1068/c030199
+Switzerland,1980,0.452,,market,hh,FALSE,LF1985 hh market,Leu and Frey 1985,201,https://doi.org/10.1068/c030199
 Switzerland,1982,0.3778,0.0067,disp,hh,FALSE,LIS disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ch.txt
 Switzerland,1982,0.3536,0.0059,disp,pc,FALSE,LIS disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ch.txt
 Switzerland,1982,0.3154,0.0061,disp,sqrt,FALSE,LIS disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ch.txt
@@ -12135,8 +12162,8 @@ Taiwan,1978,0.29,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Bud
 Taiwan,1979,0.29,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
 Taiwan,1980,0.28,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
 Taiwan,1981,0.28,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1981,0.293,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,1981,0.261,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,1981,0.293,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,1981,0.261,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,1981,0.2335,0.0017,con,ae,FALSE,LIS con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1981,0.2515,0.0017,con,hh,FALSE,LIS con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1981,0.2265,0.0018,con,oecdm,FALSE,LIS con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
@@ -12158,20 +12185,20 @@ Taiwan,1981,0.2739,0.0022,market,oecdm,FALSE,LIS market oecdm,LISSY,"",https://r
 Taiwan,1981,0.304,0.0022,market,pc,FALSE,LIS market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1981,0.2719,0.0019,market,sqrt,FALSE,LIS market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1982,0.28,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1982,0.294,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,1982,0.259,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,1982,0.294,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,1982,0.259,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,1983,0.29,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1983,0.293,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,1983,0.264,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,1983,0.293,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,1983,0.264,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,1984,0.29,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1984,0.292,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,1984,0.262,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,1984,0.292,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,1984,0.262,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,1985,0.29,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1985,0.292,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,1985,0.263,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,1985,0.292,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,1985,0.263,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,1986,0.3,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1986,0.291,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,1986,0.265,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,1986,0.291,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,1986,0.265,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,1986,0.2386,0.0017,con,ae,FALSE,LIS con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1986,0.2661,0.0018,con,hh,FALSE,LIS con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1986,0.2331,0.0018,con,oecdm,FALSE,LIS con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
@@ -12193,20 +12220,20 @@ Taiwan,1986,0.2777,0.0024,market,oecdm,FALSE,LIS market oecdm,LISSY,"",https://r
 Taiwan,1986,0.3009,0.0022,market,pc,FALSE,LIS market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1986,0.2748,0.0019,market,sqrt,FALSE,LIS market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1987,0.3,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1987,0.286,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,1987,0.263,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,1987,0.286,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,1987,0.263,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,1988,0.3,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1988,0.293,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,1988,0.268,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,1988,0.293,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,1988,0.268,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,1989,0.3,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1989,0.291,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,1989,0.266,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,1989,0.291,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,1989,0.266,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,1990,0.31,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1990,0.298,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,1990,0.274,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,1990,0.298,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,1990,0.274,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,1991,0.31,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1991,0.3,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,1991,0.274,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,1991,0.3,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,1991,0.274,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,1991,0.2552,0.0021,con,ae,FALSE,LIS con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1991,0.2809,0.0021,con,hh,FALSE,LIS con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1991,0.2506,0.0018,con,oecdm,FALSE,LIS con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
@@ -12228,17 +12255,17 @@ Taiwan,1991,0.2868,0.002,market,oecdm,FALSE,LIS market oecdm,LISSY,"",https://ra
 Taiwan,1991,0.3061,0.0021,market,pc,FALSE,LIS market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1991,0.281,0.0023,market,sqrt,FALSE,LIS market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1992,0.31,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1992,0.292,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,1992,0.271,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,1992,0.292,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,1992,0.271,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,1993,0.32,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1993,0.293,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,1993,0.272,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,1993,0.293,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,1993,0.272,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,1994,0.32,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1994,0.29,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,1994,0.273,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,1994,0.29,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,1994,0.273,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,1995,0.32,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1995,0.293,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,1995,0.273,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,1995,0.293,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,1995,0.273,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,1995,0.2554,0.0019,con,ae,FALSE,LIS con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1995,0.296,0.002,con,hh,FALSE,LIS con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1995,0.2504,0.002,con,oecdm,FALSE,LIS con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
@@ -12260,11 +12287,11 @@ Taiwan,1995,0.3179,0.0023,market,oecdm,FALSE,LIS market oecdm,LISSY,"",https://r
 Taiwan,1995,0.3358,0.0021,market,pc,FALSE,LIS market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1995,0.3138,0.002,market,sqrt,FALSE,LIS market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1996,0.32,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1996,0.29,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,1996,0.27,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,1996,0.29,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,1996,0.27,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,1997,0.32,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1997,0.292,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,1997,0.271,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,1997,0.292,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,1997,0.271,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,1997,0.239,0.0019,con,ae,FALSE,LIS con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1997,0.2865,0.0023,con,hh,FALSE,LIS con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1997,0.2339,0.0016,con,oecdm,FALSE,LIS con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
@@ -12286,14 +12313,14 @@ Taiwan,1997,0.302,0.0022,market,oecdm,FALSE,LIS market oecdm,LISSY,"",https://ra
 Taiwan,1997,0.3189,0.0025,market,pc,FALSE,LIS market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1997,0.2996,0.0022,market,sqrt,FALSE,LIS market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1998,0.32,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1998,0.295,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,1998,0.273,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,1998,0.295,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,1998,0.273,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,1999,0.33,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1999,0.292,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,1999,0.271,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,1999,0.292,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,1999,0.271,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,2e3,0.33,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2e3,0.294,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,2e3,0.273,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,2e3,0.294,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,2e3,0.273,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,2e3,0.2342,0.0019,con,ae,FALSE,LIS con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2e3,0.2916,0.0019,con,hh,FALSE,LIS con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2e3,0.2295,0.0018,con,oecdm,FALSE,LIS con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
@@ -12315,20 +12342,20 @@ Taiwan,2e3,0.3084,0.0024,market,oecdm,FALSE,LIS market oecdm,LISSY,"",https://ra
 Taiwan,2e3,0.3256,0.0025,market,pc,FALSE,LIS market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2e3,0.3058,0.0023,market,sqrt,FALSE,LIS market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2001,0.35,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2001,0.312,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,2001,0.295,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,2001,0.312,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,2001,0.295,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,2002,0.35,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2002,0.313,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,2002,0.296,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,2002,0.313,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,2002,0.296,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,2003,0.34,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2003,0.306,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,2003,0.29,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,2003,0.306,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,2003,0.29,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,2004,0.34,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2004,0.301,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,2004,0.284,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,2004,0.301,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,2004,0.284,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,2005,0.34,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2005,0.3,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,2005,0.284,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,2005,0.3,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,2005,0.284,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,2005,0.2265,0.002,con,ae,FALSE,LIS con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2005,0.2888,0.002,con,hh,FALSE,LIS con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2005,0.223,0.0019,con,oecdm,FALSE,LIS con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
@@ -12350,11 +12377,11 @@ Taiwan,2005,0.3249,0.0025,market,oecdm,FALSE,LIS market oecdm,LISSY,"",https://r
 Taiwan,2005,0.3375,0.0023,market,pc,FALSE,LIS market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2005,0.3235,0.0027,market,sqrt,FALSE,LIS market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2006,0.34,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2006,0.295,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,2006,0.281,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,2006,0.295,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,2006,0.281,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,2007,0.34,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2007,0.296,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,2007,0.284,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,2007,0.296,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,2007,0.284,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,2007,0.2126,0.0017,con,ae,FALSE,LIS con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2007,0.2814,0.0016,con,hh,FALSE,LIS con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2007,0.2098,0.0015,con,oecdm,FALSE,LIS con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
@@ -12376,14 +12403,14 @@ Taiwan,2007,0.329,0.0025,market,oecdm,FALSE,LIS market oecdm,LISSY,"",https://ra
 Taiwan,2007,0.3392,0.0021,market,pc,FALSE,LIS market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2007,0.3285,0.0023,market,sqrt,FALSE,LIS market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2008,0.34,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2008,0.3,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,2008,0.284,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,2008,0.3,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,2008,0.284,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,2009,0.35,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2009,0.302,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,2009,0.286,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,2009,0.302,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,2009,0.286,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,2010,0.34,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2010,0.296,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,2010,0.283,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,2010,0.296,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,2010,0.283,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,2010,0.22,0.0016,con,ae,FALSE,LIS con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2010,0.2877,0.0018,con,hh,FALSE,LIS con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2010,0.2172,0.0016,con,oecdm,FALSE,LIS con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
@@ -12405,14 +12432,14 @@ Taiwan,2010,0.3303,0.0024,market,oecdm,FALSE,LIS market oecdm,LISSY,"",https://r
 Taiwan,2010,0.34,0.0027,market,pc,FALSE,LIS market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2010,0.3289,0.0024,market,sqrt,FALSE,LIS market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2011,0.34,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2011,0.296,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,2011,0.283,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,2011,0.296,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,2011,0.283,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,2012,0.34,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2012,0.29,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,2012,0.276,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,2012,0.29,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,2012,0.276,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,2013,0.34,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2013,0.288,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,2013,0.273,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,2013,0.288,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,2013,0.273,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,2013,0.2186,0.0017,con,ae,FALSE,LIS con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2013,0.2896,0.0021,con,hh,FALSE,LIS con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2013,0.216,0.0016,con,oecdm,FALSE,LIS con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
@@ -12434,11 +12461,13 @@ Taiwan,2013,0.334,0.0027,market,oecdm,FALSE,LIS market oecdm,LISSY,"",https://ra
 Taiwan,2013,0.3443,0.002,market,pc,FALSE,LIS market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2013,0.3323,0.0026,market,sqrt,FALSE,LIS market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2014,0.34,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2014,0.282,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,2014,0.271,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,2014,0.282,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,2014,0.271,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,2015,0.34,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2015,0.279,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
-Taiwan,2015,0.27,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/104/a11/Year05.xls
+Taiwan,2015,0.279,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,2015,0.27,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,2016,0.27822839567193,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
+Taiwan,2016,0.26826989314796,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls
 Taiwan,2016,0.2111,0.0016,con,ae,FALSE,LIS con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2016,0.2868,0.0018,con,hh,FALSE,LIS con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2016,0.2089,0.0016,con,oecdm,FALSE,LIS con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
@@ -12492,10 +12521,10 @@ Tanzania,2001,0.35,,con,pc,,National Bureau of Statistics of Tanzania con pc 1,N
 Tanzania,2007,0.35,,con,pc,,National Bureau of Statistics of Tanzania con pc 1,National Bureau of Statistics of Tanzania 2014,xxi,http://www.nbs.go.tz/nbs/takwimu/hbs/The_2011-12_HBSFinalReport.zip
 Tanzania,2007,0.40299999999999997,,con,pc,FALSE,Povcalnet Tanzania con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Tanzania,2007,0.37310000000000004,,con,sqrt,FALSE,World Bank Africa Poverty Database Tanzania con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
-Tanzania,2011,0.34219999999999995,,con,pc,FALSE,CEQ Tanzania con pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_April27_2017.xlsx
 Tanzania,2011,0.37,,con,pc,,National Bureau of Statistics of Tanzania con pc 2,National Bureau of Statistics of Tanzania 2017,40,http://www.nbs.go.tz/nbs/takwimu/nps/NPS_Wave_4_2017.pdf
 Tanzania,2011,0.37799999999999995,,con,pc,FALSE,Povcalnet Tanzania con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Tanzania,2011,0.35119999999999996,,con,sqrt,FALSE,World Bank Africa Poverty Database Tanzania con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
+Tanzania,2012,0.3574,,con,pc,FALSE,CEQ Tanzania con pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
 Tanzania,2012,0.34,,con,pc,,National Bureau of Statistics of Tanzania con pc 1,National Bureau of Statistics of Tanzania 2014,xxi,http://www.nbs.go.tz/nbs/takwimu/hbs/The_2011-12_HBSFinalReport.zip
 Tanzania,2013,0.39,,con,pc,,National Bureau of Statistics of Tanzania con pc 2,National Bureau of Statistics of Tanzania 2017,40,http://www.nbs.go.tz/nbs/takwimu/nps/NPS_Wave_4_2017.pdf
 Tanzania,2015,0.37,,con,pc,,National Bureau of Statistics of Tanzania con pc 2,National Bureau of Statistics of Tanzania 2017,40,http://www.nbs.go.tz/nbs/takwimu/nps/NPS_Wave_4_2017.pdf
@@ -12592,7 +12621,7 @@ Tunisia,2e3,0.408,,con,pc,FALSE,Povcalnet Tunisia con pc 1,World Bank Povcalnet,
 Tunisia,2005,0.405,,con,pc,,GIDD Tunisia con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
 Tunisia,2005,0.406,,con,pc,,Hassine2015 Tunisia con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Tunisia,2005,0.377,,con,pc,FALSE,Povcalnet Tunisia con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Tunisia,2010,0.3812,,con,pc,FALSE,CEQ Tunisia con pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_April27_2017.xlsx
+Tunisia,2010,0.3972,,con,pc,FALSE,CEQ Tunisia con pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
 Tunisia,2010,0.383,,con,pc,,Hassine2015 Tunisia con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Tunisia,2010,0.385,0.017,con,pc,,KANRCZ2017 Tunisia con pc,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
 Tunisia,2010,0.358,,con,pc,FALSE,Povcalnet Tunisia con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
@@ -12699,6 +12728,7 @@ Uganda,2009,0.409,,con,sqrt,FALSE,World Bank Africa Poverty Database Uganda con 
 Uganda,2012,0.41,,con,pc,FALSE,Povcalnet Uganda con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Uganda,2012,0.395,0.006,con,ae,FALSE,UBOS con ae,Uganda Bureau of Statistics 2014,188,http://www.ubos.org/onlinefiles/uploads/ubos/UNHS_12_13/2012_13%20UNHS%20Final%20Report.pdf
 Uganda,2012,0.3729,,con,sqrt,FALSE,World Bank Africa Poverty Database Uganda con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
+Uganda,2013,0.4,,con,pc,FALSE,CEQ Uganda con pc,"Jellema, Lustig, Haas, and Wolf 2017",26,http://www.commitmentoequity.org/wp-content/uploads/2017/08/CEQ_WP53_Jellema-Lustig-Haas-Wolf_June2017.pdf
 Ukraine,1980,0.3464,,gross,pc,FALSE,Kakwani1996 gross pc,Kakwani 1996,674,http://doi.org/10.1111/j.1467-7660.1996.tb00607.x
 Ukraine,1985,0.3216,,gross,pc,FALSE,Kakwani1996 gross pc,Kakwani 1996,674,http://doi.org/10.1111/j.1467-7660.1996.tb00607.x
 Ukraine,1988,0.248,,gross,pc,,AG1993 Ukraine gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,122,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -14128,6 +14158,8 @@ Venezuela,2010,0.38978,,disp,pc,TRUE,Instituto Nacional de Estadistica Venezuela
 Venezuela,2011,0.397,,disp,pc,TRUE,CEPAL Venezuela disp pc 2,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Venezuela,2011,0.39024000000000003,,disp,pc,TRUE,Instituto Nacional de Estadistica Venezuela disp pc,Instituto Nacional de Estadística Venezuela,"",http://www.ine.gov.ve/documentos/Social/Pobreza/xls/Serie_%20GINI_1s1997-1s2015.xls
 Venezuela,2012,0.405,,disp,pc,TRUE,CEPAL Venezuela disp pc 3,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Venezuela,2012,0.3869,,disp,pc,FALSE,CEQ Venezuela disp pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
+Venezuela,2012,0.41080000000000005,,market,pc,FALSE,CEQ Venezuela market pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
 Venezuela,2012,0.40397000000000005,,disp,pc,TRUE,Instituto Nacional de Estadistica Venezuela disp pc,Instituto Nacional de Estadística Venezuela,"",http://www.ine.gov.ve/documentos/Social/Pobreza/xls/Serie_%20GINI_1s1997-1s2015.xls
 Venezuela,2013,0.407,,disp,pc,TRUE,CEPAL Venezuela disp pc 3,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Venezuela,2013,0.40850000000000003,,disp,pc,TRUE,Instituto Nacional de Estadistica Venezuela disp pc,Instituto Nacional de Estadística Venezuela,"",http://www.ine.gov.ve/documentos/Social/Pobreza/xls/Serie_%20GINI_1s1997-1s2015.xls
@@ -14141,27 +14173,30 @@ Viet Nam,1998,0.354,,con,pc,FALSE,Povcalnet Viet Nam con pc 1,World Bank Povcaln
 Viet Nam,1999,0.39,,gross,pc,FALSE,GSO Vietnam gross pc,General Statistics Office of Vietnam 2005,,http://www.gso.gov.vn/default_en.aspx?tabid=508&ItemID=2510
 Viet Nam,2002,0.347,,con,pc,,GIDD Viet Nam con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
 Viet Nam,2002,0.37,,con,pc,TRUE,GSO Vietnam con pc,General Statistics Office of Vietnam 2013,"",http://www.gso.gov.vn/Modules/Doc_Download.aspx?DocID=16773
+Viet Nam,2002,0.42,,gross,pc,TRUE,GSO Vietnam gross pc,General Statistics Office of Vietnam,28,http://www.gso.gov.vn/default_en.aspx?tabid=783
 Viet Nam,2002,0.42,,gross,pc,FALSE,GSO Vietnam gross pc,General Statistics Office of Vietnam 2005,,http://www.gso.gov.vn/default_en.aspx?tabid=508&ItemID=2510
 Viet Nam,2002,0.37,,con,pc,FALSE,Povcalnet Viet Nam con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Viet Nam,2004,0.37,,con,pc,TRUE,GSO Vietnam con pc,General Statistics Office of Vietnam 2013,"",http://www.gso.gov.vn/Modules/Doc_Download.aspx?DocID=16773
+Viet Nam,2004,0.42,,gross,pc,TRUE,GSO Vietnam gross pc,General Statistics Office of Vietnam,28,http://www.gso.gov.vn/default_en.aspx?tabid=783
 Viet Nam,2004,0.413,,gross,pc,FALSE,GSO Vietnam gross pc,General Statistics Office of Vietnam 2005,,http://www.gso.gov.vn/default_en.aspx?tabid=508&ItemID=2510
 Viet Nam,2004,0.368,,con,pc,FALSE,Povcalnet Viet Nam con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Viet Nam,2006,0.358,,con,pc,TRUE,GSO Vietnam con pc,General Statistics Office of Vietnam 2013,"",http://www.gso.gov.vn/Modules/Doc_Download.aspx?DocID=16773
-Viet Nam,2006,0.424,,gross,pc,TRUE,GSO Vietnam gross pc,General Statistics Office of Vietnam,"",http://www.gso.gov.vn/Modules/Doc_Download.aspx?DocID=19990
+Viet Nam,2006,0.424,,gross,pc,TRUE,GSO Vietnam gross pc,General Statistics Office of Vietnam,28,http://www.gso.gov.vn/default_en.aspx?tabid=783
 Viet Nam,2006,0.358,,con,pc,FALSE,Povcalnet Viet Nam con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Viet Nam,2008,0.356,,con,pc,TRUE,GSO Vietnam con pc,General Statistics Office of Vietnam 2013,"",http://www.gso.gov.vn/Modules/Doc_Download.aspx?DocID=16773
-Viet Nam,2008,0.434,,gross,pc,TRUE,GSO Vietnam gross pc,General Statistics Office of Vietnam,"",http://www.gso.gov.vn/Modules/Doc_Download.aspx?DocID=19990
+Viet Nam,2008,0.434,,gross,pc,TRUE,GSO Vietnam gross pc,General Statistics Office of Vietnam,28,http://www.gso.gov.vn/default_en.aspx?tabid=783
 Viet Nam,2008,0.35600000000000004,,con,pc,FALSE,Povcalnet Viet Nam con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Viet Nam,2008,0.356,,con,pc,,ZKM2014 Viet Nam con pc,"Zhuang, Kanbur, and Maligalig 2014",22,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA22
 Viet Nam,2008,0.445,,gross,pc,,ZKM2014 Viet Nam gross pc,"Zhuang, Kanbur, and Maligalig 2014",22,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA22
 Viet Nam,2010,0.393,,con,pc,TRUE,GSO Vietnam con pc,General Statistics Office of Vietnam 2013,"",http://www.gso.gov.vn/Modules/Doc_Download.aspx?DocID=16773
-Viet Nam,2010,0.433,,gross,pc,TRUE,GSO Vietnam gross pc,General Statistics Office of Vietnam,"",http://www.gso.gov.vn/Modules/Doc_Download.aspx?DocID=19990
+Viet Nam,2010,0.433,,gross,pc,TRUE,GSO Vietnam gross pc,General Statistics Office of Vietnam,28,http://www.gso.gov.vn/default_en.aspx?tabid=783
 Viet Nam,2010,0.39299999999999996,,con,pc,FALSE,Povcalnet Viet Nam con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Viet Nam,2012,0.356,,con,pc,TRUE,GSO Vietnam con pc,General Statistics Office of Vietnam 2013,"",http://www.gso.gov.vn/Modules/Doc_Download.aspx?DocID=16773
-Viet Nam,2012,0.424,,gross,pc,TRUE,GSO Vietnam gross pc,General Statistics Office of Vietnam,"",http://www.gso.gov.vn/Modules/Doc_Download.aspx?DocID=19990
+Viet Nam,2012,0.424,,gross,pc,TRUE,GSO Vietnam gross pc,General Statistics Office of Vietnam,28,http://www.gso.gov.vn/default_en.aspx?tabid=783
 Viet Nam,2012,0.35700000000000004,,con,pc,FALSE,Povcalnet Viet Nam con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Viet Nam,2014,0.43,,gross,pc,TRUE,GSO Vietnam gross pc,General Statistics Office of Vietnam,"",http://www.gso.gov.vn/Modules/Doc_Download.aspx?DocID=19990
+Viet Nam,2014,0.43,,gross,pc,TRUE,GSO Vietnam gross pc,General Statistics Office of Vietnam,28,http://www.gso.gov.vn/default_en.aspx?tabid=783
 Viet Nam,2014,0.348,,con,pc,FALSE,Povcalnet Viet Nam con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Viet Nam,2016,0.436,,gross,pc,TRUE,GSO Vietnam gross pc,General Statistics Office of Vietnam,28,http://www.gso.gov.vn/default_en.aspx?tabid=783
 Yemen,1992,0.395,,con,pc,,FR2008 Yemen con pc,Ferreira and Ravallion 2008,40,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Yemen,1998,0.324,,con,pc,,GIDD Yemen con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
 Yemen,1998,0.335,,con,pc,,Hassine2015 Yemen con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011

@@ -1,7 +1,7 @@
 if (!require(pacman)) install.packages("pacman"); library(pacman)
 p_load(tidyverse, readxl, 
        eurostat, rsdmx, xml2, CANSIM2R, pxweb, rvest,
-       stringr, magrittr, countrycode, janitor, pdftools)
+       countrycode, janitor, pdftools)
 p_load_gh("ropensci/tabulizerjars", "ropensci/tabulizer") # read PDF tables; see https://github.com/ropensci/tabulizer for installation help if needed
 p_load_gh("ropengov/dkstat")
 
@@ -100,7 +100,8 @@ format_sedlac <- function(df, sheet, link, es) {
     x$se <- NA
   }
   names(x) <- c("heading", "gini", "se")
-  x %<>% filter(!is.na(heading) & !str_detect(heading, "-II"))
+  x <- x %>%
+    filter(!is.na(heading) & !str_detect(heading, "-II"))
   countries_sedlac <- "Argentina|Bolivia|Brazil|Chile|Colombia|Costa|Dominican|Ecuador|El Salvador|Guatemala|Honduras|Mexico|Nicaragua|Panama|Paraguay|Peru|Uruguay|Venezuela|Caribbean|Belice|Guyana|Haiti|Jamaica|Suriname"
   x$h_co <- str_detect(x$heading, countries_sedlac)
   x$country <- ifelse(x$h_co, str_trim(x$heading), NA)
@@ -114,7 +115,8 @@ format_sedlac <- function(df, sheet, link, es) {
   
   x$h_ser <- ((!x$h_co) && is.na(x$year))
   x$series <- ifelse(!x$h_co & is.na(x$year), x$heading, NA)
-  x %<>% group_by(country) %>%
+  x <- x %>%
+    group_by(country) %>%
     mutate(series0 = zoo::na.locf(series, na.rm = FALSE),
            series = paste("SEDLAC", country, "disp", es,
                           as.numeric(factor(series0, levels = unique(series0)))) %>% 
@@ -601,7 +603,7 @@ dane <- read_excel("data-raw/dane.xls", sheet = "Gini", skip = 9) %>%
 # http://www.inec.go.cr/pobreza-y-desigualdad/desigualdad
 ineccr_link <- "http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx"
 
-ineccr <- read_excel("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/ineccr.xlsx",
+ineccr <- read_excel("data-raw/ineccr.xlsx",
                      skip = 4,
                      sheet = "1") %>%
   janitor::clean_names() %>% 
