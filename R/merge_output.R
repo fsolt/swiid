@@ -1,5 +1,4 @@
 library(tidyverse)
-library(stringr)
 
 load("data/ineq.rda")
 
@@ -114,7 +113,7 @@ swiid_summary <- left_join(swiid_disp_summary, swiid_mkt_summary, by = c("countr
 kt_redist <- swiid_summary %>%
   select(country, year, redist)
   
-write_csv(swiid_summary %>% select(-redist, -redist_after), "data/swiid6_1_summary.csv", na = "")
+write_csv(swiid_summary %>% select(-redist, -redist_after), "data/swiid6_2_summary.csv", na = "")
 
 swiid_kt <- function(input, output, probs = c(.025, .975)) {
   ktcodes <- input %>%  
@@ -177,21 +176,21 @@ for (i in 1:100) {
   swiid[[i]] <- stemp
 }
 
-save(swiid, swiid_summary, file = "data/swiid6_1.rda") 
+save(swiid, swiid_summary, file = "data/swiid6_2.rda") 
 
 # for release
-dir.create("release/swiid6_1", recursive = TRUE)
-final_files <- c("data/swiid6_1_summary.csv", "data/swiid6_1.rda", "data/swiid6_1.dta")
+dir.create("release/swiid6_2", recursive = TRUE)
+final_files <- c("data/swiid6_2_summary.csv", "data/swiid6_2.rda", "data/swiid6_2.dta")
 file.copy(from = final_files,
-          to = str_replace(final_files, "data/", "release/swiid6_1/"),
+          to = str_replace(final_files, "data/", "release/swiid6_2/"),
           overwrite = TRUE)
 documentation_files <- c("vignette/R_swiid.pdf", "vignette/stata_swiid.pdf")
 file.copy(from = documentation_files,
-          to = str_replace(documentation_files, "vignette/", "release/swiid6_1/"),
+          to = str_replace(documentation_files, "vignette/", "release/swiid6_2/"),
           overwrite = TRUE)
 setwd("release")
-zip("swiid6_1.zip", "swiid6_1")
-dir.create("s61")
-file.copy("swiid6_1.zip", "s61/swiid6_1.zip", overwrite = TRUE)
-zip("s61.zip", "s61")
+zip("swiid6_2.zip", "swiid6_2")
+dir.create("s62")
+file.copy("swiid6_2.zip", "s62/swiid6_2.zip", overwrite = TRUE)
+zip("s62.zip", "s62")
 setwd("..")
