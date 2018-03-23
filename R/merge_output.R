@@ -75,14 +75,14 @@ swiid_disp_summary <- bind_rows(lis_summary, not_lis_summary) %>%
     transmute(country = country,
               year = year,
               gini_disp = round(gini*100, 1),
-              gini_disp_se = se*100) %>% 
+              gini_disp_se = round(se*100, 2)) %>% 
     arrange(country, year)
 
 swiid_mkt_summary <- bind_rows(lis_mkt_summary, not_lis_mkt_summary) %>% 
   transmute(country = country,
             year = year,
             gini_mkt = round(gini*100, 1),
-            gini_mkt_se = se*100) %>% 
+            gini_mkt_se = round(se*100, 2)) %>% 
   arrange(country, year)
 
 swiid_source <- read_csv("data/swiid_source.csv")
@@ -105,7 +105,7 @@ k_redist <- rho_wd_m %>%
 swiid_summary <- left_join(swiid_disp_summary, swiid_mkt_summary, by = c("country", "year")) %>% 
   left_join(k_redist, by = c("country")) %>% 
   mutate(redist = (year >= redist_after),
-         abs_red = ifelse(redist, gini_mkt - gini_disp, NA_real_),
+         abs_red = ifelse(redist, (gini_mkt - gini_disp) %>% round(1), NA_real_),
          abs_red_se = ifelse(redist, sqrt(gini_mkt_se^2 + gini_disp_se^2) %>% round(1), NA_real_),
          rel_red = ifelse(redist, ((abs_red/gini_mkt)*100) %>% round(1), NA_real_),
          rel_red_se = ifelse(redist, sqrt(abs_red_se^2 + gini_mkt_se^2) %>% round(1), NA_real_))
