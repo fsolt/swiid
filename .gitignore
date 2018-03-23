@@ -32,5 +32,6 @@ data/series_gt*.rda
 *.fls
 *.aux
 release/*
+*.synctex.gz
 
 
