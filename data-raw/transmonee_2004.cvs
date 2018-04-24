@@ -1,0 +1,55 @@
+﻿Country,Variable Name,_Note_,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002
+Czech Republic,Distribution of earnings: Gini coefficient,   ,0.204,   ,0.212,0.214,0.258,0.26,0.282,0.254,0.259,0.258,0.257,0.27,0.272,0.273
+Czech Republic,Distribution of income: Gini coefficient,a,0.198,0.19,   ,0.215,0.214,0.23,0.216,0.23,0.239,0.212,0.232,0.231,0.237,0.234
+Hungary,Distribution of earnings: Gini coefficient,a b c,0.268,0.293,   ,0.305,0.32,0.324,   ,   ,0.35,   ,   ,   ,0.386,   
+Hungary,Distribution of income: Gini coefficient,b c,0.225,   ,0.209,   ,0.231,0.234,0.242,0.246,0.254,0.25,0.253,0.259,0.272,0.267
+Poland,Distribution of earnings: Gini coefficient,d,0.207,   ,0.239,0.247,0.256,0.281,0.29,0.302,0.3,0.294,0.305,   ,   ,   
+Poland,Distribution of income: Gini coefficient,d,0.275,0.268,0.265,0.274,0.317,0.323,0.321,0.328,0.334,0.326,0.334,0.345,0.341,0.353
+Slovakia,Distribution of earnings: Gini coefficient,   ,0.2,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   
+Slovakia,Distribution of income: Gini coefficient,e,   ,   ,   ,   ,   ,   ,   ,0.237,0.249,0.262,0.249,0.264,0.263,0.267
+Slovenia,Distribution of earnings: Gini coefficient,   ,0.219,0.232,0.273,0.26,0.276,0.275,0.358,0.298,0.307,0.306,0.305,0.306,0.31,0.307
+Slovenia,Distribution of income: Gini coefficient,f,   ,   ,0.265,0.259,   ,0.246,0.264,0.252,0.24,0.243,0.248,0.246,0.244,   
+Estonia,Distribution of earnings: Gini coefficient,b e,0.253,   ,   ,   ,   ,   ,   ,   ,0.336,0.384,0.401,0.376,0.388,   
+Estonia,Distribution of income: Gini coefficient,g,0.28,   ,   ,   ,   ,   ,0.398,0.37,0.361,0.354,0.361,0.389,0.385,0.393
+Latvia,Distribution of earnings: Gini coefficient,b f,0.244,   ,0.247,0.333,0.283,0.325,0.346,0.349,0.336,0.332,0.333,0.337,0.322,0.328
+Latvia,Distribution of income: Gini coefficient,g h,0.26,   ,   ,   ,   ,   ,   ,   ,0.326,0.33,0.33,0.327,   ,0.358
+Lithuania,Distribution of earnings: Gini coefficient,b e,0.26,   ,   ,0.372,   ,0.39,0.374,0.35,0.345,0.357,0.368,   ,0.382,0.39
+Lithuania,Distribution of income: Gini coefficient,g,0.263,   ,   ,   ,   ,   ,   ,0.347,0.309,0.332,0.343,0.355,0.354,0.357
+Bulgaria,Distribution of earnings: Gini coefficient,c f,   ,0.212,0.262,   ,0.251,   ,   ,0.291,   ,   ,   ,   ,   ,   
+Bulgaria,Distribution of income: Gini coefficient,j,0.233,   ,   ,0.331,0.335,0.374,0.384,0.357,0.366,0.345,0.326,0.332,0.333,0.37
+Romania,Distribution of earnings: Gini coefficient,   ,0.155,   ,0.204,   ,0.226,0.277,0.287,0.305,0.352,0.358,0.372,0.406,0.388,0.391
+Romania,Distribution of income: Gini coefficient,   ,0.237,0.227,0.258,0.259,0.267,0.264,0.306,0.302,0.305,0.298,0.299,0.31,0.353,0.291
+Albania,Distribution of earnings: Gini coefficient,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   
+Albania,Distribution of income: Gini coefficient,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   
+Bosnia-Herzegovina,Distribution of earnings: Gini coefficient,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   
+Bosnia-Herzegovina,Distribution of income: Gini coefficient,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   
+Croatia,Distribution of earnings: Gini coefficient,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   
+Croatia,Distribution of income: Gini coefficient,i,0.36,   ,   ,   ,   ,   ,   ,   ,   ,0.35,   ,   ,   ,   
+FYR Macedonia,Distribution of earnings: Gini coefficient,g,   ,0.223,0.267,0.235,0.272,0.253,0.27,0.25,0.259,0.271,0.277,0.277,0.286,0.282
+FYR Macedonia,Distribution of income: Gini coefficient,   ,   ,   ,   ,   ,   ,0.273,0.295,0.311,0.295,0.308,0.308,0.346,0.334,0.332
+Serbia and Montenegro,Distribution of earnings: Gini coefficient,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   
+Serbia and Montenegro,Distribution of income: Gini coefficient,   ,   ,   ,   ,   ,   ,   ,   ,   ,0.294,0.289,0.273,0.373,0.378,   
+Belarus,Distribution of earnings: Gini coefficient,b h,0.234,   ,   ,0.341,0.399,   ,0.373,0.356,0.354,0.351,0.337,0.337,0.343,0.342
+Belarus,Distribution of income: Gini coefficient,g m,0.229,   ,   ,   ,   ,   ,0.253,0.244,0.249,0.253,0.235,0.247,0.245,0.246
+Moldova,Distribution of earnings: Gini coefficient,b i,0.25,   ,   ,0.411,0.437,0.379,0.39,0.414,   ,0.426,0.441,0.392,0.391,0.426
+Moldova,Distribution of income: Gini coefficient,g,0.251,   ,   ,   ,   ,   ,   ,   ,0.464,   ,   ,0.437,0.435,0.436
+Russia,Distribution of earnings: Gini coefficient,a,0.271,0.269,0.324,0.371,0.461,0.446,0.471,0.483,   ,   ,   ,   ,0.521,0.491
+Russia,Distribution of income: Gini coefficient,I,   ,   ,   ,   ,   ,0.441,0.439,0.501,   ,0.446,   ,0.432,0.422,   
+Ukraine,Distribution of earnings: Gini coefficient,   ,0.244,   ,   ,0.251,0.364,   ,   ,0.413,0.406,0.391,0.427,0.462,0.452,0.418
+Ukraine,Distribution of income: Gini coefficient,g m,0.228,   ,   ,   ,   ,   ,0.47,   ,   ,   ,0.32,0.363,0.364,0.327
+Armenia,Distribution of earnings: Gini coefficient,b,0.258,   ,0.296,0.355,0.366,0.321,0.381,   ,   ,   ,   ,0.486,   ,   
+Armenia,Distribution of income: Gini coefficient,g n,0.251,   ,   ,   ,   ,   ,   ,0.42,   ,   ,   ,   ,   ,0.359
+Azerbaijan,Distribution of earnings: Gini coefficient,b,0.275,   ,   ,0.361,   ,0.428,0.459,0.458,0.462,0.462,   ,0.506,0.501,0.508
+Azerbaijan,Distribution of income: Gini coefficient,g,0.308,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,0.301,0.373,   
+Georgia,Distribution of earnings: Gini coefficient,   ,0.301,   ,   ,0.369,0.4,   ,   ,   ,0.498,   ,   ,   ,   ,   
+Georgia,Distribution of income: Gini coefficient,g o,0.28,   ,   ,   ,   ,   ,   ,   ,   ,0.503,   ,   ,0.458,0.454
+Kazakhstan,Distribution of earnings: Gini coefficient,b,0.276,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   
+Kazakhstan,Distribution of income: Gini coefficient,g,0.281,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   
+Kyrgyzstan,Distribution of earnings: Gini coefficient,b e,0.26,   ,   ,0.3,0.445,0.443,0.395,0.428,0.431,0.429,0.466,0.47,0.512,0.49
+Kyrgyzstan,Distribution of income: Gini coefficient,g p,0.27,   ,   ,   ,   ,   ,   ,   ,   ,0.411,0.399,0.414,0.377,0.382
+Tajikistan,Distribution of earnings: Gini coefficient,b,0.276,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   
+Tajikistan,Distribution of income: Gini coefficient,g q,0.281,   ,   ,   ,   ,   ,   ,   ,   ,   ,0.47,   ,   ,   
+Turkmenistan,Distribution of earnings: Gini coefficient,b f,0.255,   ,   ,   ,   ,   ,   ,   ,0.249,0.209,0.265,   ,   ,   
+Turkmenistan,Distribution of income: Gini coefficient,g,0.279,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   
+Uzbekistan,Distribution of earnings: Gini coefficient,b,0.257,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   
+Uzbekistan,Distribution of income: Gini coefficient,g,0.28,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   ,   
