@@ -7,6 +7,24 @@ p_load_gh("ropengov/dkstat")
 
 # Custom country codes (defined in R/cc_swiid.R)
 load("data/cc_swiid.rda")
+body(countrycode)[[2]] <- substitute(
+  if (is.null(custom_dict) | as.list(match.call())[["custom_dict"]] == "cc_swiid") {
+    if (origin == "country.name") {
+      origin <- "country.name.en"
+    }
+    if (destination == "country.name") {
+      destination <- "country.name.en"
+    }
+    if (origin %in% c("country.name.en", "country.name.de")) {
+      origin <- paste0(origin, ".regex")
+      origin_regex <- TRUE
+    }
+    else {
+      origin_regex <- FALSE
+    }
+  }
+)
+
 
 # LIS
 format_lis <- function(x) {
@@ -19,7 +37,7 @@ format_lis <- function(x) {
     transmute(country = str_extract(X1, "\\D{2}") %>%
                 toupper() %>% 
                 str_replace("UK", "GB") %>% 
-                countrycode("iso2c", "swiid.name", custom_dict = cc_swiid, origin_regex = TRUE),
+                countrycode("iso2c", "swiid.name", custom_dict = cc_swiid),
               year = ifelse(str_extract(X1, "\\d{2}") %>% as.numeric() > 50,
                             str_extract(X1, "\\d{2}") %>% as.numeric() + 1900,
                             str_extract(X1, "\\d{2}") %>% as.numeric() + 2000),
@@ -46,7 +64,7 @@ format_lis_xtra <- function(x) {
     read_csv(col_names = FALSE) %>%
     transmute(country = str_extract(X1, "\\D{2}") %>% 
                 toupper() %>% 
-                countrycode("iso2c", "swiid.name", custom_dict = cc_swiid, origin_regex = TRUE),
+                countrycode("iso2c", "swiid.name", custom_dict = cc_swiid),
               year = ifelse(str_extract(X1, "\\d{2}") %>% as.numeric() > 66,
                             str_extract(X1, "\\d{2}") %>% as.numeric() + 1900,
                             str_extract(X1, "\\d{2}") %>% as.numeric() + 2000),
@@ -171,7 +189,10 @@ cepal_notes <- cepal_extract("//nota")
 
 cepal <- left_join(cepal_raw, cepal_labels, by = c("dim_208" = "id")) %>%
   filter(!name=="Latin America (simple average)") %>% 
-  mutate(country = countrycode(as.character(name), "country.name", "swiid.name", custom_dict = cc_swiid, origin_regex = TRUE)) %>% 
+  mutate(country = countrycode(as.character(name), 
+                               origin = "country.name.en", 
+                               destination = "swiid.name",
+                               custom_dict = cc_swiid)) %>% 
   filter(!is.na(country)) %>%
   select(-name) %>% 
   left_join(cepal_labels, by = c("dim_29117" = "id")) %>%
@@ -223,7 +244,7 @@ oecd_link <- "http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GI
 oecd0 <- oecd_link %>% 
   readSDMX() %>% 
   as.data.frame() %>% 
-  transmute(country = countrycode(LOCATION, "iso3c", "swiid.name", custom_dict = cc_swiid, origin_regex = TRUE),
+  transmute(country = countrycode(LOCATION, "iso3c", "swiid.name", custom_dict = cc_swiid),
             year = as.numeric(obsTime),
             gini = obsValue,
             welfare_def = ifelse((MEASURE=="GINI" | MEASURE=="STDG"), "disp", 
@@ -255,7 +276,7 @@ eurostat <- get_eurostat("ilc_di12",
                          keepFlags = TRUE) %>%
   mutate(geo = as.character(geo) %>% recode("UK" = "GB", "EL" = "GR")) %>% 
   filter(!str_detect(geo, "E[AU]\\d*|NMS10")) %>% 
-  transmute(country = countrycode(as.character(geo), "iso2c", "swiid.name", custom_dict = cc_swiid, origin_regex = TRUE),
+  transmute(country = countrycode(as.character(geo), "iso2c", "swiid.name", custom_dict = cc_swiid),
             year = time - (!(country=="United Kingdom" | country=="Ireland")), #eurostat reports survey year not ref year except in UK and IE <http://ec.europa.eu/eurostat/cache/metadata/en/ilc_esms.htm#ref_period>
             gini = values/100,
             gini_se = NA,
@@ -287,7 +308,7 @@ transmonee <- read_excel("data-raw/transmonee.xls",
   select(-X__2) %>% 
   gather(key = year, value = gini, -X__1) %>% 
   filter(!is.na(gini)) %>% 
-  transmute(country = countrycode(X__1, "country.name", "swiid.name", custom_dict = cc_swiid, origin_regex = TRUE),
+  transmute(country = countrycode(X__1, "country.name", "swiid.name", custom_dict = cc_swiid),
             year = as.numeric(year),
             gini = gini,
             gini_se = NA,
@@ -306,7 +327,7 @@ ceq <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/c
 # World Bank Africa Poverty Database (bespoke analysis of subset of WB surveys; archived)
 afr_gini <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv", 
                      col_types = "cid") %>% 
-  transmute(country = countrycode(country, origin = "wb_api3c", "swiid.name", custom_dict = cc_swiid, origin_regex = TRUE),
+  transmute(country = countrycode(country, origin = "wb_api3c", "swiid.name", custom_dict = cc_swiid),
             year = as.numeric(surveyr),
             gini = gini_sqrthhs/100,
             gini_se = NA,
@@ -340,7 +361,7 @@ wb <- read_csv(unz("data-raw/wb.zip", "WDIData.csv")) %>%
   group_by(CountryCode) %>% 
   mutate(desc = as.integer(as.factor(DESCRIPTION))) %>% 
   ungroup() %>% 
-  transmute(country = countrycode(CountryCode, origin = "wb_api3c", "swiid.name", custom_dict = cc_swiid, origin_regex = TRUE),
+  transmute(country = countrycode(CountryCode, origin = "wb_api3c", "swiid.name", custom_dict = cc_swiid),
             year = as.numeric(year),
             gini = as.numeric(gini)/100,
             gini_se = NA,
@@ -1715,7 +1736,7 @@ writeBin(httr::content(html_session(atg_link)$response, "raw"), "data-raw/atg.dt
 atg0 <- haven::read_dta("data-raw/atg.dta", encoding = "latin1") %>% 
   select(contcod, year, ends_with("_INDIE")) %>% 
   filter(!is.na(gini_INDIE)) %>% 
-  mutate(country = countrycode(contcod, "wb_api3c", "swiid.name", custom_dict = cc_swiid, origin_regex = TRUE)) %>% 
+  mutate(country = countrycode(contcod, "wb_api3c", "swiid.name", custom_dict = cc_swiid)) %>% 
   filter(country == "Poland" | country == "United Kingdom") %>% 
   transmute(country = country,
             year = year,
@@ -1733,7 +1754,7 @@ atg0 <- haven::read_dta("data-raw/atg.dta", encoding = "latin1") %>%
 brandolini <- haven::read_dta("data-raw/atg.dta", encoding = "latin1") %>% 
   select(contcod, year, ends_with("_INDIE")) %>% 
   filter(!is.na(gini_INDIE)) %>% 
-  mutate(country = countrycode(contcod, "wb_api3c", "swiid.name", custom_dict = cc_swiid, origin_regex = TRUE)) %>% 
+  mutate(country = countrycode(contcod, "wb_api3c", "swiid.name", custom_dict = cc_swiid)) %>% 
   filter(country == "France" | country == "Germany" | country == "Canada" | country == "Netherlands") %>% 
   transmute(country = country,
             year = year,
@@ -1799,7 +1820,7 @@ gidd <- map_df(gidd_raw$countrylong %>% unique(), function(x) {
   
   return(df)
 }) %>% 
-  transmute(country = countrycode(country, "country.name", "swiid.name", custom_dict = cc_swiid, origin_regex = TRUE),
+  transmute(country = countrycode(country, "country.name", "swiid.name", custom_dict = cc_swiid),
             year = year,
             gini = gini,
             gini_se = NA,
@@ -1854,8 +1875,8 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
                      added_data) %>% 
     rename(gini_m = gini,
            gini_m_se = gini_se) %>%
-    mutate(country = countrycode(country, "country.name", "swiid.name", custom_dict = cc_swiid, origin_regex = TRUE),
-           region = countrycode(country, "swiid.name", "swiid.region", custom_dict = cc_swiid, origin_regex = TRUE)) %>% 
+    mutate(country = countrycode(country, "country.name", "swiid.name", custom_dict = cc_swiid),
+           region = countrycode(country, "swiid.name", "swiid.region", custom_dict = cc_swiid)) %>% 
     group_by(country) %>% 
     mutate(country_obs = n()) %>% 
     ungroup() %>% 
