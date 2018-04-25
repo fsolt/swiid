@@ -901,40 +901,15 @@ amar <- read_html(amar_link) %>%
 
 
 # CSO Ireland (automated)
-cso_ie_link <- "http://www.cso.ie/px/pxeirestat/Statire/SelectVarVal/Define.asp?maintable=SIA47&PLanguage=0"
-cso_ie_link_px <- "http://www.cso.ie/px/pxeirestat/Database/eirestat/Survey%20on%20Income%20and%20Living%20Conditions%20(SILC)/SIA47.px"
+cso_ie_link <- "http://www.cso.ie/px/pxeirestat/Database/eirestat/Survey%20on%20Income%20and%20Living%20Conditions%20(SILC)/SIA47.px"
 download.file(cso_ie_link_px, "data-raw/cso_ie.px")
 
-cso_ie_px <- readLines("data-raw/cso_ie.px")
-
-cso_ie_names <- cso_ie_px %>%
-  str_subset('^VALUES\\("Statistic"\\)=') %>% 
-  str_replace(paste0(".*=(.*);"), "\\1") %>% 
-  str_split(",") %>% 
-  first() %>% 
-  str_replace_all('\\"', "") %>% 
-  str_replace("[Gg]ini.*", "gini")
-
-cso_is_years <- cso_ie_px %>% 
-  str_subset('TIMEVAL\\("Year"\\)') %>% 
-  str_replace("^.+?,(.*);", "\\1") %>% 
-  str_split(",") %>% 
-  first() %>% 
-  str_replace_all('\\"', "")
-
-cso_ie0 <- cso_ie_px %>% 
-  .[(which(str_detect(., "DATA="))+1):length(.)] %>%
-  str_replace(" ", ",") %>% 
-  str_replace("[\\s;]$", "") %>% 
-  as_tibble() %>% 
-  separate(col = value, into = cso_ie_names, sep = ",") %>% 
-  select(gini) %>% 
-  mutate(year = cso_is_years)
-  
-cso_ie <- cso_ie0 %>% 
+cso_ie <- pxR::read.px("data-raw/cso_ie.px") %>% 
+  pxR:::as.data.frame.px() %>% 
+  filter(Statistic == "Gini Coefficient (%)") %>% 
   transmute(country = "Ireland",
-            year = as.numeric(year),
-            gini = as.numeric(gini)/100,
+            year = as.numeric(as.character(Year)),
+            gini = as.numeric(value)/100,
             gini_se = NA,
             welfare_def = "disp",
             equiv_scale = "pc",
@@ -943,8 +918,6 @@ cso_ie <- cso_ie0 %>%
             source1 = "CSO Ireland",
             page = "",
             link = cso_ie_link)
-
-rm(cso_ie0, cso_is_px, cso_ie_names, cso_ie_years)
 
 
 # Istat (update file)
@@ -1284,39 +1257,6 @@ singstat <- read_csv("data-raw/singstat.csv", skip = 4, col_types = cols(
 
 
 # Statistics Slovenia (archived; automated)
-read_px <- function(px_file_path) {
-  px_vector <- readLines(px_file_path)
-  px_heading <- str_subset(px_vector, "^HEADING=") %>% 
-    str_replace("^HEADING=(.*);", "\\1")
-  px_names <- str_subset(px_vector, paste0("^VALUES\\(",px_heading,"\\)=")) %>% 
-    str_replace(paste0("^VALUES\\(",px_heading,"\\)=(.*);"), "\\1") %>% 
-    str_split(",") %>% 
-    first() %>% 
-    str_replace_all('\\"', "")
-  if (any(str_detect(px_vector, "^STUB"))) {
-    px_measure <- str_subset(px_vector, "^STUB") %>% 
-      str_replace('^STUB="(.*)";', "\\1")
-    px_vals <- which(str_detect(px_vector, '^VALUES\\("'))
-    px_vars <- px_vector[px_vals[1]:(px_vals[2]-1)] %>% 
-      str_replace(paste0('^VALUES\\("', px_measure, '"\\)=(.*)[;,]'), "\\1") %>% 
-      str_replace_all('\\"|,|;', "")
-  } else {
-    px_vars <- str_subset(px_vector, paste0('^VALUES\\("MEASURE"\\)=')) %>% 
-      str_replace(paste0('^VALUES\\("', px_measure, '"\\)=(.*);'), "\\1") %>% 
-      str_split(",") %>% 
-      first() %>% 
-      str_replace_all('\\"', "")
-  }
-  px_data <- px_vector[(which(str_detect(px_vector, "DATA="))+1):length(px_vector)] %>% 
-    str_replace(";", "") %>%
-    str_trim() %>% 
-    as_tibble() %>% 
-    separate(value, px_names, sep = " ") %>% 
-    mutate(var_name = px_vars) %>% 
-    gather(key = year, value = value, -var_name)
-  return(px_data)
-}
-
 ssi1_link <- "https://www.stat.si/doc/vsebina/08/kazalniki_soc_povezanosti_Laekens_97_03.xls"
 download.file(ssi1_link, "data-raw/ssi.xls", method = "curl", extra = "-k")
 
@@ -1340,10 +1280,11 @@ ssi1 <- read_excel("data-raw/ssi.xls", sheet = "Laekens kazalniki 1997-2003", sk
 ssi2_link <- "http://pxweb.stat.si/pxweb/Database/Demographics/08_level_living/08_silc_poverty_indic/15_08673_income_distribution/0867312E.px"
 download.file(ssi2_link, "data-raw/ssi2.px")
 
-ssi2 <- read_px("data-raw/ssi2.px") %>% 
-  filter(str_detect(var_name, "pensions are included")) %>% 
+ssi2 <- pxR::read.px("data-raw/ssi2.px") %>% 
+  pxR:::as.data.frame.px() %>% 
+  filter(str_detect(INCOME, "pensions are included")) %>% 
   transmute(country = "Slovenia",
-            year = as.numeric(year) - 1,
+            year = as.numeric(as.character(YEAR)) - 1,
             gini = as.numeric(value)/100,
             gini_se = NA,
             welfare_def = "market",
