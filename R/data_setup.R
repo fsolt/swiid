@@ -1249,33 +1249,31 @@ rosstat <- read_excel("data-raw/rosstat.xls", sheet = "Sec.5", skip = 1) %>%
             link = rosstat_link)
 
 
-# Singapore Department of Statistics (update file)
+# Singapore Department of Statistics (update file--and check for inclusion in API)
 # Note: Population covered is only resident households with at least one worker 
 #  and so excludes 8-11% of resident households (which, from other data, appear
 #  to be among the poorest), plus all non-resident households (surely poor).
 # Note also that income definition excludes income from capital.
 # These data therefore should be considered a lower bound.  Blech.
-# http://www.tablebuilder.singstat.gov.sg/publicfacing/createSpecialTable.action?refId=12356
+# http://www.tablebuilder.singstat.gov.sg/ > search "gini" > Key Indicators > Search variable "gini" > Create
 # Export > CSV
 
-singstat <- read_csv("data-raw/singstat.csv", skip = 4, col_types = cols(
-  .default = col_double(),
-  `Gini Coefficient` = col_character(),
-  X19 = col_character())) %>% 
+singstat <- read_csv("data-raw/singstat.csv", skip = 4) %>% 
   filter(!is.na(`2000`)) %>%
-  select(-X19) %>% 
-  gather(key = year, value = gini, -`Gini Coefficient`) %>% 
+  select(-starts_with("X")) %>% 
+  gather(key = year, value = gini, -Variables) %>% 
   transmute(country = "Singapore",
             year = as.numeric(year),
             gini = as.numeric(gini),
             gini_se = NA,
-            welfare_def = if_else(str_detect(`Gini Coefficient`, "Taxes"), "disp", "market"),
-            equiv_scale = "pc",
+            welfare_def = if_else(str_detect(Variables, "After"), "disp", "market"),
+            equiv_scale = if_else(str_detect(Variables, "OECD"), "oecdm",
+                                  if_else(str_detect(Variables, "Square"), "sqrt", "pc")),
             monetary = TRUE,
             series = paste("Singstat", welfare_def, equiv_scale),
             source1 = "Singapore Department of Statistics",
             page = "",
-            link = "http://www.tablebuilder.singstat.gov.sg/publicfacing/createSpecialTable.action?refId=12356")
+            link = "http://www.tablebuilder.singstat.gov.sg/")
 
 
 # Statistics Slovenia (archived; automated)
