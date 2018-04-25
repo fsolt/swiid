@@ -28,11 +28,11 @@ Bonaire,LAC
 Bosnia and Herzegovina,EE
 Botswana,AFR
 Brazil,LAC
-Brunei Darussalam,DA
+Brunei,DA
 Bulgaria,EE
 Burkina Faso,AFR
 Burundi,AFR
-Cabo Verde,AFR
+Cape Verde,AFR
 Cambodia,DA
 Cameroon,AFR
 Canada,AES
@@ -43,16 +43,16 @@ Chile,LAC
 China,DA
 Colombia,LAC
 Comoros,AFR
-Congo,AFR
+Congo - Brazzaville,AFR
 Costa Rica,LAC
-Côte D'Ivoire,AFR
+Côte d'Ivoire,AFR
 Croatia,EE
 Cuba,LAC
 Curacao,LAC
 Cyprus,WE
 Czechoslovakia,EE
 Czech Republic,EE
-"Congo, D.R.",AFR
+Congo - Kinshasa,AFR
 Denmark,WE
 Djibouti,AFR
 Dominica,LAC
@@ -78,7 +78,7 @@ Grenada,LAC
 Guadeloupe,LAC
 Guatemala,LAC
 Guinea,AFR
-Guinea Bissau,AFR
+Guinea-Bissau,AFR
 Guyana,LAC
 Haiti,LAC
 Honduras,LAC
@@ -102,7 +102,7 @@ Democratic People's Republic of Korea,DA
 Kosovo,EE
 Kuwait,DA
 Kyrgyzstan,FSU
-Lao,DA
+Laos,DA
 Latvia,EE
 Lebanon,DA
 Lesotho,AFR
@@ -142,7 +142,7 @@ Norway,WE
 Oman,DA
 Pakistan,DA
 Palau,DA
-Palestine,DA
+Palestinian Territories,DA
 Panama,LAC
 Papua New Guinea,DA
 Paraguay,LAC
@@ -158,13 +158,13 @@ Vietnam,DA
 Romania,EE
 Russia,FSU
 Rwanda,AFR
-Saint Kitts and Nevis,LAC
-Saint Lucia,LAC
-Saint Martin,LAC
-Saint Vincent and the Grenadines,LAC
+St. Kitts and Nevis,LAC
+St. Lucia,LAC
+St. Martin,LAC
+St. Vincent and Grenadines,LAC
 Samoa,DA
 San Marino,WE
-Sao Tome and Principe,AFR
+São Tomé and Príncipe,AFR
 Saudi Arabia,DA
 Senegal,AFR
 Serbia,EE
