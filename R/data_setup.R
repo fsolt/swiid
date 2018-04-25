@@ -1708,14 +1708,11 @@ rm(gso_vn1, gso_vn2)
 
 # Additional Inequality Datasets
 
-# Milanovic All the Ginis
-atg <- "https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Centers-and-Institutes/Stone-Center-on-Socio-Economic-Inequality/Core-Faculty,-Team,-and-Affiliated-LIS-Scholars/Branko-Milanovic/Datasets" %>% 
-  html_session() %>% 
-  follow_link("Dataset")
-writeBin(httr::content(atg$response, "raw"), "data-raw/atg.dta")
-atg_link <- atg$response$url
+# Milanovic All the Ginis (update if possible: now using 2014 from WB; 2016 link at CUNY not working currently)
+atg_link <- "https://web.archive.org/web/20170907141001/http://siteresources.worldbank.org/INTRES/Resources/469232-1107449512766/allginis_Oct2014.dta"
+writeBin(httr::content(html_session(atg_link)$response, "raw"), "data-raw/atg.dta")
 
-atg0 <- haven::read_dta("data-raw/atg.dta") %>% 
+atg0 <- haven::read_dta("data-raw/atg.dta", encoding = "latin1") %>% 
   select(contcod, year, ends_with("_INDIE")) %>% 
   filter(!is.na(gini_INDIE)) %>% 
   mutate(country = countrycode(contcod, "wb_api3c", "swiid.name", custom_dict = cc_swiid, origin_regex = TRUE)) %>% 
@@ -1729,11 +1726,11 @@ atg0 <- haven::read_dta("data-raw/atg.dta") %>%
             equiv_scale = if_else(Dhh_INDIE == 1, "hh", "pc"),
             monetary = NA,
             series = paste("AtG", country, welfare_def, equiv_scale),
-            source1 = "Milanovic 2016",
+            source1 = "Milanovic 2014",
             page = "",
             link = atg_link)
 
-brandolini <- haven::read_dta("data-raw/atg.dta") %>% 
+brandolini <- haven::read_dta("data-raw/atg.dta", encoding = "latin1") %>% 
   select(contcod, year, ends_with("_INDIE")) %>% 
   filter(!is.na(gini_INDIE)) %>% 
   mutate(country = countrycode(contcod, "wb_api3c", "swiid.name", custom_dict = cc_swiid, origin_regex = TRUE)) %>% 
@@ -1747,7 +1744,7 @@ brandolini <- haven::read_dta("data-raw/atg.dta") %>%
             equiv_scale = if_else(Dhh_INDIE == 1, "hh", "pc"),
             monetary = NA,
             series = paste("Brandolini1998", country, welfare_def, equiv_scale),
-            source1 = "Milanovic 2016; Brandolini 1998",
+            source1 = "Milanovic 2014; Brandolini 1998",
             page = "",
             link = atg_link)
 
