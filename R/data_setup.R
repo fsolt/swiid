@@ -901,18 +901,37 @@ amar <- read_html(amar_link) %>%
 
 
 # CSO Ireland (automated)
-cso_ie_link <- "http://www.cso.ie/en/statistics/socialconditions/surveyofincomeandlivingconditionssilcmainresults/"
+cso_ie_link <- "http://www.cso.ie/px/pxeirestat/Statire/SelectVarVal/Define.asp?maintable=SIA47&PLanguage=0"
+cso_ie_link_px <- "http://www.cso.ie/px/pxeirestat/Database/eirestat/Survey%20on%20Income%20and%20Living%20Conditions%20(SILC)/SIA47.px"
+download.file(cso_ie_link_px, "data-raw/cso_ie.px")
 
-cso_ie0 <- read_html(cso_ie_link) %>%
-  html_node("table") %>% 
-  html_table(header = TRUE) 
+cso_ie_px <- readLines("data-raw/cso_ie.px")
 
-names(cso_ie0)[1] <- "var"
+cso_ie_names <- cso_ie_px %>%
+  str_subset('^VALUES\\("Statistic"\\)=') %>% 
+  str_replace(paste0(".*=(.*);"), "\\1") %>% 
+  str_split(",") %>% 
+  first() %>% 
+  str_replace_all('\\"', "") %>% 
+  str_replace("[Gg]ini.*", "gini")
 
+cso_is_years <- cso_ie_px %>% 
+  str_subset('TIMEVAL\\("Year"\\)') %>% 
+  str_replace("^.+?,(.*);", "\\1") %>% 
+  str_split(",") %>% 
+  first() %>% 
+  str_replace_all('\\"', "")
+
+cso_ie0 <- cso_ie_px %>% 
+  .[(which(str_detect(., "DATA="))+1):length(.)] %>%
+  str_replace(" ", ",") %>% 
+  str_replace("[\\s;]$", "") %>% 
+  as_tibble() %>% 
+  separate(col = value, into = cso_ie_names, sep = ",") %>% 
+  select(gini) %>% 
+  mutate(year = cso_is_years)
+  
 cso_ie <- cso_ie0 %>% 
-  filter(var == "Gini coefficient") %>% 
-  select(-var) %>% 
-  gather(key = year, value = gini) %>%
   transmute(country = "Ireland",
             year = as.numeric(year),
             gini = as.numeric(gini)/100,
@@ -925,7 +944,7 @@ cso_ie <- cso_ie0 %>%
             page = "",
             link = cso_ie_link)
 
-rm(cso_ie0)
+rm(cso_ie0, cso_is_px, cso_ie_names, cso_ie_years)
 
 
 # Istat (update file)
