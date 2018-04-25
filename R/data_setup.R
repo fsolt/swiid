@@ -569,9 +569,9 @@ dane_link <- dane_file$url
 writeBin(dane_file$response$content, "data-raw/dane.xls")
 rm(dane_file)
 
-dane <- read_excel("data-raw/dane.xls", sheet = "Gini", skip = 9) %>% 
-  filter(Dominio == "Nacional") %>% 
-  gather(key = year, value = gini, -Dominio) %>% 
+dane <- read_excel("data-raw/dane.xls", sheet = "Gini", skip = 15) %>% 
+  filter(X__1 == "Nacional") %>% 
+  gather(key = year, value = gini, -X__1) %>% 
   transmute(country = "Colombia",
             year = as.numeric(year),
             gini = gini,
