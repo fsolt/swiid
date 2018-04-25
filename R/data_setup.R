@@ -592,14 +592,13 @@ ineccr_link <- "http://www.inec.go.cr/sites/default/files/documetos-biblioteca-v
 ineccr <- read_excel("data-raw/ineccr.xlsx",
                      skip = 4,
                      sheet = "1") %>%
-  janitor::clean_names() %>% 
-  select(año, total) %>% 
-  filter(!is.na(año)) %>% 
-  mutate(es = if_else(cumsum(str_detect(año, "por persona")) == 1, "pc", "hh")) %>% 
-  filter(str_detect(año, "^\\d{4}$")) %>% 
+  select(Año, Total) %>% 
+  filter(!is.na(Año)) %>% 
+  mutate(es = if_else(cumsum(str_detect(Año, "por persona")) == 1, "pc", "hh")) %>% 
+  filter(str_detect(Año, "^\\d{4}$")) %>% 
   transmute(country = "Costa Rica",
-            year = as.numeric(año),
-            gini = total,
+            year = as.numeric(Año),
+            gini = Total,
             gini_se = NA,
             welfare_def = "gross",
             equiv_scale = es,
