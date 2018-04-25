@@ -1503,13 +1503,13 @@ turkstat <- pmap_df(list(turkstat_list, names(turkstat_list), turkstat_links),
 rm(turkstat_list, turkstat_hh, turkstat_oecdm)
 
 
-# U.K. Office for National Statistics (update link)
-# https://www.ons.gov.uk/atoz?query=effects+taxes+benefits (new releases in April)
+# U.K. Office for National Statistics (update links; join with latest file last)
+# https://www.ons.gov.uk/atoz?query=effects+taxes+benefits (new releases in April and January)
 
-ons_link <- "https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv"
-download.file(ons_link, "data-raw/ons.csv")
+ons_link1 <- "https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv"
+download.file(ons_link1, "data-raw/ons1.csv")
 
-ons <- read_csv("data-raw/ons.csv", skip = 7, col_types = "cdddd") %>% 
+ons1 <- read_csv("data-raw/ons.csv", skip = 7, col_types = "cdddd") %>% 
   transmute(year = X1,
             market = Original,
             gross = Gross,
@@ -1527,8 +1527,34 @@ ons <- read_csv("data-raw/ons.csv", skip = 7, col_types = "cdddd") %>%
             series = paste("ONS", welfare_def, equiv_scale),
             source1 = "UK Office for National Statistics",
             page = "",
-            link = ons_link)  
+            link = ons_link1)  
 
+
+ons_link2 <- "https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/householddisposableincomeandinequality/financialyearending2017/51fff87e&format=csv"
+download.file(ons_link2, "data-raw/ons2.csv")
+
+ons2 <- read_csv("data-raw/ons2.csv", skip = 6, col_types = "cddd") %>% 
+  transmute(year = X1,
+            market = Original,
+            gross = Gross,
+            disp = Disposable) %>% 
+  gather(key = welfare_def, value = gini, -year) %>% 
+  transmute(country = "United Kingdom",
+            year = as.numeric(str_replace(year, "^(\\d{2}).*(\\d{2})$", "\\1\\2")),
+            gini = gini/100,
+            gini_se = NA,
+            welfare_def = welfare_def,
+            equiv_scale = "oecdm",
+            monetary = FALSE,
+            series = paste("ONS", welfare_def, equiv_scale),
+            source1 = "UK Office for National Statistics",
+            page = "",
+            link = ons_link) 
+
+ons <- ons1 %>%
+  anti_join(ons2, by = c("year", "welfare_def")) %>% 
+  bind_rows(ons2) %>% 
+  arrange(welfare_def, year)
 
 # U.K. Institute for Fiscal Studies (automated)
 ifs <- "https://www.ifs.org.uk/tools_and_resources/incomes_in_uk" %>% 
