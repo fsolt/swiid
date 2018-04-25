@@ -1611,7 +1611,7 @@ cbo <- read_excel("data-raw/cbo.xlsx", sheet = 9, col_names = FALSE, skip = 10) 
 # U.S. Census Bureau (update link and wrangle)
 # https://www.census.gov/topics/income-poverty/income-inequality/data/data-tables.html
 
-uscb_links <- paste0("https://www2.census.gov/programs-surveys/demo/tables/p60/256/table", c(4, "A3"), ".xls")
+uscb_links <- paste0("https://www2.census.gov/programs-surveys/demo/tables/p60/259/tableA", 2:3, ".xls")
 download.file(uscb_links[1], "data-raw/uscb_hh.xls")
 download.file(uscb_links[2], "data-raw/uscb_ae.xls")
 
