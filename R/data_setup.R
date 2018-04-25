@@ -1666,10 +1666,10 @@ rm(uscb_ae, uscb_hh)
 
 
 # Uruguay Instituto Nacional de Estadística (update link and wrangle)
-uine_link <- "http://www.ine.gub.uy/documents/10181/364159/Estimación+de+la+pobreza+por+el+Método+del+Ingreso+2016/4b1eabd2-ac77-48ac-95c2-fc5b92f3ade8"
+uine_link <- "http://www.ine.gub.uy/documents/10181/364159/Estimación+de+la+pobreza+por+el+Método+del+Ingreso+2017/f990baaf-1c32-44c5-beda-59a20dd8325c"
 download.file(uine_link, "data-raw/uine.pdf")
 
-uine <- extract_tables("data-raw/uine.pdf", pages = 45)[[2]][5:15, 1] %>% 
+uine <- extract_tables("data-raw/uine.pdf", pages = 47)[[2]][6:17, 1] %>% 
   as_data_frame() %>% 
   separate(value, into = paste0("V", 1:7), sep = "\\s") %>% 
   transmute(country = "Uruguay",
@@ -1681,7 +1681,7 @@ uine <- extract_tables("data-raw/uine.pdf", pages = 45)[[2]][5:15, 1] %>%
             monetary = TRUE,
             series = paste("Instituto Nacional de Estadistica Uruguay", welfare_def, equiv_scale),
             source1 = "Instituto Nacional de Estadística Uruguay",
-            page = "43",
+            page = "45",
             link = uine_link)
 
 
