@@ -968,6 +968,7 @@ kazstat <- read_excel("data-raw/kazstat.xls", skip = 3) %>%
   filter(X__1 == "Republic of Kazakhstan") %>% 
   select(-X__1, -ends_with("_1")) %>% 
   gather(key = year, value = gini) %>% 
+  filter(gini < 1) %>% # because 2017 ratio without 2017 gini on 2017-04-25 
   transmute(country = "Kazakhstan",
             year = as.numeric(year),
             gini = gini,
