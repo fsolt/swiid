@@ -650,7 +650,7 @@ dkstat <- dst_get_data(table = "IFOR41",
 
 
 # CAPMAS Egypt (archived)
-capmas_link <- "http://www.msrintranet.capmas.gov.eg/pdf/studies/inds/EG-LIV-E-I.xls" # this file isn't updated anymore
+capmas_link <- "https://web.archive.org/web/20180425181619/http://www.msrintranet.capmas.gov.eg/pdf/studies/inds/EG-LIV-E-I.xls" # this file isn't updated anymore
 download.file(capmas_link, "data-raw/capmas.xls") 
 
 capmas <- read_excel("data-raw/capmas.xls", skip = 7) %>% 
