@@ -32,10 +32,11 @@ Brunei,DA
 Bulgaria,EE
 Burkina Faso,AFR
 Burundi,AFR
-Cape Verde,AFR
+Côte d'Ivoire,AFR
 Cambodia,DA
 Cameroon,AFR
 Canada,AES
+Cape Verde,AFR
 Cayman Islands,LAC
 Central African Republic,AFR
 Chad,AFR
@@ -43,16 +44,16 @@ Chile,LAC
 China,DA
 Colombia,LAC
 Comoros,AFR
-Congo - Brazzaville,AFR
+Congo-Brazzaville,AFR
+Congo-Kinshasa,AFR
 Costa Rica,LAC
-Côte d'Ivoire,AFR
 Croatia,EE
 Cuba,LAC
 Curacao,LAC
 Cyprus,WE
-Czechoslovakia,EE
 Czech Republic,EE
-Congo - Kinshasa,AFR
+Czechoslovakia,EE
+Democratic People's Republic of Korea,DA
 Denmark,WE
 Djibouti,AFR
 Dominica,LAC
@@ -98,7 +99,7 @@ Jordan,DA
 Kazakhstan,FSU
 Kenya,AFR
 Kiribati,DA
-Democratic People's Republic of Korea,DA
+Korea,AT
 Kosovo,EE
 Kuwait,DA
 Kyrgyzstan,FSU
@@ -112,6 +113,7 @@ Liechtenstein,WE
 Lithuania,EE
 Luxembourg,WE
 Macao,DA
+Macedonia,EE
 Madagascar,AFR
 Malawi,AFR
 Malaysia,DA
@@ -123,6 +125,7 @@ Mauritania,AFR
 Mauritius,AFR
 Mexico,LAC
 Micronesia,DA
+Moldova,EE
 Monaco,WE
 Mongolia,DA
 Montenegro,EE
@@ -152,19 +155,12 @@ Poland,EE
 Portugal,WE
 Puerto Rico,LAC
 Qatar,DA
-Korea,AT
-Moldova,EE
-Vietnam,DA
 Romania,EE
 Russia,FSU
 Rwanda,AFR
-St. Kitts and Nevis,LAC
-St. Lucia,LAC
-St. Martin,LAC
-St. Vincent and Grenadines,LAC
+São Tomé and Príncipe,AFR
 Samoa,DA
 San Marino,WE
-São Tomé and Príncipe,AFR
 Saudi Arabia,DA
 Senegal,AFR
 Serbia,EE
@@ -178,8 +174,13 @@ Solomon Islands,DA
 Somalia,AFR
 South Africa,AFR
 South Sudan,AFR
+Soviet Union,FSU
 Spain,WE
 Sri Lanka,DA
+St. Kitts and Nevis,LAC
+St. Lucia,LAC
+St. Martin,LAC
+St. Vincent and Grenadines,LAC
 Sudan,AFR
 Suriname,LAC
 Swaziland,AFR
@@ -188,8 +189,8 @@ Switzerland,WE
 Syria,DA
 Taiwan,AT
 Tajikistan,FSU
+Tanzania,AFR
 Thailand,DA
-Macedonia,EE
 Timor-Leste,DA
 Togo,AFR
 Tonga,DA
@@ -203,15 +204,14 @@ Uganda,AFR
 Ukraine,FSU
 United Arab Emirates,DA
 United Kingdom,AES
-Tanzania,AFR
 United States,AES
 Uruguay,LAC
 Uzbekistan,FSU
 Vanuatu,DA
 Venezuela,LAC
 Viet Nam,DA
+Vietnam,DA
 Yemen,DA
 Yugoslavia,EE
 Zambia,AFR
 Zimbabwe,AFR
-Soviet Union,FSU

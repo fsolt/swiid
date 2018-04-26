@@ -6,7 +6,8 @@ write_csv(regions, "data/reg.csv")
 cc_swiid <- countrycode::codelist %>% 
   select(country.name.en, country.name.en.regex, iso2c, iso3c, wb_api3c) %>% 
   mutate(swiid.name = country.name.en %>% 
-           str_replace(" & ", " and ") %>% 
+           str_replace(" & ", " and ") %>%
+           str_replace(" - ", "-") %>%
            str_replace(" \\(.*", "") %>% 
            str_replace(", [^U]*", "") %>% 
            str_replace("^(United )?Republic of ", "") %>% 
