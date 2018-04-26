@@ -1509,7 +1509,7 @@ rm(turkstat_list, turkstat_hh, turkstat_oecdm)
 ons_link1 <- "https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv"
 download.file(ons_link1, "data-raw/ons1.csv")
 
-ons1 <- read_csv("data-raw/ons.csv", skip = 7, col_types = "cdddd") %>% 
+ons1 <- read_csv("data-raw/ons1.csv", skip = 7, col_types = "cdddd") %>% 
   transmute(year = X1,
             market = Original,
             gross = Gross,
@@ -1549,7 +1549,7 @@ ons2 <- read_csv("data-raw/ons2.csv", skip = 6, col_types = "cddd") %>%
             series = paste("ONS", welfare_def, equiv_scale),
             source1 = "UK Office for National Statistics",
             page = "",
-            link = ons_link) 
+            link = ons_link2) 
 
 ons <- ons1 %>%
   anti_join(ons2, by = c("year", "welfare_def")) %>% 
