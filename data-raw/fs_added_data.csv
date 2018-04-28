@@ -105,6 +105,8 @@ Azerbaijan,2001,0.373,,disp,pc,FALSE,Transmonee2004 Azerbaijan disp pc,Transmone
 Azerbaijan,2008,0.337,,con,pc,,ZKM2014 Azerbaijan con pc,"Zhuang, Kanbur, and Maligalig 2014",24,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA24
 Bahamas,2001,0.5745,,con,pc,TRUE,Statistics Bahamas con pc,Statistics Bahamas 2004,15,https://www.bahamas.gov.bs/wps/wcm/connect/d01ce76a-75b4-4229-baae-af3b87b6816c/Bahamas+Living+Conditions+Survey+2001+report-Copy.pdf?MOD=AJPERES
 Bahamas,2013,0.414,,con,pc,TRUE,Statistics Bahamas con pc,Statistics Bahamas 2016,21,https://www.bahamas.gov.bs/wps/wcm/connect/5312dd47-5cd9-45f5-bf6c-dea99f3a6226/Bahamas+Household+Expenditure+Survey+2013+Report_v2.pdf?MOD=AJPERES
+Bahamas,2003,0.48,,market,hh,,Statistics Bahamas market hh,Statistics Bahamas 2005,20,https://web.archive.org/web/20180427210852/http://www.centralbankbahamas.com/download/LFS_report_2004.pdf
+Bahamas,2004,0.43,,market,hh,,Statistics Bahamas market hh,Statistics Bahamas 2005,20,https://web.archive.org/web/20180427210852/http://www.centralbankbahamas.com/download/LFS_report_2004.pdf
 Bangladesh,2010,0.321,,con,hh,,BBS con hh,Bangladesh Bureau of Statistics 2011,xxvii,http://203.112.218.65/WebTestApplication/userfiles/Image/LatestReports/HIES-10.pdf
 Bangladesh,2005,0.467,,gross,hh,,BBS gross hh,Bangladesh Bureau of Statistics 2011,30,http://203.112.218.65/WebTestApplication/userfiles/Image/LatestReports/HIES-10.pdf
 Bangladesh,2010,0.458,,gross,hh,,BBS gross hh,Bangladesh Bureau of Statistics 2011,30,http://203.112.218.65/WebTestApplication/userfiles/Image/LatestReports/HIES-10.pdf
@@ -134,6 +136,8 @@ Bangladesh,1982,0.39,,gross,hh,,Rahman1988 Bangladesh gross hh,Tabatabai 1996; R
 Bangladesh,1984,0.352,,gross,hh,,Rahman1988 Bangladesh gross hh,Tabatabai 1996; Rahman 1988,91,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Bangladesh,1974,0.35,,disp,hh,,vGP1984 Bangladesh disp hh,Tabatabai 1996; van Ginneken and Park 1984,90,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Bangladesh,1974,0.28,,disp,pc,,vGP1984 Bangladesh disp pc,Tabatabai 1996; van Ginneken and Park 1984,91,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Barbados,1979,0.464,,disp,hh,,Downes1987 disp hh,Downes 1987,143,http://www.jstor.org/stable/27862918
+Barbados,1979,0.484,,gross,hh,,Downes1987 gross hh,Downes 1987,143,http://www.jstor.org/stable/27862918
 Barbados,1979,0.46,,con,pc,,SALISES 2012 Barbados con pc 1,SALISES 2012,vii,http://www.caribank.org/uploads/2012/12/Barbados-CALC-Volume-1-MainReport-FINAL-Dec-2012.pdf
 Barbados,2010,0.47,,con,pc,,SALISES 2012 Barbados con pc 2,SALISES 2012,27,http://www.caribank.org/uploads/2012/12/Barbados-CALC-Volume-1-MainReport-FINAL-Dec-2012.pdf
 Barbados,1997,0.39,,con,hh,,TW2002 Barbados con hh,Thomas and Wint 2002; Canterbury 2005,861,http://dx.doi.org/10.1080/02255189.2005.9669090 
@@ -311,6 +315,8 @@ China,2000,0.407,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mit
 China,2001,0.415,,disp,pc,,WP2005 disp pc,Wu and Perloff 2005,770,http://www.mitpressjournals.org/doi/pdfplus/10.1162/003465305775098206
 Colombia,1997,0.53,,con,hh,,GLS2006 Colombia con hh,"Goni, Lopez, and Serven 2006",27,http://papers.ssrn.com/sol3/papers.cfm?abstract_id=875741
 Colombia,2003,0.5,,con,hh,,GLS2006 Colombia con hh,"Goni, Lopez, and Serven 2006",27,http://papers.ssrn.com/sol3/papers.cfm?abstract_id=875741
+Colombia,1978,0.545,,disp,hh,,WorldBank1994 Colombia disp hh,World Bank 1994 ,229,https://web.archive.org/web/20180427221719/http://documents.worldbank.org/curated/en/853931468019216759/pdf/1375710SPANISH.pdf
+Colombia,1988,0.512,,disp,hh,,WorldBank1994 Colombia disp hh,World Bank 1994 ,229,https://web.archive.org/web/20180427221719/http://documents.worldbank.org/curated/en/853931468019216759/pdf/1375710SPANISH.pdf
 "Congo, Republic of",2005,0.416,,gross,hh,FALSE,CNSEE Republic of Congo gross hh,CNSEE Republic of Congo 2006,28,http://www.cnsee.org/Donnees/Enquete/PDF/Ecom.pdf
 Costa Rica,1988,0.354,,con,pc,,Park1995 Costa Rica con pc,Tabatabai 1996; Park 1995,113,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Costa Rica,1988,0.396,,disp,pc,,Park1995 Costa Rica disp pc,Tabatabai 1996; Park 1995,113,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -361,6 +367,13 @@ Czechoslovakia,1980,0.205,,disp,pc,TRUE,AM1992 Czechoslovakia disp pc,Atkinson a
 Czechoslovakia,1985,0.199,,disp,pc,TRUE,AM1992 Czechoslovakia disp pc,Atkinson and Micklewright 1992,CSI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Czechoslovakia,1988,0.201,,disp,pc,TRUE,AM1992 Czechoslovakia disp pc,Atkinson and Micklewright 1992,CSI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Czechoslovakia,1989,0.214,,disp,pc,,Park1995 Czechoslovakia disp pc,Tabatabai 1996; Park 1995,119,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Denmark,1981,0.227,,disp,ae,,ARS1994 Denmark disp ae,"Atkinson, Rainwater, and Smeeding 1994",26,http://www.lisdatacenter.org/wps/liswps/121.pdf
+Denmark,1982,0.22,,disp,ae,,ARS1994 Denmark disp ae,"Atkinson, Rainwater, and Smeeding 1994",26,http://www.lisdatacenter.org/wps/liswps/121.pdf
+Denmark,1983,0.216,,disp,ae,,ARS1994 Denmark disp ae,"Atkinson, Rainwater, and Smeeding 1994",26,http://www.lisdatacenter.org/wps/liswps/121.pdf
+Denmark,1984,0.205,,disp,ae,,ARS1994 Denmark disp ae,"Atkinson, Rainwater, and Smeeding 1994",26,http://www.lisdatacenter.org/wps/liswps/121.pdf
+Denmark,1985,0.201,,disp,ae,,ARS1994 Denmark disp ae,"Atkinson, Rainwater, and Smeeding 1994",26,http://www.lisdatacenter.org/wps/liswps/121.pdf
+Denmark,1986,0.2,,disp,ae,,ARS1994 Denmark disp ae,"Atkinson, Rainwater, and Smeeding 1994",26,http://www.lisdatacenter.org/wps/liswps/121.pdf
+Denmark,1987,0.209,,disp,ae,,ARS1994 Denmark disp ae,"Atkinson, Rainwater, and Smeeding 1994",26,http://www.lisdatacenter.org/wps/liswps/121.pdf
 Denmark,1980,0.26,,disp,sqrt,,NWN2014 disp sqrt,Neamtu and Westergaard-Nielsen 2014,200,https://books.google.com/books?id=9cXRAgAAQBAJ&pg=200
 Denmark,1986,0.24,,disp,sqrt,,NWN2014 disp sqrt,Neamtu and Westergaard-Nielsen 2014,200,https://books.google.com/books?id=9cXRAgAAQBAJ&pg=200
 Denmark,1993,0.26,,disp,sqrt,,NWN2014 disp sqrt,Neamtu and Westergaard-Nielsen 2014,200,https://books.google.com/books?id=9cXRAgAAQBAJ&pg=200
@@ -441,7 +454,7 @@ France,1989,0.3219,,gross,ae,TRUE,W1999 France gross ae 1,Wagstaff et al. 1999,8
 France,1989,0.329,,gross,ae,TRUE,W1999 France gross ae 2,Wagstaff et al. 1999,86,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 France,1984,0.271,0.002,con,oecdm,FALSE,ZdV2001 France con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 France,1989,0.295,0.003,con,oecdm,FALSE,ZdV2001 France con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
-"Gambia, The",1992,0.478,,con,pc,,"FR2008 Gambia, The con pc",Ferreira and Ravallion 2008,36,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
+Gambia,1992,0.478,,con,pc,,FR2008 Gambia con pc,Ferreira and Ravallion 2008,36,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Georgia,1988,0.313,,gross,pc,,AG1993 Georgia gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,120,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Georgia,1990,0.291,,gross,pc,,AG1993 Georgia gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,120,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Georgia,1996,0.37,,con,pc,FALSE,MY2006 Georgia con pc 2,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
@@ -515,10 +528,12 @@ Haiti,2012,0.61,,gross,pc,FALSE,WBH gross pc,World Bank 2014,6,http://www.ihsi.h
 Hong Kong,1981,0.414,,gross,hh,,Fields1994 Hong Kong gross hh,Fields 1994,399,http://www.jstor.org/stable/3989956
 Hong Kong,1986,0.388,,gross,hh,,Fields1994 Hong Kong gross hh,Fields 1994,399,http://www.jstor.org/stable/3989956
 Hong Kong,1996,0.43,,con,pc,,FR2008 Hong Kong con pc,Ferreira and Ravallion 2008,37,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
-Hong Kong,1966,0.467,,gross,hh,,Lin1985 gross hh,Lin 1985,395,http://www.ide-jetro.jp/English/Publish/Periodicals/De/pdf/85_04_05.pdf
-Hong Kong,1971,0.409,,gross,hh,,Lin1985 gross hh,Lin 1985,395,http://www.ide-jetro.jp/English/Publish/Periodicals/De/pdf/85_04_05.pdf
-Hong Kong,1976,0.409,,gross,hh,,Lin1985 gross hh,Lin 1985,395,http://www.ide-jetro.jp/English/Publish/Periodicals/De/pdf/85_04_05.pdf
-Hong Kong,1981,0.453,,gross,hh,,Lin1985 gross hh,Lin 1985,395,http://www.ide-jetro.jp/English/Publish/Periodicals/De/pdf/85_04_05.pdf
+Hong Kong,1966,0.467,,gross,hh,,Lin1985 gross hh 1,Lin 1985,395,https://doi.org/10.1111/j.1746-1049.1985.tb00067.x
+Hong Kong,1971,0.409,,gross,hh,,Lin1985 gross hh 1,Lin 1985,395,https://doi.org/10.1111/j.1746-1049.1985.tb00067.x
+Hong Kong,1976,0.409,,gross,hh,,Lin1985 gross hh 1,Lin 1985,395,https://doi.org/10.1111/j.1746-1049.1985.tb00067.x
+Hong Kong,1981,0.453,,gross,hh,,Lin1985 gross hh 1,Lin 1985,395,https://doi.org/10.1111/j.1746-1049.1985.tb00067.x
+Hong Kong,1964,0.462,,gross,hh,,Lin1985 gross hh 2,Lin 1985,395,https://doi.org/10.1111/j.1746-1049.1985.tb00067.x
+Hong Kong,1974,0.398,,gross,hh,,Lin1985 gross hh 2,Lin 1985,395,https://doi.org/10.1111/j.1746-1049.1985.tb00067.x
 Hungary,1962,0.257,,disp,pc,FALSE,AM1992 Hungary disp pc,Atkinson and Micklewright 1992,HI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Hungary,1967,0.227,,disp,pc,FALSE,AM1992 Hungary disp pc,Atkinson and Micklewright 1992,HI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Hungary,1972,0.236,,disp,pc,FALSE,AM1992 Hungary disp pc,Atkinson and Micklewright 1992,HI1,https://books.google.com/books?id=zaL4CGdjOkUC
@@ -854,6 +869,11 @@ Japan,1988,0.375,,market,hh,,MT1992 Japan market hh,Tabatabai 1996; Mizoguchi an
 Japan,1989,0.372,,market,hh,,MT1992 Japan market hh,Tabatabai 1996; Mizoguchi and Terasaki 1992,127,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Japan,1990,0.172,,con,hh,,Park1995 Japan con hh,Tabatabai 1996; Park 1995,126,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Japan,1990,0.298,,disp,hh,,Park1995 Japan disp hh,Tabatabai 1996; Park 1995,126,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Japan,1986,0.2925,,disp,sqrt,,Shirahase2001 Japan disp sqrt,Shirahase 2001,37,http://www.lisdatacenter.org/wps/liswps/268.pdf
+Japan,1989,0.312,,disp,sqrt,,Shirahase2001 Japan disp sqrt,Shirahase 2001,37,http://www.lisdatacenter.org/wps/liswps/268.pdf
+Japan,1992,0.3114,,disp,sqrt,,Shirahase2001 Japan disp sqrt,Shirahase 2001,37,http://www.lisdatacenter.org/wps/liswps/268.pdf
+Japan,1995,0.3158,,disp,sqrt,,Shirahase2001 Japan disp sqrt,Shirahase 2001,37,http://www.lisdatacenter.org/wps/liswps/268.pdf
+Japan,1998,0.3188,,disp,sqrt,,Shirahase2001 Japan disp sqrt,Shirahase 2001,37,http://www.lisdatacenter.org/wps/liswps/268.pdf
 Japan,1979,0.271,,disp,hh,TRUE,Statistics Japan disp pc,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
 Japan,1984,0.28,,disp,hh,TRUE,Statistics Japan disp pc,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
 Japan,1989,0.293,,disp,hh,TRUE,Statistics Japan disp pc,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
