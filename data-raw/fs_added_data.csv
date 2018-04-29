@@ -544,10 +544,10 @@ Hungary,1989,0.214,,disp,pc,,Cornia1994 Hungary disp pc,Cornia 1994,593,http://d
 Hungary,1991,0.205,,disp,pc,,Cornia1994 Hungary disp pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Hungary,1989,0.269,,market,pc,,Cornia1994 Hungary market pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Hungary,1991,0.273,,market,pc,,Cornia1994 Hungary market pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
-Hungary,1987,0.207,,disp,pc,,Milanovic1998 Hungary disp pc,Milanovic 1998,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Hungary,1987,0.207,,disp,pc,,Milanovic1999 Hungary disp pc,Milanovic 1999,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
 Hungary,1988,0.21,,disp,pc,FALSE,Milanovic1998 Hungary disp pc,Milanovic 1998,167,https://books.google.com/books?id=cQl9xbuhvNkC
-Hungary,1989,0.248,,disp,pc,,Milanovic1998 Hungary disp pc,Milanovic 1998,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
-Hungary,1993,0.229,,disp,pc,,Milanovic1998 Hungary disp pc,Milanovic 1998,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Hungary,1989,0.248,,disp,pc,,Milanovic1999 Hungary disp pc,Milanovic 1999,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Hungary,1993,0.229,,disp,pc,,Milanovic1999 Hungary disp pc,Milanovic 1999,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
 Hungary,1994,0.232,,con,pc,FALSE,MY2006 Hungary con pc 2,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Hungary,1998,0.25,,con,pc,FALSE,MY2006 Hungary con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Hungary,1999,0.259,,con,pc,FALSE,MY2006 Hungary con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
@@ -1004,11 +1004,11 @@ Lao,2013,0.3617,,con,pc,,LSB2014 con pc,Lao Statistics Bureau 2014,34,http://www
 Latvia,1988,0.25,,gross,pc,,AG1993 Latvia gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,120,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Latvia,1990,0.24,,gross,pc,,AG1993 Latvia gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,120,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Latvia,1995,0.31,,con,pc,,FR2008 Latvia con pc,Ferreira and Ravallion 2008,37,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
-Latvia,1989,0.226,,gross,pc,,Milanovic1998 Latvia gross pc 1,Milanovic 1998,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
-Latvia,1992,0.235,,gross,pc,,Milanovic1998 Latvia gross pc 1,Milanovic 1998,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
-Latvia,1993,0.239,,gross,pc,,Milanovic1998 Latvia gross pc 1,Milanovic 1998,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
-Latvia,1995,0.32,,gross,pc,,Milanovic1998 Latvia gross pc 2,Milanovic 1998,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
-Latvia,1996,0.326,,gross,pc,,Milanovic1998 Latvia gross pc 2,Milanovic 1998,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Latvia,1989,0.226,,gross,pc,,Milanovic1999 Latvia gross pc 1,Milanovic 1999,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Latvia,1992,0.235,,gross,pc,,Milanovic1999 Latvia gross pc 1,Milanovic 1999,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Latvia,1993,0.239,,gross,pc,,Milanovic1999 Latvia gross pc 1,Milanovic 1999,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Latvia,1995,0.32,,gross,pc,,Milanovic1999 Latvia gross pc 2,Milanovic 1999,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Latvia,1996,0.326,,gross,pc,,Milanovic1999 Latvia gross pc 2,Milanovic 1999,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
 Latvia,1996,0.316,,con,pc,FALSE,MY2006 Latvia con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Latvia,1997,0.317,,con,pc,FALSE,MY2006 Latvia con pc 4,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Latvia,1998,0.336,,con,pc,FALSE,MY2006 Latvia con pc 5,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
@@ -1447,11 +1447,11 @@ Russia,1996,0.375,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999
 Russia,1997,0.375,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf
 Russia,1988,0.238,,gross,pc,FALSE,Milanovic1998 Russia gross pc,Milanovic 1998,175,https://books.google.com/books?id=cQl9xbuhvNkC
 Russia,1993,0.48,,gross,pc,FALSE,Milanovic1998 Russia gross pc,Milanovic 1998,175,https://books.google.com/books?id=cQl9xbuhvNkC
-Russia,1989,0.219,,gross,pc,,Milanovic1998 Russia gross pc 1,Milanovic 1998,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
-Russia,1992,0.543,,gross,pc,,Milanovic1998 Russia gross pc 2,Milanovic 1998,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
-Russia,1994,0.455,,gross,pc,,Milanovic1998 Russia gross pc 2,Milanovic 1998,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
-Russia,1995,0.48,,gross,pc,,Milanovic1998 Russia gross pc 2,Milanovic 1998,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
-Russia,1996,0.518,,gross,pc,,Milanovic1998 Russia gross pc 2,Milanovic 1998,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Russia,1989,0.219,,gross,pc,,Milanovic1999 Russia gross pc 1,Milanovic 1999,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Russia,1992,0.543,,gross,pc,,Milanovic1999 Russia gross pc 2,Milanovic 1999,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Russia,1994,0.455,,gross,pc,,Milanovic1999 Russia gross pc 2,Milanovic 1999,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Russia,1995,0.48,,gross,pc,,Milanovic1999 Russia gross pc 2,Milanovic 1999,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Russia,1996,0.518,,gross,pc,,Milanovic1999 Russia gross pc 2,Milanovic 1999,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
 Russia,1997,0.353,,con,pc,FALSE,MY2006 Russian Federation con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Russia,1998,0.369,,con,pc,FALSE,MY2006 Russian Federation con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Russia,1999,0.357,,con,pc,FALSE,MY2006 Russian Federation con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
@@ -1518,15 +1518,15 @@ Slovakia,1996,0.25,,disp,sqrt,FALSE,GT2001 Slovakia disp oecdm,Garner and Terrel
 Slovakia,1988,0.195,,disp,pc,FALSE,Milanovic1998 Slovakia disp pc,Milanovic 1998,168,https://books.google.com/books?id=cQl9xbuhvNkC
 Slovakia,1993,0.183,,disp,pc,FALSE,Milanovic1998 Slovakia disp pc,Milanovic 1998,168,https://books.google.com/books?id=cQl9xbuhvNkC
 Slovenia,1993,0.292,,con,pc,,FR2008 Slovenia con pc,Ferreira and Ravallion 2008,39,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
-Slovenia,1987,0.198,,disp,pc,,Milanovic1998 Slovenia disp pc,Milanovic 1998,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
-Slovenia,1988,0.174,,disp,pc,,Milanovic1998 Slovenia disp pc,Milanovic 1998,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
-Slovenia,1989,0.229,,disp,pc,,Milanovic1998 Slovenia disp pc,Milanovic 1998,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
-Slovenia,1990,0.199,,disp,pc,,Milanovic1998 Slovenia disp pc,Milanovic 1998,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
-Slovenia,1991,0.221,,disp,pc,,Milanovic1998 Slovenia disp pc,Milanovic 1998,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
-Slovenia,1992,0.226,,disp,pc,,Milanovic1998 Slovenia disp pc,Milanovic 1998,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
-Slovenia,1993,0.241,,disp,pc,,Milanovic1998 Slovenia disp pc,Milanovic 1998,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
-Slovenia,1994,0.215,,disp,pc,,Milanovic1998 Slovenia disp pc,Milanovic 1998,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
-Slovenia,1995,0.223,,disp,pc,,Milanovic1998 Slovenia disp pc,Milanovic 1998,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Slovenia,1987,0.198,,disp,pc,,Milanovic1999 Slovenia disp pc,Milanovic 1999,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Slovenia,1988,0.174,,disp,pc,,Milanovic1999 Slovenia disp pc,Milanovic 1999,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Slovenia,1989,0.229,,disp,pc,,Milanovic1999 Slovenia disp pc,Milanovic 1999,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Slovenia,1990,0.199,,disp,pc,,Milanovic1999 Slovenia disp pc,Milanovic 1999,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Slovenia,1991,0.221,,disp,pc,,Milanovic1999 Slovenia disp pc,Milanovic 1999,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Slovenia,1992,0.226,,disp,pc,,Milanovic1999 Slovenia disp pc,Milanovic 1999,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Slovenia,1993,0.241,,disp,pc,,Milanovic1999 Slovenia disp pc,Milanovic 1999,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Slovenia,1994,0.215,,disp,pc,,Milanovic1999 Slovenia disp pc,Milanovic 1999,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
+Slovenia,1995,0.223,,disp,pc,,Milanovic1999 Slovenia disp pc,Milanovic 1999,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
 Slovenia,1987,0.215,,gross,pc,FALSE,Milanovic1998 Slovenia gross pc,Milanovic 1998,169,https://books.google.com/books?id=cQl9xbuhvNkC
 Solomon Islands,2006,0.46,,con,pc,,ZKM2014 Solomon Islands con pc,"Zhuang, Kanbur, and Maligalig 2014",25,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA25
 Somalia,2002,0.397,,gross,pc,FALSE,UNDP Somalia gross pc,UNDP Somalia 2003,24,http://siteresources.worldbank.org/INTSOMALIA/Resources/swb_complete_report.pdf
