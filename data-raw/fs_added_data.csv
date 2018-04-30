@@ -1210,6 +1210,13 @@ Pakistan,2002,0.411,,disp,pc,,Jamal 2014 disp pc,Jamal 2014,10,https://mpra.ub.u
 Pakistan,2005,0.407,,disp,pc,,Jamal 2014 disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
 Pakistan,2008,0.42,,disp,pc,,Jamal 2014 disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
 Pakistan,2011,0.407,,disp,pc,,Jamal 2014 disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
+Pakistan,1964,0.356,,gross,hh,,Mahmood1984 Pakistan gross hh,Mahmood 1984,372,http://www.jstor.org/stable/41258679
+Pakistan,1967,0.349,,gross,hh,,Mahmood1984 Pakistan gross hh,Mahmood 1984,372,http://www.jstor.org/stable/41258679
+Pakistan,1969,0.335,,gross,hh,,Mahmood1984 Pakistan gross hh,Mahmood 1984,372,http://www.jstor.org/stable/41258679
+Pakistan,1970,0.331,,gross,hh,,Mahmood1984 Pakistan gross hh,Mahmood 1984,372,http://www.jstor.org/stable/41258679
+Pakistan,1971,0.321,,gross,hh,,Mahmood1984 Pakistan gross hh,Mahmood 1984,372,http://www.jstor.org/stable/41258679
+Pakistan,1972,0.34,,gross,hh,,Mahmood1984 Pakistan gross hh,Mahmood 1984,372,http://www.jstor.org/stable/41258679
+Pakistan,1979,0.36,,gross,hh,,Mahmood1984 Pakistan gross hh,Mahmood 1984,372,http://www.jstor.org/stable/41258679
 Pakistan,1987,0.323,,con,hh,,Park1995 Pakistan con hh,Tabatabai 1996; Park 1995,102,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Pakistan,1987,0.357,,disp,hh,,Park1995 Pakistan disp hh,Tabatabai 1996; Park 1995,102,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Pakistan,1964,0.386,,disp,hh,,PBS1995 Pakistan disp hh,Tabatabai 1996; PBS1995,102,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -1753,6 +1760,15 @@ Sweden,1990,0.2608,,disp,ae,TRUE,W1999 Sweden disp ae 1,Wagstaff et al. 1999,82,
 Sweden,1990,0.256,,disp,ae,TRUE,W1999 Sweden disp ae 2,Wagstaff et al. 1999,86,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 Sweden,1990,0.3004,,gross,ae,TRUE,W1999 Sweden gross ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 Sweden,1990,0.296,,gross,ae,TRUE,W1999 Sweden gross ae 2,Wagstaff et al. 1999,86,http://www.sciencedirect.com/science/article/pii/S0047272798000851
+Switzerland,2006,0.251697229,0.004281365,con,oecdm,TRUE,FSO2017 Switzerland con oecdm,Switzerland Federal Statistics Office 2017,G5,https://www.bfs.admin.ch/bfsstatic/dam/assets/3342944/master
+Switzerland,2007,0.267380735,0.004734317,con,oecdm,TRUE,FSO2017 Switzerland con oecdm,Switzerland Federal Statistics Office 2017,G5,https://www.bfs.admin.ch/bfsstatic/dam/assets/3342944/master
+Switzerland,2008,0.261884811,0.004337865,con,oecdm,TRUE,FSO2017 Switzerland con oecdm,Switzerland Federal Statistics Office 2017,G5,https://www.bfs.admin.ch/bfsstatic/dam/assets/3342944/master
+Switzerland,2009,0.26182101,0.004573206,con,oecdm,TRUE,FSO2017 Switzerland con oecdm,Switzerland Federal Statistics Office 2017,G5,https://www.bfs.admin.ch/bfsstatic/dam/assets/3342944/master
+Switzerland,2010,0.256998832,0.004146601,con,oecdm,TRUE,FSO2017 Switzerland con oecdm,Switzerland Federal Statistics Office 2017,G5,https://www.bfs.admin.ch/bfsstatic/dam/assets/3342944/master
+Switzerland,2011,0.256940035,0.00487149,con,oecdm,TRUE,FSO2017 Switzerland con oecdm,Switzerland Federal Statistics Office 2017,G5,https://www.bfs.admin.ch/bfsstatic/dam/assets/3342944/master
+Switzerland,2012,0.2608037,0.010536654,con,oecdm,TRUE,FSO2017 Switzerland con oecdm,Switzerland Federal Statistics Office 2017,G5,https://www.bfs.admin.ch/bfsstatic/dam/assets/3342944/master
+Switzerland,2013,0.255293335,0.004673612,con,oecdm,TRUE,FSO2017 Switzerland con oecdm,Switzerland Federal Statistics Office 2017,G5,https://www.bfs.admin.ch/bfsstatic/dam/assets/3342944/master
+Switzerland,2014,0.257950841,0.006705007,con,oecdm,TRUE,FSO2017 Switzerland con oecdm,Switzerland Federal Statistics Office 2017,G5,https://www.bfs.admin.ch/bfsstatic/dam/assets/3342944/master
 Switzerland,1980,0.361,,disp,hh,FALSE,LF1985 hh disp,Leu and Frey 1985,201,https://doi.org/10.1068/c030199
 Switzerland,1980,0.399,,gross,hh,FALSE,LF1985 hh gross,Leu and Frey 1985,201,https://doi.org/10.1068/c030199
 Switzerland,1980,0.452,,market,hh,FALSE,LF1985 hh market,Leu and Frey 1985,201,https://doi.org/10.1068/c030199
