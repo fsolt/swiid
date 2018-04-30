@@ -90,12 +90,9 @@ lis_files <- c("au", "at", "be", "br", "ca", "cn", "co", "cz", "dk",   # add "cl
 
 lis <- lis_files %>% 
   map_df(format_lis) %>% 
-  filter(!country=="Russia") %>% 
-  rbind(format_lis_xtra("nz"), format_lis_xtra("ru_old")) %>% 
+  rbind(format_lis_xtra("nz")) %>% 
   arrange(country, year, welfare_def, equiv_scale)
 
-ru_lissy <- format_lis("ru") %>% 
-  mutate(series = paste("RLMS", series))
 
 # Socio-Economic Database for Latin America and the Caribbean (SEDLAC) (update link)
 format_sedlac <- function(df, sheet, link, es) {
@@ -1422,6 +1419,40 @@ tdgbas <- read_excel("data-raw/tdgbas1.xls", col_names = FALSE, skip = 9) %>%
             source1 = "Taiwan Directorate General of Budget, Accounting, and Statistics",
             page = "",
             link = link)
+
+
+# Federal Statistics Office, Switzerland (update link)
+fso_ch_link <- "https://www.bfs.admin.ch/bfsstatic/dam/assets/4362566/appendix"
+fso_ch0 <- read_csv2(fso_ch_link, skip = 1) %>% 
+  filter(!is.na(`primary equivalised income`)) %>%
+  transmute(year = as.numeric(X1),
+         market = as.numeric(`primary equivalised income`),
+         market_se = as.numeric(X3)/1.96,
+         gross = as.numeric(`gross equivalised income`),
+         gross_se = as.numeric(X5)/1.96,
+         disp = as.numeric(`disposable equivalised income`),
+         disp_se = as.numeric(X7)/1.96) %>% 
+  gather(key = "welfare_def", value = "gini", -year)
+
+fso_ch <- fso_ch0 %>% 
+  filter(!str_detect(welfare_def, "_se")) %>%
+  left_join(fso_ch0 %>% 
+              filter(str_detect(welfare_def, "_se")) %>% 
+              transmute(year = year,
+                        welfare_def = str_replace(welfare_def, "_se", ""),
+                        gini_se = gini), 
+            by = c("year", "welfare_def")) %>% 
+  transmute(country = "Switzerland",
+            year = year,
+            gini = gini,
+            gini_se = gini_se,
+            welfare_def = welfare_def,
+            equiv_scale = "oecdm",
+            monetary = TRUE,
+            series = paste("FSO", welfare_def, equiv_scale),
+            source1 = "Switzerland Federal Statistics Office",
+            page = "",
+            link = fso_ch_link) 
 
 
 # National Statistics Office of Thailand (archived)
