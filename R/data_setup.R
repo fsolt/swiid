@@ -354,7 +354,6 @@ wb <- read_csv(unz("data-raw/wb.zip", "WDIData.csv")) %>%
   filter(!is.na(gini)) %>% 
   left_join(wb_fn, by = c("CountryCode", "year")) %>% 
   filter(!str_detect(DESCRIPTION, "[Uu]rban|[Rr]ural")) %>% 
-  mutate(CountryCode = if_else(CountryCode == "XKX", "KSV", CountryCode)) %>% 
   group_by(CountryCode) %>% 
   mutate(desc = as.integer(as.factor(DESCRIPTION))) %>% 
   ungroup() %>% 
@@ -1925,7 +1924,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
                      capmas, statee, statfi, insee, geostat,
                      stathk, bpsid, amar, cso_ie, istat, kazstat, kostat, nsck,
                      epumy, nbs, monstat, snz, nzmsd, ssb, dgeec, psa,
-                     rosstat, ru_lissy, singstat, ssi, ine, statslk, scb, 
+                     rosstat, singstat, ssi, ine, statslk, scb, 
                      tdgbas, nso_thailand, turkstat, ons, ifs, cbo, uscb, uine, inev, gso_vn,
                      atg, gidd,
                      added_data) %>% 
