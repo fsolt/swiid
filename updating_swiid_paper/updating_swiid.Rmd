@@ -66,21 +66,37 @@ single_obs_countries <- swiid_source %>% add_count(country) %>% filter(n == 1) %
 
 ## The SWIID Source Data
 
-To be included in the SWIID's source data, observations need to encompass the entire population of a country without regard to age, location,^[The requirement for complete territorial coverage was relaxed for minor deviations such as data on Portugal that excludes Madeira and the Azores. It was relaxed somewhat further for early series that covered only the urban population of three highly urbanized countries: Uruguay, Argentina, and South Korea.  The general rule, however, is that data is excluded if it measures the income distribution of only urban or rural populations, or of only selected cities, or some other such incomplete territory.] or employment status.^[This last requirement is new; it means nearly 600 observations on the distribution of wages across employed individuals that were included in the source data of previous versions of the SWIID are now excluded.  Between the lack of information on those out of the workforce and on how workers formed households, these data weren't very strongly related to LIS data on income inequality in the entire population anyway.]  They need to have an identifiable welfare definition and equivalence scale (more on these below). Finally, to ensure that these original sources are easily available to SWIID users, observations need to be available online, although not necessarily without paywalls.^[For scholarly articles, DOIs or JSTOR stable URLs were the preferred web addresses, but if those were unavailable the publisher's website or another repository was used.  For books, the link is to the relevant page in Google Books.]
+To be included in the SWIID's source data, observations need to encompass the entire population of a country without regard to age, location,
+^[The requirement for complete territorial coverage was relaxed for minor deviations such as data on Portugal that excludes Madeira and the Azores. 
+It was relaxed somewhat further for early series that covered only the urban population of three highly urbanized countries: Uruguay, Argentina, and South Korea.  
+The general rule, however, is that data is excluded if it measures the income distribution of only urban or rural populations, or of only selected cities, or some other such incomplete territory.] 
+or employment status.^[This last requirement is new; it means nearly 600 observations on the distribution of wages across employed individuals that were included in the source data of previous versions of the SWIID are now excluded.
+Between the lack of information on those out of the workforce and on how workers formed households, these data weren't very strongly related to LIS data on income inequality in the entire population anyway.]
+They need to have an identifiable welfare definition and equivalence scale (more on these below). 
+Finally, to ensure that these original sources are easily available to SWIID users, observations need to be available online, although not necessarily without paywalls.
+^[For scholarly articles, DOIs or JSTOR stable URLs were the preferred web addresses, but if those were unavailable the publisher's website or another repository was used.  
+For books, the link is to the relevant page in Google Books.]
 
-Hand-entering data is tedious and error-prone work, so I automated as much of the process of data collection as practicable.  Most international organizations and a few national statistical offices use application programming interfaces (APIs) that facilitate downloading their data, and often the R community has built packages using these APIs to make the task even easier [see @Magnusson2014; @Lahti2017; @Lugo2017; @Blondel2018; @Wickham2018]. I took as much advantage of these resources as possible. Although the sources with APIs were relatively few, they contained the most data: `r api_percent`% of the observations were collected this way.  In the absence of an API, I scripted downloads of any available spreadsheets [see @Wickham2016a].  If there was no spreadsheet, but data were available in pdf files, I automated downloading these files and then used the `tabulizer` package [@Leeper2016] to read the tables into R.  In the absence of a file to download, I scripted the process of scraping the data from the web.^[Code for the entire process can be viewed here: <https://github.com/fsolt/swiid/blob/master/R/data_setup.R>.]  
+Hand-entering data is tedious and error-prone work, so I automated as much of the process of data collection as practicable.
+Most international organizations and a few national statistical offices use application programming interfaces (APIs) that facilitate downloading their data, and often the R community has built packages using these APIs to make the task even easier [see @Magnusson2014; @Lahti2017; @Lugo2017; @Blondel2018; @Wickham2018].
+I took as much advantage of these resources as possible.
+Although the sources with APIs were relatively few, they contained the most data: `r api_percent`% of the observations were collected this way.
+In the absence of an API, I scripted downloads of any available spreadsheets [see @Wickham2016a].
+If there was no spreadsheet, but data were available in pdf files, I automated downloading these files and then used the `tabulizer` package [@Leeper2016] to read the tables into R.
+In the absence of a file to download, I scripted the process of scraping the data from the web.
+^[Code for the entire process can be viewed here: <https://github.com/fsolt/swiid/blob/master/R/data_setup.R>.]  
 
-Still, for a variety of reasons, a source's data may have been consigned to being entered in a separate spreadsheet.^[See <https://github.com/fsolt/swiid/blob/master/data-raw/article_data/fs_added_data.csv>.]  Many sources contain just a handful or fewer observations, making the payoff to the often laborious process of data cleaning too small to justify the effort. Some sources--including most academic articles--are behind paywalls, making reproducibility particularly challenging in any event.  Some sources, like books, cannot be read straight into R.  All of the entries in this spreadsheet were checked repeatedly for errors,^[Which, of course, is not to say that they are error-free.  If you spot any problems or, better still, know of sources I might have missed, _please_ let me know at <https://github.com/fsolt/swiid/issues/6>.] and I excluded repeated reports of the exact same observation from different sources.  In the end, I was able to automate the collection of approximately three quarters of the source data and a much higher percentage of the series that will be updated or are subject to revision, facilitating incorporating these changes in future versions.
+Still, for a variety of reasons, a source's data may have been consigned to being entered in a separate spreadsheet.^[See <https://github.com/fsolt/swiid/blob/master/data-raw/article_data/fs_added_data.csv>.]  Many sources contain just a handful or fewer observations, making the payoff to the often laborious process of data cleaning too small to justify the effort. Some sources--including most academic articles--are behind paywalls, making reproducibility particularly challenging in any event.  Some sources, like books, cannot be read straight into R.  All of the entries in this spreadsheet were checked repeatedly for errors,^[Which, of course, is not to say that they are error-free.  If you spot any problems or know of sources I might have missed, _please_ let me know at <https://github.com/fsolt/swiid/issues/6>.] and I excluded repeated reports of the exact same observation from different sources.  In the end, I was able to automate the collection of approximately three quarters of the source data and a much higher percentage of the series that will be updated or are subject to revision, facilitating incorporating these changes in future versions.
 
 The resulting dataset comprises `r nrow(swiid_source)` Gini coefficients from `r swiid_source %>% count(country, year) %>% nrow()` country-years in `r swiid_source %>% count(country) %>% nrow()` countries or territories; as shown in Figure \ref{data_by_coverage}, this makes the coverage of the SWIID source data broader than that of any other income inequality dataset.  This is not surprising given that, with the exceptions of the two secondary-source collections--the World Income Inequality Database [@UNU2017], which is not drawn on at all anymore, and the _All the Ginis_ database [@Milanovic2014], which is not drawn on much--the SWIID source data incorporates all of the data in these other datasets.  
 
 ```{r data_by_coverage, echo=FALSE, fig.cap = "Income Inequality Datasets by Country-Years Covered \\label{data_by_coverage}"}
-atg_cy <- haven::read_dta("../data-raw/atg.dta", encoding = "latin1") %>% 
+atg_cy <- haven::read_dta(here::here("data-raw", "atg.dta"), encoding = "latin1") %>% 
     filter(!is.na(Giniall)) %>% 
     count(country, year) %>% 
     nrow()
 
-wider_cy <- readxl::read_excel("../dev/WIID3.4_19JAN2017New.xlsx") %>% 
+wider_cy <- readxl::read_excel(here::here("dev", "WIID3.4_19JAN2017New.xlsx")) %>% 
     filter(AreaCovr_new == "All" & PopCovr_new == "All" & AgeCovr_new == "All" &
                !is.na(Gini) & !is.na(Welfaredefn_new) & !is.na(Equivsc_new)) %>% 
     select(Country, Year, Gini, Source, Welfaredefn, Equivsc, everything()) %>% 
@@ -105,7 +121,7 @@ cy_coverage <- swiid_source %>%
 ggplot(cy_coverage, aes(forcats::fct_reorder(source1, nn, .desc = TRUE), nn)) +
     geom_bar(stat="identity") +
     theme_bw() +
-    theme(axis.title.x = element_blank()) +  
+    theme(axis.title.x = element_blank()) +
     ylab("Country-Years")
 ```
 
@@ -113,110 +129,129 @@ Turning from how the source data were collected to how they are composed, we fin
 
 ```{r obs_by_country, echo=FALSE, fig.cap = "Countries with the Most Observations in the SWIID Source Data \\label{countries_by_obs}"}
 swiid_source %>%
-    mutate(country = if_else(stringr::str_detect(country, "United"),
-                             stringr::str_replace(country, "((.).*) ((.).*)", "\\2.\\4."),
-                             country)) %>% 
-    count(country) %>%
-    arrange(desc(n)) %>% 
-    head(12) %>% 
-    ggplot(aes(forcats::fct_reorder(country, n, .desc = TRUE), n)) +
-    geom_bar(stat = "identity") +
-    theme_bw() +
-    theme(axis.title.x = element_blank() ) +
-    ylab("Observations")
+  mutate(country = if_else(stringr::str_detect(country, "United"),
+                           stringr::str_replace(country, "((.).*) ((.).*)", "\\2.\\4."),
+                           country)) %>% 
+  count(country) %>%
+  arrange(desc(n)) %>% 
+  head(12) %>% 
+  ggplot(aes(forcats::fct_reorder(country, n, .desc = TRUE), n)) +
+  geom_bar(stat = "identity") +
+  theme_bw() +
+  theme(axis.title.x = element_blank() ) +
+  ylab("Observations")
 
 ```
 
-As we will see below, observations for the same country in the same year, but with different welfare definitions and equivalence scales or from different sources, are important to generating the SWIID's cross-nationally comparable estimates.  Still, we might be interested to know which countries have the most coverage of the years in the SWIID's current `r max(swiid_source$year) - min(swiid_source$year)`-year timeframe, from `r min(swiid_source$year)` to `r max(swiid_source$year)`, because the SWIID's inequality estimates for countries with fewer country-year observations will include more interpolated values, which in turn will have more uncertainty.  
+As discussed in the next section, observations for the same country in the same year, but with different welfare definitions and equivalence scales or from different sources, are important to generating the SWIID's cross-nationally comparable estimates.  Still, we might be interested to know which countries have the most coverage of the years in the SWIID's current `r max(swiid_source$year) - min(swiid_source$year)`-year timeframe, from `r min(swiid_source$year)` to `r max(swiid_source$year)`, because the SWIID's inequality estimates for countries with fewer country-year observations will include more interpolated values, which in turn will have more uncertainty.  
 
 ```{r years_by_country, echo=FALSE, fig.cap="Countries with the Most Years Covered in the SWIID Source Data \\label{countries_by_years}"}
-swiid_source %>%
-    mutate(country = if_else(stringr::str_detect(country, "United"),
-                             stringr::str_replace(country, "((.).*) ((.).*)", "\\2.\\4."),
-                             country)) %>% 
-    count(country, year) %>%
-    count(country) %>% 
-    arrange(desc(nn)) %>% 
-    head(12) %>% 
-    ggplot(aes(forcats::fct_reorder(country, nn, .desc = TRUE), nn)) +
-    geom_bar(stat = "identity") +
-    theme_bw() +
-    theme(axis.title.x = element_blank() ) +
-  #        axis.text.x  = element_text(angle=90, vjust=.45)) +  
-    ylab("Observations")
+library(patchwork)
+
+cby_plot <- swiid_source %>%
+mutate(country = if_else(stringr::str_detect(country, "United"),
+stringr::str_replace(country, "((.).*) ((.).*)", "\\2.\\4."),
+country)) %>% 
+count(country, year) %>%
+count(country) %>% 
+arrange(desc(nn)) %>% 
+head(12) %>% 
+ggplot(aes(forcats::fct_reorder(country, nn, .desc = TRUE), nn)) +
+geom_bar(stat = "identity") +
+theme_bw() +
+theme(axis.title.x = element_blank(),
+      axis.text.x  = element_text(angle = 90, vjust = .45, hjust = .95)) +
+ylab("Years Observed")
 
 uk_nas <- {max(swiid_source$year) - min(swiid_source$year) - 
-  {swiid_source %>% filter(country == "United Kingdom") %>% pull(year) %>% unique() %>% length()}} %>%
-  wordify_numeral()
+{swiid_source %>% filter(country == "United Kingdom") %>% pull(year) %>% unique() %>% length()}} %>%
+wordify_numeral()
 
 sweden_nas <- {max(swiid_source$year) - min(swiid_source$year) - 
-  {swiid_source %>% filter(country == "Sweden") %>% pull(year) %>% unique() %>% length()}} %>%
-  wordify_numeral()
+{swiid_source %>% filter(country == "Sweden") %>% pull(year) %>% unique() %>% length()}} %>%
+wordify_numeral()
 
 us_nas <- {max(swiid_source$year) - min(swiid_source$year) - 
-  {swiid_source %>% filter(country == "United States") %>% pull(year) %>% unique() %>% length()}} %>%
-  wordify_numeral()
+{swiid_source %>% filter(country == "United States") %>% pull(year) %>% unique() %>% length()}} %>%
+wordify_numeral()
 
 arg_obs <- swiid_source %>% filter(country == "Argentina") %>% pull(year) %>% unique() %>% length()
 
 med_cy <- swiid_source %>% count(country, year) %>% count(country) %>% pull(nn) %>% median() %>% wordify_numeral()
+
+ybc_plot <- swiid_source %>%
+mutate(country = if_else(stringr::str_detect(country, "United"),
+stringr::str_replace(country, "((.).*) ((.).*)", "\\2.\\4."),
+country)) %>%
+count(country, year) %>%
+count(year) %>%
+ggplot(aes(year, nn)) +
+geom_line() +
+theme_bw() +
+expand_limits(x = c(1960, 2020)) +
+theme(axis.title.x = element_blank(),
+      axis.text.x  = element_text(angle = 90, vjust = .45, hjust = .95)) +
+ylab("Countries Observed")
+
+cby_plot + ybc_plot
 ```
 
 The source data includes observations in every covered year for the United Kingdom, in all but `r sweden_nas` of these years for Sweden, and in all but `r us_nas` for the United States.  Argentina---a country not included in the LIS---makes the top ten, with `r arg_obs` country-year observations.  The median country has observations in just `r med_cy` different country-years.
 
-We can also get a sense of the available inequality data by turning the question around and asking about coverage across countries over time.  There are observations for `r swiid_source %>% filter(year==2005) %>% count(country) %>% nrow()` countries in 2005.  Coverage is relatively good in the years from 2000 to 2015, at least 80 countries per year, before dropping to `r swiid_source %>% filter(year==2016) %>% count(country) %>% nrow()` countries for 2016 and just `r swiid_source %>% filter(year==2017) %>% count(country) %>% nrow()` for last year.  Country coverage is pretty thin each year through the 1960s and 1970s and still is not great until the late 1980s.^[This is partly a result of my decision to insist on sources that are available online, but it's just as well: so little information is available about many of the so-excluded observations on that era that I find it hard to have much confidence in them.]
+We can also get a sense of the available inequality data by turning the question around and asking about coverage across countries over time.  There are observations for `r swiid_source %>% filter(year==2005) %>% count(country) %>% nrow()` countries in 2005.  Coverage is relatively good in the years from 2000 to 2015, at least 80 countries per year, before dropping to `r swiid_source %>% filter(year==2016) %>% count(country) %>% nrow()` countries for 2016 and just `r swiid_source %>% filter(year==2017) %>% count(country) %>% nrow()` for 2017.  Country coverage is pretty thin each year through the 1960s and 1970s and still is not great until the late 1980s.^[This is partly a result of my decision to insist on sources that are available online, but it's just as well: so little information is available about many of the so-excluded observations on that era that it is hard to have much confidence in them.]
 
-```{r countries_by_year, echo=FALSE, fig.cap="Countries Covered by Year in the SWIID Source Data Data \\label{countries_by_year}"}
+```{r countries_per_year, echo=FALSE, fig.cap="Countries Covered by Year in the SWIID Source Data Data \\label{countries_by_year}"}
 swiid_source %>%
-    mutate(country = if_else(stringr::str_detect(country, "United"),
-                             stringr::str_replace(country, "((.).*) ((.).*)", "\\2.\\4."),
-                             country)) %>% 
-    count(country, year) %>%
-    count(year) %>% 
-    ggplot(aes(year, nn)) +
-    geom_line() +
-    theme_bw() +
-    expand_limits(x = c(1960, 2020)) +
-    theme(axis.title.x = element_blank()) +
-    ylab("Observations")
+  mutate(country = if_else(stringr::str_detect(country, "United"),
+                           stringr::str_replace(country, "((.).*) ((.).*)", "\\2.\\4."),
+                           country)) %>% 
+  count(country, year) %>%
+  count(year) %>% 
+  ggplot(aes(year, nn)) +
+  geom_line() +
+  theme_bw() +
+  expand_limits(x = c(1960, 2020)) +
+  theme(axis.title.x = element_blank(),
+        axis.text.x  = element_text(angle = 90, vjust = .45, hjust = .95)) +
+  ylab("Observations")
 ```
 
-Earlier I mentioned that to be included in the SWIID source data observations need to have an identifiable welfare definition and equivalence scale.  A welfare definition is an answer to the question, this Gini measures the distribution of what? The four welfare definitions employed in the SWIID source data are market income, gross income, disposable income, and consumption.  Market income is defined as amount of money coming into the household, excluding any government cash or near-cash benefits, the so-called 'pre-tax, pre-transfer income.'^[It's important, though, to not think of the distribution of market income as 'pre-government.' Beyond taxes and transfers, governments seeking to shape the distribution of income have a wide array of 'market-conditioning' or 'predistribution' policy options, with minimum wage regulation and labor policy two obvious examples [see, e.g., @Morgan2013]. Further, even taxes and transfers can profoundly shape the distribution of _market_ income through 'second-order effects.' Where robust public pension programs exist, for example, people save less for retirement, leaving many of the elderly without market income in old age and so raising the level of market-income inequality [see, e.g., @Jesuit2010].]  Gross income is the sum of market income and government transfer payments; it is 'pre-tax, post-transfer income.'  Disposable income, in turn, is gross income minus direct taxes: 'post-tax, post-transfer income.'^[Note that disposable income still does not take into account, on the one hand, indirect taxes like sales taxes and VAT, or, on the other, public services and indirect government transfers such as price subsidies.  There is very little information available about the distribution of such 'final income,' pretty much only that generated by the [Commitment to Equity Institute](http://www.commitmentoequity.org), so I exclude it from the SWIID source data at least for the time being.]  Consumption does not refer to the money coming into the household at all but rather to the money going out.^[In previous versions of the SWIID, market and gross income were treated as a single welfare definition, and I am glad to finally be able to split them apart [c.f., @Solt2016, 1272].  The consumption welfare definition _might_ now be the most heterogeneous within the SWIID source data, varying considerably in whether and how observations treat expenditures on durable goods.  Another source of differences within a single welfare definition is the extent to which nonmonetary income---such as the value of food grown for the household's own consumption or of housing that the owner occupies---is included.  The SWIID source data include the variable `monetary` that indicates whether any nonmonetary income is taken into account, but at present this information is not incorporated into the classification of welfare definitions.]  In the source data, Ginis of disposable income are much more common than those using other welfare definitions.
+Above I mentioned that to be included in the SWIID source data observations need to have an identifiable welfare definition and equivalence scale.  A welfare definition is an answer to the question, this Gini measures the distribution of what?  The four welfare definitions employed in the SWIID source data are market income, gross income, disposable income, and consumption.  Market income is defined as the amount of money coming into the household, excluding any government cash or near-cash benefits, the so-called 'pre-tax, pre-transfer' income.^[It's important, though, to not think of the distribution of market income as 'pre-government.' Beyond taxes and transfers, governments seeking to shape the distribution of income have a wide array of 'market-conditioning' or 'predistribution' policy options, with minimum wage regulation and labor policy two obvious examples [see, e.g., @Morgan2013]. Moreover, even taxes and transfers can profoundly shape the distribution of market income through 'second-order effects.' Where robust public pension programs exist, for example, people save less for retirement, leaving many of the elderly without market income in old age and so raising the level of market-income inequality [see, e.g., @Jesuit2010].]  Gross income is the sum of market income and government transfer payments; it is 'pre-tax, post-transfer' income.  Disposable income, in turn, is gross income minus direct taxes: 'post-tax, post-transfer' income.^[Note that disposable income still does not take into account, on the one hand, indirect taxes like sales or value-added taxes, or, on the other, public services and indirect government transfers such as price subsidies.  There is very little information available about the distribution of such 'final income,' pretty much only that generated by the [Commitment to Equity Institute](http://www.commitmentoequity.org), so I exclude it from the SWIID source data at least for the time being.]  Consumption does not refer to the money coming into the household at all but rather to the money going out.^[In previous versions of the SWIID, market and gross income were treated as a single welfare definition, and I am glad to finally be able to split them apart [c.f., @Solt2016, 1272].  The consumption welfare definition might now be the most heterogeneous within the SWIID source data, varying considerably in whether and how observations treat expenditures on durable goods.  Another source of differences within a single welfare definition is the extent to which nonmonetary income---such as the value of food grown for the household's own consumption or of housing that the owner occupies---is included.  The SWIID source data include the variable `monetary` that indicates whether any nonmonetary income is taken into account, but at present this information is not incorporated into the classification of welfare definitions.]  In the SWIID source data, Ginis of disposable income are much more common than those using other welfare definitions.
 
 ```{r obs_by_wd, echo=FALSE}
 swiid_source %>%
-    mutate(wd = as.factor(recode(welfare_def, 
-                       disp = "Disposable \nIncome", 
-                       market = "Market \nIncome", 
-                       gross = "Gross \nIncome",
-                       con = "Consumption"))) %>% 
-    count(wd) %>% 
-    ggplot(aes(forcats::fct_reorder(wd, n, .desc = TRUE), n)) +
-    geom_bar(stat = "identity") +
-    theme_bw() +
-    theme(axis.title.x = element_blank()) +  
-    ylab("Observations") +
-    ggtitle("Observations by Welfare Definition in the SWIID Source Data")
+  mutate(wd = as.factor(recode(welfare_def, 
+                               disp = "Disposable \nIncome", 
+                               market = "Market \nIncome", 
+                               gross = "Gross \nIncome",
+                               con = "Consumption"))) %>% 
+  count(wd) %>% 
+  ggplot(aes(forcats::fct_reorder(wd, n, .desc = TRUE), n)) +
+  geom_bar(stat = "identity") +
+  theme_bw() +
+  theme(axis.title.x = element_blank()) +  
+  ylab("Observations") +
+  ggtitle("Observations by Welfare Definition in the SWIID Source Data")
 
 ```
 
 Equivalence scales are the ways in which the size and composition of a household is incorporated into the calculation of its members' welfare.  On the one hand, these factors can simply be ignored, with all households with the same amount of income or consumption treated as if they enjoy the same level of welfare, regardless of their size.  One can improve on this household 'scale'^[Scare quotes because, strictly speaking, nothing is being scaled at all; it's simply treating the household as the unit of analysis.] by dividing the household's income by its number of members, that is, by using a per capita scale.  But a household of two members and an income of \$100,000 is better off than one with a single member and \$50,000 due to economies of scale---that's the big reason why people look for roommates.  There are a variety of ways to try to account for these economies by calculating the number of "equivalent adults" in the household.  Of the most commonly used adult-equivalent scales, the square-root scale is the most straightforward: one simply divides the household income by the square root of the number of members.  The "OECD-modified" scale for the number of adult equivalents ([which the OECD actually no longer uses](http://www.oecd.org/eco/growth/OECD-Note-EquivalenceScales.pdf)) counts the first adult as 1, all other adults as .5, and each child as .3.  And there are plenty of other adult-equivalent scales, from the "old OECD" scale (1 for the first adult, 0.7 for each additional adult, and 0.5 for each child) to caloric-requirement-based scales (which are actually very nearly per capita, as it turns out) to a number of country-specific scales.  In previous versions of the SWIID, all adult-equivalent scales were considered a single category.  Now, the square-root scale and the OECD-modified scale have both been split out, leaving the remaining catch-all adult-equivalent category much smaller.
-    
+
 ```{r obs_by_es, echo=FALSE}
 swiid_source %>%
-    mutate(es = as.factor(recode(equiv_scale, 
-                       hh = "Household", 
-                       pc = "Per Capita", 
-                       sqrt = "Square Root",
-                       oecdm = "OECD Modified",
-                       ae = "Other Adult\nEquivalent"))) %>% 
-    count(es) %>% 
-    ggplot(aes(forcats::fct_reorder(es, n, .desc = TRUE), n)) +
-    geom_bar(stat = "identity") +
-    theme_bw() +
-    theme(axis.title.x = element_blank()) +  
-    ylab("Observations") +
-    ggtitle("Observations by Equivalence Scale in the SWIID Source Data")
+  mutate(es = as.factor(recode(equiv_scale, 
+                               hh = "Household", 
+                               pc = "Per Capita", 
+                               sqrt = "Square Root",
+                               oecdm = "OECD Modified",
+                               ae = "Other Adult\nEquivalent"))) %>% 
+  count(es) %>% 
+  ggplot(aes(forcats::fct_reorder(es, n, .desc = TRUE), n)) +
+  geom_bar(stat = "identity") +
+  theme_bw() +
+  theme(axis.title.x = element_blank()) +  
+  ylab("Observations") +
+  ggtitle("Observations by Equivalence Scale in the SWIID Source Data")
 
 ```
 
@@ -224,29 +259,28 @@ Differences in the welfare definition and the equivalence scale employed constit
 
 ```{r obs_by_wdes, echo=FALSE}
 swiid_source %>%
-    mutate(wd = as.factor(recode(welfare_def, 
-                       disp = "Disposable", 
-                       market = "Market", 
-                       gross = "Gross",
-                       con = "Consumption")),
-           es = as.factor(recode(equiv_scale, 
-                       hh = "None", 
-                       pc = "Capita", 
-                       sqrt = "Root",
-                       oecdm = "OECDm",
-                       ae = "Other")),
-           wd_es = paste(wd, es, sep="/")) %>% 
-    count(wd_es) %>% 
-    ggplot(aes(forcats::fct_reorder(wd_es, n, .desc = TRUE), n)) +
-    geom_bar(stat = "identity") +
-    theme_bw() +
-    theme(axis.title.x = element_blank(),
-          axis.text.x  = element_text(angle=90, vjust=.45)) +  
-    ylab("Observations") +
-    ggtitle("Observations by Welfare Definition and Equivalence Scale in the SWIID Source Data")
+  mutate(wd = as.factor(recode(welfare_def, 
+                               disp = "Disposable", 
+                               market = "Market", 
+                               gross = "Gross",
+                               con = "Consumption")),
+         es = as.factor(recode(equiv_scale, 
+                               hh = "None", 
+                               pc = "Capita", 
+                               sqrt = "Root",
+                               oecdm = "OECDm",
+                               ae = "Other")),
+         wd_es = paste(wd, es, sep="/")) %>% 
+  count(wd_es) %>% 
+  ggplot(aes(forcats::fct_reorder(wd_es, n, .desc = TRUE), n)) +
+  geom_bar(stat = "identity") +
+  theme_bw() +
+  theme(axis.title.x = element_blank(),
+        axis.text.x  = element_text(angle=90, vjust=.45)) +  
+  ylab("Observations") +
+  ggtitle("Observations by Welfare Definition and Equivalence Scale in the SWIID Source Data")
 
 ```
-
 
 ## Standardizing the Data
 
