@@ -10,6 +10,11 @@ $endif$
   \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
   \usepackage[utf8]{inputenc}
 
+$if(anonymous)$
+\usepackage{footmisc}
+\setlength{\footnotesep}{\baselineskip} %use 1.67\baselineskip for a double space
+\renewcommand{\footnotelayout}{\doublespacing}
+$endif$
 
 
 \usepackage{abstract}
