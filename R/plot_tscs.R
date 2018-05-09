@@ -23,10 +23,9 @@ plot_tscs <- function(input, output, kt = TRUE, pars="gini", probs=c(.025, .975)
       as.data.frame() %>%
       rownames_to_column("parameter") %>%
       as_tibble() %>%
-      janitor::clean_names() %>% 
       mutate(estimate = mean,
-             lb = get(paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[1]),
-             ub = get(paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[2]),
+             lb = get(paste0(probs*100, "%")[1]),
+             ub = get(paste0(probs*100, "%")[2]),
              ktcode = as.numeric(str_extract(parameter, "(?<=\\[)\\d+"))) %>%
       left_join(ktcodes, by="ktcode") %>% 
       arrange(kcode, tcode)
@@ -49,10 +48,9 @@ plot_tscs <- function(input, output, kt = TRUE, pars="gini", probs=c(.025, .975)
       as.data.frame() %>%
       rownames_to_column("parameter") %>%
       as_tibble() %>%
-      janitor::clean_names() %>% 
       mutate(estimate = mean,
-             lb = get(paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[1]),
-             ub = get(paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[2]),
+             lb = get(paste0(probs*100, "%")[1]),
+             ub = get(paste0(probs*100, "%")[2]),
              kcode = as.numeric(str_extract(parameter, "(?<=\\[)\\d+")),
              tcode = as.numeric(str_extract(parameter, "(?<=,)\\d+"))) %>%
       left_join(ktcodes, by=c("kcode", "tcode")) %>%
