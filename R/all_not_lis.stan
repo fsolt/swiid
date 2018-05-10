@@ -69,23 +69,25 @@ transformed parameters {
 }
 
 model {
-  sigma_gini ~ normal(.01, .01) T[0,];
-  sigma_rwe ~ normal(0, .05);
-  sigma_kw ~ normal(.01, .002) T[0,];
+  sigma_gini ~ normal(.0125, .005) T[0,];
+  for (r in 1:R) {
+    sigma_rwe[r] ~ normal(.04, .02) T[0,];
+  }
+  sigma_kw ~ normal(.01, .005) T[0,];
 
   gini_m ~ normal(gini_t, gini_m_se);
   rho_we ~ normal(rho_we_t, rho_we_se);
   rho_wd ~ normal(rho_wd_t, rho_wd_se);
 
-  rho_rwe_hat ~ gamma(4, 3);
-  rho_kw_hat ~ gamma(4, 3);
+  rho_rwe_hat ~ normal(1, .1);
+  rho_kw_hat ~ lognormal(0, .15);
 
   for (k in 1:K) { 
     if (kn[k] > 1) {
-      gini[kt1[k]] ~ normal(.35, .1);                         // a random draw from N(.35, .1) in first year
+      gini[kt1[k]] ~ normal(.4, .1);        // a random draw from N(.4, .1) in first year
       gini[(kt1[k]+1):(kt1[k]+kn[k]-1)] ~ normal(gini[(kt1[k]):(kt1[k]+kn[k]-2)], sigma_gini); // otherwise a random walk from previous year
     } else {
-      gini[kt1[k]] ~ normal(.35, .1);                            // a random draw from N(.35, .1)
+      gini[kt1[k]] ~ normal(.4, .1);       // a random draw from N(.4, .1)
     }
   }
 
