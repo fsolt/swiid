@@ -1,5 +1,4 @@
 library(tidyverse)
-library(stringr)
 library(rstan)
 library(beepr)
 
@@ -106,7 +105,7 @@ source_data <- list(  K = max(x$kcode),
 
 # Stan
 start <- proc.time()
-out1 <- stan(file = "R/all_lis.stan",
+out1 <- stan(file = "R/estimate_swiid/lis.stan",
              data = source_data,
              seed = seed,
              iter = iter,
@@ -121,7 +120,7 @@ runtime
 lapply(get_sampler_params(out1, inc_warmup = FALSE),
        summary, digits = 2)
 
-save(x, out1, file = str_c("data/all_lis_", iter/1000, "k_", 
+save(x, out1, file = str_c("data/lis_", iter/1000, "k_", 
                         str_replace(Sys.time(), " ", "_") %>% str_replace("2017-", ""), ".rda"))
 
 beep() # chime
@@ -129,5 +128,5 @@ beep() # chime
 
 # Plots
 source("R/plot_tscs.R")
-plot_tscs(x, out1, save_pdf = "paper/figures/ts_all_lis.pdf")
+plot_tscs(x, out1, save_pdf = "paper/figures/ts_lis.pdf")
 plot_tscs(x, out1)
