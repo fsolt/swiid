@@ -1,9 +1,10 @@
 if (!require(pacman)) install.packages("pacman"); library(pacman)
 p_load(tidyverse, readxl, 
-       eurostat, rsdmx, xml2, CANSIM2R, pxweb, rvest,
+       eurostat, rsdmx, xml2, CANSIM2R, rvest,
        countrycode, janitor, pdftools)
 p_load_gh("ropensci/tabulizerjars", "ropensci/tabulizer") # read PDF tables; see https://github.com/ropensci/tabulizer for installation help if needed
 p_load_gh("ropengov/dkstat")
+p_load_gh("ropengov/pxweb")
 
 # Custom country codes (defined in R/cc_swiid.R)
 load("data/cc_swiid.rda")
@@ -144,14 +145,14 @@ download.file(sedlac_link, "data-raw/sedlac.xlsx")
 
 sedlac_pc <- read_excel(path = "data-raw/sedlac.xlsx", 
                         sheet = "intervals pci",
-                        skip = 8)[1:3] %>%
+                        skip = 8)[1:2] %>%
   format_sedlac(sheet = "intervals pci",
                 link = sedlac_link,
                 es = "pc") 
 
 sedlac_ei <- read_excel(path = "data-raw/sedlac.xlsx",
                         sheet = "intervals ei",
-                        skip = 8)[1:3] %>%
+                        skip = 8)[1:2] %>%
   format_sedlac(sheet = "intervals ei",
                 link = sedlac_link,
                 es = "ae")
@@ -1177,7 +1178,7 @@ download.file(dgeec_link, "data-raw/dgeec.pdf")
 
 dgeec <- extract_tables("data-raw/dgeec.pdf", pages = 2) %>% 
   first() %>% 
-  as_tibble() %>% 
+  as_tibble() %>%
   transmute(country = "Paraguay",
             year = str_trim(V1) %>% 
               str_extract("\\d{4}/?\\d{0,2}") %>% 
@@ -1195,7 +1196,7 @@ dgeec <- extract_tables("data-raw/dgeec.pdf", pages = 2) %>%
             source1 = "Dirección General de Estadística, Encuestas y Censos 2017",
             page = "2",
             link = dgeec_link) %>% 
-  filter(!is.na(year))
+  filter(!is.na(gini))
 
 
 # Philippines Statistical Agency (automated)
