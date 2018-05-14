@@ -9,6 +9,7 @@ data{
   int<lower=1> RWE;                       // number of combos of region and wd_es
   int<lower=1> KW;                        // number of combos of country and welfare definition
   int<lower=1> W;                         // number of welfare definitions
+  int<lower=1> E;                         // number of equivalence scales
 
   int<lower=1> N;                         // total number of obs
   int<lower=1> N_ibl;                     // number of baseline obs ("is baseline")
@@ -55,10 +56,10 @@ data{
   
 parameters {
   real<lower=0, upper=1> gini[KT];        // SWIID gini estimate for baseline in country k at time t
-  real<lower=0> sigma_gini[R]; 	            // random-walk variance parameter
+  real<lower=0> sigma_gini; 	            // random-walk variance parameter
   vector[N] gini_t;                       // unknown "true" gini given gini_m and gini_m_se
   vector[M] rho_we_t;                     // unknown "true" rho_we given rho_we and rho_we_se
-    vector[P] rho_w_t;                       // unknown "true" rho_wd given rho_w and rho_w_se
+  vector[P] rho_w_t;                       // unknown "true" rho_wd given rho_w and rho_w_se
   
   vector<lower=0>[S] rho_s;               // ratio of baseline to series s
   real<lower=0> sigma_s[R]; 	            // series noise 
@@ -66,11 +67,11 @@ parameters {
   vector<lower=0>[KWE] rho_kwe_hat;       // estimated rho_we by country
   real<lower=0> sigma_kwe[R];             // rho_kwe_hat noise (by region)
   
-    vector<lower=0>[KW] rho_kw_hat;         // estimated rho_w by country
-    real<lower=0> sigma_kw[R];              // rho_kw_hat noise (by region)
+  vector<lower=0>[KW] rho_kw_hat;         // estimated rho_w by country
+  real<lower=0> sigma_kw[R];              // rho_kw_hat noise (by region)
   
-    vector<lower=0>[RWE] rho_rwe_hat;       // estimated rho_we by region
-    real<lower=0> sigma_rwe[R];             // rho_rwe_hat noise
+  vector<lower=0>[RWE] rho_rwe_hat;       // estimated rho_we by region
+  real<lower=0> sigma_rwe[R];             // rho_rwe_hat noise
 }
 
 transformed parameters {
@@ -102,7 +103,7 @@ model {
   for (k in 1:K) {
     if (kn[k] > 1) {
       gini[kt1[k]] ~ normal(.35, .125);                         // a random draw from N() in first year
-      gini[(kt1[k]+1):(kt1[k]+kn[k]-1)] ~ normal(gini[(kt1[k]):(kt1[k]+kn[k]-2)], sigma_gini[rr[kr[k]]]); // otherwise a random walk from previous year 
+      gini[(kt1[k]+1):(kt1[k]+kn[k]-1)] ~ normal(gini[(kt1[k]):(kt1[k]+kn[k]-2)], sigma_gini); // otherwise a random walk from previous year 
     } else {
       gini[kt1[k]] ~ normal(.35, .125);                         // a random draw from N()
     }
