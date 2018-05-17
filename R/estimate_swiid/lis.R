@@ -5,8 +5,8 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 4000
-warmup <- iter - 1500
+iter <- 3000
+warmup <- iter - 1000
 chains <- 3
 cores <- chains
 adapt_delta <- .9
@@ -22,7 +22,8 @@ x0 <- ineq2 %>%
          scode = as.integer(factor(series, levels = unique(series))),
          wecode = as.integer(factor(wdes, levels = unique(wdes))),
          kwecode = as.integer(factor(100*kcode+wecode)),
-         wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)),
+         wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)) +
+           (1 - str_detect(baseline_series, str_replace(wdes, "_", " "))),
          ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)))  # redo codes for filtered sample
 
 kt <- x0 %>%  
@@ -41,7 +42,8 @@ x <- x0 %>%
 kn <- x %>% 
   group_by(kcode) %>% 
   summarize(kt1 = min(ktcode),
-            yrspan = first(yrspan)) %>% 
+            yrspan = first(yrspan),
+            kr = first(rcode)) %>% 
   ungroup()
 
 x_countries <- unique(x$country)
@@ -60,6 +62,11 @@ rho_we <- rho_we %>%
                   select("country", "year", "wdes", matches("code")) %>%
                   distinct(),
               by = c("country", "year", "wdes")) 
+
+wwe <- x %>%
+  group_by(wecode) %>%
+  summarize(wcode = first(wcode)) %>% 
+  pull(wcode)
 
 # Format data for Stan
 source_data <- list(  K = max(x$kcode),
@@ -84,6 +91,7 @@ source_data <- list(  K = max(x$kcode),
                       ktk = kt$kcode,
                       kn = kn$yrspan,
                       kt1 = kn$kt1,
+                      kr = kn$kr,
                       rr = x$rcode,
                       ss = x$scode,
                       wen = x$wecode,
@@ -92,6 +100,8 @@ source_data <- list(  K = max(x$kcode),
                       gini_m_se = x$gini_m_se,
                       gini_b = x$gini_b[!is.na(x$gini_b)],
                       gini_b_se = x$gini_b_se[!is.na(x$gini_b_se)],
+                      
+                      wwe = wwe,
                       
                       M = length(rho_we$rho),
                       kkm = rho_we$kcode,      
@@ -130,3 +140,5 @@ beep() # chime
 source("R/plot_tscs.R")
 plot_tscs(x, out1, save_pdf = "paper/figures/ts_lis.pdf")
 plot_tscs(x, out1)
+
+shinystan::launch_shinystan(out1)
