@@ -72,6 +72,15 @@ parameters {
   
   vector<lower=0>[RWE] rho_rwe_hat;       // estimated rho_we by region
   real<lower=0> sigma_rwe[R];             // rho_rwe_hat noise
+
+  real<lower=0> hp_mu_s[R];
+  real<lower=0> hp_sigma_s;
+  real<lower=0> hp_mu_kwe[R];
+  real<lower=0> hp_sigma_kwe;
+  real<lower=0> hp_mu_rwe[R];
+  real<lower=0> hp_sigma_rwe;
+  real<lower=0> hp_mu_kw[R];
+  real<lower=0> hp_sigma_kw;
 }
 
 transformed parameters {
@@ -85,11 +94,23 @@ transformed parameters {
 }
 
 model {
+  hp_mu_s ~ normal(0, .05);
+  hp_sigma_s ~ normal(0, .02);
+  hp_mu_kwe ~ normal(0, .05);
+  hp_sigma_kwe ~ normal(0, .02);
+  hp_mu_rwe ~ normal(0, .05);
+  hp_sigma_rwe ~ normal(0, .02);
+  hp_mu_kw ~ normal(0, .05);
+  hp_sigma_kw ~ normal(0, .01);
+  
   sigma_gini ~ normal(.01, .0025);
-  sigma_s ~ normal(.04, .01);
-  sigma_kwe ~ normal(.04, .01);
-  sigma_rwe ~ normal(.04, .01);
-  sigma_kw ~ normal(.01, .0025);
+  
+  for (r in 1:R) {                // can't vectorize b/c need to truncate
+    sigma_s[r] ~ normal(hp_mu_s[r], hp_sigma_s) T[0,];
+    sigma_kwe[r] ~ normal(hp_mu_kwe[r], hp_sigma_kwe) T[0,];
+    sigma_rwe[r] ~ normal(hp_mu_rwe[r], hp_sigma_rwe) T[0,];
+    sigma_kw[r] ~ normal(hp_mu_kw[r], hp_sigma_kw) T[0,];
+  }
 
   gini_m ~ normal(gini_t, gini_m_se);
   rho_we ~ normal(rho_we_t, rho_we_se);

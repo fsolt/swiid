@@ -5,8 +5,8 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 4000
-warmup <- iter - 1000
+iter <- 2000
+warmup <- iter - 500
 chains <- 3
 cores <- chains
 adapt_delta <- .9
@@ -65,9 +65,10 @@ source_data <- list(  K = max(x$kcode),
                       WE = max(x$wecode),
                       KWE = max(x$kwecode),
                       RWE = max(x$rwecode),
-                      W = max(x$wcode),
                       KW = max(x$kwcode),
                       RW = max(x$rwcode),
+                      W = max(x$wcode),
+                      E = max(x$ecode),
 
                       N = nrow(x),
                       N_ibl = nrow(x %>% filter(ibl)),
@@ -113,6 +114,8 @@ source_data <- list(  K = max(x$kcode),
 )
 
 # Stan
+rstan_options(auto_write = TRUE)
+
 start <- proc.time()
 out1 <- stan(file = "R/estimate_swiid/all.stan",
              data = source_data,
@@ -132,10 +135,10 @@ lapply(get_sampler_params(out1, inc_warmup = FALSE),
 save(x, out1, file = str_c("data/all_", iter/1000, "k_", 
                            str_replace(Sys.time(), " ", "_") %>% str_replace("2018-", ""), ".rda"))
 
-beep() # chime
-
-
 # Plots
 source("R/plot_tscs.R")
 plot_tscs(x, out1, save_pdf = "paper/figures/ts_all.pdf")
 plot_tscs(x, out1)
+
+shinystan::launch_shinystan(out1)
+beep() # chime
