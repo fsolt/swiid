@@ -5,8 +5,8 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 3000
-warmup <- iter - 1000
+iter <- 500
+warmup <- iter - 100
 chains <- 3
 cores <- chains
 adapt_delta <- .9
@@ -68,20 +68,51 @@ wwe <- x %>%
   summarize(wcode = first(wcode)) %>% 
   pull(wcode)
 
+wrw <- x %>% 
+  group_by(rwcode) %>% 
+  summarize(wcode = first(wcode))
+
+ere <- x %>% 
+  group_by(recode) %>% 
+  summarize(ecode = first(ecode))
+
+rwkw <- x %>% 
+  group_by(kwcode) %>% 
+  summarize(rwcode = first(rwcode))
+
+reke <- x %>% 
+  group_by(kecode) %>% 
+  summarize(recode = first(recode))
+
+k_kwe <- x %>% 
+  group_by(kwecode) %>% 
+  summarize(kwcode = first(kwcode),
+            kecode = first(kecode))
+
+kwes <- x %>% 
+  group_by(scode) %>% 
+  summarize(kwecode = first(kwecode)) %>% 
+  pull(kwecode)
+
 # Format data for Stan
 source_data <- list(  K = max(x$kcode),
                       T = max(x$tcode),
                       KT = nrow(kt),
                       R = max(x$rcode),
                       S = max(x$scode),
+                      SO = x %>% filter(obl) %>% pull(scode) %>% max(),
                       WE = max(x$wecode),
-                      KWE = max(rho_we$kwecode),
+                      KWE = max(x$kwecode),
+                      KW = max(x$kwcode),
+                      KE = max(x$kecode),
+                      RW = max(x$rwcode),
+                      RE = max(x$recode),
                       W = max(x$wcode),
                       E = max(x$ecode),
                       
                       N = length(x$gini_m),
                       N_ibl = length(x$ibl[x$ibl == TRUE]),
-                      N_bl = length(x$gini_b[!is.na(x$gini_b)]),
+                      N_wbl = length(x$gini_b[!is.na(x$gini_b)]),
                       N_obl = length(x$s_bl_obs[x$s_bl_obs>0]),
                       
                       kk = x$kcode,
@@ -91,7 +122,6 @@ source_data <- list(  K = max(x$kcode),
                       ktk = kt$kcode,
                       kn = kn$yrspan,
                       kt1 = kn$kt1,
-                      kr = kn$kr,
                       rr = x$rcode,
                       ss = x$scode,
                       wen = x$wecode,
@@ -101,21 +131,20 @@ source_data <- list(  K = max(x$kcode),
                       gini_b = x$gini_b[!is.na(x$gini_b)],
                       gini_b_se = x$gini_b_se[!is.na(x$gini_b_se)],
                       
-                      wwe = wwe,
+                      rk = kn$kr,
                       
-                      M = length(rho_we$rho),
-                      kkm = rho_we$kcode,      
-                      rrm = rho_we$rcode,
-                      ttm	= rho_we$tcode,
-                      wem = rho_we$wecode,
-                      kwem = rho_we$kwecode,
-                      rho_we = rho_we$rho,
-                      rho_we_se = rho_we$rho_se
+                      wrw = wrw$wcode,
+                      ere = ere$ecode, 
+                      rwkw = rwkw$rwcode,
+                      reke = reke$recode,
+                      kwkwe = k_kwe$kwcode,
+                      kekwe = k_kwe$kecode,
+                      kwes = kwes
 )
 
 # Stan
 start <- proc.time()
-out1 <- stan(file = "R/estimate_swiid/lis.stan",
+out1 <- stan(file = "R/estimate_swiid/lis2.stan",
              data = source_data,
              seed = seed,
              iter = iter,
@@ -130,15 +159,14 @@ runtime
 lapply(get_sampler_params(out1, inc_warmup = FALSE),
        summary, digits = 2)
 
-save(x, out1, file = str_c("data/lis_", iter/1000, "k_", 
-                        str_replace(Sys.time(), " ", "_") %>% str_replace("2017-", ""), ".rda"))
-
-beep() # chime
-
+save(x, out1, file = str_c("data/lis2_", iter/1000, "k_", 
+                        str_replace(Sys.time(), " ", "_") %>% str_replace("2018-", ""), ".rda"))
 
 # Plots
 source("R/plot_tscs.R")
-plot_tscs(x, out1, save_pdf = "paper/figures/ts_lis.pdf")
+plot_tscs(x, out1, save_pdf = "paper/figures/ts_lis2_.pdf")
 plot_tscs(x, out1)
 
 shinystan::launch_shinystan(out1)
+
+beep() # chime
