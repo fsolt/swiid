@@ -145,14 +145,14 @@ download.file(sedlac_link, "data-raw/sedlac.xlsx")
 
 sedlac_pc <- read_excel(path = "data-raw/sedlac.xlsx", 
                         sheet = "intervals pci",
-                        skip = 8)[1:2] %>%
+                        skip = 8)[1:3] %>%
   format_sedlac(sheet = "intervals pci",
                 link = sedlac_link,
                 es = "pc") 
 
 sedlac_ei <- read_excel(path = "data-raw/sedlac.xlsx",
                         sheet = "intervals ei",
-                        skip = 8)[1:2] %>%
+                        skip = 8)[1:3] %>%
   format_sedlac(sheet = "intervals ei",
                 link = sedlac_link,
                 es = "ae")
@@ -1606,7 +1606,7 @@ ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3) %
             welfare_def = "disp",
             equiv_scale = "oecdm",
             monetary = TRUE,
-            series = paste("IFS", X__1, welfare_def, equiv_scale),
+            series = paste("IFS", X__3, welfare_def, equiv_scale),
             source1 = "Institute for Fiscal Studies",
             page = "",
             link = ifs_link)
