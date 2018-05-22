@@ -323,7 +323,8 @@ transmonee <- read_excel("data-raw/transmonee.xls",
 
 # Commitment to Equity (update by hand; see http://www.commitmentoequity.org/publications-ceqworkingpapers/ and http://www.commitmentoequity.org/data/ )
 ceq <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/ceq.csv", col_types = "cnnncclcccc") %>% 
-  mutate(series = paste("CEQ", welfare_def, equiv_scale))
+  group_by(country) %>% 
+  mutate(series = paste("CEQ", country, welfare_def, equiv_scale, as.numeric(as.factor(source1))))
 
 # World Bank Africa Poverty Database (bespoke analysis of subset of WB surveys; archived)
 afr_gini <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv", 
@@ -1917,13 +1918,11 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
   # turn cross-country series into within-country series
   oecd1 <- oecd %>% 
     mutate(series = paste("OECD", country, str_replace(series, "OECD ", "")))
-  ceq1 <- ceq %>% 
-    mutate(series = paste("CEQ", country, str_replace(series, "CEQ ", "")))
   
   # then combine with other series ordered by data-richness
   ineq0 <- bind_rows(lis, 
                      sedlac, cepal, cepal_sdi, oecd1, eurostat,
-                     transmonee, ceq1, afr_gini, wb,
+                     transmonee, ceq, afr_gini, wb,
                      armstat, abs, inebo, belstat, statcan, dane, ineccr, dkstat,
                      capmas, statee, statfi, insee, geostat,
                      stathk, bpsid, amar, cso_ie, istat, kazstat, kostat, nsck,
@@ -2109,7 +2108,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
      arrange(kcode, tcode, wd)
    
    rttt <- ineq %>%
-     select(-gini_m_se) %>%
+     select(kcode, tcode, wdes, series, gini_m) %>%
      spread(key = wdes, value = gini_m) %>%
      mutate(bl = get(paste0(baseline_wd, "_", e))) %>%
      select(kcode, tcode, bl, matches(e)) %>%
