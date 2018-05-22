@@ -145,14 +145,14 @@ download.file(sedlac_link, "data-raw/sedlac.xlsx")
 
 sedlac_pc <- read_excel(path = "data-raw/sedlac.xlsx", 
                         sheet = "intervals pci",
-                        skip = 8)[1:2] %>%
+                        skip = 8)[1:3] %>%
   format_sedlac(sheet = "intervals pci",
                 link = sedlac_link,
                 es = "pc") 
 
 sedlac_ei <- read_excel(path = "data-raw/sedlac.xlsx",
                         sheet = "intervals ei",
-                        skip = 8)[1:2] %>%
+                        skip = 8)[1:3] %>%
   format_sedlac(sheet = "intervals ei",
                 link = sedlac_link,
                 es = "ae")
@@ -1606,7 +1606,7 @@ ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3) %
             welfare_def = "disp",
             equiv_scale = "oecdm",
             monetary = TRUE,
-            series = paste("IFS", X__1, welfare_def, equiv_scale),
+            series = paste("IFS", X__3, welfare_def, equiv_scale),
             source1 = "Institute for Fiscal Studies",
             page = "",
             link = ifs_link)
@@ -1993,9 +1993,19 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
            scode = as.integer(factor(series, levels = unique(series))),
            wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)),
            ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)),
+           kwcode = as.integer(factor(100*kcode+wcode)),
+           kecode = as.integer(factor(100*kcode+ecode)),
+           rwcode = as.integer(factor(100*rcode+wcode)),
+           recode = as.integer(factor(100*rcode+ecode)),
            wecode = as.integer(factor(paste(wcode, ecode))),
            kwecode = as.integer(factor(100*kcode+wecode)),
            rwecode = as.integer(factor(100*rcode+wecode))) %>% 
+    group_by(kcode) %>%
+    mutate(firstyr = min(year),
+              lastyr = max(year),
+              n_yrs = year %>% unique() %>% length()) %>% 
+    ungroup() %>% 
+    arrange(desc(ibl), desc(bl), desc(obl), desc(kbl)) %>% 
     select(-tcode0) # tcode0 is only used to facilitate getting tcode into its customary column position
   
   wecodes <- ineq %>%
@@ -2009,21 +2019,21 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
     select(wecode, kcode, kwecode, rwecode) %>% 
     distinct()
   
-  ineq1 <- ineq %>% 
-    group_by(kcode, tcode, welfare_def, equiv_scale) %>% 
+  ineq1 <- ineq %>%
+    group_by(kcode, tcode, welfare_def, equiv_scale) %>%
     summarize(n_obs = n(),
-              gini_cat = mean(gini_m), 
+              gini_cat = mean(gini_m),
               gini_cat_se = ifelse(n_obs == 1,
                                    gini_m_se,
                                    sqrt(mean(gini_m_se^2) + (1+1/n_obs)*var(gini_m)))) %>%  # per Rubin (1987)
-    ungroup() %>% 
-    select(-n_obs) %>% 
-    unite(wdes, welfare_def, equiv_scale) %>% 
+    ungroup() %>%
+    select(-n_obs) %>%
+    unite(wdes, welfare_def, equiv_scale) %>%
     bind_rows(ineq %>%
-                group_by(kcode, tcode) %>% 
+                group_by(kcode, tcode) %>%
                 summarize(gini_cat = first(gini_b),
                           gini_cat_se = first(gini_b_se),
-                          wdes = "baseline") %>% 
+                          wdes = "baseline") %>%
                 ungroup())
   
   
@@ -2083,6 +2093,18 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
       mutate(wd = str_replace(wdes, "_.*", "")) %>% 
       select(-wdes) %>% 
       arrange(kcode, tcode, wd)
+    
+   rttt <- ineq1 %>% 
+      select(-gini_cat_se) %>% 
+      spread(key = wdes, value = gini_cat) %>% 
+      mutate(bl = get(paste0(baseline_wd, "_", e))) %>% 
+      select(kcode, tcode, bl, matches(e)) %>% 
+     gather(key = wdes, value = gini_o, -kcode, -tcode, -bl) %>% 
+     filter(!is.na(gini_o) & !is.na(bl)) %>% 
+     mutate(wd = str_replace(wdes, "_.*", "")) %>% 
+     select(-wdes) %>% 
+     arrange(kcode, tcode, wd)
+     
   })
   
   rho_wd_se <- map_df(c("pc", "hh", "sqrt", "oecdm", "ae"), function(e) {
@@ -2174,29 +2196,25 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
   rho_es_ke <- rho_es %>%
     pull(kes) %>%
     unique()
-  
-  kyrs <- ineq %>%
-    group_by(kcode) %>%
-    summarize(firstyr = min(year),
-              lastyr = max(year),
-              n_yrs = year %>% unique() %>% length()) %>% 
-    ungroup()
+
   
   ineq2 <- ineq %>% 
-    left_join(kyrs, by = "kcode") %>% 
-    mutate(kwd = paste(country, str_replace(wdes, "_.*", "")),
-           kes = paste(country, str_replace(wdes, ".*_", "")),
-           rwd = paste(rcode, str_replace(wdes, "_.*", "")),
-           res = paste(rcode, str_replace(wdes, ".*_", "")),
-           kw = (kwd %in% rho_wd_kw),
-           ke = (kes %in% rho_es_ke)) %>% 
-    left_join(rho_wd %>% select(kwd, kwcode) %>% unique(), by = "kwd") %>% 
-    left_join(rho_wd %>% select(rwd, rwcode) %>% unique(), by = "rwd") %>% 
-    left_join(rho_es %>% select(kes, kecode) %>% unique(), by = "kes") %>% 
-    left_join(rho_es %>% select(res, recode) %>% unique(), by = "res") %>% 
-    mutate(kwcode = if_else(is.na(kwcode), 0L, kwcode),
-           kecode = if_else(is.na(kecode), 0L, kecode)) %>% 
-    arrange(desc(ibl), desc(bl), desc(obl), desc(kbl), desc(kw), desc(ke), desc(k_bl_obs), desc(country_obs))
+    left_join(kyrs, by = "kcode") %>%
+    arrange(desc(ibl), desc(bl), desc(obl), desc(kbl))
+    
+    # mutate(kwd = paste(country, str_replace(wdes, "_.*", "")),
+    #        kes = paste(country, str_replace(wdes, ".*_", "")),
+    #        rwd = paste(rcode, str_replace(wdes, "_.*", "")),
+    #        res = paste(rcode, str_replace(wdes, ".*_", "")),
+    #        kw = (kwd %in% rho_wd_kw),
+    #        ke = (kes %in% rho_es_ke)) %>%
+    # left_join(rho_wd %>% select(kwd, kwcode) %>% unique(), by = "kwd") %>% 
+    # left_join(rho_wd %>% select(rwd, rwcode) %>% unique(), by = "rwd") %>% 
+    # left_join(rho_es %>% select(kes, kecode) %>% unique(), by = "kes") %>% 
+    # left_join(rho_es %>% select(res, recode) %>% unique(), by = "res") %>% 
+    # mutate(kwcode = if_else(is.na(kwcode), 0L, kwcode),
+    #        kecode = if_else(is.na(kecode), 0L, kecode)) %>% 
+    # arrange(desc(ibl), desc(bl), desc(obl), desc(kbl), desc(kw), desc(ke), desc(k_bl_obs), desc(country_obs))
   
   return(list(ineq2, rho_we, rho_wd, ineq0))
 }
