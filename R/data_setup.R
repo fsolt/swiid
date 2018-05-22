@@ -121,7 +121,8 @@ format_sedlac <- function(df, sheet, link, es) {
   x <- x %>%
     group_by(country) %>%
     mutate(series0 = zoo::na.locf(series, na.rm = FALSE) %>% 
-             if_else(country=="Chile" & is.na(.), "old", .),
+             if_else(country=="Chile" & is.na(.), "old", .) %>% 
+             if_else(country=="Costa Rica" & year=="2010" & gini > .49, "ENAHO-EHPM", .),
            series = paste("SEDLAC", country, "disp", es,
                           as.numeric(factor(series0, levels = unique(series0)))) %>% 
              str_replace("NA", "1")) %>% 
@@ -2106,6 +2107,18 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
      mutate(wd = str_replace(wdes, "_.*", "")) %>% 
      select(-wdes) %>% 
      arrange(kcode, tcode, wd)
+   
+   rttt <- ineq %>%
+     select(-gini_m_se) %>%
+     spread(key = wdes, value = gini_m) %>%
+     mutate(bl = get(paste0(baseline_wd, "_", e))) %>%
+     select(kcode, tcode, bl, matches(e)) %>%
+     gather(key = wdes, value = gini_o, -kcode, -tcode, -bl) %>%
+     filter(!is.na(gini_o) & !is.na(bl)) %>%
+     mutate(wd = str_replace(wdes, "_.*", "")) %>%
+     select(-wdes) %>%
+     arrange(kcode, tcode, wd)
+   
      
   })
   
