@@ -117,9 +117,11 @@ format_sedlac <- function(df, sheet, link, es) {
   
   x$h_ser <- ((!x$h_co) && is.na(x$year))
   x$series <- ifelse(!x$h_co & is.na(x$year), x$heading, NA)
+  
   x <- x %>%
     group_by(country) %>%
-    mutate(series0 = zoo::na.locf(series, na.rm = FALSE),
+    mutate(series0 = zoo::na.locf(series, na.rm = FALSE) %>% 
+             if_else(country=="Chile" & is.na(.), "old", .),
            series = paste("SEDLAC", country, "disp", es,
                           as.numeric(factor(series0, levels = unique(series0)))) %>% 
              str_replace("NA", "1")) %>% 
