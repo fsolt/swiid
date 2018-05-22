@@ -1474,14 +1474,14 @@ Russia,2000,0.349,,con,pc,FALSE,MY2006 Russian Federation con pc 3,Mitra and Yem
 Russia,2001,0.339,,con,pc,FALSE,MY2006 Russian Federation con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Russia,2002,0.338,,con,pc,FALSE,MY2006 Russian Federation con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Russia,2003,0.332,,con,pc,FALSE,MY2006 Russian Federation con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
-Russia,1992,0.395,0.0049,disp,sqrt,FALSE,old LISÊdisp sqrt,LIS,,https://web.archive.org/web/20100804001129/http://www.lisproject.org/key-figures/kf-workbook.xls
-Russia,1995,0.447,0.0065,disp,sqrt,FALSE,old LISÊdisp sqrt,LIS,,https://web.archive.org/web/20100804001129/http://www.lisproject.org/key-figures/kf-workbook.xls
-Russia,2000,0.434,0.0068,disp,sqrt,FALSE,old LISÊdisp sqrt,LIS,,https://web.archive.org/web/20100804001129/http://www.lisproject.org/key-figures/kf-workbook.xls
+Russia,1992,0.395,0.0049,disp,sqrt,FALSE,old LISædisp sqrt,LIS,,https://web.archive.org/web/20100804001129/http://www.lisproject.org/key-figures/kf-workbook.xls
+Russia,1995,0.447,0.0065,disp,sqrt,FALSE,old LISædisp sqrt,LIS,,https://web.archive.org/web/20100804001129/http://www.lisproject.org/key-figures/kf-workbook.xls
+Russia,2000,0.434,0.0068,disp,sqrt,FALSE,old LISædisp sqrt,LIS,,https://web.archive.org/web/20100804001129/http://www.lisproject.org/key-figures/kf-workbook.xls
 Rwanda,1986,0.29,,con,ae,FALSE,NIS Rwanda con ae 1,National Institute of Statistics of Rwanda 2002,27,http://www.statistics.gov.rw/file/714/download?token=J-PX22mI
 Rwanda,2001,0.45,,con,ae,FALSE,NIS Rwanda con ae 1,National Institute of Statistics of Rwanda 2002,27,http://www.statistics.gov.rw/file/714/download?token=J-PX22mI
 Rwanda,2001,0.473,,con,ae,FALSE,NIS Rwanda con ae 2,National Institute of Statistics of Rwanda 2006,25,http://www.statistics.gov.rw/file/710/download?token=F2o-qYal
 Rwanda,2005,0.508,,con,ae,FALSE,NIS Rwanda con ae 2,National Institute of Statistics of Rwanda 2006,25,http://www.statistics.gov.rw/file/710/download?token=F2o-qYal
-Rwanda,2005,0.507,,con,ae,FALSE,NIS Rwanda con ae 3,National Institute of Statistics of Rwanda 2015,25,http://www.statistics.gov.rw/file/4135/download?token=cylGgLRl
+Rwanda,2001,0.507,,con,ae,FALSE,NIS Rwanda con ae 3,National Institute of Statistics of Rwanda 2015,25,http://www.statistics.gov.rw/file/4135/download?token=cylGgLRl
 Rwanda,2005,0.522,,con,ae,FALSE,NIS Rwanda con ae 3,National Institute of Statistics of Rwanda 2015,25,http://www.statistics.gov.rw/file/4135/download?token=cylGgLRl
 Rwanda,2010,0.49,,con,ae,FALSE,NIS Rwanda con ae 3,National Institute of Statistics of Rwanda 2015,25,http://www.statistics.gov.rw/file/4135/download?token=cylGgLRl
 Rwanda,2014,0.448,,con,ae,FALSE,NIS Rwanda con ae 3,National Institute of Statistics of Rwanda 2015,25,http://www.statistics.gov.rw/file/4135/download?token=cylGgLRl
@@ -1958,9 +1958,9 @@ Vanuatu,2010,0.37,,con,pc,,VNSO con pc,Vanuatu National Statistics Office 2013,1
 Vanuatu,2006,0.46,,con,pc,,ZKM2014 Vanuatu con pc,"Zhuang, Kanbur, and Maligalig 2014",25,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA25
 Venezuela,1970,0.49,,disp,hh,,vGP1984 Venezuela disp hh,Tabatabai 1996; van Ginneken and Park 1984,117,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Vietnam,1993,0.357,,con,pc,,FR2008 Vietnam con pc,Ferreira and Ravallion 2008,40,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
-Vietnam,1999,0.39,,gross,pc,FALSE,GSO Vietnam gross pc,General Statistics Office of Vietnam 2005,,http://www.gso.gov.vn/default_en.aspx?tabid=508&ItemID=2510
-Vietnam,2002,0.42,,gross,pc,FALSE,GSO Vietnam gross pc,General Statistics Office of Vietnam 2005,,http://www.gso.gov.vn/default_en.aspx?tabid=508&ItemID=2510
-Vietnam,2004,0.413,,gross,pc,FALSE,GSO Vietnam gross pc,General Statistics Office of Vietnam 2005,,http://www.gso.gov.vn/default_en.aspx?tabid=508&ItemID=2510
+Vietnam,1999,0.39,,gross,pc,FALSE,GSO Vietnam 2005 gross pc,General Statistics Office of Vietnam 2005,,http://www.gso.gov.vn/default_en.aspx?tabid=508&ItemID=2510
+Vietnam,2002,0.42,,gross,pc,FALSE,GSO Vietnam 2005 gross pc,General Statistics Office of Vietnam 2005,,http://www.gso.gov.vn/default_en.aspx?tabid=508&ItemID=2510
+Vietnam,2004,0.413,,gross,pc,FALSE,GSO Vietnam 2005 gross pc,General Statistics Office of Vietnam 2005,,http://www.gso.gov.vn/default_en.aspx?tabid=508&ItemID=2510
 Vietnam,2008,0.356,,con,pc,,ZKM2014 Viet Nam con pc,"Zhuang, Kanbur, and Maligalig 2014",22,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA22
 Vietnam,2008,0.445,,gross,pc,,ZKM2014 Viet Nam gross pc,"Zhuang, Kanbur, and Maligalig 2014",22,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA22
 Yemen,1992,0.395,,con,pc,,FR2008 Yemen con pc,Ferreira and Ravallion 2008,40,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
