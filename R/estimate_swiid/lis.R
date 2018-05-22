@@ -15,7 +15,7 @@ baseline_series <- "LIS disp sqrt"
 baseline_wd <- str_split(baseline_series, "\\s")[[1]] %>% nth(-2)
 baseline_es <- str_split(baseline_series, "\\s")[[1]] %>% last()
 
-x0 <- ineq2 %>%  
+x0 <- ineq %>%  
   filter(k_bl_obs > 0) %>%                    # use only data for countries with some baseline obs
   mutate(kcode = as.integer(factor(country, levels = unique(country))),
          rcode = as.integer(factor(region, levels = unique(region))),
@@ -144,7 +144,7 @@ source_data <- list(  K = max(x$kcode),
 
 # Stan
 start <- proc.time()
-out1 <- stan(file = "R/estimate_swiid/lis2.stan",
+out1 <- stan(file = "R/estimate_swiid/lis.stan",
              data = source_data,
              seed = seed,
              iter = iter,

@@ -42,7 +42,15 @@ data{
   int<lower=1, upper=KE> kekwe[KWE];      // country--equiv-scale for kwe
   int<lower=1, upper=KWE> kwes[S];        // country--welfare-def--equiv-scale for s
 }  
+
+transformed data {
+  int<lower=1-SO, upper=S-SO> sn[N];
   
+  for (n in 1:N) {
+    sn[n] = ss[n] - SO; 
+  }
+}
+
 parameters {
   real<lower=0, upper=1> gini[KT];        // SWIID gini estimate for baseline in country k at time t
   real<lower=0> sigma_gini; 	            // random-walk variance parameter
@@ -94,7 +102,7 @@ transformed parameters {
   vector[SO] beta_1s;             // varying slope for series (within kwe)
 
   // varying intercepts for regions
-  for (r in 1:r) {
+  for (r in 1:R) {
     beta_0r[r] = beta_0 + dev_r[r];
   }
   
@@ -195,12 +203,12 @@ model {
   gini_b[(N_ibl+1):N_wbl] ~ normal(beta_0k[kk[(N_ibl+1):N_wbl]] + beta_1s[ss[(N_ibl+1):N_wbl]] .* gini_t[(N_ibl+1):N_wbl], sigma_e);
   
   // estimate series-specific slope for series without overlap
-  beta_1s_tilde[(SO+1):S] ~ normal(beta_1kwe[kwes[(SO+1):S]], sigma_s);
+  beta_1s_tilde[1:(S-SO)] ~ normal(beta_1kwe[kwes[(SO+1):S]], sigma_s);
   
   // predict gini
   gini[kktt[1:N_ibl]] ~ normal(gini_b[1:N_ibl], gini_b_se[1:N_ibl]); // use baseline series where observed
   
   gini[kktt[(N_wbl+1):N_obl]] ~ normal(beta_0k[kk[(N_wbl+1):N_obl]] + beta_1s[ss[(N_wbl+1):N_obl]] .* gini_t[(N_wbl+1):N_obl], sigma_0); // estimate gini with rho_s (for series with overlap)
   
-  gini[kktt[(N_obl+1):N]] ~ normal(beta_0k[kk[(N_obl+1):N]] + beta_1s_tilde[ss[(N_obl+1):N]] .* gini_t[(N_obl+1):N], sigma_0); // estimate gini with rho_s (for series without overlap) 
+  gini[kktt[(N_obl+1):N]] ~ normal(beta_0k[kk[(N_obl+1):N]] + beta_1s_tilde[(sn[(N_obl+1):N])] .* gini_t[(N_obl+1):N], sigma_0); // estimate gini with rho_s (for series without overlap) 
 }
