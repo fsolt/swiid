@@ -6,25 +6,20 @@ load("data/ineq.rda")
 
 seed <- 324
 iter <- 2000
-warmup <- iter - 500
+warmup <- iter - 1000
 chains <- 3
 cores <- chains
-adapt_delta <- .9
+adapt_delta <- .8
 
 baseline_series <- "LIS disp sqrt"
 baseline_wd <- str_split(baseline_series, "\\s")[[1]] %>% nth(-2)
 baseline_es <- str_split(baseline_series, "\\s")[[1]] %>% last()
 
 x0 <- ineq2 %>%  
-  mutate(kcode = as.integer(factor(country, levels = unique(country))),
-         rcode = as.integer(factor(region, levels = unique(region))),
-         scode = as.integer(factor(series, levels = unique(series))),
-         wecode = as.integer(factor(wdes, levels = unique(wdes))),
-         kwecode = as.integer(factor(100*kcode+wecode)),
-         rwecode = as.integer(factor(100*rcode+wecode)),
-         wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)),
-         ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)),
-         kwcode = as.integer(factor(100*kcode+wcode))) 
+  filter(k_bl_obs > 0) # %>%                    # use only data for countries with some baseline obs
+  # mutate(wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)) +
+  #          (1 - str_detect(baseline_series, str_replace(wdes, "_", " "))),
+  #        ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)))  # redo codes for filtered sample
 
 kt <- x0 %>%  
   transmute(kcode = kcode,
@@ -36,17 +31,8 @@ kt <- x0 %>%
   ungroup() %>% 
   mutate(ktcode = 1:n())
 
-rwe2codes <- rho_we %>%
-  filter(wcode == 1) %>%        # baseline_wd is always coded 1
-  transmute(wdes2 = wdes,
-            rwe2code = rwecode,
-            rcode = rcode) %>% 
-  distinct() 
-
 x <- x0 %>% 
-  left_join(kt, by = c("kcode", "tcode")) %>% 
-  mutate(wdes2 = str_replace(wdes, ".*_", "disp_")) %>% 
-  left_join(rwe2codes, by = c("wdes2", "rcode"))
+  left_join(kt, by = c("kcode", "tcode"))
 
 kn <- x %>% 
   group_by(kcode) %>% 
@@ -55,6 +41,42 @@ kn <- x %>%
             kr = first(rcode)) %>% 
   ungroup()
 
+gamma_ke1 <- gamma_ke %>% 
+    filter(kcode %in% x$kcode)
+
+gamma_kw1 <- gamma_kw %>% 
+  filter(kcode %in% x$kcode)
+
+wwe <- x %>%
+  group_by(wecode) %>%
+  summarize(wcode = first(wcode)) %>% 
+  pull(wcode)
+
+wrw <- x %>% 
+  group_by(rwcode) %>% 
+  summarize(wcode = first(wcode))
+
+ere <- x %>% 
+  group_by(recode) %>% 
+  summarize(ecode = first(ecode))
+
+rwkw <- x %>% 
+  group_by(kwcode) %>% 
+  summarize(rwcode = first(rwcode))
+
+reke <- x %>% 
+  group_by(kecode) %>% 
+  summarize(recode = first(recode))
+
+k_kwe <- x %>% 
+  group_by(kwecode) %>% 
+  summarize(kwcode = first(kwcode),
+            kecode = first(kecode))
+
+kwes <- x %>% 
+  group_by(scode) %>% 
+  summarize(kwecode = first(kwecode)) %>% 
+  pull(kwecode)
 
 # Format data for Stan
 source_data <- list(  K = max(x$kcode),
@@ -62,62 +84,66 @@ source_data <- list(  K = max(x$kcode),
                       KT = nrow(kt),
                       R = max(x$rcode),
                       S = max(x$scode),
+                      SO = x %>% filter(obl) %>% pull(scode) %>% max(),
+                      SN = max(x$scode) - (x %>% filter(obl) %>% pull(scode) %>% max()),
                       WE = max(x$wecode),
                       KWE = max(x$kwecode),
-                      RWE = max(x$rwecode),
                       KW = max(x$kwcode),
+                      KE = max(x$kecode),
                       RW = max(x$rwcode),
+                      RE = max(x$recode),
                       W = max(x$wcode),
                       E = max(x$ecode),
-
+                      
                       N = nrow(x),
-                      N_ibl = nrow(x %>% filter(ibl)),
-                      N_bl = nrow(x %>% filter(!is.na(gini_b))),
-                      N_obl = nrow(x %>% filter(s_bl_obs>0)),
-                      N_bk = nrow(x %>% filter(k_bl_obs > 0)),
-                      N_kw = nrow(x %>% filter(kw)),
+                      N_ibl = x %>% filter(ibl) %>% nrow(),
+                      N_wbl = x %>% filter(bl) %>% nrow(),
+                      N_obl = x %>% filter(obl) %>% nrow(),
+                      N_nbl = nrow(x) - (x %>% filter(obl) %>% nrow()),
                       
                       kk = x$kcode,
                       tt = x$tcode,
                       kktt = x$ktcode,
+                      ktt = kt$tcode,
+                      ktk = kt$kcode,
                       kn = kn$yrspan,
                       kt1 = kn$kt1,
-                      kr = kn$kr,
                       rr = x$rcode,
                       ss = x$scode,
+                      sn = x %>% filter(!obl) %>% mutate(sn = scode - (x %>% filter(obl) %>% pull(scode) %>% max())) %>% pull(sn),
                       wen = x$wecode,
                       kwen = x$kwecode,
-                      kwn = x$kwcode,
-                      rwen = x$rwecode,
-                      rwen2 = x$rwe2code,
-                      gini_m = x$gini_m,
-                      gini_m_se = x$gini_m_se,
+                      gini_n = x$gini_n,
+                      gini_n_se = x$gini_n_se,
                       gini_b = x$gini_b[!is.na(x$gini_b)],
                       gini_b_se = x$gini_b_se[!is.na(x$gini_b_se)],
                       
-                      M = length(rho_we$rho),
-                      kkm = rho_we$kcode,      
-                      rrm = rho_we$rcode,
-                      ttm	= rho_we$tcode,
-                      wem = rho_we$wecode,
-                      kwem = rho_we$kwecode,
-                      rwem = rho_we$rwecode,
-                      rho_we = rho_we$rho,
-                      rho_we_se = rho_we$rho_se,
+                      rk = kn$kr,
                       
-                      P = length(rho_wd$rho_wd),
-                      kkp = rho_wd$kcode,      
-                      rrp = rho_wd$rcode,
-                      kwp = rho_wd$kwcode,
-                      rho_w = rho_wd$rho_wd,
-                      rho_w_se = rho_wd$rho_wd_se
+                      wrw = wrw$wcode,
+                      ere = ere$ecode, 
+                      rwkw = rwkw$rwcode,
+                      reke = reke$recode,
+                      kwkwe = k_kwe$kwcode,
+                      kekwe = k_kwe$kecode,
+                      kwes = kwes,
+                      
+                      M = nrow(gamma_ke1),
+                      kkm = gamma_ke1$kcode,
+                      kem = gamma_ke1$kecode,
+                      blm = gamma_ke1$bl,
+                      gini_m = gamma_ke1$gini_m,
+                      
+                      P = nrow(gamma_kw1),
+                      kkp = gamma_kw1$kcode,
+                      kwp = gamma_kw1$kwcode,
+                      blp = gamma_kw1$bl,
+                      gini_p = gamma_kw1$gini_p
 )
 
 # Stan
-rstan_options(auto_write = TRUE)
-
 start <- proc.time()
-out1 <- stan(file = "R/estimate_swiid/all.stan",
+out1 <- stan(file = "R/estimate_swiid/lis.stan",
              data = source_data,
              seed = seed,
              iter = iter,
@@ -132,13 +158,14 @@ runtime
 lapply(get_sampler_params(out1, inc_warmup = FALSE),
        summary, digits = 2)
 
-save(x, out1, file = str_c("data/all_", iter/1000, "k_", 
-                           str_replace(Sys.time(), " ", "_") %>% str_replace("2018-", ""), ".rda"))
+save(x, out1, file = str_c("data/lis2_", iter/1000, "k_", 
+                        str_replace(Sys.time(), " ", "_") %>% str_replace("2018-", ""), ".rda"))
 
 # Plots
 source("R/plot_tscs.R")
-plot_tscs(x, out1, save_pdf = "paper/figures/ts_all.pdf")
+plot_tscs(x, out1, save_pdf = "paper/figures/ts_lis2_.pdf")
 plot_tscs(x, out1)
 
 shinystan::launch_shinystan(out1)
+
 beep() # chime

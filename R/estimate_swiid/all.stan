@@ -4,150 +4,231 @@ data{
   int<lower=1> KT;                        // number of observed & interpolated country-years
   int<lower=1> R;                         // number of regions
   int<lower=1> S; 				                // number of series (in countries with baseline)
+  int<lower=1> SO;                        // number of series with some baseline ("series [with] overlap")
+  int<lower=1> SN;                        // number of series without baseline ("series no overlap")
   int<lower=1> WE;                        // number of combos of welfare def and eq scale ("wd_es")
-  int<lower=1> KWE;                       // number of combos of country and wd_es
-  int<lower=1> RWE;                       // number of combos of region and wd_es
-  int<lower=1> KW;                        // number of combos of country and welfare definition
+  int<lower=1> KWE;                       // number of combos of country and wd_es (in countries with baseline)
+  int<lower=1> KW;                        // number of combos of country and welfare-def (in countries with baseline)
+  int<lower=1> KE;                        // number of combos of country and equiv-scale (in countries with baseline)
+  int<lower=1> RW;                        // number of combos of region and welfare-def (in countries with baseline)
+  int<lower=1> RE;                        // number of combos of region and equiv-scale (in countries with baseline)
   int<lower=1> W;                         // number of welfare definitions
   int<lower=1> E;                         // number of equivalence scales
-
+  
   int<lower=1> N;                         // total number of obs
   int<lower=1> N_ibl;                     // number of baseline obs ("is baseline")
-  int<lower=1> N_bl;                      // number of obs with baseline
+  int<lower=1> N_wbl;                     // number of obs with baseline
   int<lower=1> N_obl;                     // number of obs in series with some baseline ("overlap baseline")
-  int<lower=1> N_bk;                      // number of obs in countries with some baseline data ("baseline countries")
-  int<lower=1> N_kw;                      // number of obs with in-country ratios to baseline welfare_def 
-
+  int<lower=1> N_nbl;                     // number of obs in series without baseline ("no baseline")
   int<lower=1, upper=K> kk[N]; 	          // country for observation n
   int<lower=1, upper=T> tt[N]; 	          // year for observation n
   int<lower=1, upper=KT> kktt[N];         // country-year for observation n
   int<lower=1, upper=T> kn[K];            // number of observed & interpolated country-years by country
   int<lower=1, upper=KT> kt1[K];          // location of first kt for country k
-  int<lower=1, upper=R> kr[K];            // region for country k
   int<lower=1, upper=R> rr[N];            // region for observation n
   int<lower=1, upper=S> ss[N];            // series for observation n
+  int<lower=1, upper=SN> sn[N_nbl];       // series without overlap for observation nbl
   int<lower=1, upper=WE> wen[N];          // wd_es for observation n
-  int<lower=1, upper=KWE> kwen[N];        // country-wd_es for observation n
-  int<lower=0, upper=KW> kwn[N];          // kw for observation n
-  int<lower=1, upper=RWE> rwen[N];        // rwe for region-welfare_def-equiv_sc of observation n
-  int<lower=1, upper=RWE> rwen2[N];       // rwe for region-*baseline_wd*-equiv_sc of observation n
+  int<lower=1, upper=KWE> kwen[N];        // kwe for observation n
+  vector<lower=0, upper=1>[N] gini_n; 	  // observed gini for observation n
+  vector<lower=0, upper=1>[N] gini_n_se;  // std error of measured gini for obs n
+  vector<lower=0, upper=1>[N_wbl] gini_b;  // baseline gini for obs n
+  vector<lower=0, upper=1>[N_wbl] gini_b_se; // std error of baseline gini for obs n
+
+  int<lower=1, upper=R> rk[K];            // region for country k
+
+  int<lower=1, upper=W> wrw[RW];          // welfare-def for rwe  
+  int<lower=1, upper=E> ere[RE];          // equiv-scale for rwe 
+  int<lower=1, upper=RW> rwkw[KW];        // region--welfare-def for kw  
+  int<lower=1, upper=RE> reke[KE];        // region--equiv-scale for ke 
+  int<lower=0, upper=KW> kwkwe[KWE];      // country--welfare-def for kwe
+  int<lower=1, upper=KE> kekwe[KWE];      // country--equiv-scale for kwe
+  int<lower=1, upper=KWE> kwes[S];        // country--welfare-def--equiv-scale for s
   
-  vector<lower=0, upper=1>[N] gini_m; 	  // measured gini for observation n
-  vector<lower=0, upper=1>[N] gini_m_se;  // std error of measured gini for obs n
-  vector<lower=0, upper=1>[N_bl] gini_b;  // baseline gini for obs n
-  vector<lower=0, upper=1>[N_bl] gini_b_se; // std error of baseline gini for obs n
-  
-  int<lower=1> M;                         // number of observed ratios of baseline to wd_es (rho_we)
-  int<lower=1, upper=K> kkm[M]; 	        // country for rho_we observation m
-  int<lower=1, upper=R> rrm[M];           // region for rho_we observation m
-  int<lower=1, upper=WE> wem[M];          // wd_es for rho_we observation m
-  int<lower=1, upper=KWE> kwem[M];        // country-wd_es for rho_we observation m
-  int<lower=1, upper=RWE> rwem[M];        // region-wd_es for rho_we observation m
-  real<lower=0> rho_we[M];                // observed ratio of baseline to wd_es
-  real<lower=0> rho_we_se[M];             // std error of rho_we
-  
-  int<lower=1> P;                         // number of observed ratios of baseline_wd to wd (rho_w)
-  int<lower=1, upper=K> kkp[P]; 	        // country for rho_w observation p
-  int<lower=1, upper=R> rrp[P];           // region for rho_w observation p
-  int<lower=1, upper=KW> kwp[P];          // kw for rho_w observation p
-  real<lower=0> rho_w[P];                 // observed ratio of baseline_wd to wd
-  real<lower=0> rho_w_se[P];              // std error of rho_w
+  int<lower=1> M;                         // number of observations of each es to baseline_es with constant wd
+  int<lower=1, upper=K> kkm[M];              // country for observation m
+  int<lower=1, upper=KE> kem[M];             // country--equiv-scale for observation m
+  vector<lower=0, upper=1>[M] blm;        // baseline gini for observation m
+  vector<lower=0, upper=1>[M] gini_m;     // observed gini for observation m
+
+  int<lower=1> P;                         // number of observations of each wd to baseline_wd with constant es
+  int<lower=1, upper=K> kkp[P];              // country for observation p
+  int<lower=1, upper=KW> kwp[P];             // country--welfare-def for observation p
+  vector<lower=0, upper=1>[P] blp;        // baseline gini for observation p
+  vector<lower=0, upper=1>[P] gini_p;     // observed gini for observation p
 }  
-  
+
 parameters {
   real<lower=0, upper=1> gini[KT];        // SWIID gini estimate for baseline in country k at time t
   real<lower=0> sigma_gini; 	            // random-walk variance parameter
-  vector[N] gini_t;                       // unknown "true" gini given gini_m and gini_m_se
-  vector[M] rho_we_t;                     // unknown "true" rho_we given rho_we and rho_we_se
-  vector[P] rho_w_t;                       // unknown "true" rho_wd given rho_w and rho_w_se
-  
-  vector<lower=0>[S] rho_s;               // ratio of baseline to series s
-  real<lower=0> sigma_s[R]; 	            // series noise 
-  
-  vector<lower=0>[KWE] rho_kwe_hat;       // estimated rho_we by country
-  real<lower=0> sigma_kwe[R];             // rho_kwe_hat noise (by region)
-  
-  vector<lower=0>[KW] rho_kw_hat;         // estimated rho_w by country
-  real<lower=0> sigma_kw[R];              // rho_kw_hat noise (by region)
-  
-  vector<lower=0>[RWE] rho_rwe_hat;       // estimated rho_we by region
-  real<lower=0> sigma_rwe[R];             // rho_rwe_hat noise
+  vector[N] gini_t;                       // unknown "true" gini given gini_n and gini_n_se
 
-  real<lower=0> hp_mu_s[R];
-  real<lower=0> hp_sigma_s;
-  real<lower=0> hp_mu_kwe[R];
-  real<lower=0> hp_sigma_kwe;
-  real<lower=0> hp_mu_rwe[R];
-  real<lower=0> hp_sigma_rwe;
-  real<lower=0> hp_mu_kw[R];
-  real<lower=0> hp_sigma_kw;
+  real beta_0;                // overall average intercept
+  real gamma_0w;              // overall average welfare-def slope
+  real gamma_0e;              // overall average equiv-scale slope
+  
+  real dev_k[K];              // deviation for each country (within regions)
+  real dev_r[R];              // deviation for each region
+
+  real dev_w[W];              // deviation for each welfare-def
+  real dev_e[E];              // deviation for each equiv-scale
+  real dev_rw[RW];            // deviation for each region--welfare-def
+  real dev_re[RE];            // deviation for each region--equiv-scale
+  real dev_kw[KW];            // deviation for each country--welfare-def
+  real dev_ke[KE];            // deviation for each country--equiv-scale
+  real dev_kwe[KWE];          // deviation for each country--welfare-def--equiv-scale
+  real dev_s[S];              // deviation for each series (within kwe)
+  
+  real<lower=0> sigma_k;      // sd for the country deviations in alpha_0
+  real<lower=0> sigma_r; 	    // sd for the region deviations in alpha_0
+
+  real<lower=0> sigma_w;      // sd for the w deviations
+  real<lower=0> sigma_e;      // sd for the e deviations
+  real<lower=0> sigma_rw;     // sd for the rw deviations
+  real<lower=0> sigma_re;     // sd for the re deviations
+  real<lower=0> sigma_kw;     // sd for the kw deviations
+  real<lower=0> sigma_ke;     // sd for the ke deviations
+  real<lower=0> sigma_kwe;    // sd for the kwe deviations
+  real<lower=0> sigma_s; 	    // sd for the series deviations 
+
+  real<lower=0> sigma_0e;     // observation errors for country--equiv-scales
+  real<lower=0> sigma_0w;     // observation errors in country--welfare-defs
+  real<lower=0> sigma_0s;     // observation errors in series
+  
+  vector[SN] beta_1s_tilde;         // estimated series-specific slope for series without overlap
 }
 
 transformed parameters {
-  real<lower=0> sigma_krcat[R];
-  real<lower=0> sigma_rrcat[R];
-  
+  vector[K] beta_0k;
+  vector[R] beta_0r;
+
+  vector[W] gamma_w;
+  vector[E] gamma_e;
+  vector[RW] gamma_rw;
+  vector[RE] gamma_re;
+  vector[KW] gamma_kw;
+  vector[KE] gamma_ke;
+  vector[KWE] beta_1kwe;          // varying slope for country--welfare-def--equiv-scale
+  vector[SO] beta_1s;             // varying slope for series (within kwe)
+
+  // varying intercepts for regions
   for (r in 1:R) {
-    sigma_krcat[r] = sqrt(square(sigma_kw[r]) + square(sigma_rwe[r])); 
-    sigma_rrcat[r] = sqrt(2 * square(sigma_rwe[r])); 
+    beta_0r[r] = beta_0 + dev_r[r];
+  }
+  
+  // varying intercepts for countries 
+  for (k in 1:K) {
+    beta_0k[k] = beta_0r[rk[k]] + dev_k[k];
+  }
+
+  // varying slope components for welfare-defs 
+  for (w in 1:W) {
+    gamma_w[w] = gamma_0w + dev_w[w]; 
+  }
+  
+  // varying slope components for equiv-scales
+  for (e in 1:E) {
+    gamma_e[e] = gamma_0e + dev_e[e]; 
+  }
+
+  // varying slope components for region--welfare-defs 
+  for (rw in 1:RW) {
+    gamma_rw[rw] = gamma_w[wrw[rw]] + dev_rw[rw]; 
+  }
+  
+  // varying slope components for region--equiv-scales
+  for (re in 1:RE) {
+    gamma_re[re] = gamma_e[ere[re]] + dev_re[re]; 
+  }
+
+  // varying slope components for country--welfare-defs 
+  for (kw in 1:KW) {
+    gamma_kw[kw] = gamma_rw[rwkw[kw]] + dev_kw[kw]; 
+  }
+  
+  // varying slope components for country--equiv-scales
+  for (ke in 1:KE) {
+    gamma_ke[ke] = gamma_re[reke[ke]] + dev_ke[ke]; 
+  }
+ 
+  // varying slopes for country--welfare-def--equiv-scales 
+  for (kwe in 1:KWE) {
+    beta_1kwe[kwe] = gamma_kw[kwkwe[kwe]] * gamma_ke[kekwe[kwe]] + dev_kwe[kwe];
+  }
+  
+  // varying slopes for series s (only series with overlap)
+  for (so in 1:SO) {
+    beta_1s[so] = beta_1kwe[kwes[so]] + dev_s[so];
   }
 }
 
 model {
-  hp_mu_s ~ normal(0, .05);
-  hp_sigma_s ~ normal(0, .02);
-  hp_mu_kwe ~ normal(0, .05);
-  hp_sigma_kwe ~ normal(0, .02);
-  hp_mu_rwe ~ normal(0, .05);
-  hp_sigma_rwe ~ normal(0, .02);
-  hp_mu_kw ~ normal(0, .05);
-  hp_sigma_kw ~ normal(0, .01);
+  // priors
+  sigma_gini ~ normal(0, .01);
   
-  sigma_gini ~ normal(.01, .0025);
-  
-  for (r in 1:R) {                // can't vectorize b/c need to truncate
-    sigma_s[r] ~ normal(hp_mu_s[r], hp_sigma_s) T[0,];
-    sigma_kwe[r] ~ normal(hp_mu_kwe[r], hp_sigma_kwe) T[0,];
-    sigma_rwe[r] ~ normal(hp_mu_rwe[r], hp_sigma_rwe) T[0,];
-    sigma_kw[r] ~ normal(hp_mu_kw[r], hp_sigma_kw) T[0,];
-  }
+  sigma_r ~ normal(0, .04);
+  sigma_k ~ normal(0, .02);
 
-  gini_m ~ normal(gini_t, gini_m_se);
-  rho_we ~ normal(rho_we_t, rho_we_se);
-  rho_w ~ normal(rho_w_t, rho_w_se);
+  sigma_w ~ normal(0, .07);
+  sigma_e ~ normal(0, .07);
+  sigma_rw ~ normal(0, .06); 
+  sigma_re ~ normal(0, .06); 
+  sigma_kw ~ normal(0, .05); 
+  sigma_ke ~ normal(0, .05); 
+  sigma_kwe ~ normal(0, .05);  
+  sigma_s ~ normal(0, .03);
 
-  rho_s ~ normal(1, .2);
-  rho_kwe_hat ~ normal(1, .2);
-  rho_rwe_hat ~ normal(1, .1);
-  rho_kw_hat ~ lognormal(0, .15);
-  
+  sigma_0e ~ normal(0, .02);
+  sigma_0w ~ normal(0, .02);
+  sigma_0s ~ normal(0, .02);
+
+  beta_0 ~ normal(0, .1);
+  gamma_0w ~ normal(1, .25);
+  gamma_0e ~ normal(1, .25);
+
   for (k in 1:K) {
     if (kn[k] > 1) {
-      gini[kt1[k]] ~ normal(.35, .125);                         // a random draw from N() in first year
+      gini[kt1[k]] ~ normal(.35, .1);                         // a random draw from N() in first year
       gini[(kt1[k]+1):(kt1[k]+kn[k]-1)] ~ normal(gini[(kt1[k]):(kt1[k]+kn[k]-2)], sigma_gini); // otherwise a random walk from previous year 
     } else {
-      gini[kt1[k]] ~ normal(.35, .125);                         // a random draw from N()
+      gini[kt1[k]] ~ normal(.35, .1);                         // a random draw from N()
     }
   }
-  
-  gini_b[N_ibl+1:N_bl] ~ normal(rho_s[ss[N_ibl+1:N_bl]] .* gini_t[N_ibl+1:N_bl], sigma_s[rr[N_ibl+1:N_bl]]); // estimate rho_s for obs with baseline
-  rho_kwe_hat[kwem] ~ normal(rho_we_t, sigma_kwe[rrm]); // estimate rho_kwe_hat (over 1:M)
-  rho_rwe_hat[rwem] ~ normal(rho_we_t, sigma_rwe[rrm]); // estimate rho_rwe_hat (over 1:M)
-  rho_kw_hat[kwp] ~ normal(rho_w_t, sigma_kw[rrp]);     // estimate rho_kw_hat (over 1:P)
 
-  // obs w/ baseline use baseline
-  gini[kktt[1:N_ibl]] ~ normal(gini_b[1:N_ibl], gini_b_se[1:N_ibl]); 
+  // estimation of gini_t
+  gini_n ~ normal(gini_t, gini_n_se);  
   
-  // obs in countries w/ baseline in series w/ overlap use rho_s
-  gini[kktt[(N_bl+1):N_obl]] ~ normal(gini_t[(N_bl+1):N_obl] .* rho_s[ss[(N_bl+1):N_obl]], sigma_s[rr[(N_bl+1):N_obl]]); 
+  // distribution of varying intercepts
+  dev_r ~ normal(0, sigma_r);
+  dev_k ~ normal(0, sigma_k);
   
-  // obs in countries w/ baseline in series w/o overlap use rho_kwe_hat
-  gini[kktt[(N_obl+1):N_bk]] ~ normal(rho_kwe_hat[kwen[(N_obl+1):N_bk]] .* gini_t[(N_obl+1):N_bk], sigma_kwe[rr[(N_obl+1):N_bk]]);
+  dev_w ~ normal(0, sigma_w);
+  dev_e ~ normal(0, sigma_e);
   
-  // obs in countries w/o baseline but w/ rho_w use rho_kw_hat for wd adj and then rho_rwe_hat for es adj
-  gini[kktt[N_bk:N_kw]] ~ normal(rho_kw_hat[kwn[N_bk:N_kw]] .* rho_rwe_hat[rwen2[N_bk:N_kw]] .* gini_t[N_bk:N_kw], sigma_krcat[rr[N_bk:N_kw]]);
-
-  // obs in countries w/o rho_w use one-step estimates from rho_rwe_hat
-  gini[kktt[(N_kw+1):N]] ~ normal(rho_rwe_hat[rwen[(N_kw+1):N]] .* gini_t[(N_kw+1):N], sigma_rrcat[rr[(N_kw+1):N]]);
-
+  dev_rw ~ normal(0, sigma_rw);
+  dev_re ~ normal(0, sigma_re);
+  dev_kw ~ normal(0, sigma_kw);
+  dev_ke ~ normal(0, sigma_ke);
+  
+  dev_kwe ~ normal(0, sigma_kwe);
+  dev_s ~ normal(0, sigma_s);
+  
+  // estimate series-specific slope for series with overlap
+  gini_b[(N_ibl+1):N_wbl] ~ normal(beta_0k[kk[(N_ibl+1):N_wbl]] + beta_1s[ss[(N_ibl+1):N_wbl]] .* gini_t[(N_ibl+1):N_wbl], sigma_0s);
+  
+  // estimate country--equiv-scale deviations
+  blm[1:M] ~ normal(beta_0k[kkm[1:M]] + gamma_ke[kem[1:M]] .* gini_m[1:M], sigma_0e);
+  
+  // estimate country--welfare-def deviations
+  blp[1:P] ~ normal(beta_0k[kkp[1:P]] + gamma_kw[kwp[1:P]] .* gini_p[1:P], sigma_0w);
+  
+  // estimate series-specific slope for series without overlap
+  beta_1s_tilde[1:(S-SO)] ~ normal(beta_1kwe[kwes[(SO+1):S]], sigma_0s);
+  
+  // predict gini
+  gini[kktt[1:N_ibl]] ~ normal(gini_b[1:N_ibl], gini_b_se[1:N_ibl]); // use baseline series where observed
+  
+  gini[kktt[(N_wbl+1):N_obl]] ~ normal(beta_0k[kk[(N_wbl+1):N_obl]] + beta_1s[ss[(N_wbl+1):N_obl]] .* gini_t[(N_wbl+1):N_obl], sigma_0s); // estimate gini with rho_s (for series with overlap)
+  
+  gini[kktt[(N_obl+1):N]] ~ normal(beta_0k[kk[(N_obl+1):N]] + beta_1s_tilde[(sn[1:N_nbl])] .* gini_t[(N_obl+1):N], sigma_0s); // estimate gini with rho_s (for series without overlap) 
 }
