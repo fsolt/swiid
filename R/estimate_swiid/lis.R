@@ -5,26 +5,21 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 500
-warmup <- iter - 100
+iter <- 2000
+warmup <- iter - 1000
 chains <- 3
 cores <- chains
-adapt_delta <- .9
+adapt_delta <- .8
 
 baseline_series <- "LIS disp sqrt"
 baseline_wd <- str_split(baseline_series, "\\s")[[1]] %>% nth(-2)
 baseline_es <- str_split(baseline_series, "\\s")[[1]] %>% last()
 
-x0 <- ineq %>%  
-  filter(k_bl_obs > 0) %>%                    # use only data for countries with some baseline obs
-  mutate(kcode = as.integer(factor(country, levels = unique(country))),
-         rcode = as.integer(factor(region, levels = unique(region))),
-         scode = as.integer(factor(series, levels = unique(series))),
-         wecode = as.integer(factor(wdes, levels = unique(wdes))),
-         kwecode = as.integer(factor(100*kcode+wecode)),
-         wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)) +
-           (1 - str_detect(baseline_series, str_replace(wdes, "_", " "))),
-         ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)))  # redo codes for filtered sample
+x0 <- ineq2 %>%  
+  filter(k_bl_obs > 0) # %>%                    # use only data for countries with some baseline obs
+  # mutate(wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)) +
+  #          (1 - str_detect(baseline_series, str_replace(wdes, "_", " "))),
+  #        ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)))  # redo codes for filtered sample
 
 kt <- x0 %>%  
   transmute(kcode = kcode,
@@ -46,22 +41,11 @@ kn <- x %>%
             kr = first(rcode)) %>% 
   ungroup()
 
-x_countries <- unique(x$country)
-x_wdes <- x %>%
-    select(country, wdes) %>% 
-    unite("k_weldef_eqsc", c("country", "wdes")) %>% 
-    pull(k_weldef_eqsc) %>% 
-    unique()
+gamma_ke1 <- gamma_ke %>% 
+    filter(kcode %in% x$kcode)
 
-rho_we <- rho_we %>% 
-    filter(country %in% x_countries) %>% 
-    unite("k_w_e", c("country", "wdes"), remove = FALSE) %>% 
-    filter(k_w_e %in% x_wdes) %>% 
-    select(-matches("code"), -k_w_e) %>% 
-    left_join(x %>% 
-                  select("country", "year", "wdes", matches("code")) %>%
-                  distinct(),
-              by = c("country", "year", "wdes")) 
+gamma_kw1 <- gamma_kw %>% 
+  filter(kcode %in% x$kcode)
 
 wwe <- x %>%
   group_by(wecode) %>%
@@ -101,6 +85,7 @@ source_data <- list(  K = max(x$kcode),
                       R = max(x$rcode),
                       S = max(x$scode),
                       SO = x %>% filter(obl) %>% pull(scode) %>% max(),
+                      SN = max(x$scode) - (x %>% filter(obl) %>% pull(scode) %>% max()),
                       WE = max(x$wecode),
                       KWE = max(x$kwecode),
                       KW = max(x$kwcode),
@@ -110,10 +95,11 @@ source_data <- list(  K = max(x$kcode),
                       W = max(x$wcode),
                       E = max(x$ecode),
                       
-                      N = length(x$gini_m),
-                      N_ibl = length(x$ibl[x$ibl == TRUE]),
-                      N_wbl = length(x$gini_b[!is.na(x$gini_b)]),
-                      N_obl = length(x$s_bl_obs[x$s_bl_obs>0]),
+                      N = nrow(x),
+                      N_ibl = x %>% filter(ibl) %>% nrow(),
+                      N_wbl = x %>% filter(bl) %>% nrow(),
+                      N_obl = x %>% filter(obl) %>% nrow(),
+                      N_nbl = nrow(x) - (x %>% filter(obl) %>% nrow()),
                       
                       kk = x$kcode,
                       tt = x$tcode,
@@ -124,10 +110,11 @@ source_data <- list(  K = max(x$kcode),
                       kt1 = kn$kt1,
                       rr = x$rcode,
                       ss = x$scode,
+                      sn = x %>% filter(!obl) %>% mutate(sn = scode - (x %>% filter(obl) %>% pull(scode) %>% max())) %>% pull(sn),
                       wen = x$wecode,
                       kwen = x$kwecode,
-                      gini_m = x$gini_m,
-                      gini_m_se = x$gini_m_se,
+                      gini_n = x$gini_n,
+                      gini_n_se = x$gini_n_se,
                       gini_b = x$gini_b[!is.na(x$gini_b)],
                       gini_b_se = x$gini_b_se[!is.na(x$gini_b_se)],
                       
@@ -139,7 +126,19 @@ source_data <- list(  K = max(x$kcode),
                       reke = reke$recode,
                       kwkwe = k_kwe$kwcode,
                       kekwe = k_kwe$kecode,
-                      kwes = kwes
+                      kwes = kwes,
+                      
+                      M = nrow(gamma_ke1),
+                      kkm = gamma_ke1$kcode,
+                      kem = gamma_ke1$kecode,
+                      blm = gamma_ke1$bl,
+                      gini_m = gamma_ke1$gini_m,
+                      
+                      P = nrow(gamma_kw1),
+                      kkp = gamma_kw1$kcode,
+                      kwp = gamma_kw1$kwcode,
+                      blp = gamma_kw1$bl,
+                      gini_p = gamma_kw1$gini_p
 )
 
 # Stan
