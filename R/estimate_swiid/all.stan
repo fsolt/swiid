@@ -175,7 +175,7 @@ model {
   sigma_re ~ normal(0, .06); 
   sigma_kw ~ normal(0, .05); 
   sigma_ke ~ normal(0, .05); 
-  sigma_kwe ~ normal(0, .05);  
+  sigma_kwe ~ normal(0, .1);  
   sigma_s ~ normal(0, .03);
 
   sigma_0e ~ normal(0, .02);
