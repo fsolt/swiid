@@ -9,14 +9,14 @@ iter <- 200
 warmup <- iter - 100
 chains <- 3
 cores <- chains
-adapt_delta <- .8
+adapt_delta <- .9
 
 baseline_series <- "LIS disp sqrt"
 baseline_wd <- str_split(baseline_series, "\\s")[[1]] %>% nth(-2)
 baseline_es <- str_split(baseline_series, "\\s")[[1]] %>% last()
 
 x0 <- ineq2 %>%  
-  filter(k_bl_obs > 0) # %>%                    # use only data for countries with some baseline obs
+  filter(kbl)                    # use only data for countries with some baseline obs
 
 kt <- x0 %>%  
   transmute(kcode = kcode,
