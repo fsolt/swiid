@@ -2031,7 +2031,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
 
   ## Generate matched pairs of observations
   ineq1 <- ineq %>%
-    select(kcode, tcode, wdes, series, gini_n) %>%
+    select(kcode, tcode, wdes, series, gini_n, gini_n_se) %>%
     group_by(kcode, tcode, wdes) %>%
     mutate(ktscode = as.numeric(as.factor(series)),
            max_kts = max(ktscode),
@@ -2046,14 +2046,16 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
         filter(str_replace(wdes, ".*_", "") == baseline_es & ktscode > 0) %>%
         arrange(kcode, tcode) %>%
         filter(ktscode == kts1) %>% 
-        rename(gini_m = gini_n)
+        rename(gini_m = gini_n,
+               gini_m_se = gini_n_se)
       
       df2 <- df1 %>% 
         full_join(ineq1 %>%
                     filter(str_replace(wdes, ".*_", "") == baseline_es & ktscode > 0) %>%
                     arrange(kcode, tcode) %>%
                     filter(ktscode == kts2) %>%
-                    rename(bl = gini_n) %>%
+                    rename(bl = gini_n,
+                           bl_se = gini_n_se) %>%
                     select(-ktscode), 
                   by = c("kcode", "tcode", "wdes")) %>% 
         filter(!is.na(gini_m) & !is.na(bl) & !gini_m==bl) %>% 
@@ -2067,19 +2069,39 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
   
   # generate pairs matching baseline_es to each es (for all constant wd)
   gamma_ke <- map_df(c("market", "gross", "disp", "con"), function(w) {
-    map_df(1:max(ineq1$ktscode), function(kts) {
-      ineq1 %>% 
-        filter(ktscode == 0 | ktscode == kts) %>% 
-        select(-ktscode) %>% 
-        spread(key = wdes, value = gini_n) %>%
-        mutate(bl = get(paste0(w, "_", baseline_es))) %>%
-        select(kcode, tcode, bl, matches(w)) %>%
-        gather(key = wdes, value = gini_m, -kcode, -tcode, -bl) %>%
-        filter(!is.na(gini_m) & !is.na(bl)) %>%
-        mutate(es = str_replace(wdes, ".*_", "")) %>%
-        select(-wdes) %>%
-        arrange(kcode, tcode, es)
-    }) 
+    map_df(1:max(ineq1$ktscode), function(kts_oth) {
+      map_df(1:max(ineq1$ktscode), function(kts_bl) {
+        m <- ineq1 %>% 
+          filter(ktscode == 0 | 
+                   (ktscode == kts_bl & str_replace(wdes, ".*_", "") == baseline_es) |
+                   (ktscode == kts_oth & str_replace(wdes, ".*_", "") != baseline_es)) %>% 
+          select(-ktscode, -gini_n_se) %>% 
+          spread(key = wdes, value = gini_n) %>%
+          mutate(bl = get(paste0(w, "_", baseline_es))) %>%
+          select(kcode, tcode, bl, matches(w)) %>%
+          gather(key = wdes, value = gini_m, -kcode, -tcode, -bl) %>%
+          filter(!is.na(gini_m) & !is.na(bl)) %>%
+          mutate(es = str_replace(wdes, ".*_", "")) %>%
+          select(-wdes) %>%
+          arrange(kcode, tcode, es)
+        
+        m_se <- ineq1 %>% 
+          filter(ktscode == 0 | 
+                   (ktscode == kts_bl & str_replace(wdes, ".*_", "") == baseline_es) |
+                   (ktscode == kts_oth & str_replace(wdes, ".*_", "") != baseline_es)) %>% 
+          select(-ktscode, -gini_n) %>% 
+          spread(key = wdes, value = gini_n_se) %>%
+          mutate(bl_se = get(paste0(w, "_", baseline_es))) %>%
+          select(kcode, tcode, bl_se, matches(w)) %>%
+          gather(key = wdes, value = gini_m_se, -kcode, -tcode, -bl_se) %>%
+          filter(!is.na(gini_m_se) & !is.na(bl_se)) %>%
+          mutate(es = str_replace(wdes, ".*_", "")) %>%
+          select(-wdes) %>%
+          arrange(kcode, tcode, es)
+        
+        m1 <- left_join(m, m_se, by = c("kcode", "tcode", "es"))
+      }) 
+    })
   }) %>% 
     bind_rows(gamma_ke_bl) %>% 
     distinct() %>% 
@@ -2094,14 +2116,16 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
         filter(str_replace(wdes, "_.*", "") == baseline_wd & ktscode > 0) %>%
         arrange(kcode, tcode) %>%
         filter(ktscode == kts1) %>% 
-        rename(gini_p = gini_n)
+        rename(gini_p = gini_n,
+               gini_p_se = gini_n_se)
       
       df2 <- df1 %>% 
         full_join(ineq1 %>%
                     filter(str_replace(wdes, "_.*", "") == baseline_wd & ktscode > 0) %>%
                     arrange(kcode, tcode) %>%
                     filter(ktscode == kts2) %>%
-                    rename(bl = gini_n) %>%
+                    rename(bl = gini_n,
+                           bl_se = gini_n_se) %>%
                     select(-ktscode), 
                   by = c("kcode", "tcode", "wdes")) %>% 
         filter(!is.na(gini_p) & !is.na(bl) & !gini_p==bl) %>% 
@@ -2117,19 +2141,37 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
   gamma_kw <- map_df(c("pc", "hh", "sqrt", "oecdm", "ae"), function(e) {
     map_df(1:max(ineq1$ktscode), function(kts_oth) {
       map_df(1:max(ineq1$ktscode), function(kts_bl) {
-      ineq1 %>% 
-        filter(ktscode == 0 | 
-                 (ktscode == kts_bl & str_replace(wdes, "_.*", "") == baseline_wd) |
-                 (ktscode == kts_oth & str_replace(wdes, "_.*", "") != baseline_wd)) %>% 
-        select(-ktscode) %>% 
-        spread(key = wdes, value = gini_n) %>%
-        mutate(bl = get(paste0(baseline_wd, "_", e))) %>%
-        select(kcode, tcode, bl, matches(e)) %>%
-        gather(key = wdes, value = gini_p, -kcode, -tcode, -bl) %>%
-        filter(!is.na(gini_p) & !is.na(bl)) %>%
-        mutate(wd = str_replace(wdes, "_.*", "")) %>%
-        select(-wdes) %>%
-        arrange(kcode, tcode, wd)
+        p <- ineq1 %>% 
+          filter(ktscode == 0 | 
+                   (ktscode == kts_bl & str_replace(wdes, "_.*", "") == baseline_wd) |
+                   (ktscode == kts_oth & str_replace(wdes, "_.*", "") != baseline_wd)) %>% 
+          select(-ktscode, -gini_n_se) %>% 
+          spread(key = wdes, value = gini_n) %>%
+          mutate(bl = get(paste0(baseline_wd, "_", e))) %>%
+          select(kcode, tcode, bl, matches(e)) %>%
+          gather(key = wdes, value = gini_p, -kcode, -tcode, -bl) %>%
+          filter(!is.na(gini_p) & !is.na(bl)) %>%
+          mutate(wd = str_replace(wdes, "_.*", "")) %>%
+          select(-wdes) %>%
+          arrange(kcode, tcode, wd)
+        
+        p_se <- ineq1 %>%
+          filter(ktscode == 0 |
+                   (ktscode == kts_bl & str_replace(wdes, "_.*", "") == baseline_wd) |
+                   (ktscode == kts_oth & str_replace(wdes, "_.*", "") != baseline_wd)) %>%
+          select(-ktscode, -gini_n) %>%
+          spread(key = wdes, value = gini_n_se) %>%
+          mutate(bl_se = get(paste0(baseline_wd, "_", e))) %>%
+          select(kcode, tcode, bl_se, matches(e)) %>%
+          gather(key = wdes, value = gini_p_se, -kcode, -tcode, -bl_se) %>%
+          filter(!is.na(gini_p_se) & !is.na(bl_se)) %>%
+          mutate(wd = str_replace(wdes, "_.*", "")) %>%
+          select(-wdes) %>%
+          arrange(kcode, tcode, wd)
+        
+        p1 <- left_join(p, p_se, by = c("kcode", "tcode", "wd"))
+        
+        return(p1)
       })
     })
   }) %>% 
