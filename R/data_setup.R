@@ -2185,7 +2185,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
            kes = paste(country, str_replace(wdes, ".*_", "")),
            kw = (kwcode %in% gamma_kw$kwcode),
            ke = (kecode %in% gamma_ke$kecode)) %>% 
-    arrange(desc(ibl), desc(bl), desc(obl), desc(kbl), desc(kw), desc(ke), desc(k_bl_obs), desc(country_obs)) %>% 
+    arrange(desc(ibl), desc(bl), desc(obl), desc(kw), desc(ke), desc(k_bl_obs), desc(country_obs)) %>% 
     mutate(scode = as.integer(factor(series, levels = unique(series))))
 
   return(list(ineq2, gamma_ke, gamma_kw, ineq0))
@@ -2210,4 +2210,5 @@ swiid_source <- disp[[4]] %>%
 
 rm(disp, market)
 write_csv(swiid_source, "data/swiid_source.csv", na = "")
-save.image(file = "data/ineq.rda")
+save.image(file = "data/ineq0.rda")
+save(list = c("ineq2", "gamma_ke", "gamma_kw", "ineq2_m", "gamma_ke_m", "gamma_kw_m"), file = "data/ineq.rda")
