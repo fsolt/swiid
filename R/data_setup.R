@@ -1703,8 +1703,8 @@ rm(uscb_ae, uscb_hh)
 uine_link <- "http://www.ine.gub.uy/documents/10181/364159/Estimación+de+la+pobreza+por+el+Método+del+Ingreso+2017/f990baaf-1c32-44c5-beda-59a20dd8325c"
 download.file(uine_link, "data-raw/uine.pdf")
 
-uine <- extract_tables("data-raw/uine.pdf", pages = 47)[[2]][6:17, 1] %>% 
-  as_data_frame() %>% 
+uine <- uine <- extract_tables("data-raw/uine.pdf", pages = 47, area = list(c(137.3, 86.7, 296.8, 177.5)))[[1]][, c(1, 4)] %>% 
+  as_tibble() %>% 
   separate(value, into = paste0("V", 1:7), sep = "\\s") %>% 
   transmute(country = "Uruguay",
             year = V1 %>% str_trim() %>% as.numeric(),
