@@ -5,8 +5,8 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 2000
-warmup <- iter - 1000
+iter <- 500
+warmup <- iter - 50
 chains <- 3
 cores <- chains
 adapt_delta <- .8
@@ -16,10 +16,7 @@ baseline_wd <- str_split(baseline_series, "\\s")[[1]] %>% nth(-2)
 baseline_es <- str_split(baseline_series, "\\s")[[1]] %>% last()
 
 x0 <- ineq2 %>%  
-  filter(k_bl_obs > 0) # %>%                    # use only data for countries with some baseline obs
-  # mutate(wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)) +
-  #          (1 - str_detect(baseline_series, str_replace(wdes, "_", " "))),
-  #        ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)))  # redo codes for filtered sample
+  filter(k_bl_obs > 0)                    # use only data for countries with some baseline obs
 
 kt <- x0 %>%  
   transmute(kcode = kcode,
@@ -133,12 +130,16 @@ source_data <- list(  K = max(x$kcode),
                       kem = gamma_ke1$kecode,
                       blm = gamma_ke1$bl,
                       gini_m = gamma_ke1$gini_m,
+                      blm_se = gamma_ke1$bl_se,
+                      gini_m_se = gamma_ke1$gini_m_se,
                       
                       P = nrow(gamma_kw1),
                       kkp = gamma_kw1$kcode,
                       kwp = gamma_kw1$kwcode,
                       blp = gamma_kw1$bl,
-                      gini_p = gamma_kw1$gini_p
+                      gini_p = gamma_kw1$gini_p,
+                      blp_se = gamma_kw1$bl_se,
+                      gini_p_se = gamma_kw1$gini_p_se
 )
 
 # Stan
@@ -158,12 +159,12 @@ runtime
 lapply(get_sampler_params(out1, inc_warmup = FALSE),
        summary, digits = 2)
 
-save(x, out1, file = str_c("data/lis2_", iter/1000, "k_", 
+save(x, out1, file = str_c("data/lis_", iter/1000, "k_", 
                         str_replace(Sys.time(), " ", "_") %>% str_replace("2018-", ""), ".rda"))
 
 # Plots
 source("R/plot_tscs.R")
-plot_tscs(x, out1, save_pdf = "paper/figures/ts_lis2_.pdf")
+plot_tscs(x, out1, save_pdf = "paper/figures/ts_lis_.pdf")
 plot_tscs(x, out1)
 
 shinystan::launch_shinystan(out1)
