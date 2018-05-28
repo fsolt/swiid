@@ -1019,8 +1019,8 @@ Lebanon,2004,0.361,,con,pc,,CAS Lebanon con pc,Central Administration of Statist
 Lebanon,2012,0.32,,con,pc,,CAS Lebanon con pc,Central Administration of Statistics Lebanon 2015,2,http://www.cas.gov.lb/images/Excel/Poverty/Snapshot%20of%20Poverty%20and%20Labor%20Market%20in%20Lebanon.pdf
 Lebanon,2004,0.387,,con,pc,,Hassine2015 Lebanon con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Lesotho,1987,0.609,,disp,hh,,GM1994 Lesotho disp hh,Gustafsson and Makonnen 1994,378,https://doi.org/10.1002/jid.3380060403
-Lesotho,1987,0.631,,disp,pc,,GM1994 Lesotho disp hh,Gustafsson and Makonnen 1994,378,https://doi.org/10.1002/jid.3380060403
-Lesotho,1987,0.607,,con,pc,FALSE,GM1994 Lesotho disp hh,Gustafsson and Makonnen 1994,378,https://doi.org/10.1002/jid.3380060403
+Lesotho,1987,0.631,,disp,pc,,GM1994 Lesotho disp pc,Gustafsson and Makonnen 1994,378,https://doi.org/10.1002/jid.3380060403
+Lesotho,1987,0.607,,con,pc,FALSE,GM1994 Lesotho con hh,Gustafsson and Makonnen 1994,378,https://doi.org/10.1002/jid.3380060403
 Libya,2003,0.312,,con,pc,,Hassine2015 Libya con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Lithuania,1988,0.244,,gross,pc,,AG1993 Lithuania gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,121,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Lithuania,1990,0.248,,gross,pc,,AG1993 Lithuania gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,121,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
