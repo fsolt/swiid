@@ -2222,4 +2222,5 @@ swiid_source <- disp[[4]] %>%
 
 rm(disp, market)
 write_csv(swiid_source, "data/swiid_source.csv", na = "")
-save.image(file = "data/ineq.rda")
+save.image(file = "data/ineq0.rda")
+save(list = c("ineq2", "rho_we", "rho_wd", "ineq2_m", "rho_we_m", "rho_wd_m"), file = "data/ineq.rda")
