@@ -15,9 +15,8 @@ baseline_series <- "LIS disp sqrt"
 baseline_wd <- str_split(baseline_series, "\\s")[[1]] %>% nth(-2)
 baseline_es <- str_split(baseline_series, "\\s")[[1]] %>% last()
 
-x0 <- ineq2 %>%  
-  filter(kbl)                    # use only data for countries with some baseline obs
-
+x0 <- ineq2 
+  
 kt <- x0 %>%  
   transmute(kcode = kcode,
             yrspan = (lastyr - firstyr) + 1) %>% 

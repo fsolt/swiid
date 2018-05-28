@@ -185,6 +185,8 @@ model {
   beta_0 ~ normal(0, .1);
   gamma_0w ~ normal(1, .25);
   gamma_0e ~ normal(1, .25);
+  
+  beta_1s_tilde ~ normal(1, .25);
 
   for (k in 1:K) {
     if (kn[k] > 1) {
@@ -219,14 +221,21 @@ model {
   
   // estimate country--welfare-def deviations
   blp[1:P] ~ normal(beta_0k[kkp[1:P]] + gamma_1kw[kwp[1:P]] .* gini_p[1:P], sigma_00w);
-  
-  // estimate series-specific slope for series without overlap but with ke and kw
-  // beta_1s_tilde[1:SN] ~ normal(beta_1kwe[kwes[SO+1:SN]], sigma_00s);
-  
-  // 
-  
+
   // estimate series-specific slope for series without overlap but with ke and kw
   beta_1s_tilde[1:SN] ~ normal(beta_1kwe[kwes[SO+1:SN]], sigma_00s);  
+  
+  // // estimate varying slope components for country--equiv-scales for series without ke
+  // gamma_1ke_tilde[1:XXX] ~ normal(gamma_1re[reke[kekwe[kwes[XXX]]]], sigma_1ke);
+  
+  // // estimate varying slope components for country--welfare-defs for series without kw
+  // gamma_1kw_tilde[1:XXX] ~ normal(gamma_1rw[rwkw[kwkwe[kwes[XXX]]]], sigma_1kw);
+  
+  // beta_1kwe_tilde ~ normal(gamma_1kw * gamma_1ke_tilde, sigma_1kwe)
+  // beta_1kwe_tilde ~ normal(gamma_1kw_tilde * gamma_1ke, sigma_1kwe)
+  // beta_1kwe_tilde ~ normal(gamma_1kw_tilde * gamma_1ke_tilde, sigma_1kwe)
+  
+  // beta_1s_tilde ~ normal(beta_1kwe_tilde[kwes[SN+1:S]], sigma_00s);
   
   //// predict gini
   gini[kktt[1:N_ibl]] ~ normal(gini_b[1:N_ibl], gini_b_se[1:N_ibl]); // use baseline series where observed
