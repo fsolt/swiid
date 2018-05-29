@@ -5,8 +5,8 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 2000
-warmup <- iter - 500
+iter <- 5000
+warmup <- iter - 1000
 chains <- 3
 cores <- chains
 adapt_delta <- .9
@@ -137,8 +137,8 @@ save(x, out1, file = str_c("data/all_", iter/1000, "k_",
 
 # Plots
 source("R/plot_tscs.R")
-plot_tscs(x, out1, save_pdf = "paper/figures/ts_all.pdf")
+plot_tscs(x, out1, save_pdf = "paper/figures/swiid.pdf")
 plot_tscs(x, out1)
 
-shinystan::launch_shinystan(out1)
 beep() # chime
+shinystan::launch_shinystan(out1)
