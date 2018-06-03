@@ -5,7 +5,7 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 5000
+iter <- 6000
 warmup <- iter - 1000
 chains <- 3
 cores <- chains

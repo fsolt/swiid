@@ -91,7 +91,7 @@ model {
   for (r in 1:R) {
     sigma_rwe[r] ~ normal(.04, .015) T[0,];
   }
-  sigma_kw ~ normal(.01, .0025);
+  sigma_kw ~ normal(0, .01);
 
   gini_m ~ normal(gini_t, gini_m_se);
   rho_we ~ normal(rho_we_t, rho_we_se);
