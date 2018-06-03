@@ -5,7 +5,7 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 2500
+iter <- 4000
 warmup <- iter - 1000
 chains <- 3
 cores <- chains
@@ -106,7 +106,7 @@ source_data <- list(  K = max(x$kcode),
 
 # Stan
 start <- proc.time()
-out1 <- stan(file = "R/estimate_swiid/lis.stan",
+out1 <- stan(file = "R/estimate_swiid/lis_mkt.stan",
              data = source_data,
              seed = seed,
              iter = iter,
@@ -131,3 +131,6 @@ beep() # chime
 source("R/plot_tscs.R")
 plot_tscs(x, out1, save_pdf = "paper/figures/ts_lis_mkt.pdf")
 plot_tscs(x, out1)
+
+shinystan::launch_shinystan(out1)
+

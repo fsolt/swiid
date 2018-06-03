@@ -69,11 +69,11 @@ transformed parameters {
 }
 
 model {
-  sigma_gini ~ normal(.0125, .005) T[0,];
+  sigma_gini ~ normal(.01, .0025) T[0,];
   for (r in 1:R) {
-    sigma_rwe[r] ~ normal(.04, .02) T[0,];
+    sigma_rwe[r] ~ normal(.04, .015) T[0,];
   }
-  sigma_kw ~ normal(.01, .005) T[0,];
+  sigma_kw ~ normal(.01, .0025);
 
   gini_m ~ normal(gini_t, gini_m_se);
   rho_we ~ normal(rho_we_t, rho_we_se);
