@@ -19,7 +19,7 @@ _Conclusion_:"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 fontsize: 10pt
 spacing: single
-bibliography: /Users/fredsolt/Library/texmf/bibtex/bib/FSLibrary.bib
+bibliography: ../../../../Library/texmf/bibtex/bib/FSLibrary.bib
 #bibliography: \dummy{`r file.path(getwd(), 'updating_swiid_paper')`}
 biblio-style: apsr
 citecolor: black
@@ -68,7 +68,7 @@ single_obs_countries <- swiid_source %>% add_count(country) %>% filter(n == 1) %
 
 The SWIID source data consists of observations of the Gini coefficient in various countries and years.^[
 Because the Gini index is simply the Gini coefficient multiplied by 100, the two are equivalent, and both can be referred to as 'the Gini' without much cause for confusion.]
-The Gini is most intuitively defined as the average difference in income between all pairs in a population, divided by twice the average income in the population.
+The Gini is most intuitively defined as the average difference in income between all pairs in a population, divided by twice the average income in the population.  
 It is by far the most commonly encountered summary statistic for measuring income inequality.
 The Gini has drawbacks--it is most sensitive to changes in the middle of the income distribution, rather than among those with the highest or lowest incomes, and it is not easily decomposed--that other metrics, such as the Atkinson index and the Theil indices, overcome.
 However, in light of the SWIID's goal of providing data for the broadest possible sample of countries and years, the ubiquity of the Gini makes it the only plausible choice for this purpose.
@@ -296,7 +296,9 @@ In previous versions of the SWIID, all adult-equivalent scales were considered a
 Now, the square-root scale and the OECD-modified scale have both been split out, leaving the remaining catch-all adult-equivalent category much smaller.
 The right panel of Figure \ref{wd_es} shows how many observations in the SWIID source data use each equivalence scale.
 
-<!-- Differences in the welfare definition and the equivalence scale employed constitute the biggest source of incomparability across observations in the source data, and all twenty of the possible combinations are represented.  I'll take up how we get from these incomparable observations to the SWIID estimates in the next post.  In the meantime, if you'd like to see the source data, you can [download it from here](https://github.com/fsolt/swiid/blob/master/data/swiid_source.csv). -->
+Differences in the welfare definition and the equivalence scale employed constitute the biggest source of incomparability across observations in the source data, and all twenty of the possible combinations are represented.  
+
+<!--I'll take up how we get from these incomparable observations to the SWIID estimates in the next post.  In the meantime, if you'd like to see the source data, you can [download it from here](https://github.com/fsolt/swiid/blob/master/data/swiid_source.csv). -->
 
 
 ## Standardizing the Data
