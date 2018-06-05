@@ -337,7 +337,7 @@ make_inputs <- function(baseline_series, nbl = FALSE, fold) {
            kecode = if_else(is.na(kecode), 0L, kecode)) %>% 
     arrange(desc(ibl), desc(bl), desc(obl), desc(kbl), desc(kw), desc(ke), desc(k_bl_obs), desc(country_obs))
   
-  return(list(ineq2, rho_we, rho_wd, ineq0))
+  return(list(ineq2, rho_we, rho_wd))
 }
 
 seed <- 324
@@ -348,126 +348,127 @@ cores <- chains
 adapt_delta <- .9
 
 walk(folds, function(fold) {
-  disp <- make_inputs(baseline_series = baseline_series, fold = fold)
-  ineq2 <- disp[[1]]
-  rho_we <- disp[[2]]
-  rho_wd <- disp[[3]]
-  
-  x0 <- ineq2 %>%  
-    mutate(kcode = as.integer(factor(country, levels = unique(country))),
-           rcode = as.integer(factor(region, levels = unique(region))),
-           scode = as.integer(factor(series, levels = unique(series))),
-           wecode = as.integer(factor(wdes, levels = unique(wdes))),
-           kwecode = as.integer(factor(100*kcode+wecode)),
-           rwecode = as.integer(factor(100*rcode+wecode)),
-           wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)),
-           ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)),
-           kwcode = as.integer(factor(100*kcode+wcode))) 
-  
-  kt <- x0 %>%  
-    transmute(kcode = kcode,
-              yrspan = (lastyr - firstyr) + 1) %>% 
-    distinct(kcode, yrspan) %>% 
-    slice(rep(1:n(), yrspan)) %>% 
-    group_by(kcode) %>% 
-    mutate(tcode = 1:n()) %>% 
-    ungroup() %>% 
-    mutate(ktcode = 1:n())
-  
-  rwe2codes <- rho_we %>%
-    filter(wcode == 1) %>%        # baseline_wd is always coded 1
-    transmute(wdes2 = wdes,
-              rwe2code = rwecode,
-              rcode = rcode) %>% 
-    distinct() 
-  
-  x <- x0 %>% 
-    left_join(kt, by = c("kcode", "tcode")) %>% 
-    mutate(wdes2 = str_replace(wdes, ".*_", "disp_")) %>% 
-    left_join(rwe2codes, by = c("wdes2", "rcode"))
-  
-  kn <- x %>% 
-    group_by(kcode) %>% 
-    summarize(kt1 = min(ktcode),
-              yrspan = first(yrspan),
-              kr = first(rcode)) %>% 
-    ungroup()
-  
-  
-  # Format data for Stan
-  source_data <- list(  K = max(x$kcode),
-                        T = max(x$tcode),
-                        KT = nrow(kt),
-                        R = max(x$rcode),
-                        S = max(x$scode),
-                        WE = max(x$wecode),
-                        KWE = max(x$kwecode),
-                        RWE = max(x$rwecode),
-                        KW = max(x$kwcode),
-                        RW = max(x$rwcode),
-                        W = max(x$wcode),
-                        E = max(x$ecode),
-                        
-                        N = nrow(x),
-                        N_ibl = nrow(x %>% filter(ibl)),
-                        N_bl = nrow(x %>% filter(!is.na(gini_b))),
-                        N_obl = nrow(x %>% filter(s_bl_obs>0)),
-                        N_bk = nrow(x %>% filter(k_bl_obs > 0)),
-                        N_kw = nrow(x %>% filter(kw)),
-                        
-                        kk = x$kcode,
-                        tt = x$tcode,
-                        kktt = x$ktcode,
-                        kn = kn$yrspan,
-                        kt1 = kn$kt1,
-                        kr = kn$kr,
-                        rr = x$rcode,
-                        ss = x$scode,
-                        wen = x$wecode,
-                        kwen = x$kwecode,
-                        kwn = x$kwcode,
-                        rwen = x$rwecode,
-                        rwen2 = x$rwe2code,
-                        gini_m = x$gini_m,
-                        gini_m_se = x$gini_m_se,
-                        gini_b = x$gini_b[!is.na(x$gini_b)],
-                        gini_b_se = x$gini_b_se[!is.na(x$gini_b_se)],
-                        
-                        M = length(rho_we$rho),
-                        kkm = rho_we$kcode,      
-                        rrm = rho_we$rcode,
-                        ttm	= rho_we$tcode,
-                        wem = rho_we$wecode,
-                        kwem = rho_we$kwecode,
-                        rwem = rho_we$rwecode,
-                        rho_we = rho_we$rho,
-                        rho_we_se = rho_we$rho_se,
-                        
-                        P = length(rho_wd$rho_wd),
-                        kkp = rho_wd$kcode,      
-                        rrp = rho_wd$rcode,
-                        kwp = rho_wd$kwcode,
-                        rho_w = rho_wd$rho_wd,
-                        rho_w_se = rho_wd$rho_wd_se
-  )
-  
-  # Stan
-  rstan_options(auto_write = TRUE)
-  
-  start <- proc.time()
-  out1 <- stan(file = "R/estimate_swiid/all.stan",
-               data = source_data,
-               seed = seed,
-               iter = iter,
-               warmup = warmup,
-               cores = cores,
-               chains = chains,
-               control = list(max_treedepth = 20,
-                              adapt_delta = adapt_delta))
-  runtime <- proc.time() - start
-  runtime
-  cat(fold)
-  
-  save(x, out1, file = paste0("/Volumes/Platón-Media/Media/Projects/swiid/kfold/fold_", fold, ".rda"))
-  
+  if (!file.exists(paste0("/Volumes/Platón-Media/Media/Projects/swiid/kfold/fold_", fold, ".rda"))) {
+    disp <- make_inputs(baseline_series = baseline_series, fold = fold)
+    ineq2 <- disp[[1]]
+    rho_we <- disp[[2]]
+    rho_wd <- disp[[3]]
+    
+    x0 <- ineq2 %>%  
+      mutate(kcode = as.integer(factor(country, levels = unique(country))),
+             rcode = as.integer(factor(region, levels = unique(region))),
+             scode = as.integer(factor(series, levels = unique(series))),
+             wecode = as.integer(factor(wdes, levels = unique(wdes))),
+             kwecode = as.integer(factor(100*kcode+wecode)),
+             rwecode = as.integer(factor(100*rcode+wecode)),
+             wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)),
+             ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)),
+             kwcode = as.integer(factor(100*kcode+wcode))) 
+    
+    kt <- x0 %>%  
+      transmute(kcode = kcode,
+                yrspan = (lastyr - firstyr) + 1) %>% 
+      distinct(kcode, yrspan) %>% 
+      slice(rep(1:n(), yrspan)) %>% 
+      group_by(kcode) %>% 
+      mutate(tcode = 1:n()) %>% 
+      ungroup() %>% 
+      mutate(ktcode = 1:n())
+    
+    rwe2codes <- rho_we %>%
+      filter(wcode == 1) %>%        # baseline_wd is always coded 1
+      transmute(wdes2 = wdes,
+                rwe2code = rwecode,
+                rcode = rcode) %>% 
+      distinct() 
+    
+    x <- x0 %>% 
+      left_join(kt, by = c("kcode", "tcode")) %>% 
+      mutate(wdes2 = str_replace(wdes, ".*_", "disp_")) %>% 
+      left_join(rwe2codes, by = c("wdes2", "rcode"))
+    
+    kn <- x %>% 
+      group_by(kcode) %>% 
+      summarize(kt1 = min(ktcode),
+                yrspan = first(yrspan),
+                kr = first(rcode)) %>% 
+      ungroup()
+    
+    
+    # Format data for Stan
+    source_data <- list(  K = max(x$kcode),
+                          T = max(x$tcode),
+                          KT = nrow(kt),
+                          R = max(x$rcode),
+                          S = max(x$scode),
+                          WE = max(x$wecode),
+                          KWE = max(x$kwecode),
+                          RWE = max(x$rwecode),
+                          KW = max(x$kwcode),
+                          RW = max(x$rwcode),
+                          W = max(x$wcode),
+                          E = max(x$ecode),
+                          
+                          N = nrow(x),
+                          N_ibl = nrow(x %>% filter(ibl)),
+                          N_bl = nrow(x %>% filter(!is.na(gini_b))),
+                          N_obl = nrow(x %>% filter(s_bl_obs>0)),
+                          N_bk = nrow(x %>% filter(k_bl_obs > 0)),
+                          N_kw = nrow(x %>% filter(kw)),
+                          
+                          kk = x$kcode,
+                          tt = x$tcode,
+                          kktt = x$ktcode,
+                          kn = kn$yrspan,
+                          kt1 = kn$kt1,
+                          kr = kn$kr,
+                          rr = x$rcode,
+                          ss = x$scode,
+                          wen = x$wecode,
+                          kwen = x$kwecode,
+                          kwn = x$kwcode,
+                          rwen = x$rwecode,
+                          rwen2 = x$rwe2code,
+                          gini_m = x$gini_m,
+                          gini_m_se = x$gini_m_se,
+                          gini_b = x$gini_b[!is.na(x$gini_b)],
+                          gini_b_se = x$gini_b_se[!is.na(x$gini_b_se)],
+                          
+                          M = length(rho_we$rho),
+                          kkm = rho_we$kcode,      
+                          rrm = rho_we$rcode,
+                          ttm	= rho_we$tcode,
+                          wem = rho_we$wecode,
+                          kwem = rho_we$kwecode,
+                          rwem = rho_we$rwecode,
+                          rho_we = rho_we$rho,
+                          rho_we_se = rho_we$rho_se,
+                          
+                          P = length(rho_wd$rho_wd),
+                          kkp = rho_wd$kcode,      
+                          rrp = rho_wd$rcode,
+                          kwp = rho_wd$kwcode,
+                          rho_w = rho_wd$rho_wd,
+                          rho_w_se = rho_wd$rho_wd_se
+    )
+    
+    # Stan
+    rstan_options(auto_write = TRUE)
+    
+    start <- proc.time()
+    out1 <- stan(file = "R/estimate_swiid/all.stan",
+                 data = source_data,
+                 seed = seed,
+                 iter = iter,
+                 warmup = warmup,
+                 cores = cores,
+                 chains = chains,
+                 control = list(max_treedepth = 20,
+                                adapt_delta = adapt_delta))
+    runtime <- proc.time() - start
+    runtime
+    cat(fold)
+    
+    save(x, out1, file = paste0("/Volumes/Platón-Media/Media/Projects/swiid/kfold/fold_", fold, ".rda"))
+  }  
 })
