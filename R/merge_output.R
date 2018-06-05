@@ -2,35 +2,21 @@ library(tidyverse)
 
 load("data/ineq.rda")
 
-lis_file <- list.files("data/", "all_lis_[^m]") %>% 
-  last() %>% 
-  file.path("data", .)
-not_lis_file <- list.files("data/", "all_not_lis_[^m]") %>% 
+all_file <- list.files("data/", "all_[^m]") %>% 
   last() %>% 
   file.path("data", .)
 
-lis_mkt_file <- list.files("data/", "all_lis_mkt") %>% 
+all_mkt_file <- list.files("data/", "all_mkt") %>% 
   last() %>% 
   file.path("data", .)
-not_lis_mkt_file <- list.files("data/", "all_not_lis_mkt") %>%
-  last() %>%
-  file.path("data", .)
 
-load(lis_file)
-lis_in <- x
-lis_out <- out1
+load(all_file)
+all_in <- x
+all_out <- out1
 
-load(not_lis_file)
-not_lis_in <- x
-not_lis_out <- out1
-
-load(lis_mkt_file)
-lis_mkt_in <- x
-lis_mkt_out <- out1
-
-load(not_lis_mkt_file)
-not_lis_mkt_in <- x
-not_lis_mkt_out <- out1
+load(all_mkt_file)
+all_mkt_in <- x
+all_mkt_out <- out1
 
 rm(x, out1)
 
@@ -55,8 +41,8 @@ summary_kt <- function(input, output, probs = c(.025, .975)) {
     as_tibble() %>%
     janitor::clean_names() %>% 
     mutate(gini = mean,
-           lb = get(paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[1]),
-           ub = get(paste0("x", str_replace(probs*100, "\\.", "_"), "percent")[2]),
+           lb = get(paste0("x", str_replace(probs*100, "\\.", "_"), "_percent")[1]),
+           ub = get(paste0("x", str_replace(probs*100, "\\.", "_"), "_percent")[2]),
            se = round((ub - lb)/(qnorm(.975)*2), 3),
            ktcode = as.numeric(str_extract(parameter, "(?<=\\[)\\d+"))) %>%
     left_join(ktcodes, by="ktcode") %>% 
@@ -66,19 +52,14 @@ summary_kt <- function(input, output, probs = c(.025, .975)) {
   return(gini_res)
 }
 
-lis_summary <- summary_kt(lis_in, lis_out)
-not_lis_summary <- summary_kt(not_lis_in, not_lis_out)
-lis_mkt_summary <- summary_kt(lis_mkt_in, lis_mkt_out)
-not_lis_mkt_summary <- summary_kt(not_lis_mkt_in, not_lis_mkt_out)
+swiid_disp_summary <- summary_kt(all_in, all_out) %>% 
+  transmute(country = country,
+            year = year,
+            gini_disp = round(gini*100, 1),
+            gini_disp_se = round(se*100, 2)) %>% 
+  arrange(country, year)
 
-swiid_disp_summary <- bind_rows(lis_summary, not_lis_summary) %>% 
-    transmute(country = country,
-              year = year,
-              gini_disp = round(gini*100, 1),
-              gini_disp_se = round(se*100, 2)) %>% 
-    arrange(country, year)
-
-swiid_mkt_summary <- bind_rows(lis_mkt_summary, not_lis_mkt_summary) %>% 
+swiid_mkt_summary <- summary_kt(all_mkt_in, all_mkt_out) %>% 
   transmute(country = country,
             year = year,
             gini_mkt = round(gini*100, 1),
@@ -86,11 +67,12 @@ swiid_mkt_summary <- bind_rows(lis_mkt_summary, not_lis_mkt_summary) %>%
   arrange(country, year)
 
 swiid_source <- read_csv("data/swiid_source.csv")
+load("data/cc_swiid.rda")
 
 k_redist <- rho_wd_m %>% 
   filter(wd == "disp" | wd == "con") %>% 
   distinct(country) %>%
-  mutate(region = countrycode(country, "swiid.name", "swiid.region", custom_dict = cc_swiid),
+  mutate(region = countrycode::countrycode(country, "swiid.name", "swiid.region", custom_dict = cc_swiid),
          redist_after = recode(region, 
                                "AES" = 1975L,
                                "AFR" = 1985L,
@@ -113,7 +95,7 @@ swiid_summary <- left_join(swiid_disp_summary, swiid_mkt_summary, by = c("countr
 kt_redist <- swiid_summary %>%
   select(country, year, redist)
   
-write_csv(swiid_summary %>% select(-redist, -redist_after), "data/swiid6_2_summary.csv", na = "")
+write_csv(swiid_summary %>% select(-redist, -redist_after), "data/swiid7_0_summary.csv", na = "")
 
 swiid_kt <- function(input, output, probs = c(.025, .975)) {
   ktcodes <- input %>%  
@@ -145,10 +127,9 @@ swiid_kt <- function(input, output, probs = c(.025, .975)) {
   return(res)
 }
 
-res <- bind_rows(swiid_kt(lis_in, lis_out), 
-                 swiid_kt(not_lis_in, not_lis_out)) %>%  
-  left_join(bind_rows(swiid_kt(lis_mkt_in, lis_mkt_out),
-                      swiid_kt(not_lis_mkt_in, not_lis_mkt_out)), by = c("country", "year")) %>% 
+res <- swiid_kt(all_in, all_out) %>%  
+  left_join(swiid_kt(all_mkt_in, all_mkt_out),
+            by = c("country", "year")) %>% 
   left_join(kt_redist, by = c("country", "year")) %>% 
   arrange(country, year)
 
@@ -176,21 +157,21 @@ for (i in 1:100) {
   swiid[[i]] <- stemp
 }
 
-save(swiid, swiid_summary, file = "data/swiid6_2.rda") 
+save(swiid, swiid_summary, file = "data/swiid7_0.rda") 
 
 # for release
-dir.create("release/swiid6_2", recursive = TRUE)
-final_files <- c("data/swiid6_2_summary.csv", "data/swiid6_2.rda", "data/swiid6_2.dta")
+dir.create("release/swiid7_0", recursive = TRUE)
+final_files <- c("data/swiid7_0_summary.csv", "data/swiid7_0.rda", "data/swiid7_0.dta")
 file.copy(from = final_files,
-          to = str_replace(final_files, "data/", "release/swiid6_2/"),
+          to = str_replace(final_files, "data/", "release/swiid7_0/"),
           overwrite = TRUE)
 documentation_files <- c("vignette/R_swiid.pdf", "vignette/stata_swiid.pdf")
 file.copy(from = documentation_files,
-          to = str_replace(documentation_files, "vignette/", "release/swiid6_2/"),
+          to = str_replace(documentation_files, "vignette/", "release/swiid7_0/"),
           overwrite = TRUE)
 setwd("release")
-zip("swiid6_2.zip", "swiid6_2")
-dir.create("s62")
-file.copy("swiid6_2.zip", "s62/swiid6_2.zip", overwrite = TRUE)
-zip("s62.zip", "s62")
+zip("swiid7_0.zip", "swiid7_0")
+dir.create("s70")
+file.copy("swiid7_0.zip", "s70/swiid7_0.zip", overwrite = TRUE)
+zip("s70.zip", "s70")
 setwd("..")
