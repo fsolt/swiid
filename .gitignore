@@ -10,6 +10,7 @@ dev/*
 R/dcpo.R
 R/temp.stan
 R/ notes.txt
+R/estimate_swiid/all*rds
 SWIIDv5_0.RData
 vignette/reference/*
 vignette/*.dta
