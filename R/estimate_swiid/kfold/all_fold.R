@@ -57,7 +57,7 @@ make_inputs <- function(baseline_series, fold) {
     mutate(cy = paste(country, year),
            gini_b = gini,
            gini_b_se = gini_se * 2) %>% 
-    select(country, year, gini_b, gini_b_se)
+    select(country, year, cy, gini_b, gini_b_se)
   
   lis2 <- lis %>%
     filter(!(paste(country, year) %in% cy_fold$cy & series == baseline_series))
@@ -474,6 +474,13 @@ leave_k_out <- function(fold) {
     cat(fold)
     
     save(x, out1, file = paste0("/Volumes/Platón-Media/Media/Projects/swiid/kfold/fold_", fold, ".rda"))
+
+    cy_fold <- baseline_rnd %>% 
+      filter(fold_number == fold) %>%
+      mutate(cy = paste(country, year),
+             gini_b = gini,
+             gini_b_se = gini_se * 2) %>% 
+      select(country, year, gini_b, gini_b_se)
     
     ktcodes <- x %>%  
       transmute(kcode = kcode,
@@ -506,7 +513,7 @@ leave_k_out <- function(fold) {
              problem = (point_diff > 1.96*se_diff)) %>% 
       select(country, year, point_diff, se_diff, problem, mean, sd, ub, lb, gini_b, gini_b_se, everything())
     
-    save(gini_res, file = paste0("/Volumes/Platón-Media/Media/Projects/swiid/kfold/res_", fold, ".rda"))
+    save(fold_res, file = paste0("/Volumes/Platón-Media/Media/Projects/swiid/kfold/res_", fold, ".rda"))
   }  
 }
 
