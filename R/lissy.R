@@ -101,7 +101,8 @@ get_ginis <- function(cc, reps = 100) {
   if (!cc %in% ccs) {
     stop("Please specify a LIS country in iso2c format")
   }
-  yy <- as.character(c(c(67, 69, 71, 73:75, 78:99), paste0("0", 0:9), c(10:17)))
+  last_year_yy <- as.numeric(format(Sys.Date(), "%Y")) - 2001
+  yy <- as.character(c(c(67, 69, 71, 73:75, 78:99), paste0("0", 0:9), c(10:last_year_yy)))
 
   datasets <- paste0(rep(cc, each = length(yy)), rep(yy, times = length(cc)), "h")
   vars <- c("dhi", "hi", "factor", "hitp", "hc", "hpopwgt", "nhhmem", "nhhmem13", "grossnet")
