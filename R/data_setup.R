@@ -241,10 +241,10 @@ cepal_sdi <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data
 
 
 # OECD Income Distribution Database (automated)
-oecd_link <- "http://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all"
+oecd_link <- "https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all"
 oecd0 <- oecd_link %>% 
   readSDMX() %>% 
-  as.data.frame() %>% 
+  as_tibble() %>% 
   transmute(country = countrycode(LOCATION, "iso3c", "swiid.name", custom_dict = cc_swiid),
             year = as.numeric(obsTime),
             gini = obsValue,
