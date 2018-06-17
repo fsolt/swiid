@@ -1,6 +1,6 @@
 if (!require(pacman)) install.packages("pacman"); library(pacman)
 p_load(tidyverse, readxl, 
-       eurostat, rsdmx, xml2, CANSIM2R, rvest,
+       eurostat, rsdmx, xml2, rvest,
        countrycode, janitor, pdftools)
 p_load_gh("ropensci/tabulizerjars", "ropensci/tabulizer") # read PDF tables; see https://github.com/ropensci/tabulizer for installation help if needed
 p_load_gh("ropengov/dkstat")
@@ -298,9 +298,12 @@ eurostat <- get_eurostat("ilc_di12",
 
 
 # Transmonee 2012 (2012 is the last database that includes inequality data; archived)
-transmonee_link <- "https://web.archive.org/web/20130401075747/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls"
-download.file(transmonee_link, "data-raw/transmonee.xls")
-
+transmonee_link <- "https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls"
+tryCatch(download.file(transmonee_link, "data-raw/transmonee.xls"), 
+                     error = function(e) {
+                       download.file("https://github.com/fsolt/swiid/raw/master/data-raw/transmonee.xls", "data-raw/transmonee.xls")
+                     })
+         
 transmonee <- read_excel("data-raw/transmonee.xls", 
                          sheet = "10. Economy",
                          skip = 398,
@@ -553,23 +556,35 @@ belstat <- extract_tables("data-raw/belstat.pdf", pages = 76)[[1]] %>%
 
 
 # Statistics Canada (automated)
-statcan <- CANSIM2R:::downloadCANSIM(2060033) %>% 
+get_statcan <- function(pid) {
+  filename <- paste0(pid, "-eng.zip")
+  link <- paste0("https://www150.statcan.gc.ca/n1/tbl/csv/", filename)
+  statcan_zip <- html_session(link)
+  statcan_temp <- tempfile(fileext = ".zip")
+  writeBin(statcan_zip$response$content, statcan_temp)
+  statcan_data <- suppressMessages(read_csv(unz(statcan_temp, paste0(pid, ".csv")), 
+                                            col_types = cols(STATUS = col_character()))) %>% 
+    mutate(link = link)
+  return(statcan_data)
+}
+
+statcan <- get_statcan(11100134) %>% 
   filter(GEO=="Canada") %>% 
-  mutate(equiv_scale = "sqrt",
-         link = "http://www5.statcan.gc.ca/cansim/a26?id=2060033") %>% 
-  bind_rows(CANSIM2R:::downloadCANSIM(2020709) %>% 
-              filter(GEO=="Canada" & FAMILYTYPE=="All family units") %>% 
-              mutate(equiv_scale = "pc",
-                     link = "http://www5.statcan.gc.ca/cansim/a26?id=2020709")) %>% 
-  bind_rows(CANSIM2R:::downloadCANSIM(2020705) %>% 
-              filter(GEO=="Canada" & FAMILYTYPE=="All family units") %>% 
-              mutate(equiv_scale = "hh",
-                     link = "http://www5.statcan.gc.ca/cansim/a26?id=2020705")) %>% 
+  mutate(equiv_scale = "sqrt") %>%
+  select(REF_DATE, VALUE, `Income concept`, equiv_scale, link) %>% 
+  bind_rows(get_statcan(11100179) %>% 
+              filter(GEO=="Canada" & `Economic family type`=="All family units") %>% 
+              mutate(equiv_scale = "pc") %>% 
+              select(REF_DATE, VALUE, `Income concept`, equiv_scale, link)) %>% 
+  bind_rows(get_statcan(11100175) %>% 
+              filter(GEO=="Canada" & `Economic family type`=="All family units") %>% 
+              mutate(equiv_scale = "hh") %>% 
+              select(REF_DATE, VALUE, `Income concept`, equiv_scale, link)) %>% 
   transmute(country = "Canada",
-            year = Ref_Date,
-            gini = Value,
+            year = REF_DATE,
+            gini = VALUE,
             gini_se = gini*.02, # StatCan indicates CV < .02
-            welfare_def = tolower(INCOMECONCEPT) %>% 
+            welfare_def = tolower(`Income concept`) %>% 
               str_extract("market|after-tax|total") %>% 
               str_replace("after-tax", "disp") %>% 
               str_replace("total", "gross"),
