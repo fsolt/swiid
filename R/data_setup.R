@@ -599,7 +599,7 @@ statcan <- get_statcan(11100134) %>%
 # DANE Colombia (automated)
 dane_file <- "http://www.dane.gov.co/index.php/estadisticas-por-tema/pobreza-y-condiciones-de-vida/pobreza-y-desigualdad/" %>% 
   html_session() %>% 
-  follow_link("Pobreza Monetaria") %>%
+  follow_link("Pobreza monetaria") %>%
   follow_link("Anexos")
 dane_link <- dane_file$url
 writeBin(dane_file$response$content, "data-raw/dane.xls")
@@ -2002,7 +2002,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
     mutate(gini_m_se = ifelse(!is.na(gini_m_se), gini_m_se * 2,
                               quantile(gini_m_se/gini_m, .99, na.rm = TRUE) * gini_m * 2),
            wdes = paste(welfare_def, equiv_scale, sep = "_"),
-           ibl = (gini_m == gini_b & series == first(baseline$series)),
+           ibl = (gini_m == gini_b & str_detect(series, paste("LIS .*", baseline_wd, baseline_es))),
            bl = (!is.na(gini_b)),
            obl = (s_bl_obs>0),
            kbl = (k_bl_obs>0),
@@ -2202,7 +2202,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
   
   ineq2 <- ineq %>% 
     left_join(kyrs, by = "kcode") %>% 
-    filter(!(obl & series_obs == s_bl_obs & !(str_detect(series, paste("LIS .*", baseline_wd, baseline_es))))) %>%  # exclude series that *only* overlap with baseline
+    filter(!(obl & series_obs == s_bl_obs & !ibl)) %>%  # exclude series that *only* overlap with baseline
     mutate(scode = as.integer(factor(series, levels = unique(series))),
            kwd = paste(country, str_replace(wdes, "_.*", "")),
            kes = paste(country, str_replace(wdes, ".*_", "")),
