@@ -618,6 +618,7 @@ Austria,2015,0.276,,disp,sqrt,FALSE,"OECD Austria disp sqrt, current def, 2012 m
 Austria,2015,0.324,,gross,sqrt,FALSE,"OECD Austria gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Austria,2015,0.495,,market,sqrt,FALSE,"OECD Austria market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Austria,2015,0.305,,gross,pc,FALSE,Povcalnet Austria gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Austria,2016,0.27899999999999997,,disp,oecdm,TRUE,Eurostat Austria disp oecdm 3,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Azerbaijan,1988,0.317,,gross,pc,,AG1993 Azerbaijan gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,119,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Azerbaijan,1989,0.308,,disp,pc,FALSE,Transmonee Azerbaijan disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
 Azerbaijan,1990,0.345,,gross,pc,,AG1993 Azerbaijan gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,119,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -3049,6 +3050,7 @@ Czech Republic,2015,0.258,,disp,sqrt,FALSE,"OECD Czech Republic disp sqrt, curre
 Czech Republic,2015,0.297,,gross,sqrt,FALSE,"OECD Czech Republic gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Czech Republic,2015,0.46,,market,sqrt,FALSE,"OECD Czech Republic market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Czech Republic,2015,0.259,,gross,pc,FALSE,Povcalnet Czech Republic gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Czech Republic,2016,0.245,,disp,oecdm,TRUE,Eurostat Czech Republic disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Czechoslovakia,1965,0.226,,disp,pc,TRUE,AM1992 Czechoslovakia disp pc,Atkinson and Micklewright 1992,CSI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Czechoslovakia,1970,0.225,,disp,pc,TRUE,AM1992 Czechoslovakia disp pc,Atkinson and Micklewright 1992,CSI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Czechoslovakia,1973,0.21,,disp,pc,TRUE,AM1992 Czechoslovakia disp pc,Atkinson and Micklewright 1992,CSI1,https://books.google.com/books?id=zaL4CGdjOkUC
@@ -5374,6 +5376,7 @@ Greece,2015,0.34,,disp,sqrt,FALSE,"OECD Greece disp sqrt, current def, 2012 meth
 Greece,2015,0.372,,gross,sqrt,FALSE,"OECD Greece gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Greece,2015,0.566,,market,sqrt,FALSE,"OECD Greece market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Greece,2015,0.36,,gross,pc,FALSE,Povcalnet Greece gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Greece,2016,0.33399999999999996,,disp,oecdm,TRUE,Eurostat Greece disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Grenada,1999,0.45,,con,hh,,TW2002 Grenada con hh,Thomas and Wint 2002; Canterbury 2005,861,http://dx.doi.org/10.1080/02255189.2005.9669090
 Grenada,2008,0.37,,con,pc,,SALISES 2012 Grenada con pc,SALISES 2012,27,http://www.caribank.org/uploads/2012/12/Barbados-CALC-Volume-1-MainReport-FINAL-Dec-2012.pdf
 Guatemala,1981,0.427,,con,hh,,Park1995 Guatemala con hh,Tabatabai 1996; Park 1995,115,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -8252,6 +8255,7 @@ Malta,2013,0.28800000000000003,,gross,pc,FALSE,Povcalnet Malta gross pc 1,World 
 Malta,2014,0.281,,disp,oecdm,TRUE,Eurostat Malta disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Malta,2014,0.29,,gross,pc,FALSE,Povcalnet Malta gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Malta,2015,0.285,,disp,oecdm,TRUE,Eurostat Malta disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Malta,2016,0.28300000000000003,,disp,oecdm,TRUE,Eurostat Malta disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Mauritania,1987,0.439,,con,pc,FALSE,Povcalnet Mauritania con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Mauritania,1993,0.501,,con,pc,FALSE,Povcalnet Mauritania con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Mauritania,1995,0.377,,con,pc,FALSE,Povcalnet Mauritania con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
@@ -9442,6 +9446,7 @@ Norway,2015,0.312,,gross,sqrt,FALSE,"OECD Norway gross sqrt, current def, 2012 m
 Norway,2015,0.432,,market,sqrt,FALSE,"OECD Norway market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Norway,2015,0.275,,gross,pc,FALSE,Povcalnet Norway gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Norway,2015,0.271,,disp,oecdm,TRUE,SSB disp oecdm,Statistics Norway,"",https://www.ssb.no/statistikkbanken/selectvarval/Define.asp?MainTable=InntUlikhet&PLanguage=1&nyTmpVar=true&CMSSubjectArea=inntekt-og-forbruk&KortNavnWeb=ifhus&StatVariant=&checked=true
+Norway,2016,0.261,,disp,oecdm,TRUE,Eurostat Norway disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Norway,2016,0.261,,disp,oecdm,TRUE,SSB disp oecdm,Statistics Norway,"",https://www.ssb.no/statistikkbanken/selectvarval/Define.asp?MainTable=InntUlikhet&PLanguage=1&nyTmpVar=true&CMSSubjectArea=inntekt-og-forbruk&KortNavnWeb=ifhus&StatVariant=&checked=true
 Pakistan,1964,0.356,,gross,hh,,Mahmood1984 Pakistan gross hh,Mahmood 1984,372,http://www.jstor.org/stable/41258679
 Pakistan,1964,0.386,,disp,hh,,PBS1995 Pakistan disp hh,Tabatabai 1996; PBS1995,102,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -11549,6 +11554,8 @@ Slovenia,2015,0.3,,gross,sqrt,FALSE,"OECD Slovenia gross sqrt, current def, 2012
 Slovenia,2015,0.457,,market,sqrt,FALSE,"OECD Slovenia market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Slovenia,2015,0.254,,gross,pc,FALSE,Povcalnet Slovenia gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Slovenia,2015,0.436,,market,oecdm,TRUE,Statsi market oecdm,Slovenia Statistics Office,"",http://pxweb.stat.si/pxweb/Database/Demographics/08_level_living/08_silc_poverty_indic/15_08673_income_distribution/0867312E.px
+Slovenia,2016,0.237,,disp,oecdm,TRUE,Eurostat Slovenia disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Slovenia,2016,0.431,,market,oecdm,TRUE,Statsi market oecdm,Slovenia Statistics Office,"",http://pxweb.stat.si/pxweb/Database/Demographics/08_level_living/08_silc_poverty_indic/15_08673_income_distribution/0867312E.px
 Solomon Islands,2005,0.461,,con,pc,FALSE,Povcalnet Solomon Islands con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Solomon Islands,2006,0.46,,con,pc,,ZKM2014 Solomon Islands con pc,"Zhuang, Kanbur, and Maligalig 2014",25,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA25
 Solomon Islands,2013,0.371,,con,pc,FALSE,Povcalnet Solomon Islands con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
@@ -12011,6 +12018,8 @@ Spain,2015,0.345,,disp,sqrt,FALSE,"OECD Spain disp sqrt, current def, 2012 metho
 Spain,2015,0.381,,gross,sqrt,FALSE,"OECD Spain gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Spain,2015,0.525,,market,sqrt,FALSE,"OECD Spain market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Spain,2015,0.36200000000000004,,gross,pc,FALSE,Povcalnet Spain gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Spain,2016,0.341,,disp,oecdm,TRUE,Eurostat Spain disp oecdm 4,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Spain,2016,0.311,,disp,oecdm,FALSE,Instituto Nacional de Estadistica Spain disp oecdm,Instituto Nacional de Estadística Spain,"",http://www.ine.es/jaxiT3/files/t/es/csv_c/9966.csv?nocab=1
 Sri Lanka,1970,0.35,,disp,hh,,vGP1984 Sri Lanka disp hh,Tabatabai 1996; van Ginneken and Park 1984,104,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Sri Lanka,1973,0.36,,gross,hh,,Vidanapathirana2007 gross hh,Vidanapathirana 2007,3,http://www.networkideas.org/ideasact/jun07/Beijing_Conference_07/Upali_Vidanapathirana.pdf
 Sri Lanka,1978,0.42,,gross,hh,,Vidanapathirana2007 gross hh,Vidanapathirana 2007,3,http://www.networkideas.org/ideasact/jun07/Beijing_Conference_07/Upali_Vidanapathirana.pdf
