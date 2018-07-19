@@ -2197,6 +2197,21 @@ Chile,1989,0.54,,gross,hh,FALSE,CEPAL SDI Chile gross hh ENE,CEPAL Serie Distrib
 Chile,1990,0.514,,gross,pc,,Berry1997 gross pc,Berry 1997,15,http://www.jstor.org/stable/2503865
 Chile,1990,0.554,,disp,pc,TRUE,CEPAL Chile disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Chile,1990,0.53,,gross,hh,FALSE,CEPAL SDI Chile gross hh ENE,CEPAL Serie Distribucion del Ingreso 15 (1993),,http://hdl.handle.net/11362/9455
+Chile,1990,0.4899,0.003,disp,ae,FALSE,LIS Chile disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1990,0.4979,0.0029,disp,hh,FALSE,LIS Chile disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1990,0.4837,0.0027,disp,oecdm,FALSE,LIS Chile disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1990,0.5027,0.0028,disp,pc,FALSE,LIS Chile disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1990,0.4806,0.0031,disp,sqrt,FALSE,LIS Chile disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1990,0.4899,0.003,gross,ae,FALSE,LIS Chile gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1990,0.4979,0.003,gross,hh,FALSE,LIS Chile gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1990,0.4837,0.0033,gross,oecdm,FALSE,LIS Chile gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1990,0.5027,0.0025,gross,pc,FALSE,LIS Chile gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1990,0.4806,0.0026,gross,sqrt,FALSE,LIS Chile gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1990,0.538,0.0033,market,ae,FALSE,LIS Chile market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1990,0.5558,0.0026,market,hh,FALSE,LIS Chile market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1990,0.5323,0.0034,market,oecdm,FALSE,LIS Chile market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1990,0.5488,0.0031,market,pc,FALSE,LIS Chile market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1990,0.5281,0.0031,market,sqrt,FALSE,LIS Chile market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
 Chile,1990,0.5720000000000001,,gross,pc,FALSE,Povcalnet Chile gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Chile,1990,0.55814968,0.00265898,disp,ae,TRUE,SEDLAC Chile disp ae 1,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Chile,1990,0.56183715,,disp,hh,TRUE,SEDLAC Chile disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
@@ -2204,18 +2219,63 @@ Chile,1990,0.57129916,0.0028955,disp,pc,TRUE,SEDLAC Chile disp pc 1,SEDLAC,inter
 Chile,1990,0.568,,market,pc,FALSE,ST2008 markete pc,Solimano and Torche 2008,29,https://www.researchgate.net/publication/28245961_La_Distribucion_del_Ingreso_en_Chile_1987-2006_Analisis_y_Consideraciones_de_Politica
 Chile,1991,0.488,,gross,pc,,Berry1997 gross pc,Berry 1997,15,http://www.jstor.org/stable/2503865
 Chile,1992,0.551,,disp,pc,TRUE,CEPAL Chile disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Chile,1992,0.4816,0.0022,disp,ae,FALSE,LIS Chile disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1992,0.4943,0.0022,disp,hh,FALSE,LIS Chile disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1992,0.4751,0.0024,disp,oecdm,FALSE,LIS Chile disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1992,0.4954,0.0024,disp,pc,FALSE,LIS Chile disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1992,0.4727,0.0026,disp,sqrt,FALSE,LIS Chile disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1992,0.4816,0.0023,gross,ae,FALSE,LIS Chile gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1992,0.4943,0.0023,gross,hh,FALSE,LIS Chile gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1992,0.4751,0.0026,gross,oecdm,FALSE,LIS Chile gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1992,0.4954,0.003,gross,pc,FALSE,LIS Chile gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1992,0.4727,0.0026,gross,sqrt,FALSE,LIS Chile gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1992,0.5237,0.0027,market,ae,FALSE,LIS Chile market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1992,0.545,0.0028,market,hh,FALSE,LIS Chile market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1992,0.5176,0.0024,market,oecdm,FALSE,LIS Chile market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1992,0.5358,0.003,market,pc,FALSE,LIS Chile market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1992,0.5142,0.0025,market,sqrt,FALSE,LIS Chile market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
 Chile,1992,0.5479999999999999,,gross,pc,FALSE,Povcalnet Chile gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Chile,1992,0.53136494,0.00208711,disp,ae,TRUE,SEDLAC Chile disp ae 1,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Chile,1992,0.53946268,,disp,hh,TRUE,SEDLAC Chile disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Chile,1992,0.54669567,0.00212863,disp,pc,TRUE,SEDLAC Chile disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Chile,1992,0.565,,market,pc,FALSE,ST2008 markete pc,Solimano and Torche 2008,29,https://www.researchgate.net/publication/28245961_La_Distribucion_del_Ingreso_en_Chile_1987-2006_Analisis_y_Consideraciones_de_Politica
 Chile,1994,0.552,,disp,pc,TRUE,CEPAL Chile disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Chile,1994,0.492,0.0024,disp,ae,FALSE,LIS Chile disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1994,0.5047,0.0024,disp,hh,FALSE,LIS Chile disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1994,0.4862,0.0023,disp,oecdm,FALSE,LIS Chile disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1994,0.5044,0.0024,disp,pc,FALSE,LIS Chile disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1994,0.484,0.0027,disp,sqrt,FALSE,LIS Chile disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1994,0.492,0.0026,gross,ae,FALSE,LIS Chile gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1994,0.5047,0.0023,gross,hh,FALSE,LIS Chile gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1994,0.4862,0.0021,gross,oecdm,FALSE,LIS Chile gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1994,0.5044,0.0027,gross,pc,FALSE,LIS Chile gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1994,0.484,0.0023,gross,sqrt,FALSE,LIS Chile gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1994,0.5353,0.0024,market,ae,FALSE,LIS Chile market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1994,0.5571,0.0025,market,hh,FALSE,LIS Chile market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1994,0.5298,0.0027,market,oecdm,FALSE,LIS Chile market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1994,0.5463,0.0027,market,pc,FALSE,LIS Chile market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1994,0.5266,0.0024,market,sqrt,FALSE,LIS Chile market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
 Chile,1994,0.564,,gross,pc,FALSE,Povcalnet Chile gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Chile,1994,0.54917294,0.00339067,disp,ae,TRUE,SEDLAC Chile disp ae 1,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Chile,1994,0.55388689,,disp,hh,TRUE,SEDLAC Chile disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Chile,1994,0.56266479,0.00365106,disp,pc,TRUE,SEDLAC Chile disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Chile,1994,0.569,,market,pc,FALSE,ST2008 markete pc,Solimano and Torche 2008,29,https://www.researchgate.net/publication/28245961_La_Distribucion_del_Ingreso_en_Chile_1987-2006_Analisis_y_Consideraciones_de_Politica
 Chile,1996,0.553,,disp,pc,TRUE,CEPAL Chile disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Chile,1996,0.4909,0.0045,disp,ae,FALSE,LIS Chile disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1996,0.4978,0.0032,disp,hh,FALSE,LIS Chile disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1996,0.4847,0.0049,disp,oecdm,FALSE,LIS Chile disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1996,0.5033,0.0041,disp,pc,FALSE,LIS Chile disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1996,0.4804,0.0039,disp,sqrt,FALSE,LIS Chile disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1996,0.4909,0.0045,gross,ae,FALSE,LIS Chile gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1996,0.4978,0.0037,gross,hh,FALSE,LIS Chile gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1996,0.4847,0.0044,gross,oecdm,FALSE,LIS Chile gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1996,0.5033,0.0039,gross,pc,FALSE,LIS Chile gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1996,0.4804,0.0038,gross,sqrt,FALSE,LIS Chile gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1996,0.5354,0.0047,market,ae,FALSE,LIS Chile market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1996,0.5503,0.0037,market,hh,FALSE,LIS Chile market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1996,0.5295,0.0041,market,oecdm,FALSE,LIS Chile market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1996,0.5465,0.0041,market,pc,FALSE,LIS Chile market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1996,0.5241,0.0039,market,sqrt,FALSE,LIS Chile market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
 Chile,1996,0.527,0.003,disp,sqrt,FALSE,"OECD Chile disp sqrt, incomparable def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Chile,1996,0.541,,market,sqrt,FALSE,"OECD Chile market sqrt, incomparable def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Chile,1996,0.5489999999999999,,gross,pc,FALSE,Povcalnet Chile gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
@@ -2224,24 +2284,84 @@ Chile,1996,0.5389501,,disp,hh,TRUE,SEDLAC Chile disp hh 1,SEDLAC,gini1,http://ww
 Chile,1996,0.54811719,0.00350688,disp,pc,TRUE,SEDLAC Chile disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Chile,1996,0.571,,market,pc,FALSE,ST2008 markete pc,Solimano and Torche 2008,29,https://www.researchgate.net/publication/28245961_La_Distribucion_del_Ingreso_en_Chile_1987-2006_Analisis_y_Consideraciones_de_Politica
 Chile,1998,0.56,,disp,pc,TRUE,CEPAL Chile disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Chile,1998,0.4986,0.0031,disp,ae,FALSE,LIS Chile disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1998,0.499,0.0026,disp,hh,FALSE,LIS Chile disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1998,0.4912,0.0026,disp,oecdm,FALSE,LIS Chile disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1998,0.5128,0.0027,disp,pc,FALSE,LIS Chile disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1998,0.4862,0.0029,disp,sqrt,FALSE,LIS Chile disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1998,0.4986,0.0027,gross,ae,FALSE,LIS Chile gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1998,0.499,0.0026,gross,hh,FALSE,LIS Chile gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1998,0.4912,0.0029,gross,oecdm,FALSE,LIS Chile gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1998,0.5128,0.0031,gross,pc,FALSE,LIS Chile gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1998,0.4862,0.0029,gross,sqrt,FALSE,LIS Chile gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1998,0.5397,0.0028,market,ae,FALSE,LIS Chile market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1998,0.5495,0.0029,market,hh,FALSE,LIS Chile market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1998,0.5328,0.0032,market,oecdm,FALSE,LIS Chile market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1998,0.5523,0.0033,market,pc,FALSE,LIS Chile market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,1998,0.527,0.0031,market,sqrt,FALSE,LIS Chile market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
 Chile,1998,0.555,,gross,pc,FALSE,Povcalnet Chile gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Chile,1998,0.54110626,0.00274295,disp,ae,TRUE,SEDLAC Chile disp ae 1,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Chile,1998,0.53926122,,disp,hh,TRUE,SEDLAC Chile disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Chile,1998,0.55441337,0.00277522,disp,pc,TRUE,SEDLAC Chile disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Chile,1998,0.579,,market,pc,FALSE,ST2008 markete pc,Solimano and Torche 2008,29,https://www.researchgate.net/publication/28245961_La_Distribucion_del_Ingreso_en_Chile_1987-2006_Analisis_y_Consideraciones_de_Politica
 Chile,2e3,0.564,,disp,pc,TRUE,CEPAL Chile disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Chile,2e3,0.5042,0.004,disp,ae,FALSE,LIS Chile disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2e3,0.5005,0.0037,disp,hh,FALSE,LIS Chile disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2e3,0.4973,0.0043,disp,oecdm,FALSE,LIS Chile disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2e3,0.5169,0.004,disp,pc,FALSE,LIS Chile disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2e3,0.4904,0.0044,disp,sqrt,FALSE,LIS Chile disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2e3,0.5042,0.0036,gross,ae,FALSE,LIS Chile gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2e3,0.5005,0.004,gross,hh,FALSE,LIS Chile gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2e3,0.4973,0.0038,gross,oecdm,FALSE,LIS Chile gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2e3,0.5169,0.004,gross,pc,FALSE,LIS Chile gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2e3,0.4904,0.0038,gross,sqrt,FALSE,LIS Chile gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2e3,0.5545,0.0042,market,ae,FALSE,LIS Chile market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2e3,0.5606,0.0034,market,hh,FALSE,LIS Chile market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2e3,0.5482,0.0044,market,oecdm,FALSE,LIS Chile market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2e3,0.5655,0.0043,market,pc,FALSE,LIS Chile market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2e3,0.5406,0.0041,market,sqrt,FALSE,LIS Chile market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
 Chile,2e3,0.528,,gross,pc,FALSE,Povcalnet Chile gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Chile,2e3,0.54350679,0.0040188,disp,ae,TRUE,SEDLAC Chile disp ae 1,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Chile,2e3,0.53381393,,disp,hh,TRUE,SEDLAC Chile disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Chile,2e3,0.55517868,0.00413306,disp,pc,TRUE,SEDLAC Chile disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Chile,2e3,0.58,,market,pc,FALSE,ST2008 markete pc,Solimano and Torche 2008,29,https://www.researchgate.net/publication/28245961_La_Distribucion_del_Ingreso_en_Chile_1987-2006_Analisis_y_Consideraciones_de_Politica
 Chile,2003,0.552,,disp,pc,TRUE,CEPAL Chile disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Chile,2003,0.4913,0.0024,disp,ae,FALSE,LIS Chile disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2003,0.4945,0.0025,disp,hh,FALSE,LIS Chile disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2003,0.4837,0.0028,disp,oecdm,FALSE,LIS Chile disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2003,0.506,0.0026,disp,pc,FALSE,LIS Chile disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2003,0.479,0.0025,disp,sqrt,FALSE,LIS Chile disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2003,0.4913,0.0024,gross,ae,FALSE,LIS Chile gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2003,0.4945,0.0023,gross,hh,FALSE,LIS Chile gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2003,0.4837,0.0026,gross,oecdm,FALSE,LIS Chile gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2003,0.506,0.0029,gross,pc,FALSE,LIS Chile gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2003,0.479,0.0028,gross,sqrt,FALSE,LIS Chile gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2003,0.5372,0.0027,market,ae,FALSE,LIS Chile market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2003,0.5498,0.0025,market,hh,FALSE,LIS Chile market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2003,0.53,0.0026,market,oecdm,FALSE,LIS Chile market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2003,0.5504,0.0029,market,pc,FALSE,LIS Chile market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2003,0.5243,0.0024,market,sqrt,FALSE,LIS Chile market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
 Chile,2003,0.515,,gross,pc,FALSE,Povcalnet Chile gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Chile,2003,0.53207706,0.00297823,disp,ae,TRUE,SEDLAC Chile disp ae 1,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Chile,2003,0.53079689,,disp,hh,TRUE,SEDLAC Chile disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Chile,2003,0.54663787,0.0031757,disp,pc,TRUE,SEDLAC Chile disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Chile,2003,0.571,,market,pc,FALSE,ST2008 markete pc,Solimano and Torche 2008,29,https://www.researchgate.net/publication/28245961_La_Distribucion_del_Ingreso_en_Chile_1987-2006_Analisis_y_Consideraciones_de_Politica
 Chile,2006,0.522,,disp,pc,TRUE,CEPAL Chile disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Chile,2006,0.4709,0.0024,disp,ae,FALSE,LIS Chile disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2006,0.4822,0.0024,disp,hh,FALSE,LIS Chile disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2006,0.464,0.0025,disp,oecdm,FALSE,LIS Chile disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2006,0.4842,0.0028,disp,pc,FALSE,LIS Chile disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2006,0.4595,0.0024,disp,sqrt,FALSE,LIS Chile disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2006,0.4709,0.003,gross,ae,FALSE,LIS Chile gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2006,0.4822,0.0027,gross,hh,FALSE,LIS Chile gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2006,0.464,0.0028,gross,oecdm,FALSE,LIS Chile gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2006,0.4842,0.0024,gross,pc,FALSE,LIS Chile gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2006,0.4595,0.0025,gross,sqrt,FALSE,LIS Chile gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2006,0.5178,0.0025,market,ae,FALSE,LIS Chile market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2006,0.5374,0.0026,market,hh,FALSE,LIS Chile market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2006,0.5109,0.0027,market,oecdm,FALSE,LIS Chile market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2006,0.5302,0.0028,market,pc,FALSE,LIS Chile market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2006,0.5052,0.0026,market,sqrt,FALSE,LIS Chile market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
 Chile,2006,0.511,,disp,sqrt,FALSE,"OECD Chile disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Chile,2006,0.535,,market,sqrt,FALSE,"OECD Chile market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Chile,2006,0.48200000000000004,,gross,pc,FALSE,Povcalnet Chile gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
@@ -2251,6 +2371,21 @@ Chile,2006,0.51741697,0.00260131,disp,pc,TRUE,SEDLAC Chile disp pc 1,SEDLAC,inte
 Chile,2006,0.543,,market,pc,FALSE,ST2008 markete pc,Solimano and Torche 2008,29,https://www.researchgate.net/publication/28245961_La_Distribucion_del_Ingreso_en_Chile_1987-2006_Analisis_y_Consideraciones_de_Politica
 Chile,2009,0.524,,disp,pc,TRUE,CEPAL Chile disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Chile,2009,0.5637000000000001,,market,pc,FALSE,CEQ Chile market pc,Lustig 2015,,http://www.commitmentoequity.org/publications_files/Comparative/CEQWPNo30%20RedisImpactGovntSpendEducHealth%20March%202015.pdf
+Chile,2009,0.4675,0.0042,disp,ae,FALSE,LIS Chile disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2009,0.4851,0.0037,disp,hh,FALSE,LIS Chile disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2009,0.4609,0.004,disp,oecdm,FALSE,LIS Chile disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2009,0.481,0.0043,disp,pc,FALSE,LIS Chile disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2009,0.4577,0.0041,disp,sqrt,FALSE,LIS Chile disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2009,0.4675,0.0051,gross,ae,FALSE,LIS Chile gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2009,0.4851,0.0039,gross,hh,FALSE,LIS Chile gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2009,0.4609,0.0035,gross,oecdm,FALSE,LIS Chile gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2009,0.481,0.0041,gross,pc,FALSE,LIS Chile gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2009,0.4577,0.0042,gross,sqrt,FALSE,LIS Chile gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2009,0.5324,0.0039,market,ae,FALSE,LIS Chile market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2009,0.5599,0.0035,market,hh,FALSE,LIS Chile market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2009,0.5256,0.0043,market,oecdm,FALSE,LIS Chile market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2009,0.5447,0.0043,market,pc,FALSE,LIS Chile market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2009,0.5208,0.0036,market,sqrt,FALSE,LIS Chile market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
 Chile,2009,0.51,,disp,sqrt,FALSE,"OECD Chile disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Chile,2009,0.48,0.00229,disp,sqrt,FALSE,"OECD Chile disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Chile,2009,0.489,,gross,sqrt,FALSE,"OECD Chile gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -2261,6 +2396,21 @@ Chile,2009,0.5058561,0.00524743,disp,ae,TRUE,SEDLAC Chile disp ae 1,SEDLAC,inter
 Chile,2009,0.52096539,,disp,hh,TRUE,SEDLAC Chile disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Chile,2009,0.51885793,0.00574085,disp,pc,TRUE,SEDLAC Chile disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Chile,2011,0.516,,disp,pc,TRUE,CEPAL Chile disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Chile,2011,0.4591,0.0031,disp,ae,FALSE,LIS Chile disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2011,0.4769,0.0033,disp,hh,FALSE,LIS Chile disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2011,0.4522,0.0036,disp,oecdm,FALSE,LIS Chile disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2011,0.4738,0.0033,disp,pc,FALSE,LIS Chile disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2011,0.4499,0.0032,disp,sqrt,FALSE,LIS Chile disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2011,0.4591,0.0031,gross,ae,FALSE,LIS Chile gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2011,0.4769,0.0033,gross,hh,FALSE,LIS Chile gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2011,0.4522,0.0034,gross,oecdm,FALSE,LIS Chile gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2011,0.4738,0.0027,gross,pc,FALSE,LIS Chile gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2011,0.4499,0.0036,gross,sqrt,FALSE,LIS Chile gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2011,0.5203,0.0033,market,ae,FALSE,LIS Chile market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2011,0.5503,0.0035,market,hh,FALSE,LIS Chile market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2011,0.5136,0.0032,market,oecdm,FALSE,LIS Chile market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2011,0.5334,0.0035,market,pc,FALSE,LIS Chile market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2011,0.5097,0.0035,market,sqrt,FALSE,LIS Chile market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
 Chile,2011,0.503,,disp,sqrt,FALSE,"OECD Chile disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Chile,2011,0.471,0.0020599999999999998,disp,sqrt,FALSE,"OECD Chile disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Chile,2011,0.481,,gross,sqrt,FALSE,"OECD Chile gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -2273,6 +2423,21 @@ Chile,2011,0.50778745,0.00258967,disp,pc,TRUE,SEDLAC Chile disp pc 1,SEDLAC,inte
 Chile,2013,0.509,,disp,pc,TRUE,CEPAL Chile disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Chile,2013,0.46680000000000005,,disp,pc,FALSE,CEQ Chile disp pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
 Chile,2013,0.5028,,market,pc,FALSE,CEQ Chile market pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
+Chile,2013,0.4538,0.003,disp,ae,FALSE,LIS Chile disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2013,0.4733,0.0028,disp,hh,FALSE,LIS Chile disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2013,0.4464,0.003,disp,oecdm,FALSE,LIS Chile disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2013,0.469,0.003,disp,pc,FALSE,LIS Chile disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2013,0.4432,0.003,disp,sqrt,FALSE,LIS Chile disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2013,0.4538,0.003,gross,ae,FALSE,LIS Chile gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2013,0.4733,0.0027,gross,hh,FALSE,LIS Chile gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2013,0.4464,0.0033,gross,oecdm,FALSE,LIS Chile gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2013,0.469,0.0033,gross,pc,FALSE,LIS Chile gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2013,0.4432,0.0026,gross,sqrt,FALSE,LIS Chile gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2013,0.5178,0.0032,market,ae,FALSE,LIS Chile market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2013,0.5474,0.0028,market,hh,FALSE,LIS Chile market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2013,0.5102,0.0029,market,oecdm,FALSE,LIS Chile market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2013,0.5321,0.0027,market,pc,FALSE,LIS Chile market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2013,0.5054,0.0033,market,sqrt,FALSE,LIS Chile market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
 Chile,2013,0.465,0.0022400000000000002,disp,sqrt,FALSE,"OECD Chile disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Chile,2013,0.475,,gross,sqrt,FALSE,"OECD Chile gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Chile,2013,0.498,,market,sqrt,FALSE,"OECD Chile market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -2283,6 +2448,21 @@ Chile,2013,0.50606462,,disp,hh,TRUE,SEDLAC Chile disp hh 1,SEDLAC,gini1,http://w
 Chile,2013,0.46461888,,disp,hh,TRUE,SEDLAC Chile disp hh 2,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Chile,2013,0.50377243,0.0022027,disp,pc,TRUE,SEDLAC Chile disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Chile,2013,0.47161836,0.00234513,disp,pc,TRUE,SEDLAC Chile disp pc 2,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
+Chile,2015,0.4596,0.002,disp,ae,FALSE,LIS Chile disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2015,0.4778,0.0019,disp,hh,FALSE,LIS Chile disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2015,0.4528,0.002,disp,oecdm,FALSE,LIS Chile disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2015,0.4739,0.0019,disp,pc,FALSE,LIS Chile disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2015,0.4493,0.002,disp,sqrt,FALSE,LIS Chile disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2015,0.4596,0.0021,gross,ae,FALSE,LIS Chile gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2015,0.4778,0.002,gross,hh,FALSE,LIS Chile gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2015,0.4528,0.0022,gross,oecdm,FALSE,LIS Chile gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2015,0.4739,0.0018,gross,pc,FALSE,LIS Chile gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2015,0.4493,0.0019,gross,sqrt,FALSE,LIS Chile gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2015,0.5262,0.0017,market,ae,FALSE,LIS Chile market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2015,0.5538,0.002,market,hh,FALSE,LIS Chile market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2015,0.5191,0.0023,market,oecdm,FALSE,LIS Chile market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2015,0.5396,0.0022,market,pc,FALSE,LIS Chile market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
+Chile,2015,0.5139,0.0021,market,sqrt,FALSE,LIS Chile market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
 Chile,2015,0.454,0.0015199999999999999,disp,sqrt,FALSE,"OECD Chile disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Chile,2015,0.463,,gross,sqrt,FALSE,"OECD Chile gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Chile,2015,0.486,,market,sqrt,FALSE,"OECD Chile market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
