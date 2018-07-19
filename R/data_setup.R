@@ -1933,6 +1933,8 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
     mutate(series = paste("OECD", country, str_replace(series, "OECD ", "")))
   ceq1 <- ceq %>% 
     mutate(series = paste("CEQ", country, str_replace(series, "CEQ ", "")))
+  lis1 <- lis %>% 
+    mutate(series = paste("LIS", country, str_replace(series, "LIS ", "")))
   
   # then combine with other series ordered by data-richness
   ineq0 <- bind_rows(lis, 
@@ -2007,7 +2009,6 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
            kcode = as.integer(factor(country, levels = unique(country))),
            tcode = tcode0,
            rcode = as.integer(factor(region, levels = unique(region))),
-           scode = as.integer(factor(series, levels = unique(series))),
            wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)),
            ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)),
            wecode = as.integer(factor(paste(wcode, ecode))),
@@ -2201,7 +2202,9 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
   
   ineq2 <- ineq %>% 
     left_join(kyrs, by = "kcode") %>% 
-    mutate(kwd = paste(country, str_replace(wdes, "_.*", "")),
+    filter(!(obl & s_bl_obs == k_bl_obs)) %>%  # exclude series that *only* overlap with baseline
+    mutate(scode = as.integer(factor(series, levels = unique(series))),
+           kwd = paste(country, str_replace(wdes, "_.*", "")),
            kes = paste(country, str_replace(wdes, ".*_", "")),
            rwd = paste(rcode, str_replace(wdes, "_.*", "")),
            res = paste(rcode, str_replace(wdes, ".*_", "")),
