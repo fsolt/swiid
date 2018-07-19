@@ -131,10 +131,10 @@ make_inputs <- function(baseline_series, fold) {
     mutate(gini_m_se = ifelse(!is.na(gini_m_se), gini_m_se * 2,
                               quantile(gini_m_se/gini_m, .99, na.rm = TRUE) * gini_m * 2),
            wdes = paste(welfare_def, equiv_scale, sep = "_"),
-           ibl = (gini_m == gini_b & series == first(baseline$series)),
+           ibl = (gini_m == gini_b & str_detect(series, paste("LIS .*", baseline_wd, baseline_es))),
            bl = (!is.na(gini_b)),
-           obl = (s_bl_obs>0),
-           kbl = (k_bl_obs>0),
+           obl = (s_bl_obs > 0),
+           kbl = (k_bl_obs > 0),
            kcode = as.integer(factor(country, levels = unique(country))),
            tcode = tcode0,
            rcode = as.integer(factor(region, levels = unique(region))),
@@ -329,9 +329,7 @@ make_inputs <- function(baseline_series, fold) {
   
   ineq2 <- ineq %>% 
     left_join(kyrs, by = "kcode") %>% 
-    filter(!(obl & series_obs == s_bl_obs & !(str_detect(series, paste("LIS .*", baseline_wd, baseline_es))))) %>%  # exclude series that *only* overlap with baseline
-    mutate(scode = as.integer(factor(series, levels = unique(series))),
-           kwd = paste(country, str_replace(wdes, "_.*", "")),
+    mutate(kwd = paste(country, str_replace(wdes, "_.*", "")),
            kes = paste(country, str_replace(wdes, ".*_", "")),
            rwd = paste(rcode, str_replace(wdes, "_.*", "")),
            res = paste(rcode, str_replace(wdes, ".*_", "")),
@@ -471,6 +469,7 @@ leave_k_out <- function(fold) {
                  warmup = warmup,
                  cores = cores,
                  chains = chains,
+                 pars = c("gini"),
                  control = list(max_treedepth = 20,
                                 adapt_delta = adapt_delta))
     runtime <- proc.time() - start
