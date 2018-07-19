@@ -2202,7 +2202,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
   
   ineq2 <- ineq %>% 
     left_join(kyrs, by = "kcode") %>% 
-    filter(!(obl & s_bl_obs == k_bl_obs)) %>%  # exclude series that *only* overlap with baseline
+    filter(!(obl & series_obs == s_bl_obs)) %>%  # exclude series that *only* overlap with baseline
     mutate(scode = as.integer(factor(series, levels = unique(series))),
            kwd = paste(country, str_replace(wdes, "_.*", "")),
            kes = paste(country, str_replace(wdes, ".*_", "")),
