@@ -83,7 +83,7 @@ format_lis_xtra <- function(x) {
     arrange(country, year)
 }
 
-lis_files <- c("au", "at", "be", "br", "ca", "cn", "co", "cz", "dk",   # add "cl" when LIS releases data
+lis_files <- c("au", "at", "be", "br", "ca", "cl", "cn", "co", "cz", "dk",
                "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", 
                "in", "ie", "il", "it", "jp", "lt", "lu", "mx", "nl", "no", "pa", "py", 
                "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se", 
