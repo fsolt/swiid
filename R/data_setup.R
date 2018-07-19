@@ -1937,7 +1937,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
     mutate(series = paste("LIS", country, str_replace(series, "LIS ", "")))
   
   # then combine with other series ordered by data-richness
-  ineq0 <- bind_rows(lis, 
+  ineq0 <- bind_rows(lis1, 
                      sedlac, cepal, cepal_sdi, oecd1, eurostat,
                      transmonee, ceq1, afr_gini, wb,
                      armstat, abs, inebo, belstat, statcan, dane, ineccr, dkstat,
