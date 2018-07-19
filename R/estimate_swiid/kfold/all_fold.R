@@ -60,16 +60,18 @@ make_inputs <- function(baseline_series, fold) {
     select(country, year, cy, gini_b, gini_b_se)
   
   lis2 <- lis %>%
-    filter(!(paste(country, year) %in% cy_fold$cy & series == baseline_series))
+    filter(!(paste(country, year) %in% cy_fold$cy))
   
   # turn cross-country series into within-country series
   oecd1 <- oecd %>% 
     mutate(series = paste("OECD", country, str_replace(series, "OECD ", "")))
   ceq1 <- ceq %>% 
     mutate(series = paste("CEQ", country, str_replace(series, "CEQ ", "")))
+  lis3 <- lis2 %>% 
+    mutate(series = paste("LIS", country, str_replace(series, "LIS ", "")))
   
   # then combine with other series ordered by data-richness
-  ineq0 <- bind_rows(lis2, 
+  ineq0 <- bind_rows(lis3, 
                      sedlac, cepal, cepal_sdi, oecd1, eurostat,
                      transmonee, ceq1, afr_gini, wb,
                      armstat, abs, inebo, belstat, statcan, dane, ineccr, dkstat,
@@ -327,7 +329,9 @@ make_inputs <- function(baseline_series, fold) {
   
   ineq2 <- ineq %>% 
     left_join(kyrs, by = "kcode") %>% 
-    mutate(kwd = paste(country, str_replace(wdes, "_.*", "")),
+    filter(!(obl & series_obs == s_bl_obs & !(str_detect(series, paste("LIS .*", baseline_wd, baseline_es))))) %>%  # exclude series that *only* overlap with baseline
+    mutate(scode = as.integer(factor(series, levels = unique(series))),
+           kwd = paste(country, str_replace(wdes, "_.*", "")),
            kes = paste(country, str_replace(wdes, ".*_", "")),
            rwd = paste(rcode, str_replace(wdes, "_.*", "")),
            res = paste(rcode, str_replace(wdes, ".*_", "")),
