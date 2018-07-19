@@ -124,6 +124,7 @@ out1 <- stan(file = "R/estimate_swiid/all.stan",
              warmup = warmup,
              cores = cores,
              chains = chains,
+             pars = c("gini"),
              control = list(max_treedepth = 20,
                             adapt_delta = adapt_delta))
 runtime <- proc.time() - start
