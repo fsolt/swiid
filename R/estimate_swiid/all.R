@@ -5,8 +5,9 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 8000
-warmup <- iter - 1000
+iter <- 10000
+warmup <- iter - 1500
+thin <- 3
 chains <- 3
 cores <- chains
 adapt_delta <- .9
@@ -122,6 +123,7 @@ out1 <- stan(file = "R/estimate_swiid/all.stan",
              seed = seed,
              iter = iter,
              warmup = warmup,
+             thin = thin,
              cores = cores,
              chains = chains,
              pars = c("gini"),
