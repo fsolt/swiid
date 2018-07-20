@@ -2234,6 +2234,7 @@ rho_wd_m <- market[[3]]
 swiid_source <- disp[[4]] %>% 
   rename(gini = gini_m,
          gini_se = gini_m_se) %>% 
+  mutate(year = as.integer(year)) %>% 
   select(-country_obs, -series_obs, -region) %>% 
   arrange(country, year, series)
 
