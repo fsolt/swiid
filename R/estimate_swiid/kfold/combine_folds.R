@@ -11,7 +11,9 @@ walk(folds, function(fold) leave_k_out(fold))
 fold_path <- "/Volumes/Platón-Media/Media/Projects/swiid/kfold"
 files <- list.files(fold_path, pattern = "res_\\d+.rda")
 
-map_df(files, function(file_name) {
+res_folds <- map_df(files, function(file_name) {
   load(file.path(fold_path, file_name))
-  return(gini_res)
+  return(fold_res)
 })
+
+save(res_folds, "data/res_folds.rda")
