@@ -65,13 +65,13 @@ parameters {
   real<lower=0> sigma_s; 	                // series noise 
   
   vector<lower=0>[KWE] rho_kwe_hat;       // estimated rho_we by country
-  real<lower=0> sigma_kwe;                // rho_kwe_hat noise (by region)
+  real<lower=0> sigma_kwe;                // rho_kwe_hat noise
   
   vector<lower=0>[KW] rho_kw_hat;         // estimated rho_w by country
-  real<lower=0> sigma_kw;                 // rho_kw_hat noise (by region)
+  real<lower=0> sigma_kw;                 // rho_kw_hat noise
   
   vector<lower=0>[RWE] rho_rwe_hat;       // estimated rho_we by region
-  real<lower=0> sigma_rwe[R];             // rho_rwe_hat noise
+  real<lower=0> sigma_rwe[R];             // rho_rwe_hat noise (by region)
 }
 
 transformed parameters {
