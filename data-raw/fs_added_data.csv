@@ -407,6 +407,8 @@ Egypt,1995,0.326,,con,pc,,FR2008 Egypt con pc,Ferreira and Ravallion 2008,36,htt
 Egypt,2000,0.335,,con,pc,,Hassine2015 Egypt con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Egypt,2005,0.317,,con,pc,,Hassine2015 Egypt con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Egypt,2009,0.306,,con,pc,,Hassine2015 Egypt con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
+Egypt,2009,0.4411,0.0389,disp,pc,,HV2013 Egypt disp pc,Hlasny and Verme 2013,27,http://www.ecineq.org/milano/WP/ECINEQ2013-303.pdf
+Egypt,2009,0.3398,0.007,con,pc,,HV2013 Egypt con pc,Hlasny and Verme 2013,27,http://www.ecineq.org/milano/WP/ECINEQ2013-303.pdf
 Egypt,2000,0.339,0.033,con,pc,,KANRVZ2017 Egypt con pc,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
 Egypt,2005,0.32,0.028,con,pc,,KANRVZ2017 Egypt con pc,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
 Egypt,2012,0.297,0.02,con,pc,,KANRVZ2017 Egypt con pc,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
@@ -1474,9 +1476,9 @@ Russia,2000,0.349,,con,pc,FALSE,MY2006 Russian Federation con pc 3,Mitra and Yem
 Russia,2001,0.339,,con,pc,FALSE,MY2006 Russian Federation con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Russia,2002,0.338,,con,pc,FALSE,MY2006 Russian Federation con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Russia,2003,0.332,,con,pc,FALSE,MY2006 Russian Federation con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
-Russia,1992,0.395,0.0049,disp,sqrt,FALSE,old LISædisp sqrt,LIS,,https://web.archive.org/web/20100804001129/http://www.lisproject.org/key-figures/kf-workbook.xls
-Russia,1995,0.447,0.0065,disp,sqrt,FALSE,old LISædisp sqrt,LIS,,https://web.archive.org/web/20100804001129/http://www.lisproject.org/key-figures/kf-workbook.xls
-Russia,2000,0.434,0.0068,disp,sqrt,FALSE,old LISædisp sqrt,LIS,,https://web.archive.org/web/20100804001129/http://www.lisproject.org/key-figures/kf-workbook.xls
+Russia,1992,0.395,0.0049,disp,sqrt,FALSE,old LIS¾disp sqrt,LIS,,https://web.archive.org/web/20100804001129/http://www.lisproject.org/key-figures/kf-workbook.xls
+Russia,1995,0.447,0.0065,disp,sqrt,FALSE,old LIS¾disp sqrt,LIS,,https://web.archive.org/web/20100804001129/http://www.lisproject.org/key-figures/kf-workbook.xls
+Russia,2000,0.434,0.0068,disp,sqrt,FALSE,old LIS¾disp sqrt,LIS,,https://web.archive.org/web/20100804001129/http://www.lisproject.org/key-figures/kf-workbook.xls
 Rwanda,1986,0.29,,con,ae,FALSE,NIS Rwanda con ae 1,National Institute of Statistics of Rwanda 2002,27,http://www.statistics.gov.rw/file/714/download?token=J-PX22mI
 Rwanda,2001,0.45,,con,ae,FALSE,NIS Rwanda con ae 1,National Institute of Statistics of Rwanda 2002,27,http://www.statistics.gov.rw/file/714/download?token=J-PX22mI
 Rwanda,2001,0.473,,con,ae,FALSE,NIS Rwanda con ae 2,National Institute of Statistics of Rwanda 2006,25,http://www.statistics.gov.rw/file/710/download?token=F2o-qYal
