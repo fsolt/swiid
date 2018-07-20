@@ -1,10 +1,10 @@
 swiid.name,swiid.region
-Afghanistan,DA
-Aland Islands,WE
+Afghanistan,DAA
+Åland Islands,WE
 Albania,EE
-Algeria,AFR
+Algeria,DAA
 Andorra,WE
-Angola,AFR
+Angola,DAA
 Anguilla,LAC
 Antigua and Barbuda,LAC
 Argentina,LAC
@@ -14,38 +14,38 @@ Australia,AES
 Austria,WE
 Azerbaijan,FSU
 Bahamas,LAC
-Bahrain,DA
-Bangladesh,DA
+Bahrain,DAA
+Bangladesh,DAA
 Barbados,LAC
 Belarus,FSU
 Belgium,WE
 Belize,LAC
-Benin,AFR
+Benin,DAA
 Bermuda,LAC
-Bhutan,DA
+Bhutan,DAA
 Bolivia,LAC
 Bonaire,LAC
 Bosnia and Herzegovina,EE
-Botswana,AFR
+Botswana,DAA
 Brazil,LAC
-Brunei,DA
+Brunei,DAA
 Bulgaria,EE
-Burkina Faso,AFR
-Burundi,AFR
-Côte d'Ivoire,AFR
-Cambodia,DA
-Cameroon,AFR
+Burkina Faso,DAA
+Burundi,DAA
+Côte d'Ivoire,DAA
+Cambodia,DAA
+Cameroon,DAA
 Canada,AES
-Cape Verde,AFR
+Cape Verde,DAA
 Cayman Islands,LAC
-Central African Republic,AFR
-Chad,AFR
+Central African Republic,DAA
+Chad,DAA
 Chile,LAC
-China,DA
+China,DAA
 Colombia,LAC
-Comoros,AFR
-Congo-Brazzaville,AFR
-Congo-Kinshasa,AFR
+Comoros,DAA
+Congo-Brazzaville,DAA
+Congo-Kinshasa,DAA
 Costa Rica,LAC
 Croatia,EE
 Cuba,LAC
@@ -53,165 +53,165 @@ Curacao,LAC
 Cyprus,WE
 Czech Republic,EE
 Czechoslovakia,EE
-Democratic People's Republic of Korea,DA
+Democratic People's Republic of Korea,DAA
 Denmark,WE
-Djibouti,AFR
+Djibouti,DAA
 Dominica,LAC
 Dominican Republic,LAC
 Ecuador,LAC
-Egypt,AFR
+Egypt,DAA
 El Salvador,LAC
-Equatorial Guinea,AFR
-Eritrea,AFR
+Equatorial Guinea,DAA
+Eritrea,DAA
 Estonia,EE
-Ethiopia,AFR
-Fiji,DA
+Ethiopia,DAA
+Fiji,DAA
 Finland,WE
 France,WE
-Gabon,AFR
-Gambia,AFR
+Gabon,DAA
+Gambia,DAA
 Georgia,FSU
 German Democratic Republic,EE
 Germany,WE
-Ghana,AFR
+Ghana,DAA
 Greece,WE
 Grenada,LAC
 Guadeloupe,LAC
 Guatemala,LAC
-Guinea,AFR
-Guinea-Bissau,AFR
+Guinea,DAA
+Guinea-Bissau,DAA
 Guyana,LAC
 Haiti,LAC
 Honduras,LAC
 Hong Kong,AT
 Hungary,EE
 Iceland,WE
-India,DA
-Indonesia,DA
-Iran,DA
-Iraq,DA
+India,DAA
+Indonesia,DAA
+Iran,DAA
+Iraq,DAA
 Ireland,AES
 Israel,AES
 Italy,WE
 Jamaica,LAC
 Japan,AT
-Jordan,DA
+Jordan,DAA
 Kazakhstan,FSU
-Kenya,AFR
-Kiribati,DA
+Kenya,DAA
+Kiribati,DAA
 Korea,AT
 Kosovo,EE
-Kuwait,DA
+Kuwait,DAA
 Kyrgyzstan,FSU
-Laos,DA
+Laos,DAA
 Latvia,EE
-Lebanon,DA
-Lesotho,AFR
-Liberia,AFR
-Libya,AFR
+Lebanon,DAA
+Lesotho,DAA
+Liberia,DAA
+Libya,DAA
 Liechtenstein,WE
 Lithuania,EE
 Luxembourg,WE
-Macao,DA
+Macao,DAA
 Macedonia,EE
-Madagascar,AFR
-Malawi,AFR
-Malaysia,DA
-Maldives,DA
-Mali,AFR
+Madagascar,DAA
+Malawi,DAA
+Malaysia,DAA
+Maldives,DAA
+Mali,DAA
 Malta,WE
 Martinique,LAC
-Mauritania,AFR
-Mauritius,AFR
+Mauritania,DAA
+Mauritius,DAA
 Mexico,LAC
-Micronesia,DA
+Micronesia,DAA
 Moldova,EE
 Monaco,WE
-Mongolia,DA
+Mongolia,DAA
 Montenegro,EE
 Montserrat,LAC
-Morocco,AFR
-Mozambique,AFR
-Myanmar,DA
-Namibia,AFR
-Nauru,DA
-Nepal,DA
+Morocco,DAA
+Mozambique,DAA
+Myanmar,DAA
+Namibia,DAA
+Nauru,DAA
+Nepal,DAA
 Netherlands,WE
 New Zealand,AES
 Nicaragua,LAC
-Niger,AFR
-Nigeria,AFR
+Niger,DAA
+Nigeria,DAA
 Norway,WE
-Oman,DA
-Pakistan,DA
-Palau,DA
-Palestinian Territories,DA
+Oman,DAA
+Pakistan,DAA
+Palau,DAA
+Palestinian Territories,DAA
 Panama,LAC
-Papua New Guinea,DA
+Papua New Guinea,DAA
 Paraguay,LAC
 Peru,LAC
-Philippines,DA
+Philippines,DAA
 Poland,EE
 Portugal,WE
 Puerto Rico,LAC
-Qatar,DA
+Qatar,DAA
 Romania,EE
 Russia,FSU
-Rwanda,AFR
-São Tomé and Príncipe,AFR
-Samoa,DA
+Rwanda,DAA
+São Tomé and Príncipe,DAA
+Samoa,DAA
 San Marino,WE
-Saudi Arabia,DA
-Senegal,AFR
+Saudi Arabia,DAA
+Senegal,DAA
 Serbia,EE
-Seychelles,AFR
-Sierra Leone,AFR
+Seychelles,DAA
+Sierra Leone,DAA
 Singapore,AT
 Sint Maarten,LAC
 Slovakia,EE
 Slovenia,EE
-Solomon Islands,DA
-Somalia,AFR
-South Africa,AFR
-South Sudan,AFR
+Solomon Islands,DAA
+Somalia,DAA
+South Africa,DAA
+South Sudan,DAA
 Soviet Union,FSU
 Spain,WE
-Sri Lanka,DA
+Sri Lanka,DAA
 St. Kitts and Nevis,LAC
 St. Lucia,LAC
 St. Martin,LAC
 St. Vincent and Grenadines,LAC
-Sudan,AFR
+Sudan,DAA
 Suriname,LAC
-Swaziland,AFR
+Swaziland,DAA
 Sweden,WE
 Switzerland,WE
-Syria,DA
+Syria,DAA
 Taiwan,AT
 Tajikistan,FSU
-Tanzania,AFR
-Thailand,DA
-Timor-Leste,DA
-Togo,AFR
-Tonga,DA
+Tanzania,DAA
+Thailand,DAA
+Timor-Leste,DAA
+Togo,DAA
+Tonga,DAA
 Trinidad and Tobago,LAC
-Tunisia,AFR
-Turkey,DA
+Tunisia,DAA
+Turkey,DAA
 Turkmenistan,FSU
 Turks and Caicos Islands,LAC
-Tuvalu,DA
-Uganda,AFR
+Tuvalu,DAA
+Uganda,DAA
 Ukraine,FSU
-United Arab Emirates,DA
+United Arab Emirates,DAA
 United Kingdom,AES
 United States,AES
 Uruguay,LAC
 Uzbekistan,FSU
-Vanuatu,DA
+Vanuatu,DAA
 Venezuela,LAC
-Viet Nam,DA
-Vietnam,DA
-Yemen,DA
+Viet Nam,DAA
+Vietnam,DAA
+Yemen,DAA
 Yugoslavia,EE
-Zambia,AFR
-Zimbabwe,AFR
+Zambia,DAA
+Zimbabwe,DAA
