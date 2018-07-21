@@ -5,8 +5,9 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 6000
-warmup <- iter - 1000
+iter <- 10000
+warmup <- iter - 1500
+thin <- 3
 chains <- 3
 cores <- chains
 adapt_delta <- .99
@@ -122,8 +123,10 @@ out1 <- stan(file = "R/estimate_swiid/all_mkt.stan",
              seed = seed,
              iter = iter,
              warmup = warmup,
+             thin = thin,
              cores = cores,
              chains = chains,
+             pars = c("gini"),
              control = list(max_treedepth = 20,
                             adapt_delta = adapt_delta))
 runtime <- proc.time() - start
