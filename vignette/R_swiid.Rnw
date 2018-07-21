@@ -48,10 +48,10 @@ The Standardized World Income Inequality Database (SWIID) takes a Bayesian appro
 
 As described in \citet{Solt2016}, the SWIID maximizes the comparability of available income inequality data for the broadest possible sample of countries and years.  But incomparability remains, and it is sometimes substantial.  This remaining incomparability is reflected in the standard errors of the SWIID estimates, making it often crucial to take this uncertainty into account when making comparisons across countries or over time (\citealt[238]{Solt2009}; \citealt[14]{Solt2016}).  It was once the case that incorporating the standard errors into an analysis required considerable effort.  It is now straightforward.
 
-In version 6.2 of the SWIID, the inequality estimates and their associated uncertainty are represented by 100 draws from the posterior distribution: for any given observation, the differences across these imputations capture the uncertainty in the estimate.  The \verb+swiid6_2.zip+ includes the file \verb+swiid6_2.rda+, which is pre-formatted to facilitate taking this uncertainty into account.  The following sections describe how to subset the data, merge in additional variables, and do analyses.
+In version 7.0 of the SWIID, the inequality estimates and their associated uncertainty are represented by 100 draws from the posterior distribution: for any given observation, the differences across these imputations capture the uncertainty in the estimate.  The \verb+swiid7_0.zip+ includes the file \verb+swiid7_0.rda+, which is pre-formatted to facilitate taking this uncertainty into account.  The following sections describe how to subset the data, merge in additional variables, and do analyses.
 
 \section{Getting Started}
-Loading the file \verb+swiid6_2.rda+ adds \verb+swiid+ to the Global Environment, a list of 100 dataframes.  Each of these dataframes includes, in addition to country and year identifiers, the following four variables:
+Loading the file \verb+swiid7_0.rda+ adds \verb+swiid+ to the Global Environment, a list of 100 dataframes.  Each of these dataframes includes, in addition to country and year identifiers, the following four variables:
 \begin{itemize}
 	\item \verb+gini_disp+: Estimate of Gini index of inequality in equivalized (square root scale) household disposable (post-tax, post-transfer) income, using \href{http://www.lisdatacenter.org}{Luxembourg Income Study} data as the standard.
 	\item \verb+gini_mkt+: Estimate of Gini index of inequality in equivalized (square root scale) household market (pre-tax, pre-transfer) income, using \href{http://www.lisdatacenter.org}{Luxembourg Income Study} data as the standard.	
@@ -59,7 +59,7 @@ Loading the file \verb+swiid6_2.rda+ adds \verb+swiid+ to the Global Environment
 	\item \verb+rel_red+: Estimated relative redistribution, the percentage reduction in market-income inequality due to taxes and transfers: the difference between the \verb+gini_mkt+ and \verb+gini_disp+, divided by \verb+gini_mkt+, multiplied by 100.
 \end{itemize}
 
-The variation in these variables across the 100 dataframes captures the uncertainty in the SWIID estimates.  As described below, this format facilitates taking this uncertainty into account when conducting analyses.  It does not, however, lend itself easily to tasks such plotting.  The mean-plus-standard-error summary format is much better suited to such purposes; for this reason, the object \verb+swiid_summary+ is also included in the \verb+swiid6_2.rda+.
+The variation in these variables across the 100 dataframes captures the uncertainty in the SWIID estimates.  As described below, this format facilitates taking this uncertainty into account when conducting analyses.  It does not, however, lend itself easily to tasks such plotting.  The mean-plus-standard-error summary format is much better suited to such purposes; for this reason, the object \verb+swiid_summary+ is also included in the \verb+swiid7_0.rda+.
 
 <<label=02-plot, fig.height=3>>==
 library(tidyverse)
@@ -67,7 +67,7 @@ library(stringr)
 library(here)
 
 # Load the SWIID
-load("swiid6_2.rda")
+load("swiid7_0.rda")
 
 # Plot SWIID gini_disp estimates for the United States
 swiid_summary %>% 
@@ -148,7 +148,7 @@ wvs_swiid <- swiid %>%
 \section{Analyzing}
 Once the desired subset has been extracted and any additional variables created or merged in, we may proceed to analysis.  Again, we use \verb+purrr::map()+, this time to estimate our model on each of the 100 different dataframes. Continuing with our example, we estimate a three-level linear mixed-effects model of individual responses nested in country-years nested in countries using \verb+lme4::lmer()+ \citep{Bates2015}.  Note that performing an analysis 100 times can be time-consuming, so for demonstration purposes, we'll do it on just the first five dataframes here.
 
-<<label=05-estimate, eval=FALSE>>==
+<<label=05-estimate>>==
 library(lme4)
 
 # Estimate model on first five dataframes
@@ -158,13 +158,9 @@ m1 <- wvs_swiid[1:5] %>% map(~ lmer(religiosity ~ gini_disp + gdppc +
                                data = .x))
 @
 
-<<label=06-load_m1, include=FALSE>>==
-load("m1.rda")
-@
-
 We could now use Rubin's (\citeyear{Rubin1987}) rules to calculate the mean and standard error for each fixed-effect estimate across these \sout{100} 5 sets of results (these rules are implemented in the package \verb+mitools+ \citep{Lumley2014} and others), but instead we will use simulation.  Using \verb+sim+ from the \verb+arm+ package \citep{Gelman2015}, we generate the distribution of fixed-effects estimates in the results both for each dataframe and across the \sout{100} 5 dataframes.  Then we will use these distributions to calculate estimates and standard errors for each fixed effect, putting them in a tidy dataframe like that achieved by using \verb+broom::tidy()+ \citep{Robinson2016}.
 
-<<label=07-sim>>==
+<<label=06-sim>>==
 # Simulate distribution of estimates
 m1_sims <- m1 %>% 
     map(. %>% arm::sim(n.sims = 100)) %>%
@@ -183,7 +179,7 @@ m1_tidy <- data_frame(term = names(m1_sims),
 
 Having results in tidy form makes it easy to work with them further.  Here we use the \verb+dotwhisker+ package \citep{Solt2015c} to present a dot-and-whisker plot of the results.  The dots represent the estimated change on the ten-point religiosity scale for a change of two standard deviations in each independent variable; the whiskers represent the 95\% confidence intervals of these estimates.
 
-<<08-results, fig.height=3.5>>==
+<<07-results, fig.height=3.5>>==
 library(dotwhisker)
 
 # Plot the results                      
@@ -210,7 +206,7 @@ m1_tidy %>%
 Please cite to the SWIID by referring to its article of record and including the version number and date of release:\\
 
 \begin{hangparas}{.25in}{1}
-Solt, Frederick.  2016.  ``The Standardized World Income Inequality Database.''  \emph{Social Science Quarterly} 97.  SWIID Version 6.2, March 2018.
+Solt, Frederick.  2016.  ``The Standardized World Income Inequality Database.''  \emph{Social Science Quarterly} 97.  SWIID Version 7.0, July 2018.
 \end{hangparas}
 
 

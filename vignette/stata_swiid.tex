@@ -41,11 +41,11 @@ The Standardized World Income Inequality Database (SWIID) takes a Bayesian appro
 
 As described in \citet{Solt2016}, the SWIID maximizes the comparability of available income inequality data for the broadest possible sample of countries and years.  But incomparability remains, and it is sometimes substantial.  This remaining incomparability is reflected in the standard errors of the SWIID estimates, making it often crucial to take this uncertainty into account when making comparisons across countries or over time (\citealt[238]{Solt2009}; \citealt[14]{Solt2016}).  It was once the case that incorporating the standard errors into an analysis required considerable effort.  It is now straightforward.
 
-In version 6.2 of the SWIID, the inequality estimates and their associated uncertainty are represented by 100 draws from the posterior
-distribution: for any given observation, the differences across these imputations capture the uncertainty in the estimate.  The \verb+swiid6_2.zip+ includes the file \verb+swiid6_2.dta+, which is pre-formatted to facilitate taking this uncertainty into account.  The following sections describe how to subset the data, merge in additional variables, and do analyses.
+In version 7.0 of the SWIID, the inequality estimates and their associated uncertainty are represented by 100 draws from the posterior
+distribution: for any given observation, the differences across these imputations capture the uncertainty in the estimate.  The \verb+swiid7_0.zip+ includes the file \verb+swiid7_0.dta+, which is pre-formatted to facilitate taking this uncertainty into account.  The following sections describe how to subset the data, merge in additional variables, and do analyses.
 
 \section{Getting Started}
-The \verb+swiid6_2.dta+ file is pre-formatted for use with Stata's tools for analyzing multiply imputed data.  Estimates of each of four inequality measures and their associated uncertainty are represented by a placeholder variable (which has the measure's name but only missing data for all observations) plus 100 separate variables (prefixed with \verb+_1_+, \verb+_2_+, etc.): for any given observation, the differences across these 100 variables capture the uncertainty in the estimate.   
+The \verb+swiid7_0.dta+ file is pre-formatted for use with Stata's tools for analyzing multiply imputed data.  Estimates of each of four inequality measures and their associated uncertainty are represented by a placeholder variable (which has the measure's name but only missing data for all observations) plus 100 separate variables (prefixed with \verb+_1_+, \verb+_2_+, etc.): for any given observation, the differences across these 100 variables capture the uncertainty in the estimate.   
 
 The four measures are:
 \begin{itemize}
@@ -56,7 +56,7 @@ The four measures are:
 \end{itemize}
 
 \begin{verbatim}
-use swiid6_2.dta, clear
+use swiid7_0.dta, clear
 \end{verbatim}
 
 \section{Adding Variables}
@@ -105,7 +105,7 @@ drop _merge
 save wvs_pwt.dta, replace
 
 // Now merge these data *into* the SWIID
-use swiid6_2.dta, clear
+use swiid7_0.dta, clear
 
 merge 1:m country year using wvs_pwt.dta
 drop if _merge!=3
@@ -148,11 +148,11 @@ SWIID estimates into account when conducting analyses. It does not,
 however, lend itself easily to tasks such plotting. The
 mean-plus-standard-error summary format is much better suited to such
 purposes. The SWIID is presented in this format in the
-\texttt{swiid6\_2\_summary.csv} file.
+\texttt{swiid7\_0\_summary.csv} file.
 
 
 \begin{verbatim}
- import delimited "swiid6_2_summary.csv", clear
+import delimited "swiid7_0_summary.csv", clear
  
 // Calculate the bounds of the 95% uncertainty intervals
 gen gini_disp_95ub = gini_disp + 1.96*gini_disp_se
@@ -181,7 +181,7 @@ twoway rspike gini_disp_95ub gini_disp_95lb name_length, lstyle(ci) || ///
 Please cite to the SWIID by referring to its article of record and including the version number and date of release:\\
 
 \begin{hangparas}{.25in}{1}
-Solt, Frederick.  2016.  ``The Standardized World Income Inequality Database.''  \emph{Social Science Quarterly} 97.  SWIID Version 6.2, March 2018.
+Solt, Frederick.  2016.  ``The Standardized World Income Inequality Database.''  \emph{Social Science Quarterly} 97.  SWIID Version 7.0, July 2018.
 \end{hangparas}
 
 \bibliographystyle{ajps}
