@@ -5,7 +5,7 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 10000
+iter <- 5000
 warmup <- iter - 1500
 thin <- 3
 chains <- 3
@@ -130,8 +130,8 @@ source_data <- list(  K = max(x$kcode),
                       wem = rho_we_m$wecode,
                       kwem = rho_we_m$kwecode,
                       rwem = rho_we_m$rwecode,
-                      rho_we_m = rho_we_m$rho,
-                      rho_we_m_se = rho_we_m$rho_se,
+                      rho_we = rho_we_m$rho,
+                      rho_we_se = rho_we_m$rho_se,
                       
                       P = length(rho_wd_m$rho_wd),
                       kkp = rho_wd_m$kcode,      
