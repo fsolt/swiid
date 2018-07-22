@@ -5,7 +5,7 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 10000
+iter <- 5000
 warmup <- iter - 1500
 thin <- 3
 chains <- 3
@@ -56,6 +56,33 @@ kn <- x %>%
             kr = first(rcode)) %>% 
   ungroup()
 
+mu_priors_by_wd <- function(x, var) {
+  var <- rlang::ensym(var)
+  prior_mu <-  x %>% 
+    select(!!var, welfare_def) %>%
+    distinct() %>% 
+    arrange(!!var) %>%  
+    mutate(prior_mu = case_when(welfare_def == "disp" ~ 0,
+                                welfare_def == "con" ~ .1,
+                                welfare_def == "gross" ~ -.1,
+                                welfare_def == "market" ~ -.5)) %>% 
+    pull(prior_mu)
+  return(prior_mu)
+}
+
+s_priors_by_wd <- function(x, var) {
+  var <- rlang::ensym(var)
+  prior_s <- x %>% 
+    select(!!var, welfare_def) %>%
+    distinct() %>% 
+    arrange(!!var) %>% 
+    mutate(prior_s = case_when(welfare_def == "disp" ~ .05,
+                               welfare_def == "con" ~ .15,
+                               welfare_def == "gross" ~ .1,
+                               welfare_def == "market" ~ .15)) %>% 
+    pull(prior_s)
+  return(prior_s)
+}
 
 # Format data for Stan
 source_data <- list(  K = max(x$kcode),
@@ -105,24 +132,6 @@ source_data <- list(  K = max(x$kcode),
                       rwem = rho_we$rwecode,
                       rho_we = rho_we$rho,
                       rho_we_se = rho_we$rho_se,
-
-                      disp_KWE = rho_we %>% filter(wcode == 1) %>% pull(kwecode) %>% unique() %>% length(),
-                      disp_idx_KWE = rho_we %>% filter(wcode == 1) %>% pull(kwecode) %>% unique(),
-                      con_KWE = rho_we %>% filter(wcode == 2) %>% pull(kwecode) %>% unique() %>% length(),
-                      con_idx_KWE = rho_we %>% filter(wcode == 2) %>% pull(kwecode) %>% unique(),
-                      gross_KWE = rho_we %>% filter(wcode == 3) %>% pull(kwecode) %>% unique() %>% length(),
-                      gross_idx_KWE = rho_we %>% filter(wcode == 3) %>% pull(kwecode) %>% unique(),
-                      market_KWE = rho_we %>% filter(wcode == 4) %>% pull(kwecode) %>% unique() %>% length(),
-                      market_idx_KWE = rho_we %>% filter(wcode == 4) %>% pull(kwecode) %>% unique(),
-                      
-                      disp_RWE = rho_we %>% filter(wcode == 1) %>% pull(rwecode) %>% unique() %>% length(),
-                      disp_idx_RWE = rho_we %>% filter(wcode == 1) %>% pull(rwecode) %>% unique(),
-                      con_RWE = rho_we %>% filter(wcode == 2) %>% pull(rwecode) %>% unique() %>% length(),
-                      con_idx_RWE = rho_we %>% filter(wcode == 2) %>% pull(rwecode) %>% unique(),
-                      gross_RWE = rho_we %>% filter(wcode == 3) %>% pull(rwecode) %>% unique() %>% length(),
-                      gross_idx_RWE = rho_we %>% filter(wcode == 3) %>% pull(rwecode) %>% unique(),
-                      market_RWE = rho_we %>% filter(wcode == 4) %>% pull(rwecode) %>% unique() %>% length(),
-                      market_idx_RWE = rho_we %>% filter(wcode == 4) %>% pull(rwecode) %>% unique(),
                       
                       P = length(rho_wd$rho_wd),
                       kkp = rho_wd$kcode,      
@@ -131,14 +140,14 @@ source_data <- list(  K = max(x$kcode),
                       rho_w = rho_wd$rho_wd,
                       rho_w_se = rho_wd$rho_wd_se,
 
-                      disp_KW = rho_wd %>% filter(wcode == 1) %>% pull(kwcode) %>% unique() %>% length(),
-                      disp_idx_KW = rho_wd %>% filter(wcode == 1) %>% pull(kwcode) %>% unique(),
-                      con_KW = rho_wd %>% filter(wcode == 2) %>% pull(kwcode) %>% unique() %>% length(),
-                      con_idx_KW = rho_wd %>% filter(wcode == 2) %>% pull(kwcode) %>% unique(),
-                      gross_KW = rho_wd %>% filter(wcode == 3) %>% pull(kwcode) %>% unique() %>% length(),
-                      gross_idx_KW = rho_wd %>% filter(wcode == 3) %>% pull(kwcode) %>% unique(),
-                      market_KW = rho_wd %>% filter(wcode == 4) %>% pull(kwcode) %>% unique() %>% length(),
-                      market_idx_KW = rho_wd %>% filter(wcode == 4) %>% pull(kwcode) %>% unique()
+                      prior_m_s = 0,
+                      prior_s_s = .2,
+                      prior_m_kwe = mu_priors_by_wd(x, kwecode),
+                      prior_s_kwe = s_priors_by_wd(x, kwecode),
+                      prior_m_rwe = mu_priors_by_wd(x, rwecode),
+                      prior_s_rwe = s_priors_by_wd(x, rwecode),
+                      prior_m_kw = mu_priors_by_wd(x, kwcode),
+                      prior_s_kw = s_priors_by_wd(x, kwcode)
 )
 
 # Stan
@@ -148,8 +157,8 @@ start <- proc.time()
 out1 <- stan(file = "R/estimate_swiid/all.stan",
              data = source_data,
              seed = seed,
-             iter = 200,
-             warmup = 100,
+             iter = iter,
+             warmup = warmup,
              thin = thin,
              cores = cores,
              chains = chains,
