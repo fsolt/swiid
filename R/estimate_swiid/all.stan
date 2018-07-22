@@ -46,13 +46,40 @@ data{
   real<lower=0> rho_we[M];                // observed ratio of baseline to wd_es
   real<lower=0> rho_we_se[M];             // std error of rho_we
   
+  int<lower=0, upper=KWE> disp_KWE;                   // number of disp KWE
+  int<lower=0, upper=KWE> disp_idx_KWE[disp_KWE];     // index positions of disp KWE 
+  int<lower=0, upper=KWE> con_KWE;                    // number of con KWE
+  int<lower=0, upper=KWE> con_idx_KWE[con_KWE];       // index positions of con KWE
+  int<lower=0, upper=KWE> gross_KWE;                  // number of gross KWE
+  int<lower=0, upper=KWE> gross_idx_KWE[gross_KWE];   // index positions of gross KWE
+  int<lower=0, upper=KWE> market_KWE;                 // number of market KWE
+  int<lower=0, upper=KWE> market_idx_KWE[market_KWE]; // index positions of market KWE
+  
+  int<lower=0, upper=RWE> disp_RWE;                   // number of disp RWE
+  int<lower=0, upper=RWE> disp_idx_RWE[disp_RWE];     // index positions of disp RWE 
+  int<lower=0, upper=RWE> con_RWE;                    // number of con RWE
+  int<lower=0, upper=RWE> con_idx_RWE[con_RWE];       // index positions of con RWE
+  int<lower=0, upper=RWE> gross_RWE;                  // number of gross RWE
+  int<lower=0, upper=RWE> gross_idx_RWE[gross_RWE];   // index positions of gross RWE
+  int<lower=0, upper=RWE> market_RWE;                 // number of market RWE
+  int<lower=0, upper=RWE> market_idx_RWE[market_RWE]; // index positions of market RWE
+  
   int<lower=1> P;                         // number of observed ratios of baseline_wd to wd (rho_w)
   int<lower=1, upper=K> kkp[P]; 	        // country for rho_w observation p
   int<lower=1, upper=R> rrp[P];           // region for rho_w observation p
   int<lower=1, upper=KW> kwp[P];          // kw for rho_w observation p
   real<lower=0> rho_w[P];                 // observed ratio of baseline_wd to wd
   real<lower=0> rho_w_se[P];              // std error of rho_w
-}  
+
+  int<lower=0, upper=KW> disp_KW;                   // number of disp KW
+  int<lower=0, upper=KW> disp_idx_KW[disp_KW];     // index positions of disp KW 
+  int<lower=0, upper=KW> con_KW;                    // number of con KW
+  int<lower=0, upper=KW> con_idx_KW[con_KW];       // index positions of con KW
+  int<lower=0, upper=KW> gross_KW;                  // number of gross KW
+  int<lower=0, upper=KW> gross_idx_KW[gross_KW];   // index positions of gross KW
+  int<lower=0, upper=KW> market_KW;                 // number of market KW
+  int<lower=0, upper=KW> market_idx_KW[market_KW]; // index positions of market KW
+}
   
 parameters {
   real<lower=0, upper=1> gini[KT];        // SWIID gini estimate for baseline in country k at time t
@@ -93,14 +120,25 @@ model {
   }
   sigma_kw ~ normal(0, .01);
 
+  rho_s ~ normal(1, .2);
+  rho_kwe_hat[disp_idx_KWE] ~ normal(1, .05);         // disp
+  rho_kwe_hat[con_idx_KWE] ~ lognormal(.1, .15);      // con
+  rho_kwe_hat[gross_idx_KWE] ~ lognormal(-.1, .1);    // gross
+  rho_kwe_hat[market_idx_KWE] ~ lognormal(-.5, .15);  // market
+
+  rho_rwe_hat[disp_idx_RWE] ~ normal(1, .05);         // disp
+  rho_rwe_hat[con_idx_RWE] ~ lognormal(.1, .15);      // con
+  rho_rwe_hat[gross_idx_RWE] ~ lognormal(-.1, .1);    // gross
+  rho_rwe_hat[market_idx_RWE] ~ lognormal(-.5, .15);  // market
+
+  rho_kw_hat[disp_idx_KW] ~ normal(1, .05);           // disp
+  rho_kw_hat[con_idx_KW] ~ lognormal(.1, .15);        // con
+  rho_kw_hat[gross_idx_KW] ~ lognormal(-.1, .1);      // gross
+  rho_kw_hat[market_idx_KW] ~ lognormal(-.5, .15);    // market
+
   gini_m ~ normal(gini_t, gini_m_se);
   rho_we ~ normal(rho_we_t, rho_we_se);
   rho_w ~ normal(rho_w_t, rho_w_se);
-
-  rho_s ~ normal(1, .2);
-  rho_kwe_hat ~ normal(1, .2);
-  rho_rwe_hat ~ normal(1, .1);
-  rho_kw_hat ~ lognormal(0, .15);
   
   for (k in 1:K) {
     if (kn[k] > 1) {

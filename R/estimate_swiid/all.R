@@ -105,13 +105,40 @@ source_data <- list(  K = max(x$kcode),
                       rwem = rho_we$rwecode,
                       rho_we = rho_we$rho,
                       rho_we_se = rho_we$rho_se,
+
+                      disp_KWE = rho_we %>% filter(wcode == 1) %>% pull(kwecode) %>% unique() %>% length(),
+                      disp_idx_KWE = rho_we %>% filter(wcode == 1) %>% pull(kwecode) %>% unique(),
+                      con_KWE = rho_we %>% filter(wcode == 2) %>% pull(kwecode) %>% unique() %>% length(),
+                      con_idx_KWE = rho_we %>% filter(wcode == 2) %>% pull(kwecode) %>% unique(),
+                      gross_KWE = rho_we %>% filter(wcode == 3) %>% pull(kwecode) %>% unique() %>% length(),
+                      gross_idx_KWE = rho_we %>% filter(wcode == 3) %>% pull(kwecode) %>% unique(),
+                      market_KWE = rho_we %>% filter(wcode == 4) %>% pull(kwecode) %>% unique() %>% length(),
+                      market_idx_KWE = rho_we %>% filter(wcode == 4) %>% pull(kwecode) %>% unique(),
+                      
+                      disp_RWE = rho_we %>% filter(wcode == 1) %>% pull(rwecode) %>% unique() %>% length(),
+                      disp_idx_RWE = rho_we %>% filter(wcode == 1) %>% pull(rwecode) %>% unique(),
+                      con_RWE = rho_we %>% filter(wcode == 2) %>% pull(rwecode) %>% unique() %>% length(),
+                      con_idx_RWE = rho_we %>% filter(wcode == 2) %>% pull(rwecode) %>% unique(),
+                      gross_RWE = rho_we %>% filter(wcode == 3) %>% pull(rwecode) %>% unique() %>% length(),
+                      gross_idx_RWE = rho_we %>% filter(wcode == 3) %>% pull(rwecode) %>% unique(),
+                      market_RWE = rho_we %>% filter(wcode == 4) %>% pull(rwecode) %>% unique() %>% length(),
+                      market_idx_RWE = rho_we %>% filter(wcode == 4) %>% pull(rwecode) %>% unique(),
                       
                       P = length(rho_wd$rho_wd),
                       kkp = rho_wd$kcode,      
                       rrp = rho_wd$rcode,
                       kwp = rho_wd$kwcode,
                       rho_w = rho_wd$rho_wd,
-                      rho_w_se = rho_wd$rho_wd_se
+                      rho_w_se = rho_wd$rho_wd_se,
+
+                      disp_KW = rho_wd %>% filter(wcode == 1) %>% pull(kwcode) %>% unique() %>% length(),
+                      disp_idx_KW = rho_wd %>% filter(wcode == 1) %>% pull(kwcode) %>% unique(),
+                      con_KW = rho_wd %>% filter(wcode == 2) %>% pull(kwcode) %>% unique() %>% length(),
+                      con_idx_KW = rho_wd %>% filter(wcode == 2) %>% pull(kwcode) %>% unique(),
+                      gross_KW = rho_wd %>% filter(wcode == 3) %>% pull(kwcode) %>% unique() %>% length(),
+                      gross_idx_KW = rho_wd %>% filter(wcode == 3) %>% pull(kwcode) %>% unique(),
+                      market_KW = rho_wd %>% filter(wcode == 4) %>% pull(kwcode) %>% unique() %>% length(),
+                      market_idx_KW = rho_wd %>% filter(wcode == 4) %>% pull(kwcode) %>% unique()
 )
 
 # Stan
@@ -121,12 +148,12 @@ start <- proc.time()
 out1 <- stan(file = "R/estimate_swiid/all.stan",
              data = source_data,
              seed = seed,
-             iter = iter,
-             warmup = warmup,
+             iter = 200,
+             warmup = 100,
              thin = thin,
              cores = cores,
              chains = chains,
-             pars = c("gini"),
+             pars = c("gini", "rho_kw_hat"),
              control = list(max_treedepth = 20,
                             adapt_delta = adapt_delta))
 runtime <- proc.time() - start
