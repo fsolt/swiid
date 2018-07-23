@@ -37,6 +37,27 @@ kt <- x0 %>%
   ungroup() %>% 
   mutate(ktcode = 1:n())
 
+
+rho_we_m <- rho_we_m %>%
+  select(-ends_with("code")) %>% 
+  left_join(x0 %>% 
+              select("country", "year", "wdes",
+                     "kcode", "rcode", "tcode", 
+                     "wcode", "ecode", "wecode", "kwecode", "rwecode") %>% 
+              distinct(),
+            by = c("country", "year", "wdes"))
+
+rho_wd_m <- rho_wd_m %>%
+  select(-ends_with("code")) %>% 
+  left_join(x0 %>% 
+              rename(wd = "welfare_def") %>% 
+              select("country", "year", "wd", "kbl",
+                     "kcode", "rcode", "tcode", 
+                     "wcode", "kwcode", "rwcode",
+                     "kwd", "rwd") %>% 
+              distinct(),
+            by = c("country", "year", "wd"))
+
 rwe2codes <- rho_we_m %>%
   filter(wcode == 1) %>%        # baseline_wd is always coded 1
   transmute(wdes2 = wdes,
@@ -177,7 +198,6 @@ save(x, out1, file = str_c("data/all_mkt_", iter/1000, "k_",
 # Plots
 source("R/plot_tscs.R")
 plot_tscs(x, out1, save_pdf = "paper/figures/swiid_mkt.pdf")
-plot_tscs(x, out1)
 
 beep() # chime
 shinystan::launch_shinystan(out1)

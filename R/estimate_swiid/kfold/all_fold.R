@@ -374,6 +374,27 @@ leave_k_out <- function(fold) {
       ungroup() %>% 
       mutate(ktcode = 1:n())
     
+    
+    rho_we <- rho_we %>%
+      select(-ends_with("code")) %>% 
+      left_join(x0 %>% 
+                  select("country", "year", "wdes",
+                         "kcode", "rcode", "tcode", 
+                         "wcode", "ecode", "wecode", "kwecode", "rwecode") %>% 
+                  distinct(),
+                by = c("country", "year", "wdes"))
+    
+    rho_wd <- rho_wd %>%
+      select(-ends_with("code")) %>% 
+      left_join(x0 %>% 
+                  rename(wd = "welfare_def") %>% 
+                  select("country", "year", "wd", "kbl",
+                         "kcode", "rcode", "tcode", 
+                         "wcode", "kwcode", "rwcode",
+                         "kwd", "rwd") %>% 
+                  distinct(),
+                by = c("country", "year", "wd"))
+    
     rwe2codes <- rho_we %>%
       filter(wcode == 1) %>%        # baseline_wd is always coded 1
       transmute(wdes2 = wdes,
@@ -491,9 +512,10 @@ leave_k_out <- function(fold) {
     rstan_options(auto_write = TRUE)
     
     seed <- 324
-    iter <- 4000
-    warmup <- iter - 1500
+    iter <- 6000
+    warmup <- iter - 2000
     chains <- 3
+    thin <- 4
     cores <- chains
     adapt_delta <- .9
     
@@ -503,6 +525,7 @@ leave_k_out <- function(fold) {
                  seed = seed,
                  iter = iter,
                  warmup = warmup,
+                 thin = thin,
                  cores = cores,
                  chains = chains,
                  pars = c("gini"),

@@ -5,9 +5,9 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 5000
-warmup <- iter - 1500
-thin <- 3
+iter <- 6000
+warmup <- iter - 2000
+thin <- 4
 chains <- 3
 cores <- chains
 adapt_delta <- .9
@@ -36,6 +36,26 @@ kt <- x0 %>%
   mutate(tcode = 1:n()) %>% 
   ungroup() %>% 
   mutate(ktcode = 1:n())
+
+rho_we <- rho_we %>%
+  select(-ends_with("code")) %>% 
+  left_join(x0 %>% 
+              select("country", "year", "wdes",
+                     "kcode", "rcode", "tcode", 
+                     "wcode", "ecode", "wecode", "kwecode", "rwecode") %>% 
+              distinct(),
+            by = c("country", "year", "wdes"))
+
+rho_wd <- rho_wd %>%
+  select(-ends_with("code")) %>% 
+  left_join(x0 %>% 
+              rename(wd = "welfare_def") %>% 
+              select("country", "year", "wd", "kbl",
+                     "kcode", "rcode", "tcode", 
+                     "wcode", "kwcode", "rwcode",
+                     "kwd", "rwd") %>% 
+              distinct(),
+            by = c("country", "year", "wd"))
 
 rwe2codes <- rho_we %>%
   filter(wcode == 1) %>%        # baseline_wd is always coded 1
@@ -177,7 +197,6 @@ save(x, out1, file = str_c("data/all_", iter/1000, "k_",
 # Plots
 source("R/plot_tscs.R")
 plot_tscs(x, out1, save_pdf = "paper/figures/swiid.pdf")
-plot_tscs(x, out1)
 
 beep() # chime
 shinystan::launch_shinystan(out1)
