@@ -16,7 +16,7 @@ baseline_series <- "LIS market sqrt"
 baseline_wd <- str_split(baseline_series, "\\s")[[1]] %>% nth(-2)
 baseline_es <- str_split(baseline_series, "\\s")[[1]] %>% last()
 
-x0 <- ineq2 %>%  
+x0 <- ineq2_m %>%  
   mutate(kcode = as.integer(factor(country, levels = unique(country))),
          rcode = as.integer(factor(region, levels = unique(region))),
          scode = as.integer(factor(series, levels = unique(series))),
@@ -37,7 +37,7 @@ kt <- x0 %>%
   ungroup() %>% 
   mutate(ktcode = 1:n())
 
-rwe2codes <- rho_we %>%
+rwe2codes <- rho_we_m %>%
   filter(wcode == 1) %>%        # baseline_wd is always coded 1
   transmute(wdes2 = wdes,
             rwe2code = rwecode,
