@@ -5,7 +5,7 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 10000
+iter <- 5000
 warmup <- iter - 1500
 thin <- 3
 chains <- 3
@@ -56,6 +56,33 @@ kn <- x %>%
             kr = first(rcode)) %>% 
   ungroup()
 
+mu_priors_by_wd <- function(x, var) {
+  var <- rlang::ensym(var)
+  prior_mu <-  x %>% 
+    select(!!var, welfare_def) %>%
+    distinct() %>% 
+    arrange(!!var) %>%  
+    mutate(prior_mu = case_when(welfare_def == "disp" ~ 0,
+                                welfare_def == "con" ~ .1,
+                                welfare_def == "gross" ~ -.1,
+                                welfare_def == "market" ~ -.5)) %>% 
+    pull(prior_mu)
+  return(prior_mu)
+}
+
+s_priors_by_wd <- function(x, var) {
+  var <- rlang::ensym(var)
+  prior_s <- x %>% 
+    select(!!var, welfare_def) %>%
+    distinct() %>% 
+    arrange(!!var) %>% 
+    mutate(prior_s = case_when(welfare_def == "disp" ~ .05,
+                               welfare_def == "con" ~ .15,
+                               welfare_def == "gross" ~ .1,
+                               welfare_def == "market" ~ .15)) %>% 
+    pull(prior_s)
+  return(prior_s)
+}
 
 # Format data for Stan
 source_data <- list(  K = max(x$kcode),
@@ -111,7 +138,16 @@ source_data <- list(  K = max(x$kcode),
                       rrp = rho_wd$rcode,
                       kwp = rho_wd$kwcode,
                       rho_w = rho_wd$rho_wd,
-                      rho_w_se = rho_wd$rho_wd_se
+                      rho_w_se = rho_wd$rho_wd_se,
+
+                      prior_m_s = 0,
+                      prior_s_s = .2,
+                      prior_m_kwe = mu_priors_by_wd(x, kwecode),
+                      prior_s_kwe = s_priors_by_wd(x, kwecode),
+                      prior_m_rwe = mu_priors_by_wd(x, rwecode),
+                      prior_s_rwe = s_priors_by_wd(x, rwecode),
+                      prior_m_kw = mu_priors_by_wd(x, kwcode),
+                      prior_s_kw = s_priors_by_wd(x, kwcode)
 )
 
 # Stan
@@ -126,7 +162,7 @@ out1 <- stan(file = "R/estimate_swiid/all.stan",
              thin = thin,
              cores = cores,
              chains = chains,
-             pars = c("gini"),
+             pars = c("gini", "rho_kw_hat"),
              control = list(max_treedepth = 20,
                             adapt_delta = adapt_delta))
 runtime <- proc.time() - start

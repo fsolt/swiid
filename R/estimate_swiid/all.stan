@@ -52,7 +52,16 @@ data{
   int<lower=1, upper=KW> kwp[P];          // kw for rho_w observation p
   real<lower=0> rho_w[P];                 // observed ratio of baseline_wd to wd
   real<lower=0> rho_w_se[P];              // std error of rho_w
-}  
+  
+  real prior_m_s;                         // mean for lognormal prior 
+  real<lower=0> prior_s_s;                // sigma for lognormal prior
+  real prior_m_kwe[KWE];                  // vector of means for lognormal prior that vary by welfare definition 
+  real<lower=0> prior_s_kwe[KWE];         // vector of sigmas for lognormal prior that vary by welfare definition
+  real prior_m_rwe[RWE];                  // vector of means for lognormal prior that vary by welfare definition 
+  real<lower=0> prior_s_rwe[RWE];         // vector of sigmas for lognormal prior that vary by welfare definition
+  real prior_m_kw[KW];                    // vector of means for lognormal prior that vary by welfare definition 
+  real<lower=0> prior_s_kw[KW];           // vector of sigmas for lognormal prior that vary by welfare definition
+}
   
 parameters {
   real<lower=0, upper=1> gini[KT];        // SWIID gini estimate for baseline in country k at time t
@@ -93,14 +102,14 @@ model {
   }
   sigma_kw ~ normal(0, .01);
 
+  rho_s ~ lognormal(prior_m_s, prior_s_s);
+  rho_kwe_hat ~ lognormal(prior_m_kwe, prior_s_kwe);
+  rho_rwe_hat ~ lognormal(prior_m_rwe, prior_s_rwe);
+  rho_kw_hat ~ lognormal(prior_m_kw, prior_s_kw);
+
   gini_m ~ normal(gini_t, gini_m_se);
   rho_we ~ normal(rho_we_t, rho_we_se);
   rho_w ~ normal(rho_w_t, rho_w_se);
-
-  rho_s ~ normal(1, .2);
-  rho_kwe_hat ~ normal(1, .2);
-  rho_rwe_hat ~ normal(1, .1);
-  rho_kw_hat ~ lognormal(0, .15);
   
   for (k in 1:K) {
     if (kn[k] > 1) {

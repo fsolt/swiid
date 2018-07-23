@@ -5,7 +5,7 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 10000
+iter <- 5000
 warmup <- iter - 1500
 thin <- 3
 chains <- 3
@@ -56,6 +56,33 @@ kn <- x %>%
             kr = first(rcode)) %>% 
   ungroup()
 
+mu_priors_by_wd <- function(x, var) {
+  var <- rlang::ensym(var)
+  prior_mu <-  x %>% 
+    select(!!var, welfare_def) %>%
+    distinct() %>% 
+    arrange(!!var) %>%  
+    mutate(prior_mu = case_when(welfare_def == "disp" ~ .4,
+                                welfare_def == "con" ~ .4,
+                                welfare_def == "gross" ~ .3,
+                                welfare_def == "market" ~ 0)) %>% 
+    pull(prior_mu)
+  return(prior_mu)
+}
+
+s_priors_by_wd <- function(x, var) {
+  var <- rlang::ensym(var)
+  prior_s <- x %>% 
+    select(!!var, welfare_def) %>%
+    distinct() %>% 
+    arrange(!!var) %>% 
+    mutate(prior_s = case_when(welfare_def == "disp" ~ .25,
+                               welfare_def == "con" ~ .2,
+                               welfare_def == "gross" ~ .2,
+                               welfare_def == "market" ~ .05)) %>% 
+    pull(prior_s)
+  return(prior_s)
+}
 
 # Format data for Stan
 source_data <- list(  K = max(x$kcode),
@@ -96,29 +123,38 @@ source_data <- list(  K = max(x$kcode),
                       gini_b = x$gini_b[!is.na(x$gini_b)],
                       gini_b_se = x$gini_b_se[!is.na(x$gini_b_se)],
                       
-                      M = length(rho_we$rho),
-                      kkm = rho_we$kcode,      
-                      rrm = rho_we$rcode,
-                      ttm	= rho_we$tcode,
-                      wem = rho_we$wecode,
-                      kwem = rho_we$kwecode,
-                      rwem = rho_we$rwecode,
-                      rho_we = rho_we$rho,
-                      rho_we_se = rho_we$rho_se,
+                      M = length(rho_we_m$rho),
+                      kkm = rho_we_m$kcode,      
+                      rrm = rho_we_m$rcode,
+                      ttm	= rho_we_m$tcode,
+                      wem = rho_we_m$wecode,
+                      kwem = rho_we_m$kwecode,
+                      rwem = rho_we_m$rwecode,
+                      rho_we = rho_we_m$rho,
+                      rho_we_se = rho_we_m$rho_se,
                       
-                      P = length(rho_wd$rho_wd),
-                      kkp = rho_wd$kcode,      
-                      rrp = rho_wd$rcode,
-                      kwp = rho_wd$kwcode,
-                      rho_w = rho_wd$rho_wd,
-                      rho_w_se = rho_wd$rho_wd_se
+                      P = length(rho_wd_m$rho_wd),
+                      kkp = rho_wd_m$kcode,      
+                      rrp = rho_wd_m$rcode,
+                      kwp = rho_wd_m$kwcode,
+                      rho_w = rho_wd_m$rho_wd,
+                      rho_w_se = rho_wd_m$rho_wd_se,
+
+                      prior_m_s = .2,
+                      prior_s_s = .25,
+                      prior_m_kwe = mu_priors_by_wd(x, kwecode),
+                      prior_s_kwe = s_priors_by_wd(x, kwecode),
+                      prior_m_rwe = mu_priors_by_wd(x, rwecode),
+                      prior_s_rwe = s_priors_by_wd(x, rwecode),
+                      prior_m_kw = mu_priors_by_wd(x, kwcode),
+                      prior_s_kw = s_priors_by_wd(x, kwcode)
 )
 
 # Stan
 rstan_options(auto_write = TRUE)
 
 start <- proc.time()
-out1 <- stan(file = "R/estimate_swiid/all_mkt.stan",
+out1 <- stan(file = "R/estimate_swiid/all.stan",
              data = source_data,
              seed = seed,
              iter = iter,
