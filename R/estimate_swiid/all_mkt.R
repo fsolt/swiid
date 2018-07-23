@@ -46,7 +46,7 @@ rwe2codes <- rho_we_m %>%
 
 x <- x0 %>% 
   left_join(kt, by = c("kcode", "tcode")) %>% 
-  mutate(wdes2 = str_replace(wdes, ".*_", "disp_")) %>% 
+  mutate(wdes2 = str_replace(wdes, ".*_", "market_")) %>% 
   left_join(rwe2codes, by = c("wdes2", "rcode"))
 
 kn <- x %>% 
