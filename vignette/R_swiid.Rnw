@@ -128,7 +128,8 @@ pwt90_gdppc <- read_excel("pwt90.xlsx", sheet = "Data") %>%
 # some info must be entered for the download so it can't be
 # easily automated), generate variables of interest, and
 # merge in the PWT data
-wvs <- read_dta("WVS_Longitudinal_1981_2014_stata_v2015_04_18.dta") %>% 
+wvs <- read_dta("WVS_Longitudinal_1981_2014_stata_v2015_04_18.dta",
+                encoding = "latin1") %>% 
     transmute(country = countrycode(S003, 
                                     origin = "iso3n",
                                     destination = "country.name"),
