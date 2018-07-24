@@ -27,6 +27,7 @@ data/lis_gt*.rda
 data/all_*.rda
 data/series_gt*.rda
 data/ineq0.rda
+data-raw/ to_add/
 updating_swiid_paper/updating_swiid.tex
 *.bbl
 *.log
