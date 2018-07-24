@@ -31,7 +31,7 @@ drop _merge
 save wvs_pwt.dta, replace
 
 // Now merge these data *into* the SWIID
-use swiid6_1.dta, clear
+use swiid7_0.dta, clear
 
 merge 1:m country year using wvs_pwt.dta
 drop if _merge!=3
@@ -39,7 +39,7 @@ drop _merge
 
 mi estimate: mixed religiosity gini_disp gdppc age educ male || country: || country_year:
 
-import delimited "../data/swiid6_1_summary.csv", clear
+import delimited "../data/swiid7_0_summary.csv", clear
  
 // Calculate the bounds of the 95% uncertainty intervals
 gen gini_disp_95ub = gini_disp + 1.96*gini_disp_se
@@ -54,3 +54,5 @@ keep if year==2010 & first_letter=="S" /*2010 for Senegal, Serbia, . . .*/
 twoway rspike gini_disp_95ub gini_disp_95lb name_length, lstyle(ci) || ///
     scatter gini_disp name_length, msize(small) ///
     legend(order(2 "SWIID Disposable-Income Inequality")) 
+
+graph save "stata_scatter.png", replace
