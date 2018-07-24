@@ -512,10 +512,10 @@ leave_k_out <- function(fold) {
     rstan_options(auto_write = TRUE)
     
     seed <- 324
-    iter <- 6000
-    warmup <- iter - 2000
+    iter <- 2000
+    warmup <- iter - 1000
     chains <- 3
-    thin <- 4
+    thin <- 2
     cores <- chains
     adapt_delta <- .9
     
