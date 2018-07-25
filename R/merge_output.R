@@ -95,6 +95,8 @@ kt_redist <- swiid_summary %>%
   select(country, year, redist)
   
 write_csv(swiid_summary %>% select(-redist, -redist_after), "data/swiid7_0_summary.csv", na = "")
+write_csv(swiid_summary %>% select(-redist, -redist_after), "../SWIIDweb/swiid7_0_summary.csv", na = "")
+write_csv(swiid_summary %>% select(-redist, -redist_after), "../SWIIDweb_source/swiid7_0_summary.csv", na = "")
 
 swiid_kt <- function(input, output, probs = c(.025, .975)) {
   ktcodes <- input %>%  
