@@ -65,7 +65,7 @@ data{
   
 parameters {
   real<lower=0, upper=1> gini[KT];        // SWIID gini estimate for baseline in country k at time t
-  real<lower=0> sigma_gini; 	            // random-walk variance parameter
+  real<lower=0> sigma_gini[R]; 	          // random-walk variance parameter
   vector[N] gini_t;                       // unknown "true" gini given gini_m and gini_m_se
   vector[M] rho_we_t;                     // unknown "true" rho_we given rho_we and rho_we_se
   vector[P] rho_w_t;                      // unknown "true" rho_wd given rho_w and rho_w_se
@@ -94,12 +94,13 @@ transformed parameters {
 }
 
 model {
-  sigma_gini ~ normal(.01, .0025);
-  sigma_s ~ normal(0, .05);
-  sigma_kwe ~ normal(0, .05);
   for (r in 1:R) {
+    sigma_gini[r] ~ normal(.01, .005) T[0,];
     sigma_rwe[r] ~ normal(.04, .015) T[0,];
   }
+  
+  sigma_s ~ normal(0, .05);
+  sigma_kwe ~ normal(0, .05);
   sigma_kw ~ normal(0, .01);
 
   rho_s ~ lognormal(prior_m_s, prior_s_s);
@@ -114,7 +115,7 @@ model {
   for (k in 1:K) {
     if (kn[k] > 1) {
       gini[kt1[k]] ~ normal(.35, .125);                         // a random draw from N() in first year
-      gini[(kt1[k]+1):(kt1[k]+kn[k]-1)] ~ normal(gini[(kt1[k]):(kt1[k]+kn[k]-2)], sigma_gini); // otherwise a random walk from previous year 
+      gini[(kt1[k]+1):(kt1[k]+kn[k]-1)] ~ normal(gini[(kt1[k]):(kt1[k]+kn[k]-2)], sigma_gini[kr[k]]); // otherwise a random walk from previous year 
     } else {
       gini[kt1[k]] ~ normal(.35, .125);                         // a random draw from N()
     }
