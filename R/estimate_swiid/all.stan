@@ -37,6 +37,9 @@ data{
   vector<lower=0, upper=1>[N_bl] gini_b;  // baseline gini for obs n
   vector<lower=0, upper=1>[N_bl] gini_b_se; // std error of baseline gini for obs n
   
+  int<lower=0, upper=1> bk[K];            // baseline availability indicator for country k
+  int<lower=0, upper=N_ibl> nbkt[KT];     // obs n with baseline for country-year kt
+  
   int<lower=1> M;                         // number of observed ratios of baseline to wd_es (rho_we)
   int<lower=1, upper=K> kkm[M]; 	        // country for rho_we observation m
   int<lower=1, upper=R> rrm[M];           // region for rho_we observation m
@@ -111,13 +114,31 @@ model {
   gini_m ~ normal(gini_t, gini_m_se);
   rho_we ~ normal(rho_we_t, rho_we_se);
   rho_w ~ normal(rho_w_t, rho_w_se);
-  
+
   for (k in 1:K) {
-    if (kn[k] > 1) {
-      gini[kt1[k]] ~ normal(.35, .125);                         // a random draw from N() in first year
-      gini[(kt1[k]+1):(kt1[k]+kn[k]-1)] ~ normal(gini[(kt1[k]):(kt1[k]+kn[k]-2)], sigma_gini[kr[k]]); // otherwise a random walk from previous year 
-    } else {
-      gini[kt1[k]] ~ normal(.35, .125);                         // a random draw from N()
+    if (bk[k] == 1) {                                         // if country k has some baseline obs:
+      for (kt in (kt1[k]):(kt1[k]+kn[k]-1)) {                 // iterate over kt for country k
+        if (nbkt[kt] == 0) {                                  // if kt has no baseline obs:
+          if (kt == kt1[k]) {                                 // if first year,
+            gini[kt] ~ normal(.35, .15);                      // a random draw from N()
+          } else {                                            // if not first year,
+            gini[kt] ~ normal(gini[kt-1], sigma_gini[kr[k]]); // a random walk from previous year
+          }
+        } else {                                              // if kt has baseline obs:
+          if (kt == kt1[k]) {                                 // if first year,
+            gini[kt] ~ normal(gini_b[nbkt[kt]], gini_b_se[nbkt[kt]]); // use baseline
+          } else {                                            // if not first year,
+            gini[kt] ~ normal(.5*gini_b[nbkt[kt]] + .5*gini[kt-1], sigma_gini[kr[k]] + gini_b_se[nbkt[kt]]); // a random walk from mean of previous year and baseline
+          }
+        }
+      }
+    } else {                                                  // if country k has no baseline obs:
+      if (kn[k] > 1) {                                        // if more than one year:
+        gini[kt1[k]] ~ normal(.35, .15);                      // a random draw from N() in first year,
+        gini[(kt1[k]+1):(kt1[k]+kn[k]-1)] ~ normal(gini[(kt1[k]):(kt1[k]+kn[k]-2)], sigma_gini[kr[k]]); // and a random walk from previous year afterwards
+      } else {                                                // if only one year:
+        gini[kt1[k]] ~ normal(.4, .125);                      // a random draw from N()
+      }
     }
   }
   
@@ -127,7 +148,7 @@ model {
   rho_kw_hat[kwp] ~ normal(rho_w_t, sigma_kw);     // estimate rho_kw_hat (over 1:P)
 
   // obs w/ baseline use baseline
-  gini[kktt[1:N_ibl]] ~ normal(gini_b[1:N_ibl], gini_b_se[1:N_ibl]); 
+  gini[kktt[1:N_ibl]] ~ normal(gini_b[1:N_ibl], gini_b_se[1:N_ibl]);
   
   // obs in countries w/ baseline in series w/ overlap use rho_s
   gini[kktt[(N_bl+1):N_obl]] ~ normal(gini_t[(N_bl+1):N_obl] .* rho_s[ss[(N_bl+1):N_obl]], sigma_s); 
