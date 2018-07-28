@@ -10,7 +10,7 @@ warmup <- iter - 2000
 thin <- 4
 chains <- 3
 cores <- chains
-adapt_delta <- .9
+adapt_delta <- .95
 
 baseline_series <- "LIS disp sqrt"
 baseline_wd <- str_split(baseline_series, "\\s")[[1]] %>% nth(-2)
@@ -73,8 +73,16 @@ kn <- x %>%
   group_by(kcode) %>% 
   summarize(kt1 = min(ktcode),
             yrspan = first(yrspan),
-            kr = first(rcode)) %>% 
+            kr = first(rcode),
+            bk = as.numeric(any(!is.na(gini_b)))) %>% 
   ungroup()
+
+kt1 <- x %>%
+  mutate(n = row_number()) %>%
+  filter(ibl) %>%
+  select(n, ktcode) %>%
+  right_join(kt, by = "ktcode") %>% 
+  mutate(n = if_else(!is.na(n), n, as.integer(0)))
 
 mu_priors_by_wd <- function(x, var) {
   var <- rlang::ensym(var)
@@ -121,7 +129,7 @@ source_data <- list(  K = max(x$kcode),
                       N = nrow(x),
                       N_ibl = nrow(x %>% filter(ibl)),
                       N_bl = nrow(x %>% filter(!is.na(gini_b))),
-                      N_obl = nrow(x %>% filter(s_bl_obs>0)),
+                      N_obl = nrow(x %>% filter(s_bl_obs > 0)),
                       N_bk = nrow(x %>% filter(k_bl_obs > 0)),
                       N_kw = nrow(x %>% filter(kw)),
                       
@@ -143,6 +151,9 @@ source_data <- list(  K = max(x$kcode),
                       gini_b = x$gini_b[!is.na(x$gini_b)],
                       gini_b_se = x$gini_b_se[!is.na(x$gini_b_se)],
                       
+                      bk = kn$bk,
+                      nbkt = kt1$n,     
+
                       M = length(rho_we$rho),
                       kkm = rho_we$kcode,      
                       rrm = rho_we$rcode,
@@ -182,7 +193,7 @@ out1 <- stan(file = "R/estimate_swiid/all.stan",
              thin = thin,
              cores = cores,
              chains = chains,
-             pars = c("gini", "rho_kw_hat"),
+             pars = c("gini", "sigma_gini"),
              control = list(max_treedepth = 20,
                             adapt_delta = adapt_delta))
 runtime <- proc.time() - start
