@@ -75,7 +75,7 @@ format_lis_xtra <- function(x) {
               welfare_def = "disp",
               monetary = FALSE,
               series = "LIS disp sqrt",
-              source1 = ifelse(country=="New Zealand", "Statistics New Zealand 1999", "LISSY"),
+              source1 = ifelse(country=="New Zealand", "Statistics New Zealand 1999", "LIS Key Figures"),
               page = ifelse(country=="New Zealand", "73", ""),
               link = ifelse(country=="New Zealand", 
                             "https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf", 
@@ -93,6 +93,17 @@ lis <- lis_files %>%
   map_df(format_lis) %>% 
   rbind(format_lis_xtra("nz")) %>% 
   arrange(country, year, welfare_def, equiv_scale)
+
+lis <- lis_files %>% 
+  map_df(format_lis) %>% 
+  filter(!(country=="Russia" & 
+             (year >= 2004 | !(welfare_def == "market")))) %>% 
+  rbind(format_lis_xtra("nz"), format_lis_xtra("ru_old")) %>% 
+  arrange(country, year, welfare_def, equiv_scale)
+
+ru_lissy <- format_lis("ru") %>% 
+  filter(year >= 2004 | !(welfare_def == "market")) %>% 
+  mutate(series = paste("RLMS", series))
 
 
 # Socio-Economic Database for Latin America and the Caribbean (SEDLAC) (update link)
@@ -1944,7 +1955,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
                      capmas, statee, statfi, insee, geostat,
                      stathk, bpsid, amar, cso_ie, istat, kazstat, kostat, nsck,
                      epumy, nbs, monstat, snz, nzmsd, ssb, dgeec, psa,
-                     rosstat, singstat, ssi, ine, statslk, scb, 
+                     rosstat, ru_lissy, singstat, ssi, ine, statslk, scb, 
                      tdgbas, nso_thailand, turkstat, ons, ifs, cbo, uscb, uine, inev, gso_vn,
                      atg, gidd,
                      added_data) %>% 
