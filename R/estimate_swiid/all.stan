@@ -68,7 +68,7 @@ data{
   
 parameters {
   real<lower=0, upper=1> gini[KT];        // SWIID gini estimate for baseline in country k at time t
-  real<lower=0> sigma_gini[R]; 	          // random-walk variance parameter
+  real<lower=0> sigma_gini;               // random-walk variance parameter
   vector[N] gini_t;                       // unknown "true" gini given gini_m and gini_m_se
   vector[M] rho_we_t;                     // unknown "true" rho_we given rho_we and rho_we_se
   vector[P] rho_w_t;                      // unknown "true" rho_wd given rho_w and rho_w_se
@@ -97,13 +97,13 @@ transformed parameters {
 }
 
 model {
-  for (r in 1:R) {
-    sigma_gini[r] ~ normal(.01, .005) T[0,];
-    sigma_rwe[r] ~ normal(.04, .015) T[0,];
-  }
-  
+  sigma_gini ~ normal(.01, .005) T[0,];
+
   sigma_s ~ normal(0, .05);
   sigma_kwe ~ normal(0, .05);
+  for (r in 1:R) {
+    sigma_rwe[r] ~ normal(.04, .015) T[0,];
+  }
   sigma_kw ~ normal(0, .01);
 
   rho_s ~ lognormal(prior_m_s, prior_s_s);
@@ -122,20 +122,20 @@ model {
           if (kt == kt1[k]) {                                 // if first year,
             gini[kt] ~ normal(.35, .15);                      // a random draw from N()
           } else {                                            // if not first year,
-            gini[kt] ~ normal(gini[kt-1], sigma_gini[kr[k]]); // a random walk from previous year
+            gini[kt] ~ normal(gini[kt-1], sigma_gini);        // a random walk from previous year
           }
         } else {                                              // if kt has baseline obs:
           if (kt == kt1[k]) {                                 // if first year,
             gini[kt] ~ normal(gini_b[nbkt[kt]], gini_b_se[nbkt[kt]]); // use baseline
           } else {                                            // if not first year,
-            gini[kt] ~ normal(.5*gini_b[nbkt[kt]] + .5*gini[kt-1], sigma_gini[kr[k]]); // a random walk from mean of previous year and baseline
+            gini[kt] ~ normal(.5*gini_b[nbkt[kt]] + .5*gini[kt-1], sigma_gini); // a random walk from mean of previous year and baseline
           }
         }
       }
     } else {                                                  // if country k has no baseline obs:
       if (kn[k] > 1) {                                        // if more than one year:
         gini[kt1[k]] ~ normal(.35, .15);                      // a random draw from N() in first year,
-        gini[(kt1[k]+1):(kt1[k]+kn[k]-1)] ~ normal(gini[(kt1[k]):(kt1[k]+kn[k]-2)], sigma_gini[kr[k]]); // and a random walk from previous year afterwards
+        gini[(kt1[k]+1):(kt1[k]+kn[k]-1)] ~ normal(gini[(kt1[k]):(kt1[k]+kn[k]-2)], sigma_gini); // and a random walk from previous year afterwards
       } else {                                                // if only one year:
         gini[kt1[k]] ~ normal(.4, .125);                      // a random draw from N()
       }
