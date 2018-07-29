@@ -128,7 +128,7 @@ model {
           if (kt == kt1[k]) {                                 // if first year,
             gini[kt] ~ normal(gini_b[nbkt[kt]], gini_b_se[nbkt[kt]]); // use baseline
           } else {                                            // if not first year,
-            gini[kt] ~ normal(.5*gini_b[nbkt[kt]] + .5*gini[kt-1], sigma_gini[kr[k]] + gini_b_se[nbkt[kt]]); // a random walk from mean of previous year and baseline
+            gini[kt] ~ normal(.5*gini_b[nbkt[kt]] + .5*gini[kt-1], sigma_gini[kr[k]]); // a random walk from mean of previous year and baseline
           }
         }
       }
