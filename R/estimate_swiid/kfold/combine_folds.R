@@ -1,7 +1,8 @@
-# folds <- 1:14
+folds <- 1:14
 # folds <- 15:28
-folds <- 29:42
+# folds <- 29:42
 # folds <- 43:57
+# folds <- c(57, 42, 28, 14, 56, 41, 27, 13, 55, 40, 26, 12, 54)
 
 source("R/estimate_swiid/kfold/all_fold.R")
 baseline_rnd <- baseline_kfold(6)
