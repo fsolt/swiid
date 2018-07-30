@@ -10,7 +10,7 @@ warmup <- iter - 2000
 thin <- 4
 chains <- 3
 cores <- chains
-adapt_delta <- .9
+adapt_delta <- .95
 
 baseline_series <- "LIS market sqrt"
 baseline_wd <- str_split(baseline_series, "\\s")[[1]] %>% nth(-2)
