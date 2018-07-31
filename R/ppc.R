@@ -11,12 +11,6 @@ load(all_file)
 all_in <- x
 all_out <- out1
 
-swiid_disp_summary <- summary_kt(all_in, all_out) %>% 
-  transmute(country = country,
-                          year = year,
-                          gini_disp = round(gini*100, 1),
-                          gini_disp_se = round(se*100, 2)) %>% 
-  arrange(country, year)
 
 summary_kt <- function(input, output, probs = c(.025, .975)) {
   ktcodes <- input %>%  
@@ -49,6 +43,13 @@ summary_kt <- function(input, output, probs = c(.025, .975)) {
   
   return(gini_res)
 }
+
+swiid_disp_summary <- summary_kt(all_in, all_out) %>% 
+  transmute(country = country,
+                          year = year,
+                          gini_disp = round(gini*100, 1),
+                          gini_disp_se = round(se*100, 2)) %>% 
+  arrange(country, year)
 
 lis_vs_swiid <- left_join(lis %>% filter(series == "LIS disp sqrt"),
           swiid_disp_summary %>% select(country, year, gini_disp, gini_disp_se), 
