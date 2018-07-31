@@ -91,8 +91,14 @@ lis_files <- c("au", "at", "be", "br", "ca", "cl", "cn", "co", "cz", "dk",
 
 lis <- lis_files %>% 
   map_df(format_lis) %>% 
-  rbind(format_lis_xtra("nz")) %>% 
+  filter(!(country=="Russia" & 
+             (year >= 2004 | !(welfare_def == "market")))) %>% 
+  rbind(format_lis_xtra("nz"), format_lis_xtra("ru_old")) %>% 
   arrange(country, year, welfare_def, equiv_scale)
+
+ru_lissy <- format_lis("ru") %>% 
+  filter(year >= 2004 | !(welfare_def == "market")) %>% 
+  mutate(series = paste("RLMS", series))
 
 
 # Socio-Economic Database for Latin America and the Caribbean (SEDLAC) (update link)
@@ -1944,7 +1950,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
                      capmas, statee, statfi, insee, geostat,
                      stathk, bpsid, amar, cso_ie, istat, kazstat, kostat, nsck,
                      epumy, nbs, monstat, snz, nzmsd, ssb, dgeec, psa,
-                     rosstat, singstat, ssi, ine, statslk, scb, 
+                     rosstat, ru_lissy, singstat, ssi, ine, statslk, scb, 
                      tdgbas, nso_thailand, turkstat, ons, ifs, cbo, uscb, uine, inev, gso_vn,
                      atg, gidd,
                      added_data) %>% 
