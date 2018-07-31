@@ -94,7 +94,7 @@ swiid_summary <- left_join(swiid_disp_summary, swiid_mkt_summary, by = c("countr
 kt_redist <- swiid_summary %>%
   select(country, year, redist)
   
-write_csv(swiid_summary %>% select(-redist, -redist_after), "data/swiid7_0_summary.csv", na = "")
+write_csv(swiid_summary %>% select(-redist, -redist_after), "data/swiid7_1_summary.csv", na = "")
 write_csv(swiid_summary %>% select(-redist, -redist_after), "../SWIIDweb/swiid_summary.csv", na = "")
 write_csv(swiid_summary %>% select(-redist, -redist_after), "../SWIIDweb_source/swiid_summary.csv", na = "")
 
@@ -158,21 +158,21 @@ for (i in 1:100) {
   swiid[[i]] <- stemp
 }
 
-save(swiid, swiid_summary, file = "data/swiid7_0.rda") 
+save(swiid, swiid_summary, file = "data/swiid7_1.rda") 
 
 # for release
-dir.create("release/swiid7_0", recursive = TRUE)
-final_files <- c("data/swiid7_0_summary.csv", "data/swiid7_0.rda", "data/swiid7_0.dta")
+dir.create("release/swiid7_1", recursive = TRUE)
+final_files <- c("data/swiid7_1_summary.csv", "data/swiid7_1.rda", "data/swiid7_1.dta")
 file.copy(from = final_files,
-          to = str_replace(final_files, "data/", "release/swiid7_0/"),
+          to = str_replace(final_files, "data/", "release/swiid7_1/"),
           overwrite = TRUE)
 documentation_files <- c("vignette/R_swiid.pdf", "vignette/stata_swiid.pdf")
 file.copy(from = documentation_files,
-          to = str_replace(documentation_files, "vignette/", "release/swiid7_0/"),
+          to = str_replace(documentation_files, "vignette/", "release/swiid7_1/"),
           overwrite = TRUE)
 setwd("release")
-zip("swiid7_0.zip", "swiid7_0")
-dir.create("s70")
-file.copy("swiid7_0.zip", "s70/swiid7_0.zip", overwrite = TRUE)
-zip("s70.zip", "s70")
+zip("swiid7_1.zip", "swiid7_1")
+dir.create("s71")
+file.copy("swiid7_1.zip", "s70/swiid7_1.zip", overwrite = TRUE)
+zip("s71.zip", "s70")
 setwd("..")
