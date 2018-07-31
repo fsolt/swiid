@@ -173,6 +173,6 @@ file.copy(from = documentation_files,
 setwd("release")
 zip("swiid7_1.zip", "swiid7_1")
 dir.create("s71")
-file.copy("swiid7_1.zip", "s70/swiid7_1.zip", overwrite = TRUE)
-zip("s71.zip", "s70")
+file.copy("swiid7_1.zip", "s71/swiid7_1.zip", overwrite = TRUE)
+zip("s71.zip", "s71")
 setwd("..")
