@@ -75,7 +75,7 @@ format_lis_xtra <- function(x) {
               welfare_def = "disp",
               monetary = FALSE,
               series = "LIS disp sqrt",
-              source1 = ifelse(country=="New Zealand", "Statistics New Zealand 1999", "LISSY"),
+              source1 = ifelse(country=="New Zealand", "Statistics New Zealand 1999", "LIS Key Figures"),
               page = ifelse(country=="New Zealand", "73", ""),
               link = ifelse(country=="New Zealand", 
                             "https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf", 
