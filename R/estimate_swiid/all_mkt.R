@@ -74,8 +74,16 @@ kn <- x %>%
   group_by(kcode) %>% 
   summarize(kt1 = min(ktcode),
             yrspan = first(yrspan),
-            kr = first(rcode)) %>% 
+            kr = first(rcode),
+            bk = as.numeric(any(!is.na(gini_b)))) %>% 
   ungroup()
+
+kt1 <- x %>%
+  mutate(n = row_number()) %>%
+  filter(ibl) %>%
+  select(n, ktcode) %>%
+  right_join(kt, by = "ktcode") %>% 
+  mutate(n = if_else(!is.na(n), n, as.integer(0)))
 
 mu_priors_by_wd <- function(x, var) {
   var <- rlang::ensym(var)
@@ -143,6 +151,9 @@ source_data <- list(  K = max(x$kcode),
                       gini_m_se = x$gini_m_se,
                       gini_b = x$gini_b[!is.na(x$gini_b)],
                       gini_b_se = x$gini_b_se[!is.na(x$gini_b_se)],
+                      
+                      bk = kn$bk,
+                      nbkt = kt1$n, 
                       
                       M = length(rho_we_m$rho),
                       kkm = rho_we_m$kcode,      
