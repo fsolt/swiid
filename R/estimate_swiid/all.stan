@@ -13,7 +13,7 @@ data{
 
   int<lower=1> N;                         // total number of obs
   int<lower=1> N_ibl;                     // number of baseline obs ("is baseline")
-  int<lower=1> N_bl;                      // number of obs with baseline
+  int<lower=1> N_wbl;                     // number of obs with baseline
   int<lower=1> N_obl;                     // number of obs in series with some baseline ("overlap baseline")
   int<lower=1> N_bk;                      // number of obs in countries with some baseline data ("baseline countries")
   int<lower=1> N_kw;                      // number of obs with in-country ratios to baseline welfare_def 
@@ -34,8 +34,8 @@ data{
   
   vector<lower=0, upper=1>[N] gini_m; 	  // measured gini for observation n
   vector<lower=0, upper=1>[N] gini_m_se;  // std error of measured gini for obs n
-  vector<lower=0, upper=1>[N_bl] gini_b;  // baseline gini for obs n
-  vector<lower=0, upper=1>[N_bl] gini_b_se; // std error of baseline gini for obs n
+  vector<lower=0, upper=1>[N_wbl] gini_b;  // baseline gini for obs n
+  vector<lower=0, upper=1>[N_wbl] gini_b_se; // std error of baseline gini for obs n
   
   int<lower=0, upper=1> bk[K];            // baseline availability indicator for country k
   int<lower=0, upper=N_ibl> nbkt[KT];     // obs n with baseline for country-year kt
@@ -141,7 +141,7 @@ model {
     }
   }
   
-  gini_b[N_ibl+1:N_bl] ~ normal(rho_s[ss[N_ibl+1:N_bl]] .* gini_t[N_ibl+1:N_bl], sigma_s); // estimate rho_s for obs with baseline
+  gini_b[N_ibl+1:N_wbl] ~ normal(rho_s[ss[N_ibl+1:N_wbl]] .* gini_t[N_ibl+1:N_wbl], sigma_s); // estimate rho_s for obs with baseline
   rho_kwe_hat[kwem] ~ normal(rho_we_t, sigma_kwe); // estimate rho_kwe_hat (over 1:M)
   rho_rwe_hat[rwem] ~ normal(rho_we_t, sigma_rwe[rrm]); // estimate rho_rwe_hat (over 1:M)
   rho_kw_hat[kwp] ~ normal(rho_w_t, sigma_kw);     // estimate rho_kw_hat (over 1:P)
@@ -150,7 +150,7 @@ model {
   gini[kktt[1:N_ibl]] ~ normal(gini_b[1:N_ibl], gini_b_se[1:N_ibl]); 
   
   // obs in countries w/ baseline in series w/ overlap use rho_s
-  gini[kktt[(N_bl+1):N_obl]] ~ normal(gini_t[(N_bl+1):N_obl] .* rho_s[ss[(N_bl+1):N_obl]], sigma_s); 
+  gini[kktt[(N_wbl+1):N_obl]] ~ normal(gini_t[(N_wbl+1):N_obl] .* rho_s[ss[(N_wbl+1):N_obl]], sigma_s); 
   
   // obs in countries w/ baseline in series w/o overlap use rho_kwe_hat
   gini[kktt[(N_obl+1):N_bk]] ~ normal(rho_kwe_hat[kwen[(N_obl+1):N_bk]] .* gini_t[(N_obl+1):N_bk], sigma_kwe);

@@ -128,7 +128,7 @@ source_data <- list(  K = max(x$kcode),
 
                       N = nrow(x),
                       N_ibl = nrow(x %>% filter(ibl)),
-                      N_bl = nrow(x %>% filter(!is.na(gini_b))),
+                      N_wbl = nrow(x %>% filter(!is.na(gini_b))),
                       N_obl = nrow(x %>% filter(s_bl_obs>0)),
                       N_bk = nrow(x %>% filter(k_bl_obs > 0)),
                       N_kw = nrow(x %>% filter(kw)),
