@@ -158,7 +158,8 @@ for (i in 1:100) {
   swiid[[i]] <- stemp
 }
 
-save(swiid, swiid_summary, file = "data/swiid7_1.rda") 
+save(swiid, swiid_summary, file = "data/swiid7_1.rda")
+save(swiid, swiid_summary, file = "vignette/swiid7_1.rda")
 
 # for release
 dir.create("release/swiid7_1", recursive = TRUE)
