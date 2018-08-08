@@ -2057,7 +2057,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
     select(-gini_cat_se) %>% 
     spread(key = wdes, value = gini_cat) %>% 
     mutate_at(vars(matches("_")),
-              funs(baseline/.)) %>% 
+              funs(log(baseline)/log(.))) %>% 
     select(-baseline) %>% 
     gather(key = wdes, value = rho, -kcode, -tcode) %>% 
     filter(!is.na(rho)) %>% 
@@ -2075,7 +2075,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
   
   rho_we00 <- rho_we0 %>% 
     left_join(rho_we_se, by = c("kcode", "tcode", "wdes")) %>% 
-    mutate(rho_se = if_else(rho == 1, .1, rho_se)) %>%            # placeholder for baseline series
+    mutate(rho_se = if_else(rho == 1, .1, rho_se/exp(rho))) %>%   # placeholder for baseline series, transform standard error
     left_join(ineq %>% select(country, year, kcode, tcode, rcode) %>% distinct(),
               by = c("kcode", "tcode")) %>% 
     left_join(wecodes, by = "wdes") %>% 
@@ -2100,7 +2100,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
       spread(key = wdes, value = gini_cat) %>% 
       mutate(bl = get(paste0(baseline_wd, "_", e))) %>% 
       mutate_at(vars(matches(e)),
-                funs(bl/.)) %>% 
+                funs(log(bl)/log(.))) %>% 
       select(kcode, tcode, matches(e)) %>% 
       gather(key = wdes, value = rho_wd, -kcode, -tcode) %>% 
       filter(!is.na(rho_wd)) %>% 
@@ -2126,6 +2126,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
   
   rho_wd <- rho_wd0 %>% 
     left_join(rho_wd_se, by = c("kcode", "tcode", "wd")) %>% 
+    mutate(rho_wd_se = rho_wd_se/exp(rho_wd)) %>%    # transform standard error
     group_by(kcode, tcode, wd) %>%
     summarize(rho_wd = max(rho_wd),
               rho_wd_se = max(rho_wd_se)) %>%
@@ -2155,7 +2156,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
       spread(key = wdes, value = gini_cat) %>%
       mutate(bl = get(paste0(w, "_", baseline_es))) %>%
       mutate_at(vars(matches(w)),
-                funs(bl/.)) %>%
+                funs(log(bl)/log(.))) %>%
       select(kcode, tcode, matches(w)) %>%
       gather(key = wdes, value = rho_es, -kcode, -tcode) %>%
       filter(!is.na(rho_es)) %>%
@@ -2181,6 +2182,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
   
   rho_es <- rho_es0 %>%
     left_join(rho_es_se, by = c("kcode", "tcode", "es")) %>%
+    mutate(rho_es_se = rho_es_se/exp(rho_es)) %>%    # transform standard error
     group_by(kcode, tcode, es) %>%
     summarize(rho_es = max(rho_es),
               rho_es_se = max(rho_es_se)) %>%
