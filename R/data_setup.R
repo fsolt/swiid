@@ -921,7 +921,7 @@ rm(bpsid1, bpsid2)
 # Statistical Center of Iran (update link--search site with Google)
 # https://www.google.com/search?hl=en&as_q=gini&as_sitesearch=https%3A%2F%2Fwww.amar.org.ir%2Fenglish
 
-amar_link <- "https://www.amar.org.ir/english/Latest-Releases-Page/articleType/ArticleView/articleId/475"
+amar_link <- "https://web.archive.org/web/20170524160512/https://www.amar.org.ir/english/Latest-Releases-Page/articleType/ArticleView/articleId/475"
 
 amar <- read_html(amar_link) %>% 
   html_node(".articleEntry table") %>% 
