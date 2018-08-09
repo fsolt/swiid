@@ -172,7 +172,7 @@ source_data <- list(  K = max(x$kcode),
                       rho_w_se = rho_wd$rho_wd_se,
 
                       prior_m_s = 0,
-                      prior_s_s = .2,
+                      prior_s_s = .4,
                       prior_m_kwe = mu_priors_by_wd(x, kwecode),
                       prior_s_kwe = s_priors_by_wd(x, kwecode),
                       prior_m_rwe = mu_priors_by_wd(x, rwecode),
