@@ -10864,7 +10864,7 @@ Russia,1991,0.2604,,market,pc,,Cornia1994 Russia market pc,Cornia 1994,593,http:
 Russia,1991,0.26,,gross,pc,TRUE,Rosstat gross pc,Russian Federal State Statistics Service,Sec.5,http://www.gks.ru/free_doc/doc_2017/year/pril_year17-eng.xls
 Russia,1992,0.278,,market,pc,,Cornia1994 Russia market pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Russia,1992,0.289,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf
-Russia,1992,0.395,0.0049,disp,sqrt,FALSE,LIS Russia disp sqrt,LISSY,"",https://web.archive.org/web/20100804001129/http://www.lisproject.org/key-figures/kf-workbook.xls
+Russia,1992,0.395,0.0049,disp,sqrt,FALSE,LIS Russia disp sqrt,LIS Key Figures,"",https://web.archive.org/web/20100804001129/http://www.lisproject.org/key-figures/kf-workbook.xls
 Russia,1992,0.543,,gross,pc,,Milanovic1999 Russia gross pc 2,Milanovic 1999,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
 Russia,1992,0.289,,gross,pc,TRUE,Rosstat gross pc,Russian Federal State Statistics Service,Sec.5,http://www.gks.ru/free_doc/doc_2017/year/pril_year17-eng.xls
 Russia,1993,0.398,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf
@@ -10880,7 +10880,7 @@ Russia,1994,0.441,,disp,pc,FALSE,Transmonee Russia disp pc,Transmonee 2012,"",ht
 Russia,1995,0.45,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en
 Russia,1995,0.44,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en
 Russia,1995,0.381,,gross,pc,FALSE,FM1999 gross pc,Flemming and Micklewright 1999,80,https://www.unicef-irc.org/publications/pdf/eps70.pdf
-Russia,1995,0.447,0.0065,disp,sqrt,FALSE,LIS Russia disp sqrt,LISSY,"",https://web.archive.org/web/20100804001129/http://www.lisproject.org/key-figures/kf-workbook.xls
+Russia,1995,0.447,0.0065,disp,sqrt,FALSE,LIS Russia disp sqrt,LIS Key Figures,"",https://web.archive.org/web/20100804001129/http://www.lisproject.org/key-figures/kf-workbook.xls
 Russia,1995,0.48,,gross,pc,,Milanovic1999 Russia gross pc 2,Milanovic 1999,45,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
 Russia,1995,0.387,,gross,pc,TRUE,Rosstat gross pc,Russian Federal State Statistics Service,Sec.5,http://www.gks.ru/free_doc/doc_2017/year/pril_year17-eng.xls
 Russia,1995,0.439,,disp,pc,FALSE,Transmonee Russia disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
@@ -10906,7 +10906,7 @@ Russia,1999,0.374,,con,pc,FALSE,Povcalnet Russia con pc 2,World Bank Povcalnet,"
 Russia,1999,0.4,,gross,pc,TRUE,Rosstat gross pc,Russian Federal State Statistics Service,Sec.5,http://www.gks.ru/free_doc/doc_2017/year/pril_year17-eng.xls
 Russia,2000,0.52,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en
 Russia,2000,0.5,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en
-Russia,2000,0.434,0.0068,disp,sqrt,FALSE,LIS Russia disp sqrt,LISSY,"",https://web.archive.org/web/20100804001129/http://www.lisproject.org/key-figures/kf-workbook.xls
+Russia,2000,0.434,0.0068,disp,sqrt,FALSE,LIS Russia disp sqrt,LIS Key Figures,"",https://web.archive.org/web/20100804001129/http://www.lisproject.org/key-figures/kf-workbook.xls
 Russia,2000,0.517,0.0071,market,ae,FALSE,LIS Russia market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
 Russia,2000,0.5879,0.0066,market,hh,FALSE,LIS Russia market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
 Russia,2000,0.516,0.0071,market,oecdm,FALSE,LIS Russia market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
