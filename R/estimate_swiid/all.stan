@@ -119,10 +119,10 @@ model {
   
   for (k in 1:K) {
     if (kn[k] > 1) {
-      gini[kt1[k]] ~ normal(.35, .125);                         // a random draw from N() in first year
+      gini[kt1[k]] ~ normal(-1, .4);                         // a random draw from N() in first year
       gini[(kt1[k]+1):(kt1[k]+kn[k]-1)] ~ normal(gini[(kt1[k]):(kt1[k]+kn[k]-2)], sigma_gini); // otherwise a random walk from previous year 
     } else {
-      gini[kt1[k]] ~ normal(.35, .125);                         // a random draw from N()
+      gini[kt1[k]] ~ normal(-1, .4);                         // a random draw from N()
     }
   }
   
