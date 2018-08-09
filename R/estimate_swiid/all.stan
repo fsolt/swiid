@@ -100,11 +100,11 @@ transformed parameters {
 }
 
 model {
-  sigma_gini ~ normal(.03, .01);
+  sigma_gini ~ normal(.025, .005);
   sigma_s ~ normal(0, .05);
   sigma_kwe ~ normal(0, .05);
   for (r in 1:R) {
-    sigma_rwe[r] ~ normal(.04, .015) T[0,];
+    sigma_rwe[r] ~ normal(.10, .05) T[0,];
   }
   sigma_kw ~ normal(0, .01);
 
@@ -122,7 +122,7 @@ model {
       for (kt in (kt1[k]):(kt1[k]+kn[k]-1)) {                 // iterate over kt for country k
         if (nbkt[kt] == 0) {                                  // if kt has no baseline obs:
           if (kt == kt1[k]) {                                 // if first year,
-            ln_gini[kt] ~ normal(.35, .15);                      // a random draw from N()
+            ln_gini[kt] ~ normal(-1, .4);                      // a random draw from N()
           } else {                                            // if not first year,
             ln_gini[kt] ~ normal(ln_gini[kt-1], sigma_gini);        // a random walk from previous year
           }
@@ -136,10 +136,10 @@ model {
       }
     } else {                                                  // if country k has no baseline obs:
       if (kn[k] > 1) {                                        // if more than one year:
-        ln_gini[kt1[k]] ~ normal(.35, .15);                      // a random draw from N() in first year,
+        ln_gini[kt1[k]] ~ normal(-1, .4);                      // a random draw from N() in first year,
         ln_gini[(kt1[k]+1):(kt1[k]+kn[k]-1)] ~ normal(ln_gini[(kt1[k]):(kt1[k]+kn[k]-2)], sigma_gini); // and a random walk from previous year afterwards
       } else {                                                // if only one year:
-        ln_gini[kt1[k]] ~ normal(.4, .125);                      // a random draw from N()
+        ln_gini[kt1[k]] ~ normal(-1, .4);                      // a random draw from N()
       }
     }
   }
