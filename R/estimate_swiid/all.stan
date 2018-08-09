@@ -118,29 +118,11 @@ model {
   rho_w ~ normal(rho_w_t, rho_w_se);
   
   for (k in 1:K) {
-    if (bk[k] == 1) {                                         // if country k has some baseline obs:
-      for (kt in (kt1[k]):(kt1[k]+kn[k]-1)) {                 // iterate over kt for country k
-        if (nbkt[kt] == 0) {                                  // if kt has no baseline obs:
-          if (kt == kt1[k]) {                                 // if first year,
-            ln_gini[kt] ~ normal(-1, .4);                      // a random draw from N()
-          } else {                                            // if not first year,
-            ln_gini[kt] ~ normal(ln_gini[kt-1], sigma_gini);        // a random walk from previous year
-          }
-        } else {                                              // if kt has baseline obs:
-          if (kt == kt1[k]) {                                 // if first year,
-            ln_gini[kt] ~ normal(gini_b[nbkt[kt]], gini_b_se[nbkt[kt]]); // use baseline
-          } else {                                            // if not first year,
-            ln_gini[kt] ~ normal(.7*ln_gini[kt-1] + .3*gini_b[nbkt[kt]], sigma_gini); // a random walk from weighted mean of previous year and baseline
-          }
-        }
-      }
-    } else {                                                  // if country k has no baseline obs:
-      if (kn[k] > 1) {                                        // if more than one year:
-        ln_gini[kt1[k]] ~ normal(-1, .4);                      // a random draw from N() in first year,
-        ln_gini[(kt1[k]+1):(kt1[k]+kn[k]-1)] ~ normal(ln_gini[(kt1[k]):(kt1[k]+kn[k]-2)], sigma_gini); // and a random walk from previous year afterwards
-      } else {                                                // if only one year:
-        ln_gini[kt1[k]] ~ normal(-1, .4);                      // a random draw from N()
-      }
+    if (kn[k] > 1) {
+      gini[kt1[k]] ~ normal(.35, .125);                         // a random draw from N() in first year
+      gini[(kt1[k]+1):(kt1[k]+kn[k]-1)] ~ normal(gini[(kt1[k]):(kt1[k]+kn[k]-2)], sigma_gini); // otherwise a random walk from previous year 
+    } else {
+      gini[kt1[k]] ~ normal(.35, .125);                         // a random draw from N()
     }
   }
   
