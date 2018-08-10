@@ -32,9 +32,9 @@ data{
   int<lower=1, upper=RWE> rwen[N];        // rwe for region-welfare_def-equiv_sc of observation n
   int<lower=1, upper=RWE> rwen2[N];       // rwe for region-*baseline_wd*-equiv_sc of observation n
   
-  vector<upper=0>[N] gini_m; 	  // measured gini for observation n
+  vector<upper=0>[N] gini_m; 	            // measured gini for observation n
   vector<lower=0, upper=1>[N] gini_m_se;  // std error of measured gini for obs n
-  vector<upper=0>[N_wbl] gini_b;  // baseline gini for obs n
+  vector<upper=0>[N_wbl] gini_b;          // baseline gini for obs n
   vector<lower=0, upper=1>[N_wbl] gini_b_se; // std error of baseline gini for obs n
   
   int<lower=0, upper=1> bk[K];            // baseline availability indicator for country k
@@ -89,7 +89,7 @@ parameters {
 transformed parameters {
   real<lower=0> sigma_krcat[R];
   real<lower=0> sigma_rrcat[R];
-  real<lower=0> gini[KT];        // SWIID gini estimate for baseline in country k at time t
+  real<lower=0> gini[KT];                 // SWIID gini estimate for baseline in country k at time t
 
   for (r in 1:R) {
     sigma_krcat[r] = sqrt(square(sigma_kw) + square(sigma_rwe[r])); 
@@ -108,28 +108,42 @@ model {
   }
   sigma_kw ~ normal(0, .01);
 
-  rho_s ~ lognormal(prior_m_s, prior_s_s);
-  rho_kwe_hat ~ lognormal(prior_m_kwe, prior_s_kwe);
-  rho_rwe_hat ~ lognormal(prior_m_rwe, prior_s_rwe);
-  rho_kw_hat ~ lognormal(prior_m_kw, prior_s_kw);
+  rho_s ~ normal(prior_m_s, prior_s_s);
+  rho_kwe_hat ~ normal(prior_m_kwe, prior_s_kwe);
+  rho_rwe_hat ~ normal(prior_m_rwe, prior_s_rwe);
+  rho_kw_hat ~ normal(prior_m_kw, prior_s_kw);
 
   gini_m ~ normal(gini_t, gini_m_se);
   rho_we ~ normal(rho_we_t, rho_we_se);
   rho_w ~ normal(rho_w_t, rho_w_se);
   
   for (k in 1:K) {
-    if (kn[k] > 1) {
-      gini[kt1[k]] ~ normal(-1, .4);                         // a random draw from N() in first year
-      gini[(kt1[k]+1):(kt1[k]+kn[k]-1)] ~ normal(gini[(kt1[k]):(kt1[k]+kn[k]-2)], sigma_gini); // otherwise a random walk from previous year 
-    } else {
-      gini[kt1[k]] ~ normal(-1, .4);                         // a random draw from N()
+    if (bk[k] == 1) {                                         // if country k has some baseline obs:
+      for (kt in (kt1[k]):(kt1[k]+kn[k]-1)) {                 // iterate over kt for country k
+        if (kt == kt1[k]) {                                   // if first year,
+          if (nbkt[kt] == 0) {                                // if kt has no baseline observation:
+            ln_gini[kt] ~ normal(-1, .4);                     // a random draw from N()
+          } else {                                            // if kt has a baseline observation:
+            ln_gini[kt] ~ normal(gini_b[nbkt[kt]], gini_b_se[nbkt[kt]]); // use baseline
+          }
+        } else {                                              // if not first year,
+          ln_gini[kt] ~ normal(ln_gini[kt-1], sigma_gini);    // a random walk from previous year
+        }
+      }
+    } else {                                                  // if country k has no baseline obs:
+      if (kn[k] > 1) {                                        // if more than one year:
+        ln_gini[kt1[k]] ~ normal(-1, .4);                     // a random draw from N() in first year,
+        ln_gini[(kt1[k]+1):(kt1[k]+kn[k]-1)] ~ normal(ln_gini[(kt1[k]):(kt1[k]+kn[k]-2)], sigma_gini); // and a random walk from previous year afterwards
+      } else {                                                // if only one year:
+        ln_gini[kt1[k]] ~ normal(-1, .4);                     // a random draw from N()
+      }
     }
   }
   
   gini_b[N_ibl+1:N_wbl] ~ normal(rho_s[ss[N_ibl+1:N_wbl]] .* gini_t[N_ibl+1:N_wbl], sigma_s); // estimate rho_s for obs with baseline
-  rho_kwe_hat[kwem] ~ normal(rho_we_t, sigma_kwe); // estimate rho_kwe_hat (over 1:M)
-  rho_rwe_hat[rwem] ~ normal(rho_we_t, sigma_rwe[rrm]); // estimate rho_rwe_hat (over 1:M)
-  rho_kw_hat[kwp] ~ normal(rho_w_t, sigma_kw);     // estimate rho_kw_hat (over 1:P)
+  rho_kwe_hat[kwem] ~ normal(rho_we_t, sigma_kwe);            // estimate rho_kwe_hat (over 1:M)
+  rho_rwe_hat[rwem] ~ normal(rho_we_t, sigma_rwe[rrm]);       // estimate rho_rwe_hat (over 1:M)
+  rho_kw_hat[kwp] ~ normal(rho_w_t, sigma_kw);                // estimate rho_kw_hat (over 1:P)
 
   // obs w/ baseline use baseline
   ln_gini[kktt[1:N_ibl]] ~ normal(gini_b[1:N_ibl], gini_b_se[1:N_ibl]); 
