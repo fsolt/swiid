@@ -32,9 +32,9 @@ data{
   int<lower=1, upper=RWE> rwen[N];        // rwe for region-welfare_def-equiv_sc of observation n
   int<lower=1, upper=RWE> rwen2[N];       // rwe for region-*baseline_wd*-equiv_sc of observation n
   
-  vector<upper=0>[N] gini_m; 	            // measured gini for observation n
+  vector<lower=0>[N] gini_m; 	            // measured gini for observation n
   vector<lower=0, upper=1>[N] gini_m_se;  // std error of measured gini for obs n
-  vector<upper=0>[N_wbl] gini_b;          // baseline gini for obs n
+  vector<lower=0>[N_wbl] gini_b;          // baseline gini for obs n
   vector<lower=0, upper=1>[N_wbl] gini_b_se; // std error of baseline gini for obs n
   
   int<lower=0, upper=1> bk[K];            // baseline availability indicator for country k
