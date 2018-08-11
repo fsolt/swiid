@@ -108,7 +108,7 @@ model {
   }
   sigma_kw ~ normal(0, .01);
 
-  rho_s ~ normal(prior_m_s, prior_s_s);
+  rho_s ~ lognormal(prior_m_s, prior_s_s);
   rho_kwe_hat ~ normal(prior_m_kwe, prior_s_kwe);
   rho_rwe_hat ~ normal(prior_m_rwe, prior_s_rwe);
   rho_kw_hat ~ normal(prior_m_kw, prior_s_kw);
