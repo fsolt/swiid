@@ -306,10 +306,10 @@ eurostat <- get_eurostat("ilc_di12",
 # Transmonee 2012 (2012 is the last database that includes inequality data; archived)
 transmonee_link <- "https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls"
 tryCatch(download.file(transmonee_link, "data-raw/transmonee.xls"), 
-                     error = function(e) {
-                       download.file("https://github.com/fsolt/swiid/raw/master/data-raw/transmonee.xls", "data-raw/transmonee.xls")
-                     })
-         
+         error = function(e) {
+           download.file("https://github.com/fsolt/swiid/raw/master/data-raw/transmonee.xls", "data-raw/transmonee.xls")
+         })
+
 transmonee <- read_excel("data-raw/transmonee.xls", 
                          sheet = "10. Economy",
                          skip = 398,
@@ -1450,12 +1450,12 @@ fso_ch_link <- "https://www.bfs.admin.ch/bfsstatic/dam/assets/4362566/appendix"
 fso_ch0 <- read_csv2(fso_ch_link, skip = 1) %>% 
   filter(!is.na(`primary equivalised income`)) %>%
   transmute(year = as.numeric(X1),
-         market = as.numeric(`primary equivalised income`),
-         market_se = as.numeric(X3)/1.96,
-         gross = as.numeric(`gross equivalised income`),
-         gross_se = as.numeric(X5)/1.96,
-         disp = as.numeric(`disposable equivalised income`),
-         disp_se = as.numeric(X7)/1.96) %>% 
+            market = as.numeric(`primary equivalised income`),
+            market_se = as.numeric(X3)/1.96,
+            gross = as.numeric(`gross equivalised income`),
+            gross_se = as.numeric(X5)/1.96,
+            disp = as.numeric(`disposable equivalised income`),
+            disp_se = as.numeric(X7)/1.96) %>% 
   gather(key = "welfare_def", value = "gini", -year)
 
 fso_ch <- fso_ch0 %>% 
@@ -2019,9 +2019,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
            ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)),
            wecode = as.integer(factor(paste(wcode, ecode))),
            kwecode = as.integer(factor(100*kcode+wecode)),
-           rwecode = as.integer(factor(100*rcode+wecode)),
-           ln_gini_m = log(gini_m*100),
-           ln_gini_m_se = gini_m_se/gini_m) %>% 
+           rwecode = as.integer(factor(100*rcode+wecode))) %>% 
     select(-tcode0) # tcode0 is only used to facilitate getting tcode into its customary column position
   
   wecodes <- ineq %>%
@@ -2038,17 +2036,17 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
   ineq1 <- ineq %>% 
     group_by(kcode, tcode, welfare_def, equiv_scale) %>% 
     summarize(n_obs = n(),
-              gini_cat = mean(ln_gini_m), 
+              gini_cat = mean(gini_m), 
               gini_cat_se = ifelse(n_obs == 1,
-                                   ln_gini_m_se,
-                                   sqrt(mean(ln_gini_m_se^2) + (1+1/n_obs)*var(ln_gini_m)))) %>%  # per Rubin (1987)
+                                   gini_m_se,
+                                   sqrt(mean(gini_m_se^2) + (1+1/n_obs)*var(gini_m)))) %>%  # per Rubin (1987)
     ungroup() %>% 
     select(-n_obs) %>% 
     unite(wdes, welfare_def, equiv_scale) %>% 
     bind_rows(ineq %>%
                 group_by(kcode, tcode) %>% 
-                summarize(gini_cat = log(first(gini_b)*100),
-                          gini_cat_se = first(gini_b_se)/first(gini_b),
+                summarize(gini_cat = first(gini_b),
+                          gini_cat_se = first(gini_b_se),
                           wdes = "baseline") %>% 
                 ungroup())
   
@@ -2059,7 +2057,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
     select(-gini_cat_se) %>% 
     spread(key = wdes, value = gini_cat) %>% 
     mutate_at(vars(matches("_")),
-              funs(baseline/.)) %>% 
+              funs(log(baseline)/log(.))) %>% 
     select(-baseline) %>% 
     gather(key = wdes, value = rho, -kcode, -tcode) %>% 
     filter(!is.na(rho)) %>% 
@@ -2077,7 +2075,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
   
   rho_we00 <- rho_we0 %>% 
     left_join(rho_we_se, by = c("kcode", "tcode", "wdes")) %>% 
-    mutate(rho_se = if_else(rho == 1, .1, rho_se)) %>%   # placeholder for baseline series
+    mutate(rho_se = if_else(rho == 1, .1, rho_se/exp(rho))) %>%   # placeholder for baseline series, transform standard error
     left_join(ineq %>% select(country, year, kcode, tcode, rcode) %>% distinct(),
               by = c("kcode", "tcode")) %>% 
     left_join(wecodes, by = "wdes") %>% 
@@ -2102,7 +2100,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
       spread(key = wdes, value = gini_cat) %>% 
       mutate(bl = get(paste0(baseline_wd, "_", e))) %>% 
       mutate_at(vars(matches(e)),
-                funs(bl/.)) %>% 
+                funs(log(bl)/log(.))) %>% 
       select(kcode, tcode, matches(e)) %>% 
       gather(key = wdes, value = rho_wd, -kcode, -tcode) %>% 
       filter(!is.na(rho_wd)) %>% 
@@ -2128,7 +2126,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
   
   rho_wd <- rho_wd0 %>% 
     left_join(rho_wd_se, by = c("kcode", "tcode", "wd")) %>% 
-    mutate(rho_wd_se = rho_wd_se) %>%
+    mutate(rho_wd_se = rho_wd_se/exp(rho_wd)) %>%    # transform standard error
     group_by(kcode, tcode, wd) %>%
     summarize(rho_wd = max(rho_wd),
               rho_wd_se = max(rho_wd_se)) %>%
@@ -2158,7 +2156,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
       spread(key = wdes, value = gini_cat) %>%
       mutate(bl = get(paste0(w, "_", baseline_es))) %>%
       mutate_at(vars(matches(w)),
-                funs(bl/.)) %>%
+                funs(log(bl)/log(.))) %>%
       select(kcode, tcode, matches(w)) %>%
       gather(key = wdes, value = rho_es, -kcode, -tcode) %>%
       filter(!is.na(rho_es)) %>%
@@ -2184,7 +2182,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
   
   rho_es <- rho_es0 %>%
     left_join(rho_es_se, by = c("kcode", "tcode", "es")) %>%
-    mutate(rho_es_se = rho_es_se) %>%
+    mutate(rho_es_se = rho_es_se/exp(rho_es)) %>%    # transform standard error
     group_by(kcode, tcode, es) %>%
     summarize(rho_es = max(rho_es),
               rho_es_se = max(rho_es_se)) %>%
