@@ -918,7 +918,7 @@ bpsid <- bind_rows(bpsid1, bpsid2) %>%
 rm(bpsid1, bpsid2)
 
 
-# Statistical Center of Iran (update link--search site with Google)
+# Statistical Center of Iran (update link--search site with Google; blocked as of 12-08-2018, so use archive.org version)
 # https://www.google.com/search?hl=en&as_q=gini&as_sitesearch=https%3A%2F%2Fwww.amar.org.ir%2Fenglish
 
 amar_link <- "https://web.archive.org/web/20170524160512/https://www.amar.org.ir/english/Latest-Releases-Page/articleType/ArticleView/articleId/475"
@@ -1225,7 +1225,10 @@ dgeec <- extract_tables("data-raw/dgeec.pdf", pages = 2) %>%
 
 # Philippines Statistical Agency (automated)
 psa_link <- "https://www.psa.gov.ph/sites/default/files/Table%202.9_0.csv"
-download.file(psa_link, "data-raw/psa.csv")
+tryCatch(download.file(psa_link, "data-raw/psa.csv"), 
+         error = function(e) {
+           download.file("https://github.com/fsolt/swiid/raw/master/data-raw/psa.csv", "data-raw/psa.csv")
+         })
 
 psa <- read_csv("data-raw/psa.csv", skip = 3, col_types = "cccdddddcc") %>% 
   first_row_to_names() %>% 
@@ -2057,7 +2060,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
     select(-gini_cat_se) %>% 
     spread(key = wdes, value = gini_cat) %>% 
     mutate_at(vars(matches("_")),
-              funs(log(baseline)/log(.))) %>% 
+              funs(baseline/.)) %>% 
     select(-baseline) %>% 
     gather(key = wdes, value = rho, -kcode, -tcode) %>% 
     filter(!is.na(rho)) %>% 
@@ -2075,7 +2078,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
   
   rho_we00 <- rho_we0 %>% 
     left_join(rho_we_se, by = c("kcode", "tcode", "wdes")) %>% 
-    mutate(rho_se = if_else(rho == 1, .1, rho_se/exp(rho))) %>%   # placeholder for baseline series, transform standard error
+    mutate(rho_se = if_else(rho == 1, .1, rho_se)) %>%            # placeholder for baseline series
     left_join(ineq %>% select(country, year, kcode, tcode, rcode) %>% distinct(),
               by = c("kcode", "tcode")) %>% 
     left_join(wecodes, by = "wdes") %>% 
@@ -2100,7 +2103,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
       spread(key = wdes, value = gini_cat) %>% 
       mutate(bl = get(paste0(baseline_wd, "_", e))) %>% 
       mutate_at(vars(matches(e)),
-                funs(log(bl)/log(.))) %>% 
+                funs(bl/.)) %>% 
       select(kcode, tcode, matches(e)) %>% 
       gather(key = wdes, value = rho_wd, -kcode, -tcode) %>% 
       filter(!is.na(rho_wd)) %>% 
@@ -2126,7 +2129,6 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
   
   rho_wd <- rho_wd0 %>% 
     left_join(rho_wd_se, by = c("kcode", "tcode", "wd")) %>% 
-    mutate(rho_wd_se = rho_wd_se/exp(rho_wd)) %>%    # transform standard error
     group_by(kcode, tcode, wd) %>%
     summarize(rho_wd = max(rho_wd),
               rho_wd_se = max(rho_wd_se)) %>%
@@ -2156,7 +2158,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
       spread(key = wdes, value = gini_cat) %>%
       mutate(bl = get(paste0(w, "_", baseline_es))) %>%
       mutate_at(vars(matches(w)),
-                funs(log(bl)/log(.))) %>%
+                funs(bl/.)) %>%
       select(kcode, tcode, matches(w)) %>%
       gather(key = wdes, value = rho_es, -kcode, -tcode) %>%
       filter(!is.na(rho_es)) %>%
@@ -2182,7 +2184,6 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
   
   rho_es <- rho_es0 %>%
     left_join(rho_es_se, by = c("kcode", "tcode", "es")) %>%
-    mutate(rho_es_se = rho_es_se/exp(rho_es)) %>%    # transform standard error
     group_by(kcode, tcode, es) %>%
     summarize(rho_es = max(rho_es),
               rho_es_se = max(rho_es_se)) %>%
