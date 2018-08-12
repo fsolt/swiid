@@ -70,6 +70,7 @@ parameters {
   real<lower=0, upper=1> gini[KT];        // SWIID gini estimate for baseline in country k at time t
   real<lower=0> sigma_gini; 	            // random-walk variance parameter
   vector[N] gini_t;                       // unknown "true" gini given gini_m and gini_m_se
+  vector[N_wbl] gini_b_t;                 // unknown "true" gini given gini_b and gini_b_se
   vector[M] rho_we_t;                     // unknown "true" rho_we given rho_we and rho_we_se
   vector[P] rho_w_t;                      // unknown "true" rho_wd given rho_w and rho_w_se
   
@@ -111,6 +112,7 @@ model {
   rho_kw_hat ~ lognormal(prior_m_kw, prior_s_kw);
 
   gini_m ~ normal(gini_t, gini_m_se);
+  gini_b ~ normal(gini_b_t, gini_b_se);
   rho_we ~ normal(rho_we_t, rho_we_se);
   rho_w ~ normal(rho_w_t, rho_w_se);
   
@@ -124,7 +126,7 @@ model {
             gini[kt] ~ normal(gini_b[nbkt[kt]], gini_b_se[nbkt[kt]]); // use baseline
           }
         } else {                                              // if not first year,
-          gini[kt] ~ normal(ln_gini[kt-1], sigma_gini);    	  // a random walk from previous year
+          gini[kt] ~ normal(gini[kt-1], sigma_gini);    	  // a random walk from previous year
         }
       }
     } else {                                                  // if country k has no baseline obs:
@@ -137,7 +139,7 @@ model {
     }
   }
   
-  gini_b[N_ibl+1:N_wbl] ~ normal(rho_s[ss[N_ibl+1:N_wbl]] .* gini_t[N_ibl+1:N_wbl], sigma_s); // estimate rho_s for obs with baseline
+  gini_b_t[N_ibl+1:N_wbl] ~ normal(rho_s[ss[N_ibl+1:N_wbl]] .* gini_t[N_ibl+1:N_wbl], sigma_s); // estimate rho_s for obs with baseline
   rho_kwe_hat[kwem] ~ normal(rho_we_t, sigma_kwe);            // estimate rho_kwe_hat (over 1:M)
   rho_rwe_hat[rwem] ~ normal(rho_we_t, sigma_rwe[rrm]);       // estimate rho_rwe_hat (over 1:M)
   rho_kw_hat[kwp] ~ normal(rho_w_t, sigma_kw);                // estimate rho_kw_hat (over 1:P)
