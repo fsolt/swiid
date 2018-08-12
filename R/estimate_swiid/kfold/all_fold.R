@@ -484,10 +484,10 @@ leave_k_out <- function(fold) {
                           kwn = x$kwcode,
                           rwen = x$rwecode,
                           rwen2 = x$rwe2code,
-                          gini_m = log(x$gini_m),
-                          gini_m_se = x$gini_m_se/x$gini_m,
-                          gini_b = log(x$gini_b[!is.na(x$gini_b)]),
-                          gini_b_se = x$gini_b_se[!is.na(x$gini_b_se)]/x$gini_b[!is.na(x$gini_b)],
+                          gini_m = x$gini_m,
+                          gini_m_se = x$gini_m_se,
+                          gini_b = x$gini_b[!is.na(x$gini_b)],
+                          gini_b_se = x$gini_b_se[!is.na(x$gini_b_se)],
                           
                           bk = kn$bk,
                           nbkt = kt1$n,
@@ -510,7 +510,7 @@ leave_k_out <- function(fold) {
                           rho_w_se = rho_wd$rho_wd_se,
 
                           prior_m_s = 0,
-                          prior_s_s = .4,
+                          prior_s_s = .2,
                           prior_m_kwe = mu_priors_by_wd(x, kwecode),
                           prior_s_kwe = s_priors_by_wd(x, kwecode),
                           prior_m_rwe = mu_priors_by_wd(x, rwecode),
@@ -589,4 +589,3 @@ leave_k_out <- function(fold) {
     save(fold_res, file = paste0("/Volumes/Platón-Media/Media/Projects/swiid/kfold/res_", fold, ".rda"))
   }  
 }
-
