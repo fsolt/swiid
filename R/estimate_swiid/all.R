@@ -5,12 +5,12 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 8000
+iter <- 6000
 warmup <- iter - 2500
 thin <- 5
 chains <- 3
 cores <- chains
-adapt_delta <- .95
+adapt_delta <- .9
 
 baseline_series <- "LIS disp sqrt"
 baseline_wd <- str_split(baseline_series, "\\s")[[1]] %>% nth(-2)
@@ -90,10 +90,10 @@ mu_priors_by_wd <- function(x, var) {
     select(!!var, welfare_def) %>%
     distinct() %>% 
     arrange(!!var) %>%  
-    mutate(prior_mu = case_when(welfare_def == "disp" ~ 1,
-                                welfare_def == "con" ~ .9,
-                                welfare_def == "gross" ~ 1.1,
-                                welfare_def == "market" ~ 1.6)) %>% 
+    mutate(prior_mu = case_when(welfare_def == "disp" ~ 0,
+                                welfare_def == "con" ~ .1,
+                                welfare_def == "gross" ~ -.1,
+                                welfare_def == "market" ~ -.5)) %>% 
     pull(prior_mu)
   return(prior_mu)
 }
@@ -104,10 +104,10 @@ s_priors_by_wd <- function(x, var) {
     select(!!var, welfare_def) %>%
     distinct() %>% 
     arrange(!!var) %>% 
-    mutate(prior_s = case_when(welfare_def == "disp" ~ .1,
+    mutate(prior_s = case_when(welfare_def == "disp" ~ .05,
                                welfare_def == "con" ~ .15,
-                               welfare_def == "gross" ~ .15,
-                               welfare_def == "market" ~ .4)) %>% 
+                               welfare_def == "gross" ~ .1,
+                               welfare_def == "market" ~ .15)) %>% 
     pull(prior_s)
   return(prior_s)
 }
@@ -146,10 +146,10 @@ source_data <- list(  K = max(x$kcode),
                       kwn = x$kwcode,
                       rwen = x$rwecode,
                       rwen2 = x$rwe2code,
-                      gini_m = log(x$gini_m),
-                      gini_m_se = x$gini_m_se/x$gini_m,
-                      gini_b = log(x$gini_b[!is.na(x$gini_b)]),
-                      gini_b_se = x$gini_b_se[!is.na(x$gini_b_se)]/x$gini_b[!is.na(x$gini_b)],
+                      gini_m = x$gini_m,
+                      gini_m_se = x$gini_m_se,
+                      gini_b = x$gini_b[!is.na(x$gini_b)],
+                      gini_b_se = x$gini_b_se[!is.na(x$gini_b_se)],
                       
                       bk = kn$bk,
                       nbkt = kt1$n, 
@@ -171,8 +171,8 @@ source_data <- list(  K = max(x$kcode),
                       rho_w = rho_wd$rho_wd,
                       rho_w_se = rho_wd$rho_wd_se,
 
-                      prior_m_s = .2,
-                      prior_s_s = .3,
+                      prior_m_s = 0,
+                      prior_s_s = .2,
                       prior_m_kwe = mu_priors_by_wd(x, kwecode),
                       prior_s_kwe = s_priors_by_wd(x, kwecode),
                       prior_m_rwe = mu_priors_by_wd(x, rwecode),
