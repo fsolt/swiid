@@ -72,7 +72,7 @@ parameters {
   vector[N] gini_t;                       // unknown "true" gini given gini_m and gini_m_se
   vector[N_wbl] gini_b_t;                 // unknown "true" gini given gini_b and gini_b_se
   vector[M] rho_we_t;                     // unknown "true" rho_we given rho_we and rho_we_se
-  vector[P] rho_w_t;                      // unknown "true" rho_wd given rho_w and rho_w_se
+  // vector[P] rho_w_t;                      // unknown "true" rho_wd given rho_w and rho_w_se
   
   vector<lower=0>[S] rho_s;               // ratio of baseline to series s
   real<lower=0> sigma_s; 	                // series noise 
@@ -80,22 +80,22 @@ parameters {
   vector<lower=0>[KWE] rho_kwe_hat;       // estimated rho_we by country
   real<lower=0> sigma_kwe;                // rho_kwe_hat noise
   
-  vector<lower=0>[KW] rho_kw_hat;         // estimated rho_w by country
-  real<lower=0> sigma_kw;                 // rho_kw_hat noise
-  
-  vector<lower=0>[RWE] rho_rwe_hat;       // estimated rho_we by region
-  real<lower=0> sigma_rwe[R];             // rho_rwe_hat noise (by region)
+  // vector<lower=0>[KW] rho_kw_hat;         // estimated rho_w by country
+  // real<lower=0> sigma_kw;                 // rho_kw_hat noise
+  // 
+  // vector<lower=0>[RWE] rho_rwe_hat;       // estimated rho_we by region
+  // real<lower=0> sigma_rwe[R];             // rho_rwe_hat noise (by region)
 }
 
-transformed parameters {
-  real<lower=0> sigma_krcat[R];
-  real<lower=0> sigma_rrcat[R];
-  
-  for (r in 1:R) {
-    sigma_krcat[r] = sqrt(square(sigma_kw) + square(sigma_rwe[r])); 
-    sigma_rrcat[r] = sqrt(2 * square(sigma_rwe[r])); 
-  }
-}
+// transformed parameters {
+//   real<lower=0> sigma_krcat[R];
+//   real<lower=0> sigma_rrcat[R];
+//   
+//   for (r in 1:R) {
+//     sigma_krcat[r] = sqrt(square(sigma_kw) + square(sigma_rwe[r])); 
+//     sigma_rrcat[r] = sqrt(2 * square(sigma_rwe[r])); 
+//   }
+// }
 
 model {
   sigma_gini ~ normal(.01, .0025);
@@ -108,13 +108,13 @@ model {
 
   rho_s ~ lognormal(prior_m_s, prior_s_s);
   rho_kwe_hat ~ lognormal(prior_m_kwe, prior_s_kwe);
-  rho_rwe_hat ~ lognormal(prior_m_rwe, prior_s_rwe);
-  rho_kw_hat ~ lognormal(prior_m_kw, prior_s_kw);
+//  rho_rwe_hat ~ lognormal(prior_m_rwe, prior_s_rwe);
+//  rho_kw_hat ~ lognormal(prior_m_kw, prior_s_kw);
 
   gini_m ~ normal(gini_t, gini_m_se);
   gini_b ~ normal(gini_b_t, gini_b_se);
   rho_we ~ normal(rho_we_t, rho_we_se);
-  rho_w ~ normal(rho_w_t, rho_w_se);
+//  rho_w ~ normal(rho_w_t, rho_w_se);
   
   for (k in 1:K) {
     if (bk[k] == 1) {                                         // if country k has some baseline obs:
@@ -141,8 +141,8 @@ model {
   
   gini_b_t[N_ibl+1:N_wbl] ~ normal(rho_s[ss[N_ibl+1:N_wbl]] .* gini_t[N_ibl+1:N_wbl], sigma_s); // estimate rho_s for obs with baseline
   rho_kwe_hat[kwem] ~ normal(rho_we_t, sigma_kwe);            // estimate rho_kwe_hat (over 1:M)
-  rho_rwe_hat[rwem] ~ normal(rho_we_t, sigma_rwe[rrm]);       // estimate rho_rwe_hat (over 1:M)
-  rho_kw_hat[kwp] ~ normal(rho_w_t, sigma_kw);                // estimate rho_kw_hat (over 1:P)
+//  rho_rwe_hat[rwem] ~ normal(rho_we_t, sigma_rwe[rrm]);       // estimate rho_rwe_hat (over 1:M)
+//  rho_kw_hat[kwp] ~ normal(rho_w_t, sigma_kw);                // estimate rho_kw_hat (over 1:P)
 
   // obs w/ baseline use baseline
   gini[kktt[1:N_ibl]] ~ normal(gini_b[1:N_ibl], gini_b_se[1:N_ibl]); 
