@@ -1177,19 +1177,19 @@ Nigeria,2004,0.4296,,con,pc,,NBS Nigeria con pc,National Bureau of Statistics Ni
 Nigeria,2010,0.447,,con,pc,,NBS Nigeria con pc,National Bureau of Statistics Nigeria 2012,11,http://www.nigerianstat.gov.ng/pdfuploads/Nigeria%20Poverty%20Profile%202010.pdf
 Norway,1988,0.21,,disp,hh,,Park1995 Norway disp hh,Tabatabai 1996; Park 1995,127,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Norway,1970,0.305,,disp,ae,TRUE,Ringen1991 disp ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
-Norway,1970,0.369,,market,ae,TRUE,Ringen1991 disp ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
+Norway,1970,0.369,,market,ae,TRUE,Ringen1991 market ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1973,0.348,,disp,ae,TRUE,Ringen1991 disp ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
-Norway,1973,0.422,,market,ae,TRUE,Ringen1991 disp ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
+Norway,1973,0.422,,market,ae,TRUE,Ringen1991 market ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1976,0.319,,disp,ae,TRUE,Ringen1991 disp ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
-Norway,1976,0.392,,market,ae,TRUE,Ringen1991 disp ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
+Norway,1976,0.392,,market,ae,TRUE,Ringen1991 market ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1979,0.314,,disp,ae,TRUE,Ringen1991 disp ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
-Norway,1979,0.4,,market,ae,TRUE,Ringen1991 disp ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
+Norway,1979,0.4,,market,ae,TRUE,Ringen1991 market ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1979,0.346,,disp,ae,TRUE,Ringen1991 disp ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
-Norway,1979,0.418,,market,ae,TRUE,Ringen1991 disp ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
+Norway,1979,0.418,,market,ae,TRUE,Ringen1991 market ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1982,0.334,,disp,ae,TRUE,Ringen1991 disp ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
-Norway,1982,0.406,,market,ae,TRUE,Ringen1991 disp ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
+Norway,1982,0.406,,market,ae,TRUE,Ringen1991 market ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1986,0.33,,disp,ae,TRUE,Ringen1991 disp ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
-Norway,1986,0.401,,market,ae,TRUE,Ringen1991 disp ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
+Norway,1986,0.401,,market,ae,TRUE,Ringen1991 market ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1970,0.325,,gross,ae,TRUE,Ringen1991 gross ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1973,0.364,,gross,ae,TRUE,Ringen1991 gross ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1976,0.342,,gross,ae,TRUE,Ringen1991 gross ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
@@ -1524,12 +1524,12 @@ Slovakia,1989,0.154,,disp,oecdm,TRUE,GT1997 Slovakia disp oecdm,Garner and Terre
 Slovakia,1993,0.17,,disp,oecdm,TRUE,GT1997 Slovakia disp oecdm,Garner and Terrell 1997,40,https://www.researchgate.net/profile/Thesia_Garner/publication/23724062_Changes_in_Distribution_and_Welfare_in_Transition_Economies_Market_vs_Policy_in_the_Czech_Republic_and_Slovakia/links/543689530cf2bf1f1f2bd9e3/Changes-in-Distribution-and-Welfare-in-Transition-Economies-Market-vs-Policy-in-the-Czech-Republic-and-Slovakia.pdf
 Slovakia,1989,0.176,,disp,pc,TRUE,GT1997 Slovakia disp pc,Garner and Terrell 1997,40,https://www.researchgate.net/profile/Thesia_Garner/publication/23724062_Changes_in_Distribution_and_Welfare_in_Transition_Economies_Market_vs_Policy_in_the_Czech_Republic_and_Slovakia/links/543689530cf2bf1f1f2bd9e3/Changes-in-Distribution-and-Welfare-in-Transition-Economies-Market-vs-Policy-in-the-Czech-Republic-and-Slovakia.pdf
 Slovakia,1993,0.185,,disp,pc,TRUE,GT1997 Slovakia disp pc,Garner and Terrell 1997,40,https://www.researchgate.net/profile/Thesia_Garner/publication/23724062_Changes_in_Distribution_and_Welfare_in_Transition_Economies_Market_vs_Policy_in_the_Czech_Republic_and_Slovakia/links/543689530cf2bf1f1f2bd9e3/Changes-in-Distribution-and-Welfare-in-Transition-Economies-Market-vs-Policy-in-the-Czech-Republic-and-Slovakia.pdf
-Slovakia,1988,0.172,,disp,ae,FALSE,GT2001 Slovakia disp oecdm,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
-Slovakia,1988,0.195,,disp,pc,FALSE,GT2001 Slovakia disp oecdm,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
-Slovakia,1988,0.187,,disp,sqrt,FALSE,GT2001 Slovakia disp oecdm,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
-Slovakia,1996,0.243,,disp,ae,FALSE,GT2001 Slovakia disp oecdm,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
-Slovakia,1996,0.263,,disp,pc,FALSE,GT2001 Slovakia disp oecdm,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
-Slovakia,1996,0.25,,disp,sqrt,FALSE,GT2001 Slovakia disp oecdm,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
+Slovakia,1988,0.172,,disp,oecdm,FALSE,GT2001 Slovakia disp oecdm,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
+Slovakia,1988,0.195,,disp,pc,FALSE,GT2001 Slovakia disp pc,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
+Slovakia,1988,0.187,,disp,sqrt,FALSE,GT2001 Slovakia disp sqrt,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
+Slovakia,1996,0.243,,disp,oecdm,FALSE,GT2001 Slovakia disp oecdm,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
+Slovakia,1996,0.263,,disp,pc,FALSE,GT2001 Slovakia disp pc,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
+Slovakia,1996,0.25,,disp,sqrt,FALSE,GT2001 Slovakia disp sqrt,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
 Slovakia,1988,0.195,,disp,pc,FALSE,Milanovic1998 Slovakia disp pc,Milanovic 1998,168,https://books.google.com/books?id=cQl9xbuhvNkC
 Slovakia,1993,0.183,,disp,pc,FALSE,Milanovic1998 Slovakia disp pc,Milanovic 1998,168,https://books.google.com/books?id=cQl9xbuhvNkC
 Slovenia,1993,0.292,,con,pc,,FR2008 Slovenia con pc,Ferreira and Ravallion 2008,39,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
