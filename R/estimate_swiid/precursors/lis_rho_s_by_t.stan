@@ -21,9 +21,6 @@ data{
   int<lower=1, upper=K> kk[N]; 	          // country for observation n
   int<lower=1, upper=T> tt[N]; 	          // year for observation n
   int<lower=1, upper=KT> kktt[N];         // country-year for observation n
-  int<lower=1, upper=T> kn[K];            // number of observed & interpolated country-years by country
-  int<lower=1, upper=KT> kt1[K];          // location of first kt for country k
-  int<lower=1, upper=R> kr[K];            // region for country k
   int<lower=1, upper=R> rr[N];            // region for observation n
   int<lower=1, upper=S> ss[N];            // series for observation n
   int<lower=1, upper=WE> wen[N];          // wd_es for observation n
@@ -38,11 +35,16 @@ data{
   vector<lower=0, upper=1>[N_wbl] gini_b_se; // std error of baseline gini for obs n
   
   int<lower=0, upper=1> bk[K];            // baseline availability indicator for country k
+  int<lower=1, upper=T> kn[K];            // number of observed & interpolated country-years by country
+  int<lower=1, upper=KT> kt1[K];          // location of first kt for country k
+  int<lower=1, upper=R> rk[K];            // region for country k
   int<lower=0, upper=N_ibl> nbkt[KT];     // obs n with baseline for country-year kt
+  
+  int<lower=0, upper=K> ks[S];            // country for series s
 
   int<lower=1> J;                         // number of observed ratios of baseline to wd_es (rho_we)
-  int<lower=1, upper=K> kkj[J]; 	        // country for rho_we observation m
-  int<lower=1, upper=S> ssj[J];           // series for rho_we observation m
+  int<lower=1, upper=K> kkj[J]; 	        // country for rho_s observation j
+  int<lower=1, upper=S> ssj[J];           // series for rho_s observation j
   real<lower=0> rho_s_m[J];               // observed ("measured") ratio of baseline to series
   real<lower=0> rho_s_m_se[M];            // std error of rho_we
 
@@ -133,7 +135,7 @@ model {
             gini[kt] ~ normal(gini_b[nbkt[kt]], gini_b_se[nbkt[kt]]); // use baseline
           }
         } else {                                              // if not first year,
-          gini[kt] ~ normal(gini[kt-1], sigma_gini);    	  // a random walk from previous year
+          gini[kt] ~ normal(gini[kt-1], sigma_gini);    	    // a random walk from previous year
         }
       }
     } else {                                                  // if country k has no baseline obs:
@@ -146,11 +148,11 @@ model {
     }
   }
 
-  for (s in 1:S) {
-    // in first year, a random draw
+  for (s in 1:S) {  // for each series
+    // in this series' country's first year, a random draw
     rho_s[s, kt1[ks[s]]] ~ lognormal(prior_m_s, prior_s_s); 
     // afterwards, a random walk from previous year
-    rho_s[s, (kt1[ks[s]]+1):(kt1[ks[s]]+kn[ks[s]]-1)] ~ normal(rho_s[s, (kt1[ks[s]]):(kt1[ks[s]]+kn[ks[s]]-2)], sigma_s); 
+    rho_s[s, (kt1[ks[s]]+1):(kt1[ks[s]]+kn[ks[s]]-1)] ~ normal(rho_s[s, (kt1[ks[s]]):(kt1[ks[s]]+kn[ks[s]]-2)], sigma_s0); 
   }
   
   rho_kwe_hat[kwem] ~ normal(rho_we_t, sigma_kwe);            // estimate rho_kwe_hat (over 1:M)
