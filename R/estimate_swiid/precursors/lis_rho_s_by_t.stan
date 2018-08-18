@@ -44,9 +44,10 @@ data{
 
   int<lower=1> J;                         // number of observed ratios of baseline to wd_es (rho_we)
   int<lower=1, upper=K> kkj[J]; 	        // country for rho_s observation j
+  int<lower=1, upper=T> ktj[J];           // year for rho_s observation j
   int<lower=1, upper=S> ssj[J];           // series for rho_s observation j
   real<lower=0> rho_s_m[J];               // observed ("measured") ratio of baseline to series
-  real<lower=0> rho_s_m_se[M];            // std error of rho_we
+  real<lower=0> rho_s_m_se[J];            // std error of rho_we
 
   int<lower=1> M;                         // number of observed ratios of baseline to wd_es (rho_we)
   int<lower=1, upper=K> kkm[M]; 	        // country for rho_we observation m
