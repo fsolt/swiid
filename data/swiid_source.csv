@@ -1257,7 +1257,6 @@ Brazil,2009,0.576,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,http:/
 Brazil,2009,0.545,,disp,pc,FALSE,CEQ Brazil disp pc,Higgins and Pereira 2014,,http://dx.doi.org/10.1177/1091142113501714
 Brazil,2009,0.512,,disp,sqrt,FALSE,CEQ Brazil disp sqrt,"Higgins, Lustig, Ruble, and Smeeding 2013",,http://www.commitmentoequity.org/publications_files/Brazil/Higgins%20Lustig%20Ruble%20Smeeding%20Comparing%20Brazil%20US%20Nov%2030%202013.pdf
 Brazil,2009,0.5790000000000001,,market,pc,FALSE,CEQ Brazil market pc,Higgins and Pereira 2014,,http://dx.doi.org/10.1177/1091142113501714
-Brazil,2009,0.5788000000000001,,market,pc,FALSE,CEQ Brazil market pc,Lustig 2015,,http://www.commitmentoequity.org/publications_files/Comparative/CEQWPNo30%20RedisImpactGovntSpendEducHealth%20March%202015.pdf
 Brazil,2009,0.551,,market,sqrt,FALSE,CEQ Brazil market sqrt,"Higgins, Lustig, Ruble, and Smeeding 2013",,http://www.commitmentoequity.org/publications_files/Brazil/Higgins%20Lustig%20Ruble%20Smeeding%20Comparing%20Brazil%20US%20Nov%2030%202013.pdf
 Brazil,2009,0.4779,0.0012,disp,ae,FALSE,LIS Brazil disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/br.txt
 Brazil,2009,0.4717,0.0012,disp,hh,FALSE,LIS Brazil disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/br.txt
@@ -3551,8 +3550,8 @@ Dominican Republic,2006,0.50275778,0.00498519,disp,ae,TRUE,SEDLAC Dominican Repu
 Dominican Republic,2006,0.51519308,,disp,hh,TRUE,SEDLAC Dominican Republic disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Dominican Republic,2006,0.51875709,0.00550701,disp,pc,TRUE,SEDLAC Dominican Republic disp pc 3,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx
 Dominican Republic,2007,0.556,,disp,pc,TRUE,CEPAL Dominican Republic disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Dominican Republic,2007,0.502,,disp,pc,FALSE,CEQ Dominican Republic disp pc,"Aristy-Escuder, Cabrera, Moreno-Dodson, and Sa_nchez-Martín 2017/",41,http://www.commitmentoequity.org/wp-content/uploads/2017/07/CEQ_WP47_AristyEscuder-et-al_Fiscal-Policy-and-Redistribution-in-DR_June-2017.pdf
-Dominican Republic,2007,0.514,,market,pc,FALSE,CEQ Dominican Republic market pc,"Aristy-Escuder, Cabrera, Moreno-Dodson, and Sa_nchez-Martín 2017W",41,http://www.commitmentoequity.org/wp-content/uploads/2017/07/CEQ_WP47_AristyEscuder-et-al_Fiscal-Policy-and-Redistribution-in-DR_June-2017.pdf
+Dominican Republic,2007,0.502,,disp,pc,FALSE,CEQ Dominican Republic disp pc,"Aristy-Escuder, Cabrera, Moreno-Dodson, and Sa_nchez-Mart’n 2017/",41,http://www.commitmentoequity.org/wp-content/uploads/2017/07/CEQ_WP47_AristyEscuder-et-al_Fiscal-Policy-and-Redistribution-in-DR_June-2017.pdf
+Dominican Republic,2007,0.514,,market,pc,FALSE,CEQ Dominican Republic market pc,"Aristy-Escuder, Cabrera, Moreno-Dodson, and Sa_nchez-Mart’n 2017W",41,http://www.commitmentoequity.org/wp-content/uploads/2017/07/CEQ_WP47_AristyEscuder-et-al_Fiscal-Policy-and-Redistribution-in-DR_June-2017.pdf
 Dominican Republic,2007,0.4075,0.0077,con,ae,FALSE,LIS Dominican Republic con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/do.txt
 Dominican Republic,2007,0.4141,0.0061,con,hh,FALSE,LIS Dominican Republic con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/do.txt
 Dominican Republic,2007,0.396,0.007,con,oecdm,FALSE,LIS Dominican Republic con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/do.txt
@@ -9359,14 +9358,14 @@ Nigeria,2009,0.37729999999999997,,con,sqrt,FALSE,World Bank Africa Poverty Datab
 Nigeria,2010,0.4161,,con,hh,,NBS Nigeria con hh,National Bureau of Statistics Nigeria 2013,107,http://www.nigerianstat.gov.ng/pdfuploads/annual_abstract_2012.pdf
 Nigeria,2010,0.447,,con,pc,,NBS Nigeria con pc,National Bureau of Statistics Nigeria 2012,11,http://www.nigerianstat.gov.ng/pdfuploads/Nigeria%20Poverty%20Profile%202010.pdf
 Norway,1970,0.305,,disp,ae,TRUE,Ringen1991 disp ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
-Norway,1970,0.369,,market,ae,TRUE,Ringen1991 disp ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1970,0.325,,gross,ae,TRUE,Ringen1991 gross ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
+Norway,1970,0.369,,market,ae,TRUE,Ringen1991 market ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1973,0.348,,disp,ae,TRUE,Ringen1991 disp ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
-Norway,1973,0.422,,market,ae,TRUE,Ringen1991 disp ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1973,0.364,,gross,ae,TRUE,Ringen1991 gross ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
+Norway,1973,0.422,,market,ae,TRUE,Ringen1991 market ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1976,0.319,,disp,ae,TRUE,Ringen1991 disp ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
-Norway,1976,0.392,,market,ae,TRUE,Ringen1991 disp ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1976,0.342,,gross,ae,TRUE,Ringen1991 gross ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
+Norway,1976,0.392,,market,ae,TRUE,Ringen1991 market ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1979,0.3113,0.0038,disp,hh,FALSE,LIS Norway disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/no.txt
 Norway,1979,0.2736,0.0042,disp,pc,FALSE,LIS Norway disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/no.txt
 Norway,1979,0.2299,0.0052,disp,sqrt,FALSE,LIS Norway disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/no.txt
@@ -9377,14 +9376,14 @@ Norway,1979,0.4804,0.0051,market,hh,FALSE,LIS Norway market hh,LISSY,"",https://
 Norway,1979,0.4232,0.0046,market,pc,FALSE,LIS Norway market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/no.txt
 Norway,1979,0.3782,0.006,market,sqrt,FALSE,LIS Norway market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/no.txt
 Norway,1979,0.314,,disp,ae,TRUE,Ringen1991 disp ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
-Norway,1979,0.4,,market,ae,TRUE,Ringen1991 disp ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1979,0.346,,disp,ae,TRUE,Ringen1991 disp ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
-Norway,1979,0.418,,market,ae,TRUE,Ringen1991 disp ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1979,0.345,,gross,ae,TRUE,Ringen1991 gross ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1979,0.365,,gross,ae,TRUE,Ringen1991 gross ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
+Norway,1979,0.4,,market,ae,TRUE,Ringen1991 market ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
+Norway,1979,0.418,,market,ae,TRUE,Ringen1991 market ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1982,0.334,,disp,ae,TRUE,Ringen1991 disp ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
-Norway,1982,0.406,,market,ae,TRUE,Ringen1991 disp ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1982,0.35,,gross,ae,TRUE,Ringen1991 gross ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
+Norway,1982,0.406,,market,ae,TRUE,Ringen1991 market ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1982,0.325,,disp,hh,,SSB1993 Norway disp hh,Statistics Norway 1993,41,https://www.ssb.no/a/histstat/nos/nos_c070.pdf
 Norway,1984,0.322,,disp,hh,,SSB1993 Norway disp hh,Statistics Norway 1993,41,https://www.ssb.no/a/histstat/nos/nos_c070.pdf
 Norway,1985,0.317,,disp,hh,,SSB1993 Norway disp hh,Statistics Norway 1993,41,https://www.ssb.no/a/histstat/nos/nos_c070.pdf
@@ -9408,8 +9407,8 @@ Norway,1986,0.222,,disp,sqrt,FALSE,"OECD Norway disp sqrt, previous def, 2011 me
 Norway,1986,0.351,,market,sqrt,FALSE,"OECD Norway market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Norway,1986,0.351,,market,sqrt,FALSE,"OECD Norway market sqrt, previous def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Norway,1986,0.33,,disp,ae,TRUE,Ringen1991 disp ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
-Norway,1986,0.401,,market,ae,TRUE,Ringen1991 disp ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1986,0.344,,gross,ae,TRUE,Ringen1991 gross ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
+Norway,1986,0.401,,market,ae,TRUE,Ringen1991 market ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1986,0.21,0.002,disp,oecdm,TRUE,SSB disp oecdm,Statistics Norway,"",https://www.ssb.no/statistikkbanken/selectvarval/Define.asp?MainTable=InntUlikhet&PLanguage=1&nyTmpVar=true&CMSSubjectArea=inntekt-og-forbruk&KortNavnWeb=ifhus&StatVariant=&checked=true
 Norway,1986,0.317,,disp,hh,,SSB1993 Norway disp hh,Statistics Norway 1993,41,https://www.ssb.no/a/histstat/nos/nos_c070.pdf
 Norway,1987,0.21,0.003,disp,oecdm,TRUE,SSB disp oecdm,Statistics Norway,"",https://www.ssb.no/statistikkbanken/selectvarval/Define.asp?MainTable=InntUlikhet&PLanguage=1&nyTmpVar=true&CMSSubjectArea=inntekt-og-forbruk&KortNavnWeb=ifhus&StatVariant=&checked=true
@@ -10251,18 +10250,19 @@ Philippines,1994,0.429,,con,pc,FALSE,Povcalnet Philippines con pc 1,World Bank P
 Philippines,1997,0.457,,con,pc,,GIDD Philippines con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
 Philippines,1997,0.46,,con,pc,FALSE,Povcalnet Philippines con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Philippines,2000,0.428,,con,pc,FALSE,Povcalnet Philippines con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Philippines,2000,0.4822,,gross,pc,,PSA gross pc,Philippines Statistical Agency,"",https://www.psa.gov.ph/sites/default/files/Table%202.9_0.csv
+Philippines,2000,0.4822,,gross,pc,,PSA gross pc,Philippines Statistical Agency,"",https://www.psa.gov.ph/sites/default/files/T2_9a_0.csv
 Philippines,2003,0.415,,con,pc,FALSE,Povcalnet Philippines con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Philippines,2003,0.4605,,gross,pc,,PSA gross pc,Philippines Statistical Agency,"",https://www.psa.gov.ph/sites/default/files/Table%202.9_0.csv
+Philippines,2003,0.4605,,gross,pc,,PSA gross pc,Philippines Statistical Agency,"",https://www.psa.gov.ph/sites/default/files/T2_9a_0.csv
 Philippines,2006,0.429,,con,pc,FALSE,Povcalnet Philippines con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Philippines,2006,0.458,,gross,pc,,PSA gross pc,Philippines Statistical Agency,"",https://www.psa.gov.ph/sites/default/files/Table%202.9_0.csv
+Philippines,2006,0.458,,gross,pc,,PSA gross pc,Philippines Statistical Agency,"",https://www.psa.gov.ph/sites/default/files/T2_9a_0.csv
 Philippines,2009,0.418,,con,pc,FALSE,Povcalnet Philippines con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Philippines,2009,0.4641,,gross,pc,,PSA gross pc,Philippines Statistical Agency,"",https://www.psa.gov.ph/sites/default/files/Table%202.9_0.csv
+Philippines,2009,0.4641,,gross,pc,,PSA gross pc,Philippines Statistical Agency,"",https://www.psa.gov.ph/sites/default/files/T2_9a_0.csv
 Philippines,2009,0.43,,con,pc,,ZKM2014 Philippines con pc,"Zhuang, Kanbur, and Maligalig 2014",22,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA22
 Philippines,2009,0.474,,gross,pc,,ZKM2014 Philippines gross pc,"Zhuang, Kanbur, and Maligalig 2014",22,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA22
 Philippines,2012,0.42200000000000004,,con,pc,FALSE,Povcalnet Philippines con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Philippines,2012,0.4605,,gross,pc,,PSA gross pc,Philippines Statistical Agency,"",https://www.psa.gov.ph/sites/default/files/Table%202.9_0.csv
+Philippines,2012,0.4605,,gross,pc,,PSA gross pc,Philippines Statistical Agency,"",https://www.psa.gov.ph/sites/default/files/T2_9a_0.csv
 Philippines,2015,0.401,,con,pc,FALSE,Povcalnet Philippines con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Philippines,2015,0.4439,,gross,pc,,PSA gross pc,Philippines Statistical Agency,"",https://www.psa.gov.ph/sites/default/files/T2_9a_0.csv
 Poland,1983,0.246,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Poland,1984,0.258,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Poland,1985,0.253,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
@@ -11305,9 +11305,9 @@ Singapore,2017,0.437,,market,oecdm,TRUE,Singstat market oecdm,Singapore Departme
 Singapore,2017,0.459,,market,pc,TRUE,Singstat market pc,Singapore Department of Statistics,"",http://www.tablebuilder.singstat.gov.sg/
 Singapore,2017,0.417,,market,sqrt,TRUE,Singstat market sqrt,Singapore Department of Statistics,"",http://www.tablebuilder.singstat.gov.sg/
 Slovakia,1988,0.194,,disp,pc,TRUE,AM1992 Slovakia disp pc,Atkinson and Micklewright 1992,CSI5,https://books.google.com/books?id=zaL4CGdjOkUC
-Slovakia,1988,0.172,,disp,ae,FALSE,GT2001 Slovakia disp oecdm,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
-Slovakia,1988,0.195,,disp,pc,FALSE,GT2001 Slovakia disp oecdm,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
-Slovakia,1988,0.187,,disp,sqrt,FALSE,GT2001 Slovakia disp oecdm,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
+Slovakia,1988,0.172,,disp,oecdm,FALSE,GT2001 Slovakia disp oecdm,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
+Slovakia,1988,0.195,,disp,pc,FALSE,GT2001 Slovakia disp pc,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
+Slovakia,1988,0.187,,disp,sqrt,FALSE,GT2001 Slovakia disp sqrt,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
 Slovakia,1988,0.195,,disp,pc,FALSE,Milanovic1998 Slovakia disp pc,Milanovic 1998,168,https://books.google.com/books?id=cQl9xbuhvNkC
 Slovakia,1989,0.183,,disp,pc,,Cornia1994 Slovakia disp pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Slovakia,1989,0.221,,market,pc,,Cornia1994 Slovakia market pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
@@ -11339,9 +11339,9 @@ Slovakia,1993,0.168,,disp,ae,TRUE,GT1997 Slovakia disp ae,Garner and Terrell 199
 Slovakia,1993,0.17,,disp,oecdm,TRUE,GT1997 Slovakia disp oecdm,Garner and Terrell 1997,40,https://www.researchgate.net/profile/Thesia_Garner/publication/23724062_Changes_in_Distribution_and_Welfare_in_Transition_Economies_Market_vs_Policy_in_the_Czech_Republic_and_Slovakia/links/543689530cf2bf1f1f2bd9e3/Changes-in-Distribution-and-Welfare-in-Transition-Economies-Market-vs-Policy-in-the-Czech-Republic-and-Slovakia.pdf
 Slovakia,1993,0.185,,disp,pc,TRUE,GT1997 Slovakia disp pc,Garner and Terrell 1997,40,https://www.researchgate.net/profile/Thesia_Garner/publication/23724062_Changes_in_Distribution_and_Welfare_in_Transition_Economies_Market_vs_Policy_in_the_Czech_Republic_and_Slovakia/links/543689530cf2bf1f1f2bd9e3/Changes-in-Distribution-and-Welfare-in-Transition-Economies-Market-vs-Policy-in-the-Czech-Republic-and-Slovakia.pdf
 Slovakia,1993,0.183,,disp,pc,FALSE,Milanovic1998 Slovakia disp pc,Milanovic 1998,168,https://books.google.com/books?id=cQl9xbuhvNkC
-Slovakia,1996,0.243,,disp,ae,FALSE,GT2001 Slovakia disp oecdm,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
-Slovakia,1996,0.263,,disp,pc,FALSE,GT2001 Slovakia disp oecdm,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
-Slovakia,1996,0.25,,disp,sqrt,FALSE,GT2001 Slovakia disp oecdm,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
+Slovakia,1996,0.243,,disp,oecdm,FALSE,GT2001 Slovakia disp oecdm,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
+Slovakia,1996,0.263,,disp,pc,FALSE,GT2001 Slovakia disp pc,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
+Slovakia,1996,0.25,,disp,sqrt,FALSE,GT2001 Slovakia disp sqrt,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
 Slovakia,1996,0.3219,0.0031,disp,hh,FALSE,LIS Slovakia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/sk.txt
 Slovakia,1996,0.2623,0.0039,disp,pc,FALSE,LIS Slovakia disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/sk.txt
 Slovakia,1996,0.2493,0.0033,disp,sqrt,FALSE,LIS Slovakia disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/sk.txt
