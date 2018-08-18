@@ -1224,13 +1224,10 @@ dgeec <- extract_tables("data-raw/dgeec.pdf", pages = 2) %>%
 
 
 # Philippines Statistical Agency (automated)
-psa_link <- "https://www.psa.gov.ph/sites/default/files/Table%202.9_0.csv"
-tryCatch(download.file(psa_link, "data-raw/psa.csv"), 
-         error = function(e) {
-           download.file("https://github.com/fsolt/swiid/raw/master/data-raw/psa.csv", "data-raw/psa.csv")
-         })
+psa_link <- "https://www.psa.gov.ph/sites/default/files/T2_9a_0.csv"
+download.file(psa_link, "data-raw/psa.csv")
 
-psa <- read_csv("data-raw/psa.csv", skip = 3, col_types = "cccdddddcc") %>% 
+psa <- read_csv("data-raw/psa.csv", skip = 3) %>% 
   first_row_to_names() %>% 
   filter(v2 == "Philippines") %>%
   select(-Region, -starts_with("v")) %>% 
