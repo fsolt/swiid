@@ -10,7 +10,6 @@ Bolivia,2009,0.503,,pc,market,FALSE,,Lustig 2015,,http://www.commitmentoequity.o
 Bolivia,2009,0.493,,pc,disp,FALSE,,Lustig and Aranda 2015,,http://www.commitmentoequity.org/publications_files/Comparative/CEQWPNo32ImpyTransPobrDesigRuralUrb%20Septiembre2015.pdf
 Brazil,2009,0.579,,pc,market,FALSE,,Higgins and Pereira 2014,,http://dx.doi.org/10.1177/1091142113501714
 Brazil,2009,0.551,,sqrt,market,FALSE,,"Higgins, Lustig, Ruble, and Smeeding 2013",,http://www.commitmentoequity.org/publications_files/Brazil/Higgins%20Lustig%20Ruble%20Smeeding%20Comparing%20Brazil%20US%20Nov%2030%202013.pdf
-Brazil,2009,0.5788,,pc,market,FALSE,,Lustig 2015,,http://www.commitmentoequity.org/publications_files/Comparative/CEQWPNo30%20RedisImpactGovntSpendEducHealth%20March%202015.pdf
 Brazil,2009,0.545,,pc,disp,FALSE,,Higgins and Pereira 2014,,http://dx.doi.org/10.1177/1091142113501714
 Brazil,2009,0.512,,sqrt,disp,FALSE,,"Higgins, Lustig, Ruble, and Smeeding 2013",,http://www.commitmentoequity.org/publications_files/Brazil/Higgins%20Lustig%20Ruble%20Smeeding%20Comparing%20Brazil%20US%20Nov%2030%202013.pdf
 Brazil,2011,0.509,,sqrt,disp,FALSE,,"Higgins, Lustig, Ruble, and Smeeding 2013",,http://www.commitmentoequity.org/publications_files/Brazil/Higgins%20Lustig%20Ruble%20Smeeding%20Comparing%20Brazil%20US%20Nov%2030%202013.pdf
@@ -21,8 +20,8 @@ Colombia,2010,0.5766,,pc,market,FALSE,,Lustig 2017,21,http://www.commitmentoequi
 Colombia,2010,0.5687,,pc,disp,FALSE,,Lustig 2017,21,http://www.commitmentoequity.org/publications_files/Latin%20America/CEQ_WP62_Lustig_Feb22_2017.pdf
 Costa Rica,2010,0.508,,pc,market,FALSE,,Sauma and Trejos 2014,,http://www.commitmentoequity.org/publications_files/Costa%20Rica/CEQWPNo18%20PubSpendTaxRedistIncandPover%20Costa%20Rica.pdf
 Costa Rica,2010,0.489,,pc,disp,FALSE,,Sauma and Trejos 2014,,http://www.commitmentoequity.org/publications_files/Costa%20Rica/CEQWPNo18%20PubSpendTaxRedistIncandPover%20Costa%20Rica.pdf
-Dominican Republic,2007,0.502,,pc,disp,FALSE,,"Aristy-Escuder, Cabrera, Moreno-Dodson, and Sa_nchez-Martín 2017/",41,http://www.commitmentoequity.org/wp-content/uploads/2017/07/CEQ_WP47_AristyEscuder-et-al_Fiscal-Policy-and-Redistribution-in-DR_June-2017.pdf
-Dominican Republic,2007,0.514,,pc,market,FALSE,,"Aristy-Escuder, Cabrera, Moreno-Dodson, and Sa_nchez-Martín 2017W",41,http://www.commitmentoequity.org/wp-content/uploads/2017/07/CEQ_WP47_AristyEscuder-et-al_Fiscal-Policy-and-Redistribution-in-DR_June-2017.pdf
+Dominican Republic,2007,0.502,,pc,disp,FALSE,,"Aristy-Escuder, Cabrera, Moreno-Dodson, and Sa_nchez-Mart’n 2017/",41,http://www.commitmentoequity.org/wp-content/uploads/2017/07/CEQ_WP47_AristyEscuder-et-al_Fiscal-Policy-and-Redistribution-in-DR_June-2017.pdf
+Dominican Republic,2007,0.514,,pc,market,FALSE,,"Aristy-Escuder, Cabrera, Moreno-Dodson, and Sa_nchez-Mart’n 2017W",41,http://www.commitmentoequity.org/wp-content/uploads/2017/07/CEQ_WP47_AristyEscuder-et-al_Fiscal-Policy-and-Redistribution-in-DR_June-2017.pdf
 Ecuador,2012,0.4785,,pc,market,FALSE,,"Llerena, Llerena, Saa, and Llerena 2015",,http://www.commitmentoequity.org/publications_files/Ecuador/CEQWPNo28%20SocSpendTaxIncomeRedistEcuador%20Feb%202015.pdf
 Ecuador,2012,0.457,,pc,disp,FALSE,,"Llerena, Llerena, Saa, and Llerena 2015",,http://www.commitmentoequity.org/publications_files/Ecuador/CEQWPNo28%20SocSpendTaxIncomeRedistEcuador%20Feb%202015.pdf
 El Salvador,2011,0.4369,,pc,market,FALSE,,"Beneke, Lustig, and Oliva 2017",20,http://www.commitmentoequity.org/wp-content/uploads/2017/08/CEQ_WP57_Margarita-Beneke-Nora-Lustig-Jose-Andres-Oliva_June2017.pdf
