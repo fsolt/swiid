@@ -40,6 +40,12 @@ data{
   int<lower=0, upper=1> bk[K];            // baseline availability indicator for country k
   int<lower=0, upper=N_ibl> nbkt[KT];     // obs n with baseline for country-year kt
 
+  int<lower=1> J;                         // number of observed ratios of baseline to wd_es (rho_we)
+  int<lower=1, upper=K> kkj[J]; 	        // country for rho_we observation m
+  int<lower=1, upper=S> ssj[J];           // series for rho_we observation m
+  real<lower=0> rho_s_m[J];               // observed ("measured") ratio of baseline to series
+  real<lower=0> rho_s_m_se[M];            // std error of rho_we
+
   int<lower=1> M;                         // number of observed ratios of baseline to wd_es (rho_we)
   int<lower=1, upper=K> kkm[M]; 	        // country for rho_we observation m
   int<lower=1, upper=R> rrm[M];           // region for rho_we observation m
@@ -74,7 +80,8 @@ parameters {
   vector[M] rho_we_t;                     // unknown "true" rho_we given rho_we and rho_we_se
   // vector[P] rho_w_t;                      // unknown "true" rho_wd given rho_w and rho_w_se
   
-  vector<lower=0>[S] rho_s;               // ratio of baseline to series s
+  vector<lower=0>[S, KT] rho_s;           // ratio of baseline to series s
+  real<lower=0> sigma_s0;                 // random-walk variance parameter
   real<lower=0> sigma_s; 	                // series noise 
   
   vector<lower=0>[KWE] rho_kwe_hat;       // estimated rho_we by country
@@ -138,8 +145,14 @@ model {
       }
     }
   }
+
+  for (s in 1:S) {
+    // in first year, a random draw
+    rho_s[s, kt1[ks[s]]] ~ lognormal(prior_m_s, prior_s_s); 
+    // afterwards, a random walk from previous year
+    rho_s[s, (kt1[ks[s]]+1):(kt1[ks[s]]+kn[ks[s]]-1)] ~ normal(rho_s[s, (kt1[ks[s]]):(kt1[ks[s]]+kn[ks[s]]-2)], sigma_s); 
+  }
   
-  gini_b_t[N_ibl+1:N_wbl] ~ normal(rho_s[ss[N_ibl+1:N_wbl]] .* gini_t[N_ibl+1:N_wbl], sigma_s); // estimate rho_s for obs with baseline
   rho_kwe_hat[kwem] ~ normal(rho_we_t, sigma_kwe);            // estimate rho_kwe_hat (over 1:M)
 //  rho_rwe_hat[rwem] ~ normal(rho_we_t, sigma_rwe[rrm]);       // estimate rho_rwe_hat (over 1:M)
 //  rho_kw_hat[kwp] ~ normal(rho_w_t, sigma_kw);                // estimate rho_kw_hat (over 1:P)
@@ -148,7 +161,8 @@ model {
   gini[kktt[1:N_ibl]] ~ normal(gini_b[1:N_ibl], gini_b_se[1:N_ibl]); 
   
   // obs in countries w/ baseline in series w/ overlap use rho_s
-  gini[kktt[(N_wbl+1):N_obl]] ~ normal(gini_t[(N_wbl+1):N_obl] .* rho_s[ss[(N_wbl+1):N_obl]], sigma_s); 
+  rho_s[ssj, ktj] ~ normal(rho_s_m, rho_s_m_se);              // over 1:J
+  gini[kktt[(N_wbl+1):N_obl]] ~ normal(gini_t[(N_wbl+1):N_obl] .* rho_s[ss[(N_wbl+1):N_obl], kktt[(N_wbl+1):N_obl]], sigma_s); 
   
   // obs in countries w/ baseline in series w/o overlap use rho_kwe_hat
   gini[kktt[(N_obl+1):N_bk]] ~ normal(rho_kwe_hat[kwen[(N_obl+1):N_bk]] .* gini_t[(N_obl+1):N_bk], sigma_kwe);
