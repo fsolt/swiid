@@ -104,12 +104,21 @@ rho_s <- x %>%
          rho_se = sqrt(gini_b_se^2 + gini_m_se^2))
 
 sn <- x %>% 
+  filter(obl) %>% 
   group_by(scode) %>% 
   summarize(country = first(country),
             series = first(series),
             skt1 = min(sktcode),
-            yrspan = max(year) - min(year) + 1) %>% 
+            yrspan = max(year) - min(year) + 1,
+            sr1 = any(sktcode == skt1 & !is.na(gini_b)) %>% as.numeric()) %>% 
   ungroup()
+
+sj <- rho_s %>% 
+  mutate(sj = row_number()) %>% 
+  group_by(scode) %>% 
+  summarize(country = first(country),
+            series = first(series),
+            sj1 = min(sj))
 
 mu_priors_by_wd <- function(x, var) {
   var <- rlang::ensym(var)
@@ -144,7 +153,7 @@ source_data <- list(  K = max(x$kcode),
                       T = max(x$tcode),
                       KT = nrow(kt),
                       R = max(x$rcode),
-                      S = max(x$scode),
+                      S = x %>% filter(obl) %>% pull(scode) %>% max(),
                       SKT = max(x$sktcode),
                       WE = max(x$wecode),
                       KWE = max(x$kwecode),
@@ -182,15 +191,17 @@ source_data <- list(  K = max(x$kcode),
                       kt1 = kn$kt1,
                       kr = kn$kr,
                       nbkt = kt1$n, 
-                      
-                      sn = sn$yrspan,
-                      skt1 = sn$skt1,
  
                       J = length(rho_s$rho),
                       ssj = rho_s$scode,
                       sktj = rho_s$sktcode,
                       rho_s_m = rho_s$rho,
                       rho_s_m_se = rho_s$rho_se,
+                      
+                      sn = sn$yrspan,
+                      skt1 = sn$skt1,
+                      sr1 = sn$sr1,
+                      sj1 = sj$sj1,
                       
                       M = length(rho_we$rho),
                       kkm = rho_we$kcode,      
