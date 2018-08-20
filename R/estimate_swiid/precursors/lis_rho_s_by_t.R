@@ -26,7 +26,7 @@ x0 <- ineq2 %>%
          wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)),
          ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)),
          kwcode = as.integer(factor(100*kcode+wcode))) %>% 
-  filter(kbl)
+  filter(kbl) # LIS countries only, for now
 
 kt <- x0 %>%  
   transmute(kcode = kcode,
@@ -38,9 +38,20 @@ kt <- x0 %>%
   ungroup() %>% 
   mutate(ktcode = 1:n())
 
+skt <- x0 %>%  
+  transmute(scode = scode,
+            yrspan = (lastyr - firstyr) + 1) %>% 
+  distinct(scode, yrspan) %>% 
+  slice(rep(1:n(), yrspan)) %>% 
+  group_by(scode) %>% 
+  mutate(tcode = 1:n()) %>% 
+  ungroup() %>% 
+  mutate(sktcode = 1:n()) %>% 
+  select(-yrspan)
+
 rho_we <- rho_we %>%
   select(-ends_with("code")) %>% 
-  left_join(x0 %>% 
+  inner_join(x0 %>% 
               select("country", "year", "wdes",
                      "kcode", "rcode", "tcode", 
                      "wcode", "ecode", "wecode", "kwecode", "rwecode") %>% 
@@ -49,7 +60,7 @@ rho_we <- rho_we %>%
 
 rho_wd <- rho_wd %>%
   select(-ends_with("code")) %>% 
-  left_join(x0 %>% 
+  inner_join(x0 %>% 
               rename(wd = "welfare_def") %>% 
               select("country", "year", "wd", "kbl",
                      "kcode", "rcode", "tcode", 
@@ -68,7 +79,8 @@ rwe2codes <- rho_we %>%
 x <- x0 %>% 
   left_join(kt, by = c("kcode", "tcode")) %>% 
   mutate(wdes2 = str_replace(wdes, ".*_", "disp_")) %>% 
-  left_join(rwe2codes, by = c("wdes2", "rcode"))
+  left_join(rwe2codes, by = c("wdes2", "rcode")) %>% 
+  left_join(skt, by = c("scode", "tcode"))
 
 kn <- x %>% 
   group_by(kcode) %>% 
@@ -84,6 +96,19 @@ kt1 <- x %>%
   select(n, ktcode) %>%
   right_join(kt, by = "ktcode") %>% 
   mutate(n = if_else(!is.na(n), n, as.integer(0)))
+
+rho_s <- x %>% 
+  filter(bl) %>% 
+  mutate(rho = gini_b/gini_m,
+         rho_se = sqrt(gini_b_se^2 + gini_m_se^2))
+
+sn <- x %>% 
+  group_by(scode) %>% 
+  summarize(country = first(country),
+            series = first(series),
+            skt1 = min(sktcode),
+            yrspan = max(year) - min(year) + 1) %>% 
+  ungroup()
 
 mu_priors_by_wd <- function(x, var) {
   var <- rlang::ensym(var)
@@ -119,6 +144,7 @@ source_data <- list(  K = max(x$kcode),
                       KT = nrow(kt),
                       R = max(x$rcode),
                       S = max(x$scode),
+                      SKT = max(x$sktcode),
                       WE = max(x$wecode),
                       KWE = max(x$kwecode),
                       RWE = max(x$rwecode),
@@ -137,11 +163,9 @@ source_data <- list(  K = max(x$kcode),
                       kk = x$kcode,
                       tt = x$tcode,
                       kktt = x$ktcode,
-                      kn = kn$yrspan,
-                      kt1 = kn$kt1,
-                      kr = kn$kr,
                       rr = x$rcode,
                       ss = x$scode,
+                      sskktt = x$sktcode,
                       wen = x$wecode,
                       kwen = x$kwecode,
                       kwn = x$kwcode,
@@ -153,7 +177,19 @@ source_data <- list(  K = max(x$kcode),
                       gini_b_se = x$gini_b_se[!is.na(x$gini_b_se)],
                       
                       bk = kn$bk,
+                      kn = kn$yrspan,
+                      kt1 = kn$kt1,
+                      kr = kn$kr,
                       nbkt = kt1$n, 
+                      
+                      sn = sn$yrspan,
+                      skt1 = sn$skt1,
+ 
+                      J = length(rho_s$rho),
+                      ssj = rho_s$scode,
+                      sktj = rho_s$sktcode,
+                      rho_s_m = rho_s$rho,
+                      rho_s_m_se = rho_s$rho_se,
                       
                       M = length(rho_we$rho),
                       kkm = rho_we$kcode,      
@@ -186,7 +222,7 @@ source_data <- list(  K = max(x$kcode),
 rstan_options(auto_write = TRUE)
 
 start <- proc.time()
-out1 <- stan(file = "R/estimate_swiid/precusors/lis_rho_s_by_t.stan",
+out1 <- stan(file = "R/estimate_swiid/precursors/lis_rho_s_by_t.stan",
              data = source_data,
              seed = seed,
              iter = iter,
@@ -194,7 +230,7 @@ out1 <- stan(file = "R/estimate_swiid/precusors/lis_rho_s_by_t.stan",
              thin = thin,
              cores = cores,
              chains = chains,
-             pars = c("gini"),
+             pars = c("gini", "sigma_s0"),
              control = list(max_treedepth = 20,
                             adapt_delta = adapt_delta))
 runtime <- proc.time() - start
@@ -208,7 +244,7 @@ save(x, out1, runtime, file = str_c("data/lis_rho_s_by_t_", iter/1000, "k_",
 
 # Plots
 source("R/plot_tscs.R")
-plot_tscs(x, out1, save_pdf = "paper/figures/swiid.pdf")
+plot_tscs(x, out1, save_pdf = "paper/figures/swiid_lrsbt.pdf")
 
 beep() # chime
 shinystan::launch_shinystan(out1)
