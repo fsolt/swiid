@@ -84,7 +84,8 @@ x <- x0 %>%
 
 kn <- x %>% 
   group_by(kcode) %>% 
-  summarize(kt1 = min(ktcode),
+  summarize(country = first(country),
+            kt1 = min(ktcode),
             yrspan = first(yrspan),
             kr = first(rcode),
             bk = as.numeric(any(!is.na(gini_b)))) %>% 
@@ -165,7 +166,7 @@ source_data <- list(  K = max(x$kcode),
                       kktt = x$ktcode,
                       rr = x$rcode,
                       ss = x$scode,
-                      sskktt = x$sktcode,
+                      skt = x$sktcode,
                       wen = x$wecode,
                       kwen = x$kwecode,
                       kwn = x$kwcode,
