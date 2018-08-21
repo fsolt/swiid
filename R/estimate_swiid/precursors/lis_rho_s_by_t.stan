@@ -114,13 +114,13 @@ model {
 
   rho_s ~ lognormal(prior_m_s, prior_s_s);
   rho_kwe_hat ~ lognormal(prior_m_kwe, prior_s_kwe);
-//  rho_rwe_hat ~ lognormal(prior_m_rwe, prior_s_rwe);
-//  rho_kw_hat ~ lognormal(prior_m_kw, prior_s_kw);
+  // rho_rwe_hat ~ lognormal(prior_m_rwe, prior_s_rwe);
+  // rho_kw_hat ~ lognormal(prior_m_kw, prior_s_kw);
 
   gini_m ~ normal(gini_t, gini_m_se);
   gini_b ~ normal(gini_b_t, gini_b_se);
   rho_we ~ normal(rho_we_t, rho_we_se);
-//  rho_w ~ normal(rho_w_t, rho_w_se);
+  // rho_w ~ normal(rho_w_t, rho_w_se);
   
   for (k in 1:K) {
     if (bk[k] == 1) {                                         // if country k has some baseline obs:
