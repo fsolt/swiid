@@ -36,6 +36,7 @@ data{
   int<lower=0, upper=N_ibl> nbkt[KT];     // obs n with baseline for country-year kt
   
   int<lower=1, upper=T> sn[S];            // number of observed & interpolated country-years by series
+  int<lower=0, upper=1> shnoo[S];         // indicator for whether series has non-overlapping observations
   int<lower=1, upper=SKT> skt1[S];        // location of first skt for series s
   int<lower=0, upper=1> sr1[S];           // indicator for whether first year of series also has rho_s
 
@@ -144,15 +145,16 @@ model {
     }
   }
 
-  for (s in 1:S) {  // for each series
-    // in this series' first year,
-    if (sr1[s] == 1) {
-      rho_s[skt1[s]] ~ normal(rho_s_m[sj1[s]], rho_s_m_se[sj1[s]]);
-    } else {
-      rho_s[skt1[s]] ~ lognormal(prior_m_s, prior_s_s);
+  for (s in 1:S) {        // for each series
+    if (shnoo[s] == 1) {  // check if series has non-overlapping observations (to baseline)
+      if (sr1[s] == 1) {  // if so, and first year overlaps, use rho_s_m
+        rho_s[skt1[s]] ~ normal(rho_s_m[sj1[s]], rho_s_m_se[sj1[s]]);
+      } else {            // if first year doesn't overlap, a random draw
+        rho_s[skt1[s]] ~ lognormal(prior_m_s, prior_s_s);
+      }
+      // after first year, a random walk from previous year
+      rho_s[(skt1[s]+1):(skt1[s]+sn[s]-1)] ~ normal(rho_s[(skt1[s]):(skt1[s]+sn[s]-2)], sigma_s0); 
     }
-    // afterwards, a random walk from previous year
-    rho_s[(skt1[s]+1):(skt1[s]+sn[s]-1)] ~ normal(rho_s[(skt1[s]):(skt1[s]+sn[s]-2)], sigma_s0); 
   }
   
   rho_kwe_hat[kwem] ~ normal(rho_we_t, sigma_kwe);            // estimate rho_kwe_hat (over 1:M)
