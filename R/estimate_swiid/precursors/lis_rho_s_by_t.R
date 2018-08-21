@@ -5,9 +5,9 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 6000
-warmup <- iter - 2500
-thin <- 5
+iter <- 2000
+warmup <- iter - 600
+thin <- 2
 chains <- 3
 cores <- chains
 adapt_delta <- .9
@@ -108,6 +108,7 @@ sn <- x %>%
   group_by(scode) %>% 
   summarize(country = first(country),
             series = first(series),
+            shnoo = as.numeric(sum(is.na(gini_b)) > 0),
             skt1 = min(sktcode),
             yrspan = max(year) - min(year) + 1,
             sr1 = any(sktcode == skt1 & !is.na(gini_b)) %>% as.numeric()) %>% 
@@ -199,6 +200,7 @@ source_data <- list(  K = max(x$kcode),
                       rho_s_m_se = rho_s$rho_se,
                       
                       sn = sn$yrspan,
+                      shnoo = sn$shnoo,
                       skt1 = sn$skt1,
                       sr1 = sn$sr1,
                       sj1 = sj$sj1,
