@@ -91,12 +91,12 @@ x <- x0 %>%
 skt <- skt0 %>% 
   left_join(x %>% select(scode, kwecode, rwecode) %>% distinct(), by = "scode")
 
-kwe_skt_mat <- skt %>% 
-  transmute(kwecode = kwecode,
-            ones = 1) %>% 
+kwe_skt <- skt %>% 
+  arrange(kwecode) %>% 
   rowid_to_column() %>% 
-  spread(key = kwecode, value = ones, fill = 0) %>% 
-  select(-rowid)
+  group_by(kwecode) %>% 
+  summarize(kwe_skt_start = min(rowid),
+            kwe_skt_stop = max(rowid))
 
 kn <- x %>% 
   group_by(kcode) %>% 
@@ -225,8 +225,8 @@ source_data <- list(  K = max(x$kcode),
                       sr1 = sn$sr1,
                       sj1 = sn$sj1,
                       
-                      kwe_skt_mat = kwe_skt_mat,
-                      kwe_skt_n = skt %>% group_by(kwecode) %>% summarize(kwe_skt_n = n()) %>% pull(kwe_skt_n),
+                      kwe_skt_start = skt$kwe_skt_start,
+                      kwe_skt_stop = skt$kwe_skt_stop,
                       rwe_skt = skt$rwecode,
                       rwe_skt_n = skt %>% group_by(rwecode) %>% summarize(rwe_skt_n = n()) %>% pull(rwe_skt_n),
                       

@@ -72,8 +72,8 @@ data{
   real<lower=0> rho_s_m[J];               // observed ("measured") ratio of baseline to series
   real<lower=0> rho_s_m_se[J];            // std error of rho_we
 
-  int<lower=1, upper=KWE> kwe_skt[SKT];
-  int<lower=0, upper=SKT> kwe_skt_n[KWE];
+  int<lower=1, upper=SKT> kwe_skt_start[KWE];
+  int<lower=0, upper=SKT> kwe_skt_stop[KWE];
   int<lower=1, upper=RWE> rwe_skt[SKT];
   int<lower=0, upper=SKT> rwe_skt_n[RWE];
 
@@ -139,14 +139,16 @@ transformed parameters {
 //   real<lower=0> sigma_rrcat[R];
 //
 
+rho_s_kwe_sorted = 
+
   for (kwe in 1:KWE) {
-    rho_kwe[kwe] =  mean(filter(rho_s, kwe_skt, kwe, kwe_skt_n[kwe]));
-    sigma_kwe[kwe] = sqrt(square(sigma_s) + variance(filter(rho_s, kwe_skt, kwe, kwe_skt_n[kwe])));
+    rho_kwe[kwe] =  mean(rho_s[kwe_skt_start[kwe]:kwe_skt_stop[kwe]]));
+    sigma_kwe[kwe] = sqrt(square(sigma_s) + variance(rho_s[kwe_skt_start[kwe]:kwe_skt_stop[kwe]]));
   }
   
-  for (rwe in 1:RWE) {
-    rho_rwe[rwe] =  mean(filter(rho_s, rwe_skt, rwe, rwe_skt_n[rwe]));
-    sigma_rwe[rwe] = sqrt(square(sigma_s) + variance(filter(rho_s, rwe_skt, rwe, rwe_skt_n[rwe])));  
+  // for (rwe in 1:RWE) {
+  //   rho_rwe[rwe] =  mean(filter(rho_s, rwe_skt, rwe, rwe_skt_n[rwe]));
+  //   sigma_rwe[rwe] = sqrt(square(sigma_s) + variance(filter(rho_s, rwe_skt, rwe, rwe_skt_n[rwe])));  
   }
 //   for (r in 1:R) {
 //     sigma_krcat[r] = sqrt(square(sigma_kw) + square(sigma_rwe[r])); 
@@ -164,7 +166,7 @@ model {
   // }
   // sigma_kw ~ normal(0, .01);
 
-  rho_s ~ lognormal(prior_m_s, prior_s_s);
+  // rho_s ~ lognormal(prior_m_s, prior_s_s);
   // rho_kwe_hat ~ lognormal(prior_m_kwe, prior_s_kwe);
   // rho_rwe_hat ~ lognormal(prior_m_rwe, prior_s_rwe);
   // rho_kw_hat ~ lognormal(prior_m_kw, prior_s_kw);
