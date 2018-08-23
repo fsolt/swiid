@@ -877,12 +877,12 @@ Japan,1989,0.312,,disp,sqrt,,Shirahase2001 Japan disp sqrt,Shirahase 2001,37,htt
 Japan,1992,0.3114,,disp,sqrt,,Shirahase2001 Japan disp sqrt,Shirahase 2001,37,http://www.lisdatacenter.org/wps/liswps/268.pdf
 Japan,1995,0.3158,,disp,sqrt,,Shirahase2001 Japan disp sqrt,Shirahase 2001,37,http://www.lisdatacenter.org/wps/liswps/268.pdf
 Japan,1998,0.3188,,disp,sqrt,,Shirahase2001 Japan disp sqrt,Shirahase 2001,37,http://www.lisdatacenter.org/wps/liswps/268.pdf
-Japan,1979,0.271,,disp,hh,TRUE,Statistics Japan disp pc,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
-Japan,1984,0.28,,disp,hh,TRUE,Statistics Japan disp pc,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
-Japan,1989,0.293,,disp,hh,TRUE,Statistics Japan disp pc,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
-Japan,1994,0.297,,disp,hh,TRUE,Statistics Japan disp pc,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
-Japan,1999,0.301,,disp,hh,TRUE,Statistics Japan disp pc,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
-Japan,2004,0.308,,disp,hh,TRUE,Statistics Japan disp pc,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
+Japan,1979,0.271,,disp,hh,TRUE,Statistics Japan disp hh,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
+Japan,1984,0.28,,disp,hh,TRUE,Statistics Japan disp hh,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
+Japan,1989,0.293,,disp,hh,TRUE,Statistics Japan disp hh,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
+Japan,1994,0.297,,disp,hh,TRUE,Statistics Japan disp hh,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
+Japan,1999,0.301,,disp,hh,TRUE,Statistics Japan disp hh,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
+Japan,2004,0.308,,disp,hh,TRUE,Statistics Japan disp hh,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
 Japan,2009,0.313,,disp,pc,TRUE,Statistics Japan disp pc,Statistics Japan 2010,,http://www.e-stat.go.jp/SG1/estat/GL32020101.do?method=xlsDownload&fileId=000004955720&releaseCount=1
 Japan,2014,0.31,,disp,pc,TRUE,Statistics Japan disp pc,Statistics Japan 2015,,http://www.e-stat.go.jp/SG1/estat/GL32020101.do?method=xlsDownload&fileId=000007772322&releaseCount=1
 Japan,2009,0.283,,disp,sqrt,TRUE,Statistics Japan disp sqrt,Statistics Japan 2010,,http://www.e-stat.go.jp/SG1/estat/GL32020101.do?method=xlsDownload&fileId=000004955720&releaseCount=1
