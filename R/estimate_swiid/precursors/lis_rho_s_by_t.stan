@@ -1,3 +1,34 @@
+functions {
+  real[] filter(vector x, int[] is, int target, int count) {
+    // int count;
+    if (size(is) != num_elements(x)) {
+      reject("illegal input");  // stricter than R (no repeats)
+    }
+
+    // count length of result
+    // count = 0;
+    // for (n in 1:size(is)) {
+    //   if (is[n] == target) {
+    //     count = count + 1;
+    //   }
+    // }
+
+   // assign values to result
+    {
+      real result[count];
+      int pos;
+      pos = 1;
+      for (n in 1:size(is)) {
+        if (is[n] == target) {
+          result[pos] = x[n];
+          pos = pos + 1;
+        }
+     }
+      return result;
+    }
+  }
+}
+
 data{
   int<lower=1> K;     		                // number of countries
   int<lower=1> T;     		                // (maximum) number of years
@@ -41,10 +72,10 @@ data{
   real<lower=0> rho_s_m[J];               // observed ("measured") ratio of baseline to series
   real<lower=0> rho_s_m_se[J];            // std error of rho_we
 
-  matrix<lower=0, upper=1>[SKT, KWE] kwe_skt_mat;
-  row_vector<lower=0, upper=SKT>[KWE] kwe_skt_n;
-  // int<lower=1, upper=RWE> rwe_skt[SKT];
-  // int<lower=0, upper=SKT> rwe_skt_n[RWE];
+  int<lower=1, upper=KWE> kwe_skt[SKT];
+  int<lower=0, upper=SKT> kwe_skt_n[KWE];
+  int<lower=1, upper=RWE> rwe_skt[SKT];
+  int<lower=0, upper=SKT> rwe_skt_n[RWE];
 
   int<lower=1, upper=T> sn[S];            // number of observed & interpolated country-years by series
   int<lower=0, upper=1> shnoo[S];         // indicator for whether series has non-overlapping observations
@@ -101,23 +132,22 @@ transformed parameters {
   real<lower=0> rho_kwe[KWE];               // estimated rho_we by country
   real<lower=0> sigma_kwe[KWE];             // rho_kwe noise
 
-  // real<lower=0> rho_rwe[RWE];               // estimated rho_we by region
-  // real<lower=0> sigma_rwe[RWE];             // rho_rwe noise 
+  real<lower=0> rho_rwe[RWE];               // estimated rho_we by region
+  real<lower=0> sigma_rwe[RWE];             // rho_rwe noise 
   
 //   real<lower=0> sigma_krcat[R];
 //   real<lower=0> sigma_rrcat[R];
 //
 
-  rho_kwe = to_array_1d((to_matrix(to_row_vector(rho_s)) * kwe_skt_mat) ./ to_matrix(kwe_skt_n));
-
   for (kwe in 1:KWE) {
-    sigma_kwe[kwe] = sqrt(square(sigma_s) + variance(rho_s .* kwe_skt_mat[ ,kwe]));
+    rho_kwe[kwe] =  mean(filter(rho_s, kwe_skt, kwe, kwe_skt_n[kwe]));
+    sigma_kwe[kwe] = sqrt(square(sigma_s) + variance(filter(rho_s, kwe_skt, kwe, kwe_skt_n[kwe])));
   }
   
-  // for (rwe in 1:RWE) {
-  //   rho_rwe[rwe] =  mean(filter(rho_s, rwe_skt, rwe, rwe_skt_n[rwe]));
-  //   sigma_rwe[rwe] = sqrt(square(sigma_s) + variance(filter(rho_s, rwe_skt, rwe, rwe_skt_n[rwe])));  
-  // }
+  for (rwe in 1:RWE) {
+    rho_rwe[rwe] =  mean(filter(rho_s, rwe_skt, rwe, rwe_skt_n[rwe]));
+    sigma_rwe[rwe] = sqrt(square(sigma_s) + variance(filter(rho_s, rwe_skt, rwe, rwe_skt_n[rwe])));  
+  }
 //   for (r in 1:R) {
 //     sigma_krcat[r] = sqrt(square(sigma_kw) + square(sigma_rwe[r])); 
 //     sigma_rrcat[r] = sqrt(2 * square(sigma_rwe[r])); 
