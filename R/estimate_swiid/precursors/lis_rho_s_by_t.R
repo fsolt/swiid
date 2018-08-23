@@ -225,8 +225,8 @@ source_data <- list(  K = max(x$kcode),
                       sr1 = sn$sr1,
                       sj1 = sn$sj1,
                       
-                      kwe_skt_start = skt$kwe_skt_start,
-                      kwe_skt_stop = skt$kwe_skt_stop,
+                      kwe_skt_start = kwe_skt$kwe_skt_start,
+                      kwe_skt_stop = kwe_skt$kwe_skt_stop,
                       rwe_skt = skt$rwecode,
                       rwe_skt_n = skt %>% group_by(rwecode) %>% summarize(rwe_skt_n = n()) %>% pull(rwe_skt_n),
                       
