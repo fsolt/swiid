@@ -38,16 +38,22 @@ kt <- x0 %>%
   ungroup() %>% 
   mutate(ktcode = 1:n())
 
-skt <- x0 %>%  
+skt0 <- x0 %>%  
   transmute(scode = scode,
-            yrspan = (lastyr - firstyr) + 1) %>% 
-  distinct(scode, yrspan) %>% 
-  slice(rep(1:n(), yrspan)) %>% 
+            year = year) %>% 
+  arrange(scode, year) %>% 
   group_by(scode) %>% 
-  mutate(tcode = 1:n()) %>% 
+  mutate(firstyr =  min(year),
+         lastyr = max(year)) %>% 
   ungroup() %>% 
+  complete(scode, year) %>% 
+  group_by(scode) %>% 
+  mutate(firstyr = min(firstyr, na.rm = TRUE),
+         lastyr = min(lastyr, na.rm = TRUE)) %>% 
+  ungroup() %>% 
+  filter(year >= firstyr & year <= lastyr) %>% 
   mutate(sktcode = 1:n()) %>% 
-  select(-yrspan)
+  select(-firstyr, -lastyr)
 
 rho_we <- rho_we %>%
   select(-ends_with("code")) %>% 
@@ -80,7 +86,17 @@ x <- x0 %>%
   left_join(kt, by = c("kcode", "tcode")) %>% 
   mutate(wdes2 = str_replace(wdes, ".*_", "disp_")) %>% 
   left_join(rwe2codes, by = c("wdes2", "rcode")) %>% 
-  left_join(skt, by = c("scode", "tcode"))
+  left_join(skt0, by = c("scode", "year"))
+
+skt <- skt0 %>% 
+  left_join(x %>% select(scode, kwecode, rwecode) %>% distinct(), by = "scode")
+
+kwe_skt_mat <- skt %>% 
+  transmute(kwecode = kwecode,
+            ones = 1) %>% 
+  rowid_to_column() %>% 
+  spread(key = kwecode, value = ones, fill = 0) %>% 
+  select(-rowid)
 
 kn <- x %>% 
   group_by(kcode) %>% 
@@ -101,7 +117,16 @@ kt1 <- x %>%
 rho_s <- x %>% 
   filter(bl) %>% 
   mutate(rho = gini_b/gini_m,
-         rho_se = sqrt(gini_b_se^2 + gini_m_se^2))
+         rho_se = sqrt(gini_b_se^2 + gini_m_se^2)) %>% 
+  filter(!(rho == 1 & equiv_scale == "sqrt" & str_detect(series, "^LIS")))
+
+sj <- rho_s %>%
+  mutate(sj = row_number()) %>%
+  group_by(scode) %>%
+  summarize(country = first(country),
+            series = first(series),
+            sj1 = min(sj)) %>%
+  ungroup()
 
 sn <- x %>% 
   filter(obl) %>% 
@@ -112,14 +137,9 @@ sn <- x %>%
             skt1 = min(sktcode),
             yrspan = max(year) - min(year) + 1,
             sr1 = any(sktcode == skt1 & !is.na(gini_b)) %>% as.numeric()) %>% 
-  ungroup()
-
-sj <- rho_s %>% 
-  mutate(sj = row_number()) %>% 
-  group_by(scode) %>% 
-  summarize(country = first(country),
-            series = first(series),
-            sj1 = min(sj))
+  ungroup() %>% 
+  left_join(sj, by = c("scode", "country", "series")) %>% 
+  mutate(sj1 = if_else(is.na(sj1), 0, sj1))
 
 mu_priors_by_wd <- function(x, var) {
   var <- rlang::ensym(var)
@@ -203,7 +223,12 @@ source_data <- list(  K = max(x$kcode),
                       shnoo = sn$shnoo,
                       skt1 = sn$skt1,
                       sr1 = sn$sr1,
-                      sj1 = sj$sj1,
+                      sj1 = sn$sj1,
+                      
+                      kwe_skt_mat = kwe_skt_mat,
+                      kwe_skt_n = skt %>% group_by(kwecode) %>% summarize(kwe_skt_n = n()) %>% pull(kwe_skt_n),
+                      rwe_skt = skt$rwecode,
+                      rwe_skt_n = skt %>% group_by(rwecode) %>% summarize(rwe_skt_n = n()) %>% pull(rwe_skt_n),
                       
                       M = length(rho_we$rho),
                       kkm = rho_we$kcode,      
@@ -239,12 +264,12 @@ start <- proc.time()
 out1 <- stan(file = "R/estimate_swiid/precursors/lis_rho_s_by_t.stan",
              data = source_data,
              seed = seed,
-             iter = iter,
-             warmup = warmup,
+             iter = 10,
+             warmup = 10,
              thin = thin,
              cores = cores,
-             chains = chains,
-             pars = c("gini", "sigma_s0"),
+             chains = 1,
+             pars = c("gini", "sigma_s0", "sigma_s"),
              control = list(max_treedepth = 20,
                             adapt_delta = adapt_delta))
 runtime <- proc.time() - start
