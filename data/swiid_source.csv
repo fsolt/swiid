@@ -7317,7 +7317,7 @@ Japan,1978,0.354,,market,hh,,MT1992 Japan market hh,Tabatabai 1996; Mizoguchi an
 Japan,1978,0.365,,market,hh,,Tachibanaki 2006 market hh,Tachibanaki 2006,3,http://doi.org/10.1111/j.1468-5876.2006.00355.x
 Japan,1979,0.271,,gross,sqrt,TRUE,M2013 gross sqrt 1,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
 Japan,1979,0.336,,market,hh,,MT1992 Japan market hh,Tabatabai 1996; Mizoguchi and Terasaki 1992,126,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Japan,1979,0.271,,disp,hh,TRUE,Statistics Japan disp pc,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
+Japan,1979,0.271,,disp,hh,TRUE,Statistics Japan disp hh,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
 Japan,1980,0.337,,market,hh,,MT1992 Japan market hh,Tabatabai 1996; Mizoguchi and Terasaki 1992,126,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Japan,1981,0.352,,market,hh,,MT1992 Japan market hh,Tabatabai 1996; Mizoguchi and Terasaki 1992,126,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Japan,1981,0.349,,market,hh,,Tachibanaki 2006 market hh,Tachibanaki 2006,3,http://doi.org/10.1111/j.1468-5876.2006.00355.x
@@ -7325,7 +7325,7 @@ Japan,1981,0.3143,,disp,pc,,TY1997 disp pc,Tachibanaki and Yagi 1997,119,https:/
 Japan,1982,0.351,,market,hh,,MT1992 Japan market hh,Tabatabai 1996; Mizoguchi and Terasaki 1992,126,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Japan,1983,0.351,,market,hh,,MT1992 Japan market hh,Tabatabai 1996; Mizoguchi and Terasaki 1992,126,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Japan,1984,0.35,,market,hh,,MT1992 Japan market hh,Tabatabai 1996; Mizoguchi and Terasaki 1992,126,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Japan,1984,0.28,,disp,hh,TRUE,Statistics Japan disp pc,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
+Japan,1984,0.28,,disp,hh,TRUE,Statistics Japan disp hh,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
 Japan,1984,0.343,,disp,hh,,Tachibanaki 2006 disp hh,Tachibanaki 2006,3,http://doi.org/10.1111/j.1468-5876.2006.00355.x
 Japan,1984,0.398,,market,hh,,Tachibanaki 2006 market hh,Tachibanaki 2006,3,http://doi.org/10.1111/j.1468-5876.2006.00355.x
 Japan,1984,0.3426,,disp,pc,,TY1997 disp pc,Tachibanaki and Yagi 1997,119,https://books.google.com/books?&id=QK3yypiMK3EC&pg=PA108
@@ -7343,7 +7343,7 @@ Japan,1987,0.3382,,disp,pc,,TY1997 disp pc,Tachibanaki and Yagi 1997,119,https:/
 Japan,1988,0.375,,market,hh,,MT1992 Japan market hh,Tabatabai 1996; Mizoguchi and Terasaki 1992,127,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Japan,1989,0.372,,market,hh,,MT1992 Japan market hh,Tabatabai 1996; Mizoguchi and Terasaki 1992,127,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Japan,1989,0.312,,disp,sqrt,,Shirahase2001 Japan disp sqrt,Shirahase 2001,37,http://www.lisdatacenter.org/wps/liswps/268.pdf
-Japan,1989,0.293,,disp,hh,TRUE,Statistics Japan disp pc,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
+Japan,1989,0.293,,disp,hh,TRUE,Statistics Japan disp hh,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
 Japan,1990,0.172,,con,hh,,Park1995 Japan con hh,Tabatabai 1996; Park 1995,126,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Japan,1990,0.298,,disp,hh,,Park1995 Japan disp hh,Tabatabai 1996; Park 1995,126,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Japan,1990,0.364,,disp,hh,,Tachibanaki 2006 disp hh,Tachibanaki 2006,3,http://doi.org/10.1111/j.1468-5876.2006.00355.x
@@ -7354,7 +7354,7 @@ Japan,1992,0.3114,,disp,sqrt,,Shirahase2001 Japan disp sqrt,Shirahase 2001,37,ht
 Japan,1993,0.248,,con,pc,,FR2008 Japan con pc,Ferreira and Ravallion 2008,37,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Japan,1993,0.365,,disp,hh,,Tachibanaki 2006 disp hh,Tachibanaki 2006,3,http://doi.org/10.1111/j.1468-5876.2006.00355.x
 Japan,1993,0.439,,market,hh,,Tachibanaki 2006 market hh,Tachibanaki 2006,3,http://doi.org/10.1111/j.1468-5876.2006.00355.x
-Japan,1994,0.297,,disp,hh,TRUE,Statistics Japan disp pc,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
+Japan,1994,0.297,,disp,hh,TRUE,Statistics Japan disp hh,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
 Japan,1995,0.323,,disp,sqrt,FALSE,"OECD Japan disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Japan,1995,0.295,,disp,sqrt,FALSE,"OECD Japan disp sqrt, previous def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Japan,1995,0.403,,market,sqrt,FALSE,"OECD Japan market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -7363,7 +7363,7 @@ Japan,1995,0.3158,,disp,sqrt,,Shirahase2001 Japan disp sqrt,Shirahase 2001,37,ht
 Japan,1996,0.361,,disp,hh,,Tachibanaki 2006 disp hh,Tachibanaki 2006,3,http://doi.org/10.1111/j.1468-5876.2006.00355.x
 Japan,1996,0.441,,market,hh,,Tachibanaki 2006 market hh,Tachibanaki 2006,3,http://doi.org/10.1111/j.1468-5876.2006.00355.x
 Japan,1998,0.3188,,disp,sqrt,,Shirahase2001 Japan disp sqrt,Shirahase 2001,37,http://www.lisdatacenter.org/wps/liswps/268.pdf
-Japan,1999,0.301,,disp,hh,TRUE,Statistics Japan disp pc,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
+Japan,1999,0.301,,disp,hh,TRUE,Statistics Japan disp hh,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
 Japan,1999,0.381,,disp,hh,,Tachibanaki 2006 disp hh,Tachibanaki 2006,3,http://doi.org/10.1111/j.1468-5876.2006.00355.x
 Japan,1999,0.472,,market,hh,,Tachibanaki 2006 market hh,Tachibanaki 2006,3,http://doi.org/10.1111/j.1468-5876.2006.00355.x
 Japan,2000,0.337,,disp,sqrt,FALSE,"OECD Japan disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -7380,7 +7380,7 @@ Japan,2004,0.308,,gross,sqrt,TRUE,M2013 gross sqrt 1,McKenzie 2013,397,https://b
 Japan,2004,0.4,,gross,sqrt,TRUE,M2013 gross sqrt 2,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
 Japan,2004,0.326,,market,sqrt,TRUE,M2013 market sqrt 1,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
 Japan,2004,0.354,,market,sqrt,TRUE,M2013 market sqrt 2,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
-Japan,2004,0.308,,disp,hh,TRUE,Statistics Japan disp pc,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
+Japan,2004,0.308,,disp,hh,TRUE,Statistics Japan disp hh,Statistics Japan 2005,,http://www.stat.go.jp/english/data/zensho/2004/hutari/gaiyo18.htm
 Japan,2005,0.298,,con,sqrt,TRUE,M2013 con sqrt,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
 Japan,2005,0.395,,gross,sqrt,TRUE,M2013 gross sqrt 2,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
 Japan,2005,0.316,,market,sqrt,TRUE,M2013 market sqrt 1,McKenzie 2013,397,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA397
