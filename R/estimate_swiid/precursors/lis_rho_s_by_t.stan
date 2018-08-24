@@ -34,11 +34,6 @@ data{
   int<lower=1, upper=T> kn[K];            // number of observed & interpolated country-years by country
   int<lower=1, upper=KT> kt1[K];          // location of first kt for country k
   int<lower=0, upper=N_ibl> nbkt[KT];     // obs n with baseline for country-year kt
-  
-  int<lower=1, upper=T> sn[S];            // number of observed & interpolated country-years by series
-  int<lower=0, upper=1> shnoo[S];         // indicator for whether series has non-overlapping observations
-  int<lower=1, upper=SKT> skt1[S];        // location of first skt for series s
-  int<lower=0, upper=1> sr1[S];           // indicator for whether first year of series also has rho_s
 
   int<lower=1> J;                         // number of observed ratios of baseline to wd_es (rho_we)
   int<lower=1, upper=S> ssj[J];           // series for rho_s observation j
@@ -46,7 +41,16 @@ data{
   real<lower=0> rho_s_m[J];               // observed ("measured") ratio of baseline to series
   real<lower=0> rho_s_m_se[J];            // std error of rho_we
   
-  int<lower=1, upper=J> sj1[S];           // location of first rho_s for series s
+  int<lower=1, upper=SKT> kwe_skt_start[KWE];
+  int<lower=0, upper=SKT> kwe_skt_stop[KWE];
+  int<lower=1, upper=RWE> rwe_skt[SKT];
+  int<lower=0, upper=SKT> rwe_skt_n[RWE];
+
+  int<lower=1, upper=T> sn[S];            // number of observed & interpolated country-years by series
+  int<lower=0, upper=1> shnoo[S];         // indicator for whether series has non-overlapping observations
+  int<lower=1, upper=SKT> skt1[S];        // location of first skt for series s
+  int<lower=0, upper=1> sr1[S];           // indicator for whether first year of series also has rho_s  
+  int<lower=0, upper=J> sj1[S];           // location of first rho_s for series s
     
   int<lower=1> M;                         // number of observed ratios of baseline to wd_es (rho_we)
   int<lower=1, upper=R> rrm[M];           // region for rho_we observation m
@@ -82,8 +86,8 @@ parameters {
   real<lower=0> sigma_s0;                 // random-walk variance parameter
   real<lower=0> sigma_s; 	                // series noise 
   
-  vector<lower=0>[KWE] rho_kwe_hat;       // estimated rho_we by country
-  real<lower=0> sigma_kwe;                // rho_kwe_hat noise
+  // vector<lower=0>[KWE] rho_kwe_hat;       // estimated rho_we by country
+  // real<lower=0> sigma_kwe;                // rho_kwe_hat noise
   
   // vector<lower=0>[KW] rho_kw_hat;         // estimated rho_w by country
   // real<lower=0> sigma_kw;                 // rho_kw_hat noise
@@ -92,34 +96,51 @@ parameters {
   // real<lower=0> sigma_rwe[R];             // rho_rwe_hat noise (by region)
 }
 
-// transformed parameters {
+transformed parameters {
+  real<lower=0> rho_kwe[KWE];               // estimated rho_we by country
+  real<lower=0> sigma_kwe[KWE];             // rho_kwe noise
+
+  real<lower=0> rho_rwe[RWE];               // estimated rho_we by region
+  real<lower=0> sigma_rwe[RWE];             // rho_rwe noise 
+  
 //   real<lower=0> sigma_krcat[R];
 //   real<lower=0> sigma_rrcat[R];
-//   
+//
+
+  for (kwe in 1:KWE) {
+    rho_kwe[kwe] =  mean(rho_s[kwe_skt_start[kwe]:kwe_skt_stop[kwe]]));
+    sigma_kwe[kwe] = sqrt(square(sigma_s) + variance(rho_s[kwe_skt_start[kwe]:kwe_skt_stop[kwe]]));
+  }
+  
+  // for (rwe in 1:RWE) {
+  //   rho_rwe[rwe] =  mean(filter(rho_s, rwe_skt, rwe, rwe_skt_n[rwe]));
+  //   sigma_rwe[rwe] = sqrt(square(sigma_s) + variance(filter(rho_s, rwe_skt, rwe, rwe_skt_n[rwe])));  
+  }
 //   for (r in 1:R) {
 //     sigma_krcat[r] = sqrt(square(sigma_kw) + square(sigma_rwe[r])); 
 //     sigma_rrcat[r] = sqrt(2 * square(sigma_rwe[r])); 
 //   }
-// }
+}
 
 model {
   sigma_gini ~ normal(.01, .0025);
   sigma_s0 ~ normal(0, .05);
   sigma_s ~ normal(0, .05);
-  sigma_kwe ~ normal(0, .05);
+  // sigma_kwe ~ normal(0, .05);
   // for (r in 1:R) {
   //   sigma_rwe[r] ~ normal(.04, .015) T[0,];
   // }
   // sigma_kw ~ normal(0, .01);
 
-  rho_kwe_hat ~ lognormal(prior_m_kwe, prior_s_kwe);
-  // rho_rwe_hat ~ lognormal(prior_m_rwe, prior_s_rwe);
-  // rho_kw_hat ~ lognormal(prior_m_kw, prior_s_kw);
+  rho_s ~ lognormal(prior_m_s, prior_s_s);
+//  rho_kwe_hat ~ lognormal(prior_m_kwe, prior_s_kwe);
+//  rho_rwe_hat ~ lognormal(prior_m_rwe, prior_s_rwe);
+//  rho_kw_hat ~ lognormal(prior_m_kw, prior_s_kw);
 
   gini_m ~ normal(gini_t, gini_m_se);
   gini_b ~ normal(gini_b_t, gini_b_se);
   rho_we ~ normal(rho_we_t, rho_we_se);
-  // rho_w ~ normal(rho_w_t, rho_w_se);
+//  rho_w ~ normal(rho_w_t, rho_w_se);
   
   for (k in 1:K) {
     if (bk[k] == 1) {                                         // if country k has some baseline obs:
@@ -146,17 +167,17 @@ model {
 
   for (s in 1:S) {        // for each series
     if (shnoo[s] == 1) {  // check if series has non-overlapping observations (to baseline)
-      if (sr1[s] == 1) {  // if so, and first year overlaps, use rho_s_m
-        rho_s[skt1[s]] ~ normal(rho_s_m[sj1[s]], rho_s_m_se[sj1[s]]);
-      } else {            // if first year doesn't overlap, a random draw
-        rho_s[skt1[s]] ~ lognormal(prior_m_s, prior_s_s);
-      }
+      // if (sr1[s] == 1) {  // if so, and first year overlaps, use rho_s_m
+      //   rho_s[skt1[s]] ~ normal(rho_s_m[sj1[s]], rho_s_m_se[sj1[s]]);
+      // } else {            // if first year doesn't overlap, a random draw
+      //   rho_s[skt1[s]] ~ lognormal(prior_m_s, prior_s_s);
+      // }
       // after first year, a random walk from previous year
       rho_s[(skt1[s]+1):(skt1[s]+sn[s]-1)] ~ normal(rho_s[(skt1[s]):(skt1[s]+sn[s]-2)], sigma_s0); 
     }
   }
   
-  rho_kwe_hat[kwem] ~ normal(rho_we_t, sigma_kwe);            // estimate rho_kwe_hat (over 1:M)
+  // rho_kwe_hat[kwem] ~ normal(rho_we_t, sigma_kwe);            // estimate rho_kwe_hat (over 1:M)
   // rho_rwe_hat[rwem] ~ normal(rho_we_t, sigma_rwe[rrm]);       // estimate rho_rwe_hat (over 1:M)
   // rho_kw_hat[kwp] ~ normal(rho_w_t, sigma_kw);                // estimate rho_kw_hat (over 1:P)
 
