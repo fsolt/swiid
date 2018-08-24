@@ -1,0 +1,35 @@
+Need to:
+[X] make an object with ratios (like M or P) for each series (with 2+ overlapping observations?)
+[X] estimate rho_st with random walk prior and 'fixed' values in observed years
+[X] estimate gini[kktt[(N_wbl+1):N_obl]] from rho_st
+
+define:     
+[X] indicator for whether there's any non-overlapping obs in series
+
+Okay, this works, but takes 8.4hrs to do 2000 iter (and that doesn't even fully converge)
+
+How to speed it up?
+___
+go with an indicator matrix
+  and then use matrix multiplication to do them all at the same time?
+  
+ ttt1 has SKT rows and KWE columns
+ rho_s is a 1xSKT row vector
+ kwe_skt_mat is a SKTxKWE matrix
+ rho_kwe is the result, a 1xKWE vector 
+ 
+ rho_kwe = (to_matrix(to_row_vector(rho_s)) * kwe_skt_mat) ./ kwe_skt_n ;
+ 
+ rho_s times kwe_skt is sum of rho_s observations for kwe, needs divided by kwe_skt_n (column totals)
+  make values of kwe_skt 1/kwe_skt_n rather than 1?, that would give the mean in one step?
+  
+ sqrt(1/(kwe_skt_n-1)) * sum(each rho_s for kwe - rho_kwe[kwe]))
+
+*** this turned out to be _incredibly_ slow (like 40s for 10 iter)
+
+____
+ 
+use slices?
+series have to be nested in kwe order
+> but then it can all be vectorized over kwe: rho_kwe = mean(rho_s[kwe_skt_start:kwe_skt_stop]));
+ 
