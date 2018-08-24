@@ -5,9 +5,9 @@ library(beepr)
 load("data/ineq.rda")
 
 seed <- 324
-iter <- 2000
-warmup <- iter - 600
-thin <- 2
+iter <- 3000
+warmup <- iter - 1000
+thin <- 3
 chains <- 3
 cores <- chains
 adapt_delta <- .9
@@ -19,28 +19,27 @@ baseline_es <- str_split(baseline_series, "\\s")[[1]] %>% last()
 x0 <- ineq2 %>%  
   mutate(kcode = as.integer(factor(country, levels = unique(country))),
          rcode = as.integer(factor(region, levels = unique(region))),
-         scode = as.integer(factor(series, levels = unique(series))),
          wecode = as.integer(factor(wdes, levels = unique(wdes))),
          kwecode = as.integer(factor(100*kcode+wecode)),
          rwecode = as.integer(factor(100*rcode+wecode)),
+         scode = as.integer(factor(series, levels = unique(series))),
          wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)),
          ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)),
          kwcode = as.integer(factor(100*kcode+wcode))) %>% 
   filter(kbl) # LIS countries only, for now
 
-kt <- x0 %>%  
-  transmute(kcode = kcode,
-            yrspan = (lastyr - firstyr) + 1) %>% 
-  distinct(kcode, yrspan) %>% 
-  slice(rep(1:n(), yrspan)) %>% 
-  group_by(kcode) %>% 
-  mutate(tcode = 1:n()) %>% 
+kt <- x0 %>% 
+  select(country, firstyr, lastyr) %>% 
+  distinct() %>% 
+  slice(rep(1:n(), (lastyr - firstyr) + 1)) %>% 
+  group_by(country) %>% 
+  mutate(year = first(firstyr):first(lastyr)) %>% 
   ungroup() %>% 
-  mutate(ktcode = 1:n())
+  mutate(ktcode = 1:n()) %>% 
+  select(country, year, ktcode)
 
 skt0 <- x0 %>%  
-  transmute(scode = scode,
-            year = year) %>% 
+  select(scode, year) %>% 
   arrange(scode, year) %>% 
   group_by(scode) %>% 
   mutate(firstyr =  min(year),
@@ -83,10 +82,10 @@ rwe2codes <- rho_we %>%
   distinct() 
 
 x <- x0 %>% 
-  left_join(kt, by = c("kcode", "tcode")) %>% 
+  left_join(kt, by = c("country", "year")) %>% 
   mutate(wdes2 = str_replace(wdes, ".*_", "disp_")) %>% 
   left_join(rwe2codes, by = c("wdes2", "rcode")) %>% 
-  left_join(skt0, by = c("scode", "year"))
+  left_join(skt0, by = c("scode", "year"))                # adds sktcode
 
 skt <- skt0 %>% 
   left_join(x %>% select(scode, kwecode, rwecode) %>% distinct(), by = "scode")
@@ -95,14 +94,21 @@ kwe_skt <- skt %>%
   arrange(kwecode) %>% 
   rowid_to_column() %>% 
   group_by(kwecode) %>% 
-  summarize(kwe_skt_start = min(rowid),
-            kwe_skt_stop = max(rowid))
+  summarize(kwe_skt_start = min(rowid),     # which skt starts each kwe?
+            kwe_skt_end = max(rowid))      # which skt ends each kwe?
+
+rwe_skt <- skt %>% 
+  arrange(rwecode) %>% 
+  rowid_to_column() %>% 
+  group_by(rwecode) %>% 
+  summarize(rwe_skt_start = min(rowid),     # which skt starts each kwe?
+            rwe_skt_end = max(rowid))      # which skt ends each kwe?
 
 kn <- x %>% 
   group_by(kcode) %>% 
   summarize(country = first(country),
             kt1 = min(ktcode),
-            yrspan = first(yrspan),
+            yrspan = first(n_yrs),
             kr = first(rcode),
             bk = as.numeric(any(!is.na(gini_b)))) %>% 
   ungroup()
@@ -226,9 +232,9 @@ source_data <- list(  K = max(x$kcode),
                       sj1 = sn$sj1,
                       
                       kwe_skt_start = kwe_skt$kwe_skt_start,
-                      kwe_skt_stop = kwe_skt$kwe_skt_stop,
-                      rwe_skt = skt$rwecode,
-                      rwe_skt_n = skt %>% group_by(rwecode) %>% summarize(rwe_skt_n = n()) %>% pull(rwe_skt_n),
+                      kwe_skt_end = kwe_skt$kwe_skt_end,
+                      rwe_skt_start = rwe_skt$rwe_skt_start,
+                      rwe_skt_end = rwe_skt$rwe_skt_end,
                       
                       M = length(rho_we$rho),
                       kkm = rho_we$kcode,      
@@ -264,11 +270,11 @@ start <- proc.time()
 out1 <- stan(file = "R/estimate_swiid/precursors/lis_rho_s_by_t.stan",
              data = source_data,
              seed = seed,
-             iter = 10,
-             warmup = 10,
+             iter = iter,
+             warmup = warmup,
              thin = thin,
              cores = cores,
-             chains = 1,
+             chains = chains,
              pars = c("gini", "sigma_s0", "sigma_s"),
              control = list(max_treedepth = 20,
                             adapt_delta = adapt_delta))
