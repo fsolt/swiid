@@ -1928,7 +1928,12 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
     filter(series == baseline_series) %>% 
     mutate(gini_b = gini,
            gini_b_se = gini_se * 2) %>%
-    select(-gini, -gini_se) %>% 
+    select(-gini, -gini_se) %>%
+    mutate(country = countrycode(country, "country.name", "swiid.name", custom_dict = cc_swiid),
+           region = countrycode(country, "swiid.name", "swiid.region", custom_dict = cc_swiid)) %>% 
+    group_by(region) %>% 
+    mutate(r_bl_obs = n()) %>% 
+    ungroup() %>% 
     group_by(country) %>% 
     mutate(k_bl_obs = n()) %>% 
     ungroup() %>% 
@@ -1974,9 +1979,9 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
   # obs with baseline data
   ineq_bl <- ineq0 %>% 
     right_join(baseline %>% 
-                 select(country, year, gini_b, gini_b_se, k_bl_obs),
+                 select(country, year, gini_b, gini_b_se, r_bl_obs, k_bl_obs),
                by = c("country", "year")) %>% 
-    arrange(desc(k_bl_obs)) %>% 
+    arrange(desc(r_bl_obs), desc(k_bl_obs)) %>% 
     group_by(country, series) 
   
   ineq_bl_series <- ineq_bl %>% pull(series) %>% unique()
@@ -2221,7 +2226,10 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
     left_join(rho_es %>% select(res, recode) %>% unique(), by = "res") %>% 
     mutate(kwcode = if_else(is.na(kwcode), 0L, kwcode),
            kecode = if_else(is.na(kecode), 0L, kecode)) %>% 
-    arrange(desc(ibl), desc(bl), desc(obl), desc(kbl), desc(kw), desc(ke), desc(k_bl_obs), desc(country_obs))
+    arrange(desc(ibl), desc(bl), desc(obl), desc(kbl), desc(kw), desc(ke), 
+            desc(r_bl_obs), region, 
+            desc(k_bl_obs), desc(country_obs), country,
+            wdes, series)
   
   return(list(ineq2, rho_we, rho_wd, ineq0))
 }
