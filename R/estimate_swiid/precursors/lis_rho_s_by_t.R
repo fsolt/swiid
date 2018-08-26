@@ -90,25 +90,25 @@ x <- x0 %>%
 skt <- skt0 %>% 
   left_join(x %>% select(scode, kwecode, rwecode) %>% distinct(), by = "scode")
 
-kwe_skt <- skt %>% 
+skt_kwe <- skt %>% 
   arrange(kwecode) %>% 
   rowid_to_column() %>% 
   group_by(kwecode) %>% 
-  summarize(kwe_skt_start = min(rowid),     # which skt starts each kwe?
-            kwe_skt_end = max(rowid))      # which skt ends each kwe?
+  summarize(skt_kwe_start = min(rowid),     # which skt starts each kwe?
+            skt_kwe_end = max(rowid))      # which skt ends each kwe?
 
-rwe_skt <- skt %>% 
+skt_rwe <- skt %>% 
   arrange(rwecode) %>% 
   rowid_to_column() %>% 
   group_by(rwecode) %>% 
-  summarize(rwe_skt_start = min(rowid),     # which skt starts each kwe?
-            rwe_skt_end = max(rowid))      # which skt ends each kwe?
+  summarize(skt_rwe_start = min(rowid),     # which skt starts each kwe?
+            skt_rwe_end = max(rowid))      # which skt ends each kwe?
 
 kn <- x %>% 
   group_by(kcode) %>% 
   summarize(country = first(country),
-            kt1 = min(ktcode),
-            yrspan = first(n_yrs),
+            kt_k_start = min(ktcode),
+            kt_k_end = max(ktcode),
             kr = first(rcode),
             bk = as.numeric(any(!is.na(gini_b)))) %>% 
   ungroup()
@@ -214,8 +214,8 @@ source_data <- list(  K = max(x$kcode),
                       gini_b_se = x$gini_b_se[!is.na(x$gini_b_se)],
                       
                       bk = kn$bk,
-                      kn = kn$yrspan,
-                      kt1 = kn$kt1,
+                      kt_k_start = kn$kt_k_start,
+                      kt_k_end = kn$kt_k_end,
                       kr = kn$kr,
                       nbkt = kt1$n, 
  
@@ -231,10 +231,10 @@ source_data <- list(  K = max(x$kcode),
                       sr1 = sn$sr1,
                       sj1 = sn$sj1,
                       
-                      kwe_skt_start = kwe_skt$kwe_skt_start,
-                      kwe_skt_end = kwe_skt$kwe_skt_end,
-                      rwe_skt_start = rwe_skt$rwe_skt_start,
-                      rwe_skt_end = rwe_skt$rwe_skt_end,
+                      skt_kwe_start = skt_kwe$skt_kwe_start,
+                      skt_kwe_end = skt_kwe$skt_kwe_end,
+                      skt_rwe_start = skt_rwe$skt_rwe_start,
+                      skt_rwe_end = skt_rwe$skt_rwe_end,
                       
                       M = length(rho_we$rho),
                       kkm = rho_we$kcode,      
@@ -275,11 +275,12 @@ out1 <- stan(file = "R/estimate_swiid/precursors/lis_rho_s_by_t.stan",
              thin = thin,
              cores = cores,
              chains = chains,
-             pars = c("gini", "sigma_s0", "sigma_s"),
+             pars = c("gini", "sigma_s0", "sigma_s", "sigma_kwe", "sigma_gini"),
              control = list(max_treedepth = 20,
                             adapt_delta = adapt_delta))
 runtime <- proc.time() - start
 runtime
+beepr::beep()
 
 lapply(get_sampler_params(out1, inc_warmup = FALSE),
        summary, digits = 2)
