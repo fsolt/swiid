@@ -104,8 +104,8 @@ parameters {
 
 model {
   sigma_gini ~ normal(.01, .0025);
-  sigma_s0 ~ normal(0, .05);
-  sigma_s ~ normal(0, .05);
+  sigma_s0 ~ normal(0, .025);
+  sigma_s ~ normal(0, .0005);
   sigma_kwe ~ normal(0, .05);
   // for (r in 1:R) {
   //   sigma_rwe[r] ~ normal(.04, .015) T[0,];
