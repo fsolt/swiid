@@ -31,8 +31,8 @@ data{
   vector<lower=0, upper=1>[N_wbl] gini_b_se; // std error of baseline gini for obs n
   
   int<lower=0, upper=1> bk[K];            // baseline availability indicator for country k
-  int<lower=1, upper=T> kn[K];            // number of observed & interpolated country-years by country
-  int<lower=1, upper=KT> kt1[K];          // location of first kt for country k
+  int<lower=1, upper=KT> kt_k_start[K];   // location of first kt for country k
+  int<lower=1, upper=KT> kt_k_end[K];     // location of last kt for country k
   int<lower=0, upper=N_ibl> nbkt[KT];     // obs n with baseline for country-year kt
   
   int<lower=1, upper=T> sn[S];            // number of observed & interpolated country-years by series
@@ -123,14 +123,14 @@ model {
 //  rho_w ~ normal(rho_w_t, rho_w_se);
   
   for (k in 1:K) {
-    if (nbkt[kt1[k]] == 0) {                              // if first year has no baseline observation:
-      gini[kt1[k]] ~ lognormal(-1, .25);                  // first year is a random draw,
+    if (nbkt[kt_k_start[k]] == 0) {                              // if first year has no baseline observation:
+      gini[kt_k_start[k]] ~ lognormal(-1, .25);                  // first year is a random draw,
     } else {                                              // but if first year has a baseline observation:
-      gini[kt1[k]] ~ normal(gini_b[nbkt[kt1[k]]], gini_b_se[nbkt[kt1[k]]]); // use the baseline
+      gini[kt_k_start[k]] ~ normal(gini_b[nbkt[kt_k_start[k]]], gini_b_se[nbkt[kt_k_start[k]]]); // use the baseline
     }
-    if (kn[k] > 1) {                              // if more than one year:
+    if (kt_k_start[k] != kt_k_end[k]) {                   // if more than one year:
       // after first year, a random walk
-      gini[(kt1[k]+1):(kt1[k]+kn[k]-1)] ~ normal(gini[(kt1[k]):(kt1[k]+kn[k]-2)], sigma_gini);
+      gini[(kt_k_start[k]+1):kt_k_end[k]] ~ normal(gini[kt_k_start[k]:(kt_k_end[k]-1)], sigma_gini);
     }
   }
 
