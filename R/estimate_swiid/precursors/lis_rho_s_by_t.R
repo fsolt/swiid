@@ -142,6 +142,7 @@ sn <- x %>%
             shnoo = as.numeric(sum(is.na(gini_b)) > 0),
             skt1 = min(sktcode),
             yrspan = max(year) - min(year) + 1,
+            s_bl_obs = sum(!is.na(gini_b)),
             sr1 = any(sktcode == skt1 & !is.na(gini_b)) %>% as.numeric()) %>% 
   ungroup() %>% 
   left_join(sj, by = c("scode", "country", "series")) %>% 
@@ -193,7 +194,7 @@ source_data <- list(  K = max(x$kcode),
                       N = nrow(x),
                       N_ibl = nrow(x %>% filter(ibl)),
                       N_wbl = nrow(x %>% filter(!is.na(gini_b))),
-                      N_obl = nrow(x %>% filter(s_bl_obs > 0)),
+                      N_obl = nrow(x %>% filter(s_bl_obs > 2)),
                       N_bk = nrow(x %>% filter(k_bl_obs > 0)),
                       N_kw = nrow(x %>% filter(kw)),
                       
@@ -227,6 +228,7 @@ source_data <- list(  K = max(x$kcode),
                       
                       sn = sn$yrspan,
                       shnoo = sn$shnoo,
+                      s_bl_obs = sn$s_bl_obs,
                       skt1 = sn$skt1,
                       sr1 = sn$sr1,
                       sj1 = sn$sj1,
@@ -270,12 +272,12 @@ start <- proc.time()
 out1 <- stan(file = "R/estimate_swiid/precursors/lis_rho_s_by_t.stan",
              data = source_data,
              seed = seed,
-             iter = iter,
-             warmup = warmup,
-             thin = thin,
+             iter = 100,
+             warmup = 70,
+             thin = 1,
              cores = cores,
              chains = chains,
-             pars = c("gini", "sigma_s0", "sigma_s", "sigma_kwe", "sigma_gini"),
+             pars = c("gini", "sigma_gini", "sigma_s0", "sigma_s", "sigma_kwe"),
              control = list(max_treedepth = 20,
                             adapt_delta = adapt_delta))
 runtime <- proc.time() - start

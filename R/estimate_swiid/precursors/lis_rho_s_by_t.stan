@@ -38,6 +38,7 @@ data{
   
   int<lower=1, upper=T> sn[S];            // number of observed & interpolated country-years by series
   int<lower=0, upper=1> shnoo[S];         // indicator for whether series has non-overlapping observations
+  int<lower=0> s_bl_obs[S];               // number of series observations with baseline
   int<lower=1, upper=SKT> skt1[S];        // location of first skt for series s
   
   int<lower=1> M;                         // number of observed ratios of baseline to wd_es (rho_we)
@@ -127,9 +128,11 @@ model {
   }
 
   for (s in 1:S) {        // for each series
-    if (shnoo[s] == 1) {  // check if series has non-overlapping observations (to baseline)
-      rho_s[skt1[s]] ~ lognormal(prior_m_s, prior_s_s);
-      rho_s[(skt1[s]+1):(skt1[s]+sn[s]-1)] ~ normal(rho_s[(skt1[s]):(skt1[s]+sn[s]-2)], sigma_s0); 
+    if (shnoo[s] == 1) {  // check if series has 3+ overlapping obs and some non-overlapping obs
+      if (s_bl_obs[s] > 1) {
+        rho_s[skt1[s]] ~ lognormal(prior_m_s, prior_s_s);
+        rho_s[(skt1[s]+1):(skt1[s]+sn[s]-1)] ~ normal(rho_s[(skt1[s]):(skt1[s]+sn[s]-2)], sigma_s0);
+      }
     }
   }
 
