@@ -30,6 +30,9 @@ go with an indicator matrix
 ____
  
 use slices?
-series have to be nested in kwe order
+series s with obl have to be nested in kwe order
 > but then it can all be vectorized over kwe: rho_kwe = mean(rho_s[kwe_skt_start:kwe_skt_stop]));
- 
+
+[X] clean up code assignments
+[X] confirm that scode can be reordered
+[X] assign appropriately
