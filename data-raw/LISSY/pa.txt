@@ -1,6 +1,6 @@
 From: postbox@lisdatacenter.org
-Subject: job 538789 pa
-Date: June 15, 2018 at 3:46:01 PM CDT
+Subject: job 572013 pa
+Date: November 9, 2018 at 12:25:53 PM CST
 To: fsolt@mac.com
 
 ############################### NOTICE TO USERS ###############################
@@ -53,7 +53,7 @@ Loading required package: readstata13
 >  
 > topBottom <- function(var, botline, topline) { 
 +   tb <- ifelse(var < botline, botline, var) 
-+   tb <- ifelse(var > topline, topline, var) 
++   tb <- ifelse(tb > topline, topline, var) 
 +   return(tb) 
 + } 
 >  
@@ -121,7 +121,8 @@ Loading required package: readstata13
 +   if (!cc %in% ccs) { 
 +     stop("Please specify a LIS country in iso2c format") 
 +   } 
-+   yy <- as.character(c(c(67, 69, 71, 73:75, 78:99), paste0("0", 0:9), c(10:18))) 
++   last_year_yy <- as.numeric(format(Sys.Date(), "%Y")) - 2001 
++   yy <- as.character(c(c(67, 69, 71, 73:75, 78:99), paste0("0", 0:9), c(10:last_year_yy))) 
 +  
 +   datasets <- paste0(rep(cc, each = length(yy)), rep(yy, times = length(cc)), "h") 
 +   vars <- c("dhi", "hi", "factor", "hitp", "hc", "hpopwgt", "nhhmem", "nhhmem13", "grossnet") 
@@ -211,6 +212,6 @@ pa13h,disp_ae,0.4812,0.0047,120
 > 
 > proc.time()
    user  system elapsed 
- 96.882   0.527 117.562 
+101.793   0.410 261.548 
 
 

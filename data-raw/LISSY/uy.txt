@@ -1,6 +1,6 @@
 From: postbox@lisdatacenter.org
-Subject: job 538822 uy
-Date: June 15, 2018 at 5:28:57 PM CDT
+Subject: job 572031 uy
+Date: November 9, 2018 at 1:10:11 PM CST
 To: fsolt@mac.com
 
 ############################### NOTICE TO USERS ###############################
@@ -53,7 +53,7 @@ Loading required package: readstata13
 >  
 > topBottom <- function(var, botline, topline) { 
 +   tb <- ifelse(var < botline, botline, var) 
-+   tb <- ifelse(var > topline, topline, var) 
++   tb <- ifelse(tb > topline, topline, var) 
 +   return(tb) 
 + } 
 >  
@@ -244,6 +244,6 @@ uy16h,disp_ae,0.3722,0.0018,200
 > 
 > proc.time()
    user  system elapsed 
-504.697   0.956 793.289 
+470.088   1.098 525.449 
 
 

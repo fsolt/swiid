@@ -1,6 +1,6 @@
 From: postbox@lisdatacenter.org
-Subject: job 538819 uk
-Date: June 15, 2018 at 5:12:34 PM CDT
+Subject: job 572029 uk
+Date: November 9, 2018 at 1:14:41 PM CST
 To: fsolt@mac.com
 
 ############################### NOTICE TO USERS ###############################
@@ -53,7 +53,7 @@ Loading required package: readstata13
 >  
 > topBottom <- function(var, botline, topline) { 
 +   tb <- ifelse(var < botline, botline, var) 
-+   tb <- ifelse(var > topline, topline, var) 
++   tb <- ifelse(tb > topline, topline, var) 
 +   return(tb) 
 + } 
 >  
@@ -359,7 +359,7 @@ uk13h,disp_oecdm,0.3272,0.0034,110
 uk13h,disp_ae,0.3322,0.0032,110
 > 
 > proc.time()
-   user  system elapsed 
-465.733   0.765 885.208 
+    user   system  elapsed 
+ 449.485    0.927 1120.421 
 
 
