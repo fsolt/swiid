@@ -504,13 +504,15 @@ abs <- bind_rows(abs_de, abs_gh)
 rm(abs_de, abs_gh)
 
 
-# Instituto Naciónal de Estadística de Bolivia (update file)
-# http://www.ine.gob.bo > Estadísticas Sociales > Pobreza > Linea de Pobreza > Cuadros Estadísticos >
-#   Indicadores de Distribución del Ingreso > select years > Generar > Exportar a Excel
-
-inebo <- read_excel("data-raw/inebo.xlsx", skip = 6) %>% 
-  filter(DESCRIPCION == "Bolivia") %>% 
-  select(-DESCRIPCION) %>% 
+# Instituto Naciónal de Estadística de Bolivia (automated)
+inebo_link <- "https://www.ine.gob.bo/ext_sitemas/cuadr_mand/sociales/index.php"
+inebo <- read_html(inebo_link) %>% 
+  html_table() %>% 
+  first() %>% 
+  first_row_to_names() %>% 
+  as_tibble() %>% 
+  filter(str_detect(`Indicadores Sociales`, "GINI")) %>% 
+  select(matches("\\d{4}")) %>% 
   gather(key = year, value = gini) %>% 
   transmute(country = "Bolivia",
             year = as.numeric(year),
@@ -522,7 +524,8 @@ inebo <- read_excel("data-raw/inebo.xlsx", skip = 6) %>%
             series = paste("INE Bolivia", welfare_def, equiv_scale),
             source1 = "Instituto Naciónal de Estadística de Bolivia",
             page = "",
-            link = "http://www.ine.gob.bo/index.php/2016-08-10-15-59-03/introduccion-2")
+            link = inebo_link) %>% 
+  filter(!is.na(gini))
 
 
 # Belarus National Statistical Committee (automated, but will probably need to update wrangle)
