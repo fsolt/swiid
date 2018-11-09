@@ -1,5 +1,4 @@
 library(tidyverse)
-library(stringr)
 library(mailR)
 
 ccs <- c("au", "at", "be", "br", "ca", "cl", "cn", "co", "cz", "dk", 
@@ -10,7 +9,7 @@ ccs <- c("au", "at", "be", "br", "ca", "cl", "cn", "co", "cz", "dk",
 
 get_lis_ginis <- function(ccs, wait = 180) {
   gmail_user <- getOption("gmail_user")         # set all of these in .Rprofile, e.g.: 
-  gmail_password <- getOption("gmail_password") # options("gmail_user" = "juanita_herrara@gmail.com", 
+  gmail_password <- getOption("gmail_password") # options("gmail_user" = "juanita_herrera@gmail.com", 
   lis_user <- getOption("lis_user")             #         "gmail_password" = "my_password")
   lis_password <- getOption("lis_password")
   
