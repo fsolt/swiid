@@ -1224,7 +1224,7 @@ dgeec <- extract_tables("data-raw/dgeec.pdf", pages = 2) %>%
 
 
 # Philippines Statistical Agency (automated)
-psa_link <- "https://www.psa.gov.ph/sites/default/files/T2_9a_0.csv"
+psa_link <- "https://psa.gov.ph/sites/default/files/T2_9a_0.csv"
 download.file(psa_link, "data-raw/psa.csv")
 
 psa <- read_csv("data-raw/psa.csv", skip = 3) %>% 
