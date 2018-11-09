@@ -350,7 +350,7 @@ afr_gini <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-
             link = "https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv")
 
 
-# World Bank Povcalnet
+# World Bank Povcalnet (automated)
 wb_zip <- "http://databank.worldbank.org/data/download/WDI_csv.zip"
 download.file(wb_zip, "data-raw/wb.zip")
 
@@ -469,7 +469,7 @@ rm(arm_page, arm_reports)
 # confirm latest release at: http://www.abs.gov.au/AUSSTATS/abs@.nsf/second+level+view?ReadForm&prodno=6523.0&viewtitle=Household%20Income%20and%20Wealth,%20Australia~2013-14~Latest~04/09/2015&&tabname=Past%20Future%20Issues&prodno=6523.0&issue=2013-14&num=&view=&
 # latest release link > downloads tab > copy link to download xls for "Household Income and Income Distribution, Australia, 1994–95 to [year]"
 
-abs_link <- "http://www.abs.gov.au/ausstats/subscriber.nsf/log?openagent&65230DO001_201516.xls&6523.0&Data%20Cubes&432A10E61C768B3FCA2581C600111BD7&0&2015-16&08.12.2017&Latest"
+abs_link <- "http://www.abs.gov.au/AUSSTATS/subscriber.nsf/log?openagent&65230do001_201516.xls&6523.0&Data%20Cubes&D855CA80E6B4C593CA2582D5001333CC&0&2015-16&26.07.2018&Latest"
 download.file(abs_link, "data-raw/abs.xls")
 
 abs_format <- function(sheet, wd, es) {
@@ -527,20 +527,26 @@ inebo <- read_excel("data-raw/inebo.xlsx", skip = 6) %>%
 
 # Belarus National Statistical Committee (automated, but will probably need to update wrangle)
 belstat_page <- "http://www.belstat.gov.by/en/ofitsialnaya-statistika/social-sector/uroven-zhizni-naseleniya/publikatsii__1/"
-belstat_zip <- html_session(belstat_page) %>% 
-  follow_link("Social Conditions and Standard of Living") %>% 
-  follow_link("Download")
-belstat_link <- belstat_zip$back[1]
-belstat_temp <- tempfile(fileext = ".zip")
-writeBin(belstat_zip$response$content, belstat_temp)
-belstat_dir <- file.path(tempdir(), "belstat")
-unzip(belstat_temp, exdir = belstat_dir) 
-belstat_file <- list.files(belstat_dir) %>% 
-  str_subset(".pdf") %>% 
-  file.path(belstat_dir, .)
-file.rename(belstat_file, "data-raw/belstat.pdf")
-unlink(c(belstat_temp, belstat_dir), recursive = TRUE)
-rm(belstat_zip)
+try(
+  {
+    belstat_zip <- html_session(belstat_page) %>% 
+      follow_link("Social Conditions and Standard of Living") %>% 
+      follow_link("Download")
+    belstat_link <- belstat_zip$back[1]
+    belstat_temp <- tempfile(fileext = ".zip")
+    writeBin(belstat_zip$response$content, belstat_temp)
+    belstat_dir <- file.path(tempdir(), "belstat")
+    unzip(belstat_temp, exdir = belstat_dir) 
+    belstat_file <- list.files(belstat_dir) %>% 
+      str_subset(".pdf") %>% 
+      file.path(belstat_dir, .)
+    file.rename(belstat_file, "data-raw/belstat.pdf")
+    unlink(c(belstat_temp, belstat_dir), recursive = TRUE)
+    rm(belstat_zip)
+  }
+)
+
+if (!exists("belstat_link")) belstat_link <- belstat_page 
 
 belstat <- extract_tables("data-raw/belstat.pdf", pages = 76)[[1]] %>%
   as_data_frame() %>% 
