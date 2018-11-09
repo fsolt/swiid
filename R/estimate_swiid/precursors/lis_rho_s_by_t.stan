@@ -11,8 +11,10 @@ data{
 
   int<lower=1> N;                         // total number of obs
   int<lower=1> N_ibl;                     // number of baseline obs ("is baseline")
-  int<lower=1> N_wbl;                     // number of obs with baseline
-  int<lower=1> N_obl;                     // number of obs in series with some baseline ("overlap baseline")
+  int<lower=1> N_wmbl;                    // number of obs that overlap baseline in series "with many baseline" overlaps
+  int<lower=1> N_wsbl;                    // number of obs that overlap baseline in series at least "with some baseline" overlaps
+  int<lower=1> N_mobl;                    // number of obs with overlap or in series with many baseline overlaps ("many overlapping baseline")
+  int<lower=1> N_sobl;                    // number of obs in series with at least some baseline ("some overlapping baseline")
   int<lower=1> N_bk;                      // number of obs in countries with some baseline data ("baseline countries")
   int<lower=1> N_kw;                      // number of obs with in-country ratios to baseline welfare_def 
 
@@ -28,8 +30,8 @@ data{
   
   vector<lower=0, upper=1>[N] gini_m; 	  // measured gini for observation n
   vector<lower=0, upper=1>[N] gini_m_se;  // std error of measured gini for obs n
-  vector<lower=0, upper=1>[N_wbl] gini_b; // baseline gini for obs n
-  vector<lower=0, upper=1>[N_wbl] gini_b_se; // std error of baseline gini for obs n
+  vector<lower=0, upper=1>[N_wsbl] gini_b;// baseline gini for obs n
+  vector<lower=0, upper=1>[N_wsbl] gini_b_se; // std error of baseline gini for obs n
   
   int<lower=0, upper=1> bk[K];            // baseline availability indicator for country k
   int<lower=1, upper=KT> kt_k_start[K];   // location of first kt for country k
@@ -67,11 +69,12 @@ parameters {
   real<lower=0, upper=1> gini[KT];        // SWIID gini estimate for baseline in country k at time t
   real<lower=0> sigma_gini; 	            // random-walk variance parameter
   vector[N] gini_t;                       // unknown "true" gini given gini_m and gini_m_se
-  vector[N_wbl] gini_b_t;                 // unknown "true" gini given gini_b and gini_b_se
+  vector[N_wsbl] gini_b_t;                // unknown "true" gini given gini_b and gini_b_se
   vector[M] rho_we_t;                     // unknown "true" rho_we given rho_we and rho_we_se
   // vector[P] rho_w_t;                      // unknown "true" rho_wd given rho_w and rho_w_se
   
-  vector<lower=0>[SKT] rho_s;             // ratio of baseline to series s
+  vector<lower=0>[SKT] rho_skt;           // ratio of baseline to series s (by country year)
+  vector<lower=0>[S] rho_sc;              // ratio of baseline to series s (constant)
   real<lower=0> sigma_s0;                 // random-walk variance parameter
   real<lower=0> sigma_s; 	                // series noise 
   
@@ -105,7 +108,7 @@ model {
   // }
   // sigma_kw ~ normal(0, .01);
 
-  rho_s ~ lognormal(prior_m_s, prior_s_s);
+  rho_sc ~ lognormal(prior_m_s, prior_s_s);
   rho_kwe_hat ~ lognormal(prior_m_kwe, prior_s_kwe);
 //  rho_rwe_hat ~ lognormal(prior_m_rwe, prior_s_rwe);
 //  rho_kw_hat ~ lognormal(prior_m_kw, prior_s_kw);
@@ -128,15 +131,16 @@ model {
   }
 
   for (s in 1:S) {        // for each series
-    if (shnoo[s] == 1) {  // check if series has 3+ overlapping obs and some non-overlapping obs
-      if (s_bl_obs[s] > 1) {
-        rho_s[skt1[s]] ~ lognormal(prior_m_s, prior_s_s);
-        rho_s[(skt1[s]+1):(skt1[s]+sn[s]-1)] ~ normal(rho_s[(skt1[s]):(skt1[s]+sn[s]-2)], sigma_s0);
+    if (shnoo[s] == 1) {  // check if series has some non-overlapping obs
+      if (s_bl_obs[s] >= 10) { // and 4+ overlapping obs
+        rho_skt[skt1[s]] ~ lognormal(prior_m_s, prior_s_s);
+        rho_skt[(skt1[s]+1):(skt1[s]+sn[s]-1)] ~ normal(rho_skt[(skt1[s]):(skt1[s]+sn[s]-2)], sigma_s0);
       }
     }
   }
 
-  gini_b_t[N_ibl+1:N_wbl] ~ normal(rho_s[skt[N_ibl+1:N_wbl]] .* gini_t[N_ibl+1:N_wbl], sigma_s); // estimate rho_s
+  gini_b_t[N_ibl+1:N_wmbl] ~ normal(rho_skt[skt[N_ibl+1:N_wmbl]] .* gini_t[N_ibl+1:N_wmbl], sigma_s); // estimate rho_skt
+  gini_b_t[N_wmbl+1:N_wsbl] ~ normal(rho_sc[ss[N_wmbl+1:N_wsbl]] .* gini_t[N_wmbl+1:N_wsbl], sigma_s); // estimate rho_sc
   rho_kwe_hat[kwem] ~ normal(rho_we_t, sigma_kwe);            // estimate rho_kwe_hat (over 1:M)
   // rho_rwe_hat[rwem] ~ normal(rho_we_t, sigma_rwe[rrm]);       // estimate rho_rwe_hat (over 1:M)
   // rho_kw_hat[kwp] ~ normal(rho_w_t, sigma_kw);                // estimate rho_kw_hat (over 1:P)
@@ -144,11 +148,14 @@ model {
   // obs w/ baseline use baseline
   gini[kktt[1:N_ibl]] ~ normal(gini_b[1:N_ibl], gini_b_se[1:N_ibl]); 
   
-  // obs in countries w/ baseline in series w/ overlap use rho_s
-  gini[kktt[(N_wbl+1):N_obl]] ~ normal(gini_t[(N_wbl+1):N_obl] .* rho_s[skt[(N_wbl+1):N_obl]], sigma_s); 
+  // obs in countries w/ baseline in series w/ many overlapping obs use rho_skt
+  gini[kktt[(N_wsbl+1):N_mobl]] ~ normal(gini_t[(N_wsbl+1):N_mobl] .* rho_skt[skt[(N_wsbl+1):N_mobl]], sigma_s); 
+  
+  // obs in countries w/ baseline in series w/ few overlapping obs use rho_sc
+  gini[kktt[(N_mobl+1):N_sobl]] ~ normal(gini_t[(N_mobl+1):N_sobl] .* rho_sc[ss[(N_mobl+1):N_sobl]], sigma_s); 
   
   // obs in countries w/ baseline in series w/o overlap use rho_kwe_hat
-  gini[kktt[(N_obl+1):N_bk]] ~ normal(rho_kwe_hat[kwen[(N_obl+1):N_bk]] .* gini_t[(N_obl+1):N_bk], sigma_kwe);
+  gini[kktt[(N_sobl+1):N_bk]] ~ normal(rho_kwe_hat[kwen[(N_sobl+1):N_bk]] .* gini_t[(N_sobl+1):N_bk], sigma_kwe);
   
   // obs in countries w/o baseline but w/ rho_w use rho_kw_hat for wd adj and then rho_rwe_hat for es adj
   // gini[kktt[N_bk:N_kw]] ~ normal(rho_kw_hat[kwn[N_bk:N_kw]] .* rho_rwe_hat[rwen2[N_bk:N_kw]] .* gini_t[N_bk:N_kw], sigma_krcat[rr[N_bk:N_kw]]);

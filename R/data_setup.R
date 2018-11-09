@@ -2226,7 +2226,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
     left_join(rho_es %>% select(res, recode) %>% unique(), by = "res") %>% 
     mutate(kwcode = if_else(is.na(kwcode), 0L, kwcode),
            kecode = if_else(is.na(kecode), 0L, kecode)) %>% 
-    arrange(desc(ibl), desc(bl), desc(obl), desc(kbl), desc(kw), desc(ke), 
+    arrange(desc(ibl), desc(bl), desc(s_bl_obs), desc(kbl), desc(kw), desc(ke), 
             desc(r_bl_obs), region, 
             desc(k_bl_obs), desc(country_obs), country,
             wdes, series)
