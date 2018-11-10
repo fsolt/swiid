@@ -788,7 +788,7 @@ geostat <- read_delim("https://raw.githubusercontent.com/fsolt/swiid/master/data
             series = paste("Geostat", welfare_def, equiv_scale),
             source1 = "Statistics Georgia",
             page = "",
-            link = "http://pc-axis.geostat.ge")
+            link = "http://pc-axis.geostat.ge/PXWeb/pxweb/ka/Database")
 
 
 # Statistics Hong Kong (update in 2022)
@@ -953,7 +953,7 @@ amar <- read_html(amar_link) %>%
 
 # CSO Ireland (automated)
 cso_ie_link <- "http://www.cso.ie/px/pxeirestat/Database/eirestat/Survey%20on%20Income%20and%20Living%20Conditions%20(SILC)/SIA47.px"
-download.file(cso_ie_link_px, "data-raw/cso_ie.px")
+download.file(cso_ie_link, "data-raw/cso_ie.px")
 
 cso_ie <- pxR::read.px("data-raw/cso_ie.px") %>% 
   pxR:::as.data.frame.px() %>% 
