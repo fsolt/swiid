@@ -1857,7 +1857,6 @@ rm(atg0, brandolini)
 
 # Global Income Distribution Database (Ackah, Bussolo, De Hoyas, and Medvedev 2008, archived)
 # see http://siteresources.worldbank.org/INTPROSPECTS/Resources/334934-1225141925900/GIDDdatasetpaper.doc
-
 gidd_link <- "https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip"
 download.file(gidd_link, "data-raw/GlobalDistStata.zip")
 
