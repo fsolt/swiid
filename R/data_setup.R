@@ -1664,8 +1664,7 @@ cbo <- read_excel("data-raw/cbo.xlsx", sheet = "Figure 16", col_names = FALSE, s
 
 # U.S. Census Bureau (update link and wrangle)
 # https://www.census.gov/topics/income-poverty/income-inequality/data/data-tables.html
-
-uscb_links <- paste0("https://www2.census.gov/programs-surveys/demo/tables/p60/259/tableA", 2:3, ".xls")
+uscb_links <- paste0("https://www2.census.gov/programs-surveys/demo/tables/p60/263/tableA", 2:3, ".xls")
 download.file(uscb_links[1], "data-raw/uscb_hh.xls")
 download.file(uscb_links[2], "data-raw/uscb_ae.xls")
 
@@ -1692,10 +1691,10 @@ uscb_hh <- read_excel("data-raw/uscb_hh.xls", skip = 5) %>%
             page = "",
             link = uscb_links[1])
 
-uscb_ae <- read_excel("data-raw/uscb_ae.xls", skip = 6) %>% 
-  filter(str_detect(dispersion, "Gini")) %>% 
+uscb_ae <- read_excel("data-raw/uscb_ae.xls", skip = 4) %>% 
+  filter(str_detect(`Measures of income dispersion`, "Gini")) %>% 
   mutate(var = c("gini", "gini_se")) %>% 
-  select(-dispersion) %>% 
+  select(-`Measures of income dispersion`) %>% 
   gather(key = year, value = value, -var) %>% 
   spread(key = var, value = value) %>% 
   mutate(year = as.numeric(str_extract(year, "\\d{4}")),
