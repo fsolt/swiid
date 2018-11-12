@@ -1106,7 +1106,6 @@ nbs <- read_excel("data-raw/nbs.xls", skip = 2, sheet = "Лист1") %>%
 
 # Statistics Office of Montenegro (automated, but update backup Internet Archive link)
 # Slow server, so get from Internet Archive if it times out
-
 get_monstat_file <- function() {
   monstat_file <- html_session("https://www.monstat.org/eng/index.php") %>% 
     follow_link("Poverty line") %>% 
@@ -1140,7 +1139,6 @@ monstat <- read_excel("data-raw/monstat.xls", skip = 1) %>%
 
 
 # Statistics New Zealand (archived)
-
 snz_link <- "https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Income.xls"
 download.file(snz_link, "data-raw/snz.xls")
 
@@ -1186,7 +1184,6 @@ nzmsd <- extract_tables("data-raw/nzmsd.pdf", pages = 97) %>%
 
 # Statistics Norway (update file and wrangle)
 # Gini & std.err.; total population; all years > pivot clockwise > save as semicolon delimited
-
 ssb_link <- "https://www.ssb.no/statistikkbanken/selectvarval/Define.asp?MainTable=InntUlikhet&PLanguage=1&nyTmpVar=true&CMSSubjectArea=inntekt-og-forbruk&KortNavnWeb=ifhus&StatVariant=&checked=true"
 
 ssb <- read_csv2("data-raw/ssb.csv", skip = 2) %>%  # throws warnings; they are irrelevant
@@ -1205,7 +1202,6 @@ ssb <- read_csv2("data-raw/ssb.csv", skip = 2) %>%  # throws warnings; they are 
 
 # DGEEC Paraguay (update link and, probably, wrangle)
 # http://www.dgeec.gov.py > Publicaciones > Pobreza
-
 dgeec_link <- "https://web.archive.org/web/20180319151156/http://www.dgeec.gov.py/Publicaciones/Biblioteca/diptico%20desigualdad%20ingreso/diptico%20DESIGUALDAD%20DE%20INGRESOS.pdf"
 download.file(dgeec_link, "data-raw/dgeec.pdf")
 
@@ -1257,7 +1253,6 @@ psa <- read_csv("data-raw/psa.csv", skip = 3) %>%
 # Russian Federal State Statistics Service (update link)
 # http://www.gks.ru/wps/wcm/connect/rosstat_main/rosstat/en/main/
 # Social and Economic Indicators of the Russian Federation ('Attachment to the Yearbook')
-
 rosstat_link <- "http://www.gks.ru/free_doc/doc_2017/year/pril_year17-eng.xls"
 download.file(rosstat_link, "data-raw/rosstat.xls")
 
@@ -1287,7 +1282,6 @@ rosstat <- read_excel("data-raw/rosstat.xls", sheet = "Sec.5", skip = 1) %>%
 # These data therefore should be considered a lower bound.  Blech.
 # http://www.tablebuilder.singstat.gov.sg/ > search "gini" > Key Indicators > Search variable "gini" > Create
 # Export > CSV
-
 singstat <- read_csv("data-raw/singstat.csv", skip = 4) %>% 
   filter(!is.na(`2000`)) %>%
   select(-starts_with("X")) %>% 
@@ -1421,7 +1415,6 @@ scb <- scb %>%
 # Taiwan Directorate General of Budget, Accounting, and Statistics 
 # update tdfbas_link [adding 1 to number after 'doc/result/' should work]
 # update file from tdfbas_link2
-
 tdgbas_link <- "http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls"
 download.file(tdgbas_link, "data-raw/tdgbas1.xls")
 
@@ -1569,7 +1562,6 @@ rm(turkstat_list, turkstat_hh, turkstat_oecdm)
 
 # U.K. Office for National Statistics (update links; join with latest file last)
 # https://www.ons.gov.uk/atoz?query=effects+taxes+benefits (new releases in April and January)
-
 ons_link1 <- "https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv"
 download.file(ons_link1, "data-raw/ons1.csv")
 
@@ -1647,17 +1639,15 @@ ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3) %
 
 # U.S. Congressional Budget Office (update link)
 # https://www.cbo.gov/search?search=gini
-
-cbo_link <- "https://www.cbo.gov/sites/default/files/114th-congress-2015-2016/reports/51361-SupplementalData.xlsx"
+cbo_link <- "https://www.cbo.gov/system/files/2018-11/54646-data-underlying-figures.xlsx"
 download.file(cbo_link, "data-raw/cbo.xlsx")
 
-cbo <- read_excel("data-raw/cbo.xlsx", sheet = 9, col_names = FALSE, skip = 10) %>% 
-  select(X__1:X__4) %>% 
+cbo <- read_excel("data-raw/cbo.xlsx", sheet = "Figure 16", col_names = FALSE, skip = 8) %>% 
   filter(!is.na(X__1) & !is.na(X__2)) %>% 
   transmute(year = as.numeric(X__1),
             market = as.numeric(X__2),
-            gross = as.numeric(X__3),
-            disp = as.numeric(X__4)) %>% 
+            gross = as.numeric(X__4),
+            disp = as.numeric(X__5)) %>% 
   filter(!is.na(year)) %>% 
   gather(key = welfare_def, 
          value = gini,
