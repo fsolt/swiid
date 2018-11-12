@@ -1761,7 +1761,7 @@ inev <- read_excel("data-raw/inev.xls", skip = 3) %>%
 # General Statistics Office of Vietnam (update file for gso_vn2; check 'page')
 # http://www.gso.gov.vn/default_en.aspx?tabid=783 > Index of income inequality
 # WHOLE COUNTRY, all years > Comma delimited with heading
-
+# Note 12 Nov 2018: file now has only one sig.fig., so leaving previous (3 sf) version in place for now
 gso_vn1_link <- "http://www.gso.gov.vn/Modules/Doc_Download.aspx?DocID=16773"
 gso_vn2_link <- "http://www.gso.gov.vn/default_en.aspx?tabid=783"
 download.file(gso_vn1_link, "data-raw/gso_vn2013.pdf")
@@ -1806,9 +1806,12 @@ rm(gso_vn1, gso_vn2)
 
 # Additional Inequality Datasets
 
-# Milanovic All the Ginis (update if possible: now using 2014 from WB; 2016 link at CUNY not working currently)
-atg_link <- "https://web.archive.org/web/20170907141001/http://siteresources.worldbank.org/INTRES/Resources/469232-1107449512766/allginis_Oct2014.dta"
-writeBin(httr::content(html_session(atg_link)$response, "raw"), "data-raw/atg.dta")
+# Milanovic All the Ginis (update if possible)
+atg_link <- "https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016"
+tryCatch(writeBin(httr::content(html_session(atg_link)$response, "raw"), "data-raw/atg.dta"), 
+         error = function(e) {
+           download.file("https://github.com/fsolt/swiid/raw/master/data-raw/atg.dta", "data-raw/atg.dta")
+         })
 
 atg0 <- haven::read_dta("data-raw/atg.dta", encoding = "latin1") %>% 
   select(contcod, year, ends_with("_INDIE")) %>% 
