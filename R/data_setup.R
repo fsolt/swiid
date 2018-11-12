@@ -1161,28 +1161,28 @@ snz <- read_excel("data-raw/snz.xls",
 
 # New Zealand Ministry of Social Development
 # update link from http://www.msd.govt.nz/about-msd-and-our-work/publications-resources/monitoring/household-incomes/index.html
-# and wrangle (including publication year)
+# (if a .doc file, install LibreOffice, follow instructions at https://ask.libreoffice.org/en/question/12084/how-to-convert-documents-to-pdf-on-osx/?answer=50029#post-id-50029, and convert via command line)
+# update wrangle (including publication year)
+nzmsd_link <- "https://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2018/2018-household-incomes-in-new-zealand-report.doc"
+download.file(nzmsd_link, "data-raw/nzmsd.doc")
+system('soffice --headless --convert-to pdf:"writer_pdf_Export" --outdir ./data-raw data-raw/nzmsd.doc')
 
-nzmsd_link <- "http://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2017/2017-incomes-report-wed-19-july-2017.pdf"
-download.file(nzmsd_link, "data-raw/nzmsd.pdf")
-
-nzmsd <- extract_tables("data-raw/nzmsd.pdf", pages = 92) %>% 
+nzmsd <- extract_tables("data-raw/nzmsd.pdf", pages = 97) %>% 
   first() %>% 
-  t() %>% 
   as_tibble() %>% 
+  filter(str_detect(V1, "\\d{4}")) %>% 
   transmute(country = "New Zealand",
-            year = if_else(as.numeric(V1) < 50, as.numeric(paste0("20", V1)), as.numeric(paste0("19", V1))),
-            gini = as.numeric(V3)/100,
+            year = as.numeric(V1),
+            gini = as.numeric(str_extract(V2, "\\d\\d\\.\\d"))/100,
             gini_se = NA,
             welfare_def = "disp",
             equiv_scale = "sqrt",
             monetary = NA,
-            series = paste("Perry 2017", welfare_def, equiv_scale),
-            source1 = "Perry 2017",
-            page = "92",
+            series = paste("Perry 2018", welfare_def, equiv_scale),
+            source1 = "Perry 2018",
+            page = "95",
             link = nzmsd_link) %>% 
   filter(!is.na(gini))
-
 
 # Statistics Norway (update file and wrangle)
 # Gini & std.err.; total population; all years > pivot clockwise > save as semicolon delimited
