@@ -1817,7 +1817,7 @@ atg0 <- haven::read_dta("data-raw/atg.dta", encoding = "latin1") %>%
   select(contcod, year, ends_with("_INDIE")) %>% 
   filter(!is.na(gini_INDIE)) %>% 
   mutate(country = countrycode(contcod, "wb_api3c", "swiid.name", custom_dict = cc_swiid)) %>% 
-  filter(country == "Poland" | country == "United Kingdom") %>% 
+  filter(country == "United Kingdom") %>% 
   transmute(country = country,
             year = year,
             gini = gini_INDIE/100,
@@ -1827,7 +1827,7 @@ atg0 <- haven::read_dta("data-raw/atg.dta", encoding = "latin1") %>%
             equiv_scale = if_else(Dhh_INDIE == 1, "hh", "pc"),
             monetary = NA,
             series = paste("AtG", country, welfare_def, equiv_scale),
-            source1 = "Milanovic 2014",
+            source1 = "Milanovic 2016",
             page = "",
             link = atg_link)
 
@@ -1845,7 +1845,7 @@ brandolini <- haven::read_dta("data-raw/atg.dta", encoding = "latin1") %>%
             equiv_scale = if_else(Dhh_INDIE == 1, "hh", "pc"),
             monetary = NA,
             series = paste("Brandolini1998", country, welfare_def, equiv_scale),
-            source1 = "Milanovic 2014; Brandolini 1998",
+            source1 = "Milanovic 2016; Brandolini 1998",
             page = "",
             link = atg_link)
 
