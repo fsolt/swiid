@@ -1284,6 +1284,12 @@ Poland,1985,0.253,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright
 Poland,1987,0.25,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Poland,1988,0.246,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Poland,1989,0.268,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
+Poland,1985,0.253,,disp,pc,,CB1997 Poland disp pc,Caselli and Battini 1997,2,https://link.springer.com/article/10.1023/A%3A1009541105457
+Poland,1988,0.246,,disp,pc,,CB1997 Poland disp pc,Caselli and Battini 1997,2,https://link.springer.com/article/10.1023/A%3A1009541105457
+Poland,1989,0.268,,disp,pc,,CB1997 Poland disp pc,Caselli and Battini 1997,2,https://link.springer.com/article/10.1023/A%3A1009541105457
+Poland,1990,0.258,,disp,pc,,CB1997 Poland disp pc,Caselli and Battini 1997,2,https://link.springer.com/article/10.1023/A%3A1009541105457
+Poland,1991,0.253,,disp,pc,,CB1997 Poland disp pc,Caselli and Battini 1997,2,https://link.springer.com/article/10.1023/A%3A1009541105457
+Poland,1992,0.26,,disp,pc,,CB1997 Poland disp pc,Caselli and Battini 1997,2,https://link.springer.com/article/10.1023/A%3A1009541105457
 Poland,1989,0.249,,disp,pc,,Cornia1994 Poland disp pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Poland,1990,0.191,,disp,pc,,Cornia1994 Poland disp pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Poland,1991,0.225,,disp,pc,,Cornia1994 Poland disp pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
@@ -1392,6 +1398,25 @@ Poland,1999,0.302,,con,pc,FALSE,MY2006 Poland con pc 5,Mitra and Yemtsov 2006,10
 Poland,2000,0.305,,con,pc,FALSE,MY2006 Poland con pc 5,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Poland,2001,0.307,,con,pc,FALSE,MY2006 Poland con pc 5,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Poland,2002,0.32,,con,pc,FALSE,MY2006 Poland con pc 5,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
+Poland,1994,0.379,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,1995,0.377,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,1996,0.386,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,1997,0.395,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,1998,0.366,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,1999,0.377,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,2000,0.395,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,2001,0.395,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,2002,0.407,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,1994,0.308,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,1995,0.304,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,1996,0.312,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,1997,0.323,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,1998,0.293,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,1999,0.298,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,2000,0.311,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,2001,0.308,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,2002,0.317,,disp,pc,,PSV2004 Poland con pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,2002,0.28,,con,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",6,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
 Poland,1990,0.177,,con,pc,,Park1995 Poland con pc,Tabatabai 1996; Park 1995,121,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Poland,1990,0.257,,disp,pc,,Park1995 Poland disp pc,Tabatabai 1996; Park 1995,121,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Portugal,1994,0.436,,gross,hh,,Budria2007 gross hh,Budria 2007,32,https://mpra.ub.uni-muenchen.de/1784/1/MPRA_paper_1784.pdf
