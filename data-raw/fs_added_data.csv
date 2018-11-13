@@ -107,6 +107,7 @@ Bahamas,2001,0.5745,,con,pc,TRUE,Statistics Bahamas con pc,Statistics Bahamas 20
 Bahamas,2013,0.414,,con,pc,TRUE,Statistics Bahamas con pc,Statistics Bahamas 2016,21,https://www.bahamas.gov.bs/wps/wcm/connect/5312dd47-5cd9-45f5-bf6c-dea99f3a6226/Bahamas+Household+Expenditure+Survey+2013+Report_v2.pdf?MOD=AJPERES
 Bahamas,2003,0.48,,market,hh,,Statistics Bahamas market hh,Statistics Bahamas 2005,20,https://web.archive.org/web/20180427210852/http://www.centralbankbahamas.com/download/LFS_report_2004.pdf
 Bahamas,2004,0.43,,market,hh,,Statistics Bahamas market hh,Statistics Bahamas 2005,20,https://web.archive.org/web/20180427210852/http://www.centralbankbahamas.com/download/LFS_report_2004.pdf
+Bahrain,2014,0.596,,gross,pc,,IGA 2017,Bahrain Information & eGovernment Authority 2017,51,http://www.data.gov.bh/en/ResourceCenter/DownloadFile?id=2484
 Bangladesh,2010,0.321,,con,hh,,BBS con hh,Bangladesh Bureau of Statistics 2011,xxvii,http://203.112.218.65/WebTestApplication/userfiles/Image/LatestReports/HIES-10.pdf
 Bangladesh,2005,0.467,,gross,hh,,BBS gross hh,Bangladesh Bureau of Statistics 2011,30,http://203.112.218.65/WebTestApplication/userfiles/Image/LatestReports/HIES-10.pdf
 Bangladesh,2010,0.458,,gross,hh,,BBS gross hh,Bangladesh Bureau of Statistics 2011,30,http://203.112.218.65/WebTestApplication/userfiles/Image/LatestReports/HIES-10.pdf
@@ -765,6 +766,10 @@ Iran,2013,0.365,,gross,pc,,Statistical Center of Iran gross pc,Statistical Cente
 Iraq,2007,0.356,,con,pc,,Hassine2015 Iraq con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Iraq,2007,0.309,,con,pc,,WB Iraq 2011 con pc,World Bank 2011,19,http://siteresources.worldbank.org/MENAEXT/Resources/Confronting_Poverty_In_Iraq_E_Chapter_3.pdf
 Iraq,2007,0.359,,gross,pc,,WB Iraq 2011 gross pc,World Bank 2011,19,http://siteresources.worldbank.org/MENAEXT/Resources/Confronting_Poverty_In_Iraq_E_Chapter_3.pdf
+Iraq,2007,0.276,,con,pc,,WB Iraq 2013 con pc,World Bank 2013,19,http://microdata.worldbank.org/index.php/catalog/2334/download/34771
+Iraq,2012,0.295,,con,pc,,WB Iraq 2013 con pc,World Bank 2013,19,http://microdata.worldbank.org/index.php/catalog/2334/download/34771
+Iraq,2012,0.295,,con,pc,,WB Iraq 2016 con pc,World Bank 2016,7,http://microdata.worldbank.org/index.php/catalog/2334/download/34771
+Iraq,2014,0.285,,con,pc,,WB Iraq 2016 con pc,World Bank 2016,7,http://microdata.worldbank.org/index.php/catalog/2334/download/34771
 Ireland,1973,0.367,,disp,hh,,CN1993 Ireland disp hh,Callan and Nolan 1993,7,http://www.esri.ie/pubs/WP043.pdf
 Ireland,1980,0.36,,disp,hh,,CN1993 Ireland disp hh,Callan and Nolan 1993,7,http://www.esri.ie/pubs/WP043.pdf
 Ireland,1987,0.352,,disp,hh,,CN1993 Ireland disp hh,Callan and Nolan 1993,7,http://www.esri.ie/pubs/WP043.pdf
@@ -1211,14 +1216,15 @@ Norway,1987,0.322,,disp,hh,,SSB1993 Norway disp hh,Statistics Norway 1993,41,htt
 Norway,1988,0.309,,disp,hh,,SSB1993 Norway disp hh,Statistics Norway 1993,41,https://www.ssb.no/a/histstat/nos/nos_c070.pdf
 Norway,1989,0.343,,disp,hh,,SSB1993 Norway disp hh,Statistics Norway 1993,41,https://www.ssb.no/a/histstat/nos/nos_c070.pdf
 Norway,1990,0.334,,disp,hh,,SSB1993 Norway disp hh,Statistics Norway 1993,41,https://www.ssb.no/a/histstat/nos/nos_c070.pdf
+Oman,2010,0.307,,con,hh,,NCSI2012 Oman con hh,Oman National Center for Statistics and Information 2012,23,https://ncsi.gov.om/Elibrary/LibraryContentDoc/ben_Final%20Findings%20E%202010%20-%202011_964e4334-f010-4f48-aad6-9401454cf803.pdf
 Pakistan,1993,0.303,,con,pc,,FR2008 Pakistan con pc,Ferreira and Ravallion 2008,38,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Pakistan,2004,0.312,,con,pc,,FR2008 Pakistan con pc,Ferreira and Ravallion 2008,38,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
-Pakistan,1988,0.35,,disp,pc,,Jamal 2014 disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
-Pakistan,1999,0.4,,disp,pc,,Jamal 2014 disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
-Pakistan,2002,0.411,,disp,pc,,Jamal 2014 disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
-Pakistan,2005,0.407,,disp,pc,,Jamal 2014 disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
-Pakistan,2008,0.42,,disp,pc,,Jamal 2014 disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
-Pakistan,2011,0.407,,disp,pc,,Jamal 2014 disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
+Pakistan,1988,0.35,,disp,pc,,Jamal 2014 Pakistan disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
+Pakistan,1999,0.4,,disp,pc,,Jamal 2014 Pakistan disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
+Pakistan,2002,0.411,,disp,pc,,Jamal 2014 Pakistan disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
+Pakistan,2005,0.407,,disp,pc,,Jamal 2014 Pakistan disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
+Pakistan,2008,0.42,,disp,pc,,Jamal 2014 Pakistan disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
+Pakistan,2011,0.407,,disp,pc,,Jamal 2014 Pakistan disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
 Pakistan,1964,0.356,,gross,hh,,Mahmood1984 Pakistan gross hh,Mahmood 1984,372,http://www.jstor.org/stable/41258679
 Pakistan,1967,0.349,,gross,hh,,Mahmood1984 Pakistan gross hh,Mahmood 1984,372,http://www.jstor.org/stable/41258679
 Pakistan,1969,0.335,,gross,hh,,Mahmood1984 Pakistan gross hh,Mahmood 1984,372,http://www.jstor.org/stable/41258679
@@ -1498,6 +1504,8 @@ Rwanda,2010,0.49,,con,ae,FALSE,NIS Rwanda con ae 3,National Institute of Statist
 Rwanda,2014,0.448,,con,ae,FALSE,NIS Rwanda con ae 3,National Institute of Statistics of Rwanda 2015,25,http://www.statistics.gov.rw/file/4135/download?token=cylGgLRl
 Samoa,2002,0.45,,con,pc,,ZKM2014 Samoa con pc,"Zhuang, Kanbur, and Maligalig 2014",25,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA25
 Samoa,2008,0.43,,con,pc,,ZKM2014 Samoa con pc,"Zhuang, Kanbur, and Maligalig 2014",25,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA25
+Saudi Arabia,2007,0.513,,con,hh,,GAStat con hh,Saudi Arabia General Authority for Statistics,25,https://www.stats.gov.sa/sites/default/files/household_expenditure_and_income_survey_2013.pdf
+Saudi Arabia,2013,0.459,,con,hh,,GAStat con hh,Saudi Arabia General Authority for Statistics,25,https://www.stats.gov.sa/sites/default/files/household_expenditure_and_income_survey_2013.pdf
 Serbia,2003,0.28,,con,pc,,FR2008 Serbia and Montenegro con pc,Ferreira and Ravallion 2008,39,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Serbia,2002,0.292,,con,pc,FALSE,MY2006 Serbia and Montenegro con pc 1,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Serbia,1997,0.294,,disp,pc,FALSE,Transmonee2004 Serbia disp pc,Transmonee 2004,,https://web.archive.org/web/20050312070421/http://www.unicef-icdc.org:80/cgi-bin/unicef/main.sql?menu=/resources/menu.html&testo=../../resources/transmonee.html
