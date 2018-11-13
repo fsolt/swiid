@@ -17,4 +17,4 @@ res_folds <- map_df(files, function(file_name) {
   return(fold_res)
 })
 
-save(res_folds, "data/res_folds.rda")
+save(res_folds, file = "data/res_folds.rda")
