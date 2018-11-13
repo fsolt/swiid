@@ -1461,7 +1461,7 @@ Cameroon,2007,0.428,,con,pc,FALSE,Povcalnet Cameroon con pc 1,World Bank Povcaln
 Cameroon,2007,0.38659999999999994,,con,sqrt,FALSE,World Bank Africa Poverty Database Cameroon con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
 Cameroon,2014,0.466,,con,pc,FALSE,Povcalnet Cameroon con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Cameroon,2014,0.41229999999999994,,con,sqrt,FALSE,World Bank Africa Poverty Database Cameroon con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
-Canada,1971,0.3729999923706055,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Canada,1971,0.3729999923706055,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Canada,1971,0.3918,0.0022,disp,hh,FALSE,LIS Canada disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1971,0.3745,0.0019,disp,pc,FALSE,LIS Canada disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1971,0.3238,0.0018,disp,sqrt,FALSE,LIS Canada disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
@@ -1471,10 +1471,10 @@ Canada,1971,0.3534,0.0022,gross,sqrt,FALSE,LIS Canada gross sqrt,LISSY,"",https:
 Canada,1971,0.4823,0.0029,market,hh,FALSE,LIS Canada market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1971,0.4614,0.0023,market,pc,FALSE,LIS Canada market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1971,0.4108,0.0024,market,sqrt,FALSE,LIS Canada market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
-Canada,1972,0.3679999923706055,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
-Canada,1973,0.3679999923706055,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
-Canada,1974,0.3629999923706055,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
-Canada,1975,0.36400001525878906,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Canada,1972,0.3679999923706055,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Canada,1973,0.3679999923706055,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Canada,1974,0.3629999923706055,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Canada,1975,0.36400001525878906,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Canada,1975,0.3614,0.002,disp,hh,FALSE,LIS Canada disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1975,0.335,0.0016,disp,pc,FALSE,LIS Canada disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1975,0.294,0.0018,disp,sqrt,FALSE,LIS Canada disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
@@ -1484,7 +1484,7 @@ Canada,1975,0.3221,0.002,gross,sqrt,FALSE,LIS Canada gross sqrt,LISSY,"",https:/
 Canada,1975,0.4601,0.0024,market,hh,FALSE,LIS Canada market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1975,0.4316,0.0022,market,pc,FALSE,LIS Canada market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1975,0.3904,0.002,market,sqrt,FALSE,LIS Canada market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
-Canada,1976,0.37400001525878906,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Canada,1976,0.37400001525878906,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Canada,1976,0.304,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1976,0.303,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1976,0.332,,gross,sqrt,FALSE,"OECD Canada gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -1499,7 +1499,7 @@ Canada,1976,0.33,0.006600000000000001,gross,sqrt,TRUE,Statistics Canada gross sq
 Canada,1976,0.447,0.00894,market,hh,TRUE,Statistics Canada market hh,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100175-eng.zip
 Canada,1976,0.384,0.00768,market,pc,TRUE,Statistics Canada market pc,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100179-eng.zip
 Canada,1976,0.384,0.00768,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100134-eng.zip
-Canada,1977,0.36200000762939455,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Canada,1977,0.36200000762939455,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Canada,1977,0.288,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1977,0.289,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1977,0.317,,gross,sqrt,FALSE,"OECD Canada gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -1514,7 +1514,7 @@ Canada,1977,0.315,0.0063,gross,sqrt,TRUE,Statistics Canada gross sqrt,Statistics
 Canada,1977,0.434,0.00868,market,hh,TRUE,Statistics Canada market hh,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100175-eng.zip
 Canada,1977,0.368,0.00736,market,pc,TRUE,Statistics Canada market pc,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100179-eng.zip
 Canada,1977,0.368,0.00736,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100134-eng.zip
-Canada,1978,0.36700000762939455,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Canada,1978,0.36700000762939455,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Canada,1978,0.293,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1978,0.294,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1978,0.322,,gross,sqrt,FALSE,"OECD Canada gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -1529,7 +1529,7 @@ Canada,1978,0.32,0.0064,gross,sqrt,TRUE,Statistics Canada gross sqrt,Statistics 
 Canada,1978,0.44,0.0088,market,hh,TRUE,Statistics Canada market hh,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100175-eng.zip
 Canada,1978,0.375,0.0075,market,pc,TRUE,Statistics Canada market pc,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100179-eng.zip
 Canada,1978,0.375,0.0075,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100134-eng.zip
-Canada,1979,0.355,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Canada,1979,0.355,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Canada,1979,0.289,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1979,0.289,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1979,0.316,,gross,sqrt,FALSE,"OECD Canada gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -1544,7 +1544,7 @@ Canada,1979,0.315,0.0063,gross,sqrt,TRUE,Statistics Canada gross sqrt,Statistics
 Canada,1979,0.433,0.00866,market,hh,TRUE,Statistics Canada market hh,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100175-eng.zip
 Canada,1979,0.365,0.0073,market,pc,TRUE,Statistics Canada market pc,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100179-eng.zip
 Canada,1979,0.365,0.0073,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100134-eng.zip
-Canada,1980,0.3579999923706055,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Canada,1980,0.3579999923706055,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Canada,1980,0.289,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1980,0.289,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1980,0.316,,gross,sqrt,FALSE,"OECD Canada gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -1559,7 +1559,7 @@ Canada,1980,0.313,0.00626,gross,sqrt,TRUE,Statistics Canada gross sqrt,Statistic
 Canada,1980,0.437,0.00874,market,hh,TRUE,Statistics Canada market hh,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100175-eng.zip
 Canada,1980,0.37,0.0074,market,pc,TRUE,Statistics Canada market pc,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100179-eng.zip
 Canada,1980,0.37,0.0074,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100134-eng.zip
-Canada,1981,0.3509999847412109,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Canada,1981,0.3509999847412109,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Canada,1981,0.3441,0.0026,disp,hh,FALSE,LIS Canada disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1981,0.326,0.0026,disp,pc,FALSE,LIS Canada disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1981,0.2867,0.0022,disp,sqrt,FALSE,LIS Canada disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
@@ -1584,7 +1584,7 @@ Canada,1981,0.313,0.00626,gross,sqrt,TRUE,Statistics Canada gross sqrt,Statistic
 Canada,1981,0.434,0.00868,market,hh,TRUE,Statistics Canada market hh,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100175-eng.zip
 Canada,1981,0.369,0.00738,market,pc,TRUE,Statistics Canada market pc,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100179-eng.zip
 Canada,1981,0.369,0.00738,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100134-eng.zip
-Canada,1982,0.3529999923706055,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Canada,1982,0.3529999923706055,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Canada,1982,0.291,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1982,0.292,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1982,0.322,,gross,sqrt,FALSE,"OECD Canada gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -1599,7 +1599,7 @@ Canada,1982,0.32,0.0064,gross,sqrt,TRUE,Statistics Canada gross sqrt,Statistics 
 Canada,1982,0.451,0.00902,market,hh,TRUE,Statistics Canada market hh,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100175-eng.zip
 Canada,1982,0.388,0.00776,market,pc,TRUE,Statistics Canada market pc,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100179-eng.zip
 Canada,1982,0.388,0.00776,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100134-eng.zip
-Canada,1983,0.3629999923706055,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Canada,1983,0.3629999923706055,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Canada,1983,0.299,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1983,0.3,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1983,0.332,,gross,sqrt,FALSE,"OECD Canada gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -1614,7 +1614,7 @@ Canada,1983,0.329,0.006580000000000001,gross,sqrt,TRUE,Statistics Canada gross s
 Canada,1983,0.469,0.00938,market,hh,TRUE,Statistics Canada market hh,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100175-eng.zip
 Canada,1983,0.403,0.008060000000000001,market,pc,TRUE,Statistics Canada market pc,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100179-eng.zip
 Canada,1983,0.403,0.008060000000000001,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100134-eng.zip
-Canada,1984,0.35900001525878905,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Canada,1984,0.35900001525878905,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Canada,1984,0.296,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1984,0.297,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1984,0.33,,gross,sqrt,FALSE,"OECD Canada gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -1629,7 +1629,7 @@ Canada,1984,0.326,0.006520000000000001,gross,sqrt,TRUE,Statistics Canada gross s
 Canada,1984,0.467,0.009340000000000001,market,hh,TRUE,Statistics Canada market hh,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100175-eng.zip
 Canada,1984,0.401,0.008020000000000001,market,pc,TRUE,Statistics Canada market pc,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100179-eng.zip
 Canada,1984,0.401,0.008020000000000001,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100134-eng.zip
-Canada,1985,0.3579999923706055,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Canada,1985,0.3579999923706055,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Canada,1985,0.293,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1985,0.294,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1985,0.326,,gross,sqrt,FALSE,"OECD Canada gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -1644,7 +1644,7 @@ Canada,1985,0.322,0.00644,gross,sqrt,TRUE,Statistics Canada gross sqrt,Statistic
 Canada,1985,0.464,0.00928,market,hh,TRUE,Statistics Canada market hh,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100175-eng.zip
 Canada,1985,0.395,0.0079,market,pc,TRUE,Statistics Canada market pc,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100179-eng.zip
 Canada,1985,0.395,0.0079,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100134-eng.zip
-Canada,1986,0.35900001525878905,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Canada,1986,0.35900001525878905,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Canada,1986,0.292,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1986,0.293,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1986,0.325,,gross,sqrt,FALSE,"OECD Canada gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -1661,7 +1661,7 @@ Canada,1986,0.322,0.00644,gross,sqrt,TRUE,Statistics Canada gross sqrt,Statistic
 Canada,1986,0.465,0.009300000000000001,market,hh,TRUE,Statistics Canada market hh,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100175-eng.zip
 Canada,1986,0.395,0.0079,market,pc,TRUE,Statistics Canada market pc,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100179-eng.zip
 Canada,1986,0.395,0.0079,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100134-eng.zip
-Canada,1987,0.35700000762939454,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Canada,1987,0.35700000762939454,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Canada,1987,0.287,0.0034,disp,ae,FALSE,LIS Canada disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1987,0.333,0.0035,disp,hh,FALSE,LIS Canada disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1987,0.2789,0.0042,disp,oecdm,FALSE,LIS Canada disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
@@ -1692,7 +1692,7 @@ Canada,1987,0.321,0.00642,gross,sqrt,TRUE,Statistics Canada gross sqrt,Statistic
 Canada,1987,0.466,0.00932,market,hh,TRUE,Statistics Canada market hh,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100175-eng.zip
 Canada,1987,0.392,0.00784,market,pc,TRUE,Statistics Canada market pc,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100179-eng.zip
 Canada,1987,0.392,0.00784,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100134-eng.zip
-Canada,1988,0.355,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Canada,1988,0.355,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Canada,1988,0.284,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1988,0.286,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1988,0.322,,gross,sqrt,FALSE,"OECD Canada gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -1707,7 +1707,7 @@ Canada,1988,0.318,0.00636,gross,sqrt,TRUE,Statistics Canada gross sqrt,Statistic
 Canada,1988,0.467,0.009340000000000001,market,hh,TRUE,Statistics Canada market hh,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100175-eng.zip
 Canada,1988,0.391,0.00782,market,pc,TRUE,Statistics Canada market pc,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100179-eng.zip
 Canada,1988,0.391,0.00782,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100134-eng.zip
-Canada,1989,0.35200000762939454,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Canada,1989,0.35200000762939454,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Canada,1989,0.282,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1989,0.284,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1989,0.32,,gross,sqrt,FALSE,"OECD Canada gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -1722,7 +1722,7 @@ Canada,1989,0.318,0.00636,gross,sqrt,TRUE,Statistics Canada gross sqrt,Statistic
 Canada,1989,0.46,0.0092,market,hh,TRUE,Statistics Canada market hh,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100175-eng.zip
 Canada,1989,0.388,0.00776,market,pc,TRUE,Statistics Canada market pc,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100179-eng.zip
 Canada,1989,0.388,0.00776,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100134-eng.zip
-Canada,1990,0.35200000762939454,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Canada,1990,0.35200000762939454,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Canada,1990,0.287,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1990,0.289,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1990,0.329,,gross,sqrt,FALSE,"OECD Canada gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -1737,7 +1737,7 @@ Canada,1990,0.326,0.006520000000000001,gross,sqrt,TRUE,Statistics Canada gross s
 Canada,1990,0.479,0.00958,market,hh,TRUE,Statistics Canada market hh,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100175-eng.zip
 Canada,1990,0.403,0.008060000000000001,market,pc,TRUE,Statistics Canada market pc,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100179-eng.zip
 Canada,1990,0.403,0.008060000000000001,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100134-eng.zip
-Canada,1991,0.35700000762939454,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Canada,1991,0.35700000762939454,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Canada,1991,0.2822,0.0028,disp,ae,FALSE,LIS Canada disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1991,0.3373,0.0027,disp,hh,FALSE,LIS Canada disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1991,0.2754,0.0027,disp,oecdm,FALSE,LIS Canada disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
@@ -1768,7 +1768,7 @@ Canada,1991,0.334,0.00668,gross,sqrt,TRUE,Statistics Canada gross sqrt,Statistic
 Canada,1991,0.498,0.00996,market,hh,TRUE,Statistics Canada market hh,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100175-eng.zip
 Canada,1991,0.422,0.00844,market,pc,TRUE,Statistics Canada market pc,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100179-eng.zip
 Canada,1991,0.422,0.00844,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100134-eng.zip
-Canada,1992,0.3559999847412109,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Canada,1992,0.3559999847412109,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Canada,1992,0.292,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1992,0.296,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1992,0.338,,gross,sqrt,FALSE,"OECD Canada gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -1783,7 +1783,7 @@ Canada,1992,0.334,0.00668,gross,sqrt,TRUE,Statistics Canada gross sqrt,Statistic
 Canada,1992,0.505,0.0101,market,hh,TRUE,Statistics Canada market hh,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100175-eng.zip
 Canada,1992,0.429,0.00858,market,pc,TRUE,Statistics Canada market pc,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100179-eng.zip
 Canada,1992,0.429,0.00858,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100134-eng.zip
-Canada,1993,0.3579999923706055,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Canada,1993,0.3579999923706055,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Canada,1993,0.286,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1993,0.29,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,1993,0.33,,gross,sqrt,FALSE,"OECD Canada gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -1798,7 +1798,7 @@ Canada,1993,0.329,0.006580000000000001,gross,sqrt,TRUE,Statistics Canada gross s
 Canada,1993,0.505,0.0101,market,hh,TRUE,Statistics Canada market hh,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100175-eng.zip
 Canada,1993,0.429,0.00858,market,pc,TRUE,Statistics Canada market pc,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100179-eng.zip
 Canada,1993,0.429,0.00858,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100134-eng.zip
-Canada,1994,0.36400001525878906,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Canada,1994,0.36400001525878906,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Canada,1994,0.2889,0.0015,disp,ae,FALSE,LIS Canada disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1994,0.3399,0.0015,disp,hh,FALSE,LIS Canada disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1994,0.281,0.0016,disp,oecdm,FALSE,LIS Canada disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
@@ -4533,7 +4533,7 @@ Finland,2016,0.262,,disp,oecdm,FALSE,Statistics Finland disp oecdm,Statistics Fi
 Finland,2016,0.306,,gross,oecdm,FALSE,Statistics Finland gross oecdm,Statistics Finland,"",http://pxnet2.stat.fi/PXWeb/api/v1/en/StatFin/tul/tjt/270_tjt_tau_117.px
 Finland,2016,0.47200000000000003,,market,oecdm,FALSE,Statistics Finland market oecdm,Statistics Finland,"",http://pxnet2.stat.fi/PXWeb/api/v1/en/StatFin/tul/tjt/270_tjt_tau_117.px
 France,1970,0.331,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
-France,1975,0.3340000152587891,,disp,hh,,Brandolini1998 France disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+France,1975,0.3340000152587891,,disp,hh,,Brandolini1998 France disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 France,1975,0.317,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
 France,1975,0.33,,disp,ae,,vGP1984 France disp ae,Tabatabai 1996; van Ginneken and Park 1984,125,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 France,1975,0.39,,disp,hh,,vGP1984 France disp hh,Tabatabai 1996; van Ginneken and Park 1984,125,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -4553,9 +4553,9 @@ France,1978,0.5169,0.0044,market,hh,FALSE,LIS France market hh,LISSY,"",https://
 France,1978,0.4533,0.0043,market,oecdm,FALSE,LIS France market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1978,0.4835,0.0044,market,pc,FALSE,LIS France market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1978,0.4472,0.004,market,sqrt,FALSE,LIS France market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
-France,1979,0.3110000038146973,,disp,hh,,Brandolini1998 France disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+France,1979,0.3110000038146973,,disp,hh,,Brandolini1998 France disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 France,1979,0.297,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
-France,1984,0.3029999923706055,,disp,hh,,Brandolini1998 France disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+France,1984,0.3029999923706055,,disp,hh,,Brandolini1998 France disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 France,1984,0.291,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
 France,1984,0.3487,0.0047,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1984,0.3898,0.004,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -4595,7 +4595,7 @@ France,1989,0.3124,,disp,ae,TRUE,W1999 France disp ae 2,Wagstaff et al. 1999,86,
 France,1989,0.3219,,gross,ae,TRUE,W1999 France gross ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 France,1989,0.329,,gross,ae,TRUE,W1999 France gross ae 2,Wagstaff et al. 1999,86,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 France,1989,0.295,0.003,con,oecdm,FALSE,ZdV2001 France con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
-France,1990,0.29200000762939454,,disp,hh,,Brandolini1998 France disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+France,1990,0.29200000762939454,,disp,hh,,Brandolini1998 France disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 France,1990,0.277,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
 France,1994,0.29,,disp,oecdm,TRUE,Eurostat France disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 France,1994,0.298,0.0025,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -4883,11 +4883,11 @@ Georgia,2016,0.4814,0.0082,market,sqrt,FALSE,LIS Georgia market sqrt,LISSY,"",ht
 Georgia,2016,0.365,,con,pc,FALSE,Povcalnet Georgia con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Georgia,2017,0.45,,con,pc,FALSE,Geostat con pc,Statistics Georgia,"",http://pc-axis.geostat.ge/PXWeb/pxweb/ka/Database
 Georgia,2017,0.41,,gross,pc,FALSE,Geostat gross pc,Statistics Georgia,"",http://pc-axis.geostat.ge/PXWeb/pxweb/ka/Database
-Germany,1960,0.38,,disp,hh,,Brandolini1998 Germany disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
-Germany,1964,0.38,,disp,hh,,Brandolini1998 Germany disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
-Germany,1968,0.3870000076293945,,disp,hh,,Brandolini1998 Germany disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
-Germany,1970,0.3920000076293945,,disp,hh,,Brandolini1998 Germany disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
-Germany,1973,0.37,,disp,hh,,Brandolini1998 Germany disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Germany,1960,0.38,,disp,hh,,Brandolini1998 Germany disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Germany,1964,0.38,,disp,hh,,Brandolini1998 Germany disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Germany,1968,0.3870000076293945,,disp,hh,,Brandolini1998 Germany disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Germany,1970,0.3920000076293945,,disp,hh,,Brandolini1998 Germany disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Germany,1973,0.37,,disp,hh,,Brandolini1998 Germany disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Germany,1973,0.2736,0.0014,disp,ae,FALSE,LIS Germany disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/de.txt
 Germany,1973,0.332,0.0016,disp,hh,FALSE,LIS Germany disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/de.txt
 Germany,1973,0.2688,0.0014,disp,oecdm,FALSE,LIS Germany disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/de.txt
@@ -4906,8 +4906,8 @@ Germany,1973,0.377,0.0017,market,sqrt,FALSE,LIS Germany market sqrt,LISSY,"",htt
 Germany,1974,0.31,,disp,ae,,vGP1984 Germany disp ae,Tabatabai 1996; van Ginneken and Park 1984,125,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Germany,1974,0.37,,disp,hh,,vGP1984 Germany disp hh,Tabatabai 1996; van Ginneken and Park 1984,125,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Germany,1974,0.32,,disp,pc,,vGP1984 Germany disp pc,Tabatabai 1996; van Ginneken and Park 1984,125,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Germany,1975,0.3659999847412109,,disp,hh,,Brandolini1998 Germany disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
-Germany,1978,0.36400001525878906,,disp,hh,,Brandolini1998 Germany disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Germany,1975,0.3659999847412109,,disp,hh,,Brandolini1998 Germany disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Germany,1978,0.36400001525878906,,disp,hh,,Brandolini1998 Germany disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Germany,1978,0.2622,0.0014,disp,ae,FALSE,LIS Germany disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/de.txt
 Germany,1978,0.3311,0.0017,disp,hh,FALSE,LIS Germany disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/de.txt
 Germany,1978,0.2596,0.0014,disp,oecdm,FALSE,LIS Germany disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/de.txt
@@ -4924,7 +4924,7 @@ Germany,1978,0.4163,0.0018,market,oecdm,FALSE,LIS Germany market oecdm,LISSY,"",
 Germany,1978,0.439,0.0018,market,pc,FALSE,LIS Germany market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/de.txt
 Germany,1978,0.4134,0.0018,market,sqrt,FALSE,LIS Germany market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/de.txt
 Germany,1978,0.36,,disp,hh,,vGP1984 Germany disp hh,Tabatabai 1996; van Ginneken and Park 1984,125,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Germany,1980,0.3659999847412109,,disp,hh,,Brandolini1998 Germany disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Germany,1980,0.3659999847412109,,disp,hh,,Brandolini1998 Germany disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Germany,1981,0.3082,0.0049,disp,hh,FALSE,LIS Germany disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/de.txt
 Germany,1981,0.2813,0.0048,disp,pc,FALSE,LIS Germany disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/de.txt
 Germany,1981,0.2439,0.0047,disp,sqrt,FALSE,LIS Germany disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/de.txt
@@ -4936,7 +4936,7 @@ Germany,1981,0.4488,0.0069,market,pc,FALSE,LIS Germany market pc,LISSY,"",https:
 Germany,1981,0.4067,0.0065,market,sqrt,FALSE,LIS Germany market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/de.txt
 Germany,1983,0.263,,disp,ae,FALSE,BP1997 Germany disp ae,Burkhauser and Pourore 1997,14,http://www.jstor.org/stable/2951428
 Germany,1983,0.332,,market,ae,FALSE,BP1997 Germany market ae,Burkhauser and Pourore 1997,14,http://www.jstor.org/stable/2951428
-Germany,1983,0.3390000152587891,,disp,hh,,Brandolini1998 Germany disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Germany,1983,0.3390000152587891,,disp,hh,,Brandolini1998 Germany disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Germany,1983,0.2635,0.0018,disp,ae,FALSE,LIS Germany disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/de.txt
 Germany,1983,0.3273,0.0017,disp,hh,FALSE,LIS Germany disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/de.txt
 Germany,1983,0.2615,0.0018,disp,oecdm,FALSE,LIS Germany disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/de.txt
@@ -4957,7 +4957,7 @@ Germany,1983,0.324,,disp,hh,,Park1995 Germany disp hh,Tabatabai 1996; Park 1995,
 Germany,1983,0.247,0.001,con,oecdm,FALSE,ZdV2001 Germany con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Germany,1984,0.268,,disp,ae,FALSE,BP1997 Germany disp ae,Burkhauser and Pourore 1997,14,http://www.jstor.org/stable/2951428
 Germany,1984,0.337,,market,ae,FALSE,BP1997 Germany market ae,Burkhauser and Pourore 1997,14,http://www.jstor.org/stable/2951428
-Germany,1984,0.3340000152587891,,disp,hh,,Brandolini1998 Germany disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Germany,1984,0.3340000152587891,,disp,hh,,Brandolini1998 Germany disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Germany,1984,0.2675,0.0079,disp,ae,FALSE,LIS Germany disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/de.txt
 Germany,1984,0.3341,0.0104,disp,hh,FALSE,LIS Germany disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/de.txt
 Germany,1984,0.2582,0.0062,disp,oecdm,FALSE,LIS Germany disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/de.txt
@@ -4975,7 +4975,7 @@ Germany,1984,0.4872,0.0126,market,pc,FALSE,LIS Germany market pc,LISSY,"",https:
 Germany,1984,0.4483,0.0083,market,sqrt,FALSE,LIS Germany market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/de.txt
 Germany,1985,0.263,,disp,ae,FALSE,BP1997 Germany disp ae,Burkhauser and Pourore 1997,14,http://www.jstor.org/stable/2951428
 Germany,1985,0.336,,market,ae,FALSE,BP1997 Germany market ae,Burkhauser and Pourore 1997,14,http://www.jstor.org/stable/2951428
-Germany,1985,0.35200000762939454,,disp,hh,,Brandolini1998 Germany disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Germany,1985,0.35200000762939454,,disp,hh,,Brandolini1998 Germany disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Germany,1985,0.251,0.002,disp,sqrt,FALSE,"OECD Germany disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Germany,1985,0.255,0.003,disp,sqrt,FALSE,"OECD Germany disp sqrt, previous def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Germany,1985,0.439,,market,sqrt,FALSE,"OECD Germany market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -9060,8 +9060,8 @@ Netherlands,1977,0.226,,disp,sqrt,FALSE,"OECD Netherlands disp sqrt, previous de
 Netherlands,1977,0.426,,market,sqrt,FALSE,"OECD Netherlands market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Netherlands,1977,0.368,,market,sqrt,FALSE,"OECD Netherlands market sqrt, previous def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Netherlands,1980,0.21,0.003,con,oecdm,FALSE,ZdV2001 Netherlands con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
-Netherlands,1981,0.28299999237060547,,disp,hh,,Brandolini1998 Netherlands disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
-Netherlands,1983,0.27799999237060546,,disp,hh,,Brandolini1998 Netherlands disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Netherlands,1981,0.28299999237060547,,disp,hh,,Brandolini1998 Netherlands disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Netherlands,1983,0.27799999237060546,,disp,hh,,Brandolini1998 Netherlands disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Netherlands,1983,0.3088,0.0068,disp,hh,FALSE,LIS Netherlands disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/nl.txt
 Netherlands,1983,0.2842,0.0063,disp,pc,FALSE,LIS Netherlands disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/nl.txt
 Netherlands,1983,0.2552,0.0078,disp,sqrt,FALSE,LIS Netherlands disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/nl.txt
@@ -9071,12 +9071,12 @@ Netherlands,1983,0.2986,0.0095,gross,sqrt,FALSE,LIS Netherlands gross sqrt,LISSY
 Netherlands,1983,0.5547,0.0094,market,hh,FALSE,LIS Netherlands market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/nl.txt
 Netherlands,1983,0.5251,0.0087,market,pc,FALSE,LIS Netherlands market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/nl.txt
 Netherlands,1983,0.4885,0.0101,market,sqrt,FALSE,LIS Netherlands market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/nl.txt
-Netherlands,1985,0.28100000381469725,,disp,hh,,Brandolini1998 Netherlands disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Netherlands,1985,0.28100000381469725,,disp,hh,,Brandolini1998 Netherlands disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Netherlands,1985,0.272,,disp,sqrt,FALSE,"OECD Netherlands disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Netherlands,1985,0.234,,disp,sqrt,FALSE,"OECD Netherlands disp sqrt, previous def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Netherlands,1985,0.473,,market,sqrt,FALSE,"OECD Netherlands market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Netherlands,1985,0.409,,market,sqrt,FALSE,"OECD Netherlands market sqrt, previous def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Netherlands,1987,0.29399999618530276,,disp,hh,,Brandolini1998 Netherlands disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Netherlands,1987,0.29399999618530276,,disp,hh,,Brandolini1998 Netherlands disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Netherlands,1987,0.313,0.004,disp,hh,FALSE,LIS Netherlands disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/nl.txt
 Netherlands,1987,0.2757,0.0042,disp,pc,FALSE,LIS Netherlands disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/nl.txt
 Netherlands,1987,0.2381,0.0035,disp,sqrt,FALSE,LIS Netherlands disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/nl.txt
@@ -9086,10 +9086,10 @@ Netherlands,1987,0.2883,0.0057,gross,sqrt,FALSE,LIS Netherlands gross sqrt,LISSY
 Netherlands,1987,0.562,0.0071,market,hh,FALSE,LIS Netherlands market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/nl.txt
 Netherlands,1987,0.5194,0.0064,market,pc,FALSE,LIS Netherlands market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/nl.txt
 Netherlands,1987,0.4789,0.0075,market,sqrt,FALSE,LIS Netherlands market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/nl.txt
-Netherlands,1988,0.29,,disp,hh,,Brandolini1998 Netherlands disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Netherlands,1988,0.29,,disp,hh,,Brandolini1998 Netherlands disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Netherlands,1988,0.307,,disp,hh,,Park1995 Netherlands disp hh,Tabatabai 1996; Park 1995,127,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Netherlands,1988,0.214,0.004,con,oecdm,FALSE,ZdV2001 Netherlands con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
-Netherlands,1989,0.29600000381469727,,disp,hh,,Brandolini1998 Netherlands disp hh,Milanovic 2014; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+Netherlands,1989,0.29600000381469727,,disp,hh,,Brandolini1998 Netherlands disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Netherlands,1990,0.2825,0.0045,disp,ae,FALSE,LIS Netherlands disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/nl.txt
 Netherlands,1990,0.3256,0.0041,disp,hh,FALSE,LIS Netherlands disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/nl.txt
 Netherlands,1990,0.2706,0.0054,disp,oecdm,FALSE,LIS Netherlands disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/nl.txt
@@ -10339,7 +10339,6 @@ Philippines,2015,0.4439,,gross,pc,,PSA gross pc,Philippines Statistical Agency,"
 Poland,1983,0.246,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Poland,1984,0.258,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Poland,1985,0.253,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
-Poland,1985,0.23746519088745116,,disp,pc,,AtG Poland disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Poland,1985,0.196,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1985,0.2,,con,oecdm,FALSE,KP2002 con oecdm,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1985,0.222,,con,pc,FALSE,KP2002 con pc,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -10347,7 +10346,6 @@ Poland,1985,0.252,,gross,ae,FALSE,KP2002 gross ae,Keane and Prasad 2002,329,http
 Poland,1985,0.253,,gross,oecdm,FALSE,KP2002 gross oecdm,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1985,0.27,,gross,pc,FALSE,KP2002 gross pc,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1985,0.373,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
-Poland,1986,0.2438068962097168,,disp,pc,,AtG Poland disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Poland,1986,0.2,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1986,0.207,,con,oecdm,FALSE,KP2002 con oecdm,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1986,0.229,,con,pc,FALSE,KP2002 con pc,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -10365,7 +10363,6 @@ Poland,1986,0.4593,0.004,market,hh,FALSE,LIS Poland market hh,LISSY,"",https://r
 Poland,1986,0.3851,0.0029,market,pc,FALSE,LIS Poland market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pl.txt
 Poland,1986,0.3669,0.0032,market,sqrt,FALSE,LIS Poland market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pl.txt
 Poland,1987,0.25,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
-Poland,1987,0.24313190460205078,,disp,pc,,AtG Poland disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Poland,1987,0.205,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1987,0.212,,con,oecdm,FALSE,KP2002 con oecdm,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1987,0.236,,con,pc,FALSE,KP2002 con pc,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -10375,7 +10372,6 @@ Poland,1987,0.27,,gross,pc,FALSE,KP2002 gross pc,Keane and Prasad 2002,329,https
 Poland,1987,0.368,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1987,0.256,,gross,pc,FALSE,Milanovic1998 Poland gross pc,Milanovic 1998,171,https://books.google.com/books?id=cQl9xbuhvNkC
 Poland,1988,0.246,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
-Poland,1988,0.24069129943847656,,disp,pc,,AtG Poland disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Poland,1988,0.211,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1988,0.217,,con,oecdm,FALSE,KP2002 con oecdm,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1988,0.239,,con,pc,FALSE,KP2002 con pc,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -10384,7 +10380,6 @@ Poland,1988,0.256,,gross,oecdm,FALSE,KP2002 gross oecdm,Keane and Prasad 2002,32
 Poland,1988,0.272,,gross,pc,FALSE,KP2002 gross pc,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1988,0.385,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1989,0.268,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
-Poland,1989,0.2516457939147949,,disp,pc,,AtG Poland disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Poland,1989,0.249,,disp,pc,,Cornia1994 Poland disp pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Poland,1989,0.322,,market,pc,,Cornia1994 Poland market pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Poland,1989,0.219,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -10395,7 +10390,6 @@ Poland,1989,0.264,,gross,oecdm,FALSE,KP2002 gross oecdm,Keane and Prasad 2002,32
 Poland,1989,0.278,,gross,pc,FALSE,KP2002 gross pc,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1989,0.384,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1989,0.27545,,disp,pc,FALSE,Transmonee Poland disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
-Poland,1990,0.24777429580688476,,disp,pc,,AtG Poland disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Poland,1990,0.191,,disp,pc,,Cornia1994 Poland disp pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Poland,1990,0.31,,market,pc,,Cornia1994 Poland market pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Poland,1990,0.209,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -10408,7 +10402,6 @@ Poland,1990,0.389,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,ht
 Poland,1990,0.177,,con,pc,,Park1995 Poland con pc,Tabatabai 1996; Park 1995,121,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Poland,1990,0.257,,disp,pc,,Park1995 Poland disp pc,Tabatabai 1996; Park 1995,121,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Poland,1990,0.26845,,disp,pc,FALSE,Transmonee Poland disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
-Poland,1991,0.24688779830932617,,disp,pc,,AtG Poland disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Poland,1991,0.225,,disp,pc,,Cornia1994 Poland disp pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Poland,1991,0.314,,market,pc,,Cornia1994 Poland market pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Poland,1991,0.208,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -10419,7 +10412,6 @@ Poland,1991,0.242,,gross,oecdm,FALSE,KP2002 gross oecdm,Keane and Prasad 2002,32
 Poland,1991,0.266,,gross,pc,FALSE,KP2002 gross pc,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1991,0.404,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1991,0.26548,,disp,pc,FALSE,Transmonee Poland disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
-Poland,1992,0.25025150299072263,,disp,pc,,AtG Poland disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Poland,1992,0.239,,disp,pc,,Cornia1994 Poland disp pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Poland,1992,0.324,,market,pc,,Cornia1994 Poland market pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Poland,1992,0.205,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -10445,7 +10437,6 @@ Poland,1992,0.4095,0.0043,market,oecdm,FALSE,LIS Poland market oecdm,LISSY,"",ht
 Poland,1992,0.4327,0.0051,market,pc,FALSE,LIS Poland market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pl.txt
 Poland,1992,0.4042,0.0045,market,sqrt,FALSE,LIS Poland market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pl.txt
 Poland,1992,0.27441,,disp,pc,FALSE,Transmonee Poland disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
-Poland,1993,0.26259910583496093,,disp,pc,,AtG Poland disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Poland,1993,0.324,,con,pc,,FR2008 Poland con pc,Ferreira and Ravallion 2008,38,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Poland,1993,0.222,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1993,0.234,,con,oecdm,FALSE,KP2002 con oecdm,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -10455,7 +10446,6 @@ Poland,1993,0.257,,gross,oecdm,FALSE,KP2002 gross oecdm,Keane and Prasad 2002,32
 Poland,1993,0.285,,gross,pc,FALSE,KP2002 gross pc,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1993,0.416,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1993,0.31699,,disp,pc,FALSE,Transmonee Poland disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
-Poland,1994,0.27069601058959963,,disp,pc,,AtG Poland disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Poland,1994,0.228,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1994,0.239,,con,oecdm,FALSE,KP2002 con oecdm,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1994,0.268,,con,pc,FALSE,KP2002 con pc,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -10464,7 +10454,6 @@ Poland,1994,0.271,,gross,oecdm,FALSE,KP2002 gross oecdm,Keane and Prasad 2002,32
 Poland,1994,0.298,,gross,pc,FALSE,KP2002 gross pc,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1994,0.437,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1994,0.32269,,disp,pc,FALSE,Transmonee Poland disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
-Poland,1995,0.26857641220092776,,disp,pc,,AtG Poland disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Poland,1995,0.222,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1995,0.234,,con,oecdm,FALSE,KP2002 con oecdm,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1995,0.264,,con,pc,FALSE,KP2002 con pc,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -10488,7 +10477,6 @@ Poland,1995,0.611,0.007,market,oecdm,FALSE,LIS Poland market oecdm,LISSY,"",http
 Poland,1995,0.6282,0.0067,market,pc,FALSE,LIS Poland market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pl.txt
 Poland,1995,0.6072,0.0069,market,sqrt,FALSE,LIS Poland market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pl.txt
 Poland,1995,0.32134,,disp,pc,FALSE,Transmonee Poland disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
-Poland,1996,0.2721371078491211,,disp,pc,,AtG Poland disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Poland,1996,0.227,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1996,0.239,,con,oecdm,FALSE,KP2002 con oecdm,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1996,0.268,,con,pc,FALSE,KP2002 con pc,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -10498,7 +10486,6 @@ Poland,1996,0.301,,gross,pc,FALSE,KP2002 gross pc,Keane and Prasad 2002,329,http
 Poland,1996,0.448,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1996,0.268,,con,pc,FALSE,MY2006 Poland con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Poland,1996,0.32802,,disp,pc,FALSE,Transmonee Poland disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
-Poland,1997,0.282956600189209,,disp,pc,,AtG Poland disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 Poland,1997,0.235,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1997,0.247,,con,oecdm,FALSE,KP2002 con oecdm,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1997,0.277,,con,pc,FALSE,KP2002 con pc,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -13458,23 +13445,23 @@ Ukraine,2014,0.24,,con,pc,FALSE,Povcalnet Ukraine con pc 2,World Bank Povcalnet,
 Ukraine,2015,0.255,,con,pc,FALSE,Povcalnet Ukraine con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Ukraine,2016,0.25,,con,pc,FALSE,Povcalnet Ukraine con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 United Arab Emirates,2008,0.395,,con,pc,,Hassine2015 UAE con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
-United Kingdom,1961,0.29389999389648436,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1961,0.29389999389648436,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1961,0.2611,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
-United Kingdom,1962,0.28049999237060547,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1962,0.28049999237060547,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1962,0.2484,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
-United Kingdom,1963,0.30350000381469727,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1963,0.30350000381469727,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1963,0.2711,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
-United Kingdom,1964,0.3032999992370605,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1964,0.3032999992370605,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1964,0.2641,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
-United Kingdom,1965,0.28649999618530275,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1965,0.28649999618530275,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1965,0.2512,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
-United Kingdom,1966,0.29489999771118164,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1966,0.29489999771118164,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1966,0.2606,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
-United Kingdom,1967,0.2901000022888184,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1967,0.2901000022888184,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1967,0.2509,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
-United Kingdom,1968,0.28420000076293944,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1968,0.28420000076293944,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1968,0.2495,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
-United Kingdom,1969,0.2919000053405762,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1969,0.2919000053405762,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1969,0.2566,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,1969,0.2764,0.0047,disp,ae,FALSE,LIS United Kingdom disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
 United Kingdom,1969,0.3123,0.0032,disp,hh,FALSE,LIS United Kingdom disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
@@ -13491,15 +13478,15 @@ United Kingdom,1969,0.4216,0.0046,market,hh,FALSE,LIS United Kingdom market hh,L
 United Kingdom,1969,0.4432,0.0064,market,oecdm,FALSE,LIS United Kingdom market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
 United Kingdom,1969,0.4282,0.0036,market,pc,FALSE,LIS United Kingdom market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
 United Kingdom,1969,0.3607,0.0043,market,sqrt,FALSE,LIS United Kingdom market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
-United Kingdom,1970,0.2961000061035156,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1970,0.2961000061035156,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1970,0.2591,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
-United Kingdom,1971,0.3022999954223633,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1971,0.3022999954223633,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1971,0.2663,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
-United Kingdom,1972,0.3032999992370605,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1972,0.3032999992370605,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1972,0.2693,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
-United Kingdom,1973,0.293700008392334,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1973,0.293700008392334,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1973,0.2586,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
-United Kingdom,1974,0.2868000030517578,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1974,0.2868000030517578,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1974,0.2511,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,1974,0.3265,0.0034,disp,hh,FALSE,LIS United Kingdom disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
 United Kingdom,1974,0.2995,0.0033,disp,pc,FALSE,LIS United Kingdom disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
@@ -13510,25 +13497,25 @@ United Kingdom,1974,0.294,0.0035,gross,sqrt,FALSE,LIS United Kingdom gross sqrt,
 United Kingdom,1974,0.4481,0.0046,market,hh,FALSE,LIS United Kingdom market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
 United Kingdom,1974,0.4143,0.0039,market,pc,FALSE,LIS United Kingdom market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
 United Kingdom,1974,0.3746,0.0043,market,sqrt,FALSE,LIS United Kingdom market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
-United Kingdom,1975,0.28100000381469725,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1975,0.28100000381469725,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1975,0.243,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,1975,0.269,,disp,sqrt,FALSE,"OECD United Kingdom disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 United Kingdom,1975,0.248,,disp,sqrt,FALSE,"OECD United Kingdom disp sqrt, previous def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 United Kingdom,1975,0.378,,market,sqrt,FALSE,"OECD United Kingdom market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 United Kingdom,1975,0.358,,market,sqrt,FALSE,"OECD United Kingdom market sqrt, previous def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-United Kingdom,1976,0.2794000053405762,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1976,0.2794000053405762,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1976,0.2426,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
-United Kingdom,1977,0.2720999908447266,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1977,0.2720999908447266,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1977,0.2395,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,1977,0.273,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1977,0.3,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1977,0.429,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
-United Kingdom,1978,0.27290000915527346,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1978,0.27290000915527346,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1978,0.2396,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,1978,0.266,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1978,0.298,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1978,0.429,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
-United Kingdom,1979,0.2822999954223633,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1979,0.2822999954223633,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1979,0.2531,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,1979,0.2618,0.0027,disp,ae,FALSE,LIS United Kingdom disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
 United Kingdom,1979,0.3357,0.0027,disp,hh,FALSE,LIS United Kingdom disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
@@ -13548,32 +13535,32 @@ United Kingdom,1979,0.4111,0.0043,market,sqrt,FALSE,LIS United Kingdom market sq
 United Kingdom,1979,0.27399999999999997,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1979,0.301,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1979,0.436,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
-United Kingdom,1980,0.2865999984741211,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1980,0.2865999984741211,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1980,0.2575,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,1980,0.28600000000000003,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1980,0.312,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1980,0.445,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
-United Kingdom,1981,0.293799991607666,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1981,0.293799991607666,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1981,0.2633,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,1981,0.29,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1981,0.318,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1981,0.45899999999999996,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
-United Kingdom,1982,0.2905999946594238,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1982,0.2905999946594238,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1982,0.2612,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,1982,0.28600000000000003,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1982,0.315,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1982,0.47,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
-United Kingdom,1983,0.296299991607666,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1983,0.296299991607666,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1983,0.2678,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,1983,0.294,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1983,0.327,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1983,0.485,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
-United Kingdom,1984,0.29670000076293945,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1984,0.29670000076293945,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1984,0.27,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,1984,0.284,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1984,0.317,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1984,0.486,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
-United Kingdom,1985,0.30690000534057615,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1985,0.30690000534057615,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1985,0.282,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,1985,0.309,,disp,sqrt,FALSE,"OECD United Kingdom disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 United Kingdom,1985,0.286,,disp,sqrt,FALSE,"OECD United Kingdom disp sqrt, previous def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -13583,7 +13570,7 @@ United Kingdom,1985,0.304,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for Nationa
 United Kingdom,1985,0.336,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1985,0.495,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1985,0.291,0.004,con,oecdm,FALSE,ZdV2001 United Kingdom con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
-United Kingdom,1986,0.3152000045776367,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1986,0.3152000045776367,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1986,0.291,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,1986,0.3126,0.0029,con,ae,FALSE,LIS United Kingdom con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
 United Kingdom,1986,0.3752,0.0031,con,hh,FALSE,LIS United Kingdom con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
@@ -13608,23 +13595,23 @@ United Kingdom,1986,0.5054,0.0045,market,sqrt,FALSE,LIS United Kingdom market sq
 United Kingdom,1986,0.316,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1986,0.345,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1986,0.505,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
-United Kingdom,1987,0.33229999542236327,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1987,0.33229999542236327,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1987,0.305,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,1987,0.332,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1987,0.361,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1987,0.511,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
-United Kingdom,1988,0.34380001068115235,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1988,0.34380001068115235,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1988,0.3226,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,1988,0.35100000000000003,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1988,0.371,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1988,0.509,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1988,0.313,0.005,con,oecdm,FALSE,ZdV2001 United Kingdom con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
-United Kingdom,1989,0.3479000091552734,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1989,0.3479000091552734,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1989,0.3268,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,1989,0.344,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1989,0.363,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1989,0.49700000000000005,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
-United Kingdom,1990,0.36540000915527343,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1990,0.36540000915527343,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1990,0.3391,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,1990,0.355,,disp,sqrt,FALSE,"OECD United Kingdom disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 United Kingdom,1990,0.328,,disp,sqrt,FALSE,"OECD United Kingdom disp sqrt, previous def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -13633,7 +13620,7 @@ United Kingdom,1990,0.464,,market,sqrt,FALSE,"OECD United Kingdom market sqrt, p
 United Kingdom,1990,0.368,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1990,0.386,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1990,0.514,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
-United Kingdom,1991,0.36529998779296874,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1991,0.36529998779296874,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1991,0.3408,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,1991,0.34,0.0035,con,ae,FALSE,LIS United Kingdom con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
 United Kingdom,1991,0.3957,0.0033,con,hh,FALSE,LIS United Kingdom con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
@@ -13658,18 +13645,18 @@ United Kingdom,1991,0.5012,0.0048,market,sqrt,FALSE,LIS United Kingdom market sq
 United Kingdom,1991,0.35600000000000004,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1991,0.37799999999999995,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1991,0.512,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
-United Kingdom,1992,0.36759998321533205,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1992,0.36759998321533205,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1992,0.3401,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,1992,0.34700000000000003,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1992,0.373,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1992,0.517,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
-United Kingdom,1993,0.365,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1993,0.365,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1993,0.348,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1993,0.37799999999999995,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1993,0.5329999999999999,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1993,0.3768,,disp,ae,TRUE,W1999 United Kingdom disp ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 United Kingdom,1993,0.4121,,gross,ae,TRUE,W1999 United Kingdom gross ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
-United Kingdom,1994,0.35689998626708985,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1994,0.35689998626708985,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1994,0.3397,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,1994,0.341,0.003,disp,ae,FALSE,LIS United Kingdom disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
 United Kingdom,1994,0.3914,0.0027,disp,hh,FALSE,LIS United Kingdom disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
@@ -13690,7 +13677,7 @@ United Kingdom,1994,0.337,,disp,sqrt,FALSE,"OECD United Kingdom disp sqrt, curre
 United Kingdom,1994,0.312,,disp,sqrt,FALSE,"OECD United Kingdom disp sqrt, previous def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 United Kingdom,1994,0.507,,market,sqrt,FALSE,"OECD United Kingdom market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 United Kingdom,1994,0.48,,market,sqrt,FALSE,"OECD United Kingdom market sqrt, previous def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-United Kingdom,1995,0.35619998931884767,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1995,0.35619998931884767,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1995,0.32,,disp,oecdm,TRUE,Eurostat United Kingdom disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 United Kingdom,1995,0.3326,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,1995,0.3456,0.0038,disp,ae,FALSE,LIS United Kingdom disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
@@ -13711,25 +13698,25 @@ United Kingdom,1995,0.5391,0.0048,market,sqrt,FALSE,LIS United Kingdom market sq
 United Kingdom,1995,0.33799999999999997,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1995,0.37,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1995,0.528,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
-United Kingdom,1996,0.357400016784668,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1996,0.357400016784668,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1996,0.32,,disp,oecdm,TRUE,Eurostat United Kingdom disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 United Kingdom,1996,0.3332,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,1996,0.33,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1996,0.365,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1996,0.52,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
-United Kingdom,1997,0.3647999954223633,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1997,0.3647999954223633,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1997,0.3,,disp,oecdm,TRUE,Eurostat United Kingdom disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 United Kingdom,1997,0.3333,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,1997,0.344,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1997,0.376,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1997,0.526,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
-United Kingdom,1998,0.3711999893188477,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1998,0.3711999893188477,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1998,0.32,,disp,oecdm,TRUE,Eurostat United Kingdom disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 United Kingdom,1998,0.3406,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,1998,0.345,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1998,0.37799999999999995,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1998,0.526,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
-United Kingdom,1999,0.3706000137329102,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,1999,0.3706000137329102,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,1999,0.32,,disp,oecdm,TRUE,Eurostat United Kingdom disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 United Kingdom,1999,0.3484,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,1999,0.3521,0.0033,disp,ae,FALSE,LIS United Kingdom disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
@@ -13752,7 +13739,7 @@ United Kingdom,1999,0.506,,market,sqrt,FALSE,"OECD United Kingdom market sqrt, c
 United Kingdom,1999,0.354,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1999,0.386,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,1999,0.527,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
-United Kingdom,2000,0.375,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,2000,0.375,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,2000,0.32,,disp,oecdm,TRUE,Eurostat United Kingdom disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 United Kingdom,2000,0.3461,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,2000,0.352,,disp,sqrt,FALSE,"OECD United Kingdom disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -13762,7 +13749,7 @@ United Kingdom,2000,0.485,,market,sqrt,FALSE,"OECD United Kingdom market sqrt, p
 United Kingdom,2000,0.358,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,2000,0.387,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,2000,0.526,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
-United Kingdom,2001,0.37150001525878906,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,2001,0.37150001525878906,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,2001,0.35,,disp,oecdm,TRUE,Eurostat United Kingdom disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 United Kingdom,2001,0.3529,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,2001,0.34,,disp,sqrt,FALSE,"OECD United Kingdom disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -13770,7 +13757,7 @@ United Kingdom,2001,0.503,,market,sqrt,FALSE,"OECD United Kingdom market sqrt, c
 United Kingdom,2001,0.35,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,2001,0.379,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,2001,0.513,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
-United Kingdom,2002,0.3636000061035156,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,2002,0.3636000061035156,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,2002,0.35,,disp,oecdm,TRUE,Eurostat United Kingdom disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 United Kingdom,2002,0.3486,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,2002,0.335,,disp,sqrt,FALSE,"OECD United Kingdom disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -13781,7 +13768,7 @@ United Kingdom,2002,0.51,,market,sqrt,FALSE,"OECD United Kingdom market sqrt, cu
 United Kingdom,2002,0.363,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,2002,0.39299999999999996,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,2002,0.526,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
-United Kingdom,2003,0.36139999389648436,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,2003,0.36139999389648436,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,2003,0.3439,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,2003,0.3428,,disp,oecdm,TRUE,IFS UK disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,2003,0.335,,disp,sqrt,FALSE,"OECD United Kingdom disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -13792,7 +13779,7 @@ United Kingdom,2003,0.507,,market,sqrt,FALSE,"OECD United Kingdom market sqrt, c
 United Kingdom,2003,0.33799999999999997,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,2003,0.374,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,2003,0.511,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
-United Kingdom,2004,0.36459999084472655,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,2004,0.36459999084472655,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,2004,0.3398,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,2004,0.3387,,disp,oecdm,TRUE,IFS UK disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,2004,0.3467,0.0024,disp,ae,FALSE,LIS United Kingdom disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
@@ -13819,7 +13806,7 @@ United Kingdom,2004,0.34,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National
 United Kingdom,2004,0.376,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,2004,0.517,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,2004,0.36,,gross,pc,FALSE,Povcalnet United Kingdom gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-United Kingdom,2005,0.3683000183105469,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,2005,0.3683000183105469,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,2005,0.34600000000000003,,disp,oecdm,TRUE,Eurostat United Kingdom disp oecdm 3,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 United Kingdom,2005,0.3408,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,2005,0.3397,,disp,oecdm,TRUE,IFS UK disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
@@ -13832,7 +13819,7 @@ United Kingdom,2005,0.32799999999999996,,disp,oecdm,FALSE,ONS disp oecdm,UK Offi
 United Kingdom,2005,0.364,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,2005,0.507,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,2005,0.34299999999999997,,gross,pc,FALSE,Povcalnet United Kingdom gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-United Kingdom,2006,0.37220001220703125,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,2006,0.37220001220703125,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,2006,0.325,,disp,oecdm,TRUE,Eurostat United Kingdom disp oecdm 3,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 United Kingdom,2006,0.3454,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,2006,0.3446,,disp,oecdm,TRUE,IFS UK disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
@@ -13845,7 +13832,7 @@ United Kingdom,2006,0.33899999999999997,,disp,oecdm,FALSE,ONS disp oecdm,UK Offi
 United Kingdom,2006,0.375,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,2006,0.518,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,2006,0.34600000000000003,,gross,pc,FALSE,Povcalnet United Kingdom gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-United Kingdom,2007,0.3777000045776367,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,2007,0.3777000045776367,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,2007,0.326,,disp,oecdm,TRUE,Eurostat United Kingdom disp oecdm 3,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 United Kingdom,2007,0.3521,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,2007,0.3507,,disp,oecdm,TRUE,IFS UK disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
@@ -13873,7 +13860,7 @@ United Kingdom,2007,0.34700000000000003,,disp,oecdm,FALSE,ONS disp oecdm,UK Offi
 United Kingdom,2007,0.38,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,2007,0.515,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv
 United Kingdom,2007,0.35700000000000004,,gross,pc,FALSE,Povcalnet United Kingdom gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-United Kingdom,2008,0.37729999542236325,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,2008,0.37729999542236325,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,2008,0.33899999999999997,,disp,oecdm,TRUE,Eurostat United Kingdom disp oecdm 3,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 United Kingdom,2008,0.3583,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,2008,0.357,,disp,oecdm,TRUE,IFS UK disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
@@ -13886,7 +13873,7 @@ United Kingdom,2008,0.342,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for Nationa
 United Kingdom,2008,0.376,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/householddisposableincomeandinequality/financialyearending2017/51fff87e&format=csv
 United Kingdom,2008,0.516,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/householddisposableincomeandinequality/financialyearending2017/51fff87e&format=csv
 United Kingdom,2008,0.341,,gross,pc,FALSE,Povcalnet United Kingdom gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-United Kingdom,2009,0.37509998321533206,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,2009,0.37509998321533206,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,2009,0.324,,disp,oecdm,TRUE,Eurostat United Kingdom disp oecdm 3,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 United Kingdom,2009,0.3565,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,2009,0.3554,,disp,oecdm,TRUE,IFS UK disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
@@ -13899,7 +13886,7 @@ United Kingdom,2009,0.34299999999999997,,disp,oecdm,FALSE,ONS disp oecdm,UK Offi
 United Kingdom,2009,0.376,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/householddisposableincomeandinequality/financialyearending2017/51fff87e&format=csv
 United Kingdom,2009,0.521,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/householddisposableincomeandinequality/financialyearending2017/51fff87e&format=csv
 United Kingdom,2009,0.34299999999999997,,gross,pc,FALSE,Povcalnet United Kingdom gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-United Kingdom,2010,0.35810001373291017,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,2010,0.35810001373291017,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,2010,0.32899999999999996,,disp,oecdm,TRUE,Eurostat United Kingdom disp oecdm 3,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 United Kingdom,2010,0.3577,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,2010,0.3567,,disp,oecdm,TRUE,IFS UK disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
@@ -13927,7 +13914,7 @@ United Kingdom,2010,0.332,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for Nationa
 United Kingdom,2010,0.369,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/householddisposableincomeandinequality/financialyearending2017/51fff87e&format=csv
 United Kingdom,2010,0.52,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/householddisposableincomeandinequality/financialyearending2017/51fff87e&format=csv
 United Kingdom,2010,0.344,,gross,pc,FALSE,Povcalnet United Kingdom gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-United Kingdom,2011,0.35959999084472655,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,2011,0.35959999084472655,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,2011,0.33,,disp,oecdm,TRUE,Eurostat United Kingdom disp oecdm 3,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 United Kingdom,2011,0.3375,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,2011,0.3366,,disp,oecdm,TRUE,IFS UK disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
@@ -13938,7 +13925,7 @@ United Kingdom,2011,0.337,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for Nationa
 United Kingdom,2011,0.369,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/householddisposableincomeandinequality/financialyearending2017/51fff87e&format=csv
 United Kingdom,2011,0.522,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/householddisposableincomeandinequality/financialyearending2017/51fff87e&format=csv
 United Kingdom,2011,0.332,,gross,pc,FALSE,Povcalnet United Kingdom gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-United Kingdom,2012,0.3559000015258789,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,2012,0.3559000015258789,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,2012,0.313,,disp,oecdm,TRUE,Eurostat United Kingdom disp oecdm 4,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 United Kingdom,2012,0.3403,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,2012,0.3396,,disp,oecdm,TRUE,IFS UK disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
@@ -13949,7 +13936,7 @@ United Kingdom,2012,0.32299999999999995,,disp,oecdm,FALSE,ONS disp oecdm,UK Offi
 United Kingdom,2012,0.361,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/householddisposableincomeandinequality/financialyearending2017/51fff87e&format=csv
 United Kingdom,2012,0.517,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/householddisposableincomeandinequality/financialyearending2017/51fff87e&format=csv
 United Kingdom,2012,0.32299999999999995,,gross,pc,FALSE,Povcalnet United Kingdom gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-United Kingdom,2013,0.362400016784668,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,2013,0.362400016784668,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,2013,0.302,,disp,oecdm,TRUE,Eurostat United Kingdom disp oecdm 4,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 United Kingdom,2013,0.3366,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,2013,0.3355,,disp,oecdm,TRUE,IFS UK disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
@@ -13975,7 +13962,7 @@ United Kingdom,2013,0.33299999999999996,,disp,oecdm,FALSE,ONS disp oecdm,UK Offi
 United Kingdom,2013,0.369,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/householddisposableincomeandinequality/financialyearending2017/51fff87e&format=csv
 United Kingdom,2013,0.522,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/householddisposableincomeandinequality/financialyearending2017/51fff87e&format=csv
 United Kingdom,2013,0.332,,gross,pc,FALSE,Povcalnet United Kingdom gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-United Kingdom,2014,0.3604999923706055,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2014,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+United Kingdom,2014,0.3604999923706055,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
 United Kingdom,2014,0.316,,disp,oecdm,TRUE,Eurostat United Kingdom disp oecdm 4,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 United Kingdom,2014,0.3429,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,2014,0.342,,disp,oecdm,TRUE,IFS UK disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
