@@ -108,6 +108,8 @@ Bahamas,2013,0.414,,con,pc,TRUE,Statistics Bahamas con pc,Statistics Bahamas 201
 Bahamas,2003,0.48,,market,hh,,Statistics Bahamas market hh,Statistics Bahamas 2005,20,https://web.archive.org/web/20180427210852/http://www.centralbankbahamas.com/download/LFS_report_2004.pdf
 Bahamas,2004,0.43,,market,hh,,Statistics Bahamas market hh,Statistics Bahamas 2005,20,https://web.archive.org/web/20180427210852/http://www.centralbankbahamas.com/download/LFS_report_2004.pdf
 Bahrain,2014,0.596,,gross,pc,,IGA 2017,Bahrain Information & eGovernment Authority 2017,51,http://www.data.gov.bh/en/ResourceCenter/DownloadFile?id=2484
+Bangladesh,1967,0.347,,gross,hh,,A1976 Bangladesh gross hh,Azfar 1976,60,https://www.jstor.org/stable/25821355
+Bangladesh,1967,0.304,,con,hh,,A1976 Bangladesh con hh,Azfar 1976,60,https://www.jstor.org/stable/25821355
 Bangladesh,2010,0.321,,con,hh,,BBS con hh,Bangladesh Bureau of Statistics 2011,xxvii,http://203.112.218.65/WebTestApplication/userfiles/Image/LatestReports/HIES-10.pdf
 Bangladesh,2005,0.467,,gross,hh,,BBS gross hh,Bangladesh Bureau of Statistics 2011,30,http://203.112.218.65/WebTestApplication/userfiles/Image/LatestReports/HIES-10.pdf
 Bangladesh,2010,0.458,,gross,hh,,BBS gross hh,Bangladesh Bureau of Statistics 2011,30,http://203.112.218.65/WebTestApplication/userfiles/Image/LatestReports/HIES-10.pdf
@@ -1254,6 +1256,8 @@ Norway,1988,0.309,,disp,hh,,SSB1993 Norway disp hh,Statistics Norway 1993,41,htt
 Norway,1989,0.343,,disp,hh,,SSB1993 Norway disp hh,Statistics Norway 1993,41,https://www.ssb.no/a/histstat/nos/nos_c070.pdf
 Norway,1990,0.334,,disp,hh,,SSB1993 Norway disp hh,Statistics Norway 1993,41,https://www.ssb.no/a/histstat/nos/nos_c070.pdf
 Oman,2010,0.307,,con,hh,,NCSI2012 Oman con hh,Oman National Center for Statistics and Information 2012,23,https://ncsi.gov.om/Elibrary/LibraryContentDoc/ben_Final%20Findings%20E%202010%20-%202011_964e4334-f010-4f48-aad6-9401454cf803.pdf
+Pakistan,1967,0.38,,gross,hh,,A1976 Pakistan gross hh,Azfar 1976,60,https://www.jstor.org/stable/25821355
+Pakistan,1967,0.337,,con,hh,,A1976 Pakistan con hh,Azfar 1976,60,https://www.jstor.org/stable/25821355
 Pakistan,1993,0.303,,con,pc,,FR2008 Pakistan con pc,Ferreira and Ravallion 2008,38,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Pakistan,2004,0.312,,con,pc,,FR2008 Pakistan con pc,Ferreira and Ravallion 2008,38,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Pakistan,1988,0.35,,disp,pc,,Jamal 2014 Pakistan disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
