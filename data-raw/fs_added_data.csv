@@ -381,6 +381,14 @@ Denmark,1984,0.205,,disp,ae,,ARS1994 Denmark disp ae,"Atkinson, Rainwater, and S
 Denmark,1985,0.201,,disp,ae,,ARS1994 Denmark disp ae,"Atkinson, Rainwater, and Smeeding 1994",26,http://www.lisdatacenter.org/wps/liswps/121.pdf
 Denmark,1986,0.2,,disp,ae,,ARS1994 Denmark disp ae,"Atkinson, Rainwater, and Smeeding 1994",26,http://www.lisdatacenter.org/wps/liswps/121.pdf
 Denmark,1987,0.209,,disp,ae,,ARS1994 Denmark disp ae,"Atkinson, Rainwater, and Smeeding 1994",26,http://www.lisdatacenter.org/wps/liswps/121.pdf
+Denmark,1983,0.21,,disp,ae,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
+Denmark,1986,0.209,,disp,ae,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
+Denmark,1989,0.208,,disp,ae,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
+Denmark,1992,0.213,,disp,ae,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
+Denmark,1993,0.21,,disp,ae,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
+Denmark,1994,0.201,,disp,ae,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
+Denmark,1988,0.22,,disp,sqrt,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
+Denmark,1992,0.22,,disp,sqrt,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
 Denmark,1980,0.26,,disp,sqrt,,NWN2014 disp sqrt,Neamtu and Westergaard-Nielsen 2014,200,https://books.google.com/books?id=9cXRAgAAQBAJ&pg=200
 Denmark,1986,0.24,,disp,sqrt,,NWN2014 disp sqrt,Neamtu and Westergaard-Nielsen 2014,200,https://books.google.com/books?id=9cXRAgAAQBAJ&pg=200
 Denmark,1993,0.26,,disp,sqrt,,NWN2014 disp sqrt,Neamtu and Westergaard-Nielsen 2014,200,https://books.google.com/books?id=9cXRAgAAQBAJ&pg=200
@@ -448,6 +456,10 @@ Fiji,1977,0.47,,disp,hh,,vGP1984 Fiji disp hh,Tabatabai 1996; van Ginneken and P
 Fiji,1977,0.46,,disp,pc,,vGP1984 Fiji disp pc,Tabatabai 1996; van Ginneken and Park 1984,92,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Fiji,2002,0.468,,con,pc,,ZKM2014 Fiji con pc,"Zhuang, Kanbur, and Maligalig 2014",25,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA25
 Fiji,2008,0.428,,con,pc,,ZKM2014 Fiji con pc,"Zhuang, Kanbur, and Maligalig 2014",25,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA25
+Finland,1980,0.349,,gross,hh,,RU1990 Finland gross hh,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
+Finland,1980,0.312,,disp,hh,,RU1990 Finland disp hh,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
+Finland,1980,0.27,,gross,ae,,RU1990 Finland gross ae,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
+Finland,1980,0.225,,disp,ae,,RU1990 Finland disp ae,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
 Finland,1986,0.18,,con,pc,,Park1995 Finland con pc,Tabatabai 1996; Park 1995,125,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Finland,1986,0.276,,disp,pc,,Park1995 Finland disp pc,Tabatabai 1996; Park 1995,125,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Finland,1990,0.2253,,disp,ae,TRUE,W1999 Finland disp ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
@@ -1208,6 +1220,10 @@ Norway,1979,0.345,,gross,ae,TRUE,Ringen1991 gross ae 1,Ringen 1991,9,http://doi.
 Norway,1979,0.365,,gross,ae,TRUE,Ringen1991 gross ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1982,0.35,,gross,ae,TRUE,Ringen1991 gross ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1986,0.344,,gross,ae,TRUE,Ringen1991 gross ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
+Norway,1979,0.356,,gross,hh,,RU1990 Norway gross hh,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
+Norway,1979,0.311,,disp,hh,,RU1990 Norway disp hh,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
+Norway,1979,0.289,,gross,ae,,RU1990 Norway gross ae,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
+Norway,1979,0.243,,disp,ae,,RU1990 Norway disp ae,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
 Norway,1982,0.325,,disp,hh,,SSB1993 Norway disp hh,Statistics Norway 1993,41,https://www.ssb.no/a/histstat/nos/nos_c070.pdf
 Norway,1984,0.322,,disp,hh,,SSB1993 Norway disp hh,Statistics Norway 1993,41,https://www.ssb.no/a/histstat/nos/nos_c070.pdf
 Norway,1985,0.317,,disp,hh,,SSB1993 Norway disp hh,Statistics Norway 1993,41,https://www.ssb.no/a/histstat/nos/nos_c070.pdf
@@ -1799,6 +1815,10 @@ Sweden,1999,0.376,,gross,ae,TRUE,JL2009 gross ae 3,Johansson and Lindh 2009,"All
 Sweden,2000,0.3876,,gross,ae,TRUE,JL2009 gross ae 3,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,2001,0.3705,,gross,ae,TRUE,JL2009 gross ae 3,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,2002,0.3638,,gross,ae,TRUE,JL2009 gross ae 3,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
+Sweden,1979,0.329,,gross,hh,,RU1990 Sweden gross hh,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
+Sweden,1979,0.292,,disp,hh,,RU1990 Sweden disp hh,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
+Sweden,1979,0.249,,gross,ae,,RU1990 Sweden gross ae,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
+Sweden,1979,0.205,,disp,ae,,RU1990 Sweden disp ae,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
 Sweden,1989,0.35,,disp,pc,,Park1995 Sweden disp pc,Tabatabai 1996; Park 1995,128,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Sweden,1979,0.3,,disp,hh,,vGP1984 Sweden disp hh,Tabatabai 1996; van Ginneken and Park 1984,128,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Sweden,1979,0.22,,disp,pc,,vGP1984 Sweden disp pc,Tabatabai 1996; van Ginneken and Park 1984,128,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
