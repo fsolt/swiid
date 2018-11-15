@@ -108,8 +108,8 @@ Bahamas,2013,0.414,,con,pc,TRUE,Statistics Bahamas con pc,Statistics Bahamas 201
 Bahamas,2003,0.48,,market,hh,,Statistics Bahamas market hh,Statistics Bahamas 2005,20,https://web.archive.org/web/20180427210852/http://www.centralbankbahamas.com/download/LFS_report_2004.pdf
 Bahamas,2004,0.43,,market,hh,,Statistics Bahamas market hh,Statistics Bahamas 2005,20,https://web.archive.org/web/20180427210852/http://www.centralbankbahamas.com/download/LFS_report_2004.pdf
 Bahrain,2014,0.596,,gross,pc,,IGA 2017,Bahrain Information & eGovernment Authority 2017,51,http://www.data.gov.bh/en/ResourceCenter/DownloadFile?id=2484
-Bangladesh,1967,0.347,,gross,hh,,A1976 Bangladesh gross hh,Azfar 1976,60,https://www.jstor.org/stable/25821355
 Bangladesh,1967,0.304,,con,hh,,A1976 Bangladesh con hh,Azfar 1976,60,https://www.jstor.org/stable/25821355
+Bangladesh,1967,0.347,,gross,hh,,A1976 Bangladesh gross hh,Azfar 1976,60,https://www.jstor.org/stable/25821355
 Bangladesh,2010,0.321,,con,hh,,BBS con hh,Bangladesh Bureau of Statistics 2011,xxvii,http://203.112.218.65/WebTestApplication/userfiles/Image/LatestReports/HIES-10.pdf
 Bangladesh,2005,0.467,,gross,hh,,BBS gross hh,Bangladesh Bureau of Statistics 2011,30,http://203.112.218.65/WebTestApplication/userfiles/Image/LatestReports/HIES-10.pdf
 Bangladesh,2010,0.458,,gross,hh,,BBS gross hh,Bangladesh Bureau of Statistics 2011,30,http://203.112.218.65/WebTestApplication/userfiles/Image/LatestReports/HIES-10.pdf
@@ -205,6 +205,7 @@ Brazil,2003,0.575,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfi
 Brazil,2004,0.564,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
 Brazil,1988,0.54,,con,hh,,GLS2006 Brazil con hh,"Goni, Lopez, and Serven 2006",27,http://papers.ssrn.com/sol3/papers.cfm?abstract_id=875741
 Brazil,1996,0.55,,con,hh,,GLS2006 Brazil con hh,"Goni, Lopez, and Serven 2006",27,http://papers.ssrn.com/sol3/papers.cfm?abstract_id=875741
+Brazil,1974,0.361,,con,hh,,Yotopoulos1989 Brazil con hh,Yotopoulos 1989,366,https://doi.org/10.1111/j.1475-4991.1989.tb00598.x
 Brunei Darussalam,1981,0.564,,gross,hh,,Duraman1990; Arief1986 Brunei Darussalam gross hh,Tabatabai 1996; Duraman 1990; Arief1986,91,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Bulgaria,1992,0.289,,disp,pc,,Cornia1994 Bulgaria disp pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Bulgaria,1992,0.321,,market,pc,,Cornia1994 Bulgaria market pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
@@ -321,12 +322,12 @@ Colombia,2003,0.5,,con,hh,,GLS2006 Colombia con hh,"Goni, Lopez, and Serven 2006
 Colombia,1978,0.545,,disp,hh,,WorldBank1994 Colombia disp hh,World Bank 1994 ,229,https://web.archive.org/web/20180427221719/http://documents.worldbank.org/curated/en/853931468019216759/pdf/1375710SPANISH.pdf
 Colombia,1988,0.512,,disp,hh,,WorldBank1994 Colombia disp hh,World Bank 1994 ,229,https://web.archive.org/web/20180427221719/http://documents.worldbank.org/curated/en/853931468019216759/pdf/1375710SPANISH.pdf
 "Congo, Republic of",2005,0.416,,gross,hh,FALSE,CNSEE Republic of Congo gross hh,CNSEE Republic of Congo 2006,28,http://www.cnsee.org/Donnees/Enquete/PDF/Ecom.pdf
+Costa Rica,2013,0.4632,,con,hh,,INEC  con hh,Instituto Naci—nal de Estad’stica y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-13.xlsx
+Costa Rica,2013,0.4937,,disp,hh,,INEC  disp hh,Instituto Naci—nal de Estad’stica y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-09_0.xlsx
+Costa Rica,2013,0.4801,,con,pc,,INEC con pc,Instituto Naci—nal de Estad’stica y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-13.xlsx
+Costa Rica,2013,0.5094,,disp,pc,,INEC disp pc,Instituto Naci—nal de Estad’stica y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-09_0.xlsx
 Costa Rica,2013,0.5042,,gross,hh,,INEC gross hh 2,Instituto Naci—nal de Estad’stica y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-09_0.xlsx
 Costa Rica,2013,0.5189,,gross,pc,,INEC gross pc 2,Instituto Naci—nal de Estad’stica y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-09_0.xlsx
-Costa Rica,2013,0.4937,,disp,hh,,INEC  disp hh,Instituto Naci—nal de Estad’stica y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-09_0.xlsx
-Costa Rica,2013,0.5094,,disp,pc,,INEC disp pc,Instituto Naci—nal de Estad’stica y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-09_0.xlsx
-Costa Rica,2013,0.4632,,con,hh,,INEC  con hh,Instituto Naci—nal de Estad’stica y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-13.xlsx
-Costa Rica,2013,0.4801,,con,pc,,INEC con pc,Instituto Naci—nal de Estad’stica y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-13.xlsx
 Costa Rica,1988,0.354,,con,pc,,Park1995 Costa Rica con pc,Tabatabai 1996; Park 1995,113,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Costa Rica,1988,0.396,,disp,pc,,Park1995 Costa Rica disp pc,Tabatabai 1996; Park 1995,113,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Costa Rica,1981,0.49,,disp,hh,,vGP1984 Costa Rica disp hh,Tabatabai 1996; van Ginneken and Park 1984,113,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -385,12 +386,12 @@ Denmark,1986,0.2,,disp,ae,,ARS1994 Denmark disp ae,"Atkinson, Rainwater, and Sme
 Denmark,1987,0.209,,disp,ae,,ARS1994 Denmark disp ae,"Atkinson, Rainwater, and Smeeding 1994",26,http://www.lisdatacenter.org/wps/liswps/121.pdf
 Denmark,1983,0.21,,disp,ae,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
 Denmark,1986,0.209,,disp,ae,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
+Denmark,1988,0.22,,disp,sqrt,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
 Denmark,1989,0.208,,disp,ae,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
 Denmark,1992,0.213,,disp,ae,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
+Denmark,1992,0.22,,disp,sqrt,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
 Denmark,1993,0.21,,disp,ae,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
 Denmark,1994,0.201,,disp,ae,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
-Denmark,1988,0.22,,disp,sqrt,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
-Denmark,1992,0.22,,disp,sqrt,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
 Denmark,1980,0.26,,disp,sqrt,,NWN2014 disp sqrt,Neamtu and Westergaard-Nielsen 2014,200,https://books.google.com/books?id=9cXRAgAAQBAJ&pg=200
 Denmark,1986,0.24,,disp,sqrt,,NWN2014 disp sqrt,Neamtu and Westergaard-Nielsen 2014,200,https://books.google.com/books?id=9cXRAgAAQBAJ&pg=200
 Denmark,1993,0.26,,disp,sqrt,,NWN2014 disp sqrt,Neamtu and Westergaard-Nielsen 2014,200,https://books.google.com/books?id=9cXRAgAAQBAJ&pg=200
@@ -424,8 +425,8 @@ Egypt,1995,0.326,,con,pc,,FR2008 Egypt con pc,Ferreira and Ravallion 2008,36,htt
 Egypt,2000,0.335,,con,pc,,Hassine2015 Egypt con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Egypt,2005,0.317,,con,pc,,Hassine2015 Egypt con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Egypt,2009,0.306,,con,pc,,Hassine2015 Egypt con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
-Egypt,2009,0.4411,0.0389,disp,pc,,HV2013 Egypt disp pc,Hlasny and Verme 2013,27,http://www.ecineq.org/milano/WP/ECINEQ2013-303.pdf
 Egypt,2009,0.3398,0.007,con,pc,,HV2013 Egypt con pc,Hlasny and Verme 2013,27,http://www.ecineq.org/milano/WP/ECINEQ2013-303.pdf
+Egypt,2009,0.4411,0.0389,disp,pc,,HV2013 Egypt disp pc,Hlasny and Verme 2013,27,http://www.ecineq.org/milano/WP/ECINEQ2013-303.pdf
 Egypt,2000,0.339,0.033,con,pc,,KANRVZ2017 Egypt con pc,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
 Egypt,2005,0.32,0.028,con,pc,,KANRVZ2017 Egypt con pc,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
 Egypt,2012,0.297,0.02,con,pc,,KANRVZ2017 Egypt con pc,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
@@ -458,12 +459,12 @@ Fiji,1977,0.47,,disp,hh,,vGP1984 Fiji disp hh,Tabatabai 1996; van Ginneken and P
 Fiji,1977,0.46,,disp,pc,,vGP1984 Fiji disp pc,Tabatabai 1996; van Ginneken and Park 1984,92,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Fiji,2002,0.468,,con,pc,,ZKM2014 Fiji con pc,"Zhuang, Kanbur, and Maligalig 2014",25,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA25
 Fiji,2008,0.428,,con,pc,,ZKM2014 Fiji con pc,"Zhuang, Kanbur, and Maligalig 2014",25,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA25
-Finland,1980,0.349,,gross,hh,,RU1990 Finland gross hh,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
-Finland,1980,0.312,,disp,hh,,RU1990 Finland disp hh,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
-Finland,1980,0.27,,gross,ae,,RU1990 Finland gross ae,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
-Finland,1980,0.225,,disp,ae,,RU1990 Finland disp ae,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
 Finland,1986,0.18,,con,pc,,Park1995 Finland con pc,Tabatabai 1996; Park 1995,125,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Finland,1986,0.276,,disp,pc,,Park1995 Finland disp pc,Tabatabai 1996; Park 1995,125,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Finland,1980,0.225,,disp,ae,,RU1990 Finland disp ae,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
+Finland,1980,0.312,,disp,hh,,RU1990 Finland disp hh,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
+Finland,1980,0.27,,gross,ae,,RU1990 Finland gross ae,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
+Finland,1980,0.349,,gross,hh,,RU1990 Finland gross hh,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
 Finland,1990,0.2253,,disp,ae,TRUE,W1999 Finland disp ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 Finland,1990,0.2108,,disp,ae,TRUE,W1999 Finland disp ae 2,Wagstaff et al. 1999,86,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 Finland,1990,0.2685,,gross,ae,TRUE,W1999 Finland gross ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
@@ -689,6 +690,7 @@ India,2004,0.35,,con,sqrt,TRUE,VD con sqrt,Vanneman and Dubey 2013,446,https://b
 India,2004,0.48,,disp,sqrt,TRUE,VD disp sqrt,Vanneman and Dubey 2013,446,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA446
 India,1976,0.42,,disp,hh,,vGP1984 India disp hh,Tabatabai 1996; van Ginneken and Park 1984,95,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 India,1976,0.38,,disp,pc,,vGP1984 India disp pc,Tabatabai 1996; van Ginneken and Park 1984,95,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+India,1973,0.357,,con,pc,,Yotopoulos1989 India con pc,Yotopoulos 1989,366,https://doi.org/10.1111/j.1475-4991.1989.tb00598.x
 India,1993,0.325,,con,pc,,ZKM2014 India con pc,"Zhuang, Kanbur, and Maligalig 2014",24,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA24
 India,2010,0.37,,con,pc,,ZKM2014 India con pc,"Zhuang, Kanbur, and Maligalig 2014",24,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA24
 Indonesia,1965,0.35,,con,pc,,cdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
@@ -704,6 +706,7 @@ Indonesia,1996,0.36,,con,pc,,cdE2009 con pc,van der Eng 2009,22,https://mpra.ub.
 Indonesia,1993,0.344,,con,pc,,FR2008 Indonesia con pc,Ferreira and Ravallion 2008,37,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Indonesia,2002,0.343,,con,pc,,FR2008 Indonesia con pc,Ferreira and Ravallion 2008,37,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Indonesia,2008,0.41,,disp,ae,,NL2013 Indonesia disp ae,Nugraha and Lewis 2013,111,http://doi.org/10.1080/00074918.2013.772941
+Indonesia,1981,0.342,,con,hh,,Yotopoulos1989 Indonesia con hh,Yotopoulos 1989,366,https://doi.org/10.1111/j.1475-4991.1989.tb00598.x
 Iran,1986,0.47,,con,pc,,AP2003 Iran con pc,Adams and Page 2003,2040,https://doi.org/10.1016/j.worlddev.2003.04.004
 Iran,1990,0.434,,con,pc,,AP2003 Iran con pc,Adams and Page 2003,2040,https://doi.org/10.1016/j.worlddev.2003.04.004
 Iran,1994,0.43,,con,pc,,AP2003 Iran con pc,Adams and Page 2003,2040,https://doi.org/10.1016/j.worlddev.2003.04.004
@@ -786,9 +789,9 @@ Iran,2002,0.449,0.003,con,pc,FALSE,SI2009 con pc,Salehi-Isfahani 2009,17,http://
 Iran,2003,0.428,0.008,con,pc,FALSE,SI2009 con pc,Salehi-Isfahani 2009,17,http://doi.org/10.1007/s10888-007-9071-y
 Iran,2004,0.435,0.003,con,pc,FALSE,SI2009 con pc,Salehi-Isfahani 2009,17,http://doi.org/10.1007/s10888-007-9071-y
 Iran,2005,0.435,0.004,con,pc,FALSE,SI2009 con pc,Salehi-Isfahani 2009,17,http://doi.org/10.1007/s10888-007-9071-y
+Iran,2013,0.365,,gross,pc,,Statistical Center of Iran gross pc,Statistical Center of Iran 2015,14,https://web.archive.org/web/20171122202936/https://www.amar.org.ir/Portals/1/releases/s_heis_ur_1392.pdf
 Iran,1974,0.52,,disp,hh,,vGP1984 Iran disp hh,Tabatabai 1996; van Ginneken and Park 1984,108,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Iran,1974,0.47,,disp,pc,,vGP1984 Iran disp pc,Tabatabai 1996; van Ginneken and Park 1984,108,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Iran,2013,0.365,,gross,pc,,Statistical Center of Iran gross pc,Statistical Center of Iran 2015,14,https://web.archive.org/web/20171122202936/https://www.amar.org.ir/Portals/1/releases/s_heis_ur_1392.pdf
 Iraq,2007,0.356,,con,pc,,Hassine2015 Iraq con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Iraq,2007,0.309,,con,pc,,WB Iraq 2011 con pc,World Bank 2011,19,http://siteresources.worldbank.org/MENAEXT/Resources/Confronting_Poverty_In_Iraq_E_Chapter_3.pdf
 Iraq,2007,0.359,,gross,pc,,WB Iraq 2011 gross pc,World Bank 2011,19,http://siteresources.worldbank.org/MENAEXT/Resources/Confronting_Poverty_In_Iraq_E_Chapter_3.pdf
@@ -1037,6 +1040,7 @@ Korea,1996,0.302,,con,pc,,SK2006 Korea con pc,Son and Kakwani 2006,202,http://do
 Korea,1997,0.303,,con,pc,,SK2006 Korea con pc,Son and Kakwani 2006,202,http://doi.org/10.1007/s10888-005-9010-8
 Korea,1998,0.309,,con,pc,,SK2006 Korea con pc,Son and Kakwani 2006,202,http://doi.org/10.1007/s10888-005-9010-8
 Korea,1999,0.312,,con,pc,,SK2006 Korea con pc,Son and Kakwani 2006,202,http://doi.org/10.1007/s10888-005-9010-8
+Korea,1983,0.346,,con,hh,,Yotopoulos1989 Korea con hh,Yotopoulos 1989,366,https://doi.org/10.1111/j.1475-4991.1989.tb00598.x
 Kuwait,1998,0.32,,con,pc,,FR2008 Kuwait con pc,Ferreira and Ravallion 2008,37,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Kyrgyzstan,1988,0.312,,gross,pc,,AG1993 Kyrgyzstan gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,120,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Kyrgyzstan,1990,0.308,,gross,pc,,AG1993 Kyrgyzstan gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,120,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -1075,9 +1079,9 @@ Lebanon,1995,0.435,,con,pc,,CAS Lebanon con pc,Central Administration of Statist
 Lebanon,2004,0.361,,con,pc,,CAS Lebanon con pc,Central Administration of Statistics Lebanon; UNDP 2008,11,http://www.undp.org/content/dam/lebanon/docs/MDG/Publications/MDG_en.pdf
 Lebanon,2012,0.32,,con,pc,,CAS Lebanon con pc,Central Administration of Statistics Lebanon 2015,2,http://www.cas.gov.lb/images/Excel/Poverty/Snapshot%20of%20Poverty%20and%20Labor%20Market%20in%20Lebanon.pdf
 Lebanon,2004,0.387,,con,pc,,Hassine2015 Lebanon con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
+Lesotho,1987,0.607,,con,pc,FALSE,GM1994 Lesotho con hh,Gustafsson and Makonnen 1994,378,https://doi.org/10.1002/jid.3380060403
 Lesotho,1987,0.609,,disp,hh,,GM1994 Lesotho disp hh,Gustafsson and Makonnen 1994,378,https://doi.org/10.1002/jid.3380060403
 Lesotho,1987,0.631,,disp,pc,,GM1994 Lesotho disp pc,Gustafsson and Makonnen 1994,378,https://doi.org/10.1002/jid.3380060403
-Lesotho,1987,0.607,,con,pc,FALSE,GM1994 Lesotho con hh,Gustafsson and Makonnen 1994,378,https://doi.org/10.1002/jid.3380060403
 Libya,2003,0.312,,con,pc,,Hassine2015 Libya con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Lithuania,1988,0.244,,gross,pc,,AG1993 Lithuania gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,121,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Lithuania,1990,0.248,,gross,pc,,AG1993 Lithuania gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,121,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -1235,19 +1239,12 @@ Norway,1976,0.365,,gross,hh,,AA1983 gross hh,Andersen and Aaberge 1983,25,https:
 Norway,1979,0.369,,gross,hh,,AA1983 gross hh,Andersen and Aaberge 1983,25,https://brage.bibsys.no/xmlui/bitstream/handle/11250/181069/rapp_198321.pdf
 Norway,1988,0.21,,disp,hh,,Park1995 Norway disp hh,Tabatabai 1996; Park 1995,127,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Norway,1970,0.305,,disp,ae,TRUE,Ringen1991 disp ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
-Norway,1970,0.369,,market,ae,TRUE,Ringen1991 market ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1973,0.348,,disp,ae,TRUE,Ringen1991 disp ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
-Norway,1973,0.422,,market,ae,TRUE,Ringen1991 market ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1976,0.319,,disp,ae,TRUE,Ringen1991 disp ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
-Norway,1976,0.392,,market,ae,TRUE,Ringen1991 market ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1979,0.314,,disp,ae,TRUE,Ringen1991 disp ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
-Norway,1979,0.4,,market,ae,TRUE,Ringen1991 market ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1979,0.346,,disp,ae,TRUE,Ringen1991 disp ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
-Norway,1979,0.418,,market,ae,TRUE,Ringen1991 market ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1982,0.334,,disp,ae,TRUE,Ringen1991 disp ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
-Norway,1982,0.406,,market,ae,TRUE,Ringen1991 market ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1986,0.33,,disp,ae,TRUE,Ringen1991 disp ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
-Norway,1986,0.401,,market,ae,TRUE,Ringen1991 market ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1970,0.325,,gross,ae,TRUE,Ringen1991 gross ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1973,0.364,,gross,ae,TRUE,Ringen1991 gross ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1976,0.342,,gross,ae,TRUE,Ringen1991 gross ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
@@ -1255,10 +1252,17 @@ Norway,1979,0.345,,gross,ae,TRUE,Ringen1991 gross ae 1,Ringen 1991,9,http://doi.
 Norway,1979,0.365,,gross,ae,TRUE,Ringen1991 gross ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1982,0.35,,gross,ae,TRUE,Ringen1991 gross ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1986,0.344,,gross,ae,TRUE,Ringen1991 gross ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
-Norway,1979,0.356,,gross,hh,,RU1990 Norway gross hh,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
+Norway,1970,0.369,,market,ae,TRUE,Ringen1991 market ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
+Norway,1973,0.422,,market,ae,TRUE,Ringen1991 market ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
+Norway,1976,0.392,,market,ae,TRUE,Ringen1991 market ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
+Norway,1979,0.4,,market,ae,TRUE,Ringen1991 market ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
+Norway,1979,0.418,,market,ae,TRUE,Ringen1991 market ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
+Norway,1982,0.406,,market,ae,TRUE,Ringen1991 market ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
+Norway,1986,0.401,,market,ae,TRUE,Ringen1991 market ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
+Norway,1979,0.243,,disp,ae,,RU1990 Norway disp ae,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
 Norway,1979,0.311,,disp,hh,,RU1990 Norway disp hh,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
 Norway,1979,0.289,,gross,ae,,RU1990 Norway gross ae,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
-Norway,1979,0.243,,disp,ae,,RU1990 Norway disp ae,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
+Norway,1979,0.356,,gross,hh,,RU1990 Norway gross hh,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
 Norway,1982,0.325,,disp,hh,,SSB1993 Norway disp hh,Statistics Norway 1993,41,https://www.ssb.no/a/histstat/nos/nos_c070.pdf
 Norway,1984,0.322,,disp,hh,,SSB1993 Norway disp hh,Statistics Norway 1993,41,https://www.ssb.no/a/histstat/nos/nos_c070.pdf
 Norway,1985,0.317,,disp,hh,,SSB1993 Norway disp hh,Statistics Norway 1993,41,https://www.ssb.no/a/histstat/nos/nos_c070.pdf
@@ -1268,8 +1272,8 @@ Norway,1988,0.309,,disp,hh,,SSB1993 Norway disp hh,Statistics Norway 1993,41,htt
 Norway,1989,0.343,,disp,hh,,SSB1993 Norway disp hh,Statistics Norway 1993,41,https://www.ssb.no/a/histstat/nos/nos_c070.pdf
 Norway,1990,0.334,,disp,hh,,SSB1993 Norway disp hh,Statistics Norway 1993,41,https://www.ssb.no/a/histstat/nos/nos_c070.pdf
 Oman,2010,0.307,,con,hh,,NCSI2012 Oman con hh,Oman National Center for Statistics and Information 2012,23,https://ncsi.gov.om/Elibrary/LibraryContentDoc/ben_Final%20Findings%20E%202010%20-%202011_964e4334-f010-4f48-aad6-9401454cf803.pdf
-Pakistan,1967,0.38,,gross,hh,,A1976 Pakistan gross hh,Azfar 1976,60,https://www.jstor.org/stable/25821355
 Pakistan,1967,0.337,,con,hh,,A1976 Pakistan con hh,Azfar 1976,60,https://www.jstor.org/stable/25821355
+Pakistan,1967,0.38,,gross,hh,,A1976 Pakistan gross hh,Azfar 1976,60,https://www.jstor.org/stable/25821355
 Pakistan,1993,0.303,,con,pc,,FR2008 Pakistan con pc,Ferreira and Ravallion 2008,38,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Pakistan,2004,0.312,,con,pc,,FR2008 Pakistan con pc,Ferreira and Ravallion 2008,38,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Pakistan,1988,0.35,,disp,pc,,Jamal 2014 Pakistan disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
@@ -1451,6 +1455,17 @@ Poland,1999,0.302,,con,pc,FALSE,MY2006 Poland con pc 5,Mitra and Yemtsov 2006,10
 Poland,2000,0.305,,con,pc,FALSE,MY2006 Poland con pc 5,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Poland,2001,0.307,,con,pc,FALSE,MY2006 Poland con pc 5,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Poland,2002,0.32,,con,pc,FALSE,MY2006 Poland con pc 5,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
+Poland,1990,0.177,,con,pc,,Park1995 Poland con pc,Tabatabai 1996; Park 1995,121,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Poland,1990,0.257,,disp,pc,,Park1995 Poland disp pc,Tabatabai 1996; Park 1995,121,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Poland,2002,0.317,,disp,pc,,PSV2004 Poland con pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,1994,0.308,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,1995,0.304,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,1996,0.312,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,1997,0.323,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,1998,0.293,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,1999,0.298,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,2000,0.311,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,2001,0.308,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
 Poland,1994,0.379,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
 Poland,1995,0.377,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
 Poland,1996,0.386,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
@@ -1460,18 +1475,7 @@ Poland,1999,0.377,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek
 Poland,2000,0.395,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
 Poland,2001,0.395,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
 Poland,2002,0.407,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
-Poland,1994,0.308,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
-Poland,1995,0.304,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
-Poland,1996,0.312,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
-Poland,1997,0.323,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
-Poland,1998,0.293,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
-Poland,1999,0.298,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
-Poland,2000,0.311,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
-Poland,2001,0.308,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
-Poland,2002,0.317,,disp,pc,,PSV2004 Poland con pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
 Poland,2002,0.28,,con,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",6,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
-Poland,1990,0.177,,con,pc,,Park1995 Poland con pc,Tabatabai 1996; Park 1995,121,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Poland,1990,0.257,,disp,pc,,Park1995 Poland disp pc,Tabatabai 1996; Park 1995,121,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Portugal,1994,0.436,,gross,hh,,Budria2007 gross hh,Budria 2007,32,https://mpra.ub.uni-muenchen.de/1784/1/MPRA_paper_1784.pdf
 Portugal,1995,0.421,,gross,hh,,Budria2007 gross hh,Budria 2007,32,https://mpra.ub.uni-muenchen.de/1784/1/MPRA_paper_1784.pdf
 Portugal,1996,0.409,,gross,hh,,Budria2007 gross hh,Budria 2007,32,https://mpra.ub.uni-muenchen.de/1784/1/MPRA_paper_1784.pdf
@@ -1622,10 +1626,10 @@ Slovakia,1993,0.17,,disp,oecdm,TRUE,GT1997 Slovakia disp oecdm,Garner and Terrel
 Slovakia,1989,0.176,,disp,pc,TRUE,GT1997 Slovakia disp pc,Garner and Terrell 1997,40,https://www.researchgate.net/profile/Thesia_Garner/publication/23724062_Changes_in_Distribution_and_Welfare_in_Transition_Economies_Market_vs_Policy_in_the_Czech_Republic_and_Slovakia/links/543689530cf2bf1f1f2bd9e3/Changes-in-Distribution-and-Welfare-in-Transition-Economies-Market-vs-Policy-in-the-Czech-Republic-and-Slovakia.pdf
 Slovakia,1993,0.185,,disp,pc,TRUE,GT1997 Slovakia disp pc,Garner and Terrell 1997,40,https://www.researchgate.net/profile/Thesia_Garner/publication/23724062_Changes_in_Distribution_and_Welfare_in_Transition_Economies_Market_vs_Policy_in_the_Czech_Republic_and_Slovakia/links/543689530cf2bf1f1f2bd9e3/Changes-in-Distribution-and-Welfare-in-Transition-Economies-Market-vs-Policy-in-the-Czech-Republic-and-Slovakia.pdf
 Slovakia,1988,0.172,,disp,oecdm,FALSE,GT2001 Slovakia disp oecdm,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
-Slovakia,1988,0.195,,disp,pc,FALSE,GT2001 Slovakia disp pc,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
-Slovakia,1988,0.187,,disp,sqrt,FALSE,GT2001 Slovakia disp sqrt,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
 Slovakia,1996,0.243,,disp,oecdm,FALSE,GT2001 Slovakia disp oecdm,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
+Slovakia,1988,0.195,,disp,pc,FALSE,GT2001 Slovakia disp pc,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
 Slovakia,1996,0.263,,disp,pc,FALSE,GT2001 Slovakia disp pc,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
+Slovakia,1988,0.187,,disp,sqrt,FALSE,GT2001 Slovakia disp sqrt,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
 Slovakia,1996,0.25,,disp,sqrt,FALSE,GT2001 Slovakia disp sqrt,Garner and Terrell 2001,30,http://hdl.handle.net/2027.42/39761
 Slovakia,1988,0.195,,disp,pc,FALSE,Milanovic1998 Slovakia disp pc,Milanovic 1998,168,https://books.google.com/books?id=cQl9xbuhvNkC
 Slovakia,1993,0.183,,disp,pc,FALSE,Milanovic1998 Slovakia disp pc,Milanovic 1998,168,https://books.google.com/books?id=cQl9xbuhvNkC
@@ -1667,8 +1671,8 @@ South Africa,2006,0.72,,gross,pc,FALSE,SSA2017 gross pc,Statistics South Africa 
 South Africa,2009,0.69,,gross,pc,FALSE,SSA2017 gross pc,Statistics South Africa 2017,21,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-062015.pdf
 South Africa,2011,0.69,,gross,pc,FALSE,SSA2017 gross pc,Statistics South Africa 2017,21,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-062015.pdf
 South Africa,2015,0.68,,gross,pc,FALSE,SSA2017 gross pc,Statistics South Africa 2017,21,http://www.statssa.gov.za/publications/Report-03-10-06/Report-03-10-062015.pdf
-Spain,2014,0.31,,con,oecdm,,ABBCHIKLMV2018 con oecdm,Anghel et al. 2018,Table 3,https://doi.org/10.1007/s13209-018-0185-1
 Spain,2014,0.33,,con,hh,,ABBCHIKLMV2018 con hh,Anghel et al. 2018,Table 3,https://doi.org/10.1007/s13209-018-0185-1
+Spain,2014,0.31,,con,oecdm,,ABBCHIKLMV2018 con oecdm,Anghel et al. 2018,Table 3,https://doi.org/10.1007/s13209-018-0185-1
 Spain,1974,0.3762,,con,hh,FALSE,IVIE con hh,Caixa Galicia Foundation and Ivie (Valencian Institute of Economic Research) 2009,bloque2/GTH_ID_7374.xls,http://www.ivie.es/downloads/desigualdad/desigualdad.zip
 Spain,1981,0.3562,,con,hh,FALSE,IVIE con hh,Caixa Galicia Foundation and Ivie (Valencian Institute of Economic Research) 2009,bloque2/GTH_ID_8081.xls,http://www.ivie.es/downloads/desigualdad/desigualdad.zip
 Spain,1991,0.3488,,con,hh,FALSE,IVIE con hh,Caixa Galicia Foundation and Ivie (Valencian Institute of Economic Research) 2009,bloque2/GTH_ID_9091.xls,http://www.ivie.es/downloads/desigualdad/desigualdad.zip
@@ -1852,11 +1856,11 @@ Sweden,1999,0.376,,gross,ae,TRUE,JL2009 gross ae 3,Johansson and Lindh 2009,"All
 Sweden,2000,0.3876,,gross,ae,TRUE,JL2009 gross ae 3,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,2001,0.3705,,gross,ae,TRUE,JL2009 gross ae 3,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,2002,0.3638,,gross,ae,TRUE,JL2009 gross ae 3,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
-Sweden,1981,0.329,,gross,hh,,RU1990 Sweden gross hh,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
+Sweden,1989,0.35,,disp,pc,,Park1995 Sweden disp pc,Tabatabai 1996; Park 1995,128,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Sweden,1981,0.205,,disp,ae,,RU1990 Sweden disp ae,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
 Sweden,1981,0.292,,disp,hh,,RU1990 Sweden disp hh,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
 Sweden,1981,0.249,,gross,ae,,RU1990 Sweden gross ae,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
-Sweden,1981,0.205,,disp,ae,,RU1990 Sweden disp ae,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
-Sweden,1989,0.35,,disp,pc,,Park1995 Sweden disp pc,Tabatabai 1996; Park 1995,128,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Sweden,1981,0.329,,gross,hh,,RU1990 Sweden gross hh,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
 Sweden,1979,0.3,,disp,hh,,vGP1984 Sweden disp hh,Tabatabai 1996; van Ginneken and Park 1984,128,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Sweden,1979,0.22,,disp,pc,,vGP1984 Sweden disp pc,Tabatabai 1996; van Ginneken and Park 1984,128,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Sweden,1990,0.2608,,disp,ae,TRUE,W1999 Sweden disp ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
