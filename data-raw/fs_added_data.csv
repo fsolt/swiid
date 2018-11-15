@@ -693,19 +693,56 @@ India,1976,0.38,,disp,pc,,vGP1984 India disp pc,Tabatabai 1996; van Ginneken and
 India,1973,0.357,,con,pc,,Yotopoulos1989 India con pc,Yotopoulos 1989,366,https://doi.org/10.1111/j.1475-4991.1989.tb00598.x
 India,1993,0.325,,con,pc,,ZKM2014 India con pc,"Zhuang, Kanbur, and Maligalig 2014",24,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA24
 India,2010,0.37,,con,pc,,ZKM2014 India con pc,"Zhuang, Kanbur, and Maligalig 2014",24,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA24
-Indonesia,1965,0.35,,con,pc,,cdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
-Indonesia,1970,0.35,,con,pc,,cdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
-Indonesia,1976,0.34,,con,pc,,cdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
-Indonesia,1978,0.38,,con,pc,,cdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
-Indonesia,1980,0.34,,con,pc,,cdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
-Indonesia,1984,0.33,,con,pc,,cdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
-Indonesia,1987,0.32,,con,pc,,cdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
-Indonesia,1990,0.32,,con,pc,,cdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
-Indonesia,1993,0.34,,con,pc,,cdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
-Indonesia,1996,0.36,,con,pc,,cdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
+Indonesia,1965,0.34,,con,pc,,Cameron2002 Indonesia con pc,Cameron 2002; Booth 2000,3,https://doi.org/10.1111/1467-8411.00119
+Indonesia,1970,0.33,,con,pc,,Cameron2002 Indonesia con pc,Cameron 2002; Booth 2000,3,https://doi.org/10.1111/1467-8411.00119
+Indonesia,1976,0.35,,con,pc,,Cameron2002 Indonesia con pc,Cameron 2002; Booth 2000,3,https://doi.org/10.1111/1467-8411.00119
+Indonesia,1978,0.38,,con,pc,,Cameron2002 Indonesia con pc,Cameron 2002; Booth 2000,3,https://doi.org/10.1111/1467-8411.00119
+Indonesia,1980,0.36,,con,pc,,Cameron2002 Indonesia con pc,Cameron 2002; Booth 2000,3,https://doi.org/10.1111/1467-8411.00119
+Indonesia,1981,0.33,,con,pc,,Cameron2002 Indonesia con pc,Cameron 2002; Booth 2000,3,https://doi.org/10.1111/1467-8411.00119
+Indonesia,1984,0.32,,con,pc,,Cameron2002 Indonesia con pc,Cameron 2002; Booth 2000,3,https://doi.org/10.1111/1467-8411.00119
+Indonesia,1987,0.32,,con,pc,,Cameron2002 Indonesia con pc,Cameron 2002; Booth 2000,3,https://doi.org/10.1111/1467-8411.00119
+Indonesia,1990,0.34,,con,pc,,Cameron2002 Indonesia con pc,Cameron 2002; Booth 2000,3,https://doi.org/10.1111/1467-8411.00119
+Indonesia,1993,0.33,,con,pc,,Cameron2002 Indonesia con pc,Cameron 2002; Booth 2000,3,https://doi.org/10.1111/1467-8411.00119
+Indonesia,1996,0.36,,con,pc,,Cameron2002 Indonesia con pc,Cameron 2002; Booth 2000,3,https://doi.org/10.1111/1467-8411.00119
+Indonesia,1999,0.33,,con,pc,,Cameron2002 Indonesia con pc,Cameron 2002; Booth 2000,3,https://doi.org/10.1111/1467-8411.00119
+Indonesia,1984,0.42,,gross,pc,,Cameron2002 Indonesia gross pc,Cameron 2002,12,https://doi.org/10.1111/1467-8411.00119
+Indonesia,1990,0.43,,gross,pc,,Cameron2002 Indonesia gross pc,Cameron 2002,12,https://doi.org/10.1111/1467-8411.00119
 Indonesia,1993,0.344,,con,pc,,FR2008 Indonesia con pc,Ferreira and Ravallion 2008,37,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Indonesia,2002,0.343,,con,pc,,FR2008 Indonesia con pc,Ferreira and Ravallion 2008,37,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
+Indonesia,1982,0.45,,disp,hh,TRUE,LvdE2010 disp hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,1987,0.43,,disp,hh,TRUE,LvdE2010 disp hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,1990,0.51,,disp,hh,TRUE,LvdE2010 disp hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,1993,0.5,,disp,hh,TRUE,LvdE2010 disp hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,1996,0.52,,disp,hh,TRUE,LvdE2010 disp hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,1998,0.46,,disp,hh,TRUE,LvdE2010 disp hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,1999,0.47,,disp,hh,TRUE,LvdE2010 disp hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,2000,0.47,,disp,hh,TRUE,LvdE2010 disp hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,2001,0.47,,disp,hh,TRUE,LvdE2010 disp hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,2002,0.46,,disp,hh,TRUE,LvdE2010 disp hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,2003,0.45,,disp,hh,TRUE,LvdE2010 disp hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,2004,0.44,,disp,hh,TRUE,LvdE2010 disp hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,1987,0.34,,con,hh,,LvdE2010 gross hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,1990,0.38,,con,hh,,LvdE2010 gross hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,1993,0.39,,con,hh,,LvdE2010 gross hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,1996,0.4,,con,hh,,LvdE2010 gross hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,1998,0.34,,con,hh,,LvdE2010 gross hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,1999,0.36,,con,hh,,LvdE2010 gross hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,2000,0.32,,con,hh,,LvdE2010 gross hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,2001,0.33,,con,hh,,LvdE2010 gross hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,2002,0.36,,con,hh,,LvdE2010 gross hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,2003,0.34,,con,hh,,LvdE2010 gross hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,2004,0.35,,con,hh,,LvdE2010 gross hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
 Indonesia,2008,0.41,,disp,ae,,NL2013 Indonesia disp ae,Nugraha and Lewis 2013,111,http://doi.org/10.1080/00074918.2013.772941
+Indonesia,1965,0.35,,con,pc,,vdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
+Indonesia,1970,0.35,,con,pc,,vdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
+Indonesia,1976,0.34,,con,pc,,vdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
+Indonesia,1978,0.38,,con,pc,,vdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
+Indonesia,1980,0.34,,con,pc,,vdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
+Indonesia,1984,0.33,,con,pc,,vdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
+Indonesia,1987,0.32,,con,pc,,vdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
+Indonesia,1990,0.32,,con,pc,,vdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
+Indonesia,1993,0.34,,con,pc,,vdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
+Indonesia,1996,0.36,,con,pc,,vdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
 Indonesia,1981,0.342,,con,hh,,Yotopoulos1989 Indonesia con hh,Yotopoulos 1989,366,https://doi.org/10.1111/j.1475-4991.1989.tb00598.x
 Iran,1986,0.47,,con,pc,,AP2003 Iran con pc,Adams and Page 2003,2040,https://doi.org/10.1016/j.worlddev.2003.04.004
 Iran,1990,0.434,,con,pc,,AP2003 Iran con pc,Adams and Page 2003,2040,https://doi.org/10.1016/j.worlddev.2003.04.004
