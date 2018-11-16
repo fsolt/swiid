@@ -677,7 +677,10 @@ Bahamas,2001,0.5745,,con,pc,TRUE,Statistics Bahamas con pc,Statistics Bahamas 20
 Bahamas,2003,0.48,,market,hh,,Statistics Bahamas market hh,Statistics Bahamas 2005,20,https://web.archive.org/web/20180427210852/http://www.centralbankbahamas.com/download/LFS_report_2004.pdf
 Bahamas,2004,0.43,,market,hh,,Statistics Bahamas market hh,Statistics Bahamas 2005,20,https://web.archive.org/web/20180427210852/http://www.centralbankbahamas.com/download/LFS_report_2004.pdf
 Bahamas,2013,0.414,,con,pc,TRUE,Statistics Bahamas con pc,Statistics Bahamas 2016,21,https://www.bahamas.gov.bs/wps/wcm/connect/5312dd47-5cd9-45f5-bf6c-dea99f3a6226/Bahamas+Household+Expenditure+Survey+2013+Report_v2.pdf?MOD=AJPERES
+Bahrain,2014,0.596,,gross,pc,,IGA 2017,Bahrain Information & eGovernment Authority 2017,51,http://www.data.gov.bh/en/ResourceCenter/DownloadFile?id=2484
 Bangladesh,1964,0.359,,gross,hh,,Muqtada1986 Bangladesh gross hh,Tabatabai 1996; Muqtada 1986,90,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Bangladesh,1967,0.304,,con,hh,,A1976 Bangladesh con hh,Azfar 1976,60,https://www.jstor.org/stable/25821355
+Bangladesh,1967,0.347,,gross,hh,,A1976 Bangladesh gross hh,Azfar 1976,60,https://www.jstor.org/stable/25821355
 Bangladesh,1967,0.335,,gross,hh,,Muqtada1986 Bangladesh gross hh,Tabatabai 1996; Muqtada 1986,90,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Bangladesh,1969,0.29,,gross,hh,,Rahman1988 Bangladesh gross hh,Tabatabai 1996; Rahman 1988,91,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Bangladesh,1974,0.36,,gross,hh,,Farid1993 Bangladesh gross hh,Tabatabai 1996; Farid 1993,91,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -1118,6 +1121,7 @@ Brazil,1960,0.53,,disp,hh,TRUE,CEPAL SDI Brazil disp hh Censo,CEPAL Serie Distri
 Brazil,1970,0.59,,disp,hh,TRUE,CEPAL SDI Brazil disp hh Censo,CEPAL Serie Distribucion del Ingreso 2 (1986),,http://hdl.handle.net/11362/8905
 Brazil,1972,0.61,,market,hh,TRUE,CEPAL SDI Brazil market hh PNAD,CEPAL Serie Distribucion del Ingreso 9 (1990),,http://hdl.handle.net/11362/9147
 Brazil,1974,0.56,,market,hh,FALSE,CEPAL SDI Brazil market hh ENDEF,CEPAL Serie Distribucion del Ingreso 2 (1986),,http://hdl.handle.net/11362/8905
+Brazil,1974,0.361,,con,hh,,Yotopoulos1989 Brazil con hh,Yotopoulos 1989,366,https://doi.org/10.1111/j.1475-4991.1989.tb00598.x
 Brazil,1976,0.6,,gross,hh,FALSE,CEPAL SDI Brazil gross hh PNAD,CEPAL Serie Distribucion del Ingreso 9 (1990),,http://hdl.handle.net/11362/9147
 Brazil,1977,0.61,,gross,hh,FALSE,CEPAL SDI Brazil gross hh PNAD,CEPAL Serie Distribucion del Ingreso 9 (1990),,http://hdl.handle.net/11362/9147
 Brazil,1978,0.56,,gross,hh,FALSE,CEPAL SDI Brazil gross hh PNAD,CEPAL Serie Distribucion del Ingreso 9 (1990),,http://hdl.handle.net/11362/9147
@@ -3287,11 +3291,13 @@ Denmark,1980,0.41,,market,sqrt,,NWN2014 market sqrt,Neamtu and Westergaard-Niels
 Denmark,1981,0.227,,disp,ae,,ARS1994 Denmark disp ae,"Atkinson, Rainwater, and Smeeding 1994",26,http://www.lisdatacenter.org/wps/liswps/121.pdf
 Denmark,1982,0.22,,disp,ae,,ARS1994 Denmark disp ae,"Atkinson, Rainwater, and Smeeding 1994",26,http://www.lisdatacenter.org/wps/liswps/121.pdf
 Denmark,1983,0.216,,disp,ae,,ARS1994 Denmark disp ae,"Atkinson, Rainwater, and Smeeding 1994",26,http://www.lisdatacenter.org/wps/liswps/121.pdf
+Denmark,1983,0.21,,disp,ae,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
 Denmark,1984,0.205,,disp,ae,,ARS1994 Denmark disp ae,"Atkinson, Rainwater, and Smeeding 1994",26,http://www.lisdatacenter.org/wps/liswps/121.pdf
 Denmark,1985,0.201,,disp,ae,,ARS1994 Denmark disp ae,"Atkinson, Rainwater, and Smeeding 1994",26,http://www.lisdatacenter.org/wps/liswps/121.pdf
 Denmark,1985,0.221,0.001,disp,sqrt,FALSE,"OECD Denmark disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Denmark,1985,0.373,,market,sqrt,FALSE,"OECD Denmark market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Denmark,1986,0.2,,disp,ae,,ARS1994 Denmark disp ae,"Atkinson, Rainwater, and Smeeding 1994",26,http://www.lisdatacenter.org/wps/liswps/121.pdf
+Denmark,1986,0.209,,disp,ae,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
 Denmark,1986,0.24,,disp,sqrt,,NWN2014 disp sqrt,Neamtu and Westergaard-Nielsen 2014,200,https://books.google.com/books?id=9cXRAgAAQBAJ&pg=200
 Denmark,1986,0.43,,market,sqrt,,NWN2014 market sqrt,Neamtu and Westergaard-Nielsen 2014,200,https://books.google.com/books?id=9cXRAgAAQBAJ&pg=200
 Denmark,1986,0.224,,disp,sqrt,FALSE,"OECD Denmark disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -3317,8 +3323,10 @@ Denmark,1987,0.345,,disp,hh,,Park1995 Denmark disp hh,Tabatabai 1996; Park 1995,
 Denmark,1987,0.2207,,disp,oecdm,FALSE,Statistics Denmark disp oecdm,Statistics Denmark,"",http://www.statbank.dk/IFOR41
 Denmark,1987,0.203,,disp,ae,TRUE,W1999 Denmark disp ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 Denmark,1987,0.3023,,gross,ae,TRUE,W1999 Denmark gross ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
+Denmark,1988,0.22,,disp,sqrt,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
 Denmark,1988,0.224,,disp,sqrt,FALSE,"OECD Denmark disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Denmark,1988,0.2206,,disp,oecdm,FALSE,Statistics Denmark disp oecdm,Statistics Denmark,"",http://www.statbank.dk/IFOR41
+Denmark,1989,0.208,,disp,ae,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
 Denmark,1989,0.22,,disp,sqrt,FALSE,"OECD Denmark disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Denmark,1989,0.2193,,disp,oecdm,FALSE,Statistics Denmark disp oecdm,Statistics Denmark,"",http://www.statbank.dk/IFOR41
 Denmark,1990,0.226,0.001,disp,sqrt,FALSE,"OECD Denmark disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -3326,6 +3334,8 @@ Denmark,1990,0.396,,market,sqrt,FALSE,"OECD Denmark market sqrt, current def, 20
 Denmark,1990,0.2216,,disp,oecdm,FALSE,Statistics Denmark disp oecdm,Statistics Denmark,"",http://www.statbank.dk/IFOR41
 Denmark,1991,0.222,,disp,sqrt,FALSE,"OECD Denmark disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Denmark,1991,0.21989999999999998,,disp,oecdm,FALSE,Statistics Denmark disp oecdm,Statistics Denmark,"",http://www.statbank.dk/IFOR41
+Denmark,1992,0.213,,disp,ae,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
+Denmark,1992,0.22,,disp,sqrt,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
 Denmark,1992,0.2318,0.0025,disp,ae,FALSE,LIS Denmark disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/dk.txt
 Denmark,1992,0.3451,0.0027,disp,hh,FALSE,LIS Denmark disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/dk.txt
 Denmark,1992,0.2339,0.003,disp,oecdm,FALSE,LIS Denmark disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/dk.txt
@@ -3343,11 +3353,13 @@ Denmark,1992,0.4728,0.0036,market,pc,FALSE,LIS Denmark market pc,LISSY,"",https:
 Denmark,1992,0.4527,0.0043,market,sqrt,FALSE,LIS Denmark market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/dk.txt
 Denmark,1992,0.222,,disp,sqrt,FALSE,"OECD Denmark disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Denmark,1992,0.2234,,disp,oecdm,FALSE,Statistics Denmark disp oecdm,Statistics Denmark,"",http://www.statbank.dk/IFOR41
+Denmark,1993,0.21,,disp,ae,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
 Denmark,1993,0.26,,disp,sqrt,,NWN2014 disp sqrt,Neamtu and Westergaard-Nielsen 2014,200,https://books.google.com/books?id=9cXRAgAAQBAJ&pg=200
 Denmark,1993,0.49,,market,sqrt,,NWN2014 market sqrt,Neamtu and Westergaard-Nielsen 2014,200,https://books.google.com/books?id=9cXRAgAAQBAJ&pg=200
 Denmark,1993,0.223,,disp,sqrt,FALSE,"OECD Denmark disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Denmark,1993,0.2279,,disp,oecdm,FALSE,Statistics Denmark disp oecdm,Statistics Denmark,"",http://www.statbank.dk/IFOR41
 Denmark,1994,0.2,,disp,oecdm,TRUE,Eurostat Denmark disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Denmark,1994,0.201,,disp,ae,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
 Denmark,1994,0.216,,disp,sqrt,FALSE,"OECD Denmark disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Denmark,1994,0.225,,disp,oecdm,FALSE,Statistics Denmark disp oecdm,Statistics Denmark,"",http://www.statbank.dk/IFOR41
 Denmark,1995,0.2074,0.0011,disp,ae,FALSE,LIS Denmark disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/dk.txt
@@ -4132,6 +4144,10 @@ Finland,1976,0.343,,market,sqrt,FALSE,"OECD Finland market sqrt, incomparable de
 Finland,1976,0.215,,disp,oecdm,FALSE,Statistics Finland disp oecdm,Statistics Finland,"",http://pxnet2.stat.fi/PXWeb/api/v1/en/StatFin/tul/tjt/270_tjt_tau_117.px
 Finland,1976,0.263,,gross,oecdm,FALSE,Statistics Finland gross oecdm,Statistics Finland,"",http://pxnet2.stat.fi/PXWeb/api/v1/en/StatFin/tul/tjt/270_tjt_tau_117.px
 Finland,1976,0.354,,market,oecdm,FALSE,Statistics Finland market oecdm,Statistics Finland,"",http://pxnet2.stat.fi/PXWeb/api/v1/en/StatFin/tul/tjt/270_tjt_tau_117.px
+Finland,1980,0.225,,disp,ae,,RU1990 Finland disp ae,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
+Finland,1980,0.312,,disp,hh,,RU1990 Finland disp hh,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
+Finland,1980,0.27,,gross,ae,,RU1990 Finland gross ae,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
+Finland,1980,0.349,,gross,hh,,RU1990 Finland gross hh,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
 Finland,1981,0.205,,disp,oecdm,FALSE,Statistics Finland disp oecdm,Statistics Finland,"",http://pxnet2.stat.fi/PXWeb/api/v1/en/StatFin/tul/tjt/270_tjt_tau_117.px
 Finland,1981,0.253,,gross,oecdm,FALSE,Statistics Finland gross oecdm,Statistics Finland,"",http://pxnet2.stat.fi/PXWeb/api/v1/en/StatFin/tul/tjt/270_tjt_tau_117.px
 Finland,1981,0.358,,market,oecdm,FALSE,Statistics Finland market oecdm,Statistics Finland,"",http://pxnet2.stat.fi/PXWeb/api/v1/en/StatFin/tul/tjt/270_tjt_tau_117.px
@@ -4532,12 +4548,20 @@ Finland,2016,0.506,,market,sqrt,FALSE,"OECD Finland market sqrt, current def, 20
 Finland,2016,0.262,,disp,oecdm,FALSE,Statistics Finland disp oecdm,Statistics Finland,"",http://pxnet2.stat.fi/PXWeb/api/v1/en/StatFin/tul/tjt/270_tjt_tau_117.px
 Finland,2016,0.306,,gross,oecdm,FALSE,Statistics Finland gross oecdm,Statistics Finland,"",http://pxnet2.stat.fi/PXWeb/api/v1/en/StatFin/tul/tjt/270_tjt_tau_117.px
 Finland,2016,0.47200000000000003,,market,oecdm,FALSE,Statistics Finland market oecdm,Statistics Finland,"",http://pxnet2.stat.fi/PXWeb/api/v1/en/StatFin/tul/tjt/270_tjt_tau_117.px
+France,1962,0.4809,,market,hh,,Sollogoub1988 market hh,Sollogoub 1988,551,https://www.jstor.org/stable/3501851
+France,1965,0.4607,,market,hh,,Sollogoub1988 market hh,Sollogoub 1988,551,https://www.jstor.org/stable/3501851
 France,1970,0.331,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,1970,0.4391,,market,hh,,Sollogoub1988 market hh,Sollogoub 1988,551,https://www.jstor.org/stable/3501851
 France,1975,0.3340000152587891,,disp,hh,,Brandolini1998 France disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+France,1975,0.328,,disp,pc,,CV1990 disp pc,Canceil and Villeneuve 1990,69,https://www.persee.fr/docAsPDF/estat_0336-1454_1990_num_230_1_5432.pdf
 France,1975,0.317,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,1975,0.4175,,market,hh,,Sollogoub1988 market hh,Sollogoub 1988,551,https://www.jstor.org/stable/3501851
 France,1975,0.33,,disp,ae,,vGP1984 France disp ae,Tabatabai 1996; van Ginneken and Park 1984,125,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 France,1975,0.39,,disp,hh,,vGP1984 France disp hh,Tabatabai 1996; van Ginneken and Park 1984,125,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 France,1975,0.35,,disp,pc,,vGP1984 France disp pc,Tabatabai 1996; van Ginneken and Park 1984,125,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+France,1978,0.308,,disp,oecdm,,FvH1998 France disp oecdm,Fitoussi and Van Haeperen 1998,40,https://dial.uclouvain.be/downloader/downloader.php?pid=boreal:32564&datastream=PDF_01
+France,1978,0.3745,,gross,hh,,FvH1998 France gross hh,Fitoussi and Van Haeperen 1998,40,https://dial.uclouvain.be/downloader/downloader.php?pid=boreal:32564&datastream=PDF_01
+France,1978,0.3457,,gross,oecdm,,FvH1998 France gross oecdm,Fitoussi and Van Haeperen 1998,40,https://dial.uclouvain.be/downloader/downloader.php?pid=boreal:32564&datastream=PDF_01
 France,1978,0.3237,0.0032,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1978,0.3638,0.0032,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1978,0.3157,0.0033,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -4554,8 +4578,14 @@ France,1978,0.4533,0.0043,market,oecdm,FALSE,LIS France market oecdm,LISSY,"",ht
 France,1978,0.4835,0.0044,market,pc,FALSE,LIS France market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1978,0.4472,0.004,market,sqrt,FALSE,LIS France market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1979,0.3110000038146973,,disp,hh,,Brandolini1998 France disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+France,1979,0.314,,disp,pc,,CV1990 disp pc,Canceil and Villeneuve 1990,69,https://www.persee.fr/docAsPDF/estat_0336-1454_1990_num_230_1_5432.pdf
 France,1979,0.297,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,1979,0.4029,,market,hh,,Sollogoub1988 market hh,Sollogoub 1988,551,https://www.jstor.org/stable/3501851
 France,1984,0.3029999923706055,,disp,hh,,Brandolini1998 France disp hh,Milanovic 2016; Brandolini 1998,"",https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016
+France,1984,0.311,,disp,pc,,CV1990 disp pc,Canceil and Villeneuve 1990,69,https://www.persee.fr/docAsPDF/estat_0336-1454_1990_num_230_1_5432.pdf
+France,1984,0.304,,disp,oecdm,,FvH1998 France disp oecdm,Fitoussi and Van Haeperen 1998,40,https://dial.uclouvain.be/downloader/downloader.php?pid=boreal:32564&datastream=PDF_01
+France,1984,0.3744,,gross,hh,,FvH1998 France gross hh,Fitoussi and Van Haeperen 1998,40,https://dial.uclouvain.be/downloader/downloader.php?pid=boreal:32564&datastream=PDF_01
+France,1984,0.3416,,gross,oecdm,,FvH1998 France gross oecdm,Fitoussi and Van Haeperen 1998,40,https://dial.uclouvain.be/downloader/downloader.php?pid=boreal:32564&datastream=PDF_01
 France,1984,0.291,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
 France,1984,0.3487,0.0047,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1984,0.3898,0.004,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -5943,10 +5973,12 @@ Hungary,1991,0.4755,0.0088,market,sqrt,FALSE,LIS Hungary market sqrt,LISSY,"",ht
 Hungary,1991,0.273,0.003,disp,sqrt,FALSE,"OECD Hungary disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Hungary,1991,0.20883,,disp,pc,FALSE,Transmonee Hungary disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
 Hungary,1992,0.282,,disp,sqrt,FALSE,"OECD Hungary disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Hungary,1993,0.261,,con,pc,,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
 Hungary,1993,0.229,,disp,pc,,Milanovic1999 Hungary disp pc,Milanovic 1999,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
 Hungary,1993,0.299,,disp,sqrt,FALSE,"OECD Hungary disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Hungary,1993,0.27899999999999997,,gross,pc,FALSE,Povcalnet Hungary gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Hungary,1993,0.23147,,disp,pc,FALSE,Transmonee Hungary disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
+Hungary,1994,0.258,,con,pc,,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
 Hungary,1994,0.3201,0.0072,disp,ae,FALSE,LIS Hungary disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/hu.txt
 Hungary,1994,0.3859,0.0068,disp,hh,FALSE,LIS Hungary disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/hu.txt
 Hungary,1994,0.3205,0.0074,disp,oecdm,FALSE,LIS Hungary disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/hu.txt
@@ -5965,12 +5997,16 @@ Hungary,1994,0.5364,0.0091,market,sqrt,FALSE,LIS Hungary market sqrt,LISSY,"",ht
 Hungary,1994,0.232,,con,pc,FALSE,MY2006 Hungary con pc 2,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Hungary,1994,0.299,,disp,sqrt,FALSE,"OECD Hungary disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Hungary,1994,0.2338,,disp,pc,FALSE,Transmonee Hungary disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
+Hungary,1995,0.261,,con,pc,,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
 Hungary,1995,0.294,0.005,disp,sqrt,FALSE,"OECD Hungary disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Hungary,1995,0.24236,,disp,pc,FALSE,Transmonee Hungary disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
+Hungary,1996,0.283,,con,pc,,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
 Hungary,1996,0.294,,disp,sqrt,FALSE,"OECD Hungary disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Hungary,1996,0.24645,,disp,pc,FALSE,Transmonee Hungary disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
+Hungary,1997,0.269,,con,pc,,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
 Hungary,1997,0.281,,disp,sqrt,FALSE,"OECD Hungary disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Hungary,1997,0.25412,,disp,pc,FALSE,Transmonee Hungary disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
+Hungary,1998,0.268,,con,pc,,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
 Hungary,1998,0.25,,con,pc,FALSE,MY2006 Hungary con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Hungary,1998,0.284,,disp,sqrt,FALSE,"OECD Hungary disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Hungary,1998,0.25,,disp,pc,FALSE,Transmonee Hungary disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
@@ -6313,6 +6349,7 @@ Iceland,2014,0.283,,gross,sqrt,FALSE,"OECD Iceland gross sqrt, current def, 2012
 Iceland,2014,0.393,,market,sqrt,FALSE,"OECD Iceland market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Iceland,2014,0.278,,gross,pc,FALSE,Povcalnet Iceland gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Iceland,2015,0.24100000000000002,,disp,oecdm,TRUE,Eurostat Iceland disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+India,1973,0.357,,con,pc,,Yotopoulos1989 India con pc,Yotopoulos 1989,366,https://doi.org/10.1111/j.1475-4991.1989.tb00598.x
 India,1976,0.42,,disp,hh,,vGP1984 India disp hh,Tabatabai 1996; van Ginneken and Park 1984,95,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 India,1976,0.38,,disp,pc,,vGP1984 India disp pc,Tabatabai 1996; van Ginneken and Park 1984,95,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 India,1983,0.325,,con,pc,,Bhalla2003 India con pc,Bhalla 2003,346,http://www.jstor.org/stable/4413132
@@ -6388,22 +6425,60 @@ India,2011,0.495,,disp,sqrt,FALSE,"OECD India disp sqrt, current def, 2012 metho
 India,2011,0.495,,gross,sqrt,FALSE,"OECD India gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 India,2011,0.508,,market,sqrt,FALSE,"OECD India market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 India,2012,0.375,,con,pc,,CN2016 con pc,Chadha and Nandwani 2016,22,http://hdl.handle.net/10419/161488
-Indonesia,1965,0.35,,con,pc,,cdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
-Indonesia,1970,0.35,,con,pc,,cdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
-Indonesia,1976,0.34,,con,pc,,cdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
-Indonesia,1978,0.38,,con,pc,,cdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
-Indonesia,1980,0.34,,con,pc,,cdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
-Indonesia,1984,0.33,,con,pc,,cdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
-Indonesia,1987,0.32,,con,pc,,cdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
-Indonesia,1990,0.32,,con,pc,,cdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
-Indonesia,1993,0.34,,con,pc,,cdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
+Indonesia,1965,0.34,,con,pc,,Cameron2002 Indonesia con pc,Cameron 2002; Booth 2000,3,https://doi.org/10.1111/1467-8411.00119
+Indonesia,1965,0.35,,con,pc,,vdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
+Indonesia,1970,0.33,,con,pc,,Cameron2002 Indonesia con pc,Cameron 2002; Booth 2000,3,https://doi.org/10.1111/1467-8411.00119
+Indonesia,1970,0.35,,con,pc,,vdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
+Indonesia,1976,0.35,,con,pc,,Cameron2002 Indonesia con pc,Cameron 2002; Booth 2000,3,https://doi.org/10.1111/1467-8411.00119
+Indonesia,1976,0.34,,con,pc,,vdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
+Indonesia,1978,0.38,,con,pc,,Cameron2002 Indonesia con pc,Cameron 2002; Booth 2000,3,https://doi.org/10.1111/1467-8411.00119
+Indonesia,1978,0.38,,con,pc,,vdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
+Indonesia,1980,0.36,,con,pc,,Cameron2002 Indonesia con pc,Cameron 2002; Booth 2000,3,https://doi.org/10.1111/1467-8411.00119
+Indonesia,1980,0.34,,con,pc,,vdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
+Indonesia,1981,0.33,,con,pc,,Cameron2002 Indonesia con pc,Cameron 2002; Booth 2000,3,https://doi.org/10.1111/1467-8411.00119
+Indonesia,1981,0.342,,con,hh,,Yotopoulos1989 Indonesia con hh,Yotopoulos 1989,366,https://doi.org/10.1111/j.1475-4991.1989.tb00598.x
+Indonesia,1982,0.45,,disp,hh,TRUE,LvdE2010 disp hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,1984,0.32,,con,pc,,Cameron2002 Indonesia con pc,Cameron 2002; Booth 2000,3,https://doi.org/10.1111/1467-8411.00119
+Indonesia,1984,0.42,,gross,pc,,Cameron2002 Indonesia gross pc,Cameron 2002,12,https://doi.org/10.1111/1467-8411.00119
+Indonesia,1984,0.33,,con,pc,,vdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
+Indonesia,1987,0.32,,con,pc,,Cameron2002 Indonesia con pc,Cameron 2002; Booth 2000,3,https://doi.org/10.1111/1467-8411.00119
+Indonesia,1987,0.43,,disp,hh,TRUE,LvdE2010 disp hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,1987,0.34,,con,hh,,LvdE2010 gross hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,1987,0.32,,con,pc,,vdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
+Indonesia,1990,0.34,,con,pc,,Cameron2002 Indonesia con pc,Cameron 2002; Booth 2000,3,https://doi.org/10.1111/1467-8411.00119
+Indonesia,1990,0.43,,gross,pc,,Cameron2002 Indonesia gross pc,Cameron 2002,12,https://doi.org/10.1111/1467-8411.00119
+Indonesia,1990,0.51,,disp,hh,TRUE,LvdE2010 disp hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,1990,0.38,,con,hh,,LvdE2010 gross hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,1990,0.32,,con,pc,,vdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
+Indonesia,1993,0.33,,con,pc,,Cameron2002 Indonesia con pc,Cameron 2002; Booth 2000,3,https://doi.org/10.1111/1467-8411.00119
 Indonesia,1993,0.344,,con,pc,,FR2008 Indonesia con pc,Ferreira and Ravallion 2008,37,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
-Indonesia,1996,0.36,,con,pc,,cdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
+Indonesia,1993,0.5,,disp,hh,TRUE,LvdE2010 disp hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,1993,0.39,,con,hh,,LvdE2010 gross hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,1993,0.34,,con,pc,,vdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
+Indonesia,1996,0.36,,con,pc,,Cameron2002 Indonesia con pc,Cameron 2002; Booth 2000,3,https://doi.org/10.1111/1467-8411.00119
+Indonesia,1996,0.52,,disp,hh,TRUE,LvdE2010 disp hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,1996,0.4,,con,hh,,LvdE2010 gross hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
 Indonesia,1996,0.355,,con,pc,,Statistics Indonesia con pc,Statistics Indonesia,"",https://www.bps.go.id/website/tabelExcelIndo/indo_23_6.xls
+Indonesia,1996,0.36,,con,pc,,vdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
+Indonesia,1998,0.46,,disp,hh,TRUE,LvdE2010 disp hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,1998,0.34,,con,hh,,LvdE2010 gross hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,1999,0.33,,con,pc,,Cameron2002 Indonesia con pc,Cameron 2002; Booth 2000,3,https://doi.org/10.1111/1467-8411.00119
+Indonesia,1999,0.47,,disp,hh,TRUE,LvdE2010 disp hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,1999,0.36,,con,hh,,LvdE2010 gross hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
 Indonesia,1999,0.308,,con,pc,,Statistics Indonesia con pc,Statistics Indonesia,"",https://www.bps.go.id/website/tabelExcelIndo/indo_23_6.xls
+Indonesia,2000,0.47,,disp,hh,TRUE,LvdE2010 disp hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,2000,0.32,,con,hh,,LvdE2010 gross hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,2001,0.47,,disp,hh,TRUE,LvdE2010 disp hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,2001,0.33,,con,hh,,LvdE2010 gross hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
 Indonesia,2002,0.343,,con,pc,,FR2008 Indonesia con pc,Ferreira and Ravallion 2008,37,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Indonesia,2002,0.301,,con,pc,,GIDD Indonesia con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
+Indonesia,2002,0.46,,disp,hh,TRUE,LvdE2010 disp hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,2002,0.36,,con,hh,,LvdE2010 gross hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
 Indonesia,2002,0.329,,con,pc,,Statistics Indonesia con pc,Statistics Indonesia,"",https://www.bps.go.id/website/tabelExcelIndo/indo_23_6.xls
+Indonesia,2003,0.45,,disp,hh,TRUE,LvdE2010 disp hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,2003,0.34,,con,hh,,LvdE2010 gross hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,2004,0.44,,disp,hh,TRUE,LvdE2010 disp hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
+Indonesia,2004,0.35,,con,hh,,LvdE2010 gross hh,Leigh and Van Der Eng 2010,214,https://books.google.com/books?hl=en&lr=&id=zLQUDAAAQBAJ&oi=fnd&pg=PA171
 Indonesia,2005,0.363,,con,pc,,Statistics Indonesia con pc,Statistics Indonesia,"",https://www.bps.go.id/website/tabelExcelIndo/indo_23_6.xls
 Indonesia,2007,0.364,,con,pc,,Statistics Indonesia con pc,Statistics Indonesia,"",https://www.bps.go.id/website/tabelExcelIndo/indo_23_6.xls
 Indonesia,2008,0.41,,disp,ae,,NL2013 Indonesia disp ae,Nugraha and Lewis 2013,111,http://doi.org/10.1080/00074918.2013.772941
@@ -6419,9 +6494,16 @@ Indonesia,2015,0.41,,con,pc,,Statistics Indonesia con pc,Statistics Indonesia,""
 Indonesia,2016,0.397,,con,pc,,Statistics Indonesia con pc,Statistics Indonesia,"",https://www.bps.go.id/website/tabelExcelIndo/indo_05_21.xls
 Indonesia,2017,0.39261,,con,pc,,Statistics Indonesia con pc,Statistics Indonesia,"",https://www.bps.go.id/website/tabelExcelIndo/indo_05_21.xls
 Iran,1969,0.447,,con,hh,,Karbasian1996 Iran con hh,Tabatabai 1996; Karbasian 1996,108,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Iran,1969,0.4188,,con,hh,,Momayezi1986 Iran con hh 1,Momayezi 1986; Persaran 1976,72,https://www.jstor.org/stable/4327249
+Iran,1970,0.4545,,con,hh,,Momayezi1986 Iran con hh 1,Momayezi 1986; Persaran 1976,72,https://www.jstor.org/stable/4327249
+Iran,1971,0.4363,,con,hh,,Momayezi1986 Iran con hh 1,Momayezi 1986; Persaran 1976,72,https://www.jstor.org/stable/4327249
+Iran,1972,0.4228,,con,hh,,Momayezi1986 Iran con hh 1,Momayezi 1986; Persaran 1976,72,https://www.jstor.org/stable/4327249
 Iran,1973,0.445,,con,hh,,Karbasian1996 Iran con hh,Tabatabai 1996; Karbasian 1996,108,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Iran,1973,0.4636,,con,hh,,Momayezi1986 Iran con hh 2,Momayezi 1986; Kazrooni 1982,72,https://www.jstor.org/stable/4327249
+Iran,1974,0.4692,,con,hh,,Momayezi1986 Iran con hh 2,Momayezi 1986; Kazrooni 1982,72,https://www.jstor.org/stable/4327249
 Iran,1974,0.52,,disp,hh,,vGP1984 Iran disp hh,Tabatabai 1996; van Ginneken and Park 1984,108,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Iran,1974,0.47,,disp,pc,,vGP1984 Iran disp pc,Tabatabai 1996; van Ginneken and Park 1984,108,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Iran,1976,0.4862,,con,hh,,Momayezi1986 Iran con hh 2,Momayezi 1986; Kazrooni 1982,72,https://www.jstor.org/stable/4327249
 Iran,1978,0.514,,con,hh,,Karbasian1996 Iran con hh,Tabatabai 1996; Karbasian 1996,108,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Iran,1979,0.552,,con,hh,,Karbasian1996 Iran con hh,Tabatabai 1996; Karbasian 1996,109,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Iran,1980,0.591,,con,hh,,Karbasian1996 Iran con hh,Tabatabai 1996; Karbasian 1996,109,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -6524,7 +6606,11 @@ Iraq,2006,0.28600000000000003,,con,pc,FALSE,Povcalnet Iraq con pc 1,World Bank P
 Iraq,2007,0.356,,con,pc,,Hassine2015 Iraq con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Iraq,2007,0.309,,con,pc,,WB Iraq 2011 con pc,World Bank 2011,19,http://siteresources.worldbank.org/MENAEXT/Resources/Confronting_Poverty_In_Iraq_E_Chapter_3.pdf
 Iraq,2007,0.359,,gross,pc,,WB Iraq 2011 gross pc,World Bank 2011,19,http://siteresources.worldbank.org/MENAEXT/Resources/Confronting_Poverty_In_Iraq_E_Chapter_3.pdf
+Iraq,2007,0.276,,con,pc,,WB Iraq 2013 con pc,World Bank 2013,19,http://microdata.worldbank.org/index.php/catalog/2334/download/34771
 Iraq,2012,0.295,,con,pc,FALSE,Povcalnet Iraq con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Iraq,2012,0.295,,con,pc,,WB Iraq 2013 con pc,World Bank 2013,19,http://microdata.worldbank.org/index.php/catalog/2334/download/34771
+Iraq,2012,0.295,,con,pc,,WB Iraq 2016 con pc,World Bank 2016,7,http://microdata.worldbank.org/index.php/catalog/2334/download/34771
+Iraq,2014,0.285,,con,pc,,WB Iraq 2016 con pc,World Bank 2016,7,http://microdata.worldbank.org/index.php/catalog/2334/download/34771
 Ireland,1973,0.367,,disp,hh,,CN1993 Ireland disp hh,Callan and Nolan 1993,7,http://www.esri.ie/pubs/WP043.pdf
 Ireland,1973,0.379,,gross,hh,,CN1993 Ireland gross hh,Callan and Nolan 1993,5,http://www.esri.ie/pubs/WP043.pdf
 Ireland,1973,0.27,,disp,ae,,vGP1984 Ireland disp ae,Tabatabai 1996; van Ginneken and Park 1984,126,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -6759,6 +6845,11 @@ Ireland,2015,0.545,,market,sqrt,FALSE,"OECD Ireland market sqrt, current def, 20
 Ireland,2015,0.318,,gross,pc,FALSE,Povcalnet Ireland gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Ireland,2016,0.306,,disp,pc,FALSE,CSO Ireland disp pc,CSO Ireland,"",http://www.cso.ie/px/pxeirestat/Database/eirestat/Survey%20on%20Income%20and%20Living%20Conditions%20(SILC)/SIA47.px
 Ireland,2016,0.295,,disp,oecdm,TRUE,Eurostat Ireland disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Israel,1979,0.3181,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
+Israel,1979,0.319,,disp,ae,,A1996 Israel disp ae 2,Achdut 1996,S25,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
+Israel,1979,0.318,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1979,0.366,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1979,0.433,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
 Israel,1979,0.3364,0.006,disp,hh,FALSE,LIS Israel disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/il.txt
 Israel,1979,0.3617,0.0064,disp,pc,FALSE,LIS Israel disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/il.txt
 Israel,1979,0.3025,0.0052,disp,sqrt,FALSE,LIS Israel disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/il.txt
@@ -6769,8 +6860,27 @@ Israel,1979,0.4694,0.0076,market,hh,FALSE,LIS Israel market hh,LISSY,"",https://
 Israel,1979,0.4714,0.0067,market,pc,FALSE,LIS Israel market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/il.txt
 Israel,1979,0.4256,0.0065,market,sqrt,FALSE,LIS Israel market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/il.txt
 Israel,1979,0.363,,gross,pc,FALSE,Povcalnet Israel gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Israel,1980,0.3239,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
+Israel,1980,0.324,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1980,0.369,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1980,0.434,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1981,0.3185,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
+Israel,1982,0.3135,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
+Israel,1983,0.3018,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
+Israel,1983,0.302,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1983,0.362,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1983,0.443,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1984,0.3283,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
+Israel,1984,0.328,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1984,0.4,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1984,0.475,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1985,0.3119,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
+Israel,1985,0.312,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1985,0.373,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1985,0.468,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
 Israel,1985,0.326,,disp,sqrt,FALSE,"OECD Israel disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Israel,1985,0.472,,market,sqrt,FALSE,"OECD Israel market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Israel,1986,0.323,,disp,ae,,A1996 Israel disp ae 2,Achdut 1996,S25,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
 Israel,1986,0.3383,0.0035,disp,hh,FALSE,LIS Israel disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/il.txt
 Israel,1986,0.3635,0.0034,disp,pc,FALSE,LIS Israel disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/il.txt
 Israel,1986,0.3088,0.0037,disp,sqrt,FALSE,LIS Israel disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/il.txt
@@ -6781,8 +6891,27 @@ Israel,1986,0.5181,0.005,market,hh,FALSE,LIS Israel market hh,LISSY,"",https://r
 Israel,1986,0.5093,0.0053,market,pc,FALSE,LIS Israel market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/il.txt
 Israel,1986,0.4742,0.0048,market,sqrt,FALSE,LIS Israel market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/il.txt
 Israel,1986,0.365,,gross,pc,FALSE,Povcalnet Israel gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Israel,1987,0.3186,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
+Israel,1987,0.319,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1987,0.37,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1987,0.459,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1988,0.3221,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
+Israel,1988,0.322,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1988,0.37,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1988,0.457,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1989,0.3237,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
+Israel,1989,0.324,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1989,0.377,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1989,0.474,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1990,0.3263,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
+Israel,1990,0.326,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1990,0.376,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1990,0.48,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
 Israel,1990,0.329,,disp,sqrt,FALSE,"OECD Israel disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Israel,1990,0.476,,market,sqrt,FALSE,"OECD Israel market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Israel,1991,0.3273,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
+Israel,1992,0.3391,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
+Israel,1992,0.322,,disp,ae,,A1996 Israel disp ae 2,Achdut 1996,S25,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
 Israel,1992,0.3634,0.0033,con,hh,FALSE,LIS Israel con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/il.txt
 Israel,1992,0.3654,0.0038,con,pc,FALSE,LIS Israel con pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/il.txt
 Israel,1992,0.3237,0.0033,con,sqrt,FALSE,LIS Israel con sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/il.txt
@@ -6796,6 +6925,7 @@ Israel,1992,0.523,0.0051,market,hh,FALSE,LIS Israel market hh,LISSY,"",https://r
 Israel,1992,0.5003,0.0057,market,pc,FALSE,LIS Israel market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/il.txt
 Israel,1992,0.4677,0.0051,market,sqrt,FALSE,LIS Israel market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/il.txt
 Israel,1992,0.355,,gross,pc,FALSE,Povcalnet Israel gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Israel,1993,0.329,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
 Israel,1995,0.338,,disp,sqrt,FALSE,"OECD Israel disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Israel,1995,0.494,,market,sqrt,FALSE,"OECD Israel market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Israel,1997,0.3718,0.0039,con,hh,FALSE,LIS Israel con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/il.txt
@@ -7591,6 +7721,7 @@ Korea,1980,0.389,,disp,hh,,Leipziger1992 Korea disp hh,Tabatabai 1996; Leipziger
 Korea,1982,0.357,,disp,hh,,Choo1987 Korea disp hh,Tabatabai 1996; Choo 1987,98,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Korea,1982,0.3103,,con,sqrt,FALSE,HRK2005 con sqrt,Hae-Ryun and Kamiya 2005,14,http://www3.unisi.it/eventi/GiniLorenz05/paper%2026%20may/PAPER_Hae-Ryun_Kamiya.pdf
 Korea,1983,0.3134,,con,sqrt,FALSE,HRK2005 con sqrt,Hae-Ryun and Kamiya 2005,14,http://www3.unisi.it/eventi/GiniLorenz05/paper%2026%20may/PAPER_Hae-Ryun_Kamiya.pdf
+Korea,1983,0.346,,con,hh,,Yotopoulos1989 Korea con hh,Yotopoulos 1989,366,https://doi.org/10.1111/j.1475-4991.1989.tb00598.x
 Korea,1984,0.357,,disp,hh,,Choo1987 Korea disp hh,Tabatabai 1996; Choo 1987,98,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Korea,1984,0.3152,,con,sqrt,FALSE,HRK2005 con sqrt,Hae-Ryun and Kamiya 2005,14,http://www3.unisi.it/eventi/GiniLorenz05/paper%2026%20may/PAPER_Hae-Ryun_Kamiya.pdf
 Korea,1985,0.3187,,con,sqrt,FALSE,HRK2005 con sqrt,Hae-Ryun and Kamiya 2005,14,http://www3.unisi.it/eventi/GiniLorenz05/paper%2026%20may/PAPER_Hae-Ryun_Kamiya.pdf
@@ -9435,15 +9566,19 @@ Nigeria,2009,0.43,,con,pc,FALSE,Povcalnet Nigeria con pc 2,World Bank Povcalnet,
 Nigeria,2009,0.37729999999999997,,con,sqrt,FALSE,World Bank Africa Poverty Database Nigeria con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
 Nigeria,2010,0.4161,,con,hh,,NBS Nigeria con hh,National Bureau of Statistics Nigeria 2013,107,http://www.nigerianstat.gov.ng/pdfuploads/annual_abstract_2012.pdf
 Nigeria,2010,0.447,,con,pc,,NBS Nigeria con pc,National Bureau of Statistics Nigeria 2012,11,http://www.nigerianstat.gov.ng/pdfuploads/Nigeria%20Poverty%20Profile%202010.pdf
+Norway,1970,0.354,,gross,hh,,AA1983 gross hh,Andersen and Aaberge 1983,25,https://brage.bibsys.no/xmlui/bitstream/handle/11250/181069/rapp_198321.pdf
 Norway,1970,0.305,,disp,ae,TRUE,Ringen1991 disp ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1970,0.325,,gross,ae,TRUE,Ringen1991 gross ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1970,0.369,,market,ae,TRUE,Ringen1991 market ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
+Norway,1973,0.372,,gross,hh,,AA1983 gross hh,Andersen and Aaberge 1983,25,https://brage.bibsys.no/xmlui/bitstream/handle/11250/181069/rapp_198321.pdf
 Norway,1973,0.348,,disp,ae,TRUE,Ringen1991 disp ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1973,0.364,,gross,ae,TRUE,Ringen1991 gross ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1973,0.422,,market,ae,TRUE,Ringen1991 market ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
+Norway,1976,0.365,,gross,hh,,AA1983 gross hh,Andersen and Aaberge 1983,25,https://brage.bibsys.no/xmlui/bitstream/handle/11250/181069/rapp_198321.pdf
 Norway,1976,0.319,,disp,ae,TRUE,Ringen1991 disp ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1976,0.342,,gross,ae,TRUE,Ringen1991 gross ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1976,0.392,,market,ae,TRUE,Ringen1991 market ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
+Norway,1979,0.369,,gross,hh,,AA1983 gross hh,Andersen and Aaberge 1983,25,https://brage.bibsys.no/xmlui/bitstream/handle/11250/181069/rapp_198321.pdf
 Norway,1979,0.3113,0.0038,disp,hh,FALSE,LIS Norway disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/no.txt
 Norway,1979,0.2736,0.0042,disp,pc,FALSE,LIS Norway disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/no.txt
 Norway,1979,0.2299,0.0052,disp,sqrt,FALSE,LIS Norway disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/no.txt
@@ -9459,6 +9594,10 @@ Norway,1979,0.345,,gross,ae,TRUE,Ringen1991 gross ae 1,Ringen 1991,9,http://doi.
 Norway,1979,0.365,,gross,ae,TRUE,Ringen1991 gross ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1979,0.4,,market,ae,TRUE,Ringen1991 market ae 1,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1979,0.418,,market,ae,TRUE,Ringen1991 market ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
+Norway,1979,0.243,,disp,ae,,RU1990 Norway disp ae,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
+Norway,1979,0.311,,disp,hh,,RU1990 Norway disp hh,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
+Norway,1979,0.289,,gross,ae,,RU1990 Norway gross ae,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
+Norway,1979,0.356,,gross,hh,,RU1990 Norway gross hh,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
 Norway,1982,0.334,,disp,ae,TRUE,Ringen1991 disp ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1982,0.35,,gross,ae,TRUE,Ringen1991 gross ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
 Norway,1982,0.406,,market,ae,TRUE,Ringen1991 market ae 2,Ringen 1991,9,http://doi.org/10.1111/j.1475-4991.1991.tb00335.x
@@ -9709,8 +9848,11 @@ Norway,2015,0.432,,market,sqrt,FALSE,"OECD Norway market sqrt, current def, 2012
 Norway,2015,0.275,,gross,pc,FALSE,Povcalnet Norway gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Norway,2015,0.271,,disp,oecdm,TRUE,SSB disp oecdm,Statistics Norway,"",https://www.ssb.no/statistikkbanken/selectvarval/Define.asp?MainTable=InntUlikhet&PLanguage=1&nyTmpVar=true&CMSSubjectArea=inntekt-og-forbruk&KortNavnWeb=ifhus&StatVariant=&checked=true
 Norway,2016,0.261,,disp,oecdm,TRUE,SSB disp oecdm,Statistics Norway,"",https://www.ssb.no/statistikkbanken/selectvarval/Define.asp?MainTable=InntUlikhet&PLanguage=1&nyTmpVar=true&CMSSubjectArea=inntekt-og-forbruk&KortNavnWeb=ifhus&StatVariant=&checked=true
+Oman,2010,0.307,,con,hh,,NCSI2012 Oman con hh,Oman National Center for Statistics and Information 2012,23,https://ncsi.gov.om/Elibrary/LibraryContentDoc/ben_Final%20Findings%20E%202010%20-%202011_964e4334-f010-4f48-aad6-9401454cf803.pdf
 Pakistan,1964,0.356,,gross,hh,,Mahmood1984 Pakistan gross hh,Mahmood 1984,372,http://www.jstor.org/stable/41258679
 Pakistan,1964,0.386,,disp,hh,,PBS1995 Pakistan disp hh,Tabatabai 1996; PBS1995,102,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Pakistan,1967,0.337,,con,hh,,A1976 Pakistan con hh,Azfar 1976,60,https://www.jstor.org/stable/25821355
+Pakistan,1967,0.38,,gross,hh,,A1976 Pakistan gross hh,Azfar 1976,60,https://www.jstor.org/stable/25821355
 Pakistan,1967,0.349,,gross,hh,,Mahmood1984 Pakistan gross hh,Mahmood 1984,372,http://www.jstor.org/stable/41258679
 Pakistan,1967,0.355,,disp,hh,,PBS1995 Pakistan disp hh,Tabatabai 1996; PBS1995,102,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Pakistan,1969,0.335,,gross,hh,,Mahmood1984 Pakistan gross hh,Mahmood 1984,372,http://www.jstor.org/stable/41258679
@@ -9731,7 +9873,7 @@ Pakistan,1987,0.323,,con,hh,,Park1995 Pakistan con hh,Tabatabai 1996; Park 1995,
 Pakistan,1987,0.357,,disp,hh,,Park1995 Pakistan disp hh,Tabatabai 1996; Park 1995,102,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Pakistan,1987,0.346,,disp,hh,,PBS1995 Pakistan disp hh,Tabatabai 1996; PBS1995,102,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Pakistan,1987,0.33299999999999996,,con,pc,FALSE,Povcalnet Pakistan con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Pakistan,1988,0.35,,disp,pc,,Jamal 2014 disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
+Pakistan,1988,0.35,,disp,pc,,Jamal 2014 Pakistan disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
 Pakistan,1988,0.348,,disp,hh,,PBS1995 Pakistan disp hh,Tabatabai 1996; PBS1995,102,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Pakistan,1990,0.332,,con,pc,FALSE,Povcalnet Pakistan con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Pakistan,1990,0.332,,con,pc,,ZKM2014 Pakistan con pc,"Zhuang, Kanbur, and Maligalig 2014",24,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA24
@@ -9739,19 +9881,19 @@ Pakistan,1991,0.407,,disp,hh,,PBS1995 Pakistan disp hh,Tabatabai 1996; PBS1995,1
 Pakistan,1993,0.303,,con,pc,,FR2008 Pakistan con pc,Ferreira and Ravallion 2008,38,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Pakistan,1996,0.287,,con,pc,FALSE,Povcalnet Pakistan con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Pakistan,1998,0.331,,con,pc,FALSE,Povcalnet Pakistan con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Pakistan,1999,0.4,,disp,pc,,Jamal 2014 disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
+Pakistan,1999,0.4,,disp,pc,,Jamal 2014 Pakistan disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
 Pakistan,2001,0.263,,con,pc,,GIDD Pakistan con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
 Pakistan,2001,0.304,,con,pc,FALSE,Povcalnet Pakistan con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Pakistan,2002,0.411,,disp,pc,,Jamal 2014 disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
+Pakistan,2002,0.411,,disp,pc,,Jamal 2014 Pakistan disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
 Pakistan,2004,0.312,,con,pc,,FR2008 Pakistan con pc,Ferreira and Ravallion 2008,38,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Pakistan,2004,0.325,,con,pc,FALSE,Povcalnet Pakistan con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Pakistan,2005,0.407,,disp,pc,,Jamal 2014 disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
+Pakistan,2005,0.407,,disp,pc,,Jamal 2014 Pakistan disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
 Pakistan,2005,0.327,,con,pc,FALSE,Povcalnet Pakistan con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Pakistan,2007,0.316,,con,pc,FALSE,Povcalnet Pakistan con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Pakistan,2007,0.3,,con,pc,,ZKM2014 Pakistan con pc,"Zhuang, Kanbur, and Maligalig 2014",24,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA24
-Pakistan,2008,0.42,,disp,pc,,Jamal 2014 disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
+Pakistan,2008,0.42,,disp,pc,,Jamal 2014 Pakistan disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
 Pakistan,2010,0.298,,con,pc,FALSE,Povcalnet Pakistan con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Pakistan,2011,0.407,,disp,pc,,Jamal 2014 disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
+Pakistan,2011,0.407,,disp,pc,,Jamal 2014 Pakistan disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
 Pakistan,2011,0.309,,con,pc,FALSE,Povcalnet Pakistan con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Pakistan,2013,0.307,,con,pc,FALSE,Povcalnet Pakistan con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Pakistan,2015,0.335,,con,pc,FALSE,Povcalnet Pakistan con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
@@ -10339,6 +10481,7 @@ Philippines,2015,0.4439,,gross,pc,,PSA gross pc,Philippines Statistical Agency,"
 Poland,1983,0.246,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Poland,1984,0.258,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Poland,1985,0.253,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
+Poland,1985,0.253,,disp,pc,,CB1997 Poland disp pc,Caselli and Battini 1997,2,https://link.springer.com/article/10.1023/A%3A1009541105457
 Poland,1985,0.196,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1985,0.2,,con,oecdm,FALSE,KP2002 con oecdm,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1985,0.222,,con,pc,FALSE,KP2002 con pc,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -10372,6 +10515,7 @@ Poland,1987,0.27,,gross,pc,FALSE,KP2002 gross pc,Keane and Prasad 2002,329,https
 Poland,1987,0.368,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1987,0.256,,gross,pc,FALSE,Milanovic1998 Poland gross pc,Milanovic 1998,171,https://books.google.com/books?id=cQl9xbuhvNkC
 Poland,1988,0.246,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
+Poland,1988,0.246,,disp,pc,,CB1997 Poland disp pc,Caselli and Battini 1997,2,https://link.springer.com/article/10.1023/A%3A1009541105457
 Poland,1988,0.211,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1988,0.217,,con,oecdm,FALSE,KP2002 con oecdm,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1988,0.239,,con,pc,FALSE,KP2002 con pc,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -10380,6 +10524,7 @@ Poland,1988,0.256,,gross,oecdm,FALSE,KP2002 gross oecdm,Keane and Prasad 2002,32
 Poland,1988,0.272,,gross,pc,FALSE,KP2002 gross pc,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1988,0.385,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1989,0.268,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
+Poland,1989,0.268,,disp,pc,,CB1997 Poland disp pc,Caselli and Battini 1997,2,https://link.springer.com/article/10.1023/A%3A1009541105457
 Poland,1989,0.249,,disp,pc,,Cornia1994 Poland disp pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Poland,1989,0.322,,market,pc,,Cornia1994 Poland market pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Poland,1989,0.219,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -10390,6 +10535,7 @@ Poland,1989,0.264,,gross,oecdm,FALSE,KP2002 gross oecdm,Keane and Prasad 2002,32
 Poland,1989,0.278,,gross,pc,FALSE,KP2002 gross pc,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1989,0.384,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1989,0.27545,,disp,pc,FALSE,Transmonee Poland disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
+Poland,1990,0.258,,disp,pc,,CB1997 Poland disp pc,Caselli and Battini 1997,2,https://link.springer.com/article/10.1023/A%3A1009541105457
 Poland,1990,0.191,,disp,pc,,Cornia1994 Poland disp pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Poland,1990,0.31,,market,pc,,Cornia1994 Poland market pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Poland,1990,0.209,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -10402,6 +10548,7 @@ Poland,1990,0.389,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,ht
 Poland,1990,0.177,,con,pc,,Park1995 Poland con pc,Tabatabai 1996; Park 1995,121,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Poland,1990,0.257,,disp,pc,,Park1995 Poland disp pc,Tabatabai 1996; Park 1995,121,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Poland,1990,0.26845,,disp,pc,FALSE,Transmonee Poland disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
+Poland,1991,0.253,,disp,pc,,CB1997 Poland disp pc,Caselli and Battini 1997,2,https://link.springer.com/article/10.1023/A%3A1009541105457
 Poland,1991,0.225,,disp,pc,,Cornia1994 Poland disp pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Poland,1991,0.314,,market,pc,,Cornia1994 Poland market pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Poland,1991,0.208,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -10412,6 +10559,7 @@ Poland,1991,0.242,,gross,oecdm,FALSE,KP2002 gross oecdm,Keane and Prasad 2002,32
 Poland,1991,0.266,,gross,pc,FALSE,KP2002 gross pc,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1991,0.404,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1991,0.26548,,disp,pc,FALSE,Transmonee Poland disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
+Poland,1992,0.26,,disp,pc,,CB1997 Poland disp pc,Caselli and Battini 1997,2,https://link.springer.com/article/10.1023/A%3A1009541105457
 Poland,1992,0.239,,disp,pc,,Cornia1994 Poland disp pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Poland,1992,0.324,,market,pc,,Cornia1994 Poland market pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Poland,1992,0.205,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -10453,6 +10601,8 @@ Poland,1994,0.262,,gross,ae,FALSE,KP2002 gross ae,Keane and Prasad 2002,329,http
 Poland,1994,0.271,,gross,oecdm,FALSE,KP2002 gross oecdm,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1994,0.298,,gross,pc,FALSE,KP2002 gross pc,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1994,0.437,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
+Poland,1994,0.308,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,1994,0.379,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
 Poland,1994,0.32269,,disp,pc,FALSE,Transmonee Poland disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
 Poland,1995,0.222,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1995,0.234,,con,oecdm,FALSE,KP2002 con oecdm,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -10476,6 +10626,8 @@ Poland,1995,0.6646,0.0063,market,hh,FALSE,LIS Poland market hh,LISSY,"",https://
 Poland,1995,0.611,0.007,market,oecdm,FALSE,LIS Poland market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pl.txt
 Poland,1995,0.6282,0.0067,market,pc,FALSE,LIS Poland market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pl.txt
 Poland,1995,0.6072,0.0069,market,sqrt,FALSE,LIS Poland market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pl.txt
+Poland,1995,0.304,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,1995,0.377,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
 Poland,1995,0.32134,,disp,pc,FALSE,Transmonee Poland disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
 Poland,1996,0.227,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1996,0.239,,con,oecdm,FALSE,KP2002 con oecdm,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -10485,6 +10637,8 @@ Poland,1996,0.275,,gross,oecdm,FALSE,KP2002 gross oecdm,Keane and Prasad 2002,32
 Poland,1996,0.301,,gross,pc,FALSE,KP2002 gross pc,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1996,0.448,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1996,0.268,,con,pc,FALSE,MY2006 Poland con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
+Poland,1996,0.312,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,1996,0.386,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
 Poland,1996,0.32802,,disp,pc,FALSE,Transmonee Poland disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
 Poland,1997,0.235,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1997,0.247,,con,oecdm,FALSE,KP2002 con oecdm,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -10494,8 +10648,12 @@ Poland,1997,0.286,,gross,oecdm,FALSE,KP2002 gross oecdm,Keane and Prasad 2002,32
 Poland,1997,0.319,,gross,pc,FALSE,KP2002 gross pc,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1997,0.451,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1997,0.277,,con,pc,FALSE,MY2006 Poland con pc 4,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
+Poland,1997,0.323,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,1997,0.395,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
 Poland,1997,0.33391,,disp,pc,FALSE,Transmonee Poland disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
 Poland,1998,0.296,,con,pc,FALSE,MY2006 Poland con pc 5,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
+Poland,1998,0.293,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,1998,0.366,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
 Poland,1998,0.326,,disp,pc,FALSE,Transmonee Poland disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
 Poland,1999,0.3,,disp,oecdm,TRUE,Eurostat Poland disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Poland,1999,0.3054,0.0028,disp,ae,FALSE,LIS Poland disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pl.txt
@@ -10514,15 +10672,24 @@ Poland,1999,0.4981,0.0045,market,oecdm,FALSE,LIS Poland market oecdm,LISSY,"",ht
 Poland,1999,0.5174,0.0053,market,pc,FALSE,LIS Poland market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pl.txt
 Poland,1999,0.4915,0.0041,market,sqrt,FALSE,LIS Poland market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pl.txt
 Poland,1999,0.302,,con,pc,FALSE,MY2006 Poland con pc 5,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
+Poland,1999,0.298,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,1999,0.377,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
 Poland,1999,0.334,,disp,pc,FALSE,Transmonee Poland disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
 Poland,2000,0.3,,disp,oecdm,TRUE,Eurostat Poland disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Poland,2000,0.305,,con,pc,FALSE,MY2006 Poland con pc 5,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Poland,2000,0.316,0.025,disp,sqrt,FALSE,"OECD Poland disp sqrt, incomparable def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Poland,2000,0.311,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,2000,0.395,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
 Poland,2000,0.345,,disp,pc,FALSE,Transmonee Poland disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
 Poland,2001,0.307,,con,pc,FALSE,MY2006 Poland con pc 5,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
+Poland,2001,0.308,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,2001,0.395,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
 Poland,2001,0.34136,,disp,pc,FALSE,Transmonee Poland disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
 Poland,2002,0.299,,con,pc,,GIDD Poland con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
 Poland,2002,0.32,,con,pc,FALSE,MY2006 Poland con pc 5,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
+Poland,2002,0.317,,disp,pc,,PSV2004 Poland con pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,2002,0.407,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,2002,0.28,,con,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",6,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
 Poland,2002,0.35282,,disp,pc,FALSE,Transmonee Poland disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
 Poland,2003,0.356,,disp,pc,FALSE,Transmonee Poland disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
 Poland,2004,0.35600000000000004,,disp,oecdm,TRUE,Eurostat Poland disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
@@ -11113,6 +11280,8 @@ São Tomé and Príncipe,2000,0.321,,con,pc,FALSE,Povcalnet São Tomé and Prín
 São Tomé and Príncipe,2000,0.2868,,con,sqrt,FALSE,World Bank Africa Poverty Database São Tomé and Príncipe con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
 São Tomé and Príncipe,2010,0.308,,con,pc,FALSE,Povcalnet São Tomé and Príncipe con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 São Tomé and Príncipe,2010,0.2658,,con,sqrt,FALSE,World Bank Africa Poverty Database São Tomé and Príncipe con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
+Saudi Arabia,2007,0.513,,con,hh,,GAStat con hh,Saudi Arabia General Authority for Statistics,25,https://www.stats.gov.sa/sites/default/files/household_expenditure_and_income_survey_2013.pdf
+Saudi Arabia,2013,0.459,,con,hh,,GAStat con hh,Saudi Arabia General Authority for Statistics,25,https://www.stats.gov.sa/sites/default/files/household_expenditure_and_income_survey_2013.pdf
 Senegal,1991,0.541,,con,pc,FALSE,Povcalnet Senegal con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Senegal,1994,0.414,,con,pc,FALSE,Povcalnet Senegal con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Senegal,1995,0.381,,con,pc,,GIDD Senegal con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
@@ -12382,6 +12551,10 @@ Sweden,1981,0.2439,0.0034,gross,sqrt,FALSE,LIS Sweden gross sqrt,LISSY,"",https:
 Sweden,1981,0.5136,0.0075,market,hh,FALSE,LIS Sweden market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/se.txt
 Sweden,1981,0.4439,0.0058,market,pc,FALSE,LIS Sweden market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/se.txt
 Sweden,1981,0.4165,0.0057,market,sqrt,FALSE,LIS Sweden market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/se.txt
+Sweden,1981,0.205,,disp,ae,,RU1990 Sweden disp ae,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
+Sweden,1981,0.292,,disp,hh,,RU1990 Sweden disp hh,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
+Sweden,1981,0.249,,gross,ae,,RU1990 Sweden gross ae,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
+Sweden,1981,0.329,,gross,hh,,RU1990 Sweden gross hh,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
 Sweden,1981,0.199,,disp,ae,FALSE,Statistics Sweden disp ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
 Sweden,1981,0.423,,market,ae,FALSE,Statistics Sweden market ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
 Sweden,1982,0.3248,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
