@@ -472,12 +472,12 @@ Finland,1990,0.2513,,gross,ae,TRUE,W1999 Finland gross ae 2,Wagstaff et al. 1999
 France,1975,0.328,,disp,pc,,CV1990 disp pc,Canceil and Villeneuve 1990,69,https://www.persee.fr/docAsPDF/estat_0336-1454_1990_num_230_1_5432.pdf
 France,1979,0.314,,disp,pc,,CV1990 disp pc,Canceil and Villeneuve 1990,69,https://www.persee.fr/docAsPDF/estat_0336-1454_1990_num_230_1_5432.pdf
 France,1984,0.311,,disp,pc,,CV1990 disp pc,Canceil and Villeneuve 1990,69,https://www.persee.fr/docAsPDF/estat_0336-1454_1990_num_230_1_5432.pdf
-France,1978,0.3745,,gross,hh,,FvH1998 gross hh,Fitoussi and Van Haeperen 1998,40,https://dial.uclouvain.be/downloader/downloader.php?pid=boreal:32564&datastream=PDF_01
-France,1984,0.3744,,gross,hh,,FvH1998 gross hh,Fitoussi and Van Haeperen 1998,40,https://dial.uclouvain.be/downloader/downloader.php?pid=boreal:32564&datastream=PDF_01
-France,1978,0.3457,,gross,oecdm,,FvH1998 gross oecdm,Fitoussi and Van Haeperen 1998,40,https://dial.uclouvain.be/downloader/downloader.php?pid=boreal:32564&datastream=PDF_01
-France,1984,0.3416,,gross,oecdm,,FvH1998 gross oecdm,Fitoussi and Van Haeperen 1998,40,https://dial.uclouvain.be/downloader/downloader.php?pid=boreal:32564&datastream=PDF_01
-France,1978,0.308,,disp,oecdm,,FvH1998 disp oecdm,Fitoussi and Van Haeperen 1998,40,https://dial.uclouvain.be/downloader/downloader.php?pid=boreal:32564&datastream=PDF_01
-France,1984,0.304,,disp,oecdm,,FvH1998 disp oecdm,Fitoussi and Van Haeperen 1998,40,https://dial.uclouvain.be/downloader/downloader.php?pid=boreal:32564&datastream=PDF_01
+France,1978,0.3745,,gross,hh,,FvH1998 France gross hh,Fitoussi and Van Haeperen 1998,40,https://dial.uclouvain.be/downloader/downloader.php?pid=boreal:32564&datastream=PDF_01
+France,1984,0.3744,,gross,hh,,FvH1998 France gross hh,Fitoussi and Van Haeperen 1998,40,https://dial.uclouvain.be/downloader/downloader.php?pid=boreal:32564&datastream=PDF_01
+France,1978,0.3457,,gross,oecdm,,FvH1998 France gross oecdm,Fitoussi and Van Haeperen 1998,40,https://dial.uclouvain.be/downloader/downloader.php?pid=boreal:32564&datastream=PDF_01
+France,1984,0.3416,,gross,oecdm,,FvH1998 France gross oecdm,Fitoussi and Van Haeperen 1998,40,https://dial.uclouvain.be/downloader/downloader.php?pid=boreal:32564&datastream=PDF_01
+France,1978,0.308,,disp,oecdm,,FvH1998 France disp oecdm,Fitoussi and Van Haeperen 1998,40,https://dial.uclouvain.be/downloader/downloader.php?pid=boreal:32564&datastream=PDF_01
+France,1984,0.304,,disp,oecdm,,FvH1998 France disp oecdm,Fitoussi and Van Haeperen 1998,40,https://dial.uclouvain.be/downloader/downloader.php?pid=boreal:32564&datastream=PDF_01
 France,1962,0.4809,,market,hh,,Sollogoub1988 market hh,Sollogoub 1988,551,https://www.jstor.org/stable/3501851
 France,1965,0.4607,,market,hh,,Sollogoub1988 market hh,Sollogoub 1988,551,https://www.jstor.org/stable/3501851
 France,1970,0.4391,,market,hh,,Sollogoub1988 market hh,Sollogoub 1988,551,https://www.jstor.org/stable/3501851
@@ -582,6 +582,12 @@ Hungary,1989,0.214,,disp,pc,,Cornia1994 Hungary disp pc,Cornia 1994,593,http://d
 Hungary,1991,0.205,,disp,pc,,Cornia1994 Hungary disp pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Hungary,1989,0.269,,market,pc,,Cornia1994 Hungary market pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Hungary,1991,0.273,,market,pc,,Cornia1994 Hungary market pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
+Hungary,1993,0.261,,con,pc,,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
+Hungary,1994,0.258,,con,pc,,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
+Hungary,1995,0.261,,con,pc,,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
+Hungary,1996,0.283,,con,pc,,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
+Hungary,1997,0.269,,con,pc,,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
+Hungary,1998,0.268,,con,pc,,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
 Hungary,1988,0.21,,disp,pc,FALSE,Milanovic1998 Hungary disp pc,Milanovic 1998,167,https://books.google.com/books?id=cQl9xbuhvNkC
 Hungary,1987,0.207,,disp,pc,,Milanovic1999 Hungary disp pc,Milanovic 1999,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
 Hungary,1989,0.248,,disp,pc,,Milanovic1999 Hungary disp pc,Milanovic 1999,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
