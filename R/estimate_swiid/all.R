@@ -189,7 +189,7 @@ source_data <- list(  K = max(x$kcode),
                       RW = max(x$rwcode),
                       W = max(x$wcode),
                       E = max(x$ecode),
-                      
+
                       N = nrow(x),
                       N_ibl = nrow(x %>% filter(ibl)),
                       N_wbl = nrow(x %>% filter(!is.na(gini_b))),
@@ -217,13 +217,7 @@ source_data <- list(  K = max(x$kcode),
                       kt_k_start = kn$kt_k_start,
                       kt_k_end = kn$kt_k_end,
                       kr = kn$kr,
-                      nbkt = kt1$n, 
-                      
-                      J = length(rho_s$rho),
-                      ssj = rho_s$scode,
-                      sktj = rho_s$sktcode,
-                      rho_s_m = rho_s$rho,
-                      rho_s_m_se = rho_s$rho_se,
+                      nbkt = kt1$n,
                       
                       sn = sn$yrspan,
                       shnoo = sn$shnoo,
@@ -290,7 +284,7 @@ save(x, out1, runtime, file = str_c("data/all_", iter/1000, "k_",
 
 # Plots
 source("R/plot_tscs.R")
-plot_tscs(x, out1, save_pdf = "paper/figures/_swiid.pdf")
+plot_tscs(x, out1, save_pdf = "paper/figures/swiid.pdf")
 
 beep() # chime
 shinystan::launch_shinystan(out1)

@@ -19,44 +19,59 @@ baseline_es <- str_split(baseline_series, "\\s")[[1]] %>% last()
 x0 <- ineq2_m %>%  
   mutate(kcode = as.integer(factor(country, levels = unique(country))),
          rcode = as.integer(factor(region, levels = unique(region))),
-         scode = as.integer(factor(series, levels = unique(series))),
          wecode = as.integer(factor(wdes, levels = unique(wdes))),
          kwecode = as.integer(factor(100*kcode+wecode)),
          rwecode = as.integer(factor(100*rcode+wecode)),
+         scode = as.integer(factor(series, levels = unique(series))),
          wcode = as.integer(factor(welfare_def) %>% forcats::fct_relevel(baseline_wd)),
          ecode = as.integer(factor(equiv_scale) %>% forcats::fct_relevel(baseline_es)),
-         kwcode = as.integer(factor(100*kcode+wcode))) 
+         kwcode = as.integer(factor(100*kcode+wcode)))
 
-kt <- x0 %>%  
-  transmute(kcode = kcode,
-            yrspan = (lastyr - firstyr) + 1) %>% 
-  distinct(kcode, yrspan) %>% 
-  slice(rep(1:n(), yrspan)) %>% 
-  group_by(kcode) %>% 
-  mutate(tcode = 1:n()) %>% 
+kt <- x0 %>% 
+  select(country, firstyr, lastyr) %>% 
+  distinct() %>% 
+  slice(rep(1:n(), (lastyr - firstyr) + 1)) %>% 
+  group_by(country) %>% 
+  mutate(year = first(firstyr):first(lastyr)) %>% 
   ungroup() %>% 
-  mutate(ktcode = 1:n())
+  mutate(ktcode = 1:n()) %>% 
+  select(country, year, ktcode)
 
+skt0 <- x0 %>%  
+  select(scode, year) %>% 
+  arrange(scode, year) %>% 
+  group_by(scode) %>% 
+  mutate(firstyr =  min(year),
+         lastyr = max(year)) %>% 
+  ungroup() %>% 
+  complete(scode, year) %>% 
+  group_by(scode) %>% 
+  mutate(firstyr = min(firstyr, na.rm = TRUE),
+         lastyr = min(lastyr, na.rm = TRUE)) %>% 
+  ungroup() %>% 
+  filter(year >= firstyr & year <= lastyr) %>% 
+  mutate(sktcode = 1:n()) %>% 
+  select(-firstyr, -lastyr)
 
-rho_we_m <- rho_we_m %>%
+rho_we <- rho_we %>%
   select(-ends_with("code")) %>% 
-  left_join(x0 %>% 
-              select("country", "year", "wdes",
-                     "kcode", "rcode", "tcode", 
-                     "wcode", "ecode", "wecode", "kwecode", "rwecode") %>% 
-              distinct(),
-            by = c("country", "year", "wdes"))
+  inner_join(x0 %>% 
+               select("country", "year", "wdes",
+                      "kcode", "rcode", "tcode", 
+                      "wcode", "ecode", "wecode", "kwecode", "rwecode") %>% 
+               distinct(),
+             by = c("country", "year", "wdes"))
 
 rho_wd_m <- rho_wd_m %>%
   select(-ends_with("code")) %>% 
-  left_join(x0 %>% 
-              rename(wd = "welfare_def") %>% 
-              select("country", "year", "wd", "kbl",
-                     "kcode", "rcode", "tcode", 
-                     "wcode", "kwcode", "rwcode",
-                     "kwd", "rwd") %>% 
-              distinct(),
-            by = c("country", "year", "wd", "kbl", "kwd", "rwd"))
+  inner_join(x0 %>% 
+               rename(wd = "welfare_def") %>% 
+               select("country", "year", "wd", "kbl",
+                      "kcode", "rcode", "tcode", 
+                      "wcode", "kwcode", "rwcode",
+                      "kwd", "rwd") %>% 
+               distinct(),
+             by = c("country", "year", "wd", "kbl", "kwd", "rwd"))
 
 rwe2codes <- rho_we_m %>%
   filter(wcode == 1) %>%        # baseline_wd is always coded 1
@@ -66,14 +81,33 @@ rwe2codes <- rho_we_m %>%
   distinct() 
 
 x <- x0 %>% 
-  left_join(kt, by = c("kcode", "tcode")) %>% 
+  left_join(kt, by = c("country", "year")) %>% 
   mutate(wdes2 = str_replace(wdes, ".*_", "market_")) %>% 
-  left_join(rwe2codes, by = c("wdes2", "rcode"))
+  left_join(rwe2codes, by = c("wdes2", "rcode")) %>% 
+  left_join(skt0, by = c("scode", "year"))                # adds sktcode
+
+skt <- skt0 %>% 
+  left_join(x %>% select(scode, kwecode, rwecode) %>% distinct(), by = "scode")
+
+skt_kwe <- skt %>% 
+  arrange(kwecode) %>% 
+  rowid_to_column() %>% 
+  group_by(kwecode) %>% 
+  summarize(skt_kwe_start = min(rowid),     # which skt starts each kwe?
+            skt_kwe_end = max(rowid))      # which skt ends each kwe?
+
+skt_rwe <- skt %>% 
+  arrange(rwecode) %>% 
+  rowid_to_column() %>% 
+  group_by(rwecode) %>% 
+  summarize(skt_rwe_start = min(rowid),     # which skt starts each kwe?
+            skt_rwe_end = max(rowid))      # which skt ends each kwe?
 
 kn <- x %>% 
   group_by(kcode) %>% 
-  summarize(kt1 = min(ktcode),
-            yrspan = first(yrspan),
+  summarize(country = first(country),
+            kt_k_start = min(ktcode),
+            kt_k_end = max(ktcode),
             kr = first(rcode),
             bk = as.numeric(any(!is.na(gini_b)))) %>% 
   ungroup()
@@ -84,6 +118,34 @@ kt1 <- x %>%
   select(n, ktcode) %>%
   right_join(kt, by = "ktcode") %>% 
   mutate(n = if_else(!is.na(n), n, as.integer(0)))
+
+rho_s <- x %>% 
+  filter(bl) %>% 
+  mutate(rho = gini_b/gini_m,
+         rho_se = sqrt(gini_b_se^2 + gini_m_se^2)) %>% 
+  filter(!(rho == 1 & equiv_scale == "sqrt" & str_detect(series, "^LIS")))
+
+sj <- rho_s %>%
+  mutate(sj = row_number()) %>%
+  group_by(scode) %>%
+  summarize(country = first(country),
+            series = first(series),
+            sj1 = min(sj)) %>%
+  ungroup()
+
+sn <- x %>% 
+  filter(obl) %>% 
+  group_by(scode) %>% 
+  summarize(country = first(country),
+            series = first(series),
+            shnoo = as.numeric(sum(is.na(gini_b)) > 0),
+            skt1 = min(sktcode),
+            yrspan = max(year) - min(year) + 1,
+            s_bl_obs = sum(!is.na(gini_b)),
+            sr1 = any(sktcode == skt1 & !is.na(gini_b)) %>% as.numeric()) %>% 
+  ungroup() %>% 
+  left_join(sj, by = c("scode", "country", "series")) %>% 
+  mutate(sj1 = if_else(is.na(sj1), 0, sj1))
 
 mu_priors_by_wd <- function(x, var) {
   var <- rlang::ensym(var)
@@ -119,6 +181,7 @@ source_data <- list(  K = max(x$kcode),
                       KT = nrow(kt),
                       R = max(x$rcode),
                       S = max(x$scode),
+                      SKT = max(x$sktcode),
                       WE = max(x$wecode),
                       KWE = max(x$kwecode),
                       RWE = max(x$rwecode),
@@ -130,18 +193,16 @@ source_data <- list(  K = max(x$kcode),
                       N = nrow(x),
                       N_ibl = nrow(x %>% filter(ibl)),
                       N_wbl = nrow(x %>% filter(!is.na(gini_b))),
-                      N_obl = nrow(x %>% filter(s_bl_obs > 0)),
+                      N_obl = nrow(x %>% filter(s_bl_obs > 2)),
                       N_bk = nrow(x %>% filter(k_bl_obs > 0)),
                       N_kw = nrow(x %>% filter(kw)),
                       
                       kk = x$kcode,
                       tt = x$tcode,
                       kktt = x$ktcode,
-                      kn = kn$yrspan,
-                      kt1 = kn$kt1,
-                      kr = kn$kr,
                       rr = x$rcode,
                       ss = x$scode,
+                      skt = x$sktcode,
                       wen = x$wecode,
                       kwen = x$kwecode,
                       kwn = x$kwcode,
@@ -153,7 +214,22 @@ source_data <- list(  K = max(x$kcode),
                       gini_b_se = x$gini_b_se[!is.na(x$gini_b_se)],
                       
                       bk = kn$bk,
-                      nbkt = kt1$n, 
+                      kt_k_start = kn$kt_k_start,
+                      kt_k_end = kn$kt_k_end,
+                      kr = kn$kr,
+                      nbkt = kt1$n,
+                      
+                      sn = sn$yrspan,
+                      shnoo = sn$shnoo,
+                      s_bl_obs = sn$s_bl_obs,
+                      skt1 = sn$skt1,
+                      sr1 = sn$sr1,
+                      sj1 = sn$sj1,
+                      
+                      skt_kwe_start = skt_kwe$skt_kwe_start,
+                      skt_kwe_end = skt_kwe$skt_kwe_end,
+                      skt_rwe_start = skt_rwe$skt_rwe_start,
+                      skt_rwe_end = skt_rwe$skt_rwe_end,
                       
                       M = length(rho_we_m$rho),
                       kkm = rho_we_m$kcode,      
