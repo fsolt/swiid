@@ -1691,7 +1691,7 @@ cbo <- read_excel("data-raw/cbo.xlsx", sheet = "Figure 16", col_names = FALSE, s
          link = cbo_link)
 
 
-# U.S. Census Bureau (update link and wrangle)
+# U.S. Census Bureau (update link [probably only /p60/xxx/tableA] and wrangle)
 # https://www.census.gov/topics/income-poverty/income-inequality/data/data-tables.html
 uscb_links <- paste0("https://www2.census.gov/programs-surveys/demo/tables/p60/263/tableA", 2:3, ".xls")
 download.file(uscb_links[1], "data-raw/uscb_hh.xls")
@@ -1985,7 +1985,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
                      stathk, bpsid, amar, cso_ie, istat, kazstat, kostat, nsck,
                      epumy, nbs, monstat, snz, nzmsd, ssb, dgeec, psa,
                      rosstat, ru_lissy, singstat, ssi, ine, statslk, scb, 
-                     tdgbas, nso_thailand, turkstat, ons, ifs, cbo, uscb, uine, inev, gso_vn,
+                     tdgbas, nso_thailand, nesdb, turkstat, ons, ifs, cbo, uscb, uine, inev, gso_vn,
                      atg, gidd,
                      added_data) %>% 
     rename(gini_m = gini,
@@ -2039,8 +2039,9 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
            tcode0 = year - min(year) + 1) %>% 
     ungroup() %>% 
     arrange(desc(k_bl_obs), desc(country_obs)) %>% 
-    mutate(gini_m_se = ifelse(!is.na(gini_m_se), gini_m_se * 2,
-                              quantile(gini_m_se/gini_m, .99, na.rm = TRUE) * gini_m * 2),
+    mutate(gini_m_se = if_else(!is.na(gini_m_se), if_else(gini_m_se < .0025, .005, gini_m_se * 2),
+                              quantile(gini_m_se/gini_m, .99, na.rm = TRUE) * gini_m * 2) %>% 
+             if_else(. < .01, .01, .),
            wdes = paste(welfare_def, equiv_scale, sep = "_"),
            ibl = (gini_m == gini_b & str_detect(series, paste("LIS .*", baseline_wd, baseline_es))),
            bl = (!is.na(gini_b)),
