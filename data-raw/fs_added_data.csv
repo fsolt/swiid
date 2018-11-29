@@ -582,6 +582,10 @@ Hungary,1989,0.214,,disp,pc,,Cornia1994 Hungary disp pc,Cornia 1994,593,http://d
 Hungary,1991,0.205,,disp,pc,,Cornia1994 Hungary disp pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Hungary,1989,0.269,,market,pc,,Cornia1994 Hungary market pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Hungary,1991,0.273,,market,pc,,Cornia1994 Hungary market pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
+Hungary,1987,0.236,,disp,pc,,EH1999 Hungary disp pc,_Éltetö and Havasi 1999,56,http://www.ksh.hu/statszemle_archive/1999/1999_K3/1999_K3_001.pdf#page=50
+Hungary,1996,0.296,,disp,pc,,EH1999 Hungary disp pc,_Éltetö and Havasi 1999,56,http://www.ksh.hu/statszemle_archive/1999/1999_K3/1999_K3_001.pdf#page=50
+Hungary,1987,0.231,,disp,ae,,EH1999 Hungary disp ae,_Éltetö and Havasi 1999,56,http://www.ksh.hu/statszemle_archive/1999/1999_K3/1999_K3_001.pdf#page=50
+Hungary,1996,0.292,,disp,ae,,EH1999 Hungary disp ae,_Éltetö and Havasi 1999,56,http://www.ksh.hu/statszemle_archive/1999/1999_K3/1999_K3_001.pdf#page=50
 Hungary,1993,0.261,,con,pc,FALSE,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
 Hungary,1994,0.258,,con,pc,FALSE,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
 Hungary,1995,0.261,,con,pc,FALSE,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
@@ -594,6 +598,27 @@ Hungary,1995,0.238,,disp,pc,FALSE,KM2007 disp pc,Kapitany and Molnar 2007,1116,h
 Hungary,1996,0.247,,disp,pc,FALSE,KM2007 disp pc,Kapitany and Molnar 2007,1116,https://doi.org/10.1080/146534204200030884
 Hungary,1997,0.229,,disp,pc,FALSE,KM2007 disp pc,Kapitany and Molnar 2007,1116,https://doi.org/10.1080/146534204200030884
 Hungary,1998,0.242,,disp,pc,FALSE,KM2007 disp pc,Kapitany and Molnar 2007,1116,https://doi.org/10.1080/146534204200030884
+Hungary,1987,0.207,,disp,ae,FALSE,KR2001 disp ae,Kattuman and Redmond 2001,46,https://doi.org/10.1006/jcec.2000.1701
+Hungary,1989,0.207,,disp,ae,FALSE,KR2001 disp ae,Kattuman and Redmond 2001,46,https://doi.org/10.1006/jcec.2000.1701
+Hungary,1991,0.195,,disp,ae,FALSE,KR2001 disp ae,Kattuman and Redmond 2001,46,https://doi.org/10.1006/jcec.2000.1701
+Hungary,1993,0.234,,disp,ae,FALSE,KR2001 disp ae,Kattuman and Redmond 2001,46,https://doi.org/10.1006/jcec.2000.1701
+Hungary,1996,0.242,,disp,ae,FALSE,KR2001 disp ae,Kattuman and Redmond 2001,46,https://doi.org/10.1006/jcec.2000.1701
+Hungary,1991,0.4717,,market,pc,,MST2000 market pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1992,0.4796,,market,pc,,MST2000 market pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1993,0.5045,,market,pc,,MST2000 market pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1994,0.5101,,market,pc,,MST2000 market pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1995,0.5041,,market,pc,,MST2000 market pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1996,0.5222,,market,pc,,MST2000 market pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1997,0.5406,,market,pc,,MST2000 market pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1998,0.5564,,market,pc,,MST2000 market pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1991,0.295,,gross,pc,,MST2000 gross pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1992,0.2775,,gross,pc,,MST2000 gross pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1993,0.2947,,gross,pc,,MST2000 gross pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1994,0.3162,,gross,pc,,MST2000 gross pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1995,0.3085,,gross,pc,,MST2000 gross pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1996,0.3085,,gross,pc,,MST2000 gross pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1997,0.32,,gross,pc,,MST2000 gross pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1998,0.3432,,gross,pc,,MST2000 gross pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
 Hungary,1988,0.21,,disp,pc,FALSE,Milanovic1998 Hungary disp pc,Milanovic 1998,167,https://books.google.com/books?id=cQl9xbuhvNkC
 Hungary,1987,0.207,,disp,pc,,Milanovic1999 Hungary disp pc,Milanovic 1999,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
 Hungary,1989,0.248,,disp,pc,,Milanovic1999 Hungary disp pc,Milanovic 1999,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
@@ -606,6 +631,11 @@ Hungary,2001,0.251,,con,pc,FALSE,MY2006 Hungary con pc 3,Mitra and Yemtsov 2006,
 Hungary,2002,0.25,,con,pc,FALSE,MY2006 Hungary con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Hungary,1989,0.186,,con,pc,,Park1995 Hungary con pc,Tabatabai 1996; Park 1995,120,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Hungary,1989,0.228,,disp,pc,,Park1995 Hungary disp pc,Tabatabai 1996; Park 1995,120,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Hungary,1992,0.295,,disp,ae,,Spéder1998 Hungary disp ae,Spéder 1998,13,https://doi.org/10.1111/j.1468-0351.1998.tb00034.x
+Hungary,1993,0.277,,disp,ae,,Spéder1998 Hungary disp ae,Spéder 1998,13,https://doi.org/10.1111/j.1468-0351.1998.tb00034.x
+Hungary,1994,0.295,,disp,ae,,Spéder1998 Hungary disp ae,Spéder 1998,13,https://doi.org/10.1111/j.1468-0351.1998.tb00034.x
+Hungary,1995,0.316,,disp,ae,,Spéder1998 Hungary disp ae,Spéder 1998,13,https://doi.org/10.1111/j.1468-0351.1998.tb00034.x
+Hungary,1996,0.308,,disp,ae,,Spéder1998 Hungary disp ae,Spéder 1998,13,https://doi.org/10.1111/j.1468-0351.1998.tb00034.x
 Iceland,1992,0.276,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
 Iceland,1993,0.267,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
 Iceland,1994,0.264,,disp,oecdm,TRUE,OK2010 disp oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
@@ -1265,6 +1295,9 @@ Moldova,2002,0.4208,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics 
 Moldova,2003,0.3871,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
 Moldova,2004,0.4014,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
 Moldova,2005,0.4105,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
+Moldova,2007,0.3706,,disp,pc,FALSE,NBS Moldova disp pc,National Bureau of Statistics of Moldova 2008,56,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_privind_nivelul_de_trai_in_2007.pdf
+Moldova,2008,0.3615,,disp,pc,FALSE,NBS Moldova disp pc,National Bureau of Statistics of Moldova 2009,69,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/aspecte_trai_in_2008.zip
+Moldova,2009,0.3712,,disp,pc,FALSE,NBS Moldova disp pc,National Bureau of Statistics of Moldova 2010,62,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2009.pdf
 Moldova,2007,0.4556,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2008,56,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_privind_nivelul_de_trai_in_2007.pdf
 Moldova,2008,0.4292,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2009,69,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/aspecte_trai_in_2008.zip
 Moldova,2009,0.4338,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2010,62,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2009.pdf
