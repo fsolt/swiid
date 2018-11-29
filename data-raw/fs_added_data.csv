@@ -582,12 +582,18 @@ Hungary,1989,0.214,,disp,pc,,Cornia1994 Hungary disp pc,Cornia 1994,593,http://d
 Hungary,1991,0.205,,disp,pc,,Cornia1994 Hungary disp pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Hungary,1989,0.269,,market,pc,,Cornia1994 Hungary market pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Hungary,1991,0.273,,market,pc,,Cornia1994 Hungary market pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
-Hungary,1993,0.261,,con,pc,,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
-Hungary,1994,0.258,,con,pc,,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
-Hungary,1995,0.261,,con,pc,,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
-Hungary,1996,0.283,,con,pc,,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
-Hungary,1997,0.269,,con,pc,,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
-Hungary,1998,0.268,,con,pc,,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
+Hungary,1993,0.261,,con,pc,FALSE,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
+Hungary,1994,0.258,,con,pc,FALSE,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
+Hungary,1995,0.261,,con,pc,FALSE,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
+Hungary,1996,0.283,,con,pc,FALSE,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
+Hungary,1997,0.269,,con,pc,FALSE,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
+Hungary,1998,0.268,,con,pc,FALSE,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
+Hungary,1993,0.234,,disp,pc,FALSE,KM2007 disp pc,Kapitany and Molnar 2007,1116,https://doi.org/10.1080/146534204200030884
+Hungary,1994,0.218,,disp,pc,FALSE,KM2007 disp pc,Kapitany and Molnar 2007,1116,https://doi.org/10.1080/146534204200030884
+Hungary,1995,0.238,,disp,pc,FALSE,KM2007 disp pc,Kapitany and Molnar 2007,1116,https://doi.org/10.1080/146534204200030884
+Hungary,1996,0.247,,disp,pc,FALSE,KM2007 disp pc,Kapitany and Molnar 2007,1116,https://doi.org/10.1080/146534204200030884
+Hungary,1997,0.229,,disp,pc,FALSE,KM2007 disp pc,Kapitany and Molnar 2007,1116,https://doi.org/10.1080/146534204200030884
+Hungary,1998,0.242,,disp,pc,FALSE,KM2007 disp pc,Kapitany and Molnar 2007,1116,https://doi.org/10.1080/146534204200030884
 Hungary,1988,0.21,,disp,pc,FALSE,Milanovic1998 Hungary disp pc,Milanovic 1998,167,https://books.google.com/books?id=cQl9xbuhvNkC
 Hungary,1987,0.207,,disp,pc,,Milanovic1999 Hungary disp pc,Milanovic 1999,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
 Hungary,1989,0.248,,disp,pc,,Milanovic1999 Hungary disp pc,Milanovic 1999,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
@@ -1242,7 +1248,14 @@ Moldova,2004,0.3571,,con,hh,,NBS Moldova con hh,National Bureau of Statistics of
 Moldova,2005,0.3766,,con,hh,,NBS Moldova con hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
 Moldova,2007,0.3287,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2008,56,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_privind_nivelul_de_trai_in_2007.pdf
 Moldova,2009,0.3045,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2010,62,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2009.pdf
-Moldova,2012,0.3241,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2008,67,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2012.pdf
+Moldova,2010,0.3022,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2011,65,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_trai_in_2010.pdf
+Moldova,2011,0.2866,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2012,67,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_trai_in_2011.pdf
+Moldova,2012,0.3241,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2013,67,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2012.pdf
+Moldova,2013,0.2682,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2014,80,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_trai_2013.pdf
+Moldova,2014,0.2504,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2015,78,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_trai_2014.pdf
+Moldova,2015,0.2535,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2016,78,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_trai_2015.pdf
+Moldova,2016,0.2464,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2017,77,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_nivelul_trai_2016.pdf
+Moldova,2017,0.241,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2017,76,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_nivelul_trai_2017.pdf
 Moldova,1998,0.4435,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
 Moldova,1999,0.4342,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
 Moldova,2000,0.4165,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
@@ -1251,11 +1264,16 @@ Moldova,2002,0.4208,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics 
 Moldova,2003,0.3871,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
 Moldova,2004,0.4014,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
 Moldova,2005,0.4105,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
-Moldova,2007,0.3712,,disp,pc,FALSE,NBS Moldova disp pc,National Bureau of Statistics of Moldova 2008,56,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_privind_nivelul_de_trai_in_2007.pdf
-Moldova,2009,0.3702,,disp,pc,FALSE,NBS Moldova disp pc,National Bureau of Statistics of Moldova 2010,62,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2009.pdf
 Moldova,2007,0.4556,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2008,56,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_privind_nivelul_de_trai_in_2007.pdf
 Moldova,2009,0.4338,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2010,62,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2009.pdf
+Moldova,2010,0.4154,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2011,65,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_trai_in_2010.pdf
+Moldova,2011,0.396,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2012,67,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_trai_in_2011.pdf
 Moldova,2012,0.3963,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2008,67,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2012.pdf
+Moldova,2013,0.3747,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2014,80,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_trai_2013.pdf
+Moldova,2014,0.3758,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2015,78,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_trai_2014.pdf
+Moldova,2015,0.3669,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2016,78,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_trai_2015.pdf
+Moldova,2016,0.368,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2017,77,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_nivelul_trai_2016.pdf
+Moldova,2017,0.3536,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2017,76,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_nivelul_trai_2017.pdf
 Mongolia,1995,0.332,,con,pc,,FR2008 Mongolia con pc,Ferreira and Ravallion 2008,38,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Mongolia,2003,0.329,,con,pc,,NSO Mongolia 2004 con pc,National Statistics Office of Mongolia 2004,22,http://web.nso.mn/nada/index.php/catalog/65/download/418
 Mongolia,2009,0.31,,con,pc,,NSO Mongolia 2004 con pc,National Statistics Office of Mongolia,24,http://web.nso.mn/nada/index.php/catalog/77/download/710
