@@ -149,7 +149,7 @@ format_sedlac <- function(df, sheet, link, es) {
   return(x)
 }
 
-sedlac_link <- "http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/inequality_LAC_2017-07.xlsx"
+sedlac_link <- "http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx"
 download.file(sedlac_link, "data-raw/sedlac.xlsx")
 
 sedlac_pc <- read_excel(path = "data-raw/sedlac.xlsx", 
@@ -880,7 +880,7 @@ rm(hk2006, hk2011, hk2016)
 
 
 # BPS Indonesia (automated)
-# may need to update bpsid2_link: check https://www.bps.go.id/linkTabelStatis/view/id/946 > Download Table
+# may need to update bpsid2_link: check https://www.bps.go.id/statictable/2014/09/08/946/distribusi-pembagian-pengeluaran-per-kapita-dan-indeks-gini-2010-2017.html > Download Table
 # with http://wheregoes.com/retracer.php to find download link
 
 bpsid1_link <- "https://www.bps.go.id/website/tabelExcelIndo/indo_23_6.xls"
@@ -971,7 +971,7 @@ cso_ie <- pxR::read.px("data-raw/cso_ie.px") %>%
             link = cso_ie_link)
 
 
-# Istat (update file)
+# Istat (update file, but doesn't appear to be maintained)
 # http://dati.istat.it/Index.aspx?DataSetCode=DCCV_INDCONSUMI&Lang=en#
 # Customize > Territory: Italy > Data Type: Gini
 
@@ -1413,11 +1413,14 @@ scb <- scb %>%
 
 
 # Taiwan Directorate General of Budget, Accounting, and Statistics 
-# update tdfbas_link [adding 1 to number after 'doc/result/' should work]
-# update file from tdfbas_link2
-tdgbas_link <- "http://win.dgbas.gov.tw/fies/doc/result/105/a11/Year05.xls"
-download.file(tdgbas_link, "data-raw/tdgbas1.xls")
-
+# update file from tdfbas_link2; otherwise automated
+tdgbas_link <- paste0("http://win.dgbas.gov.tw/fies/doc/result/", Sys.Date() %>% str_extract("\\d{4}") %>% as.numeric() %>% "-"(1912), "/a11/Year05.xls")
+tryCatch(download.file(tdgbas_link, "data-raw/tdgbas1.xls"),
+         error = function(e) {
+           tdgbas_link <- paste0("http://win.dgbas.gov.tw/fies/doc/result/", Sys.Date() %>% str_extract("\\d{4}") %>% as.numeric() %>% "-"(1913), "/a11/Year05.xls")
+           download.file(tdgbas_link, "data-raw/tdgbas1.xls")
+         })
+         
 tdgbas_link2 <- "http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L"
 
 tdgbas <- read_excel("data-raw/tdgbas1.xls", col_names = FALSE, skip = 9) %>% 
@@ -1433,7 +1436,7 @@ tdgbas <- read_excel("data-raw/tdgbas1.xls", col_names = FALSE, skip = 9) %>%
                      skip = 4) %>% 
               filter(!is.na(year)) %>% 
               mutate(equiv_scale = "hh",
-                     link = "http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L")) %>% 
+                     link = tdgbas_link2)) %>% 
   transmute(country = "Taiwan",
             year = year,
             gini = gini,
@@ -1526,6 +1529,32 @@ nso_thailand2 <- read_html(nso_thailand2_link) %>%
 nso_thailand <- bind_rows(nso_thailand1, nso_thailand2)
 
 rm(nso_thailand1, nso_thailand2)
+
+# NESDB Thailand (update files; note--get pdfs because xls files are unreadable)
+nesdb_links <- c("http://social.nesdb.go.th/SocialStat/StatReport_Final.aspx?reportid=688&template=1R1C&yeartype=M&subcatid=69", # con
+                 "http://social.nesdb.go.th/SocialStat/StatReport_Final.aspx?reportid=685&template=1R1C&yeartype=M&subcatid=68") # gross
+
+nesdb_gross <- tabulizer::extract_tables("data-raw/nesdb_th_gross.pdf")[[1]]
+nesdb_con <- tabulizer::extract_tables("data-raw/nesdb_th_con.pdf")[[1]]
+nesdb_list <- list(nesdb_gross = nesdb_gross, nesdb_con = nesdb_con)
+
+nesdb <- pmap_df(list(nesdb_list, names(nesdb_list), nesdb_links),
+                    function(x, name_x, link_x) {
+                      wd <- str_extract(name_x, "[^_]*$")
+                      x %>% 
+                        as_tibble() %>% 
+                        filter(!V1=="") %>% 
+                        transmute(country = "Thailand",
+                                  year = as.numeric(V1)-543,
+                                  gini = as.numeric(V3),
+                                  gini_se = NA,
+                                  welfare_def = wd,
+                                  equiv_scale = "pc",
+                                  monetary = NA,
+                                  series = paste("NESDB Thailand", welfare_def, equiv_scale),
+                                  source1 = "NESDB Thailand",
+                                  page = "",
+                                  link = link_x) })
 
 
 # Statistics Turkey (automated)
