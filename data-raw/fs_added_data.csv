@@ -1506,6 +1506,12 @@ Poland,1985,0.253,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright
 Poland,1987,0.25,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Poland,1988,0.246,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Poland,1989,0.268,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
+Poland,1998,0.286,,disp,ae,,BK2010 disp ae,Brzezinski and Kostro 2010,57,http://www.bankandcredit.nbp.pl/content/2010/04/bik_04_2010_03_art.pdf
+Poland,2003,0.31,,disp,ae,,BK2010 disp ae,Brzezinski and Kostro 2010,57,http://www.bankandcredit.nbp.pl/content/2010/04/bik_04_2010_03_art.pdf
+Poland,2008,0.31,,disp,ae,,BK2010 disp ae,Brzezinski and Kostro 2010,57,http://www.bankandcredit.nbp.pl/content/2010/04/bik_04_2010_03_art.pdf
+Poland,1998,0.299,,con,ae,,BK2010 con ae,Brzezinski and Kostro 2010,57,http://www.bankandcredit.nbp.pl/content/2010/04/bik_04_2010_03_art.pdf
+Poland,2003,0.314,,con,ae,,BK2010 con ae,Brzezinski and Kostro 2010,57,http://www.bankandcredit.nbp.pl/content/2010/04/bik_04_2010_03_art.pdf
+Poland,2008,0.318,,con,ae,,BK2010 con ae,Brzezinski and Kostro 2010,57,http://www.bankandcredit.nbp.pl/content/2010/04/bik_04_2010_03_art.pdf
 Poland,1985,0.253,,disp,pc,,CB1997 Poland disp pc,Caselli and Battini 1997,2,https://link.springer.com/article/10.1023/A%3A1009541105457
 Poland,1988,0.246,,disp,pc,,CB1997 Poland disp pc,Caselli and Battini 1997,2,https://link.springer.com/article/10.1023/A%3A1009541105457
 Poland,1989,0.268,,disp,pc,,CB1997 Poland disp pc,Caselli and Battini 1997,2,https://link.springer.com/article/10.1023/A%3A1009541105457
@@ -1612,6 +1618,22 @@ Poland,1994,0.437,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,ht
 Poland,1995,0.432,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1996,0.448,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1997,0.451,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
+Poland,1990,0.256,,disp,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
+Poland,1991,0.243,,disp,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
+Poland,1992,0.252,,disp,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
+Poland,1993,0.295,,disp,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
+Poland,1994,0.309,,disp,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
+Poland,1995,0.292,,disp,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
+Poland,1996,0.306,,disp,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
+Poland,1997,0.319,,disp,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
+Poland,1990,0.279,,con,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
+Poland,1991,0.253,,con,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
+Poland,1992,0.248,,con,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
+Poland,1993,0.292,,con,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
+Poland,1994,0.306,,con,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
+Poland,1995,0.284,,con,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
+Poland,1996,0.303,,con,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
+Poland,1997,0.314,,con,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
 Poland,1987,0.256,,gross,pc,FALSE,Milanovic1998 Poland gross pc,Milanovic 1998,171,https://books.google.com/books?id=cQl9xbuhvNkC
 Poland,1996,0.268,,con,pc,FALSE,MY2006 Poland con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Poland,1997,0.277,,con,pc,FALSE,MY2006 Poland con pc 4,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
