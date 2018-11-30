@@ -504,14 +504,12 @@ abs <- bind_rows(abs_de, abs_gh)
 rm(abs_de, abs_gh)
 
 
-# Instituto Naciónal de Estadística de Bolivia (automated)
-inebo_link <- "https://www.ine.gob.bo/ext_sitemas/cuadr_mand/sociales/index.php"
-inebo <- read_html(inebo_link) %>% 
-  html_table() %>% 
-  first() %>% 
-  first_row_to_names() %>% 
-  as_tibble() %>% 
-  filter(str_detect(`Indicadores Sociales`, "GINI")) %>% 
+# Instituto Naciónal de Estadística de Bolivia (update file)
+# https://www.ine.gob.bo/index.php/podreza-desarrollo/introduccion-2
+# > Cuadros Estadisticos (tab) > all years > Generar
+inebo_link <- "https://www.ine.gob.bo/index.php/podreza-desarrollo/introduccion-2"
+inebo <- read_excel("data-raw/inebo.xlsx", skip = 6) %>% 
+  filter(DESCRIPCION=="Bolivia") %>% 
   select(matches("\\d{4}")) %>% 
   gather(key = year, value = gini) %>% 
   transmute(country = "Bolivia",
@@ -1182,22 +1180,25 @@ nzmsd <- extract_tables("data-raw/nzmsd.pdf", pages = 97) %>%
             link = nzmsd_link) %>% 
   filter(!is.na(gini))
 
-# Statistics Norway (update file and wrangle)
-# Gini & std.err.; total population; all years > pivot clockwise > save as semicolon delimited
-ssb_link <- "https://www.ssb.no/statistikkbanken/selectvarval/Define.asp?MainTable=InntUlikhet&PLanguage=1&nyTmpVar=true&CMSSubjectArea=inntekt-og-forbruk&KortNavnWeb=ifhus&StatVariant=&checked=true"
-
-ssb <- read_csv2("data-raw/ssb.csv", skip = 2) %>%  # throws warnings; they are irrelevant
+# Statistics Norway (automated)
+ssb <- get_pxweb_data(url = "https://data.ssb.no/api/v0/en/table/07756/",
+               dims = list(Forbruksenhet2 = c('01'),
+                           ContentsCode = c('Ginikoeffisient', 'StandardavvikGini'),
+                           Tid = c('*')),
+               clean = TRUE) %>% 
+  select(year, contents, values) %>% 
+  spread(key = contents, value = values) %>% 
   transmute(country = "Norway",
-            year = year,
-            gini = as.numeric(`Total population Gini coefficient`),
-            gini_se = as.numeric(`Total population Standard error of the Gini coefficient`),
+            year = as.numeric(as.character(year)),
+            gini = `Gini coefficient`,
+            gini_se = `Standard error of the Gini coefficient`,
             welfare_def = "disp",
             equiv_scale = "oecdm",
             monetary = TRUE,
             series = paste("SSB", welfare_def, equiv_scale),
             source1 = "Statistics Norway",
             page = "",
-            link = ssb_link)
+            link = "https://www.ssb.no/en/statbank/table/07756/")
 
 
 # DGEEC Paraguay (update link and, probably, wrangle)
@@ -1234,11 +1235,12 @@ download.file(psa_link, "data-raw/psa.csv")
 
 psa <- read_csv("data-raw/psa.csv", skip = 3) %>% 
   first_row_to_names() %>% 
-  filter(v2 == "Philippines") %>%
-  select(-Region, -starts_with("v")) %>% 
-  gather(key = year, value = gini) %>% 
+  clean_names() %>% 
+  select(v1, matches("\\d{4}")) %>% 
+  filter(v1 == "Philippines") %>%
+  gather(key = year, value = gini, -v1) %>% 
   transmute(country = "Philippines",
-            year = as.numeric(year),
+            year = as.numeric(str_extract(year, "\\d{4}")),
             gini = as.numeric(gini),
             gini_se = NA,
             welfare_def = "gross",
@@ -1594,7 +1596,7 @@ rm(turkstat_list, turkstat_hh, turkstat_oecdm)
 ons_link1 <- "https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv"
 download.file(ons_link1, "data-raw/ons1.csv")
 
-ons1 <- read_csv("data-raw/ons1.csv", skip = 7, col_types = "cdddd") %>% 
+ons1 <- read_csv("data-raw/ons1.csv", skip = 6, col_types = "cdddd") %>% 
   transmute(year = X1,
             market = Original,
             gross = Gross,
