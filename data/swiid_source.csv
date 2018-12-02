@@ -11452,9 +11452,13 @@ Serbia,2006,0.583,0.0073,market,hh,FALSE,LIS Serbia market hh,LISSY,"",https://r
 Serbia,2006,0.5027,0.0075,market,oecdm,FALSE,LIS Serbia market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
 Serbia,2006,0.5161,0.0071,market,pc,FALSE,LIS Serbia market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
 Serbia,2006,0.5,0.0079,market,sqrt,FALSE,LIS Serbia market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
+Serbia,2006,0.2794,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-Ð-2016-Ð-Revised-and-New-Data.pdf
 Serbia,2006,0.388,,disp,pc,FALSE,Transmonee Serbia disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
+Serbia,2007,0.271,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-Ð-2016-Ð-Revised-and-New-Data.pdf
 Serbia,2007,0.365,,disp,pc,FALSE,Transmonee Serbia disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
+Serbia,2008,0.2605,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-Ð-2016-Ð-Revised-and-New-Data.pdf
 Serbia,2008,0.345,,disp,pc,FALSE,Transmonee Serbia disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
+Serbia,2009,0.2624,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-Ð-2016-Ð-Revised-and-New-Data.pdf
 Serbia,2010,0.2894,0.0035,con,ae,FALSE,LIS Serbia con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
 Serbia,2010,0.3244,0.0034,con,hh,FALSE,LIS Serbia con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
 Serbia,2010,0.2804,0.0032,con,oecdm,FALSE,LIS Serbia con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
@@ -11475,7 +11479,10 @@ Serbia,2010,0.6354,0.007,market,hh,FALSE,LIS Serbia market hh,LISSY,"",https://r
 Serbia,2010,0.5409,0.0072,market,oecdm,FALSE,LIS Serbia market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
 Serbia,2010,0.5511,0.0076,market,pc,FALSE,LIS Serbia market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
 Serbia,2010,0.5378,0.0072,market,sqrt,FALSE,LIS Serbia market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
+Serbia,2010,0.2703,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-Ð-2016-Ð-Revised-and-New-Data.pdf
+Serbia,2011,0.2538,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-Ð-2016-Ð-Revised-and-New-Data.pdf
 Serbia,2012,0.38,,disp,oecdm,TRUE,Eurostat Serbia disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Serbia,2012,0.2676,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-Ð-2016-Ð-Revised-and-New-Data.pdf
 Serbia,2013,0.386,,disp,oecdm,TRUE,Eurostat Serbia disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Serbia,2013,0.2736,0.0035,con,ae,FALSE,LIS Serbia con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
 Serbia,2013,0.3105,0.0034,con,hh,FALSE,LIS Serbia con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
@@ -11497,8 +11504,11 @@ Serbia,2013,0.656,0.012,market,hh,FALSE,LIS Serbia market hh,LISSY,"",https://ra
 Serbia,2013,0.5678,0.0102,market,oecdm,FALSE,LIS Serbia market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
 Serbia,2013,0.5806,0.0095,market,pc,FALSE,LIS Serbia market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
 Serbia,2013,0.5652,0.0119,market,sqrt,FALSE,LIS Serbia market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
+Serbia,2013,0.269,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-Ð-2016-Ð-Revised-and-New-Data.pdf
 Serbia,2014,0.382,,disp,oecdm,TRUE,Eurostat Serbia disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Serbia,2014,0.2665,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-Ð-2016-Ð-Revised-and-New-Data.pdf
 Serbia,2015,0.386,,disp,oecdm,TRUE,Eurostat Serbia disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Serbia,2015,0.2554,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-Ð-2016-Ð-Revised-and-New-Data.pdf
 Serbia,2016,0.2678,0.0031,con,ae,FALSE,LIS Serbia con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
 Serbia,2016,0.3224,0.0029,con,hh,FALSE,LIS Serbia con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
 Serbia,2016,0.2592,0.0032,con,oecdm,FALSE,LIS Serbia con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
@@ -11519,6 +11529,7 @@ Serbia,2016,0.6144,0.0068,market,hh,FALSE,LIS Serbia market hh,LISSY,"",https://
 Serbia,2016,0.5187,0.006,market,oecdm,FALSE,LIS Serbia market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
 Serbia,2016,0.5328,0.0075,market,pc,FALSE,LIS Serbia market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
 Serbia,2016,0.5148,0.0079,market,sqrt,FALSE,LIS Serbia market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
+Serbia,2016,0.2613,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-Ð-2016-Ð-Revised-and-New-Data.pdf
 Seychelles,2006,0.38,,con,sqrt,FALSE,World Bank Africa Poverty Database Seychelles con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
 Seychelles,2013,0.46799999999999997,,gross,pc,FALSE,Povcalnet Seychelles gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Sierra Leone,1969,0.44,,disp,hh,,vGP1984 Sierra Leone disp hh,Tabatabai 1996; van Ginneken and Park 1984,86,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
