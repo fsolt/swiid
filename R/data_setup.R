@@ -1769,7 +1769,7 @@ uine <- extract_tables("data-raw/uine.pdf", pages = 47, area = list(c(137.3, 86.
 
 
 # Venezuela Instituto Nacional de Estadística (update link)
-inev_link <- "http://www.ine.gov.ve/documentos/Social/Pobreza/xls/Serie_%20GINI_1s1997-1s2015.xls"
+inev_link <- "https://web.archive.org/web/20181115092154/http://www.ine.gov.ve/documentos/Social/Pobreza/xls/Serie_%20GINI_1s1997-1s2015.xls"
 download.file(inev_link, "data-raw/inev.xls")
 
 inev <- read_excel("data-raw/inev.xls", skip = 3) %>% 
@@ -2041,8 +2041,9 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
            tcode0 = year - min(year) + 1) %>% 
     ungroup() %>% 
     arrange(desc(k_bl_obs), desc(country_obs)) %>% 
-    mutate(gini_m_se = if_else(!is.na(gini_m_se), gini_m_se,
-                              quantile(gini_m_se/gini_m, .99, na.rm = TRUE) * gini_m),
+    mutate(gini_m_se = if_else(!is.na(gini_m_se), if_else(gini_m_se < .0025, .005, gini_m_se * 2),
+                              quantile(gini_m_se/gini_m, .99, na.rm = TRUE) * gini_m * 2) %>% 
+             if_else(. < .01, .01, .),
            wdes = paste(welfare_def, equiv_scale, sep = "_"),
            ibl = (gini_m == gini_b & str_detect(series, paste("LIS .*", baseline_wd, baseline_es))),
            bl = (!is.na(gini_b)),
