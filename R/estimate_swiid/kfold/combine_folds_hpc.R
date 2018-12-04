@@ -5,7 +5,7 @@ output_path <- "/Volumes/fsolt/swiid_kfold/output"
   str_extract("\\d+(?=\\.)") %>%
   unique())
 output_files <- list.files(output_path) %>% 
-  str_subset(output_file_ids %>% nth(length(output_file_ids)))
+  str_subset(output_file_ids %>% nth(5))
 
 kfold_output <- map_dfr(output_files, function(output_file) {
   if(readLines(file.path(output_path, output_file)) %>% 
@@ -20,6 +20,7 @@ kfold_output <- map_dfr(output_files, function(output_file) {
     }
 })
 mean(kfold_output$problem, na.rm = TRUE)
+nrow(kfold_output)
 
 kfold_output %>% 
   group_by(country) %>%
