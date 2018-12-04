@@ -1132,60 +1132,73 @@ Brazil,1972,0.61,,market,hh,TRUE,CEPAL SDI Brazil market hh PNAD,CEPAL Serie Dis
 Brazil,1974,0.56,,market,hh,FALSE,CEPAL SDI Brazil market hh ENDEF,CEPAL Serie Distribucion del Ingreso 2 (1986),,http://hdl.handle.net/11362/8905
 Brazil,1974,0.361,,con,hh,,Yotopoulos1989 Brazil con hh,Yotopoulos 1989,366,https://doi.org/10.1111/j.1475-4991.1989.tb00598.x
 Brazil,1976,0.6,,gross,hh,FALSE,CEPAL SDI Brazil gross hh PNAD,CEPAL Serie Distribucion del Ingreso 9 (1990),,http://hdl.handle.net/11362/9147
+Brazil,1976,0.622740048,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,1977,0.61,,gross,hh,FALSE,CEPAL SDI Brazil gross hh PNAD,CEPAL Serie Distribucion del Ingreso 9 (1990),,http://hdl.handle.net/11362/9147
+Brazil,1977,0.62464768,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,1978,0.56,,gross,hh,FALSE,CEPAL SDI Brazil gross hh PNAD,CEPAL Serie Distribucion del Ingreso 9 (1990),,http://hdl.handle.net/11362/9147
+Brazil,1978,0.603906785,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,1979,0.55,,gross,hh,FALSE,CEPAL SDI Brazil gross hh PNAD,CEPAL Serie Distribucion del Ingreso 10 (1993),,http://hdl.handle.net/11362/9403
+Brazil,1979,0.593120828,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,1980,0.56,,disp,hh,TRUE,CEPAL SDI Brazil disp hh Censo,CEPAL Serie Distribucion del Ingreso 2 (1986),,http://hdl.handle.net/11362/8905
 Brazil,1981,0.53,,gross,hh,FALSE,CEPAL SDI Brazil gross hh PNAD,CEPAL Serie Distribucion del Ingreso 9 (1990),,http://hdl.handle.net/11362/9147
 Brazil,1981,0.574,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,1981,0.584201044,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,1981,0.58,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Brazil,1981,0.54952623,8.4966e-4,disp,ae,TRUE,SEDLAC Brazil disp ae 1,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1981,0.54455253,,disp,hh,TRUE,SEDLAC Brazil disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1981,0.57108447,8.7417e-4,disp,pc,TRUE,SEDLAC Brazil disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1982,0.56,,gross,hh,FALSE,CEPAL SDI Brazil gross hh PNAD,CEPAL Serie Distribucion del Ingreso 9 (1990),,http://hdl.handle.net/11362/9147
 Brazil,1982,0.581,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,1982,0.591455991,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,1982,0.584,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Brazil,1982,0.5558578,8.8735e-4,disp,ae,TRUE,SEDLAC Brazil disp ae 1,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1982,0.5485516,,disp,hh,TRUE,SEDLAC Brazil disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1982,0.57677484,9.7836e-4,disp,pc,TRUE,SEDLAC Brazil disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1983,0.57,,gross,hh,FALSE,CEPAL SDI Brazil gross hh PNAD,CEPAL Serie Distribucion del Ingreso 9 (1990),,http://hdl.handle.net/11362/9147
 Brazil,1983,0.584,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,1983,0.59597137,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,1983,0.59,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Brazil,1983,0.56166888,9.3711e-4,disp,ae,TRUE,SEDLAC Brazil disp ae 1,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1983,0.55413288,,disp,hh,TRUE,SEDLAC Brazil disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1983,0.58169972,9.2874e-4,disp,pc,TRUE,SEDLAC Brazil disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1984,0.52,,gross,hh,FALSE,CEPAL SDI Brazil gross hh PNAD,CEPAL Serie Distribucion del Ingreso 9 (1990),,http://hdl.handle.net/11362/9147
 Brazil,1984,0.583,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,1984,0.589383325,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,1984,0.584,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Brazil,1984,0.55662982,8.3128e-4,disp,ae,TRUE,SEDLAC Brazil disp ae 1,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1984,0.54995194,,disp,hh,TRUE,SEDLAC Brazil disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1984,0.57624013,8.6979e-4,disp,pc,TRUE,SEDLAC Brazil disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1985,0.53,,gross,hh,FALSE,CEPAL SDI Brazil gross hh PNAD,CEPAL Serie Distribucion del Ingreso 9 (1990),,http://hdl.handle.net/11362/9147
 Brazil,1985,0.589,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,1985,0.597667918,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,1985,0.556,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Brazil,1985,0.52888897,5.6808e-4,disp,ae,TRUE,SEDLAC Brazil disp ae 1,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1985,0.52182426,,disp,hh,TRUE,SEDLAC Brazil disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1985,0.54846673,5.9982e-4,disp,pc,TRUE,SEDLAC Brazil disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1986,0.54,,gross,hh,FALSE,CEPAL SDI Brazil gross hh PNAD,CEPAL Serie Distribucion del Ingreso 9 (1990),,http://hdl.handle.net/11362/9147
 Brazil,1986,0.578,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,1986,0.588044931,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,1986,0.585,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Brazil,1986,0.56006664,0.0015714,disp,ae,TRUE,SEDLAC Brazil disp ae 1,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1986,0.55674061,,disp,hh,TRUE,SEDLAC Brazil disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1986,0.57812921,0.00148382,disp,pc,TRUE,SEDLAC Brazil disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1987,0.57,,gross,hh,FALSE,CEPAL SDI Brazil gross hh PNAD,CEPAL Serie Distribucion del Ingreso 10 (1993),,http://hdl.handle.net/11362/9403
 Brazil,1987,0.592,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,1987,0.600557448,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,1987,0.597,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Brazil,1987,0.57087196,0.00133643,disp,ae,TRUE,SEDLAC Brazil disp ae 1,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1987,0.56558497,,disp,hh,TRUE,SEDLAC Brazil disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1987,0.58950315,0.00148565,disp,pc,TRUE,SEDLAC Brazil disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1988,0.609,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
 Brazil,1988,0.54,,con,hh,,GLS2006 Brazil con hh,"Goni, Lopez, and Serven 2006",27,http://papers.ssrn.com/sol3/papers.cfm?abstract_id=875741
+Brazil,1988,0.616371706,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,1988,0.614,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Brazil,1988,0.59133096,0.00100992,disp,ae,TRUE,SEDLAC Brazil disp ae 1,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1988,0.5829553,,disp,hh,TRUE,SEDLAC Brazil disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1988,0.60721762,0.00109874,disp,pc,TRUE,SEDLAC Brazil disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1989,0.59,,gross,hh,FALSE,CEPAL SDI Brazil gross hh PNAD,CEPAL Serie Distribucion del Ingreso 10 (1993),,http://hdl.handle.net/11362/9403
 Brazil,1989,0.625,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,1989,0.635569535,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,1989,0.633,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Brazil,1989,0.61008925,0.00275403,disp,ae,TRUE,SEDLAC Brazil disp ae 1,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1989,0.60396209,,disp,hh,TRUE,SEDLAC Brazil disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
@@ -1193,20 +1206,24 @@ Brazil,1989,0.62610688,0.00289444,disp,pc,TRUE,SEDLAC Brazil disp pc 1,SEDLAC,in
 Brazil,1990,0.627,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Brazil,1990,0.57,,gross,hh,FALSE,CEPAL SDI Brazil gross hh PNAD,CEPAL Serie Distribucion del Ingreso 10 (1993),,http://hdl.handle.net/11362/9403
 Brazil,1990,0.604,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,1990,0.613884134,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,1990,0.605,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Brazil,1990,0.58543669,0.00122325,disp,ae,TRUE,SEDLAC Brazil disp ae 1,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1990,0.57928998,,disp,hh,TRUE,SEDLAC Brazil disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1990,0.60181965,0.00137116,disp,pc,TRUE,SEDLAC Brazil disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1992,0.573,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,1992,0.582522413,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,1992,0.532,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Brazil,1993,0.621,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Brazil,1993,0.595,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,1993,0.60443689,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,1993,0.601,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Brazil,1993,0.5805302,0.00128308,disp,ae,TRUE,SEDLAC Brazil disp ae 2,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1993,0.57078548,,disp,hh,TRUE,SEDLAC Brazil disp hh 2,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1993,0.59696953,0.00134802,disp,pc,TRUE,SEDLAC Brazil disp pc 2,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1995,0.629,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Brazil,1995,0.591,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,1995,0.600506647,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,1995,0.596,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Brazil,1995,0.57324217,9.7472e-4,disp,ae,TRUE,SEDLAC Brazil disp ae 2,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1995,0.56564084,,disp,hh,TRUE,SEDLAC Brazil disp hh 2,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
@@ -1214,46 +1231,54 @@ Brazil,1995,0.59072851,9.4366e-4,disp,pc,TRUE,SEDLAC Brazil disp pc 2,SEDLAC,int
 Brazil,1996,0.637,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Brazil,1996,0.591,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
 Brazil,1996,0.55,,con,hh,,GLS2006 Brazil con hh,"Goni, Lopez, and Serven 2006",27,http://papers.ssrn.com/sol3/papers.cfm?abstract_id=875741
+Brazil,1996,0.60205408,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,1996,0.599,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Brazil,1996,0.57587423,0.00108247,disp,ae,TRUE,SEDLAC Brazil disp ae 2,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1996,0.56784823,,disp,hh,TRUE,SEDLAC Brazil disp hh 2,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1996,0.59219855,0.00106726,disp,pc,TRUE,SEDLAC Brazil disp pc 2,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1997,0.593,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,1997,0.60209184,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,1997,0.598,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Brazil,1997,0.57569106,0.00106418,disp,ae,TRUE,SEDLAC Brazil disp ae 2,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1997,0.5684872,,disp,hh,TRUE,SEDLAC Brazil disp hh 2,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1997,0.59230232,0.00108431,disp,pc,TRUE,SEDLAC Brazil disp pc 2,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1998,0.591,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,1998,0.600154968,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,1998,0.596,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Brazil,1998,0.5730458,0.00116069,disp,ae,TRUE,SEDLAC Brazil disp ae 2,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1998,0.56569575,,disp,hh,TRUE,SEDLAC Brazil disp hh 2,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1998,0.59056533,0.00118123,disp,pc,TRUE,SEDLAC Brazil disp pc 2,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1999,0.64,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Brazil,1999,0.585,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,1999,0.593973925,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,1999,0.59,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Brazil,1999,0.56697122,0.0010066,disp,ae,TRUE,SEDLAC Brazil disp ae 2,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1999,0.55935325,,disp,hh,TRUE,SEDLAC Brazil disp hh 2,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,1999,0.58474376,0.00118259,disp,pc,TRUE,SEDLAC Brazil disp pc 2,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2001,0.639,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Brazil,2001,0.586,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,2001,0.595782271,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,2001,0.584,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Brazil,2001,0.56440129000000006,0.00111529,disp,ae,TRUE,SEDLAC Brazil disp ae 2,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2001,0.54763448,,disp,hh,TRUE,SEDLAC Brazil disp hh 2,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2001,0.58314081,0.00107927,disp,pc,TRUE,SEDLAC Brazil disp pc 2,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2002,0.634,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Brazil,2002,0.58,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,2002,0.58928653,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,2002,0.581,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Brazil,2002,0.56161493,0.0011454,disp,ae,TRUE,SEDLAC Brazil disp ae 2,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2002,0.54505845,,disp,hh,TRUE,SEDLAC Brazil disp hh 2,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2002,0.58023416,0.00123173,disp,pc,TRUE,SEDLAC Brazil disp pc 2,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2003,0.621,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Brazil,2003,0.575,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,2003,0.583019478,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,2003,0.5760000000000001,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Brazil,2003,0.55567644,0.00100765,disp,ae,TRUE,SEDLAC Brazil disp ae 2,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2003,0.53829139,,disp,hh,TRUE,SEDLAC Brazil disp hh 2,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2003,0.57474586,9.6694e-4,disp,pc,TRUE,SEDLAC Brazil disp pc 2,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2004,0.612,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Brazil,2004,0.564,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,2004,0.572459238,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,2004,0.565,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Brazil,2004,0.54398844,9.7118e-4,disp,ae,TRUE,SEDLAC Brazil disp ae 2,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2004,0.54456414,0.00109981,disp,ae,TRUE,SEDLAC Brazil disp ae 3,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
@@ -1262,11 +1287,13 @@ Brazil,2004,0.52765195,,disp,hh,TRUE,SEDLAC Brazil disp hh 3,SEDLAC,gini1,http:/
 Brazil,2004,0.56326289,0.00100715,disp,pc,TRUE,SEDLAC Brazil disp pc 2,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2004,0.5641054,0.00111327,disp,pc,TRUE,SEDLAC Brazil disp pc 3,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2005,0.613,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Brazil,2005,0.569526414,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,2005,0.563,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Brazil,2005,0.54262981,0.0010675,disp,ae,TRUE,SEDLAC Brazil disp ae 3,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2005,0.52521701,,disp,hh,TRUE,SEDLAC Brazil disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2005,0.56247467,0.00107827,disp,pc,TRUE,SEDLAC Brazil disp pc 3,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2006,0.605,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Brazil,2006,0.562974276,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,2006,0.5003,0.0011,disp,ae,FALSE,LIS Brazil disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/br.txt
 Brazil,2006,0.4894,0.0011,disp,hh,FALSE,LIS Brazil disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/br.txt
 Brazil,2006,0.4904,0.0012,disp,oecdm,FALSE,LIS Brazil disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/br.txt
@@ -1290,11 +1317,13 @@ Brazil,2006,0.53641019,0.00101141,disp,ae,TRUE,SEDLAC Brazil disp ae 3,SEDLAC,in
 Brazil,2006,0.52102054,,disp,hh,TRUE,SEDLAC Brazil disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2006,0.5557801,0.00107694,disp,pc,TRUE,SEDLAC Brazil disp pc 3,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2007,0.59,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Brazil,2007,0.555952195,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,2007,0.5489999999999999,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Brazil,2007,0.52921886,9.5913e-4,disp,ae,TRUE,SEDLAC Brazil disp ae 3,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2007,0.51588693,,disp,hh,TRUE,SEDLAC Brazil disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2007,0.54814292,0.00101852,disp,pc,TRUE,SEDLAC Brazil disp pc 3,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2008,0.594,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Brazil,2008,0.546182206,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,2008,0.54,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Brazil,2008,0.52015778,0.00108709,disp,ae,TRUE,SEDLAC Brazil disp ae 3,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2008,0.50823665,,disp,hh,TRUE,SEDLAC Brazil disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
@@ -1304,6 +1333,7 @@ Brazil,2009,0.545,,disp,pc,FALSE,CEQ Brazil disp pc,Higgins and Pereira 2014,,ht
 Brazil,2009,0.512,,disp,sqrt,FALSE,CEQ Brazil disp sqrt,"Higgins, Lustig, Ruble, and Smeeding 2013",,http://www.commitmentoequity.org/publications_files/Brazil/Higgins%20Lustig%20Ruble%20Smeeding%20Comparing%20Brazil%20US%20Nov%2030%202013.pdf
 Brazil,2009,0.5790000000000001,,market,pc,FALSE,CEQ Brazil market pc,Higgins and Pereira 2014,,http://dx.doi.org/10.1177/1091142113501714
 Brazil,2009,0.551,,market,sqrt,FALSE,CEQ Brazil market sqrt,"Higgins, Lustig, Ruble, and Smeeding 2013",,http://www.commitmentoequity.org/publications_files/Brazil/Higgins%20Lustig%20Ruble%20Smeeding%20Comparing%20Brazil%20US%20Nov%2030%202013.pdf
+Brazil,2009,0.542581475,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,2009,0.4779,0.0012,disp,ae,FALSE,LIS Brazil disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/br.txt
 Brazil,2009,0.4717,0.0012,disp,hh,FALSE,LIS Brazil disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/br.txt
 Brazil,2009,0.4679,0.0011,disp,oecdm,FALSE,LIS Brazil disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/br.txt
@@ -1328,6 +1358,7 @@ Brazil,2009,0.50448441,,disp,hh,TRUE,SEDLAC Brazil disp hh 3,SEDLAC,gini1,http:/
 Brazil,2009,0.53601106,0.00109997,disp,pc,TRUE,SEDLAC Brazil disp pc 3,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2011,0.559,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Brazil,2011,0.509,,disp,sqrt,FALSE,CEQ Brazil disp sqrt,"Higgins, Lustig, Ruble, and Smeeding 2013",,http://www.commitmentoequity.org/publications_files/Brazil/Higgins%20Lustig%20Ruble%20Smeeding%20Comparing%20Brazil%20US%20Nov%2030%202013.pdf
+Brazil,2011,0.531389367,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,2011,0.4702,0.0012,disp,ae,FALSE,LIS Brazil disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/br.txt
 Brazil,2011,0.4675,0.0011,disp,hh,FALSE,LIS Brazil disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/br.txt
 Brazil,2011,0.4607,0.0013,disp,oecdm,FALSE,LIS Brazil disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/br.txt
@@ -1351,11 +1382,13 @@ Brazil,2011,0.5096966,0.00105221,disp,ae,TRUE,SEDLAC Brazil disp ae 3,SEDLAC,int
 Brazil,2011,0.49966704,,disp,hh,TRUE,SEDLAC Brazil disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2011,0.52824502,0.0010616,disp,pc,TRUE,SEDLAC Brazil disp pc 3,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2012,0.567,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Brazil,2012,0.529710654,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,2012,0.526,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Brazil,2012,0.5056431,0.00154289,disp,ae,TRUE,SEDLAC Brazil disp ae 3,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2012,0.49715485,,disp,hh,TRUE,SEDLAC Brazil disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2012,0.52480614,0.00167216,disp,pc,TRUE,SEDLAC Brazil disp pc 3,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2013,0.553,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Brazil,2013,0.527496734,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,2013,0.4601,0.0012,disp,ae,FALSE,LIS Brazil disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/br.txt
 Brazil,2013,0.4595,0.0011,disp,hh,FALSE,LIS Brazil disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/br.txt
 Brazil,2013,0.4506,0.0013,disp,oecdm,FALSE,LIS Brazil disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/br.txt
@@ -1379,6 +1412,7 @@ Brazil,2013,0.50820227,9.499e-4,disp,ae,TRUE,SEDLAC Brazil disp ae 3,SEDLAC,inte
 Brazil,2013,0.49848865,,disp,hh,TRUE,SEDLAC Brazil disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2013,0.52628542,9.5227e-4,disp,pc,TRUE,SEDLAC Brazil disp pc 3,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2014,0.548,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Brazil,2014,0.517949507,,gross,pc,FALSE,IPEA Brazil gross pc,Instituto de Pesquisa Económica Aplicada,"",http://www.ipeadata.gov.br
 Brazil,2014,0.515,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Brazil,2014,0.49615752,0.00121065,disp,ae,TRUE,SEDLAC Brazil disp ae 3,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2014,0.48756303,,disp,hh,TRUE,SEDLAC Brazil disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
