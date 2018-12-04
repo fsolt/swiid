@@ -2,6 +2,7 @@
 .Rhistory
 .RData
 *.Rproj
+*.DS_Store
 data-raw/from_Hu.csv
 data-raw/LISSY/net_sqrt_ru_all.txt
 data-raw/article_data/*
