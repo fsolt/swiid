@@ -526,6 +526,24 @@ inebo <- read_excel("data-raw/inebo.xlsx", skip = 6) %>%
   filter(!is.na(gini))
 
 
+# IPEA Brazil (update file)
+# http://www.ipeadata.gov.br > [Tab] Social > Temas > Renda
+ipea <- read_csv("data-raw/ipea.csv", skip = 1) %>% 
+  select(matches("\\d{4}")) %>% 
+  gather(key = year, value = gini) %>% 
+  transmute(country = "Brazil",
+            year = as.numeric(year),
+            gini = gini,
+            gini_se = NA,
+            welfare_def = "gross",
+            equiv_scale = "pc",
+            monetary = FALSE,
+            series = paste("IPEA Brazil", welfare_def, equiv_scale),
+            source1 = "Instituto de Pesquisa Económica Aplicada",
+            page = "",
+            link = "http://www.ipeadata.gov.br")
+
+
 # Belarus National Statistical Committee (automated, but will probably need to update wrangle)
 belstat_page <- "http://www.belstat.gov.by/en/ofitsialnaya-statistika/social-sector/uroven-zhizni-naseleniya/publikatsii__1/"
 try(
@@ -1951,6 +1969,7 @@ added_data <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/dat
 
 ## Combine
 make_inputs <- function(baseline_series, nbl = FALSE) {
+  se_factor <- 3
   # first, get baseline series and order by data-richness
   baseline_wd <- str_split(baseline_series, "\\s")[[1]] %>% nth(-2)
   baseline_es <- str_split(baseline_series, "\\s")[[1]] %>% last()
@@ -1958,7 +1977,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
   baseline <- lis %>% 
     filter(series == baseline_series) %>% 
     mutate(gini_b = gini,
-           gini_b_se = gini_se * 2) %>%
+           gini_b_se = gini_se * se_factor) %>%
     select(-gini, -gini_se) %>%
     mutate(country = countrycode(country, "country.name", "swiid.name", custom_dict = cc_swiid),
            region = countrycode(country, "swiid.name", "swiid.region", custom_dict = cc_swiid)) %>% 
@@ -1982,7 +2001,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
   ineq0 <- bind_rows(lis1, 
                      sedlac, cepal, cepal_sdi, oecd1, eurostat,
                      transmonee, ceq1, afr_gini, wb,
-                     armstat, abs, inebo, belstat, statcan, dane, ineccr, dkstat,
+                     armstat, abs, inebo, ipea, belstat, statcan, dane, ineccr, dkstat,
                      capmas, statee, statfi, insee, geostat,
                      stathk, bpsid, amar, cso_ie, istat, kazstat, kostat, nsck,
                      epumy, nbs, monstat, snz, nzmsd, ssb, dgeec, psa,
@@ -2041,8 +2060,8 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
            tcode0 = year - min(year) + 1) %>% 
     ungroup() %>% 
     arrange(desc(k_bl_obs), desc(country_obs)) %>% 
-    mutate(gini_m_se = if_else(!is.na(gini_m_se), if_else(gini_m_se < .0025, .005, gini_m_se * 2),
-                              quantile(gini_m_se/gini_m, .99, na.rm = TRUE) * gini_m * 2) %>% 
+    mutate(gini_m_se = if_else(!is.na(gini_m_se), if_else(gini_m_se < .0025, .005, gini_m_se * se_factor),
+                              quantile(gini_m_se/gini_m, .99, na.rm = TRUE) * gini_m * se_factor) %>% 
              if_else(. < .01, .01, .),
            wdes = paste(welfare_def, equiv_scale, sep = "_"),
            ibl = (gini_m == gini_b & str_detect(series, paste("LIS .*", baseline_wd, baseline_es))),
