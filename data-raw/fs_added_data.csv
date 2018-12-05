@@ -774,8 +774,8 @@ India,1997,0.3783,,con,pc,,Ravallion2000 India con pc,Ravallion 2000,3247,http:/
 India,1994,0.35,,con,pc,,TD2013 con pc,Thorat and Dubey 2013,42,http://www.pnud.org/content/dam/india/docs/human-development/how-inclusive-has-growth-been-in-india-during-1993-94-2009-10.pdf
 India,2005,0.35,,con,pc,,TD2013 con pc,Thorat and Dubey 2013,42,http://www.pnud.org/content/dam/india/docs/human-development/how-inclusive-has-growth-been-in-india-during-1993-94-2009-10.pdf
 India,2010,0.37,,con,pc,,TD2013 con pc,Thorat and Dubey 2013,42,http://www.pnud.org/content/dam/india/docs/human-development/how-inclusive-has-growth-been-in-india-during-1993-94-2009-10.pdf
-India,2004,0.35,,con,sqrt,TRUE,VD con sqrt,Vanneman and Dubey 2013,446,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA446
-India,2004,0.48,,disp,sqrt,TRUE,VD disp sqrt,Vanneman and Dubey 2013,446,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA446
+India,2004,0.35,,con,sqrt,TRUE,VD2013 con sqrt,Vanneman and Dubey 2013,446,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA446
+India,2004,0.48,,disp,sqrt,TRUE,VD2013 disp sqrt,Vanneman and Dubey 2013,446,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA446
 India,1976,0.42,,disp,hh,,vGP1984 India disp hh,Tabatabai 1996; van Ginneken and Park 1984,95,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 India,1976,0.38,,disp,pc,,vGP1984 India disp pc,Tabatabai 1996; van Ginneken and Park 1984,95,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 India,1973,0.357,,con,pc,,Yotopoulos1989 India con pc,Yotopoulos 1989,366,https://doi.org/10.1111/j.1475-4991.1989.tb00598.x
