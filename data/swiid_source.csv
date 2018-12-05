@@ -10498,6 +10498,8 @@ Peru,2006,0.48197073,0.00417099,disp,ae,TRUE,SEDLAC Peru disp ae 3,SEDLAC,interv
 Peru,2006,0.50080148,,disp,hh,TRUE,SEDLAC Peru disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Peru,2006,0.50325002,0.00424815,disp,pc,TRUE,SEDLAC Peru disp pc 3,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Peru,2007,0.5,,disp,pc,TRUE,CEPAL Peru disp pc 2,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Peru,2007,0.41,,con,pc,,INEI Peru con pc,INEI 2017,23,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
+Peru,2007,0.5,,gross,pc,FALSE,INEI Peru gross pc,INEI 2017,32,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
 Peru,2007,0.412,0.0033,con,ae,FALSE,LIS Peru con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pe.txt
 Peru,2007,0.4295,0.0027,con,hh,FALSE,LIS Peru con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pe.txt
 Peru,2007,0.4026,0.0033,con,oecdm,FALSE,LIS Peru con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pe.txt
@@ -10523,6 +10525,8 @@ Peru,2007,0.48179714,0.00310323,disp,ae,TRUE,SEDLAC Peru disp ae 3,SEDLAC,interv
 Peru,2007,0.50482218,,disp,hh,TRUE,SEDLAC Peru disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Peru,2007,0.50027963,0.00372306,disp,pc,TRUE,SEDLAC Peru disp pc 3,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Peru,2008,0.476,,disp,pc,TRUE,CEPAL Peru disp pc 2,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Peru,2008,0.38,,con,pc,,INEI Peru con pc,INEI 2017,23,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
+Peru,2008,0.48,,gross,pc,FALSE,INEI Peru gross pc,INEI 2017,32,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
 Peru,2008,0.478,,gross,pc,FALSE,Povcalnet Peru gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Peru,2008,0.45647559,0.00286597,disp,ae,TRUE,SEDLAC Peru disp ae 3,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Peru,2008,0.47718948,,disp,hh,TRUE,SEDLAC Peru disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
@@ -10530,11 +10534,15 @@ Peru,2008,0.47464296,0.00325851,disp,pc,TRUE,SEDLAC Peru disp pc 3,SEDLAC,interv
 Peru,2009,0.469,,disp,pc,TRUE,CEPAL Peru disp pc 2,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Peru,2009,0.49369999999999997,,disp,pc,FALSE,CEQ Peru disp pc,Lustig 2017,21,http://www.commitmentoequity.org/publications_files/Latin%20America/CEQ_WP62_Lustig_Feb22_2017.pdf
 Peru,2009,0.5039,,market,pc,FALSE,CEQ Peru market pc,Lustig 2017,21,http://www.commitmentoequity.org/publications_files/Latin%20America/CEQ_WP62_Lustig_Feb22_2017.pdf
+Peru,2009,0.39,,con,pc,,INEI Peru con pc,INEI 2017,23,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
+Peru,2009,0.47,,gross,pc,FALSE,INEI Peru gross pc,INEI 2017,32,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
 Peru,2009,0.473,,gross,pc,FALSE,Povcalnet Peru gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Peru,2009,0.45161535,0.00250195,disp,ae,TRUE,SEDLAC Peru disp ae 3,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Peru,2009,0.47614141,,disp,hh,TRUE,SEDLAC Peru disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Peru,2009,0.47011422,0.00244756,disp,pc,TRUE,SEDLAC Peru disp pc 3,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Peru,2010,0.458,,disp,pc,TRUE,CEPAL Peru disp pc 2,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Peru,2010,0.37,,con,pc,,INEI Peru con pc,INEI 2017,23,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
+Peru,2010,0.46,,gross,pc,FALSE,INEI Peru gross pc,INEI 2017,32,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
 Peru,2010,0.3755,0.0034,con,ae,FALSE,LIS Peru con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pe.txt
 Peru,2010,0.3961,0.0028,con,hh,FALSE,LIS Peru con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pe.txt
 Peru,2010,0.3663,0.0027,con,oecdm,FALSE,LIS Peru con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pe.txt
@@ -10560,16 +10568,22 @@ Peru,2010,0.43787548,0.00284405,disp,ae,TRUE,SEDLAC Peru disp ae 3,SEDLAC,interv
 Peru,2010,0.46776259,,disp,hh,TRUE,SEDLAC Peru disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Peru,2010,0.45540945,0.00288096,disp,pc,TRUE,SEDLAC Peru disp pc 3,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Peru,2011,0.452,,disp,pc,TRUE,CEPAL Peru disp pc 2,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Peru,2011,0.36,,con,pc,,INEI Peru con pc,INEI 2017,23,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
+Peru,2011,0.45,,gross,pc,FALSE,INEI Peru gross pc,INEI 2017,32,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
 Peru,2011,0.449,,gross,pc,FALSE,Povcalnet Peru gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Peru,2011,0.42834535,0.00236622,disp,ae,TRUE,SEDLAC Peru disp ae 3,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Peru,2011,0.46260216,,disp,hh,TRUE,SEDLAC Peru disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Peru,2011,0.4466372,0.00256352,disp,pc,TRUE,SEDLAC Peru disp pc 3,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Peru,2012,0.449,,disp,pc,TRUE,CEPAL Peru disp pc 2,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Peru,2012,0.36,,con,pc,,INEI Peru con pc,INEI 2017,23,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
+Peru,2012,0.45,,gross,pc,FALSE,INEI Peru gross pc,INEI 2017,32,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
 Peru,2012,0.447,,gross,pc,FALSE,Povcalnet Peru gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Peru,2012,0.42779543,0.0022983,disp,ae,TRUE,SEDLAC Peru disp ae 3,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Peru,2012,0.46591519,,disp,hh,TRUE,SEDLAC Peru disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Peru,2012,0.44444698,0.00242191,disp,pc,TRUE,SEDLAC Peru disp pc 3,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Peru,2013,0.444,,disp,pc,TRUE,CEPAL Peru disp pc 2,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Peru,2013,0.35,,con,pc,,INEI Peru con pc,INEI 2017,23,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
+Peru,2013,0.44,,gross,pc,FALSE,INEI Peru gross pc,INEI 2017,32,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
 Peru,2013,0.3641,0.0021,con,ae,FALSE,LIS Peru con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pe.txt
 Peru,2013,0.386,0.0023,con,hh,FALSE,LIS Peru con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pe.txt
 Peru,2013,0.3539,0.0023,con,oecdm,FALSE,LIS Peru con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pe.txt
@@ -10595,14 +10609,20 @@ Peru,2013,0.42099513,0.00160883,disp,ae,TRUE,SEDLAC Peru disp ae 3,SEDLAC,interv
 Peru,2013,0.45547613,,disp,hh,TRUE,SEDLAC Peru disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Peru,2013,0.43891456,0.0018819,disp,pc,TRUE,SEDLAC Peru disp pc 3,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Peru,2014,0.439,,disp,pc,TRUE,CEPAL Peru disp pc 2,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Peru,2014,0.35,,con,pc,,INEI Peru con pc,INEI 2017,23,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
+Peru,2014,0.44,,gross,pc,FALSE,INEI Peru gross pc,INEI 2017,32,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
 Peru,2014,0.434,,gross,pc,FALSE,Povcalnet Peru gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Peru,2014,0.41321467,0.00178044,disp,ae,TRUE,SEDLAC Peru disp ae 3,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Peru,2014,0.45029678,,disp,hh,TRUE,SEDLAC Peru disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Peru,2014,0.4315009,0.00210701,disp,pc,TRUE,SEDLAC Peru disp pc 3,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
+Peru,2015,0.35,,con,pc,,INEI Peru con pc,INEI 2017,23,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
+Peru,2015,0.44,,gross,pc,FALSE,INEI Peru gross pc,INEI 2017,32,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
 Peru,2015,0.435,,gross,pc,FALSE,Povcalnet Peru gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Peru,2015,0.41500218,0.00170743,disp,ae,TRUE,SEDLAC Peru disp ae 3,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Peru,2015,0.45006839,,disp,hh,TRUE,SEDLAC Peru disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Peru,2015,0.43358659,0.00172071,disp,pc,TRUE,SEDLAC Peru disp pc 3,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
+Peru,2016,0.34,,con,pc,,INEI Peru con pc,INEI 2017,23,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
+Peru,2016,0.44,,gross,pc,FALSE,INEI Peru gross pc,INEI 2017,32,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
 Peru,2016,0.43799999999999994,,gross,pc,FALSE,Povcalnet Peru gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Peru,2016,0.41921954,0.00179959,disp,ae,TRUE,SEDLAC Peru disp ae 3,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Peru,2016,0.45410658,,disp,hh,TRUE,SEDLAC Peru disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
