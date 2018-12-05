@@ -1421,9 +1421,13 @@ Brazil,2015,0.513,,gross,pc,FALSE,Povcalnet Brazil gross pc 1,World Bank Povcaln
 Brazil,2015,0.49474347,9.8816e-4,disp,ae,TRUE,SEDLAC Brazil disp ae 3,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2015,0.48483353,,disp,hh,TRUE,SEDLAC Brazil disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2015,0.51261592,9.5613e-4,disp,pc,TRUE,SEDLAC Brazil disp pc 3,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
+Brazil,2016,0.549,0.008,gross,pc,,IBGE2018 gross pc,IBGE 2018,Rendimento_Efetivamente_rec,ftp://ftp.ibge.gov.br/Trabalho_e_Rendimento/Pesquisa_Nacional_por_Amostra_de_Domicilios_continua/Anual/Rendimento_de_Todas_as_Fontes_2017/PNAD_Continua_2017_Rendimento_de_Todas_as_Fontes.xls
 Brazil,2016,0.51266648,0.00237182,disp,ae,TRUE,SEDLAC Brazil disp ae 4,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2016,0.49986399,,disp,hh,TRUE,SEDLAC Brazil disp hh 4,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Brazil,2016,0.52968291,0.00215069,disp,pc,TRUE,SEDLAC Brazil disp pc 4,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
+Brazil,2016,0.541,,gross,pc,,Soares2018 gross pc,Soares 2018,7,http://www.ipea.gov.br/portal/images/stories/PDFs/TDs/ingles/dp_237.pdf
+Brazil,2017,0.549,0.008,gross,pc,,IBGE2018 gross pc,IBGE 2018,Rendimento_Efetivamente_rec,ftp://ftp.ibge.gov.br/Trabalho_e_Rendimento/Pesquisa_Nacional_por_Amostra_de_Domicilios_continua/Anual/Rendimento_de_Todas_as_Fontes_2017/PNAD_Continua_2017_Rendimento_de_Todas_as_Fontes.xls
+Brazil,2017,0.539,,gross,pc,,Soares2018 gross pc,Soares 2018,7,http://www.ipea.gov.br/portal/images/stories/PDFs/TDs/ingles/dp_237.pdf
 Brunei,1981,0.564,,gross,hh,,Duraman1990; Arief1986 Brunei Darussalam gross hh,Tabatabai 1996; Duraman 1990; Arief1986,91,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Bulgaria,1989,0.233,,disp,pc,FALSE,Transmonee Bulgaria disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
 Bulgaria,1990,0.215,,con,pc,,Park1995 Bulgaria con pc,Tabatabai 1996; Park 1995,119,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -6519,11 +6523,12 @@ India,2004,0.5046,0.0021,market,hh,FALSE,LIS India market hh,LISSY,"",https://ra
 India,2004,0.4766,0.0024,market,oecdm,FALSE,LIS India market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/in.txt
 India,2004,0.4953,0.0021,market,pc,FALSE,LIS India market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/in.txt
 India,2004,0.4797,0.0023,market,sqrt,FALSE,LIS India market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/in.txt
+India,2004,0.54,,disp,pc,,MP2017 disp pc,Mishra and Parmar 2017,407,http://doi.org/10.1007/s40953-016-0057-0
 India,2004,0.482,,disp,sqrt,FALSE,"OECD India disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 India,2004,0.482,,gross,sqrt,FALSE,"OECD India gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 India,2004,0.489,,market,sqrt,FALSE,"OECD India market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-India,2004,0.35,,con,sqrt,TRUE,VD con sqrt,Vanneman and Dubey 2013,446,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA446
-India,2004,0.48,,disp,sqrt,TRUE,VD disp sqrt,Vanneman and Dubey 2013,446,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA446
+India,2004,0.35,,con,sqrt,TRUE,VD2013 con sqrt,Vanneman and Dubey 2013,446,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA446
+India,2004,0.48,,disp,sqrt,TRUE,VD2013 disp sqrt,Vanneman and Dubey 2013,446,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA446
 India,2005,0.35,,con,pc,,TD2013 con pc,Thorat and Dubey 2013,42,http://www.pnud.org/content/dam/india/docs/human-development/how-inclusive-has-growth-been-in-india-during-1993-94-2009-10.pdf
 India,2007,0.36,,con,pc,,CN2016 con pc,Chadha and Nandwani 2016,22,http://hdl.handle.net/10419/161488
 India,2010,0.396,,con,pc,,CN2016 con pc,Chadha and Nandwani 2016,22,http://hdl.handle.net/10419/161488
@@ -6547,6 +6552,7 @@ India,2011,0.5241,0.0024,market,hh,FALSE,LIS India market hh,LISSY,"",https://ra
 India,2011,0.492,0.0021,market,oecdm,FALSE,LIS India market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/in.txt
 India,2011,0.5097,0.0021,market,pc,FALSE,LIS India market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/in.txt
 India,2011,0.4965,0.0021,market,sqrt,FALSE,LIS India market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/in.txt
+India,2011,0.53,,disp,pc,,MP2017 disp pc,Mishra and Parmar 2017,407,http://doi.org/10.1007/s40953-016-0057-0
 India,2011,0.495,,disp,sqrt,FALSE,"OECD India disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 India,2011,0.495,,gross,sqrt,FALSE,"OECD India gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 India,2011,0.508,,market,sqrt,FALSE,"OECD India market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
