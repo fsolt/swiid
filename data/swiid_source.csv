@@ -2711,20 +2711,20 @@ Colombia,2001,0.53788204,0.00317886,disp,ae,TRUE,SEDLAC Colombia disp ae 1,SEDLA
 Colombia,2001,0.53297801,,disp,hh,TRUE,SEDLAC Colombia disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2001,0.55932969,0.00339166,disp,pc,TRUE,SEDLAC Colombia disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2002,0.567,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Colombia,2002,0.572,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",http://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
+Colombia,2002,0.572,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
 Colombia,2002,0.5579999999999999,,gross,pc,FALSE,Povcalnet Colombia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Colombia,2002,0.53384374,0.00459575,disp,ae,TRUE,SEDLAC Colombia disp ae 1,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2002,0.52859261,,disp,hh,TRUE,SEDLAC Colombia disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2002,0.55674595,0.00569045,disp,pc,TRUE,SEDLAC Colombia disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2003,0.548,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Colombia,2003,0.554,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",http://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
+Colombia,2003,0.554,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
 Colombia,2003,0.5,,con,hh,,GLS2006 Colombia con hh,"Goni, Lopez, and Serven 2006",27,http://papers.ssrn.com/sol3/papers.cfm?abstract_id=875741
 Colombia,2003,0.534,,gross,pc,FALSE,Povcalnet Colombia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Colombia,2003,0.5063388,0.00280598,disp,ae,TRUE,SEDLAC Colombia disp ae 1,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2003,0.50184639,,disp,hh,TRUE,SEDLAC Colombia disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2003,0.5292026,0.00257898,disp,pc,TRUE,SEDLAC Colombia disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2004,0.553,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Colombia,2004,0.558,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",http://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
+Colombia,2004,0.558,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
 Colombia,2004,0.5439,0.0074,disp,ae,FALSE,LIS Colombia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2004,0.5337,0.0063,disp,hh,FALSE,LIS Colombia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2004,0.5331,0.0075,disp,oecdm,FALSE,LIS Colombia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
@@ -2745,7 +2745,7 @@ Colombia,2004,0.52648409,0.00299172,disp,ae,TRUE,SEDLAC Colombia disp ae 1,SEDLA
 Colombia,2004,0.52141521,,disp,hh,TRUE,SEDLAC Colombia disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2004,0.54831418,0.00341618,disp,pc,TRUE,SEDLAC Colombia disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2005,0.551,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Colombia,2005,0.557,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",http://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
+Colombia,2005,0.557,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
 Colombia,2005,0.537,,gross,pc,FALSE,Povcalnet Colombia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Colombia,2005,0.51139247,0.00234318,disp,ae,TRUE,SEDLAC Colombia disp ae 1,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2005,0.50382524,,disp,hh,TRUE,SEDLAC Colombia disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
@@ -2766,13 +2766,13 @@ Colombia,2007,0.5546,0.0052,market,oecdm,FALSE,LIS Colombia market oecdm,LISSY,"
 Colombia,2007,0.5815,0.0049,market,pc,FALSE,LIS Colombia market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2007,0.5464,0.0047,market,sqrt,FALSE,LIS Colombia market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2008,0.562,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Colombia,2008,0.567,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",http://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
+Colombia,2008,0.567,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
 Colombia,2008,0.5539999999999999,,gross,pc,FALSE,Povcalnet Colombia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Colombia,2008,0.53029191,0.0012495,disp,ae,TRUE,SEDLAC Colombia disp ae 2,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2008,0.5202708,,disp,hh,TRUE,SEDLAC Colombia disp hh 2,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2008,0.5525445,0.00109251,disp,pc,TRUE,SEDLAC Colombia disp pc 2,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2009,0.553,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Colombia,2009,0.557,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",http://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
+Colombia,2009,0.557,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
 Colombia,2009,0.545,,gross,pc,FALSE,Povcalnet Colombia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Colombia,2009,0.52036786,9.7349e-4,disp,ae,TRUE,SEDLAC Colombia disp ae 2,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2009,0.51453871,,disp,hh,TRUE,SEDLAC Colombia disp hh 2,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
@@ -2780,7 +2780,7 @@ Colombia,2009,0.54234917,0.00105586,disp,pc,TRUE,SEDLAC Colombia disp pc 2,SEDLA
 Colombia,2010,0.557,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Colombia,2010,0.5687000000000001,,disp,pc,FALSE,CEQ Colombia disp pc,Lustig 2017,21,http://www.commitmentoequity.org/publications_files/Latin%20America/CEQ_WP62_Lustig_Feb22_2017.pdf
 Colombia,2010,0.5766000000000001,,market,pc,FALSE,CEQ Colombia market pc,Lustig 2017,21,http://www.commitmentoequity.org/publications_files/Latin%20America/CEQ_WP62_Lustig_Feb22_2017.pdf
-Colombia,2010,0.56,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",http://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
+Colombia,2010,0.56,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
 Colombia,2010,0.4998,0.0045,disp,ae,FALSE,LIS Colombia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2010,0.4992,0.0047,disp,hh,FALSE,LIS Colombia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2010,0.4896,0.0052,disp,oecdm,FALSE,LIS Colombia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
@@ -2801,19 +2801,19 @@ Colombia,2010,0.52337105,0.00111861,disp,ae,TRUE,SEDLAC Colombia disp ae 2,SEDLA
 Colombia,2010,0.51650573,,disp,hh,TRUE,SEDLAC Colombia disp hh 2,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2010,0.54605022,0.00118854,disp,pc,TRUE,SEDLAC Colombia disp pc 2,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2011,0.545,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Colombia,2011,0.548,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",http://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
+Colombia,2011,0.548,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
 Colombia,2011,0.536,,gross,pc,FALSE,Povcalnet Colombia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Colombia,2011,0.51204627,0.00122327,disp,ae,TRUE,SEDLAC Colombia disp ae 2,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2011,0.50709651,,disp,hh,TRUE,SEDLAC Colombia disp hh 2,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2011,0.53421462,0.00124828,disp,pc,TRUE,SEDLAC Colombia disp pc 2,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2012,0.536,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Colombia,2012,0.539,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",http://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
+Colombia,2012,0.539,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
 Colombia,2012,0.529,,gross,pc,FALSE,Povcalnet Colombia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Colombia,2012,0.50405171,0.0010591,disp,ae,TRUE,SEDLAC Colombia disp ae 2,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2012,0.49927872,,disp,hh,TRUE,SEDLAC Colombia disp hh 2,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2012,0.52626351,0.00116278,disp,pc,TRUE,SEDLAC Colombia disp pc 2,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2013,0.536,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Colombia,2013,0.539,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",http://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
+Colombia,2013,0.539,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
 Colombia,2013,0.5189,0.0066,disp,ae,FALSE,LIS Colombia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2013,0.5146,0.0049,disp,hh,FALSE,LIS Colombia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2013,0.5061,0.0067,disp,oecdm,FALSE,LIS Colombia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
@@ -2834,22 +2834,22 @@ Colombia,2013,0.50397217,0.00129049,disp,ae,TRUE,SEDLAC Colombia disp ae 2,SEDLA
 Colombia,2013,0.49965347,,disp,hh,TRUE,SEDLAC Colombia disp hh 2,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2013,0.52701586,0.00136688,disp,pc,TRUE,SEDLAC Colombia disp pc 2,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2014,0.535,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Colombia,2014,0.538,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",http://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
+Colombia,2014,0.538,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
 Colombia,2014,0.528,,gross,pc,FALSE,Povcalnet Colombia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Colombia,2014,0.50264109,0.00166853,disp,ae,TRUE,SEDLAC Colombia disp ae 2,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2014,0.49814557,,disp,hh,TRUE,SEDLAC Colombia disp hh 2,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2014,0.52594348,0.00176118,disp,pc,TRUE,SEDLAC Colombia disp pc 2,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
-Colombia,2015,0.522,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",http://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
+Colombia,2015,0.522,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
 Colombia,2015,0.511,,gross,pc,FALSE,Povcalnet Colombia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Colombia,2015,0.48651766,0.00124721,disp,ae,TRUE,SEDLAC Colombia disp ae 2,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2015,0.48470009,,disp,hh,TRUE,SEDLAC Colombia disp hh 2,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2015,0.50962545,0.00143234,disp,pc,TRUE,SEDLAC Colombia disp pc 2,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
-Colombia,2016,0.517,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",http://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
+Colombia,2016,0.517,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
 Colombia,2016,0.508,,gross,pc,FALSE,Povcalnet Colombia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Colombia,2016,0.48349825,0.00134137,disp,ae,TRUE,SEDLAC Colombia disp ae 2,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2016,0.4817324,,disp,hh,TRUE,SEDLAC Colombia disp hh 2,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Colombia,2016,0.50689409,0.0014424,disp,pc,TRUE,SEDLAC Colombia disp pc 2,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
-Colombia,2017,0.508,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",http://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
+Colombia,2017,0.508,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/anex_pobreza_2017.xls
 Comoros,2004,0.5589999999999999,,con,pc,FALSE,Povcalnet Comoros con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Comoros,2004,0.5426,,con,sqrt,FALSE,World Bank Africa Poverty Database Comoros con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
 Comoros,2005,0.629,,con,pc,,GIDD Comoros con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
@@ -6979,9 +6979,9 @@ Ireland,2016,0.306,,disp,pc,FALSE,CSO Ireland disp pc,CSO Ireland,"",http://www.
 Ireland,2016,0.295,,disp,oecdm,TRUE,Eurostat Ireland disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Israel,1979,0.3181,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
 Israel,1979,0.319,,disp,ae,,A1996 Israel disp ae 2,Achdut 1996,S25,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
-Israel,1979,0.318,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
-Israel,1979,0.366,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
-Israel,1979,0.433,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1979,0.318,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1979,0.366,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1979,0.433,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
 Israel,1979,0.3364,0.006,disp,hh,FALSE,LIS Israel disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/il.txt
 Israel,1979,0.3617,0.0064,disp,pc,FALSE,LIS Israel disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/il.txt
 Israel,1979,0.3025,0.0052,disp,sqrt,FALSE,LIS Israel disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/il.txt
@@ -6993,23 +6993,23 @@ Israel,1979,0.4714,0.0067,market,pc,FALSE,LIS Israel market pc,LISSY,"",https://
 Israel,1979,0.4256,0.0065,market,sqrt,FALSE,LIS Israel market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/il.txt
 Israel,1979,0.363,,gross,pc,FALSE,Povcalnet Israel gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Israel,1980,0.3239,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
-Israel,1980,0.324,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
-Israel,1980,0.369,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
-Israel,1980,0.434,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1980,0.324,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1980,0.369,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1980,0.434,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
 Israel,1981,0.3185,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
 Israel,1982,0.3135,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
 Israel,1983,0.3018,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
-Israel,1983,0.302,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
-Israel,1983,0.362,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
-Israel,1983,0.443,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1983,0.302,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1983,0.362,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1983,0.443,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
 Israel,1984,0.3283,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
-Israel,1984,0.328,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
-Israel,1984,0.4,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
-Israel,1984,0.475,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1984,0.328,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1984,0.4,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1984,0.475,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
 Israel,1985,0.3119,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
-Israel,1985,0.312,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
-Israel,1985,0.373,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
-Israel,1985,0.468,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1985,0.312,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1985,0.373,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1985,0.468,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
 Israel,1985,0.326,,disp,sqrt,FALSE,"OECD Israel disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Israel,1985,0.472,,market,sqrt,FALSE,"OECD Israel market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Israel,1986,0.323,,disp,ae,,A1996 Israel disp ae 2,Achdut 1996,S25,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
@@ -7024,21 +7024,21 @@ Israel,1986,0.5093,0.0053,market,pc,FALSE,LIS Israel market pc,LISSY,"",https://
 Israel,1986,0.4742,0.0048,market,sqrt,FALSE,LIS Israel market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/il.txt
 Israel,1986,0.365,,gross,pc,FALSE,Povcalnet Israel gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Israel,1987,0.3186,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
-Israel,1987,0.319,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
-Israel,1987,0.37,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
-Israel,1987,0.459,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1987,0.319,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1987,0.37,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1987,0.459,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
 Israel,1988,0.3221,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
-Israel,1988,0.322,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
-Israel,1988,0.37,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
-Israel,1988,0.457,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1988,0.322,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1988,0.37,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1988,0.457,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
 Israel,1989,0.3237,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
-Israel,1989,0.324,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
-Israel,1989,0.377,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
-Israel,1989,0.474,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1989,0.324,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1989,0.377,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1989,0.474,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
 Israel,1990,0.3263,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
-Israel,1990,0.326,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
-Israel,1990,0.376,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
-Israel,1990,0.48,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,132,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1990,0.326,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1990,0.376,,gross,ae,,Achdut1997 Israel gross ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
+Israel,1990,0.48,,market,ae,,Achdut1997 Israel market ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
 Israel,1990,0.329,,disp,sqrt,FALSE,"OECD Israel disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Israel,1990,0.476,,market,sqrt,FALSE,"OECD Israel market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Israel,1991,0.3273,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
@@ -12687,6 +12687,9 @@ Sweden,1971,0.4659,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Al
 Sweden,1972,0.4571,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1973,0.4486,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1974,0.4168,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
+Sweden,1975,0.213,0.004,disp,ae,,GP2002 disp sqrt,Gustafsson and Palmer 2002,559,
+Sweden,1975,0.272,,gross,ae,,GP2002 gross sqrt,Gustafsson and Palmer 2002,548,
+Sweden,1975,0.354,,market,ae,,GP2002 market sqrt,Gustafsson and Palmer 2002,548,
 Sweden,1975,0.4059,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1975,0.2175,0.0022,disp,ae,FALSE,LIS Sweden disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/se.txt
 Sweden,1975,0.3148,0.0031,disp,hh,FALSE,LIS Sweden disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/se.txt
@@ -12711,15 +12714,18 @@ Sweden,1975,0.217,,disp,ae,FALSE,Statistics Sweden disp ae 1,Statistics Sweden,"
 Sweden,1975,0.417,,market,ae,FALSE,Statistics Sweden market ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
 Sweden,1976,0.3915,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1977,0.3743,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
+Sweden,1978,0.2,0.007,disp,ae,,GP2002 disp sqrt,Gustafsson and Palmer 2002,559,
 Sweden,1978,0.3483,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1978,0.205,,disp,ae,FALSE,Statistics Sweden disp ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
 Sweden,1978,0.429,,market,ae,FALSE,Statistics Sweden market ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
 Sweden,1979,0.34,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1979,0.3,,disp,hh,,vGP1984 Sweden disp hh,Tabatabai 1996; van Ginneken and Park 1984,128,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Sweden,1979,0.22,,disp,pc,,vGP1984 Sweden disp pc,Tabatabai 1996; van Ginneken and Park 1984,128,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Sweden,1980,0.194,0.005,disp,ae,,GP2002 disp sqrt,Gustafsson and Palmer 2002,559,
 Sweden,1980,0.3304,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1980,0.201,,disp,ae,FALSE,Statistics Sweden disp ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
 Sweden,1980,0.423,,market,ae,FALSE,Statistics Sweden market ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
+Sweden,1981,0.191,0.005,disp,ae,,GP2002 disp sqrt,Gustafsson and Palmer 2002,559,
 Sweden,1981,0.3227,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1981,0.2922,0.0042,disp,hh,FALSE,LIS Sweden disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/se.txt
 Sweden,1981,0.2329,0.0034,disp,pc,FALSE,LIS Sweden disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/se.txt
@@ -12736,9 +12742,11 @@ Sweden,1981,0.249,,gross,ae,,RU1990 Sweden gross ae,Ringen and Uusitalo 1990,81,
 Sweden,1981,0.329,,gross,hh,,RU1990 Sweden gross hh,Ringen and Uusitalo 1990,81,https://www.jstor.org/stable/20630040
 Sweden,1981,0.199,,disp,ae,FALSE,Statistics Sweden disp ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
 Sweden,1981,0.423,,market,ae,FALSE,Statistics Sweden market ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
+Sweden,1982,0.194,0.006,disp,ae,,GP2002 disp sqrt,Gustafsson and Palmer 2002,559,
 Sweden,1982,0.3248,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1982,0.203,,disp,ae,FALSE,Statistics Sweden disp ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
 Sweden,1982,0.427,,market,ae,FALSE,Statistics Sweden market ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
+Sweden,1983,0.194,0.006,disp,ae,,GP2002 disp sqrt,Gustafsson and Palmer 2002,559,
 Sweden,1983,0.3193,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1983,0.198,0.001,disp,sqrt,FALSE,"OECD Sweden disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Sweden,1983,0.215,0.001,disp,sqrt,FALSE,"OECD Sweden disp sqrt, previous def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -12746,15 +12754,19 @@ Sweden,1983,0.404,,market,sqrt,FALSE,"OECD Sweden market sqrt, current def, 2011
 Sweden,1983,0.426,,market,sqrt,FALSE,"OECD Sweden market sqrt, previous def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Sweden,1983,0.201,,disp,ae,FALSE,Statistics Sweden disp ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
 Sweden,1983,0.431,,market,ae,FALSE,Statistics Sweden market ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
+Sweden,1984,0.204,0.006,disp,ae,,GP2002 disp sqrt,Gustafsson and Palmer 2002,559,
 Sweden,1984,0.3162,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1984,0.21,,disp,ae,FALSE,Statistics Sweden disp ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
 Sweden,1984,0.436,,market,ae,FALSE,Statistics Sweden market ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
+Sweden,1985,0.205,0.008,disp,ae,,GP2002 disp sqrt,Gustafsson and Palmer 2002,559,
 Sweden,1985,0.314,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1985,0.211,,disp,ae,FALSE,Statistics Sweden disp ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
 Sweden,1985,0.44,,market,ae,FALSE,Statistics Sweden market ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
+Sweden,1986,0.214,0.011,disp,ae,,GP2002 disp sqrt,Gustafsson and Palmer 2002,559,
 Sweden,1986,0.3141,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1986,0.22,,disp,ae,FALSE,Statistics Sweden disp ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
 Sweden,1986,0.448,,market,ae,FALSE,Statistics Sweden market ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
+Sweden,1987,0.205,0.007,disp,ae,,GP2002 disp sqrt,Gustafsson and Palmer 2002,559,
 Sweden,1987,0.3146,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1987,0.2081,0.0036,disp,ae,FALSE,LIS Sweden disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/se.txt
 Sweden,1987,0.3196,0.0046,disp,hh,FALSE,LIS Sweden disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/se.txt
@@ -12773,13 +12785,16 @@ Sweden,1987,0.4551,0.0049,market,pc,FALSE,LIS Sweden market pc,LISSY,"",https://
 Sweden,1987,0.4313,0.0049,market,sqrt,FALSE,LIS Sweden market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/se.txt
 Sweden,1987,0.209,,disp,ae,FALSE,Statistics Sweden disp ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
 Sweden,1987,0.443,,market,ae,FALSE,Statistics Sweden market ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
+Sweden,1988,0.204,0.005,disp,ae,,GP2002 disp sqrt,Gustafsson and Palmer 2002,559,
 Sweden,1988,0.3156,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1988,0.209,,disp,ae,FALSE,Statistics Sweden disp ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
 Sweden,1988,0.446,,market,ae,FALSE,Statistics Sweden market ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
+Sweden,1989,0.21,0.005,disp,ae,,GP2002 disp sqrt,Gustafsson and Palmer 2002,559,
 Sweden,1989,0.3157,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1989,0.35,,disp,pc,,Park1995 Sweden disp pc,Tabatabai 1996; Park 1995,128,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Sweden,1989,0.213,,disp,ae,FALSE,Statistics Sweden disp ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
 Sweden,1989,0.451,,market,ae,FALSE,Statistics Sweden market ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
+Sweden,1990,0.219,0.006,disp,ae,,GP2002 disp sqrt,Gustafsson and Palmer 2002,559,
 Sweden,1990,0.318,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1990,0.22,,disp,ae,FALSE,Statistics Sweden disp ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
 Sweden,1990,0.452,,market,ae,FALSE,Statistics Sweden market ae 1,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
@@ -12787,6 +12802,9 @@ Sweden,1990,0.2608,,disp,ae,TRUE,W1999 Sweden disp ae 1,Wagstaff et al. 1999,82,
 Sweden,1990,0.256,,disp,ae,TRUE,W1999 Sweden disp ae 2,Wagstaff et al. 1999,86,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 Sweden,1990,0.3004,,gross,ae,TRUE,W1999 Sweden gross ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 Sweden,1990,0.296,,gross,ae,TRUE,W1999 Sweden gross ae 2,Wagstaff et al. 1999,86,http://www.sciencedirect.com/science/article/pii/S0047272798000851
+Sweden,1991,0.247,0.011,disp,ae,,GP2002 disp sqrt,Gustafsson and Palmer 2002,559,
+Sweden,1991,0.278,,gross,ae,,GP2002 gross sqrt,Gustafsson and Palmer 2002,548,
+Sweden,1991,0.393,,market,ae,,GP2002 market sqrt,Gustafsson and Palmer 2002,548,
 Sweden,1991,0.3291,,gross,ae,TRUE,JL2009 gross ae 3,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1991,0.209,0.002,disp,sqrt,FALSE,"OECD Sweden disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Sweden,1991,0.227,0.002,disp,sqrt,FALSE,"OECD Sweden disp sqrt, previous def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -12794,6 +12812,7 @@ Sweden,1991,0.408,,market,sqrt,FALSE,"OECD Sweden market sqrt, current def, 2011
 Sweden,1991,0.431,,market,sqrt,FALSE,"OECD Sweden market sqrt, previous def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Sweden,1991,0.249,,disp,ae,FALSE,Statistics Sweden disp ae 2,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
 Sweden,1991,0.475,,market,ae,FALSE,Statistics Sweden market ae 2,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
+Sweden,1992,0.238,0.007,disp,ae,,GP2002 disp sqrt,Gustafsson and Palmer 2002,559,
 Sweden,1992,0.329,,gross,ae,TRUE,JL2009 gross ae 3,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1992,0.2277,0.0025,disp,ae,FALSE,LIS Sweden disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/se.txt
 Sweden,1992,0.3328,0.0025,disp,hh,FALSE,LIS Sweden disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/se.txt
@@ -12812,12 +12831,15 @@ Sweden,1992,0.4918,0.0044,market,pc,FALSE,LIS Sweden market pc,LISSY,"",https://
 Sweden,1992,0.4674,0.005,market,sqrt,FALSE,LIS Sweden market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/se.txt
 Sweden,1992,0.241,,disp,ae,FALSE,Statistics Sweden disp ae 2,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
 Sweden,1992,0.483,,market,ae,FALSE,Statistics Sweden market ae 2,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
+Sweden,1993,0.24,0.005,disp,ae,,GP2002 disp sqrt,Gustafsson and Palmer 2002,559,
 Sweden,1993,0.3346,,gross,ae,TRUE,JL2009 gross ae 3,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1993,0.243,,disp,ae,FALSE,Statistics Sweden disp ae 2,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
 Sweden,1993,0.506,,market,ae,FALSE,Statistics Sweden market ae 2,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
+Sweden,1994,0.269,0.006,disp,ae,,GP2002 disp sqrt,Gustafsson and Palmer 2002,559,
 Sweden,1994,0.3485,,gross,ae,TRUE,JL2009 gross ae 3,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1994,0.271,,disp,ae,FALSE,Statistics Sweden disp ae 2,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
 Sweden,1994,0.523,,market,ae,FALSE,Statistics Sweden market ae 2,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
+Sweden,1995,0.243,0.005,disp,ae,,GP2002 disp sqrt,Gustafsson and Palmer 2002,559,
 Sweden,1995,0.3396,,gross,ae,TRUE,JL2009 gross ae 3,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1995,0.2224,0.0022,disp,ae,FALSE,LIS Sweden disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/se.txt
 Sweden,1995,0.3231,0.0023,disp,hh,FALSE,LIS Sweden disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/se.txt
@@ -12841,13 +12863,18 @@ Sweden,1995,0.462,,market,sqrt,FALSE,"OECD Sweden market sqrt, previous def, 201
 Sweden,1995,0.244,,disp,ae,FALSE,Statistics Sweden disp ae 2,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
 Sweden,1995,0.511,,market,ae,FALSE,Statistics Sweden market ae 2,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
 Sweden,1996,0.21,,disp,oecdm,TRUE,Eurostat Sweden disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Sweden,1996,0.253,0.004,disp,ae,,GP2002 disp sqrt,Gustafsson and Palmer 2002,559,
 Sweden,1996,0.356,,gross,ae,TRUE,JL2009 gross ae 3,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1996,0.253,,disp,ae,FALSE,Statistics Sweden disp ae 2,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
 Sweden,1996,0.515,,market,ae,FALSE,Statistics Sweden market ae 2,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
+Sweden,1997,0.278,0.009,disp,ae,,GP2002 disp sqrt,Gustafsson and Palmer 2002,559,
 Sweden,1997,0.3666,,gross,ae,TRUE,JL2009 gross ae 3,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1997,0.277,,disp,ae,FALSE,Statistics Sweden disp ae 2,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
 Sweden,1997,0.529,,market,ae,FALSE,Statistics Sweden market ae 2,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
 Sweden,1998,0.22,,disp,oecdm,TRUE,Eurostat Sweden disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Sweden,1998,0.267,0.005,disp,ae,,GP2002 disp sqrt,Gustafsson and Palmer 2002,559,
+Sweden,1998,0.303,,gross,ae,,GP2002 gross sqrt,Gustafsson and Palmer 2002,548,
+Sweden,1998,0.422,,market,ae,,GP2002 market sqrt,Gustafsson and Palmer 2002,548,
 Sweden,1998,0.3661,,gross,ae,TRUE,JL2009 gross ae 3,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1998,0.263,,disp,ae,FALSE,Statistics Sweden disp ae 2,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
 Sweden,1998,0.517,,market,ae,FALSE,Statistics Sweden market ae 2,Statistics Sweden,"",http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550
