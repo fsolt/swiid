@@ -16,14 +16,17 @@ kfold_output <- map_dfr(output_files, function(output_file) {
        str_extract("structure.*L\\)\\)") %>% 
        parse(text = .) %>% 
        eval() %>% 
-       mutate(fold = str_extract(output_file, "\\d{1,2}$")))
+       mutate(fold = str_extract(output_file, "\\d{1,2}$"),
+              cy = paste(country, year),
+              cy_color = if_else(problem == 1, "#354995", "#5E5E5E"),
+              point_diff = mean - gini_b %>% round(5)))
   }
 }) %>% 
   group_by(country) %>% 
   mutate(prob_perc = mean(problem, na.rm = TRUE),
          t_diff = point_diff/se_diff) %>% 
-  ungroup()
-
+  ungroup() %>% 
+  arrange(point_diff)
 mean(kfold_output$problem, na.rm = TRUE)
 nrow(kfold_output)
 
@@ -34,3 +37,22 @@ kfold_output %>%
          point_diff, se_diff, t_diff) %>%
   arrange(-problem, -prob_perc, country, -t_diff) %>%
   View()
+
+# pdf(file="predlis.pdf",width=8.5, height=5.25)
+ggplot(kfold_output) + 
+  # geom_rect(aes(xmin=-Inf, xmax=Inf, ymin=-2, ymax=2), fill='gray90', alpha=.2) +
+  geom_hline(yintercept=0, linetype=2, colour="gray60") +
+  geom_pointrange( 
+    aes(x = forcats::fct_reorder(cy, point_diff), 
+        y=point_diff*100, 
+        ymin=point_diff*100 - 1.96*100*se_diff,
+        ymax = point_diff*100 + 1.96*100*se_diff,
+        colour = cy_color)) +
+  theme_bw() + 
+  theme(legend.position="none") +
+  scale_colour_manual(values=c("#354995", "#5E5E5E")) +
+  labs(x = "", y = "SWIID Prediction minus LIS") + 
+  theme(axis.text.x = element_text(angle = 60, hjust = 1, size=7, colour = kfold_output$cy_color)) +
+  # scale_y_continuous(breaks=c(-15, -10, -5, 0, 5)) + 
+  scale_x_discrete(limits=levels(kfold_output$cy))   
+# graphics.off()
