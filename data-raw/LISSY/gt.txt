@@ -1,6 +1,6 @@
 From: postbox@lisdatacenter.org
-Subject: job 571995 gt
-Date: November 9, 2018 at 11:33:53 AM CST
+Subject: job 591453 gt
+Date: December 21, 2018 at 12:05:44 PM CST
 To: fsolt@mac.com
 
 ############################### NOTICE TO USERS ###############################
@@ -227,6 +227,6 @@ gt14h,con_ae,0.3529,0.0044,120
 > 
 > proc.time()
    user  system elapsed 
-110.217   0.466 124.273 
+126.599   0.418 345.223 
 
 

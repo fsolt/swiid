@@ -1,6 +1,6 @@
 From: postbox@lisdatacenter.org
-Subject: job 572259 be
-Date: November 11, 2018 at 6:48:32 AM CST
+Subject: job 591429 be
+Date: December 21, 2018 at 10:39:29 AM CST
 To: fsolt@mac.com
 
 ############################### NOTICE TO USERS ###############################
@@ -260,6 +260,6 @@ be00h,disp_ae,0.2739,0.0086,200
 > 
 > proc.time()
    user  system elapsed 
- 52.855   0.202 132.256 
+ 61.317   0.175 244.953 
 
 
