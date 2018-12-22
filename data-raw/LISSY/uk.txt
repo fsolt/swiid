@@ -1,6 +1,6 @@
 From: postbox@lisdatacenter.org
-Subject: job 572029 uk
-Date: November 9, 2018 at 1:14:41 PM CST
+Subject: job 591491 uk
+Date: December 21, 2018 at 2:13:57 PM CST
 To: fsolt@mac.com
 
 ############################### NOTICE TO USERS ###############################
@@ -357,9 +357,25 @@ uk13h,disp_sqrt,0.3307,0.0032,110
 uk13h,disp_pc,0.3511,0.0029,110
 uk13h,disp_oecdm,0.3272,0.0034,110
 uk13h,disp_ae,0.3322,0.0032,110
+[1] "Loading dataset uk16h..."
+uk16h,market_hh,0.6021,0.004,110
+uk16h,market_sqrt,0.5346,0.0034,110
+uk16h,market_pc,0.5536,0.0034,110
+uk16h,market_oecdm,0.5358,0.0033,110
+uk16h,market_ae,0.5409,0.0038,110
+uk16h,gross_hh,0.4162,0.0034,110
+uk16h,gross_sqrt,0.367,0.0026,110
+uk16h,gross_pc,0.3826,0.0033,110
+uk16h,gross_oecdm,0.3643,0.0032,110
+uk16h,gross_ae,0.3678,0.003,110
+uk16h,disp_hh,0.3933,0.0043,110
+uk16h,disp_sqrt,0.344,0.0039,110
+uk16h,disp_pc,0.3636,0.0041,110
+uk16h,disp_oecdm,0.3407,0.0042,110
+uk16h,disp_ae,0.3453,0.0039,110
 > 
 > proc.time()
     user   system  elapsed 
- 449.485    0.927 1120.421 
+ 554.554    0.941 2091.732 
 
 
