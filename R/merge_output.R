@@ -94,7 +94,7 @@ swiid_summary <- left_join(swiid_disp_summary, swiid_mkt_summary, by = c("countr
 kt_redist <- swiid_summary %>%
   select(country, year, redist)
   
-write_csv(swiid_summary %>% select(-redist, -redist_after), "data/swiid7_1_summary.csv", na = "")
+write_csv(swiid_summary %>% select(-redist, -redist_after), "data/swiid_summary.csv", na = "")
 write_csv(swiid_summary %>% select(-redist, -redist_after), "../SWIIDweb/swiid_summary.csv", na = "")
 write_csv(swiid_summary %>% select(-redist, -redist_after), "../SWIIDweb_source/swiid_summary.csv", na = "")
 
