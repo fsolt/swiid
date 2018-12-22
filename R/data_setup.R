@@ -737,14 +737,13 @@ statee <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data-ra
 
 
 # Statistics Finland (automated)
-statfi <- get_pxweb_data(url = "http://pxnet2.stat.fi/PXWeb/api/v1/fi/StatFin/tul/tjt/statfin_tjt_pxt_015.px",
-                         dims = list(Tulokäsite = c('SL2', '4L2', '6L2'),
-                                     Tiedot = c('Gini'),
-                                     Vuosi = c('*')),
-                         clean = TRUE) %>% 
+statfi <- pxweb_get_data(url = "http://pxnet2.stat.fi/PXWeb/api/v1/fi/StatFin/tul/tjt/statfin_tjt_pxt_015.px",
+                         pxweb_query(list(Tulokäsite = c('SL2', '4L2', '6L2'),
+                                          Tiedot = c('Gini'),
+                                          Vuosi = c('*')))) %>% 
   transmute(country = "Finland",
             year = as.numeric(as.character(Vuosi)),
-            gini = values/100,
+            gini = `Gini-kertoimet ja muita tulonjakoindikaattoreita`/100,
             gini_se = NA,
             welfare_def = ifelse(str_detect(`Tulokäsite`, "Käytettävissä"), "disp",
                                  ifelse(str_detect(`Tulokäsite`, "Bruttotulot"), "gross",
@@ -1199,13 +1198,10 @@ nzmsd <- extract_tables("data-raw/nzmsd.pdf", pages = 97) %>%
   filter(!is.na(gini))
 
 # Statistics Norway (automated)
-ssb <- get_pxweb_data(url = "https://data.ssb.no/api/v0/en/table/07756/",
-               dims = list(Forbruksenhet2 = c('01'),
-                           ContentsCode = c('Ginikoeffisient', 'StandardavvikGini'),
-                           Tid = c('*')),
-               clean = TRUE) %>% 
-  select(year, contents, values) %>% 
-  spread(key = contents, value = values) %>% 
+ssb <- pxweb_get_data(url = "https://data.ssb.no/api/v0/en/table/07756/",
+                      pxweb_query(list(Forbruksenhet2 = c('01'),
+                                       ContentsCode = c('Ginikoeffisient', 'StandardavvikGini'),
+                                       Tid = c('*')))) %>% 
   transmute(country = "Norway",
             year = as.numeric(as.character(year)),
             gini = `Gini coefficient`,
@@ -1411,16 +1407,14 @@ statslk <- extract_tables("data-raw/statslk2015.pdf", pages = 22)[[1]] %>%
 
 
 # Statistics Sweden (automated)
-scb <- get_pxweb_data(url = "http://api.scb.se/OV0104/v1/doris/sv/ssd/HE/HE0103/HE0103A/DispInk8",
-                      dims = list(Hushallsdef = c('FAME'),
+scb <- pxweb_get_data(url = "http://api.scb.se/OV0104/v1/doris/sv/ssd/HE/HE0103/HE0103A/DispInk8",
+                      pxweb_query(list(Hushallsdef = c('FAME'),
                                   InkomstTyp = c('*'),
                                   ContentsCode = c('HE0103AD'),
-                                  Tid = c('*')),
-                      clean = TRUE)
-scb <- scb %>%
+                                  Tid = c('*')))) %>%
   transmute(country = "Sweden",
             year = as.numeric(as.character(år)),
-            gini = values,
+            gini = `Gini-koefficient`,
             gini_se = NA,
             welfare_def = ifelse(str_detect(inkomstslag, "disponibel"), "disp",
                                  "market"),
