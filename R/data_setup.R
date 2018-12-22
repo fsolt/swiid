@@ -91,13 +91,12 @@ lis_files <- c("au", "at", "be", "br", "ca", "cl", "cn", "co", "cz", "dk",
 
 lis <- lis_files %>% 
   map_df(format_lis) %>% 
-  filter(!(country=="Russia" & 
-             (year >= 2004 | !(welfare_def == "market")))) %>% 
+  filter(!(country=="Russia" & year == 2000 & !(welfare_def == "market"))) %>% 
   rbind(format_lis_xtra("nz"), format_lis_xtra("ru_old")) %>% 
   arrange(country, year, welfare_def, equiv_scale)
 
 ru_lissy <- format_lis("ru") %>% 
-  filter(year >= 2004 | !(welfare_def == "market")) %>% 
+  filter(year == 2000 & !(welfare_def == "market")) %>% 
   mutate(series = paste("RLMS", series))
 
 
