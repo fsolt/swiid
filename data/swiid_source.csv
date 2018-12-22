@@ -459,6 +459,9 @@ Australia,2014,0.4817,0.0049,market,sqrt,FALSE,LIS Australia market sqrt,LISSY,"
 Australia,2014,0.337,0.007,disp,sqrt,FALSE,"OECD Australia disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Australia,2014,0.39,,gross,sqrt,FALSE,"OECD Australia gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Australia,2014,0.483,,market,sqrt,FALSE,"OECD Australia market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Australia,2016,0.33,0.005,disp,sqrt,FALSE,"OECD Australia disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Australia,2016,0.378,,gross,sqrt,FALSE,"OECD Australia gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Australia,2016,0.469,,market,sqrt,FALSE,"OECD Australia market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Austria,1983,0.236,,disp,sqrt,FALSE,"OECD Austria disp sqrt, incomparable def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Austria,1987,0.21,0.0024,disp,ae,FALSE,LIS Austria disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/at.txt
 Austria,1987,0.3293,0.0028,disp,hh,FALSE,LIS Austria disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/at.txt
@@ -658,6 +661,9 @@ Austria,2015,0.324,,gross,sqrt,FALSE,"OECD Austria gross sqrt, current def, 2012
 Austria,2015,0.495,,market,sqrt,FALSE,"OECD Austria market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Austria,2015,0.305,,gross,pc,FALSE,Povcalnet Austria gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Austria,2016,0.27899999999999997,,disp,oecdm,TRUE,Eurostat Austria disp oecdm 3,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Austria,2016,0.284,,disp,sqrt,FALSE,"OECD Austria disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Austria,2016,0.334,,gross,sqrt,FALSE,"OECD Austria gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Austria,2016,0.501,,market,sqrt,FALSE,"OECD Austria market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Azerbaijan,1988,0.317,,gross,pc,,AG1993 Azerbaijan gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,119,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Azerbaijan,1989,0.308,,disp,pc,FALSE,Transmonee Azerbaijan disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
 Azerbaijan,1990,0.345,,gross,pc,,AG1993 Azerbaijan gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,119,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -962,6 +968,9 @@ Belgium,2015,0.314,,gross,sqrt,FALSE,"OECD Belgium gross sqrt, current def, 2012
 Belgium,2015,0.5,,market,sqrt,FALSE,"OECD Belgium market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Belgium,2015,0.27699999999999997,,gross,pc,FALSE,Povcalnet Belgium gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Belgium,2016,0.26,,disp,oecdm,TRUE,Eurostat Belgium disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Belgium,2016,0.266,,disp,sqrt,FALSE,"OECD Belgium disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Belgium,2016,0.316,,gross,sqrt,FALSE,"OECD Belgium gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Belgium,2016,0.499,,market,sqrt,FALSE,"OECD Belgium market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Belize,1993,0.603,,gross,pc,FALSE,Povcalnet Belize gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Belize,1994,0.609,,gross,pc,FALSE,Povcalnet Belize gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Belize,1996,0.5660000000000001,,gross,pc,FALSE,Povcalnet Belize gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
@@ -2245,6 +2254,9 @@ Canada,2015,0.435,,market,sqrt,FALSE,"OECD Canada market sqrt, current def, 2012
 Canada,2015,0.314,0.00628,disp,sqrt,TRUE,Statistics Canada disp sqrt,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100134-eng.zip
 Canada,2015,0.354,0.0070799999999999995,gross,sqrt,TRUE,Statistics Canada gross sqrt,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100134-eng.zip
 Canada,2015,0.436,0.00872,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100134-eng.zip
+Canada,2016,0.307,,disp,sqrt,FALSE,"OECD Canada disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Canada,2016,0.348,,gross,sqrt,FALSE,"OECD Canada gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Canada,2016,0.431,,market,sqrt,FALSE,"OECD Canada market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Canada,2016,0.306,0.0061200000000000004,disp,sqrt,TRUE,Statistics Canada disp sqrt,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100134-eng.zip
 Canada,2016,0.347,0.00694,gross,sqrt,TRUE,Statistics Canada gross sqrt,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100134-eng.zip
 Canada,2016,0.432,0.00864,market,sqrt,TRUE,Statistics Canada market sqrt,Statistics Canada,"",https://www150.statcan.gc.ca/n1/tbl/csv/11100134-eng.zip
@@ -2985,6 +2997,8 @@ Costa Rica,2010,0.508,,market,pc,FALSE,CEQ Costa Rica market pc,Sauma and Trejos
 Costa Rica,2010,0.5032621,,gross,hh,,INEC gross hh,Instituto Naci贸nal de Estad铆stica y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
 Costa Rica,2010,0.50663163,,gross,pc,,INEC gross pc,Instituto Naci贸nal de Estad铆stica y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
 Costa Rica,2010,0.472,0.003,disp,sqrt,FALSE,"OECD Costa Rica disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Costa Rica,2010,0.477,,gross,sqrt,FALSE,"OECD Costa Rica gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Costa Rica,2010,0.505,,market,sqrt,FALSE,"OECD Costa Rica market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Costa Rica,2010,0.48200000000000004,,gross,pc,FALSE,Povcalnet Costa Rica gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Costa Rica,2010,0.46254877,0.00317092,disp,ae,TRUE,SEDLAC Costa Rica disp ae 3,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Costa Rica,2010,0.4822109,0.00303209,disp,ae,TRUE,SEDLAC Costa Rica disp ae 4,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
@@ -2996,6 +3010,8 @@ Costa Rica,2011,0.503,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,Nationa
 Costa Rica,2011,0.50777366,,gross,hh,,INEC gross hh,Instituto Naci贸nal de Estad铆stica y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
 Costa Rica,2011,0.51496215,,gross,pc,,INEC gross pc,Instituto Naci贸nal de Estad铆stica y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
 Costa Rica,2011,0.48,0.003,disp,sqrt,FALSE,"OECD Costa Rica disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Costa Rica,2011,0.487,,gross,sqrt,FALSE,"OECD Costa Rica gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Costa Rica,2011,0.515,,market,sqrt,FALSE,"OECD Costa Rica market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Costa Rica,2011,0.48700000000000004,,gross,pc,FALSE,Povcalnet Costa Rica gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Costa Rica,2011,0.46691723,0.00384909,disp,ae,TRUE,SEDLAC Costa Rica disp ae 3,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Costa Rica,2011,0.4702429,,disp,hh,TRUE,SEDLAC Costa Rica disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
@@ -3004,6 +3020,8 @@ Costa Rica,2012,0.504,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,Nationa
 Costa Rica,2012,0.51045977,,gross,hh,,INEC gross hh,Instituto Naci贸nal de Estad铆stica y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
 Costa Rica,2012,0.51544875,,gross,pc,,INEC gross pc,Instituto Naci贸nal de Estad铆stica y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
 Costa Rica,2012,0.483,0.003,disp,sqrt,FALSE,"OECD Costa Rica disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Costa Rica,2012,0.489,,gross,sqrt,FALSE,"OECD Costa Rica gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Costa Rica,2012,0.518,,market,sqrt,FALSE,"OECD Costa Rica market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Costa Rica,2012,0.486,,gross,pc,FALSE,Povcalnet Costa Rica gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Costa Rica,2012,0.46677599,0.00371438,disp,ae,TRUE,SEDLAC Costa Rica disp ae 3,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Costa Rica,2012,0.47121905,,disp,hh,TRUE,SEDLAC Costa Rica disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
@@ -3018,6 +3036,8 @@ Costa Rica,2013,0.5042,,gross,hh,,INEC gross hh 2,Instituto Naci梟al de Estad抯t
 Costa Rica,2013,0.52243001,,gross,pc,,INEC gross pc,Instituto Naci贸nal de Estad铆stica y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
 Costa Rica,2013,0.5189,,gross,pc,,INEC gross pc 2,Instituto Naci梟al de Estad抯tica y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-09_0.xlsx
 Costa Rica,2013,0.494,0.004,disp,sqrt,FALSE,"OECD Costa Rica disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Costa Rica,2013,0.499,,gross,sqrt,FALSE,"OECD Costa Rica gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Costa Rica,2013,0.53,,market,sqrt,FALSE,"OECD Costa Rica market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Costa Rica,2013,0.493,,gross,pc,FALSE,Povcalnet Costa Rica gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Costa Rica,2013,0.47527822,0.00375615,disp,ae,TRUE,SEDLAC Costa Rica disp ae 3,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Costa Rica,2013,0.47758717,,disp,hh,TRUE,SEDLAC Costa Rica disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
@@ -3026,6 +3046,8 @@ Costa Rica,2014,0.505,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,Nationa
 Costa Rica,2014,0.51160138,,gross,hh,,INEC gross hh,Instituto Naci贸nal de Estad铆stica y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
 Costa Rica,2014,0.51648859,,gross,pc,,INEC gross pc,Instituto Naci贸nal de Estad铆stica y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
 Costa Rica,2014,0.485,0.003,disp,sqrt,FALSE,"OECD Costa Rica disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Costa Rica,2014,0.49,,gross,sqrt,FALSE,"OECD Costa Rica gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Costa Rica,2014,0.522,,market,sqrt,FALSE,"OECD Costa Rica market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Costa Rica,2014,0.486,,gross,pc,FALSE,Povcalnet Costa Rica gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Costa Rica,2014,0.46798111,0.00311104,disp,ae,TRUE,SEDLAC Costa Rica disp ae 3,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Costa Rica,2014,0.46973574,,disp,hh,TRUE,SEDLAC Costa Rica disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
@@ -3033,6 +3055,8 @@ Costa Rica,2014,0.48570494,0.0031353,disp,pc,TRUE,SEDLAC Costa Rica disp pc 3,SE
 Costa Rica,2015,0.50996528,,gross,hh,,INEC gross hh,Instituto Naci贸nal de Estad铆stica y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
 Costa Rica,2015,0.5159259,,gross,pc,,INEC gross pc,Instituto Naci贸nal de Estad铆stica y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
 Costa Rica,2015,0.479,0.002,disp,sqrt,FALSE,"OECD Costa Rica disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Costa Rica,2015,0.486,,gross,sqrt,FALSE,"OECD Costa Rica gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Costa Rica,2015,0.523,,market,sqrt,FALSE,"OECD Costa Rica market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Costa Rica,2015,0.484,,gross,pc,FALSE,Povcalnet Costa Rica gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Costa Rica,2015,0.4654863,0.00207788,disp,ae,TRUE,SEDLAC Costa Rica disp ae 3,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Costa Rica,2015,0.46611169,,disp,hh,TRUE,SEDLAC Costa Rica disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
@@ -3040,6 +3064,8 @@ Costa Rica,2015,0.48305812,0.00212938,disp,pc,TRUE,SEDLAC Costa Rica disp pc 3,S
 Costa Rica,2016,0.51508781,,gross,hh,,INEC gross hh,Instituto Naci贸nal de Estad铆stica y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
 Costa Rica,2016,0.52117924,,gross,pc,,INEC gross pc,Instituto Naci贸nal de Estad铆stica y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
 Costa Rica,2016,0.484,0.002,disp,sqrt,FALSE,"OECD Costa Rica disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Costa Rica,2016,0.492,,gross,sqrt,FALSE,"OECD Costa Rica gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Costa Rica,2016,0.533,,market,sqrt,FALSE,"OECD Costa Rica market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Costa Rica,2016,0.48700000000000004,,gross,pc,FALSE,Povcalnet Costa Rica gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Costa Rica,2016,0.46806325,0.00214207,disp,ae,TRUE,SEDLAC Costa Rica disp ae 3,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Costa Rica,2016,0.46803748,,disp,hh,TRUE,SEDLAC Costa Rica disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
@@ -3047,6 +3073,8 @@ Costa Rica,2016,0.486224,0.00225309,disp,pc,TRUE,SEDLAC Costa Rica disp pc 3,SED
 Costa Rica,2017,0.51372925,,gross,hh,,INEC gross hh,Instituto Naci贸nal de Estad铆stica y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
 Costa Rica,2017,0.51384433,,gross,pc,,INEC gross pc,Instituto Naci贸nal de Estad铆stica y Censos Costa Rica,"",http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx
 Costa Rica,2017,0.48,0.002,disp,sqrt,FALSE,"OECD Costa Rica disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Costa Rica,2017,0.487,,gross,sqrt,FALSE,"OECD Costa Rica gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Costa Rica,2017,0.53,,market,sqrt,FALSE,"OECD Costa Rica market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Costa Rica,2017,0.465631,0.00222218,disp,ae,TRUE,SEDLAC Costa Rica disp ae 3,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Costa Rica,2017,0.46916016,,disp,hh,TRUE,SEDLAC Costa Rica disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Costa Rica,2017,0.48298273,0.00238716,disp,pc,TRUE,SEDLAC Costa Rica disp pc 3,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
@@ -3364,6 +3392,9 @@ Czech Republic,2015,0.297,,gross,sqrt,FALSE,"OECD Czech Republic gross sqrt, cur
 Czech Republic,2015,0.46,,market,sqrt,FALSE,"OECD Czech Republic market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Czech Republic,2015,0.259,,gross,pc,FALSE,Povcalnet Czech Republic gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Czech Republic,2016,0.245,,disp,oecdm,TRUE,Eurostat Czech Republic disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Czech Republic,2016,0.253,,disp,sqrt,FALSE,"OECD Czech Republic disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Czech Republic,2016,0.291,,gross,sqrt,FALSE,"OECD Czech Republic gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Czech Republic,2016,0.448,,market,sqrt,FALSE,"OECD Czech Republic market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Czechoslovakia,1965,0.226,,disp,pc,TRUE,AM1992 Czechoslovakia disp pc,Atkinson and Micklewright 1992,CSI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Czechoslovakia,1970,0.225,,disp,pc,TRUE,AM1992 Czechoslovakia disp pc,Atkinson and Micklewright 1992,CSI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Czechoslovakia,1973,0.21,,disp,pc,TRUE,AM1992 Czechoslovakia disp pc,Atkinson and Micklewright 1992,CSI1,https://books.google.com/books?id=zaL4CGdjOkUC
@@ -4209,6 +4240,9 @@ Estonia,2015,0.352,,gross,sqrt,FALSE,"OECD Estonia gross sqrt, current def, 2012
 Estonia,2015,0.471,,market,sqrt,FALSE,"OECD Estonia market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Estonia,2015,0.327,,gross,pc,FALSE,Povcalnet Estonia gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Estonia,2016,0.316,,disp,oecdm,TRUE,Eurostat Estonia disp oecdm 3,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Estonia,2016,0.314,,disp,sqrt,FALSE,"OECD Estonia disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Estonia,2016,0.339,,gross,sqrt,FALSE,"OECD Estonia gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Estonia,2016,0.456,,market,sqrt,FALSE,"OECD Estonia market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Ethiopia,1995,0.446,,con,pc,FALSE,Povcalnet Ethiopia con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Ethiopia,1995,0.4447,,con,sqrt,FALSE,World Bank Africa Poverty Database Ethiopia con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
 Ethiopia,1999,0.3,,con,pc,FALSE,Povcalnet Ethiopia con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
@@ -4894,6 +4928,9 @@ France,2015,0.33,,gross,sqrt,FALSE,"OECD France gross sqrt, current def, 2012 me
 France,2015,0.516,,market,sqrt,FALSE,"OECD France market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 France,2015,0.327,,gross,pc,FALSE,Povcalnet France gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 France,2016,0.293,,disp,oecdm,TRUE,Eurostat France disp oecdm 4,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+France,2016,0.291,0.001,disp,sqrt,FALSE,"OECD France disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+France,2016,0.326,,gross,sqrt,FALSE,"OECD France gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+France,2016,0.516,,market,sqrt,FALSE,"OECD France market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Gabon,2005,0.41,,con,pc,,GIDD Gabon con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
 Gabon,2005,0.42200000000000004,,con,pc,FALSE,Povcalnet Gabon con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Gabon,2005,0.35600000000000004,,con,sqrt,FALSE,World Bank Africa Poverty Database Gabon con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
@@ -4930,6 +4967,8 @@ Georgia,2003,0.391,,con,pc,FALSE,MY2006 Georgia con pc 3,Mitra and Yemtsov 2006,
 Georgia,2003,0.36700000000000005,,con,pc,FALSE,Povcalnet Georgia con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Georgia,2004,0.363,,con,pc,FALSE,Povcalnet Georgia con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Georgia,2005,0.373,,con,pc,FALSE,Povcalnet Georgia con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Georgia,2006,0.4,,con,pc,FALSE,Geostat con pc,Statistics Georgia,"",http://pc-axis.geostat.ge/PXWeb/pxweb/ka/Database
+Georgia,2006,0.43,,gross,pc,FALSE,Geostat gross pc,Statistics Georgia,"",http://pc-axis.geostat.ge/PXWeb/pxweb/ka/Database
 Georgia,2006,0.369,,con,pc,FALSE,Povcalnet Georgia con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Georgia,2007,0.42,,con,pc,FALSE,Geostat con pc,Statistics Georgia,"",http://pc-axis.geostat.ge/PXWeb/pxweb/ka/Database
 Georgia,2007,0.44,,gross,pc,FALSE,Geostat gross pc,Statistics Georgia,"",http://pc-axis.geostat.ge/PXWeb/pxweb/ka/Database
@@ -5625,17 +5664,13 @@ Greece,2004,0.4638,0.0056,market,sqrt,FALSE,LIS Greece market sqrt,LISSY,"",http
 Greece,2004,0.336,,disp,sqrt,FALSE,"OECD Greece disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Greece,2004,0.333,,disp,sqrt,FALSE,"OECD Greece disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Greece,2004,0.321,0.004,disp,sqrt,FALSE,"OECD Greece disp sqrt, previous def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Greece,2004,0.333,,gross,sqrt,FALSE,"OECD Greece gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Greece,2004,0.471,,market,sqrt,FALSE,"OECD Greece market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Greece,2004,0.462,,market,sqrt,FALSE,"OECD Greece market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Greece,2004,0.454,,market,sqrt,FALSE,"OECD Greece market sqrt, previous def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Greece,2004,0.336,,gross,pc,FALSE,Povcalnet Greece gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Greece,2005,0.34299999999999997,,disp,oecdm,TRUE,Eurostat Greece disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Greece,2005,0.346,,disp,sqrt,FALSE,"OECD Greece disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Greece,2005,0.345,,disp,sqrt,FALSE,"OECD Greece disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Greece,2005,0.345,,gross,sqrt,FALSE,"OECD Greece gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Greece,2005,0.477,,market,sqrt,FALSE,"OECD Greece market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Greece,2005,0.474,,market,sqrt,FALSE,"OECD Greece market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Greece,2005,0.34600000000000003,,gross,pc,FALSE,Povcalnet Greece gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Greece,2006,0.34299999999999997,,disp,oecdm,TRUE,Eurostat Greece disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Greece,2006,0.34,,disp,sqrt,FALSE,"OECD Greece disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -5747,6 +5782,9 @@ Greece,2015,0.372,,gross,sqrt,FALSE,"OECD Greece gross sqrt, current def, 2012 m
 Greece,2015,0.566,,market,sqrt,FALSE,"OECD Greece market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Greece,2015,0.36,,gross,pc,FALSE,Povcalnet Greece gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Greece,2016,0.33399999999999996,,disp,oecdm,TRUE,Eurostat Greece disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Greece,2016,0.333,,disp,sqrt,FALSE,"OECD Greece disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Greece,2016,0.345,,gross,sqrt,FALSE,"OECD Greece gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Greece,2016,0.536,,market,sqrt,FALSE,"OECD Greece market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Grenada,1999,0.45,,con,hh,,TW2002 Grenada con hh,Thomas and Wint 2002; Canterbury 2005,861,http://dx.doi.org/10.1080/02255189.2005.9669090
 Grenada,2008,0.37,,con,pc,,SALISES 2012 Grenada con pc,SALISES 2012,27,http://www.caribank.org/uploads/2012/12/Barbados-CALC-Volume-1-MainReport-FINAL-Dec-2012.pdf
 Guatemala,1981,0.427,,con,hh,,Park1995 Guatemala con hh,Tabatabai 1996; Park 1995,115,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -6479,6 +6517,9 @@ Iceland,2014,0.283,,gross,sqrt,FALSE,"OECD Iceland gross sqrt, current def, 2012
 Iceland,2014,0.393,,market,sqrt,FALSE,"OECD Iceland market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Iceland,2014,0.278,,gross,pc,FALSE,Povcalnet Iceland gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Iceland,2015,0.24100000000000002,,disp,oecdm,TRUE,Eurostat Iceland disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Iceland,2015,0.255,,disp,sqrt,FALSE,"OECD Iceland disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Iceland,2015,0.288,,gross,sqrt,FALSE,"OECD Iceland gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Iceland,2015,0.386,,market,sqrt,FALSE,"OECD Iceland market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 India,1973,0.357,,con,pc,,Yotopoulos1989 India con pc,Yotopoulos 1989,366,https://doi.org/10.1111/j.1475-4991.1989.tb00598.x
 India,1976,0.42,,disp,hh,,vGP1984 India disp hh,Tabatabai 1996; van Ginneken and Park 1984,95,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 India,1976,0.38,,disp,pc,,vGP1984 India disp pc,Tabatabai 1996; van Ginneken and Park 1984,95,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -6947,7 +6988,7 @@ Ireland,2011,0.368,,gross,sqrt,FALSE,"OECD Ireland gross sqrt, current def, 2012
 Ireland,2011,0.568,,market,sqrt,FALSE,"OECD Ireland market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Ireland,2011,0.567,,market,sqrt,FALSE,"OECD Ireland market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Ireland,2011,0.32899999999999996,,gross,pc,FALSE,Povcalnet Ireland gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Ireland,2012,0.318,,disp,pc,FALSE,CSO Ireland disp pc,CSO Ireland,"",http://www.cso.ie/px/pxeirestat/Database/eirestat/Survey%20on%20Income%20and%20Living%20Conditions%20(SILC)/SIA47.px
+Ireland,2012,0.317,,disp,pc,FALSE,CSO Ireland disp pc,CSO Ireland,"",http://www.cso.ie/px/pxeirestat/Database/eirestat/Survey%20on%20Income%20and%20Living%20Conditions%20(SILC)/SIA47.px
 Ireland,2012,0.305,,disp,oecdm,TRUE,Eurostat Ireland disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Ireland,2012,0.302,,disp,sqrt,FALSE,"OECD Ireland disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Ireland,2012,0.31,,disp,sqrt,FALSE,"OECD Ireland disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -6955,7 +6996,7 @@ Ireland,2012,0.378,,gross,sqrt,FALSE,"OECD Ireland gross sqrt, current def, 2012
 Ireland,2012,0.581,,market,sqrt,FALSE,"OECD Ireland market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Ireland,2012,0.58,,market,sqrt,FALSE,"OECD Ireland market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Ireland,2012,0.332,,gross,pc,FALSE,Povcalnet Ireland gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Ireland,2013,0.32,,disp,pc,FALSE,CSO Ireland disp pc,CSO Ireland,"",http://www.cso.ie/px/pxeirestat/Database/eirestat/Survey%20on%20Income%20and%20Living%20Conditions%20(SILC)/SIA47.px
+Ireland,2013,0.318,,disp,pc,FALSE,CSO Ireland disp pc,CSO Ireland,"",http://www.cso.ie/px/pxeirestat/Database/eirestat/Survey%20on%20Income%20and%20Living%20Conditions%20(SILC)/SIA47.px
 Ireland,2013,0.307,,disp,oecdm,TRUE,Eurostat Ireland disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Ireland,2013,0.307,,disp,sqrt,FALSE,"OECD Ireland disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Ireland,2013,0.308,,disp,sqrt,FALSE,"OECD Ireland disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -6963,7 +7004,7 @@ Ireland,2013,0.381,,gross,sqrt,FALSE,"OECD Ireland gross sqrt, current def, 2012
 Ireland,2013,0.574,,market,sqrt,FALSE,"OECD Ireland market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Ireland,2013,0.573,,market,sqrt,FALSE,"OECD Ireland market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Ireland,2013,0.335,,gross,pc,FALSE,Povcalnet Ireland gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Ireland,2014,0.32,,disp,pc,FALSE,CSO Ireland disp pc,CSO Ireland,"",http://www.cso.ie/px/pxeirestat/Database/eirestat/Survey%20on%20Income%20and%20Living%20Conditions%20(SILC)/SIA47.px
+Ireland,2014,0.321,,disp,pc,FALSE,CSO Ireland disp pc,CSO Ireland,"",http://www.cso.ie/px/pxeirestat/Database/eirestat/Survey%20on%20Income%20and%20Living%20Conditions%20(SILC)/SIA47.px
 Ireland,2014,0.311,,disp,oecdm,TRUE,Eurostat Ireland disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Ireland,2014,0.298,,disp,sqrt,FALSE,"OECD Ireland disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Ireland,2014,0.366,,gross,sqrt,FALSE,"OECD Ireland gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -6975,8 +7016,9 @@ Ireland,2015,0.297,,disp,sqrt,FALSE,"OECD Ireland disp sqrt, current def, 2012 m
 Ireland,2015,0.368,,gross,sqrt,FALSE,"OECD Ireland gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Ireland,2015,0.545,,market,sqrt,FALSE,"OECD Ireland market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Ireland,2015,0.318,,gross,pc,FALSE,Povcalnet Ireland gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Ireland,2016,0.306,,disp,pc,FALSE,CSO Ireland disp pc,CSO Ireland,"",http://www.cso.ie/px/pxeirestat/Database/eirestat/Survey%20on%20Income%20and%20Living%20Conditions%20(SILC)/SIA47.px
+Ireland,2016,0.307,,disp,pc,FALSE,CSO Ireland disp pc,CSO Ireland,"",http://www.cso.ie/px/pxeirestat/Database/eirestat/Survey%20on%20Income%20and%20Living%20Conditions%20(SILC)/SIA47.px
 Ireland,2016,0.295,,disp,oecdm,TRUE,Eurostat Ireland disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Ireland,2017,0.315,,disp,pc,FALSE,CSO Ireland disp pc,CSO Ireland,"",http://www.cso.ie/px/pxeirestat/Database/eirestat/Survey%20on%20Income%20and%20Living%20Conditions%20(SILC)/SIA47.px
 Israel,1979,0.3181,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
 Israel,1979,0.319,,disp,ae,,A1996 Israel disp ae 2,Achdut 1996,S25,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
 Israel,1979,0.318,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
@@ -7450,16 +7492,12 @@ Italy,2004,0.4905,0.0059,market,sqrt,FALSE,LIS Italy market sqrt,LISSY,"",https:
 Italy,2004,0.331,,disp,sqrt,FALSE,"OECD Italy disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Italy,2004,0.331,,disp,sqrt,FALSE,"OECD Italy disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Italy,2004,0.352,0.005,disp,sqrt,FALSE,"OECD Italy disp sqrt, previous def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Italy,2004,0.331,,gross,sqrt,FALSE,"OECD Italy gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Italy,2004,0.512,,market,sqrt,FALSE,"OECD Italy market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Italy,2004,0.474,,market,sqrt,FALSE,"OECD Italy market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Italy,2004,0.557,,market,sqrt,FALSE,"OECD Italy market sqrt, previous def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Italy,2004,0.34299999999999997,,gross,pc,FALSE,Povcalnet Italy gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Italy,2005,0.321,,disp,oecdm,TRUE,Eurostat Italy disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Italy,2005,0.324,,con,hh,FALSE,Istat con hh,Istat,"",http://dati.istat.it/Index.aspx?DataSetCode=DCCV_INDCONSUMI&Lang=en
 Italy,2005,0.324,,disp,sqrt,FALSE,"OECD Italy disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Italy,2005,0.324,,gross,sqrt,FALSE,"OECD Italy gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Italy,2005,0.468,,market,sqrt,FALSE,"OECD Italy market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Italy,2005,0.33799999999999997,,gross,pc,FALSE,Povcalnet Italy gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Italy,2006,0.337,,disp,pc,FALSE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
 Italy,2006,0.32,,disp,oecdm,TRUE,Eurostat Italy disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
@@ -7596,6 +7634,9 @@ Italy,2015,0.376,,gross,sqrt,FALSE,"OECD Italy gross sqrt, current def, 2012 met
 Italy,2015,0.524,,market,sqrt,FALSE,"OECD Italy market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Italy,2015,0.354,,gross,pc,FALSE,Povcalnet Italy gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Italy,2016,0.327,,disp,oecdm,TRUE,Eurostat Italy disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Italy,2016,0.328,,disp,sqrt,FALSE,"OECD Italy disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Italy,2016,0.373,,gross,sqrt,FALSE,"OECD Italy gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Italy,2016,0.517,,market,sqrt,FALSE,"OECD Italy market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Jamaica,1988,0.43200000000000005,,con,pc,FALSE,Povcalnet Jamaica con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Jamaica,1990,0.41100000000000003,,con,pc,FALSE,Povcalnet Jamaica con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Jamaica,1993,0.35700000000000004,,con,pc,FALSE,Povcalnet Jamaica con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
@@ -7749,6 +7790,9 @@ Japan,2014,0.31,,disp,pc,TRUE,Statistics Japan disp pc,Statistics Japan 2015,,ht
 Japan,2014,0.281,,disp,sqrt,TRUE,Statistics Japan disp sqrt,Statistics Japan 2015,,http://www.e-stat.go.jp/SG1/estat/GL32020101.do?method=xlsDownload&fileId=000007772322&releaseCount=1
 Japan,2014,0.446,,market,pc,TRUE,Statistics Japan market pc,Statistics Japan 2015,,http://www.e-stat.go.jp/SG1/estat/GL32020101.do?method=xlsDownload&fileId=000007772322&releaseCount=1
 Japan,2014,0.421,,market,sqrt,TRUE,Statistics Japan market sqrt,Statistics Japan 2015,,http://www.e-stat.go.jp/SG1/estat/GL32020101.do?method=xlsDownload&fileId=000007772322&releaseCount=1
+Japan,2015,0.339,0.004,disp,sqrt,FALSE,"OECD Japan disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Japan,2015,0.363,,gross,sqrt,FALSE,"OECD Japan gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Japan,2015,0.504,,market,sqrt,FALSE,"OECD Japan market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Jordan,1986,0.361,,con,pc,FALSE,Povcalnet Jordan con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Jordan,1987,0.361,,con,pc,,AP2003 Jordan con pc,Adams and Page 2003,2040,https://doi.org/10.1016/j.worlddev.2003.04.004
 Jordan,1987,0.34,,con,hh,,Park1995 Jordan con hh,Tabatabai 1996; Park 1995,109,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -8158,17 +8202,13 @@ Latvia,2003,0.379,,disp,pc,FALSE,Transmonee Latvia disp pc,Transmonee 2012,"",ht
 Latvia,2004,0.36200000000000004,,disp,oecdm,TRUE,Eurostat Latvia disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Latvia,2004,0.363,,disp,sqrt,FALSE,"OECD Latvia disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Latvia,2004,0.363,,disp,sqrt,FALSE,"OECD Latvia disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Latvia,2004,0.362,,gross,sqrt,FALSE,"OECD Latvia gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Latvia,2004,0.503,,market,sqrt,FALSE,"OECD Latvia market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Latvia,2004,0.502,,market,sqrt,FALSE,"OECD Latvia market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Latvia,2004,0.364,,gross,pc,FALSE,Povcalnet Latvia gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Latvia,2004,0.391,,disp,pc,FALSE,Transmonee Latvia disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
 Latvia,2005,0.389,,disp,oecdm,TRUE,Eurostat Latvia disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Latvia,2005,0.392,,disp,sqrt,FALSE,"OECD Latvia disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Latvia,2005,0.392,,disp,sqrt,FALSE,"OECD Latvia disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Latvia,2005,0.391,,gross,sqrt,FALSE,"OECD Latvia gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Latvia,2005,0.508,,market,sqrt,FALSE,"OECD Latvia market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Latvia,2005,0.509,,market,sqrt,FALSE,"OECD Latvia market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Latvia,2005,0.39,,gross,pc,FALSE,Povcalnet Latvia gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Latvia,2006,0.354,,disp,oecdm,TRUE,Eurostat Latvia disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Latvia,2006,0.36,,disp,sqrt,FALSE,"OECD Latvia disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -8237,9 +8277,9 @@ Latvia,2015,0.373,,gross,sqrt,FALSE,"OECD Latvia gross sqrt, current def, 2012 m
 Latvia,2015,0.478,,market,sqrt,FALSE,"OECD Latvia market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Latvia,2015,0.342,,gross,pc,FALSE,Povcalnet Latvia gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Latvia,2016,0.345,,disp,oecdm,TRUE,Eurostat Latvia disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
-Latvia,2016,0.347,,disp,sqrt,FALSE,"OECD Latvia disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Latvia,2016,0.346,,disp,sqrt,FALSE,"OECD Latvia disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Latvia,2016,0.373,,gross,sqrt,FALSE,"OECD Latvia gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Latvia,2016,0.473,,market,sqrt,FALSE,"OECD Latvia market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Latvia,2016,0.475,,market,sqrt,FALSE,"OECD Latvia market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Lebanon,1995,0.435,,con,pc,,CAS Lebanon con pc,Central Administration of Statistics Lebanon 1998; UNDP 2008,11,http://www.undp.org/content/dam/lebanon/docs/MDG/Publications/MDG_en.pdf
 Lebanon,2004,0.361,,con,pc,,CAS Lebanon con pc,Central Administration of Statistics Lebanon; UNDP 2008,11,http://www.undp.org/content/dam/lebanon/docs/MDG/Publications/MDG_en.pdf
 Lebanon,2004,0.387,,con,pc,,Hassine2015 Lebanon con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
@@ -8397,6 +8437,9 @@ Lithuania,2015,0.389,,gross,sqrt,FALSE,"OECD Lithuania gross sqrt, current def, 
 Lithuania,2015,0.515,,market,sqrt,FALSE,"OECD Lithuania market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Lithuania,2015,0.374,,gross,pc,FALSE,Povcalnet Lithuania gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Lithuania,2016,0.376,,disp,oecdm,TRUE,Eurostat Lithuania disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Lithuania,2016,0.378,,disp,sqrt,FALSE,"OECD Lithuania disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Lithuania,2016,0.396,,gross,sqrt,FALSE,"OECD Lithuania gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Lithuania,2016,0.515,,market,sqrt,FALSE,"OECD Lithuania market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Luxembourg,1985,0.2395,0.0045,disp,ae,FALSE,LIS Luxembourg disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lu.txt
 Luxembourg,1985,0.2934,0.0046,disp,hh,FALSE,LIS Luxembourg disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lu.txt
 Luxembourg,1985,0.2311,0.0046,disp,oecdm,FALSE,LIS Luxembourg disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/lu.txt
@@ -8626,6 +8669,9 @@ Luxembourg,2015,0.321,,gross,sqrt,FALSE,"OECD Luxembourg gross sqrt, current def
 Luxembourg,2015,0.467,,market,sqrt,FALSE,"OECD Luxembourg market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Luxembourg,2015,0.33799999999999997,,gross,pc,FALSE,Povcalnet Luxembourg gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Luxembourg,2016,0.309,,disp,oecdm,TRUE,Eurostat Luxembourg disp oecdm 3,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Luxembourg,2016,0.304,,disp,sqrt,FALSE,"OECD Luxembourg disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Luxembourg,2016,0.324,,gross,sqrt,FALSE,"OECD Luxembourg gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Luxembourg,2016,0.482,,market,sqrt,FALSE,"OECD Luxembourg market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Macedonia,1994,0.27349,,disp,pc,FALSE,Transmonee Macedonia disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
 Macedonia,1995,0.29509,,disp,pc,FALSE,Transmonee Macedonia disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
 Macedonia,1996,0.34,,con,pc,FALSE,MY2006 Macedonia con pc 1,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
@@ -9984,7 +10030,11 @@ Norway,2015,0.312,,gross,sqrt,FALSE,"OECD Norway gross sqrt, current def, 2012 m
 Norway,2015,0.432,,market,sqrt,FALSE,"OECD Norway market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Norway,2015,0.275,,gross,pc,FALSE,Povcalnet Norway gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Norway,2015,0.271,,disp,oecdm,TRUE,SSB disp oecdm,Statistics Norway,"",https://www.ssb.no/en/statbank/table/07756/
+Norway,2016,0.262,,disp,sqrt,FALSE,"OECD Norway disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Norway,2016,0.303,,gross,sqrt,FALSE,"OECD Norway gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Norway,2016,0.428,,market,sqrt,FALSE,"OECD Norway market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Norway,2016,0.261,,disp,oecdm,TRUE,SSB disp oecdm,Statistics Norway,"",https://www.ssb.no/en/statbank/table/07756/
+Norway,2017,0.261,,disp,oecdm,TRUE,SSB disp oecdm,Statistics Norway,"",https://www.ssb.no/en/statbank/table/07756/
 Oman,2010,0.307,,con,hh,,NCSI2012 Oman con hh,Oman National Center for Statistics and Information 2012,23,https://ncsi.gov.om/Elibrary/LibraryContentDoc/ben_Final%20Findings%20E%202010%20-%202011_964e4334-f010-4f48-aad6-9401454cf803.pdf
 Pakistan,1964,0.356,,gross,hh,,Mahmood1984 Pakistan gross hh,Mahmood 1984,372,http://www.jstor.org/stable/41258679
 Pakistan,1964,0.386,,disp,hh,,PBS1995 Pakistan disp hh,Tabatabai 1996; PBS1995,102,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -10897,11 +10947,6 @@ Poland,2004,0.6224,0.0052,market,hh,FALSE,LIS Poland market hh,LISSY,"",https://
 Poland,2004,0.5574,0.0048,market,oecdm,FALSE,LIS Poland market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pl.txt
 Poland,2004,0.5757,0.005,market,pc,FALSE,LIS Poland market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pl.txt
 Poland,2004,0.5509,0.0063,market,sqrt,FALSE,LIS Poland market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pl.txt
-Poland,2004,0.375,,disp,sqrt,FALSE,"OECD Poland disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Poland,2004,0.376,,disp,sqrt,FALSE,"OECD Poland disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Poland,2004,0.382,,gross,sqrt,FALSE,"OECD Poland gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Poland,2004,0.571,,market,sqrt,FALSE,"OECD Poland market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Poland,2004,0.569,,market,sqrt,FALSE,"OECD Poland market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Poland,2004,0.366,,disp,pc,FALSE,Transmonee Poland disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
 Poland,2005,0.33299999999999996,,disp,oecdm,TRUE,Eurostat Poland disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Poland,2005,0.327,,disp,sqrt,FALSE,"OECD Poland disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -11033,6 +11078,9 @@ Poland,2016,0.5725,0.0035,market,hh,FALSE,LIS Poland market hh,LISSY,"",https://
 Poland,2016,0.5011,0.0035,market,oecdm,FALSE,LIS Poland market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pl.txt
 Poland,2016,0.5172,0.0032,market,pc,FALSE,LIS Poland market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pl.txt
 Poland,2016,0.4951,0.0035,market,sqrt,FALSE,LIS Poland market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/pl.txt
+Poland,2016,0.284,,disp,sqrt,FALSE,"OECD Poland disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Poland,2016,0.298,,gross,sqrt,FALSE,"OECD Poland gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Poland,2016,0.459,,market,sqrt,FALSE,"OECD Poland market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Portugal,1968,0.35,,gross,hh,,CR1977 hh gross,Castanheira and Ribeiro 1977,728,http://www.jstor.org/stable/41008246
 Portugal,1974,0.39,,gross,hh,,CR1977 hh gross,Castanheira and Ribeiro 1977,728,http://www.jstor.org/stable/41008246
 Portugal,1980,0.354,,disp,sqrt,FALSE,"OECD Portugal disp sqrt, incomparable def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -11061,16 +11109,12 @@ Portugal,2003,0.387,,gross,pc,FALSE,Povcalnet Portugal gross pc 1,World Bank Pov
 Portugal,2004,0.381,,disp,oecdm,TRUE,Eurostat Portugal disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Portugal,2004,0.383,,disp,sqrt,FALSE,"OECD Portugal disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Portugal,2004,0.384,,disp,sqrt,FALSE,"OECD Portugal disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Portugal,2004,0.384,,gross,sqrt,FALSE,"OECD Portugal gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Portugal,2004,0.506,,market,sqrt,FALSE,"OECD Portugal market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Portugal,2004,0.505,,market,sqrt,FALSE,"OECD Portugal market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Portugal,2004,0.389,,gross,pc,FALSE,Povcalnet Portugal gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Portugal,2005,0.377,,disp,oecdm,TRUE,Eurostat Portugal disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Portugal,2005,0.377,,disp,sqrt,FALSE,"OECD Portugal disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Portugal,2005,0.379,,disp,sqrt,FALSE,"OECD Portugal disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Portugal,2005,0.378,,gross,sqrt,FALSE,"OECD Portugal gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Portugal,2005,0.505,,market,sqrt,FALSE,"OECD Portugal market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Portugal,2005,0.504,,market,sqrt,FALSE,"OECD Portugal market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Portugal,2005,0.385,,gross,pc,FALSE,Povcalnet Portugal gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Portugal,2006,0.368,,disp,oecdm,TRUE,Eurostat Portugal disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Portugal,2006,0.37,,disp,sqrt,FALSE,"OECD Portugal disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -11139,6 +11183,9 @@ Portugal,2015,0.4,,gross,sqrt,FALSE,"OECD Portugal gross sqrt, current def, 2012
 Portugal,2015,0.536,,market,sqrt,FALSE,"OECD Portugal market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Portugal,2015,0.355,,gross,pc,FALSE,Povcalnet Portugal gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Portugal,2016,0.335,,disp,oecdm,TRUE,Eurostat Portugal disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Portugal,2016,0.331,,disp,sqrt,FALSE,"OECD Portugal disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Portugal,2016,0.394,,gross,sqrt,FALSE,"OECD Portugal gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Portugal,2016,0.53,,market,sqrt,FALSE,"OECD Portugal market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Puerto Rico,1963,0.455,,gross,hh,,Sotomayor2004 gross hh,Sotomayor 2004,1397,https://doi.org/10.1016/j.worlddev.2004.02.005
 Puerto Rico,1969,0.55,,gross,hh,,Sotomayor2004 gross hh,Sotomayor 2004,1397,https://doi.org/10.1016/j.worlddev.2004.02.005
 Puerto Rico,1979,0.516,,gross,ae,,Sotomayor2004 gross ae,Sotomayor 2004,1397,https://doi.org/10.1016/j.worlddev.2004.02.005
@@ -11343,22 +11390,22 @@ Russia,2003,0.4,,con,pc,FALSE,Povcalnet Russia con pc 2,World Bank Povcalnet,"",
 Russia,2003,0.403,,gross,pc,TRUE,Rosstat gross pc,Russian Federal State Statistics Service,Sec.5,http://www.gks.ru/free_doc/doc_2017/year/pril_year17-eng.xls
 Russia,2004,0.51,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en
 Russia,2004,0.5,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en
+Russia,2004,0.381,0.0057,disp,ae,FALSE,LIS Russia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2004,0.4503,0.0048,disp,hh,FALSE,LIS Russia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2004,0.3825,0.0066,disp,oecdm,FALSE,LIS Russia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2004,0.3852,0.006,disp,pc,FALSE,LIS Russia disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2004,0.3896,0.0058,disp,sqrt,FALSE,LIS Russia disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2004,0.381,0.0058,gross,ae,FALSE,LIS Russia gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2004,0.4503,0.006,gross,hh,FALSE,LIS Russia gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2004,0.3825,0.0058,gross,oecdm,FALSE,LIS Russia gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2004,0.3852,0.0062,gross,pc,FALSE,LIS Russia gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2004,0.3896,0.0061,gross,sqrt,FALSE,LIS Russia gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2004,0.5004,0.0059,market,ae,FALSE,LIS Russia market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2004,0.5839,0.0055,market,hh,FALSE,LIS Russia market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2004,0.4985,0.006,market,oecdm,FALSE,LIS Russia market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2004,0.5064,0.0065,market,pc,FALSE,LIS Russia market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2004,0.5001,0.0058,market,sqrt,FALSE,LIS Russia market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
 Russia,2004,0.40299999999999997,,con,pc,FALSE,Povcalnet Russia con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Russia,2004,0.3828,0.0063,disp,ae,FALSE,RLMS LIS disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.4536,0.0058,disp,hh,FALSE,RLMS LIS disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.3845,0.0063,disp,oecdm,FALSE,RLMS LIS disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.3863,0.0062,disp,pc,FALSE,RLMS LIS disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.3915,0.0064,disp,sqrt,FALSE,RLMS LIS disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.3828,0.0057,gross,ae,FALSE,RLMS LIS gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.4536,0.0049,gross,hh,FALSE,RLMS LIS gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.3845,0.006,gross,oecdm,FALSE,RLMS LIS gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.3863,0.006,gross,pc,FALSE,RLMS LIS gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.3915,0.0057,gross,sqrt,FALSE,RLMS LIS gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.5004,0.0062,market,ae,FALSE,RLMS LIS market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.5843,0.0057,market,hh,FALSE,RLMS LIS market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.4985,0.0063,market,oecdm,FALSE,RLMS LIS market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.5064,0.0059,market,pc,FALSE,RLMS LIS market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2004,0.5001,0.0064,market,sqrt,FALSE,RLMS LIS market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
 Russia,2004,0.409,,gross,pc,TRUE,Rosstat gross pc,Russian Federal State Statistics Service,Sec.5,http://www.gks.ru/free_doc/doc_2017/year/pril_year17-eng.xls
 Russia,2005,0.43,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en
 Russia,2005,0.37,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en
@@ -11370,22 +11417,22 @@ Russia,2006,0.41,,con,pc,FALSE,Povcalnet Russia con pc 2,World Bank Povcalnet,""
 Russia,2006,0.415,,gross,pc,TRUE,Rosstat gross pc,Russian Federal State Statistics Service,Sec.5,http://www.gks.ru/free_doc/doc_2017/year/pril_year17-eng.xls
 Russia,2007,0.48,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en
 Russia,2007,0.38,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en
+Russia,2007,0.341,0.0049,disp,ae,FALSE,LIS Russia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2007,0.4169,0.0049,disp,hh,FALSE,LIS Russia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2007,0.3425,0.0046,disp,oecdm,FALSE,LIS Russia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2007,0.3458,0.0056,disp,pc,FALSE,LIS Russia disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2007,0.3485,0.0052,disp,sqrt,FALSE,LIS Russia disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2007,0.341,0.0048,gross,ae,FALSE,LIS Russia gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2007,0.4169,0.0046,gross,hh,FALSE,LIS Russia gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2007,0.3425,0.0042,gross,oecdm,FALSE,LIS Russia gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2007,0.3458,0.0053,gross,pc,FALSE,LIS Russia gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2007,0.3485,0.0053,gross,sqrt,FALSE,LIS Russia gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2007,0.456,0.0057,market,ae,FALSE,LIS Russia market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2007,0.5468,0.0054,market,hh,FALSE,LIS Russia market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2007,0.4544,0.0058,market,oecdm,FALSE,LIS Russia market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2007,0.4622,0.0064,market,pc,FALSE,LIS Russia market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2007,0.4553,0.0059,market,sqrt,FALSE,LIS Russia market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
 Russia,2007,0.423,,con,pc,FALSE,Povcalnet Russia con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Russia,2007,0.3462,0.0048,disp,ae,FALSE,RLMS LIS disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2007,0.4236,0.004,disp,hh,FALSE,RLMS LIS disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2007,0.348,0.0047,disp,oecdm,FALSE,RLMS LIS disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2007,0.3504,0.0053,disp,pc,FALSE,RLMS LIS disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2007,0.3538,0.0049,disp,sqrt,FALSE,RLMS LIS disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2007,0.3462,0.0044,gross,ae,FALSE,RLMS LIS gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2007,0.4236,0.0044,gross,hh,FALSE,RLMS LIS gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2007,0.348,0.0041,gross,oecdm,FALSE,RLMS LIS gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2007,0.3504,0.0043,gross,pc,FALSE,RLMS LIS gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2007,0.3538,0.0049,gross,sqrt,FALSE,RLMS LIS gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2007,0.4569,0.0056,market,ae,FALSE,RLMS LIS market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2007,0.5476,0.0052,market,hh,FALSE,RLMS LIS market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2007,0.4553,0.0056,market,oecdm,FALSE,RLMS LIS market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2007,0.4631,0.0063,market,pc,FALSE,RLMS LIS market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2007,0.4562,0.0058,market,sqrt,FALSE,RLMS LIS market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
 Russia,2007,0.422,,gross,pc,TRUE,Rosstat gross pc,Russian Federal State Statistics Service,Sec.5,http://www.gks.ru/free_doc/doc_2017/year/pril_year17-eng.xls
 Russia,2008,0.5,,con,sqrt,FALSE,D2012 con sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en
 Russia,2008,0.48,,disp,sqrt,FALSE,D2012 disp sqrt,Denisova 2012,20,http://dx.doi.org/10.1787/5k9csf9zcz7c-en
@@ -11399,25 +11446,40 @@ Russia,2009,0.39799999999999996,,con,pc,FALSE,Povcalnet Russia con pc 2,World Ba
 Russia,2009,0.421,,gross,pc,TRUE,Rosstat gross pc,Russian Federal State Statistics Service,Sec.5,http://www.gks.ru/free_doc/doc_2017/year/pril_year17-eng.xls
 Russia,2010,0.359,,disp,pc,FALSE,CEQ Russia disp pc,"Lopez-Calva, Lustig, Matytsin, and Popova 2017",28,http://www.commitmentoequity.org/wp-content/uploads/2017/09/CEQ_WP39_LopezCalva-Lustig-Matytsin-Popova_Russia_May2017.pdf
 Russia,2010,0.491,,market,pc,FALSE,CEQ Russia market pc,"Lopez-Calva, Lustig, Matytsin, and Popova 2017",28,http://www.commitmentoequity.org/wp-content/uploads/2017/09/CEQ_WP39_LopezCalva-Lustig-Matytsin-Popova_Russia_May2017.pdf
+Russia,2010,0.3311,0.0045,disp,ae,FALSE,LIS Russia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2010,0.3948,0.0049,disp,hh,FALSE,LIS Russia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2010,0.3305,0.004,disp,oecdm,FALSE,LIS Russia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2010,0.3416,0.0043,disp,pc,FALSE,LIS Russia disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2010,0.339,0.0046,disp,sqrt,FALSE,LIS Russia disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2010,0.3311,0.0039,gross,ae,FALSE,LIS Russia gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2010,0.3948,0.0038,gross,hh,FALSE,LIS Russia gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2010,0.3305,0.0045,gross,oecdm,FALSE,LIS Russia gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2010,0.3416,0.0039,gross,pc,FALSE,LIS Russia gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2010,0.339,0.0044,gross,sqrt,FALSE,LIS Russia gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2010,0.4558,0.0044,market,ae,FALSE,LIS Russia market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2010,0.5413,0.0047,market,hh,FALSE,LIS Russia market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2010,0.4538,0.005,market,oecdm,FALSE,LIS Russia market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2010,0.4638,0.0045,market,pc,FALSE,LIS Russia market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2010,0.4577,0.0052,market,sqrt,FALSE,LIS Russia market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
 Russia,2010,0.396,,disp,sqrt,FALSE,"OECD Russia disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Russia,2010,0.481,,market,sqrt,FALSE,"OECD Russia market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Russia,2010,0.395,,con,pc,FALSE,Povcalnet Russia con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Russia,2010,0.3338,0.004,disp,ae,FALSE,RLMS LIS disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2010,0.4001,0.0041,disp,hh,FALSE,RLMS LIS disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2010,0.3337,0.0037,disp,oecdm,FALSE,RLMS LIS disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2010,0.3434,0.0043,disp,pc,FALSE,RLMS LIS disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2010,0.3425,0.0041,disp,sqrt,FALSE,RLMS LIS disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2010,0.3338,0.0041,gross,ae,FALSE,RLMS LIS gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2010,0.4001,0.0041,gross,hh,FALSE,RLMS LIS gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2010,0.3337,0.0044,gross,oecdm,FALSE,RLMS LIS gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2010,0.3434,0.0039,gross,pc,FALSE,RLMS LIS gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2010,0.3425,0.0041,gross,sqrt,FALSE,RLMS LIS gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2010,0.4567,0.0042,market,ae,FALSE,RLMS LIS market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2010,0.5423,0.0045,market,hh,FALSE,RLMS LIS market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2010,0.4547,0.0051,market,oecdm,FALSE,RLMS LIS market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2010,0.4647,0.005,market,pc,FALSE,RLMS LIS market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2010,0.4585,0.0049,market,sqrt,FALSE,RLMS LIS market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
 Russia,2010,0.421,,gross,pc,TRUE,Rosstat gross pc,Russian Federal State Statistics Service,Sec.5,http://www.gks.ru/free_doc/doc_2017/year/pril_year17-eng.xls
+Russia,2011,0.3629,0.0042,disp,ae,FALSE,LIS Russia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2011,0.4016,0.0051,disp,hh,FALSE,LIS Russia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2011,0.3598,0.0044,disp,oecdm,FALSE,LIS Russia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2011,0.3751,0.0047,disp,pc,FALSE,LIS Russia disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2011,0.3622,0.0046,disp,sqrt,FALSE,LIS Russia disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2011,0.3669,0.0045,gross,ae,FALSE,LIS Russia gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2011,0.407,0.0043,gross,hh,FALSE,LIS Russia gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2011,0.3638,0.0048,gross,oecdm,FALSE,LIS Russia gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2011,0.3788,0.005,gross,pc,FALSE,LIS Russia gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2011,0.3662,0.0048,gross,sqrt,FALSE,LIS Russia gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2011,0.4736,0.0046,market,ae,FALSE,LIS Russia market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2011,0.5224,0.0046,market,hh,FALSE,LIS Russia market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2011,0.4685,0.005,market,oecdm,FALSE,LIS Russia market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2011,0.486,0.005,market,pc,FALSE,LIS Russia market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2011,0.468,0.0053,market,sqrt,FALSE,LIS Russia market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
 Russia,2011,0.376,0.009,disp,sqrt,FALSE,"OECD Russia disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Russia,2011,0.379,,gross,sqrt,FALSE,"OECD Russia gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Russia,2011,0.485,,market,sqrt,FALSE,"OECD Russia market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -11425,27 +11487,72 @@ Russia,2011,0.397,,con,pc,FALSE,Povcalnet Russia con pc 2,World Bank Povcalnet,"
 Russia,2011,0.417,,gross,pc,TRUE,Rosstat gross pc,Russian Federal State Statistics Service,Sec.5,http://www.gks.ru/free_doc/doc_2017/year/pril_year17-eng.xls
 Russia,2012,0.40700000000000003,,con,pc,FALSE,Povcalnet Russia con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Russia,2012,0.42,,gross,pc,TRUE,Rosstat gross pc,Russian Federal State Statistics Service,Sec.5,http://www.gks.ru/free_doc/doc_2017/year/pril_year17-eng.xls
+Russia,2013,0.35,0.0042,disp,ae,FALSE,LIS Russia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2013,0.3899,0.0046,disp,hh,FALSE,LIS Russia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2013,0.3459,0.0048,disp,oecdm,FALSE,LIS Russia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2013,0.3645,0.0033,disp,pc,FALSE,LIS Russia disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2013,0.3482,0.0053,disp,sqrt,FALSE,LIS Russia disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2013,0.3572,0.0041,gross,ae,FALSE,LIS Russia gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2013,0.3978,0.0041,gross,hh,FALSE,LIS Russia gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2013,0.3532,0.0038,gross,oecdm,FALSE,LIS Russia gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2013,0.3712,0.0036,gross,pc,FALSE,LIS Russia gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2013,0.3553,0.0044,gross,sqrt,FALSE,LIS Russia gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2013,0.4645,0.0034,market,ae,FALSE,LIS Russia market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2013,0.5081,0.0037,market,hh,FALSE,LIS Russia market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2013,0.4588,0.0039,market,oecdm,FALSE,LIS Russia market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2013,0.4784,0.0032,market,pc,FALSE,LIS Russia market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2013,0.4584,0.0048,market,sqrt,FALSE,LIS Russia market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
 Russia,2013,0.409,,con,pc,FALSE,Povcalnet Russia con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Russia,2013,0.3208,0.0038,disp,ae,FALSE,RLMS LIS disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2013,0.4033,0.0038,disp,hh,FALSE,RLMS LIS disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2013,0.3227,0.0043,disp,oecdm,FALSE,RLMS LIS disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2013,0.3282,0.0047,disp,pc,FALSE,RLMS LIS disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2013,0.3323,0.0042,disp,sqrt,FALSE,RLMS LIS disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2013,0.3208,0.0042,gross,ae,FALSE,RLMS LIS gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2013,0.4033,0.0041,gross,hh,FALSE,RLMS LIS gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2013,0.3227,0.0042,gross,oecdm,FALSE,RLMS LIS gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2013,0.3282,0.0042,gross,pc,FALSE,RLMS LIS gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2013,0.3323,0.0039,gross,sqrt,FALSE,RLMS LIS gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2013,0.463,0.0051,market,ae,FALSE,RLMS LIS market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2013,0.5659,0.0053,market,hh,FALSE,RLMS LIS market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2013,0.462,0.0048,market,oecdm,FALSE,RLMS LIS market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2013,0.4695,0.0058,market,pc,FALSE,RLMS LIS market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
-Russia,2013,0.4653,0.0051,market,sqrt,FALSE,RLMS LIS market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
 Russia,2013,0.419,,gross,pc,TRUE,Rosstat gross pc,Russian Federal State Statistics Service,Sec.5,http://www.gks.ru/free_doc/doc_2017/year/pril_year17-eng.xls
+Russia,2014,0.3434,0.0037,disp,ae,FALSE,LIS Russia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2014,0.3798,0.0034,disp,hh,FALSE,LIS Russia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2014,0.338,0.0035,disp,oecdm,FALSE,LIS Russia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2014,0.3603,0.0033,disp,pc,FALSE,LIS Russia disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2014,0.3393,0.0038,disp,sqrt,FALSE,LIS Russia disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2014,0.3512,0.0034,gross,ae,FALSE,LIS Russia gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2014,0.388,0.0034,gross,hh,FALSE,LIS Russia gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2014,0.3459,0.0037,gross,oecdm,FALSE,LIS Russia gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2014,0.3675,0.0028,gross,pc,FALSE,LIS Russia gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2014,0.3472,0.0037,gross,sqrt,FALSE,LIS Russia gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2014,0.4579,0.0034,market,ae,FALSE,LIS Russia market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2014,0.4964,0.0041,market,hh,FALSE,LIS Russia market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2014,0.4508,0.0035,market,oecdm,FALSE,LIS Russia market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2014,0.4739,0.0034,market,pc,FALSE,LIS Russia market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2014,0.4492,0.0036,market,sqrt,FALSE,LIS Russia market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
 Russia,2014,0.39899999999999997,,con,pc,FALSE,Povcalnet Russia con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Russia,2014,0.416,,gross,pc,TRUE,Rosstat gross pc,Russian Federal State Statistics Service,Sec.5,http://www.gks.ru/free_doc/doc_2017/year/pril_year17-eng.xls
+Russia,2015,0.3376,0.0035,disp,ae,FALSE,LIS Russia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2015,0.3673,0.0034,disp,hh,FALSE,LIS Russia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2015,0.3313,0.0037,disp,oecdm,FALSE,LIS Russia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2015,0.3555,0.0028,disp,pc,FALSE,LIS Russia disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2015,0.3308,0.0038,disp,sqrt,FALSE,LIS Russia disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2015,0.3464,0.0032,gross,ae,FALSE,LIS Russia gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2015,0.3764,0.0035,gross,hh,FALSE,LIS Russia gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2015,0.3403,0.0037,gross,oecdm,FALSE,LIS Russia gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2015,0.3635,0.0027,gross,pc,FALSE,LIS Russia gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2015,0.3398,0.0035,gross,sqrt,FALSE,LIS Russia gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2015,0.4493,0.0035,market,ae,FALSE,LIS Russia market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2015,0.4829,0.0035,market,hh,FALSE,LIS Russia market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2015,0.4422,0.0035,market,oecdm,FALSE,LIS Russia market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2015,0.4652,0.0028,market,pc,FALSE,LIS Russia market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2015,0.4394,0.0036,market,sqrt,FALSE,LIS Russia market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
 Russia,2015,0.377,,con,pc,FALSE,Povcalnet Russia con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Russia,2015,0.413,,gross,pc,TRUE,Rosstat gross pc,Russian Federal State Statistics Service,Sec.5,http://www.gks.ru/free_doc/doc_2017/year/pril_year17-eng.xls
+Russia,2016,0.3381,0.0029,disp,ae,FALSE,LIS Russia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2016,0.366,0.0027,disp,hh,FALSE,LIS Russia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2016,0.3311,0.0026,disp,oecdm,FALSE,LIS Russia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2016,0.3571,0.0021,disp,pc,FALSE,LIS Russia disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2016,0.3305,0.0029,disp,sqrt,FALSE,LIS Russia disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2016,0.3467,0.0024,gross,ae,FALSE,LIS Russia gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2016,0.3749,0.0022,gross,hh,FALSE,LIS Russia gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2016,0.34,0.0029,gross,oecdm,FALSE,LIS Russia gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2016,0.365,0.0021,gross,pc,FALSE,LIS Russia gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2016,0.3393,0.0028,gross,sqrt,FALSE,LIS Russia gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2016,0.4554,0.0026,market,ae,FALSE,LIS Russia market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2016,0.486,0.0022,market,hh,FALSE,LIS Russia market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2016,0.4475,0.0022,market,oecdm,FALSE,LIS Russia market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2016,0.4726,0.0024,market,pc,FALSE,LIS Russia market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
+Russia,2016,0.4445,0.0026,market,sqrt,FALSE,LIS Russia market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ru.txt
 Russia,2016,0.412,,gross,pc,TRUE,Rosstat gross pc,Russian Federal State Statistics Service,Sec.5,http://www.gks.ru/free_doc/doc_2017/year/pril_year17-eng.xls
 Rwanda,1984,0.289,,con,pc,FALSE,Povcalnet Rwanda con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Rwanda,1986,0.29,,con,ae,FALSE,NIS Rwanda con ae 1,National Institute of Statistics of Rwanda 2002,27,http://www.statistics.gov.rw/file/714/download?token=J-PX22mI
@@ -11919,6 +12026,9 @@ Slovakia,2015,0.264,,gross,sqrt,FALSE,"OECD Slovakia gross sqrt, current def, 20
 Slovakia,2015,0.402,,market,sqrt,FALSE,"OECD Slovakia market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Slovakia,2015,0.265,,gross,pc,FALSE,Povcalnet Slovakia gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Slovakia,2016,0.23199999999999998,,disp,oecdm,TRUE,Eurostat Slovakia disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Slovakia,2016,0.241,,disp,sqrt,FALSE,"OECD Slovakia disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Slovakia,2016,0.27,,gross,sqrt,FALSE,"OECD Slovakia gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Slovakia,2016,0.4,,market,sqrt,FALSE,"OECD Slovakia market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Slovenia,1987,0.215,,gross,pc,FALSE,Milanovic1998 Slovenia gross pc,Milanovic 1998,169,https://books.google.com/books?id=cQl9xbuhvNkC
 Slovenia,1987,0.198,,disp,pc,,Milanovic1999 Slovenia disp pc,Milanovic 1999,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
 Slovenia,1988,0.174,,disp,pc,,Milanovic1999 Slovenia disp pc,Milanovic 1999,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
@@ -12159,6 +12269,9 @@ Slovenia,2015,0.457,,market,sqrt,FALSE,"OECD Slovenia market sqrt, current def, 
 Slovenia,2015,0.254,,gross,pc,FALSE,Povcalnet Slovenia gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Slovenia,2015,0.436,,market,oecdm,TRUE,Statsi market oecdm,Slovenia Statistics Office,"",http://pxweb.stat.si/pxweb/Database/Demographics/08_level_living/08_silc_poverty_indic/15_08673_income_distribution/0867312E.px
 Slovenia,2016,0.237,,disp,oecdm,TRUE,Eurostat Slovenia disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Slovenia,2016,0.244,,disp,sqrt,FALSE,"OECD Slovenia disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Slovenia,2016,0.296,,gross,sqrt,FALSE,"OECD Slovenia gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Slovenia,2016,0.452,,market,sqrt,FALSE,"OECD Slovenia market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Slovenia,2016,0.431,,market,oecdm,TRUE,Statsi market oecdm,Slovenia Statistics Office,"",http://pxweb.stat.si/pxweb/Database/Demographics/08_level_living/08_silc_poverty_indic/15_08673_income_distribution/0867312E.px
 Solomon Islands,2005,0.461,,con,pc,FALSE,Povcalnet Solomon Islands con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Solomon Islands,2006,0.46,,con,pc,,ZKM2014 Solomon Islands con pc,"Zhuang, Kanbur, and Maligalig 2014",25,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA25
@@ -12507,16 +12620,12 @@ Spain,2004,0.4564,0.0031,market,oecdm,FALSE,LIS Spain market oecdm,LISSY,"",http
 Spain,2004,0.4753,0.0037,market,pc,FALSE,LIS Spain market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/es.txt
 Spain,2004,0.4525,0.0035,market,sqrt,FALSE,LIS Spain market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/es.txt
 Spain,2004,0.332,,disp,sqrt,FALSE,"OECD Spain disp sqrt, incomparable def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Spain,2004,0.332,,gross,sqrt,FALSE,"OECD Spain gross sqrt, incomparable def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Spain,2004,0.457,,market,sqrt,FALSE,"OECD Spain market sqrt, incomparable def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Spain,2004,0.33299999999999996,,gross,pc,FALSE,Povcalnet Spain gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Spain,2005,0.319,,disp,oecdm,TRUE,Eurostat Spain disp oecdm 3,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Spain,2005,0.3341,,con,hh,FALSE,IVIE con hh,Caixa Galicia Foundation and Ivie (Valencian Institute of Economic Research) 2009,bloque2/GTH_ID_2005.xls,http://www.ivie.es/downloads/desigualdad/desigualdad.zip
 Spain,2005,0.3179,,con,pc,FALSE,IVIE con pc,Caixa Galicia Foundation and Ivie (Valencian Institute of Economic Research) 2009,bloque2/GTP_ID_2005.xls,http://www.ivie.es/downloads/desigualdad/desigualdad.zip
 Spain,2005,0.3016,,con,sqrt,FALSE,IVIE con sqrt,Caixa Galicia Foundation and Ivie (Valencian Institute of Economic Research) 2009,bloque2/GTU_ID_2005.xls,http://www.ivie.es/downloads/desigualdad/desigualdad.zip
 Spain,2005,0.324,,disp,sqrt,FALSE,"OECD Spain disp sqrt, incomparable def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Spain,2005,0.346,,gross,sqrt,FALSE,"OECD Spain gross sqrt, incomparable def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-Spain,2005,0.462,,market,sqrt,FALSE,"OECD Spain market sqrt, incomparable def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Spain,2005,0.324,,gross,pc,FALSE,Povcalnet Spain gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Spain,2006,0.319,,disp,oecdm,TRUE,Eurostat Spain disp oecdm 3,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Spain,2006,0.315,,disp,sqrt,FALSE,"OECD Spain disp sqrt, incomparable def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -12626,6 +12735,9 @@ Spain,2015,0.525,,market,sqrt,FALSE,"OECD Spain market sqrt, current def, 2012 m
 Spain,2015,0.36200000000000004,,gross,pc,FALSE,Povcalnet Spain gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Spain,2016,0.341,,disp,oecdm,TRUE,Eurostat Spain disp oecdm 4,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Spain,2016,0.311,,disp,oecdm,FALSE,Instituto Nacional de Estadistica Spain disp oecdm,Instituto Nacional de Estad铆stica Spain,"",http://www.ine.es/jaxiT3/files/t/es/csv_c/9966.csv?nocab=1
+Spain,2016,0.341,,disp,sqrt,FALSE,"OECD Spain disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Spain,2016,0.378,,gross,sqrt,FALSE,"OECD Spain gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Spain,2016,0.516,,market,sqrt,FALSE,"OECD Spain market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Sri Lanka,1970,0.35,,disp,hh,,vGP1984 Sri Lanka disp hh,Tabatabai 1996; van Ginneken and Park 1984,104,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Sri Lanka,1973,0.36,,gross,hh,,Vidanapathirana2007 gross hh,Vidanapathirana 2007,3,http://www.networkideas.org/ideasact/jun07/Beijing_Conference_07/Upali_Vidanapathirana.pdf
 Sri Lanka,1978,0.42,,gross,hh,,Vidanapathirana2007 gross hh,Vidanapathirana 2007,3,http://www.networkideas.org/ideasact/jun07/Beijing_Conference_07/Upali_Vidanapathirana.pdf
@@ -13213,6 +13325,7 @@ Taiwan,1971,0.2961,,gross,hh,,FRK1979 gross hh 2,"Chinn 1982; Fei, Ranis, and Ku
 Taiwan,1972,0.291,,disp,hh,,DGBAS1994 disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics 1994",,http://win.dgbas.gov.tw/fies/doc/result/83/a11/Year04.odt
 Taiwan,1972,0.2907,,gross,hh,,FRK1979 gross hh 2,"Chinn 1982; Fei, Ranis, and Kuo 1979",877,http://www.jstor.org/stable/3203122
 Taiwan,1974,0.287,,disp,hh,,DGBAS1994 disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics 1994",,http://win.dgbas.gov.tw/fies/doc/result/83/a11/Year04.odt
+Taiwan,1976,0.28,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
 Taiwan,1977,0.28,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
 Taiwan,1978,0.29,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
 Taiwan,1979,0.29,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
@@ -14425,12 +14538,28 @@ United Kingdom,2015,0.332,,gross,pc,FALSE,Povcalnet United Kingdom gross pc 1,Wo
 United Kingdom,2016,0.315,,disp,oecdm,TRUE,Eurostat United Kingdom disp oecdm 4,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 United Kingdom,2016,0.3473,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,2016,0.3458,,disp,oecdm,TRUE,IFS UK disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
+United Kingdom,2016,0.3453,0.0039,disp,ae,FALSE,LIS United Kingdom disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
+United Kingdom,2016,0.3933,0.0043,disp,hh,FALSE,LIS United Kingdom disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
+United Kingdom,2016,0.3407,0.0042,disp,oecdm,FALSE,LIS United Kingdom disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
+United Kingdom,2016,0.3636,0.0041,disp,pc,FALSE,LIS United Kingdom disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
+United Kingdom,2016,0.344,0.0039,disp,sqrt,FALSE,LIS United Kingdom disp sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
+United Kingdom,2016,0.3678,0.003,gross,ae,FALSE,LIS United Kingdom gross ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
+United Kingdom,2016,0.4162,0.0034,gross,hh,FALSE,LIS United Kingdom gross hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
+United Kingdom,2016,0.3643,0.0032,gross,oecdm,FALSE,LIS United Kingdom gross oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
+United Kingdom,2016,0.3826,0.0033,gross,pc,FALSE,LIS United Kingdom gross pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
+United Kingdom,2016,0.367,0.0026,gross,sqrt,FALSE,LIS United Kingdom gross sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
+United Kingdom,2016,0.5409,0.0038,market,ae,FALSE,LIS United Kingdom market ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
+United Kingdom,2016,0.6021,0.004,market,hh,FALSE,LIS United Kingdom market hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
+United Kingdom,2016,0.5358,0.0033,market,oecdm,FALSE,LIS United Kingdom market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
+United Kingdom,2016,0.5536,0.0034,market,pc,FALSE,LIS United Kingdom market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
+United Kingdom,2016,0.5346,0.0034,market,sqrt,FALSE,LIS United Kingdom market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
 United Kingdom,2016,0.351,,disp,sqrt,FALSE,"OECD United Kingdom disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 United Kingdom,2016,0.388,,gross,sqrt,FALSE,"OECD United Kingdom gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 United Kingdom,2016,0.506,,market,sqrt,FALSE,"OECD United Kingdom market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 United Kingdom,2016,0.316,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/householddisposableincomeandinequality/financialyearending2017/51fff87e&format=csv
 United Kingdom,2016,0.35,,gross,oecdm,FALSE,ONS gross oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/householddisposableincomeandinequality/financialyearending2017/51fff87e&format=csv
 United Kingdom,2016,0.49200000000000005,,market,oecdm,FALSE,ONS market oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/householddisposableincomeandinequality/financialyearending2017/51fff87e&format=csv
+United Kingdom,2017,0.331,,disp,oecdm,TRUE,Eurostat United Kingdom disp oecdm 5,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 United Kingdom,2017,0.3368,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,2017,0.3354,,disp,oecdm,TRUE,IFS UK disp oecdm,Institute for Fiscal Studies,"",https://www.ifs.org.uk/uploads/publications/bns/bn19_figs.xlsx
 United Kingdom,2017,0.322,,disp,oecdm,FALSE,ONS disp oecdm,UK Office for National Statistics,"",https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/householddisposableincomeandinequality/financialyearending2017/51fff87e&format=csv
