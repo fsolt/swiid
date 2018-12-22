@@ -38,21 +38,23 @@ kfold_output %>%
   arrange(-problem, -prob_perc, country, -t_diff) %>%
   View()
 
-# pdf(file="predlis.pdf",width=8.5, height=5.25)
+
 ggplot(kfold_output) + 
   # geom_rect(aes(xmin=-Inf, xmax=Inf, ymin=-2, ymax=2), fill='gray90', alpha=.2) +
   geom_hline(yintercept=0, linetype=2, colour="gray60") +
-  geom_pointrange( 
-    aes(x = forcats::fct_reorder(cy, point_diff), 
-        y=point_diff*100, 
-        ymin=point_diff*100 - 1.96*100*se_diff,
-        ymax = point_diff*100 + 1.96*100*se_diff,
-        colour = cy_color)) +
+  geom_pointrange(fatten = 1,
+                  aes(x = forcats::fct_reorder(cy, point_diff), 
+                      y=point_diff*100, 
+                      ymin=point_diff*100 - 1.96*100*se_diff,
+                      ymax = point_diff*100 + 1.96*100*se_diff,
+                      colour = cy_color)) +
   theme_bw() + 
   theme(legend.position="none") +
   scale_colour_manual(values=c("#354995", "#5E5E5E")) +
   labs(x = "", y = "SWIID Prediction minus LIS") + 
-  theme(axis.text.x = element_text(angle = 60, hjust = 1, size=7, colour = kfold_output$cy_color)) +
+  theme(axis.text.x = element_blank(),
+        axis.ticks.x=element_blank()) +
   # scale_y_continuous(breaks=c(-15, -10, -5, 0, 5)) + 
-  scale_x_discrete(limits=levels(kfold_output$cy))   
-# graphics.off()
+  scale_x_discrete(limits=levels(kfold_output$cy)) 
+
+ggsave(file="../dcpo_redistribution/paper/warsaw_talk/kfold.pdf", width=8.5, height=5.25)
