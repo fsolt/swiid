@@ -158,22 +158,22 @@ for (i in 1:100) {
   swiid[[i]] <- stemp
 }
 
-save(swiid, swiid_summary, file = "data/swiid7_1.rda")
-save(swiid, swiid_summary, file = "vignette/swiid7_1.rda")
+save(swiid, swiid_summary, file = "data/swiid8_0.rda")
+save(swiid, swiid_summary, file = "vignette/swiid8_0.rda")
 
 # for release
-dir.create("release/swiid7_1", recursive = TRUE)
-final_files <- c("data/swiid7_1_summary.csv", "data/swiid7_1.rda", "data/swiid7_1.dta")
+dir.create("release/swiid8_0", recursive = TRUE)
+final_files <- c("data/swiid8_0_summary.csv", "data/swiid8_0.rda", "data/swiid8_0.dta")
 file.copy(from = final_files,
-          to = str_replace(final_files, "data/", "release/swiid7_1/"),
+          to = str_replace(final_files, "data/", "release/swiid8_0/"),
           overwrite = TRUE)
 documentation_files <- c("vignette/R_swiid.pdf", "vignette/stata_swiid.pdf")
 file.copy(from = documentation_files,
-          to = str_replace(documentation_files, "vignette/", "release/swiid7_1/"),
+          to = str_replace(documentation_files, "vignette/", "release/swiid8_0/"),
           overwrite = TRUE)
 setwd("release")
-zip("swiid7_1.zip", "swiid7_1")
-dir.create("s71")
-file.copy("swiid7_1.zip", "s71/swiid7_1.zip", overwrite = TRUE)
-zip("s71.zip", "s71")
+zip("swiid8_0.zip", "swiid8_0")
+dir.create("s80")
+file.copy("swiid8_0.zip", "s80/swiid8_0.zip", overwrite = TRUE)
+zip("s80.zip", "s80")
 setwd("..")
