@@ -125,4 +125,4 @@ ggplot(kfold_output_by_country) +
   scale_x_discrete(breaks = NULL) 
 
 ggsave(file = "paper/figures/kfold_country.pdf", width=8.5, height=5.25)
-save(kfold_output, file = "data/kfold_output_by_country.rda")
+save(kfold_output_by_country, file = "data/kfold_output_by_country.rda")
