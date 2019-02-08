@@ -309,12 +309,13 @@ tryCatch(download.file(transmonee_link, "data-raw/transmonee.xls"),
 transmonee <- read_excel("data-raw/transmonee.xls", 
                          sheet = "10. Economy",
                          skip = 398,
-                         na = "-")[1:34, ] %>% 
-  filter(!is.na(X__1)) %>% 
-  select(-X__2) %>% 
-  gather(key = year, value = gini, -X__1) %>% 
+                         na = "-",
+                         col_names = c("country", "notes", 1989:2009))[1:34, ] %>% 
+  filter(!is.na(country)) %>% 
+  select(-notes) %>% 
+  gather(key = year, value = gini, -country) %>% 
   filter(!is.na(gini)) %>% 
-  transmute(country = countrycode(X__1, "country.name", "swiid.name", custom_dict = cc_swiid),
+  transmute(country = countrycode(country, "country.name", "swiid.name", custom_dict = cc_swiid),
             year = as.numeric(year),
             gini = gini,
             gini_se = NA,
