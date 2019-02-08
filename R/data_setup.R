@@ -1701,12 +1701,13 @@ ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3) %
 cbo_link <- "https://www.cbo.gov/system/files/2018-11/54646-data-underlying-figures.xlsx"
 download.file(cbo_link, "data-raw/cbo.xlsx")
 
-cbo <- read_excel("data-raw/cbo.xlsx", sheet = "Figure 16", col_names = FALSE, skip = 8) %>% 
-  filter(!is.na(X__1) & !is.na(X__2)) %>% 
-  transmute(year = as.numeric(X__1),
-            market = as.numeric(X__2),
-            gross = as.numeric(X__4),
-            disp = as.numeric(X__5)) %>% 
+cbo <- read_excel("data-raw/cbo.xlsx", sheet = "Figure 16", col_names = FALSE, skip = 8,
+                  .name_repair = ~ make.names(.x, unique = TRUE)) %>% 
+  filter(!is.na(X) & !is.na(X.1)) %>% 
+  transmute(year = as.numeric(X),
+            market = as.numeric(X.1),
+            gross = as.numeric(X.3),
+            disp = as.numeric(X.4)) %>% 
   filter(!is.na(year)) %>% 
   gather(key = welfare_def, 
          value = gini,
