@@ -1678,19 +1678,20 @@ ifs <- "https://www.ifs.org.uk/tools_and_resources/incomes_in_uk" %>%
 writeBin(httr::content(ifs$response, "raw"), "data-raw/ifs.xlsx")
 ifs_link <- ifs$response$url
 
-ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3) %>%
-  select(X__1:X__4) %>%
-  filter(!is.na(X__2)) %>% 
+ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3,
+                  .name_repair = ~ make.names(.x, unique = TRUE)) %>%
+  select(X:X.3) %>%
+  filter(!is.na(X.1)) %>% 
   transmute(country = "United Kingdom",
-            year = ifelse(str_extract(X__2, "\\d{2}$") %>% as.numeric() > 50,
-                          str_extract(X__2, "\\d{2}$") %>% as.numeric() + 1900,
-                          str_extract(X__2, "\\d{2}$") %>% as.numeric() + 2000),
-            gini = as.numeric(X__4) %>% round(4),
+            year = ifelse(str_extract(X.1, "\\d{2}$") %>% as.numeric() > 50,
+                          str_extract(X.1, "\\d{2}$") %>% as.numeric() + 1900,
+                          str_extract(X.1, "\\d{2}$") %>% as.numeric() + 2000),
+            gini = as.numeric(X.3) %>% round(4),
             gini_se = NA,
             welfare_def = "disp",
             equiv_scale = "oecdm",
             monetary = TRUE,
-            series = paste("IFS", X__3, welfare_def, equiv_scale),
+            series = paste("IFS", X.2, welfare_def, equiv_scale),
             source1 = "Institute for Fiscal Studies",
             page = "",
             link = ifs_link)
