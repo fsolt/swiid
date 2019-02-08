@@ -634,8 +634,9 @@ writeBin(dane_file$response$content, "data-raw/dane.xls")
 rm(dane_file)
 
 dane <- read_excel("data-raw/dane.xls", sheet = "Gini", skip = 15) %>% 
-  filter(X__1 == "Nacional") %>% 
-  gather(key = year, value = gini, -X__1) %>% 
+  rename(region = 1) %>% 
+  filter(region == "Nacional") %>% 
+  gather(key = year, value = gini, -region) %>% 
   transmute(country = "Colombia",
             year = as.numeric(year),
             gini = gini,
@@ -811,11 +812,16 @@ download.file(hk2016_link, "data-raw/hk2016.xlsx")
 download.file(hk2011_link, "data-raw/hk2011.pdf")
 download.file(hk2006_link, "data-raw/hk2006.pdf")
 
-hk2016 <- read_excel("data-raw/hk2016.xlsx", sheet = "KeyStat2", skip = 6) %>% 
-  mutate(es = str_extract(X__2, ".* income")) %>% 
+hk2016 <- read_excel("data-raw/hk2016.xlsx",
+                     sheet = "KeyStat2", 
+                     skip = 6,
+                     col_types = c("skip", "guess", rep("skip", 4),
+                                   rep("guess", 3), rep("skip", 5))) %>% 
+  rename(incdef = 1) %>% 
+  mutate(es = str_extract(incdef, ".* income")) %>% 
   fill(es) %>% 
-  filter(str_detect(X__2, "\\([ac]\\)")) %>% 
-  mutate(wd = if_else(X__2 == "(a)", "market", "disp"),
+  filter(str_detect(incdef, "\\([ac]\\)")) %>% 
+  mutate(wd = if_else(incdef == "(a)", "market", "disp"),
          `2016` = str_replace(`2016`, "\\[", "")) %>% 
   select(`2006`, `2011`, `2016`, es, wd) %>% 
   gather(key = year, value = gini, -wd, -es) %>%
@@ -1006,13 +1012,16 @@ istat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw
 kazstat_page <- "http://stat.gov.kz/getImg?id=ESTAT097178"
 download.file(kazstat_page, "data-raw/kazstat.xls")
 
-kazstat <- read_excel("data-raw/kazstat.xls", skip = 3) %>% 
-  filter(X__1 == "Republic of Kazakhstan") %>% 
-  select(-X__1, -ends_with("_1")) %>% 
+kazstat <- read_excel("data-raw/kazstat.xls",
+                      skip = 3,
+                      .name_repair = ~ make.names(.x, unique = TRUE)) %>%
+  rename(region = 1) %>% 
+  filter(region == "Republic of Kazakhstan") %>% 
+  select(-region, -ends_with("\\.1")) %>% 
   gather(key = year, value = gini) %>% 
-  filter(gini < 1) %>% # because 2017 ratio without 2017 gini on 2017-04-25 
+  filter(gini < 1) %>% # because 2017 ratio without 2017 gini on 2019-02-08 
   transmute(country = "Kazakhstan",
-            year = as.numeric(year),
+            year = as.numeric(str_replace(year, "X", "")),
             gini = gini,
             gini_se = NA,
             welfare_def = "con",
@@ -1072,7 +1081,7 @@ nsck <- read_excel("data-raw/nsck.xls") %>%
 
 
 # Economy Planning Unit of Malaysia (update link--http://www.epu.gov.my/ms/search/node/gini)
-epumy_link <- "http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf"
+epumy_link <- "http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf"
 download.file(epumy_link, "data-raw/epumy.pdf")
 
 epumy <- extract_tables("data-raw/epumy.pdf") %>% 
@@ -1136,9 +1145,10 @@ monstat_link <- tryCatch(get_monstat_file(),
                          })
 
 monstat <- read_excel("data-raw/monstat.xls", skip = 1) %>%
+  rename(year = 1) %>% 
   filter(!is.na(`Gini coefficient (%)`)) %>% 
   transmute(country = "Montenegro",
-            year = as.numeric(X__1),
+            year = as.numeric(year),
             gini = `Gini coefficient (%)`/100,
             gini_se = NA,
             welfare_def = "con",
@@ -1317,10 +1327,12 @@ singstat <- read_csv("data-raw/singstat.csv", skip = 4) %>%
 ssi1_link <- "https://www.stat.si/doc/vsebina/08/kazalniki_soc_povezanosti_Laekens_97_03.xls"
 download.file(ssi1_link, "data-raw/ssi.xls", method = "curl", extra = "-k")
 
-ssi1 <- read_excel("data-raw/ssi.xls", sheet = "Laekens kazalniki 1997-2003", skip = 4) %>% 
-  janitor::clean_names() %>% 
-  filter(str_detect(x_1, "Gini")) %>% 
-  select(-x_1, -x_2, -x_3, -x_4) %>% 
+ssi1 <- read_excel("data-raw/ssi.xls",
+                   sheet = "Laekens kazalniki 1997-2003",
+                   skip = 4,
+                   .name_repair = ~ make.names(.x, unique = TRUE)) %>% 
+  filter(str_detect(X, "Gini")) %>% 
+  select(-X, -X.1, -X.2, -X.3) %>% 
   gather(key = year0, value = gini) %>% 
   transmute(country = "Slovenia",
             year = as.numeric(str_extract(year0, "\\d{4}")),
@@ -1328,7 +1340,7 @@ ssi1 <- read_excel("data-raw/ssi.xls", sheet = "Laekens kazalniki 1997-2003", sk
             gini_se = NA,
             welfare_def = "disp",
             equiv_scale = "oecdm",
-            monetary = !str_detect(year0, "_1"),
+            monetary = !str_detect(year0, "\\.1"),
             series = paste("Statsi 2005", welfare_def, equiv_scale, as.numeric(as.factor(monetary))),
             source1 = "Slovenia Statistics Office 2005",
             page = "Laekens kazalniki 1997-2003",
@@ -1431,13 +1443,20 @@ tryCatch(download.file(tdgbas_link, "data-raw/tdgbas1.xls"),
            tdgbas_link <- paste0("http://win.dgbas.gov.tw/fies/doc/result/", Sys.Date() %>% str_extract("\\d{4}") %>% as.numeric() %>% "-"(1913), "/a11/Year05.xls")
            download.file(tdgbas_link, "data-raw/tdgbas1.xls")
          })
+tryCatch(read_excel("data-raw/tdgbas1.xls", col_names = FALSE, skip = 9, 
+                    .name_repair = ~ make.names(.x, unique = TRUE)),
+         error = function(e) {
+           tdgbas_link <- paste0("http://win.dgbas.gov.tw/fies/doc/result/", Sys.Date() %>% str_extract("\\d{4}") %>% as.numeric() %>% "-"(1913), "/a11/Year05.xls")
+           download.file(tdgbas_link, "data-raw/tdgbas1.xls")
+         })
          
 tdgbas_link2 <- "http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L"
 
-tdgbas <- read_excel("data-raw/tdgbas1.xls", col_names = FALSE, skip = 9) %>% 
-  transmute(year = X__2,
-            pc = X__4,
-            sqrt = X__6) %>% 
+tdgbas <- read_excel("data-raw/tdgbas1.xls", col_names = FALSE, skip = 9, 
+                     .name_repair = ~ make.names(.x, unique = TRUE)) %>% 
+  transmute(year = X.1,
+            pc = X.3,
+            sqrt = X.5) %>% 
   gather(key = equiv_scale, value = gini, -year) %>% 
   filter(!is.na(year)) %>% 
   mutate(link = tdgbas_link) %>% 
