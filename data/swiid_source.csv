@@ -3668,6 +3668,7 @@ Denmark,2015,0.282,,gross,pc,FALSE,Povcalnet Denmark gross pc 1,World Bank Povca
 Denmark,2015,0.2877,,disp,oecdm,FALSE,Statistics Denmark disp oecdm,Statistics Denmark,"",http://www.statbank.dk/IFOR41
 Denmark,2016,0.276,,disp,oecdm,TRUE,Eurostat Denmark disp oecdm 4,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Denmark,2016,0.2897,,disp,oecdm,FALSE,Statistics Denmark disp oecdm,Statistics Denmark,"",http://www.statbank.dk/IFOR41
+Denmark,2017,0.27899999999999997,,disp,oecdm,TRUE,Eurostat Denmark disp oecdm 4,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Denmark,2017,0.2932,,disp,oecdm,FALSE,Statistics Denmark disp oecdm,Statistics Denmark,"",http://www.statbank.dk/IFOR41
 Djibouti,1996,0.378,,con,pc,,Hassine2015 Djibouti con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Djibouti,2002,0.399,,con,pc,,Hassine2015 Djibouti con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
@@ -6325,6 +6326,7 @@ Hungary,2015,0.508,0.0076,market,pc,FALSE,LIS Hungary market pc,LISSY,"",https:/
 Hungary,2015,0.4813,0.0085,market,sqrt,FALSE,LIS Hungary market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/hu.txt
 Hungary,2015,0.304,,gross,pc,FALSE,Povcalnet Hungary gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Hungary,2016,0.281,,disp,oecdm,TRUE,Eurostat Hungary disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Hungary,2017,0.287,,disp,oecdm,TRUE,Eurostat Hungary disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Iceland,1992,0.276,,disp,oecdm,TRUE,OK2010 disp oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
 Iceland,1992,0.394,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
 Iceland,1992,0.427,,market,oecdm,TRUE,OK2010 market oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
@@ -7019,6 +7021,7 @@ Ireland,2015,0.318,,gross,pc,FALSE,Povcalnet Ireland gross pc 1,World Bank Povca
 Ireland,2016,0.307,,disp,pc,FALSE,CSO Ireland disp pc,CSO Ireland,"",http://www.cso.ie/px/pxeirestat/Database/eirestat/Survey%20on%20Income%20and%20Living%20Conditions%20(SILC)/SIA47.px
 Ireland,2016,0.295,,disp,oecdm,TRUE,Eurostat Ireland disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Ireland,2017,0.315,,disp,pc,FALSE,CSO Ireland disp pc,CSO Ireland,"",http://www.cso.ie/px/pxeirestat/Database/eirestat/Survey%20on%20Income%20and%20Living%20Conditions%20(SILC)/SIA47.px
+Ireland,2017,0.306,,disp,oecdm,TRUE,Eurostat Ireland disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Israel,1979,0.3181,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
 Israel,1979,0.319,,disp,ae,,A1996 Israel disp ae 2,Achdut 1996,S25,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
 Israel,1979,0.318,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
@@ -8280,6 +8283,7 @@ Latvia,2016,0.345,,disp,oecdm,TRUE,Eurostat Latvia disp oecdm 2,Eurostat,"",http
 Latvia,2016,0.346,,disp,sqrt,FALSE,"OECD Latvia disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Latvia,2016,0.373,,gross,sqrt,FALSE,"OECD Latvia gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Latvia,2016,0.475,,market,sqrt,FALSE,"OECD Latvia market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
+Latvia,2017,0.35600000000000004,,disp,oecdm,TRUE,Eurostat Latvia disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Lebanon,1995,0.435,,con,pc,,CAS Lebanon con pc,Central Administration of Statistics Lebanon 1998; UNDP 2008,11,http://www.undp.org/content/dam/lebanon/docs/MDG/Publications/MDG_en.pdf
 Lebanon,2004,0.361,,con,pc,,CAS Lebanon con pc,Central Administration of Statistics Lebanon; UNDP 2008,11,http://www.undp.org/content/dam/lebanon/docs/MDG/Publications/MDG_en.pdf
 Lebanon,2004,0.387,,con,pc,,Hassine2015 Lebanon con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
@@ -8733,43 +8737,43 @@ Malawi,2010,0.4424,,con,sqrt,FALSE,World Bank Africa Poverty Database Malawi con
 Malawi,2011,0.452,,con,pc,,NSO Malawi con pc 1,National Statistical Office Malawi 2012,218,http://www.nsomalawi.mw/images/stories/data_on_line/economics/ihs/IHS3/IHS3_Report.pdf
 Malawi,2013,0.39,,con,pc,,NSO Malawi con pc 2,National Statistical Office Malawi 2014,105,http://www.nsomalawi.mw/images/stories/data_on_line/economics/ihs/IHPS%202013/IHPS%20Report.pdf
 Malaysia,1970,0.421,,gross,hh,,Bruton1992 Malaysia gross hh,Tabatabai 1996; Bruton 1992,99,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Malaysia,1970,0.513,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
-Malaysia,1974,0.53,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,1970,0.513,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,1974,0.53,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1976,0.499,,gross,hh,,Bruton1992 Malaysia gross hh,Tabatabai 1996; Bruton 1992,99,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Malaysia,1976,0.557,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,1976,0.557,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1979,0.529,,gross,hh,,Bruton1992 Malaysia gross hh,Tabatabai 1996; Bruton 1992,99,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Malaysia,1979,0.505,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,1979,0.505,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1980,0.419,,con,hh,,Park1995 Malaysia con hh,Tabatabai 1996; Park 1995,100,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Malaysia,1984,0.508,,gross,hh,,Bruton1992 Malaysia gross hh,Tabatabai 1996; Bruton 1992,99,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Malaysia,1984,0.483,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,1984,0.483,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1984,0.486,,gross,pc,FALSE,Povcalnet Malaysia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Malaysia,1987,0.456,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,1987,0.456,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1987,0.47,,gross,pc,FALSE,Povcalnet Malaysia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Malaysia,1989,0.445,,gross,hh,,Bruton1992 Malaysia gross hh,Tabatabai 1996; Bruton 1992,99,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Malaysia,1989,0.446,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,1989,0.446,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1989,0.462,,gross,pc,FALSE,Povcalnet Malaysia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Malaysia,1992,0.459,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,1992,0.459,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1992,0.47700000000000004,,gross,pc,FALSE,Povcalnet Malaysia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Malaysia,1995,0.456,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,1995,0.456,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1995,0.485,,gross,pc,FALSE,Povcalnet Malaysia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Malaysia,1997,0.459,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,1997,0.459,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1997,0.491,,gross,pc,FALSE,Povcalnet Malaysia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Malaysia,1999,0.443,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
-Malaysia,2002,0.461,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
-Malaysia,2004,0.462,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,1999,0.443,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,2002,0.461,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,2004,0.462,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,2004,0.461,,gross,pc,FALSE,Povcalnet Malaysia gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Malaysia,2005,0.377,,con,pc,,GIDD Malaysia con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
-Malaysia,2007,0.441,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,2007,0.441,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,2007,0.461,,gross,pc,FALSE,Povcalnet Malaysia gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Malaysia,2008,0.455,,gross,pc,FALSE,Povcalnet Malaysia gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Malaysia,2009,0.441,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,2009,0.441,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,2009,0.462,,gross,pc,,ZKM2014 Malaysia gross pc,"Zhuang, Kanbur, and Maligalig 2014",25,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA25
 Malaysia,2011,0.439,,gross,pc,FALSE,Povcalnet Malaysia gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Malaysia,2012,0.431,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,2012,0.431,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,2013,0.413,,gross,pc,FALSE,Povcalnet Malaysia gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Malaysia,2014,0.401,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,2014,0.401,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,2015,0.41,,gross,pc,FALSE,Povcalnet Malaysia gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Malaysia,2016,0.399,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://www.epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,2016,0.399,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Maldives,2002,0.413,,con,pc,FALSE,Povcalnet Maldives con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Maldives,2003,0.38,,con,pc,,NBS Maldives con pc,National Bureau of Statistics Maldives 2011,35,http://www.planning.gov.mv/en/images/stories/news/2011/June/HIES-Preliminary_Findings-Presentation.pdf
 Maldives,2004,0.374,,con,pc,,ZKM2014 Maldives con pc,"Zhuang, Kanbur, and Maligalig 2014",24,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA24
@@ -9301,21 +9305,21 @@ Mongolia,2014,0.32,,con,pc,FALSE,Povcalnet Mongolia con pc 2,World Bank Povcalne
 Mongolia,2016,0.32299999999999995,,con,pc,FALSE,Povcalnet Mongolia con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Montenegro,2005,0.259,,con,oecdm,,Monstat con oecdm,Statistical Office of Montenegro 2009,4,https://www.monstat.org/userfiles/file/analiza%20siromastva/Siromastvo%20u%20CG_2007_engleska%20verzija.pdf
 Montenegro,2005,0.302,,con,pc,FALSE,Povcalnet Montenegro con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Montenegro,2006,0.244,,con,oecdm,,Monstat con oecdm,Statistical Office of Montenegro,"",https://www.monstat.org/userfiles/file/analiza%20siromastva/2013/POVERTY%20LINE_za%20web.xls
+Montenegro,2006,0.244,,con,oecdm,,Monstat con oecdm,Statistical Office of Montenegro,"",https://web.archive.org/web/20170204162031/http://www.monstat.org/userfiles/file/analiza%20siromastva/2013/POVERTY%20LINE_za%20web.xls
 Montenegro,2006,0.3,,con,pc,FALSE,Povcalnet Montenegro con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Montenegro,2007,0.264,,con,oecdm,,Monstat con oecdm,Statistical Office of Montenegro,"",https://www.monstat.org/userfiles/file/analiza%20siromastva/2013/POVERTY%20LINE_za%20web.xls
+Montenegro,2007,0.264,,con,oecdm,,Monstat con oecdm,Statistical Office of Montenegro,"",https://web.archive.org/web/20170204162031/http://www.monstat.org/userfiles/file/analiza%20siromastva/2013/POVERTY%20LINE_za%20web.xls
 Montenegro,2007,0.314,,con,pc,FALSE,Povcalnet Montenegro con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Montenegro,2008,0.253,,con,oecdm,,Monstat con oecdm,Statistical Office of Montenegro,"",https://www.monstat.org/userfiles/file/analiza%20siromastva/2013/POVERTY%20LINE_za%20web.xls
+Montenegro,2008,0.253,,con,oecdm,,Monstat con oecdm,Statistical Office of Montenegro,"",https://web.archive.org/web/20170204162031/http://www.monstat.org/userfiles/file/analiza%20siromastva/2013/POVERTY%20LINE_za%20web.xls
 Montenegro,2008,0.305,,con,pc,FALSE,Povcalnet Montenegro con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Montenegro,2009,0.264,,con,oecdm,,Monstat con oecdm,Statistical Office of Montenegro,"",https://www.monstat.org/userfiles/file/analiza%20siromastva/2013/POVERTY%20LINE_za%20web.xls
+Montenegro,2009,0.264,,con,oecdm,,Monstat con oecdm,Statistical Office of Montenegro,"",https://web.archive.org/web/20170204162031/http://www.monstat.org/userfiles/file/analiza%20siromastva/2013/POVERTY%20LINE_za%20web.xls
 Montenegro,2009,0.31,,con,pc,FALSE,Povcalnet Montenegro con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Montenegro,2010,0.243,,con,oecdm,,Monstat con oecdm,Statistical Office of Montenegro,"",https://www.monstat.org/userfiles/file/analiza%20siromastva/2013/POVERTY%20LINE_za%20web.xls
+Montenegro,2010,0.243,,con,oecdm,,Monstat con oecdm,Statistical Office of Montenegro,"",https://web.archive.org/web/20170204162031/http://www.monstat.org/userfiles/file/analiza%20siromastva/2013/POVERTY%20LINE_za%20web.xls
 Montenegro,2010,0.289,,con,pc,FALSE,Povcalnet Montenegro con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Montenegro,2011,0.259,,con,oecdm,,Monstat con oecdm,Statistical Office of Montenegro,"",https://www.monstat.org/userfiles/file/analiza%20siromastva/2013/POVERTY%20LINE_za%20web.xls
+Montenegro,2011,0.259,,con,oecdm,,Monstat con oecdm,Statistical Office of Montenegro,"",https://web.archive.org/web/20170204162031/http://www.monstat.org/userfiles/file/analiza%20siromastva/2013/POVERTY%20LINE_za%20web.xls
 Montenegro,2011,0.308,,con,pc,FALSE,Povcalnet Montenegro con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Montenegro,2012,0.265,,con,oecdm,,Monstat con oecdm,Statistical Office of Montenegro,"",https://www.monstat.org/userfiles/file/analiza%20siromastva/2013/POVERTY%20LINE_za%20web.xls
+Montenegro,2012,0.265,,con,oecdm,,Monstat con oecdm,Statistical Office of Montenegro,"",https://web.archive.org/web/20170204162031/http://www.monstat.org/userfiles/file/analiza%20siromastva/2013/POVERTY%20LINE_za%20web.xls
 Montenegro,2012,0.32299999999999995,,con,pc,FALSE,Povcalnet Montenegro con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Montenegro,2013,0.262,,con,oecdm,,Monstat con oecdm,Statistical Office of Montenegro,"",https://www.monstat.org/userfiles/file/analiza%20siromastva/2013/POVERTY%20LINE_za%20web.xls
+Montenegro,2013,0.262,,con,oecdm,,Monstat con oecdm,Statistical Office of Montenegro,"",https://web.archive.org/web/20170204162031/http://www.monstat.org/userfiles/file/analiza%20siromastva/2013/POVERTY%20LINE_za%20web.xls
 Montenegro,2013,0.324,,con,pc,FALSE,Povcalnet Montenegro con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Montenegro,2014,0.319,,con,pc,FALSE,Povcalnet Montenegro con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Morocco,1984,0.392,,con,pc,FALSE,Povcalnet Morocco con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
@@ -11650,7 +11654,7 @@ Serbia,2010,0.2703,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduct
 Serbia,2011,0.2538,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-–-2016-–-Revised-and-New-Data.pdf
 Serbia,2012,0.38,,disp,oecdm,TRUE,Eurostat Serbia disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Serbia,2012,0.2676,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-–-2016-–-Revised-and-New-Data.pdf
-Serbia,2013,0.386,,disp,oecdm,TRUE,Eurostat Serbia disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Serbia,2013,0.38299999999999995,,disp,oecdm,TRUE,Eurostat Serbia disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Serbia,2013,0.2736,0.0035,con,ae,FALSE,LIS Serbia con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
 Serbia,2013,0.3105,0.0034,con,hh,FALSE,LIS Serbia con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
 Serbia,2013,0.2638,0.0039,con,oecdm,FALSE,LIS Serbia con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
@@ -11672,10 +11676,11 @@ Serbia,2013,0.5678,0.0102,market,oecdm,FALSE,LIS Serbia market oecdm,LISSY,"",ht
 Serbia,2013,0.5806,0.0095,market,pc,FALSE,LIS Serbia market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
 Serbia,2013,0.5652,0.0119,market,sqrt,FALSE,LIS Serbia market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
 Serbia,2013,0.269,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-–-2016-–-Revised-and-New-Data.pdf
-Serbia,2014,0.382,,disp,oecdm,TRUE,Eurostat Serbia disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Serbia,2014,0.4,,disp,oecdm,TRUE,Eurostat Serbia disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Serbia,2014,0.2665,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-–-2016-–-Revised-and-New-Data.pdf
-Serbia,2015,0.386,,disp,oecdm,TRUE,Eurostat Serbia disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Serbia,2015,0.39799999999999996,,disp,oecdm,TRUE,Eurostat Serbia disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Serbia,2015,0.2554,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-–-2016-–-Revised-and-New-Data.pdf
+Serbia,2016,0.37799999999999995,,disp,oecdm,TRUE,Eurostat Serbia disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Serbia,2016,0.2678,0.0031,con,ae,FALSE,LIS Serbia con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
 Serbia,2016,0.3224,0.0029,con,hh,FALSE,LIS Serbia con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
 Serbia,2016,0.2592,0.0032,con,oecdm,FALSE,LIS Serbia con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/rs.txt
@@ -15297,7 +15302,6 @@ Uruguay,2016,0.39714636,9.5305e-4,disp,pc,TRUE,SEDLAC Uruguay disp pc 2,SEDLAC,i
 Uruguay,2017,0.38,,disp,pc,TRUE,Instituto Nacional de Estadistica Uruguay disp pc,Instituto Nacional de Estad√≠stica Uruguay,45,http://www.ine.gub.uy/documents/10181/364159/Estimaci√≥n+de+la+pobreza+por+el+M√©todo+del+Ingreso+2017/f990baaf-1c32-44c5-beda-59a20dd8325c
 Uzbekistan,1988,0.306,,gross,pc,,AG1993 Uzbekistan gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,122,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Uzbekistan,1989,0.282,,gross,pc,FALSE,Milanovic1998 Uzbekistan gross pc,Milanovic 1998,182,https://books.google.com/books?id=cQl9xbuhvNkC
-Uzbekistan,1989,0.28,,disp,pc,FALSE,Transmonee Uzbekistan disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
 Uzbekistan,1990,0.315,,gross,pc,,AG1993 Uzbekistan gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,122,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Uzbekistan,1993,0.333,,con,pc,,FR2008 Uzbekistan con pc,Ferreira and Ravallion 2008,40,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Uzbekistan,1998,0.453,,con,pc,FALSE,MY2006 Uzbekistan con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
