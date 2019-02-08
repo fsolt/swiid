@@ -13336,8 +13336,8 @@ Taiwan,1978,0.29,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Bud
 Taiwan,1979,0.29,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
 Taiwan,1980,0.28,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
 Taiwan,1981,0.28,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1981,0.293,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,1981,0.261,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,1981,0.293,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,1981,0.261,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,1981,0.2335,0.0018,con,ae,FALSE,LIS Taiwan con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1981,0.2515,0.0015,con,hh,FALSE,LIS Taiwan con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1981,0.2265,0.0019,con,oecdm,FALSE,LIS Taiwan con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
@@ -13359,20 +13359,20 @@ Taiwan,1981,0.2739,0.0022,market,oecdm,FALSE,LIS Taiwan market oecdm,LISSY,"",ht
 Taiwan,1981,0.304,0.0021,market,pc,FALSE,LIS Taiwan market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1981,0.2719,0.0022,market,sqrt,FALSE,LIS Taiwan market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1982,0.28,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1982,0.294,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,1982,0.259,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,1982,0.294,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,1982,0.259,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,1983,0.29,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1983,0.293,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,1983,0.264,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,1983,0.293,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,1983,0.264,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,1984,0.29,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1984,0.292,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,1984,0.262,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,1984,0.292,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,1984,0.262,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,1985,0.29,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1985,0.292,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,1985,0.263,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,1985,0.292,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,1985,0.263,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,1986,0.3,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1986,0.291,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,1986,0.265,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,1986,0.291,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,1986,0.265,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,1986,0.2386,0.0019,con,ae,FALSE,LIS Taiwan con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1986,0.2661,0.0019,con,hh,FALSE,LIS Taiwan con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1986,0.2331,0.0019,con,oecdm,FALSE,LIS Taiwan con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
@@ -13394,20 +13394,20 @@ Taiwan,1986,0.2777,0.0022,market,oecdm,FALSE,LIS Taiwan market oecdm,LISSY,"",ht
 Taiwan,1986,0.3009,0.0024,market,pc,FALSE,LIS Taiwan market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1986,0.2748,0.0023,market,sqrt,FALSE,LIS Taiwan market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1987,0.3,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1987,0.286,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,1987,0.263,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,1987,0.286,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,1987,0.263,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,1988,0.3,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1988,0.293,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,1988,0.268,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,1988,0.293,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,1988,0.268,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,1989,0.3,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1989,0.291,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,1989,0.266,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,1989,0.291,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,1989,0.266,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,1990,0.31,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1990,0.298,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,1990,0.274,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,1990,0.298,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,1990,0.274,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,1991,0.31,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1991,0.3,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,1991,0.274,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,1991,0.3,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,1991,0.274,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,1991,0.2552,0.0023,con,ae,FALSE,LIS Taiwan con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1991,0.2809,0.0022,con,hh,FALSE,LIS Taiwan con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1991,0.2506,0.0021,con,oecdm,FALSE,LIS Taiwan con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
@@ -13429,17 +13429,17 @@ Taiwan,1991,0.2868,0.002,market,oecdm,FALSE,LIS Taiwan market oecdm,LISSY,"",htt
 Taiwan,1991,0.3061,0.0023,market,pc,FALSE,LIS Taiwan market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1991,0.281,0.0021,market,sqrt,FALSE,LIS Taiwan market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1992,0.31,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1992,0.292,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,1992,0.271,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,1992,0.292,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,1992,0.271,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,1993,0.32,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1993,0.293,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,1993,0.272,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,1993,0.293,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,1993,0.272,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,1994,0.32,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1994,0.29,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,1994,0.273,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,1994,0.29,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,1994,0.273,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,1995,0.32,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1995,0.293,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,1995,0.273,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,1995,0.293,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,1995,0.273,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,1995,0.2554,0.002,con,ae,FALSE,LIS Taiwan con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1995,0.296,0.002,con,hh,FALSE,LIS Taiwan con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1995,0.2504,0.0017,con,oecdm,FALSE,LIS Taiwan con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
@@ -13461,11 +13461,11 @@ Taiwan,1995,0.3179,0.0022,market,oecdm,FALSE,LIS Taiwan market oecdm,LISSY,"",ht
 Taiwan,1995,0.3358,0.0021,market,pc,FALSE,LIS Taiwan market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1995,0.3138,0.002,market,sqrt,FALSE,LIS Taiwan market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1996,0.32,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1996,0.29,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,1996,0.27,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,1996,0.29,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,1996,0.27,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,1997,0.32,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1997,0.292,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,1997,0.271,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,1997,0.292,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,1997,0.271,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,1997,0.239,0.0019,con,ae,FALSE,LIS Taiwan con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1997,0.2865,0.0019,con,hh,FALSE,LIS Taiwan con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1997,0.2339,0.002,con,oecdm,FALSE,LIS Taiwan con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
@@ -13487,14 +13487,14 @@ Taiwan,1997,0.302,0.0022,market,oecdm,FALSE,LIS Taiwan market oecdm,LISSY,"",htt
 Taiwan,1997,0.3189,0.0026,market,pc,FALSE,LIS Taiwan market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1997,0.2996,0.0025,market,sqrt,FALSE,LIS Taiwan market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,1998,0.32,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1998,0.295,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,1998,0.273,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,1998,0.295,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,1998,0.273,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,1999,0.33,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,1999,0.292,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,1999,0.271,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,1999,0.292,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,1999,0.271,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,2000,0.33,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2000,0.294,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,2000,0.273,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,2000,0.294,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,2000,0.273,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,2000,0.2342,0.0018,con,ae,FALSE,LIS Taiwan con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2000,0.2916,0.002,con,hh,FALSE,LIS Taiwan con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2000,0.2295,0.0019,con,oecdm,FALSE,LIS Taiwan con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
@@ -13516,20 +13516,20 @@ Taiwan,2000,0.3084,0.0023,market,oecdm,FALSE,LIS Taiwan market oecdm,LISSY,"",ht
 Taiwan,2000,0.3256,0.0023,market,pc,FALSE,LIS Taiwan market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2000,0.3058,0.0023,market,sqrt,FALSE,LIS Taiwan market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2001,0.35,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2001,0.312,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,2001,0.295,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,2001,0.312,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,2001,0.295,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,2002,0.35,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2002,0.313,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,2002,0.296,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,2002,0.313,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,2002,0.296,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,2003,0.34,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2003,0.306,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,2003,0.29,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,2003,0.306,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,2003,0.29,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,2004,0.34,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2004,0.301,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,2004,0.284,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,2004,0.301,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,2004,0.284,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,2005,0.34,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2005,0.3,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,2005,0.284,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,2005,0.3,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,2005,0.284,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,2005,0.2265,0.0017,con,ae,FALSE,LIS Taiwan con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2005,0.2888,0.0019,con,hh,FALSE,LIS Taiwan con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2005,0.223,0.0019,con,oecdm,FALSE,LIS Taiwan con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
@@ -13551,11 +13551,11 @@ Taiwan,2005,0.3249,0.0024,market,oecdm,FALSE,LIS Taiwan market oecdm,LISSY,"",ht
 Taiwan,2005,0.3375,0.0022,market,pc,FALSE,LIS Taiwan market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2005,0.3235,0.0025,market,sqrt,FALSE,LIS Taiwan market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2006,0.34,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2006,0.295,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,2006,0.281,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,2006,0.295,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,2006,0.281,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,2007,0.34,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2007,0.296,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,2007,0.284,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,2007,0.296,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,2007,0.284,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,2007,0.2126,0.0016,con,ae,FALSE,LIS Taiwan con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2007,0.2814,0.0019,con,hh,FALSE,LIS Taiwan con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2007,0.2098,0.0015,con,oecdm,FALSE,LIS Taiwan con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
@@ -13577,14 +13577,14 @@ Taiwan,2007,0.329,0.0023,market,oecdm,FALSE,LIS Taiwan market oecdm,LISSY,"",htt
 Taiwan,2007,0.3392,0.0026,market,pc,FALSE,LIS Taiwan market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2007,0.3285,0.0024,market,sqrt,FALSE,LIS Taiwan market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2008,0.34,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2008,0.3,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,2008,0.284,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,2008,0.3,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,2008,0.284,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,2009,0.35,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2009,0.302,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,2009,0.286,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,2009,0.302,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,2009,0.286,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,2010,0.34,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2010,0.296,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,2010,0.283,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,2010,0.296,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,2010,0.283,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,2010,0.22,0.0016,con,ae,FALSE,LIS Taiwan con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2010,0.2877,0.0016,con,hh,FALSE,LIS Taiwan con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2010,0.2172,0.0018,con,oecdm,FALSE,LIS Taiwan con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
@@ -13606,14 +13606,14 @@ Taiwan,2010,0.3303,0.0024,market,oecdm,FALSE,LIS Taiwan market oecdm,LISSY,"",ht
 Taiwan,2010,0.34,0.0025,market,pc,FALSE,LIS Taiwan market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2010,0.3289,0.0024,market,sqrt,FALSE,LIS Taiwan market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2011,0.34,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2011,0.296,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,2011,0.283,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,2011,0.296,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,2011,0.283,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,2012,0.34,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2012,0.29,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,2012,0.276,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,2012,0.29,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,2012,0.276,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,2013,0.34,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2013,0.288,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,2013,0.273,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,2013,0.288,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,2013,0.273,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,2013,0.2186,0.0018,con,ae,FALSE,LIS Taiwan con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2013,0.2896,0.0019,con,hh,FALSE,LIS Taiwan con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2013,0.216,0.0017,con,oecdm,FALSE,LIS Taiwan con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
@@ -13635,14 +13635,14 @@ Taiwan,2013,0.334,0.0023,market,oecdm,FALSE,LIS Taiwan market oecdm,LISSY,"",htt
 Taiwan,2013,0.3443,0.0023,market,pc,FALSE,LIS Taiwan market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2013,0.3323,0.0024,market,sqrt,FALSE,LIS Taiwan market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2014,0.34,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2014,0.282,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,2014,0.271,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,2014,0.282,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,2014,0.271,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,2015,0.34,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2015,0.279,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,2015,0.27,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,2015,0.279,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,2015,0.27,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,2016,0.34,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2016,0.278,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,2016,0.268,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,2016,0.278,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,2016,0.268,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Taiwan,2016,0.2111,0.0018,con,ae,FALSE,LIS Taiwan con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2016,0.2868,0.0017,con,hh,FALSE,LIS Taiwan con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2016,0.2089,0.0015,con,oecdm,FALSE,LIS Taiwan con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
@@ -13664,8 +13664,8 @@ Taiwan,2016,0.3347,0.0022,market,oecdm,FALSE,LIS Taiwan market oecdm,LISSY,"",ht
 Taiwan,2016,0.3416,0.0024,market,pc,FALSE,LIS Taiwan market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2016,0.3355,0.0021,market,sqrt,FALSE,LIS Taiwan market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/tw.txt
 Taiwan,2017,0.34,,disp,hh,FALSE,DGBAS disp hh,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L
-Taiwan,2017,0.277,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
-Taiwan,2017,0.27,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/106/a11/Year05.xls
+Taiwan,2017,0.277,,disp,pc,FALSE,DGBAS disp pc,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
+Taiwan,2017,0.27,,disp,sqrt,FALSE,DGBAS disp sqrt,"Taiwan Directorate General of Budget, Accounting, and Statistics","",http://win.dgbas.gov.tw/fies/doc/result/107/a11/Year05.xls
 Tajikistan,1988,0.318,,gross,pc,,AG1993 Tajikistan gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,122,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Tajikistan,1989,0.281,,disp,pc,FALSE,Transmonee Tajikistan disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
 Tajikistan,1990,0.334,,gross,pc,,AG1993 Tajikistan gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,122,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
