@@ -144,6 +144,9 @@ res_stata <- res %>% select(country, year,
 
 haven::write_dta(res_stata, "data/for_stata.dta", version = 12)   # for format_stata.do
 RStata::stata("R/format_stata.do")    # see https://github.com/lbraglia/RStata for setup instructions
+file.copy(from = "data/swiid8_0.dta", 
+          to = "vignette/swiid8_0.dta",
+          overwrite = TRUE)
 
 # R formatted
 swiid <- list()
