@@ -11,6 +11,10 @@ Albania ,2005,0.296,,con,pc,,Myftaraj 2010 con pc,Myftaraj 2010,88,http://www.jo
 Algeria,1995,0.353,,con,pc,,FR2008 Algeria con pc,Ferreira and Ravallion 2008,35,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Algeria,1988,0.402,,con,pc,,Shaban2016 Algeria con pc,Povcalnet; Shaban 2016,196,https://link.springer.com/chapter/10.1057/9781137554598_6
 Algeria,1995,0.353,,con,pc,,Shaban2016 Algeria con pc,Povcalnet; Shaban 2016,196,https://link.springer.com/chapter/10.1057/9781137554598_6
+Andorra,2001,0.2646,,con,ae,,DE Andorra con ae,Departament d'Estadistica Andorra 2004,22,https://www.estadistica.ad/serveiestudis/publicacions/Publicacions/Pobresa.pdf
+Andorra,2002,0.2676,,con,ae,,DE Andorra con ae,Departament d'Estadistica Andorra 2004,22,https://www.estadistica.ad/serveiestudis/publicacions/Publicacions/Pobresa.pdf
+Andorra,2003,0.2721,,con,ae,,DE Andorra con ae,Departament d'Estadistica Andorra 2004,22,https://www.estadistica.ad/serveiestudis/publicacions/Publicacions/Pobresa.pdf
+Andorra,2016,0.2796,,con,ae,,DE Andorra con ae,Departament d'Estadistica Andorra 2018,50,https://www.estadistica.ad/serveiestudis/publicacions/Publicacions/Prestacions%20socials.pdf
 Angola,2009,0.43,,con,pc,,INE Angola con pc,Instituto Nacional de Estati_stica Angola 2010,5,http://www.governo.gov.ao/verpublicacao.aspx?id=932
 Angola,2009,0.55,,gross,pc,,INE Angola disp pc,Instituto Nacional de Estati_stica Angola 2010,5,http://www.governo.gov.ao/verpublicacao.aspx?id=932
 Anguilla,2002,0.31,,con,pc,,MM2009 Anguilla con pc,Mendoza and Machado 2009,112,http://www.cepal.org/publicaciones/xml/3/38253/LCARL.245part2.pdf
@@ -450,6 +454,7 @@ Denmark,1987,0.203,,disp,ae,TRUE,W1999 Denmark disp ae 1,Wagstaff et al. 1999,82
 Denmark,1987,0.3023,,gross,ae,TRUE,W1999 Denmark gross ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 Djibouti,1996,0.378,,con,pc,,Hassine2015 Djibouti con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Djibouti,2002,0.399,,con,pc,,Hassine2015 Djibouti con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
+Dominica,2008,0.4442,,con,ae,,KC2010 con ae,Kairi Consultants 2010,45,https://web.archive.org/web/20141006130711/https://www.caribank.org/uploads/publications-reports/economics-statistics/country-poverty-assessment-reports/Dominica+CPA+-+Main+Report+Final+(Submitted).pdf
 Dominica,2010,0.44,,con,pc,,SALISES 2012 Dominica con pc,SALISES 2012,27,http://www.caribank.org/uploads/2012/12/Barbados-CALC-Volume-1-MainReport-FINAL-Dec-2012.pdf
 Dominica,2002,0.35,,con,hh,,TW2002 Dominica con hh,Thomas and Wint 2002; Canterbury 2005,861,http://dx.doi.org/10.1080/02255189.2005.9669090 
 Ecuador,1998,0.443,,con,pc,,INEC con pc,Instituto Nacional de Estadistica y Censos 2015,98,http://www.ecuadorencifras.gob.ec//documentos/web-inec/Bibliotecas/Libros/reportePobreza.pdf
@@ -1364,6 +1369,14 @@ Morocco,1999,0.39,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 
 Morocco,2001,0.406,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,www.hcp.ma/file/174377
 Morocco,2007,0.407,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,www.hcp.ma/file/174377
 Morocco,2014,0.388,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,www.hcp.ma/file/174377
+Mozambique,1997,0.373,,con,sqrt,,GT2017 con sqrt,Grand地 and Tarp 2017,23,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
+Mozambique,2003,0.405,,con,sqrt,,GT2017 con sqrt,Grand地 and Tarp 2017,23,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
+Mozambique,2009,0.397,,con,sqrt,,GT2017 con sqrt,Grand地 and Tarp 2017,23,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
+Mozambique,2015,0.439,,con,sqrt,,GT2017 con sqrt,Grand地 and Tarp 2017,23,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
+Mozambique,1997,0.397,0.006,con,pc,,GT2017 con sqrt,Grand地 and Tarp 2017,18,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
+Mozambique,2003,0.415,0.008,con,pc,,GT2017 con sqrt,Grand地 and Tarp 2017,18,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
+Mozambique,2009,0.415,0.007,con,pc,,GT2017 con sqrt,Grand地 and Tarp 2017,18,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
+Mozambique,2015,0.468,0.006,con,pc,,GT2017 con sqrt,Grand地 and Tarp 2017,18,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
 Mozambique,2003,0.415,0.013,con,pc,FALSE,AJT2010 Mozambique con,"Arndt, Jones, and Tarp 2010",57,http://curis.ku.dk/ws/files/33629587/Third_National_Poverty_Assessment.pdf
 Mozambique,2009,0.414,0.009,con,pc,FALSE,AJT2010 Mozambique con,"Arndt, Jones, and Tarp 2010",57,http://curis.ku.dk/ws/files/33629587/Third_National_Poverty_Assessment.pdf
 Myanmar,2010,0.29,,con ,pc,FALSE,WRM2015 Myanmar con pc,"Warr, Rasphone, and Menon 2015",7,https://www.adb.org/sites/default/files/publication/176031/ewp-461.pdf
@@ -1479,6 +1492,9 @@ Pakistan,1971,0.328,,disp,hh,,van Ginneken1976 Pakistan disp hh,Tabatabai 1996; 
 Pakistan,1990,0.332,,con,pc,,ZKM2014 Pakistan con pc,"Zhuang, Kanbur, and Maligalig 2014",24,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA24
 Pakistan,2007,0.3,,con,pc,,ZKM2014 Pakistan con pc,"Zhuang, Kanbur, and Maligalig 2014",24,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA24
 Palau,2006,0.42,,con,pc,,ZKM2014 Palau con pc,"Zhuang, Kanbur, and Maligalig 2014",25,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA25
+Palau,2014,0.51,,gross,hh,FALSE,OPS Palau gross hh,Palau Office of Planning and Statistics 2016,69,https://www.palaugov.pw/wp-content/uploads/2016/04/2014-ROP-HIES.pdf
+Palau,2014,0.53,,gross,hh,TRUE,OPS Palau gross hh,Palau Office of Planning and Statistics 2016,69,https://www.palaugov.pw/wp-content/uploads/2016/04/2014-ROP-HIES.pdf
+Palau,2014,0.43,,con,hh,FALSE,OPS Palau con hh,Palau Office of Planning and Statistics 2016,69,https://www.palaugov.pw/wp-content/uploads/2016/04/2014-ROP-HIES.pdf
 Palestine,1996,0.353,,con,pc,,Hassine2015 Palestine con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Palestine,1997,0.345,,con,pc,,Hassine2015 Palestine con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Palestine,1998,0.352,,con,pc,,Hassine2015 Palestine con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
