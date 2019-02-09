@@ -22,6 +22,10 @@ Algeria,1995,0.353,,con,pc,FALSE,Povcalnet Algeria con pc 1,World Bank Povcalnet
 Algeria,1995,0.353,,con,pc,,Shaban2016 Algeria con pc,Povcalnet; Shaban 2016,196,https://link.springer.com/chapter/10.1057/9781137554598_6
 Algeria,2005,0.352,,con,pc,,GIDD Algeria con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
 Algeria,2011,0.276,,con,pc,FALSE,Povcalnet Algeria con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Andorra,2001,0.2646,,con,ae,,DE Andorra con ae,Departament d'Estadistica Andorra 2004,22,https://www.estadistica.ad/serveiestudis/publicacions/Publicacions/Pobresa.pdf
+Andorra,2002,0.2676,,con,ae,,DE Andorra con ae,Departament d'Estadistica Andorra 2004,22,https://www.estadistica.ad/serveiestudis/publicacions/Publicacions/Pobresa.pdf
+Andorra,2003,0.2721,,con,ae,,DE Andorra con ae,Departament d'Estadistica Andorra 2004,22,https://www.estadistica.ad/serveiestudis/publicacions/Publicacions/Pobresa.pdf
+Andorra,2016,0.2796,,con,ae,,DE Andorra con ae,Departament d'Estadistica Andorra 2018,50,https://www.estadistica.ad/serveiestudis/publicacions/Publicacions/Prestacions%20socials.pdf
 Angola,2000,0.52,,con,pc,FALSE,Povcalnet Angola con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Angola,2000,0.5015,,con,sqrt,FALSE,World Bank Africa Poverty Database Angola con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
 Angola,2005,0.581,,con,pc,,GIDD Angola con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
@@ -3677,6 +3681,7 @@ Djibouti,2005,0.396,,con,pc,,GIDD Djibouti con pc,"Ackah, Bussolo, De Hoyos, and
 Djibouti,2012,0.451,,con,pc,FALSE,Povcalnet Djibouti con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Djibouti,2013,0.441,,con,pc,FALSE,Povcalnet Djibouti con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Dominica,2002,0.35,,con,hh,,TW2002 Dominica con hh,Thomas and Wint 2002; Canterbury 2005,861,http://dx.doi.org/10.1080/02255189.2005.9669090
+Dominica,2008,0.4442,,con,ae,,KC2010 con ae,Kairi Consultants 2010,45,https://web.archive.org/web/20141006130711/https://www.caribank.org/uploads/publications-reports/economics-statistics/country-poverty-assessment-reports/Dominica+CPA+-+Main+Report+Final+(Submitted).pdf
 Dominica,2010,0.44,,con,pc,,SALISES 2012 Dominica con pc,SALISES 2012,27,http://www.caribank.org/uploads/2012/12/Barbados-CALC-Volume-1-MainReport-FINAL-Dec-2012.pdf
 Dominican Republic,1986,0.478,,gross,pc,FALSE,Povcalnet Dominican Republic gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Dominican Republic,1989,0.505,,gross,pc,FALSE,Povcalnet Dominican Republic gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
@@ -7642,13 +7647,37 @@ Italy,2016,0.373,,gross,sqrt,FALSE,"OECD Italy gross sqrt, current def, 2012 met
 Italy,2016,0.517,,market,sqrt,FALSE,"OECD Italy market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Jamaica,1988,0.43200000000000005,,con,pc,FALSE,Povcalnet Jamaica con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Jamaica,1990,0.41100000000000003,,con,pc,FALSE,Povcalnet Jamaica con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Jamaica,1991,0.3969,,con,pc,,Statinja con pc,Statistical Institute of Jamaica,"",http://statinja.gov.jm/living_conditions_poverty.aspx
+Jamaica,1992,0.3752,,con,pc,,Statinja con pc,Statistical Institute of Jamaica,"",http://statinja.gov.jm/living_conditions_poverty.aspx
 Jamaica,1993,0.35700000000000004,,con,pc,FALSE,Povcalnet Jamaica con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Jamaica,1993,0.3718,,con,pc,,Statinja con pc,Statistical Institute of Jamaica,"",http://statinja.gov.jm/living_conditions_poverty.aspx
+Jamaica,1994,0.3816,,con,pc,,Statinja con pc,Statistical Institute of Jamaica,"",http://statinja.gov.jm/living_conditions_poverty.aspx
+Jamaica,1995,0.3624,,con,pc,,Statinja con pc,Statistical Institute of Jamaica,"",http://statinja.gov.jm/living_conditions_poverty.aspx
 Jamaica,1996,0.40399999999999997,,con,pc,FALSE,Povcalnet Jamaica con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Jamaica,1996,0.3604,,con,pc,,Statinja con pc,Statistical Institute of Jamaica,"",http://statinja.gov.jm/living_conditions_poverty.aspx
+Jamaica,1997,0.4164,,con,pc,,Statinja con pc,Statistical Institute of Jamaica,"",http://statinja.gov.jm/living_conditions_poverty.aspx
+Jamaica,1998,0.3721,,con,pc,,Statinja con pc,Statistical Institute of Jamaica,"",http://statinja.gov.jm/living_conditions_poverty.aspx
 Jamaica,1999,0.441,,con,pc,FALSE,Povcalnet Jamaica con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Jamaica,1999,0.3794,,con,pc,,Statinja con pc,Statistical Institute of Jamaica,"",http://statinja.gov.jm/living_conditions_poverty.aspx
+Jamaica,2000,0.3789,,con,pc,,Statinja con pc,Statistical Institute of Jamaica,"",http://statinja.gov.jm/living_conditions_poverty.aspx
 Jamaica,2001,0.398,,con,pc,,GIDD Jamaica con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
+Jamaica,2001,0.3843,,con,pc,,Statinja con pc,Statistical Institute of Jamaica,"",http://statinja.gov.jm/living_conditions_poverty.aspx
 Jamaica,2001,0.38,,con,hh,,TW2002 Jamaica con hh,Thomas and Wint 2002; Canterbury 2005,861,http://dx.doi.org/10.1080/02255189.2005.9669090
 Jamaica,2002,0.483,,con,pc,FALSE,Povcalnet Jamaica con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Jamaica,2002,0.3961,,con,pc,,Statinja con pc,Statistical Institute of Jamaica,"",http://statinja.gov.jm/living_conditions_poverty.aspx
+Jamaica,2003,0.3791,,con,pc,,Statinja con pc,Statistical Institute of Jamaica,"",http://statinja.gov.jm/living_conditions_poverty.aspx
 Jamaica,2004,0.455,,con,pc,FALSE,Povcalnet Jamaica con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Jamaica,2004,0.3826,,con,pc,,Statinja con pc,Statistical Institute of Jamaica,"",http://statinja.gov.jm/living_conditions_poverty.aspx
+Jamaica,2005,0.381,,con,pc,,Statinja con pc,Statistical Institute of Jamaica,"",http://statinja.gov.jm/living_conditions_poverty.aspx
+Jamaica,2006,0.3826,,con,pc,,Statinja con pc,Statistical Institute of Jamaica,"",http://statinja.gov.jm/living_conditions_poverty.aspx
+Jamaica,2007,0.3675,,con,pc,,Statinja con pc,Statistical Institute of Jamaica,"",http://statinja.gov.jm/living_conditions_poverty.aspx
+Jamaica,2008,0.371,,con,pc,,Statinja con pc,Statistical Institute of Jamaica,"",http://statinja.gov.jm/living_conditions_poverty.aspx
+Jamaica,2009,0.3667,,con,pc,,Statinja con pc,Statistical Institute of Jamaica,"",http://statinja.gov.jm/living_conditions_poverty.aspx
+Jamaica,2010,0.3813,,con,pc,,Statinja con pc,Statistical Institute of Jamaica,"",http://statinja.gov.jm/living_conditions_poverty.aspx
+Jamaica,2012,0.3748,,con,pc,,Statinja con pc,Statistical Institute of Jamaica,"",http://statinja.gov.jm/living_conditions_poverty.aspx
+Jamaica,2013,0.4004,,con,pc,,Statinja con pc,Statistical Institute of Jamaica,"",http://statinja.gov.jm/living_conditions_poverty.aspx
+Jamaica,2014,0.3637,,con,pc,,Statinja con pc,Statistical Institute of Jamaica,"",http://statinja.gov.jm/living_conditions_poverty.aspx
+Jamaica,2015,0.3689,,con,pc,,Statinja con pc,Statistical Institute of Jamaica,"",http://statinja.gov.jm/living_conditions_poverty.aspx
 Japan,1961,0.39,,market,hh,,Tachibanaki 2006 market hh,Tachibanaki 2006,3,http://doi.org/10.1111/j.1468-5876.2006.00355.x
 Japan,1962,0.373,,market,hh,,MT1992 Japan market hh,Tabatabai 1996; Mizoguchi and Terasaki 1992,126,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Japan,1963,0.357,,market,hh,,MT1992 Japan market hh,Tabatabai 1996; Mizoguchi and Terasaki 1992,126,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -9341,14 +9370,22 @@ Morocco,2013,0.395,,con,pc,FALSE,Povcalnet Morocco con pc 2,World Bank Povcalnet
 Morocco,2014,0.388,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,www.hcp.ma/file/174377
 Mozambique,1996,0.536,,con,pc,FALSE,Povcalnet Mozambique con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Mozambique,1996,0.43770000000000003,,con,sqrt,FALSE,World Bank Africa Poverty Database Mozambique con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
+Mozambique,1997,0.373,,con,sqrt,,GT2017 con sqrt,Grand地 and Tarp 2017,23,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
+Mozambique,1997,0.397,0.006,con,pc,,GT2017 con sqrt,Grand地 and Tarp 2017,18,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
 Mozambique,2002,0.47,,con,pc,FALSE,Povcalnet Mozambique con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Mozambique,2002,0.4679,,con,sqrt,FALSE,World Bank Africa Poverty Database Mozambique con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
 Mozambique,2003,0.415,0.013,con,pc,FALSE,AJT2010 Mozambique con,"Arndt, Jones, and Tarp 2010",57,http://curis.ku.dk/ws/files/33629587/Third_National_Poverty_Assessment.pdf
+Mozambique,2003,0.405,,con,sqrt,,GT2017 con sqrt,Grand地 and Tarp 2017,23,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
+Mozambique,2003,0.415,0.008,con,pc,,GT2017 con sqrt,Grand地 and Tarp 2017,18,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
 Mozambique,2005,0.413,,con,pc,,GIDD Mozambique con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
 Mozambique,2008,0.456,,con,pc,FALSE,Povcalnet Mozambique con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Mozambique,2009,0.414,0.009,con,pc,FALSE,AJT2010 Mozambique con,"Arndt, Jones, and Tarp 2010",57,http://curis.ku.dk/ws/files/33629587/Third_National_Poverty_Assessment.pdf
+Mozambique,2009,0.397,,con,sqrt,,GT2017 con sqrt,Grand地 and Tarp 2017,23,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
+Mozambique,2009,0.415,0.007,con,pc,,GT2017 con sqrt,Grand地 and Tarp 2017,18,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
 Mozambique,2009,0.44049999999999995,,con,sqrt,FALSE,World Bank Africa Poverty Database Mozambique con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
 Mozambique,2014,0.54,,con,pc,FALSE,Povcalnet Mozambique con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
+Mozambique,2015,0.439,,con,sqrt,,GT2017 con sqrt,Grand地 and Tarp 2017,23,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
+Mozambique,2015,0.468,0.006,con,pc,,GT2017 con sqrt,Grand地 and Tarp 2017,18,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
 Myanmar,2010,0.29,,con,pc,FALSE,WRM2015 Myanmar con pc,"Warr, Rasphone, and Menon 2015",7,https://www.adb.org/sites/default/files/publication/176031/ewp-461.pdf
 Myanmar,2015,0.381,,con,pc,FALSE,Povcalnet Myanmar con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Namibia,1993,0.743,,con,pc,,FR2008 Namibia con pc,Ferreira and Ravallion 2008,38,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
@@ -10089,6 +10126,9 @@ Pakistan,2011,0.309,,con,pc,FALSE,Povcalnet Pakistan con pc 1,World Bank Povcaln
 Pakistan,2013,0.307,,con,pc,FALSE,Povcalnet Pakistan con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Pakistan,2015,0.335,,con,pc,FALSE,Povcalnet Pakistan con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Palau,2006,0.42,,con,pc,,ZKM2014 Palau con pc,"Zhuang, Kanbur, and Maligalig 2014",25,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA25
+Palau,2014,0.43,,con,hh,FALSE,OPS Palau con hh,Palau Office of Planning and Statistics 2016,69,https://www.palaugov.pw/wp-content/uploads/2016/04/2014-ROP-HIES.pdf
+Palau,2014,0.51,,gross,hh,FALSE,OPS Palau gross hh,Palau Office of Planning and Statistics 2016,69,https://www.palaugov.pw/wp-content/uploads/2016/04/2014-ROP-HIES.pdf
+Palau,2014,0.53,,gross,hh,TRUE,OPS Palau gross hh,Palau Office of Planning and Statistics 2016,69,https://www.palaugov.pw/wp-content/uploads/2016/04/2014-ROP-HIES.pdf
 Palestinian Territories,1996,0.353,,con,pc,,Hassine2015 Palestine con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Palestinian Territories,1997,0.345,,con,pc,,Hassine2015 Palestine con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Palestinian Territories,1998,0.352,,con,pc,,Hassine2015 Palestine con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
