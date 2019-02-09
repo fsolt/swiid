@@ -1008,6 +1008,26 @@ istat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw
             link = "http://dati.istat.it/Index.aspx?DataSetCode=DCCV_INDCONSUMI&Lang=en")
 
 
+# Statinja (update file)
+# http://statinja.gov.jm/living_conditions_poverty.aspx
+# Incidence of Poverty > Gini Coefficient, Jamaica > Download > csv
+
+statinja <- read_csv("data-raw/statinja.csv") %>% 
+  filter(`Series title` == "Old Gini") %>%   # consumption per capita https://www.pioj.gov.jm/Portals/0/Social_Sector/Executive%20SummaryFinal.pdf at XIII
+  select_if(is.numeric) %>% 
+  gather(key = date, value = gini) %>% 
+  transmute(country = "Jamaica",
+            year = str_extract(date, "\\d{4}"),
+            gini = gini,
+            gini_se = NA,
+            welfare_def = "con",
+            equiv_scale = "pc",
+            series = paste("Statinja", welfare_def, equiv_scale),
+            source1 = "Statistical Institute of Jamaica",
+            page = "",
+            link = "http://statinja.gov.jm/living_conditions_poverty.aspx")
+
+
 # Kazakhstan Committee on Statistics (update link)
 kazstat_page <- "http://stat.gov.kz/getImg?id=ESTAT097178"
 download.file(kazstat_page, "data-raw/kazstat.xls")
@@ -2015,7 +2035,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
                      transmonee, ceq1, afr_gini, wb,
                      armstat, abs, inebo, ipea, belstat, statcan, dane, ineccr, dkstat,
                      capmas, statee, statfi, insee, geostat,
-                     stathk, bpsid, amar, cso_ie, istat, kazstat, kostat, nsck,
+                     stathk, bpsid, amar, cso_ie, istat, statinja, kazstat, kostat, nsck,
                      epumy, nbs, monstat, snz, nzmsd, ssb, dgeec, psa,
                      rosstat, ru_lis_old, singstat, ssi, ine, statslk, scb, 
                      tdgbas, nso_thailand, nesdb, turkstat, ons, ifs, cbo, uscb, uine, inev, gso_vn,
