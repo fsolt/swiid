@@ -1017,7 +1017,7 @@ statinja <- read_csv("data-raw/statinja.csv") %>%
   select_if(is.numeric) %>% 
   gather(key = date, value = gini) %>% 
   transmute(country = "Jamaica",
-            year = str_extract(date, "\\d{4}"),
+            year = as.numeric(str_extract(date, "\\d{4}")),
             gini = gini,
             gini_se = NA,
             welfare_def = "con",
