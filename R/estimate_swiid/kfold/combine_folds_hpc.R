@@ -5,12 +5,12 @@ output_path <- "/Volumes/fsolt/swiid_kfold/output"
   str_extract("\\d+(?=\\.)") %>%
   unique())
 output_files <- list.files(output_path) %>% 
-  str_subset(output_file_ids %>% nth(length(output_file_ids)))
+  str_subset(output_file_ids %>% na.omit %>% str_sort(numeric = TRUE) %>% nth(-1))
 
 kfold_output <- map_dfr(output_files, function(output_file) {
   if (readLines(file.path(output_path, output_file)) %>% 
-     paste(collapse = "") %>% 
-     str_detect("structure")) {
+      paste(collapse = "") %>% 
+      str_detect("row\\.names")) {
     (readLines(file.path(output_path, output_file)) %>% 
        paste(collapse = "") %>% 
        str_extract("structure.*L\\)\\)") %>% 
