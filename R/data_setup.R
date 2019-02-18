@@ -1100,9 +1100,12 @@ nsck <- read_excel("data-raw/nsck.xls") %>%
             link = nsck_link)
 
 
-# Economy Planning Unit of Malaysia (update link--http://www.epu.gov.my/ms/search/node/gini)
+# Economy Planning Unit of Malaysia (update link--http://epu.gov.my/ms/search/node/gini)
 epumy_link <- "http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf"
-download.file(epumy_link, "data-raw/epumy.pdf")
+tryCatch(download.file(epumy_link, "data-raw/epumy.pdf"),
+         error = function(e) {
+           download.file("https://github.com/fsolt/swiid/raw/master/data-raw/epumy.pdf", "data-raw/epumy.pdf")
+         })
 
 epumy <- extract_tables("data-raw/epumy.pdf") %>% 
   first() %>% 
