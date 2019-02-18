@@ -462,7 +462,7 @@ armstat <- arm_reports %>%
 rm(arm_page, arm_reports)
 
 
-# Australian Bureau of Statistics (update abs_link; not included in abs api as of 2017-05)
+# Australian Bureau of Statistics (update abs_link; not included in abs api as of 2019-02)
 # confirm latest release at: http://www.abs.gov.au/AUSSTATS/abs@.nsf/second+level+view?ReadForm&prodno=6523.0&viewtitle=Household%20Income%20and%20Wealth,%20Australia~2013-14~Latest~04/09/2015&&tabname=Past%20Future%20Issues&prodno=6523.0&issue=2013-14&num=&view=&
 # latest release link > downloads tab > copy link to download xls for "Household Income and Income Distribution, Australia, 1994–95 to [year]"
 
@@ -503,7 +503,7 @@ rm(abs_de, abs_gh)
 
 # Instituto Naciónal de Estadística de Bolivia (update file)
 # https://www.ine.gob.bo/index.php/podreza-desarrollo/introduccion-2
-# > Cuadros Estadisticos (tab) > all years > Generar
+# > Cuadros Estadisticos (tab) > LINEA > all years > Generar
 inebo_link <- "https://www.ine.gob.bo/index.php/podreza-desarrollo/introduccion-2"
 inebo <- read_excel("data-raw/inebo.xlsx", skip = 6) %>% 
   filter(DESCRIPCION=="Bolivia") %>% 
