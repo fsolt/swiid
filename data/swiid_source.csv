@@ -2523,8 +2523,8 @@ Chile,2011,0.44591149,0.0021907,disp,ae,TRUE,SEDLAC Chile disp ae 2,SEDLAC,inter
 Chile,2011,0.44965274,,disp,hh,TRUE,SEDLAC Chile disp hh 2,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Chile,2011,0.46267693,0.00238155,disp,pc,TRUE,SEDLAC Chile disp pc 2,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Chile,2013,0.509,,disp,pc,TRUE,CEPAL Chile disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Chile,2013,0.46680000000000005,,disp,pc,FALSE,CEQ Chile disp pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
-Chile,2013,0.5028,,market,pc,FALSE,CEQ Chile market pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
+Chile,2013,0.46680000000000005,,disp,pc,FALSE,CEQ Chile disp pc,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/01/CEQSI_Jan8_2019.xlsx
+Chile,2013,0.5028,,market,pc,FALSE,CEQ Chile market pc,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/01/CEQSI_Jan8_2019.xlsx
 Chile,2013,0.4538,0.003,disp,ae,FALSE,LIS Chile disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
 Chile,2013,0.4733,0.0028,disp,hh,FALSE,LIS Chile disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
 Chile,2013,0.4464,0.003,disp,oecdm,FALSE,LIS Chile disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/cl.txt
@@ -3730,8 +3730,6 @@ Dominican Republic,2006,0.50198811,0.00478434,disp,ae,TRUE,SEDLAC Dominican Repu
 Dominican Republic,2006,0.51421952,,disp,hh,TRUE,SEDLAC Dominican Republic disp hh 3,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Dominican Republic,2006,0.5180017,0.00504877,disp,pc,TRUE,SEDLAC Dominican Republic disp pc 3,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Dominican Republic,2007,0.556,,disp,pc,TRUE,CEPAL Dominican Republic disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Dominican Republic,2007,0.502,,disp,pc,FALSE,CEQ Dominican Republic disp pc,"Aristy-Escuder, Cabrera, Moreno-Dodson, and Sa_nchez-Mart�n 2017/",41,http://www.commitmentoequity.org/wp-content/uploads/2017/07/CEQ_WP47_AristyEscuder-et-al_Fiscal-Policy-and-Redistribution-in-DR_June-2017.pdf
-Dominican Republic,2007,0.514,,market,pc,FALSE,CEQ Dominican Republic market pc,"Aristy-Escuder, Cabrera, Moreno-Dodson, and Sa_nchez-Mart�n 2017W",41,http://www.commitmentoequity.org/wp-content/uploads/2017/07/CEQ_WP47_AristyEscuder-et-al_Fiscal-Policy-and-Redistribution-in-DR_June-2017.pdf
 Dominican Republic,2007,0.4075,0.0077,con,ae,FALSE,LIS Dominican Republic con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/do.txt
 Dominican Republic,2007,0.4141,0.0061,con,hh,FALSE,LIS Dominican Republic con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/do.txt
 Dominican Republic,2007,0.396,0.007,con,oecdm,FALSE,LIS Dominican Republic con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/do.txt
@@ -5844,8 +5842,8 @@ Guatemala,2006,0.51380747,,disp,hh,TRUE,SEDLAC Guatemala disp hh 1,SEDLAC,gini1,
 Guatemala,2006,0.54549732,0.00476743,disp,pc,TRUE,SEDLAC Guatemala disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Guatemala,2010,0.546,,disp,pc,FALSE,CEQ Guatemala disp pc,"Cabrera, Lustig, and Moran 2014",,http://www.commitmentoequity.org/publications_files/Guatemala/Cabrera_Lustig_Moran_Oct_17_2014.pdf
 Guatemala,2010,0.5509000000000001,,market,pc,FALSE,CEQ Guatemala market pc,Lustig 2015,,http://www.commitmentoequity.org/publications_files/Comparative/CEQWPNo30%20RedisImpactGovntSpendEducHealth%20March%202015.pdf
-Guatemala,2011,0.5031,,disp,pc,FALSE,CEQ Guatemala disp pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
-Guatemala,2011,0.5144,,market,pc,FALSE,CEQ Guatemala market pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
+Guatemala,2011,0.5031,,disp,pc,FALSE,CEQ Guatemala disp pc,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/01/CEQSI_Jan8_2019.xlsx
+Guatemala,2011,0.5144,,market,pc,FALSE,CEQ Guatemala market pc,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/01/CEQSI_Jan8_2019.xlsx
 Guatemala,2011,0.3592,0.0052,con,ae,FALSE,LIS Guatemala con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/gt.txt
 Guatemala,2011,0.3527,0.0042,con,hh,FALSE,LIS Guatemala con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/gt.txt
 Guatemala,2011,0.3455,0.0044,con,oecdm,FALSE,LIS Guatemala con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/gt.txt
@@ -6019,8 +6017,8 @@ Honduras,2010,0.531,,gross,pc,FALSE,Povcalnet Honduras gross pc 2,World Bank Pov
 Honduras,2010,0.51193984,0.00341143,disp,ae,TRUE,SEDLAC Honduras disp ae 4,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Honduras,2010,0.5059858,,disp,hh,TRUE,SEDLAC Honduras disp hh 4,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Honduras,2010,0.53076305,0.00331065,disp,pc,TRUE,SEDLAC Honduras disp pc 4,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
-Honduras,2011,0.5563,,disp,pc,FALSE,CEQ Honduras disp pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
-Honduras,2011,0.5612,,market,pc,FALSE,CEQ Honduras market pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
+Honduras,2011,0.5563,,disp,pc,FALSE,CEQ Honduras disp pc,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/01/CEQSI_Jan8_2019.xlsx
+Honduras,2011,0.5612,,market,pc,FALSE,CEQ Honduras market pc,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/01/CEQSI_Jan8_2019.xlsx
 Honduras,2011,0.562,,gross,pc,FALSE,Povcalnet Honduras gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Honduras,2011,0.54660979,0.0073586,disp,ae,TRUE,SEDLAC Honduras disp ae 4,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Honduras,2011,0.54445914,,disp,hh,TRUE,SEDLAC Honduras disp hh 4,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
@@ -8738,6 +8736,7 @@ Macedonia,2013,0.369,,gross,pc,FALSE,Povcalnet Macedonia gross pc 1,World Bank P
 Macedonia,2014,0.337,,disp,oecdm,TRUE,Eurostat Macedonia disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Macedonia,2014,0.35600000000000004,,gross,pc,FALSE,Povcalnet Macedonia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Macedonia,2015,0.336,,disp,oecdm,TRUE,Eurostat Macedonia disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Macedonia,2016,0.324,,disp,oecdm,TRUE,Eurostat Macedonia disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Madagascar,1962,0.391,,gross,hh,,Pryor1990 Madagascar gross hh,Pryor 1990,26,http://www.jstor.org/stable/1154102
 Madagascar,1980,0.46799999999999997,,con,pc,FALSE,Povcalnet Madagascar con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Madagascar,1980,0.489,,gross,hh,,Pryor1990 Madagascar gross hh,Pryor 1990,26,http://www.jstor.org/stable/1154102
@@ -8766,43 +8765,43 @@ Malawi,2010,0.4424,,con,sqrt,FALSE,World Bank Africa Poverty Database Malawi con
 Malawi,2011,0.452,,con,pc,,NSO Malawi con pc 1,National Statistical Office Malawi 2012,218,http://www.nsomalawi.mw/images/stories/data_on_line/economics/ihs/IHS3/IHS3_Report.pdf
 Malawi,2013,0.39,,con,pc,,NSO Malawi con pc 2,National Statistical Office Malawi 2014,105,http://www.nsomalawi.mw/images/stories/data_on_line/economics/ihs/IHPS%202013/IHPS%20Report.pdf
 Malaysia,1970,0.421,,gross,hh,,Bruton1992 Malaysia gross hh,Tabatabai 1996; Bruton 1992,99,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Malaysia,1970,0.513,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
-Malaysia,1974,0.53,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,1970,0.513,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,https://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,1974,0.53,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,https://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1976,0.499,,gross,hh,,Bruton1992 Malaysia gross hh,Tabatabai 1996; Bruton 1992,99,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Malaysia,1976,0.557,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,1976,0.557,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,https://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1979,0.529,,gross,hh,,Bruton1992 Malaysia gross hh,Tabatabai 1996; Bruton 1992,99,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Malaysia,1979,0.505,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,1979,0.505,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,https://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1980,0.419,,con,hh,,Park1995 Malaysia con hh,Tabatabai 1996; Park 1995,100,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Malaysia,1984,0.508,,gross,hh,,Bruton1992 Malaysia gross hh,Tabatabai 1996; Bruton 1992,99,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Malaysia,1984,0.483,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,1984,0.483,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,https://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1984,0.486,,gross,pc,FALSE,Povcalnet Malaysia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Malaysia,1987,0.456,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,1987,0.456,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,https://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1987,0.47,,gross,pc,FALSE,Povcalnet Malaysia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Malaysia,1989,0.445,,gross,hh,,Bruton1992 Malaysia gross hh,Tabatabai 1996; Bruton 1992,99,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Malaysia,1989,0.446,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,1989,0.446,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,https://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1989,0.462,,gross,pc,FALSE,Povcalnet Malaysia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Malaysia,1992,0.459,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,1992,0.459,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,https://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1992,0.47700000000000004,,gross,pc,FALSE,Povcalnet Malaysia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Malaysia,1995,0.456,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,1995,0.456,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,https://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1995,0.485,,gross,pc,FALSE,Povcalnet Malaysia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Malaysia,1997,0.459,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,1997,0.459,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,https://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,1997,0.491,,gross,pc,FALSE,Povcalnet Malaysia gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Malaysia,1999,0.443,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
-Malaysia,2002,0.461,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
-Malaysia,2004,0.462,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,1999,0.443,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,https://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,2002,0.461,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,https://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,2004,0.462,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,https://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,2004,0.461,,gross,pc,FALSE,Povcalnet Malaysia gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Malaysia,2005,0.377,,con,pc,,GIDD Malaysia con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
-Malaysia,2007,0.441,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,2007,0.441,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,https://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,2007,0.461,,gross,pc,FALSE,Povcalnet Malaysia gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Malaysia,2008,0.455,,gross,pc,FALSE,Povcalnet Malaysia gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Malaysia,2009,0.441,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,2009,0.441,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,https://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,2009,0.462,,gross,pc,,ZKM2014 Malaysia gross pc,"Zhuang, Kanbur, and Maligalig 2014",25,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA25
 Malaysia,2011,0.439,,gross,pc,FALSE,Povcalnet Malaysia gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Malaysia,2012,0.431,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,2012,0.431,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,https://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,2013,0.413,,gross,pc,FALSE,Povcalnet Malaysia gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Malaysia,2014,0.401,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,2014,0.401,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,https://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Malaysia,2015,0.41,,gross,pc,FALSE,Povcalnet Malaysia gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Malaysia,2016,0.399,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
+Malaysia,2016,0.399,,gross,hh,FALSE,EPU Malaysia gross hh,Economy Planning Unit of Malaysia,1,https://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf
 Maldives,2002,0.413,,con,pc,FALSE,Povcalnet Maldives con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Maldives,2003,0.38,,con,pc,,NBS Maldives con pc,National Bureau of Statistics Maldives 2011,35,http://www.planning.gov.mv/en/images/stories/news/2011/June/HIES-Preliminary_Findings-Presentation.pdf
 Maldives,2004,0.374,,con,pc,,ZKM2014 Maldives con pc,"Zhuang, Kanbur, and Maligalig 2014",24,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA24
@@ -9185,6 +9184,8 @@ Mexico,2010,0.44829045,0.00223026,disp,ae,TRUE,SEDLAC Mexico disp ae 1,SEDLAC,in
 Mexico,2010,0.45202621,,disp,hh,TRUE,SEDLAC Mexico disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Mexico,2010,0.47162299,0.00253897,disp,pc,TRUE,SEDLAC Mexico disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Mexico,2012,0.492,,disp,pc,TRUE,CEPAL Mexico disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Mexico,2012,0.4929,,disp,pc,FALSE,CEQ Mexico disp pc,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/01/CEQSI_Jan8_2019.xlsx
+Mexico,2012,0.521,,market,pc,FALSE,CEQ Mexico market pc,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/01/CEQSI_Jan8_2019.xlsx
 Mexico,2012,0.4112,0.0047,con,ae,FALSE,LIS Mexico con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/mx.txt
 Mexico,2012,0.3973,0.0052,con,hh,FALSE,LIS Mexico con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/mx.txt
 Mexico,2012,0.3982,0.0053,con,oecdm,FALSE,LIS Mexico con oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/mx.txt
@@ -9213,6 +9214,8 @@ Mexico,2012,0.4631728,0.00376398,disp,ae,TRUE,SEDLAC Mexico disp ae 1,SEDLAC,int
 Mexico,2012,0.46563752,,disp,hh,TRUE,SEDLAC Mexico disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Mexico,2012,0.48700039,0.00469537,disp,pc,TRUE,SEDLAC Mexico disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Mexico,2014,0.491,,disp,pc,TRUE,CEPAL Mexico disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Mexico,2014,0.4943,,disp,pc,FALSE,CEQ Mexico disp pc,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/01/CEQSI_Jan8_2019.xlsx
+Mexico,2014,0.5277000000000001,,market,pc,FALSE,CEQ Mexico market pc,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/01/CEQSI_Jan8_2019.xlsx
 Mexico,2014,0.459,0.008,disp,sqrt,FALSE,"OECD Mexico disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Mexico,2014,0.478,,market,sqrt,FALSE,"OECD Mexico market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Mexico,2014,0.45799999999999996,,con,pc,FALSE,Povcalnet Mexico con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
@@ -9757,8 +9760,8 @@ Nicaragua,2005,0.4638587,0.00531042,disp,ae,TRUE,SEDLAC Nicaragua disp ae 1,SEDL
 Nicaragua,2005,0.46845272,,disp,hh,TRUE,SEDLAC Nicaragua disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Nicaragua,2005,0.48801903,0.0061295,disp,pc,TRUE,SEDLAC Nicaragua disp pc 1,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Nicaragua,2009,0.478,,disp,pc,TRUE,CEPAL Nicaragua disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Nicaragua,2009,0.468,,disp,pc,FALSE,CEQ Nicaragua disp pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
-Nicaragua,2009,0.48200000000000004,,market,pc,FALSE,CEQ Nicaragua market pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
+Nicaragua,2009,0.468,,disp,pc,FALSE,CEQ Nicaragua disp pc,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/01/CEQSI_Jan8_2019.xlsx
+Nicaragua,2009,0.48200000000000004,,market,pc,FALSE,CEQ Nicaragua market pc,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/01/CEQSI_Jan8_2019.xlsx
 Nicaragua,2009,0.439,,gross,pc,FALSE,Povcalnet Nicaragua gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Nicaragua,2009,0.41717653,0.00385375,disp,ae,TRUE,SEDLAC Nicaragua disp ae 1,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Nicaragua,2009,0.41711715,,disp,hh,TRUE,SEDLAC Nicaragua disp hh 1,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
@@ -10071,6 +10074,7 @@ Norway,2015,0.312,,gross,sqrt,FALSE,"OECD Norway gross sqrt, current def, 2012 m
 Norway,2015,0.432,,market,sqrt,FALSE,"OECD Norway market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Norway,2015,0.275,,gross,pc,FALSE,Povcalnet Norway gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Norway,2015,0.271,,disp,oecdm,TRUE,SSB disp oecdm,Statistics Norway,"",https://www.ssb.no/en/statbank/table/07756/
+Norway,2016,0.261,,disp,oecdm,TRUE,Eurostat Norway disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Norway,2016,0.262,,disp,sqrt,FALSE,"OECD Norway disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Norway,2016,0.303,,gross,sqrt,FALSE,"OECD Norway gross sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Norway,2016,0.428,,market,sqrt,FALSE,"OECD Norway market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -10298,6 +10302,8 @@ Panama,2015,0.508,,gross,pc,FALSE,Povcalnet Panama gross pc 2,World Bank Povcaln
 Panama,2015,0.48714472,0.00375336,disp,ae,TRUE,SEDLAC Panama disp ae 2,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Panama,2015,0.48322391,,disp,hh,TRUE,SEDLAC Panama disp hh 2,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Panama,2015,0.50768368,0.00413596,disp,pc,TRUE,SEDLAC Panama disp pc 2,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
+Panama,2016,0.5339,,disp,pc,FALSE,CEQ Panama disp pc,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/01/CEQSI_Jan8_2019.xlsx
+Panama,2016,0.5547000000000001,,market,pc,FALSE,CEQ Panama market pc,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/01/CEQSI_Jan8_2019.xlsx
 Panama,2016,0.504,,gross,pc,FALSE,Povcalnet Panama gross pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Panama,2016,0.48337163,0.00253232,disp,ae,TRUE,SEDLAC Panama disp ae 2,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Panama,2016,0.47421144,,disp,hh,TRUE,SEDLAC Panama disp hh 2,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
@@ -10482,8 +10488,8 @@ Paraguay,2013,0.46298892,0.00449495,disp,ae,TRUE,SEDLAC Paraguay disp ae 2,SEDLA
 Paraguay,2013,0.4766408,,disp,hh,TRUE,SEDLAC Paraguay disp hh 2,SEDLAC,gini1,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Paraguay,2013,0.48084,0.0047705,disp,pc,TRUE,SEDLAC Paraguay disp pc 2,SEDLAC,intervals pci,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
 Paraguay,2014,0.536,,disp,pc,TRUE,CEPAL Paraguay disp pc 1,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Paraguay,2014,0.5126000000000001,,disp,pc,FALSE,CEQ Paraguay disp pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
-Paraguay,2014,0.5216000000000001,,market,pc,FALSE,CEQ Paraguay market pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
+Paraguay,2014,0.5126000000000001,,disp,pc,FALSE,CEQ Paraguay disp pc,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/01/CEQSI_Jan8_2019.xlsx
+Paraguay,2014,0.5216000000000001,,market,pc,FALSE,CEQ Paraguay market pc,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/01/CEQSI_Jan8_2019.xlsx
 Paraguay,2014,0.511,,gross,pc,TRUE,DGEEC gross pc,"Dirección General de Estadística, Encuestas y Censos 2017",2,https://web.archive.org/web/20180319151156/http://www.dgeec.gov.py/Publicaciones/Biblioteca/diptico%20desigualdad%20ingreso/diptico%20DESIGUALDAD%20DE%20INGRESOS.pdf
 Paraguay,2014,0.507,,gross,pc,FALSE,Povcalnet Paraguay gross pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Paraguay,2014,0.49698724,0.00730527,disp,ae,TRUE,SEDLAC Paraguay disp ae 2,SEDLAC,intervals ei,http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx
@@ -12810,7 +12816,7 @@ Sri Lanka,2006,0.403,,con,pc,,ZKM2014 Sri Lanka con pc,"Zhuang, Kanbur, and Mali
 Sri Lanka,2007,0.41,,con,hh,,Statistics Sri Lanka con hh,Statistics Sri Lanka 2015,x,http://www.statistics.gov.lk/HIES/HIES2012_13FinalReport.pdf
 Sri Lanka,2007,0.49,,gross,hh,,Statistics Sri Lanka gross hh,Statistics Sri Lanka 2015,x,http://www.statistics.gov.lk/HIES/HIES2012_13FinalReport.pdf
 Sri Lanka,2009,0.364,,con,pc,FALSE,Povcalnet Sri Lanka con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Sri Lanka,2010,0.3646,,con,pc,FALSE,CEQ Sri Lanka con pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
+Sri Lanka,2010,0.3646,,con,pc,FALSE,CEQ Sri Lanka con pc,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/01/CEQSI_Jan8_2019.xlsx
 Sri Lanka,2010,0.37,,con,hh,,Statistics Sri Lanka con hh,Statistics Sri Lanka 2015,x,http://www.statistics.gov.lk/HIES/HIES2012_13FinalReport.pdf
 Sri Lanka,2010,0.49,,gross,hh,,Statistics Sri Lanka gross hh,Statistics Sri Lanka 2015,x,http://www.statistics.gov.lk/HIES/HIES2012_13FinalReport.pdf
 Sri Lanka,2012,0.392,,con,pc,FALSE,Povcalnet Sri Lanka con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
@@ -13739,7 +13745,7 @@ Tanzania,2007,0.37310000000000004,,con,sqrt,FALSE,World Bank Africa Poverty Data
 Tanzania,2011,0.37,,con,pc,,National Bureau of Statistics of Tanzania con pc 2,National Bureau of Statistics of Tanzania 2017,40,http://www.nbs.go.tz/nbs/takwimu/nps/NPS_Wave_4_2017.pdf
 Tanzania,2011,0.37799999999999995,,con,pc,FALSE,Povcalnet Tanzania con pc 1,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
 Tanzania,2011,0.35119999999999996,,con,sqrt,FALSE,World Bank Africa Poverty Database Tanzania con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
-Tanzania,2012,0.3574,,con,pc,FALSE,CEQ Tanzania con pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
+Tanzania,2012,0.3574,,con,pc,FALSE,CEQ Tanzania con pc,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/01/CEQSI_Jan8_2019.xlsx
 Tanzania,2012,0.34,,con,pc,,National Bureau of Statistics of Tanzania con pc 1,National Bureau of Statistics of Tanzania 2014,xxi,http://www.nbs.go.tz/nbs/takwimu/hbs/The_2011-12_HBSFinalReport.zip
 Tanzania,2013,0.39,,con,pc,,National Bureau of Statistics of Tanzania con pc 2,National Bureau of Statistics of Tanzania 2017,40,http://www.nbs.go.tz/nbs/takwimu/nps/NPS_Wave_4_2017.pdf
 Tanzania,2015,0.37,,con,pc,,National Bureau of Statistics of Tanzania con pc 2,National Bureau of Statistics of Tanzania 2017,40,http://www.nbs.go.tz/nbs/takwimu/nps/NPS_Wave_4_2017.pdf
@@ -13876,7 +13882,7 @@ Tunisia,2000,0.408,,con,pc,FALSE,Povcalnet Tunisia con pc 1,World Bank Povcalnet
 Tunisia,2005,0.405,,con,pc,,GIDD Tunisia con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
 Tunisia,2005,0.406,,con,pc,,Hassine2015 Tunisia con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Tunisia,2005,0.377,,con,pc,FALSE,Povcalnet Tunisia con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
-Tunisia,2010,0.3972,,con,pc,FALSE,CEQ Tunisia con pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
+Tunisia,2010,0.3972,,con,pc,FALSE,CEQ Tunisia con pc,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/01/CEQSI_Jan8_2019.xlsx
 Tunisia,2010,0.383,,con,pc,,Hassine2015 Tunisia con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Tunisia,2010,0.385,0.017,con,pc,,KANRCZ2017 Tunisia con pc,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
 Tunisia,2010,0.358,,con,pc,FALSE,Povcalnet Tunisia con pc 2,World Bank Povcalnet,"",http://databank.worldbank.org/data/download/WDI_csv.zip
@@ -15470,10 +15476,10 @@ Venezuela,2010,0.38978,,disp,pc,TRUE,Instituto Nacional de Estadistica Venezuela
 Venezuela,2011,0.397,,disp,pc,TRUE,CEPAL Venezuela disp pc 2,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Venezuela,2011,0.39024000000000003,,disp,pc,TRUE,Instituto Nacional de Estadistica Venezuela disp pc,Instituto Nacional de Estadística Venezuela,"",https://web.archive.org/web/20181115092154/http://www.ine.gov.ve/documentos/Social/Pobreza/xls/Serie_%20GINI_1s1997-1s2015.xls
 Venezuela,2012,0.405,,disp,pc,TRUE,CEPAL Venezuela disp pc 3,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Venezuela,2012,0.3869,,disp,pc,FALSE,CEQ Venezuela disp pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
-Venezuela,2012,0.41080000000000005,,market,pc,FALSE,CEQ Venezuela market pc,CEQ 2017,,http://www.commitmentoequity.org/wp-content/uploads/2017/04/CEQ_StandardIndicatorsWeb2_0_November30_2017.xlsx
 Venezuela,2012,0.40397000000000005,,disp,pc,TRUE,Instituto Nacional de Estadistica Venezuela disp pc,Instituto Nacional de Estadística Venezuela,"",https://web.archive.org/web/20181115092154/http://www.ine.gov.ve/documentos/Social/Pobreza/xls/Serie_%20GINI_1s1997-1s2015.xls
 Venezuela,2013,0.407,,disp,pc,TRUE,CEPAL Venezuela disp pc 3,CEPALStat,National,http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Venezuela,2013,0.3869,,disp,pc,FALSE,CEQ Venezuela disp pc,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/01/CEQSI_Jan8_2019.xlsx
+Venezuela,2013,0.41080000000000005,,market,pc,FALSE,CEQ Venezuela market pc,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/01/CEQSI_Jan8_2019.xlsx
 Venezuela,2013,0.40850000000000003,,disp,pc,TRUE,Instituto Nacional de Estadistica Venezuela disp pc,Instituto Nacional de Estadística Venezuela,"",https://web.archive.org/web/20181115092154/http://www.ine.gov.ve/documentos/Social/Pobreza/xls/Serie_%20GINI_1s1997-1s2015.xls
 Venezuela,2014,0.38049000000000005,,disp,pc,TRUE,Instituto Nacional de Estadistica Venezuela disp pc,Instituto Nacional de Estadística Venezuela,"",https://web.archive.org/web/20181115092154/http://www.ine.gov.ve/documentos/Social/Pobreza/xls/Serie_%20GINI_1s1997-1s2015.xls
 Venezuela,2015,0.38057,,disp,pc,TRUE,Instituto Nacional de Estadistica Venezuela disp pc,Instituto Nacional de Estadística Venezuela,"",https://web.archive.org/web/20181115092154/http://www.ine.gov.ve/documentos/Social/Pobreza/xls/Serie_%20GINI_1s1997-1s2015.xls
