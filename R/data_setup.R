@@ -715,7 +715,7 @@ capmas <- read_excel("data-raw/capmas.xls", skip = 7) %>%
             link = capmas_link) 
 
 
-# Statistics Estonia (archived)
+# Statistics Estonia (archived; though check to see if API now out of beta)
 statee <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/statistics_estonia.tsv", 
                    col_names = FALSE,
                    col_types = "idd") %>% 
@@ -1458,6 +1458,40 @@ scb <- pxweb_get_data(url = "http://api.scb.se/OV0104/v1/doris/sv/ssd/HE/HE0103/
             link = "http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550")
 
 
+# Federal Statistics Office, Switzerland (update link)
+fso_ch_link <- "https://www.bfs.admin.ch/bfsstatic/dam/assets/4362566/appendix"
+fso_ch0 <- read_csv2(fso_ch_link, skip = 1) %>% 
+  filter(!is.na(`primary equivalised income`)) %>%
+  transmute(year = as.numeric(X1),
+            market = as.numeric(`primary equivalised income`),
+            market_se = as.numeric(X3)/1.96,
+            gross = as.numeric(`gross equivalised income`),
+            gross_se = as.numeric(X5)/1.96,
+            disp = as.numeric(`disposable equivalised income`),
+            disp_se = as.numeric(X7)/1.96) %>% 
+  gather(key = "welfare_def", value = "gini", -year)
+
+fso_ch <- fso_ch0 %>% 
+  filter(!str_detect(welfare_def, "_se")) %>%
+  left_join(fso_ch0 %>% 
+              filter(str_detect(welfare_def, "_se")) %>% 
+              transmute(year = year,
+                        welfare_def = str_replace(welfare_def, "_se", ""),
+                        gini_se = gini), 
+            by = c("year", "welfare_def")) %>% 
+  transmute(country = "Switzerland",
+            year = year,
+            gini = gini,
+            gini_se = gini_se,
+            welfare_def = welfare_def,
+            equiv_scale = "oecdm",
+            monetary = TRUE,
+            series = paste("FSO", welfare_def, equiv_scale),
+            source1 = "Switzerland Federal Statistics Office",
+            page = "",
+            link = fso_ch_link) 
+
+
 # Taiwan Directorate General of Budget, Accounting, and Statistics 
 # update file from tdfbas_link2; otherwise automated
 tdgbas_link <- paste0("http://win.dgbas.gov.tw/fies/doc/result/", Sys.Date() %>% str_extract("\\d{4}") %>% as.numeric() %>% "-"(1912), "/a11/Year05.xls")
@@ -1501,40 +1535,6 @@ tdgbas <- read_excel("data-raw/tdgbas1.xls", col_names = FALSE, skip = 9,
             source1 = "Taiwan Directorate General of Budget, Accounting, and Statistics",
             page = "",
             link = link)
-
-
-# Federal Statistics Office, Switzerland (update link)
-fso_ch_link <- "https://www.bfs.admin.ch/bfsstatic/dam/assets/4362566/appendix"
-fso_ch0 <- read_csv2(fso_ch_link, skip = 1) %>% 
-  filter(!is.na(`primary equivalised income`)) %>%
-  transmute(year = as.numeric(X1),
-            market = as.numeric(`primary equivalised income`),
-            market_se = as.numeric(X3)/1.96,
-            gross = as.numeric(`gross equivalised income`),
-            gross_se = as.numeric(X5)/1.96,
-            disp = as.numeric(`disposable equivalised income`),
-            disp_se = as.numeric(X7)/1.96) %>% 
-  gather(key = "welfare_def", value = "gini", -year)
-
-fso_ch <- fso_ch0 %>% 
-  filter(!str_detect(welfare_def, "_se")) %>%
-  left_join(fso_ch0 %>% 
-              filter(str_detect(welfare_def, "_se")) %>% 
-              transmute(year = year,
-                        welfare_def = str_replace(welfare_def, "_se", ""),
-                        gini_se = gini), 
-            by = c("year", "welfare_def")) %>% 
-  transmute(country = "Switzerland",
-            year = year,
-            gini = gini,
-            gini_se = gini_se,
-            welfare_def = welfare_def,
-            equiv_scale = "oecdm",
-            monetary = TRUE,
-            series = paste("FSO", welfare_def, equiv_scale),
-            source1 = "Switzerland Federal Statistics Office",
-            page = "",
-            link = fso_ch_link) 
 
 
 # National Statistics Office of Thailand (archived)
