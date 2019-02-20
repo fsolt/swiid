@@ -1,26 +1,14 @@
 library(tidyverse)
 
-output_path <- "/Volumes/fsolt/swiid_kfold/output"
-(output_file_ids <- list.files(output_path) %>%
-  str_extract("\\d+(?=\\.)") %>%
-  unique())
-output_files <- list.files(output_path) %>% 
-  str_subset(output_file_ids %>% na.omit %>% str_sort(numeric = TRUE) %>% nth(-1))
+output_path <- "/Volumes/fsolt/swiid_kfold/output/by_fold"
+output_files <- list.files(output_path)
 
 kfold_output <- map_dfr(output_files, function(output_file) {
-  if (readLines(file.path(output_path, output_file)) %>% 
-      paste(collapse = "") %>% 
-      str_detect("row\\.names")) {
-    (readLines(file.path(output_path, output_file)) %>% 
-       paste(collapse = "") %>% 
-       str_extract("structure.*L\\)\\)") %>% 
-       parse(text = .) %>% 
-       eval() %>% 
-       mutate(fold = str_extract(output_file, "\\d{1,3}$"),
-              cy = paste(country, year),
-              cy_color = if_else(problem == 1, "#354995", "#5E5E5E"),
-              point_diff = mean - gini_b %>% round(5)))
-  }
+  rio::import(file.path(output_path, output_file)) %>% 
+    mutate(fold = str_extract(output_file, "\\d{1,3}$"),
+           cy = paste(country, year),
+           cy_color = if_else(problem == 1, "#354995", "#5E5E5E"),
+           point_diff = mean - gini_b %>% round(5))
 }) %>% 
   group_by(country) %>% 
   mutate(prob_perc = mean(problem, na.rm = TRUE),
