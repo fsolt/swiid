@@ -16,13 +16,12 @@ keywords: "income inequality, measurement"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 fontsize: 11pt
 spacing: single
-bibliography: \dummy{`r file.path(here::here(), list.files(here::here(), "\\.bib$"))`}
+bibliography: \dummy{`r file.path(getwd(), list.files(getwd(), "d\\.bib$"))`}
 biblio-style: apsr
 citecolor: black
 linkcolor: black
 endnote: no
 ---
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, fig.width=6.5, fig.height=2)
@@ -109,11 +108,14 @@ atg_cy <- haven::read_dta(here::here("data-raw", "atg.dta"), encoding = "latin1"
   count(country, year) %>% 
   nrow()
 
-wider_cy <- readxl::read_excel(here::here("dev", "WIID3.4_19JAN2017New.xlsx")) %>% 
-    filter(AreaCovr_new == "All" & PopCovr_new == "All" & AgeCovr_new == "All" &
-               !is.na(Gini) & !is.na(Welfaredefn_new) & !is.na(Equivsc_new)) %>% 
-    select(Country, Year, Gini, Source, Welfaredefn, Equivsc, everything()) %>% 
-    count(Country, Year) %>% 
+wider_cy <- readxl::read_excel(here::here("dev", "WIID_19Dec2018.xlsx")) %>% 
+    filter(areacovr == "All" & popcovr == "All" & areacovr == "All" &
+               !is.na(gini_reported) &
+               !is.na(resource) &
+               !is.na(scale) &
+               !(resource == "Earnings")) %>% 
+    select(country, year, gini_reported, source, resource, scale, everything()) %>% 
+    count(country, year) %>% 
     nrow()
 
 ss_cy <- swiid_source %>%
