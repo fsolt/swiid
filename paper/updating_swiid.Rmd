@@ -48,11 +48,11 @@ swiid_source <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/d
     left_join(mode, by = "source1") %>% 
     mutate(mode = if_else(is.na(mode), "hand", mode))
 
-table(swiid_source$mode)/nrow(swiid_source)
-
 wordify_numeral <- function(x) setNames(c("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", " seventeen", "eighteen", "nineteen"), 1:19)[x]
 
 api_percent <- swiid_source %>% count(mode == "api") %>% mutate(p = round(n/nrow(swiid_source) * 100)) %>% filter(`mode == "api"` == TRUE) %>% pull(p)
+
+automated_percent <- swiid_source %>% count(mode == "hand") %>% mutate(p = round(n/nrow(swiid_source) * 100)) %>% filter(`mode == "hand"` == FALSE) %>% pull(p)
 
 single_obs_countries <- swiid_source %>% add_count(country) %>% filter(n == 1) %>% nrow() %>% wordify_numeral()
 
@@ -79,25 +79,42 @@ Finally, to ensure that these original sources are easily available to SWIID use
 For scholarly articles, DOIs or JSTOR stable URLs were the preferred web addresses, but if those were unavailable the publisher's website or another repository was used.
 For books, the link is to the relevant page in Google Books.]
 
+```{r data_by_method, echo=FALSE, fig.cap = "\\label{fig:data_by_method}Income Inequality Observations by Method of Collection"}
+
+swiid_source %>% 
+  count(mode) %>% 
+  mutate(method = fct_recode(factor(mode), 
+                             API = "api",
+                             Spreadsheet = "sheet",
+                             PDF = "pdf",
+                             Webscrape = "scrape",
+                             'By Hand' = "hand") %>% 
+           fct_relevel("API", "Spreadsheet", "PDF", "Webscrape", "By Hand")) %>% 
+  ggplot(aes(method, n)) +
+geom_bar(stat="identity") +
+    theme_bw() +
+    theme(axis.title.x = element_blank()) +
+    ylab("Observations")
+```
+
 Hand-entering data is tedious and error-prone work, so I automated as much of the process of data collection as practicable.
 Most international organizations and a few national statistical offices use application programming interfaces (APIs) that facilitate downloading their data, and often the R community has built packages using these APIs to make the task even easier [see @Magnusson2014; @Lahti2017; @Lugo2017; @Blondel2018; @Wickham2018].
 I took as much advantage of these resources as possible.
 Although the sources with APIs were relatively few, they contained the most data: `r api_percent`% of the observations were collected this way.
-In the absence of an API, I scripted downloads of any available spreadsheets [see @Wickham2016a].
+In the absence of an API, I scripted downloading and reading any available spreadsheets [see @Wickham2016a].
 If there was no spreadsheet, but data were available in pdf files, I automated downloading these files and then used the `tabulizer` package [@Leeper2016] to read the tables into R.
-In the absence of a file to download, I scripted the process of scraping the data from the web.^[
+In the (relatively rare) absence of any file to download, I scripted the process of scraping the data from the web.^[
 Code for the entire process can be viewed here: <https://github.com/fsolt/swiid/blob/master/R/data_setup.R>.]
-
 Still, for a variety of reasons, a source's data may have been consigned to being entered in a separate spreadsheet.^[
 See <https://github.com/fsolt/swiid/blob/master/data-raw/article_data/fs_added_data.csv>.]
 Many sources contain just a handful or fewer observations, making the payoff to the often laborious process of data cleaning too small to justify the effort.
-Some sources--including most academic articles--are behind paywalls, making reproducibility particularly challenging in any event.
-Some sources, like books, cannot be read straight into R.
+Other sources--including most academic articles--are behind paywalls, making reproducibility particularly challenging in any event.
+Finally, one source contains crucial information encoded in the typeface of its tables, information lost when the tables are read directly into R [see @Mitra2006, 6].
 All of the entries in this spreadsheet were checked repeatedly for errors, and I excluded repeated reports of the exact same observation from different sources.^[
 Which, of course, is not to say that these entries are error-free.
 If you spot any problems or know of sources I might have missed, _please_ let me know at <https://github.com/fsolt/swiid/issues/6>.]
 
-In the end, I was able to automate the collection of approximately three quarters of the source data and a much higher percentage of the series that will be updated or are subject to revision, facilitating incorporating these changes in future versions.
+In the end, I was able to automate the collection of `r automated_percent`% of the source data and an even higher percentage of the series that will be updated or are subject to revision, greatly facilitating incorporating these changes in future versions.
 
 
 ```{r data_by_coverage, echo=FALSE, fig.cap = "Income Inequality Datasets by Country-Years Covered \\label{data_by_coverage}"}
