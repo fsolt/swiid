@@ -2,7 +2,7 @@
 output: 
   pdf_document:
     citation_package: natbib
-    keep_tex: true
+    keep_tex: false
     fig_caption: true
     latex_engine: pdflatex
     template: svm-latex-ms2.tex
@@ -99,23 +99,23 @@ geom_bar(stat="identity") +
 
 Hand-entering data is tedious and error-prone work, so I automated as much of the process of data collection as practicable.
 Most international organizations and a few national statistical offices use application programming interfaces (APIs) that facilitate downloading their data, and often the R community has built packages using these APIs to make the task even easier [see @Magnusson2014; @Lahti2017; @Lugo2017; @Blondel2018; @Wickham2018].
-I took as much advantage of these resources as possible.
+I took as much advantage of these resources as possible, as shown in Figure~\ref{fig:data_by_method}.
 Although the sources with APIs were relatively few, they contained the most data: `r api_percent`% of the observations were collected this way.
 In the absence of an API, I scripted downloading and reading any available spreadsheets [see @Wickham2016a].
 If there was no spreadsheet, but data were available in pdf files, I automated downloading these files and then used the `tabulizer` package [@Leeper2016] to read the tables into R.
-In the (relatively rare) absence of any file to download, I scripted the process of scraping the data from the web.^[
+In the rare absence of any file to download, I scripted the process of scraping the data from the web.^[
 Code for the entire process can be viewed here: <https://github.com/fsolt/swiid/blob/master/R/data_setup.R>.]
 Still, for a variety of reasons, a source's data may have been consigned to being entered in a separate spreadsheet.^[
-See <https://github.com/fsolt/swiid/blob/master/data-raw/article_data/fs_added_data.csv>.]
+See <https://github.com/fsolt/swiid/blob/master/data-raw/fs_added_data.csv>.]
 Many sources contain just a handful or fewer observations, making the payoff to the often laborious process of data cleaning too small to justify the effort.
-Other sources--including most academic articles--are behind paywalls, making reproducibility particularly challenging in any event.
+Some sources---including most academic articles---are behind paywalls, making reproducibility particularly challenging in any event.
+Other sources, such as many books, cannot be read into R.
 Finally, one source contains crucial information encoded in the typeface of its tables, information lost when the tables are read directly into R [see @Mitra2006, 6].
 All of the entries in this spreadsheet were checked repeatedly for errors, and I excluded repeated reports of the exact same observation from different sources.^[
 Which, of course, is not to say that these entries are error-free.
 If you spot any problems or know of sources I might have missed, _please_ let me know at <https://github.com/fsolt/swiid/issues/6>.]
 
-In the end, I was able to automate the collection of `r automated_percent`% of the source data and an even higher percentage of the series that will be updated or are subject to revision, greatly facilitating incorporating these changes in future versions.
-
+In the end, I was able to automate the collection of `r automated_percent`% of the source data and an even higher percentage of the observations that will be updated or are subject to revision, greatly facilitating incorporating these changes in future versions.
 
 ```{r data_by_coverage, echo=FALSE, fig.cap = "Income Inequality Datasets by Country-Years Covered \\label{data_by_coverage}"}
 atg_cy <- haven::read_dta(here::here("data-raw", "atg.dta"), encoding = "latin1") %>% 
@@ -157,16 +157,16 @@ ggplot(cy_coverage, aes(forcats::fct_reorder(source1, nn, .desc = TRUE), nn)) +
     ylab("Country-Years")
 ```
 
-The resulting dataset comprises `r nrow(swiid_source)` Gini coefficients from `r swiid_source %>% count(country, year) %>% nrow()` country-years in `r swiid_source %>% count(country) %>% nrow()` countries or territories; as shown in Figure \ref{data_by_coverage}, this makes the coverage of the SWIID source data broader than that of any other income inequality dataset.
-This is not surprising given that, with the exceptions of the two other secondary collections--the World Income Inequality Database [@UNU2017], which contains no original data and so is not drawn on at all, and the _All the Ginis_ database [@Milanovic2014], which contains very little original data and so is not drawn on much--the SWIID source data incorporates all of the data in these other datasets.  
+The resulting dataset comprises `r swiid_source %>% nrow() %>% scales::comma()` Gini coefficients from `r swiid_source %>% count(country, year) %>% nrow() %>% scales::comma()` country-years in `r swiid_source %>% count(country) %>% nrow()` countries or territories; as shown in Figure \ref{data_by_coverage}, this makes the coverage of the SWIID source data broader than that of any other income inequality dataset.
+This is not surprising given that, with the exceptions of the two other secondary collections--the World Income Inequality Database [@UNU2018], which contains no original data and so is not drawn on at all, and the _All the Ginis_ database [@Milanovic2019], which contains very little original data and so is not drawn on much--the SWIID source data incorporates all of the data in these other datasets.  
 
 Turning from how the source data were collected to how they are composed reveals that there is much more data available about the income distribution in some countries than in others.
 Which countries are most data-rich?
 Figure \ref{countries_by_obs} below shows the top dozen countries by the count of observations.
 Canada, by virtue of the excellent Statistics Canada as well as longstanding membership in the OECD and LIS, has `r nrow(swiid_source %>% filter(country=="Canada"))` observations, many more than any other country.
-The United Kingdom and United States are next, followed by a group dominated by European countries but including Mexico and Taiwan.
+The United Kingdom, Germany, and the United States are next, followed by a group dominated by European countries but including Mexico, Taiwan, and Brazil.
 All of these data-rich countries are members of the LIS.
-On the other hand, `r single_obs_countries` countries have only a single observation.
+On the other hand, the `r single_obs_countries` most data-poor countries have only a single observation each.
 
 ```{r obs_by_country, echo=FALSE, fig.cap = "Countries with the Most Observations in the SWIID Source Data \\label{countries_by_obs}"}
 swiid_source %>%
@@ -194,7 +194,17 @@ us_nas <- {max(swiid_source$year) - min(swiid_source$year) -
 {swiid_source %>% filter(country == "United States") %>% pull(year) %>% unique() %>% length()}} %>%
 wordify_numeral()
 
+japan_nas <- {max(swiid_source$year) - min(swiid_source$year) - 
+{swiid_source %>% filter(country == "Japan") %>% pull(year) %>% unique() %>% length()}} %>%
+wordify_numeral()
+
+taiwan_nas <- {max(swiid_source$year) - min(swiid_source$year) - 
+{swiid_source %>% filter(country == "Taiwan") %>% pull(year) %>% unique() %>% length()}} %>%
+wordify_numeral()
+
 arg_obs <- swiid_source %>% filter(country == "Argentina") %>% pull(year) %>% unique() %>% length()
+
+iran_obs <- swiid_source %>% filter(country == "Iran") %>% pull(year) %>% unique() %>% length()
 
 med_cy <- swiid_source %>% count(country, year) %>% count(country) %>% pull(nn) %>% median() %>% wordify_numeral()
 ```
@@ -202,9 +212,9 @@ med_cy <- swiid_source %>% count(country, year) %>% count(country) %>% pull(nn) 
 As discussed in the next section, observations for the same country in the same year, but with different welfare definitions and equivalence scales or from different sources, are important to generating the SWIID's cross-nationally comparable estimates.
 Still, we might be interested to know which countries have the most coverage of the years in the SWIID's current `r max(swiid_source$year) - min(swiid_source$year)`-year timeframe, from `r min(swiid_source$year)` to `r max(swiid_source$year)`, because the SWIID's inequality estimates for countries with fewer country-year observations will include more interpolated values, which in turn will have more uncertainty.
 The countries with the most observed years are shown in the left panel of Figure \ref{countries_by_years}.
-The source data includes observations in every covered year for the United Kingdom, in all but `r sweden_nas` of these years for Sweden, and in all but `r us_nas` for the United States.
-Argentina---a country that is not a member of the LIS---makes the top ten, with `r arg_obs` country-year observations.
-The median country has observations in just `r med_cy` different country-years.
+The source data includes observations in every covered year for Sweden and the United Kingdom.  There are observations in all but `r us_nas` years for the United States, and in all but `r japan_nas` years for Japan and Taiwan.
+Iran and Argentina---countries that are not member of the LIS---also make the top ten, with observations in `r iran_obs` and `r arg_obs` country-years, respectively.
+The median country, though, has observations in just `r med_cy` different country-years.
 
 ```{r years_by_country, echo=FALSE, fig.cap="Country-Year Coverage in the SWIID Source Data \\label{countries_by_years}"}
 library(patchwork)
