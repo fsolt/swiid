@@ -166,10 +166,11 @@ save(swiid, swiid_summary, file = "vignette/swiid8_0.rda")
 
 # for release
 dir.create("release/swiid8_0", recursive = TRUE)
-final_files <- c("data/swiid8_0_summary.csv", "data/swiid8_0.rda", "data/swiid8_0.dta")
+final_files <- c("data/swiid_summary.csv", "data/swiid8_0.rda", "data/swiid8_0.dta")
 file.copy(from = final_files,
           to = str_replace(final_files, "data/", "release/swiid8_0/"),
           overwrite = TRUE)
+file.rename("release/swiid8_0/swiid_summary.csv", "release/swiid8_0/swiid8_0_summary.csv")
 documentation_files <- c("vignette/R_swiid.pdf", "vignette/stata_swiid.pdf")
 file.copy(from = documentation_files,
           to = str_replace(documentation_files, "vignette/", "release/swiid8_0/"),
