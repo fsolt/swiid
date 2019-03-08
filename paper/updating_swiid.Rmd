@@ -29,7 +29,7 @@ library(tidyverse)
 ```
 
 ## Introduction
-```{r}
+```{r, include = FALSE}
 # Obviously this section needs work
 
 # From its origins now over ten years ago, the goal of the [Standardized World Income Inequality Database](/swiid/) has been to provide estimates of income inequality for as many countries and years as possible while ensuring that these estimates are as comparable as the available data allow.
@@ -78,7 +78,7 @@ The SWIID source data consists of observations of the Gini coefficient in variou
 Because the Gini index is simply the Gini coefficient multiplied by 100, the two are equivalent, and both can be referred to as 'the Gini' without much cause for confusion.]
 The Gini is most intuitively defined as the average difference in income between all pairs in a population, divided by twice the average income in the population.
 It is by far the most commonly encountered summary statistic for measuring income inequality.
-The Gini has drawbacks---it is most sensitive to changes in the middle of the income distribution, rather than among those with the highest or lowest incomes, and it is not easily decomposed--that other metrics, such as the Atkinson index and the Theil indices, overcome.
+The Gini has drawbacks---it is most sensitive to changes in the middle of the income distribution, rather than among those with the highest or lowest incomes, and it is not easily decomposed---that other metrics, such as the Atkinson index and the Theil indices, overcome.
 However, in light of the SWIID's goal of providing data for the broadest possible sample of countries and years, the ubiquity of the Gini makes it the only plausible choice for this purpose.
 
 To be included in the SWIID source data, Gini observations need to encompass the entire population of a country without regard to age, location, or employment status.^[
@@ -172,15 +172,14 @@ ggplot(cy_coverage, aes(forcats::fct_reorder(source1, n_cy, .desc = TRUE), n_cy)
 ```
 
 The resulting dataset comprises `r swiid_source %>% nrow() %>% scales::comma()` Gini coefficients from `r swiid_source %>% count(country, year) %>% nrow() %>% scales::comma()` country-years in `r swiid_source %>% count(country) %>% nrow()` countries or territories; as shown in Figure \ref{data_by_coverage}, this makes the coverage of the SWIID source data broader than that of any other income inequality dataset.
-This is not surprising given that, with the exceptions of the two other secondary collections--the World Income Inequality Database [@UNU2018], which contains no original data and so is not drawn on at all, and the _All the Ginis_ database [@Milanovic2019], which contains very little original data and so is not drawn on much--the SWIID source data incorporates all of the data in these other datasets.  
-
+This is not surprising given that, with the exceptions of the two other secondary collections---the World Income Inequality Database [@UNU2018], which contains no original data and so is not drawn on at all, and the _All the Ginis_ database [@Milanovic2019], which contains very little original data and so is not drawn on much---the SWIID source data incorporates all of the data in these other datasets.  
 Turning from how the source data were collected to how they are composed reveals that there is much more data available about the income distribution in some countries than in others.
 Which countries are most data-rich?
 Figure \ref{countries_by_obs} below shows the top dozen countries by the count of observations.
 Canada, by virtue of the excellent Statistics Canada as well as longstanding membership in the OECD and LIS, has `r nrow(swiid_source %>% filter(country=="Canada"))` observations, many more than any other country.
 The United Kingdom, Germany, and the United States are next, followed by a group dominated by European countries but including Mexico, Taiwan, and Brazil.
 All of these data-rich countries are members of the LIS.
-On the other hand, the `r single_obs_countries` most data-poor countries have only a single observation each.
+On the other hand, the `r single_obs_countries` most data-poor countries have only a single observation each in the SWIID source data.
 
 ```{r obs_by_country, echo=FALSE, fig.cap = "Countries with the Most Observations in the SWIID Source Data \\label{countries_by_obs}"}
 swiid_source %>%
@@ -220,7 +219,7 @@ arg_obs <- swiid_source %>% filter(country == "Argentina") %>% pull(year) %>% un
 
 iran_obs <- swiid_source %>% filter(country == "Iran") %>% pull(year) %>% unique() %>% length()
 
-med_cy <- swiid_source %>% count(country, year) %>% count(country) %>% pull(nn) %>% median() %>% wordify_numeral()
+med_cy <- swiid_source %>% count(country, year) %>% count(country, name = "nn") %>% pull(nn) %>% median() %>% wordify_numeral()
 ```
 
 As discussed in the next section, observations for the same country in the same year, but with different welfare definitions and equivalence scales or from different sources, are important to generating the SWIID's cross-nationally comparable estimates.
@@ -238,7 +237,7 @@ cby_plot <- swiid_source %>%
                            stringr::str_replace(country, "((.).*) ((.).*)", "\\2.\\4."),
                            country)) %>% 
   count(country, year) %>%
-  count(country) %>% 
+  count(country, name = "nn") %>% 
   arrange(desc(nn)) %>% 
   head(12) %>% 
   ggplot(aes(forcats::fct_reorder(country, nn, .desc = TRUE), nn)) +
@@ -254,7 +253,7 @@ ybc_plot <- swiid_source %>%
                            stringr::str_replace(country, "((.).*) ((.).*)", "\\2.\\4."),
                            country)) %>%
   count(country, year) %>%
-  count(year) %>%
+  count(year, name = "nn") %>%
   ggplot(aes(year, nn)) +
   geom_line() +
   theme_bw() +
@@ -356,10 +355,9 @@ kfold_output_by_country <- rio::import("https://github.com/fsolt/swiid/raw/maste
 
 
 How can we know if the approach just described actually works?
-[In previous work](/papers/solt2016/), I provided the most stringent test I could come up with:^[
+In previous work, I provided the most stringent test I could come up with: I examined LIS data on country-years that had been included in previously-released versions of the SWIID [@Solt2016, 1277-1278].^[
 For the initial kernel of this idea, I remain grateful to participants in the Expert Group Meeting on Reducing Inequalities in the Context of Sustainable Development, Department of Economic and Social Affairs, United Nations, New York, October 24–25, 2013.]
-I examined LIS data on country-years that had been included in previously-released versions of the SWIID.
-The results were reassuring in some ways--only seven percent of the differences between new LIS and old SWIID observations were statistically significant and larger than two Gini points, a far better record than that achieved by data carefully selected from [the UNU-WIDER database](https://www.wider.unu.edu/project/wiid-world-income-inequality-database) or the [_All the Ginis_ dataset](https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Centers-and-Institutes/Stone-Center-on-Socio-Economic-Inequality/Core-Faculty,-Team,-and-Affiliated-LIS-Scholars/Branko-Milanovic/Datasets) adjusted in accordance with [its instructions](https://www.gc.cuny.edu/CUNY_GC/media/CUNY-Graduate-Center/PDF/Centers/LIS/Milanovic/Description-of-the-dataset_16.pdf)--but less so in others.
+The results were reassuring in some ways---only seven percent of the differences between new LIS observations and old SWIID estimates were statistically significant and larger than two Gini points, a far better record than that achieved by data carefully selected from [the UNU-WIDER database](https://www.wider.unu.edu/project/wiid-world-income-inequality-database) or the [_All the Ginis_ dataset](https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Centers-and-Institutes/Stone-Center-on-Socio-Economic-Inequality/Core-Faculty,-Team,-and-Affiliated-LIS-Scholars/Branko-Milanovic/Datasets) adjusted in accordance with [its instructions](https://www.gc.cuny.edu/CUNY_GC/media/CUNY-Graduate-Center/PDF/Centers/LIS/Milanovic/Description-of-the-dataset_16.pdf)--but less so in others.
 Most disappointingly, only 72% of the differences had 95% confidence intervals that included zero, suggesting that the SWIID's standard errors were often too small.
 I've been working hard on the SWIID's estimation routine to fix these issues since I conducted that test back in 2014, but the LIS doesn't release new data frequently enough to allow for continuous testing of these revisions.
 So, instead, I've drawn on a technique developed in data science and machine learning, _k_-fold cross-validation, to assess the SWIID's progress.
