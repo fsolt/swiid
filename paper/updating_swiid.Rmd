@@ -6,7 +6,7 @@ output:
     fig_caption: true
     latex_engine: pdflatex
     template: svm-latex-ms2.tex
-title: "Updating the Standardized World Income Inequality Database"
+title: "Measuring Income Inequality Across Countries and Over Time: The Standardized World Income Inequality Database [DRAFT]"
 thanks: "The paper's revision history and the materials needed to reproduce its analyses can be found [on Github here](http://github.com/fsolt/swiid). Corresponding author: [frederick-solt@uiowa.edu](mailto:frederick-solt@uiowa.edu). Current version: `r format(Sys.time(), '%d %B %Y')`."
 author:
 - name: Frederick Solt
@@ -26,6 +26,19 @@ endnote: no
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, fig.width=6.5, fig.height=2)
 library(tidyverse)
+```
+
+## Introduction
+```{r}
+# Obviously this section needs work
+
+# From its origins now over ten years ago, the goal of the [Standardized World Income Inequality Database](/swiid/) has been to provide estimates of income inequality for as many countries and years as possible while ensuring that these estimates are as comparable as the available data allow.
+# That is to say, the SWIID's first prority is breadth of coverage, and its second is comparability.
+# The starting point for the SWIID estimates is a dataset with the complementary priorities: the [Luxembourg Income Study](https://www.lisdatacenter.org), which aims to maximize comparability and, given that primary concern, to include as many countries and years as possible.^[
+# Still, even for the LIS perfect comparability has given way to the desire to cover more middle-income countries.
+# [Teresa Munzi and Andrej Cupak recently wrote](https://www.lisdatacenter.org/newsletter/nl-2018-8-h-2/) about the difficulties the LIS team  encountered including middle-income countries due to the greater importance of non-monetary and self-employment income as well as the differences in direct taxation and social security contributions in these countries in comparison to high-income countries.
+# Despite these issues, the LIS remains the most comparable income inequality data available.]
+# Then the SWIID routine estimates the relationships between Gini indices based on the LIS and [all of the other Ginis available](/blog/2017/07/28/the-swiid-source-data/) for the same country-years, and it uses these relationships to estimate what the LIS Gini _would be_ in country-years not included in the LIS but available from other sources.
 ```
 
 
@@ -59,7 +72,7 @@ single_obs_countries <- swiid_source %>% add_count(country) %>% filter(n == 1) %
 ```
 
 
-## The SWIID Source Data
+## Collecting the SWIID Source Data
 
 The SWIID source data consists of observations of the Gini coefficient in various countries and years.^[
 Because the Gini index is simply the Gini coefficient multiplied by 100, the two are equivalent, and both can be referred to as 'the Gini' without much cause for confusion.]
@@ -118,14 +131,14 @@ If you spot any problems or know of sources I might have missed, _please_ let me
 In the end, I was able to automate the collection of `r automated_percent`% of the source data and an even higher percentage of the observations that will be updated or are subject to revision, greatly facilitating incorporating these changes in future versions.
 
 ```{r data_by_coverage, echo=FALSE, fig.cap = "Income Inequality Datasets by Country-Years Covered \\label{data_by_coverage}"}
-atg_cy <- haven::read_dta(here::here("data-raw", "atg.dta"), encoding = "latin1") %>% 
-  select(country, year, starts_with("gini")) %>% 
-  mutate(has_gini = rowMeans(select(., starts_with("gini")), na.rm = TRUE)) %>% 
-  filter(has_gini > 0) %>% 
-  count(country, year) %>% 
-  nrow()
+atg_cy <- haven::read_dta(here::here("data-raw", "atg.dta")) %>% 
+    select(country, year, starts_with("gini")) %>% 
+    mutate(has_gini = rowMeans(select(., starts_with("gini")), na.rm = TRUE)) %>% 
+    filter(has_gini > 0) %>% 
+    count(country, year) %>% 
+    nrow()
 
-wider_cy <- readxl::read_excel(here::here("dev", "WIID_19Dec2018.xlsx")) %>% 
+wider_cy <- readxl::read_excel(here::here("data-raw", "WIID_19Dec2018.xlsx")) %>% 
     filter(areacovr == "All" & popcovr == "All" & areacovr == "All" &
                !is.na(gini_reported) &
                !is.na(resource) &
@@ -140,21 +153,22 @@ ss_cy <- swiid_source %>%
     nrow()
 
 datasets <- c("Eurostat", "OECD", "SEDLAC", "LISSY", "CEPALStat", "World Bank Povcalnet")
-    
+
 cy_coverage <- swiid_source %>% 
     count(source1, country, year) %>%
-    count(source1) %>% 
+    count(source1, name = "n_cy") %>% 
     filter(source1 %in% datasets) %>% 
     mutate(source1 = recode(source1, LISSY = "LIS", "World Bank Povcalnet" = "Povcalnet")) %>% 
     bind_rows(tibble(source1 = c("WIID", "All the Ginis", "SWIID Source"),
-                     nn = c(wider_cy, atg_cy, ss_cy))) %>% 
-    arrange(desc(nn))
+                     n_cy = c(wider_cy, atg_cy, ss_cy))) %>% 
+    arrange(desc(n_cy))
 
-ggplot(cy_coverage, aes(forcats::fct_reorder(source1, nn, .desc = TRUE), nn)) +
+ggplot(cy_coverage, aes(forcats::fct_reorder(source1, n_cy, .desc = TRUE), n_cy)) +
     geom_bar(stat="identity") +
     theme_bw() +
-    theme(axis.title.x = element_blank()) +
-    ylab("Country-Years")
+    theme(axis.title.x = element_blank()) +  
+    ylab("Country-Years") +
+    ggtitle("Income Inequality Datasets by Country-Years Covered")
 ```
 
 The resulting dataset comprises `r swiid_source %>% nrow() %>% scales::comma()` Gini coefficients from `r swiid_source %>% count(country, year) %>% nrow() %>% scales::comma()` country-years in `r swiid_source %>% count(country) %>% nrow()` countries or territories; as shown in Figure \ref{data_by_coverage}, this makes the coverage of the SWIID source data broader than that of any other income inequality dataset.
@@ -220,34 +234,34 @@ The median country, though, has observations in just `r med_cy` different countr
 library(patchwork)
 
 cby_plot <- swiid_source %>%
-mutate(country = if_else(stringr::str_detect(country, "United"),
-stringr::str_replace(country, "((.).*) ((.).*)", "\\2.\\4."),
-country)) %>% 
-count(country, year) %>%
-count(country) %>% 
-arrange(desc(nn)) %>% 
-head(12) %>% 
-ggplot(aes(forcats::fct_reorder(country, nn, .desc = TRUE), nn)) +
-geom_bar(stat = "identity") +
-theme_bw() +
-theme(axis.title.x = element_blank(),
-      axis.text.x  = element_text(angle = 90, vjust = .45, hjust = .95)) +
-ylab("Years Observed")
+  mutate(country = if_else(stringr::str_detect(country, "United"),
+                           stringr::str_replace(country, "((.).*) ((.).*)", "\\2.\\4."),
+                           country)) %>% 
+  count(country, year) %>%
+  count(country) %>% 
+  arrange(desc(nn)) %>% 
+  head(12) %>% 
+  ggplot(aes(forcats::fct_reorder(country, nn, .desc = TRUE), nn)) +
+  geom_bar(stat = "identity") +
+  theme_bw() +
+  theme(axis.title.x = element_blank(),
+        axis.text.x  = element_text(angle = 90, vjust = .45, hjust = .95)) +
+  ylab("Years Observed")
 
 
 ybc_plot <- swiid_source %>%
-mutate(country = if_else(stringr::str_detect(country, "United"),
-stringr::str_replace(country, "((.).*) ((.).*)", "\\2.\\4."),
-country)) %>%
-count(country, year) %>%
-count(year) %>%
-ggplot(aes(year, nn)) +
-geom_line() +
-theme_bw() +
-expand_limits(x = c(1960, 2020)) +
-theme(axis.title.x = element_blank(),
-      axis.text.x  = element_text(angle = 90, vjust = .45, hjust = .95)) +
-ylab("Countries Observed")
+  mutate(country = if_else(stringr::str_detect(country, "United"),
+                           stringr::str_replace(country, "((.).*) ((.).*)", "\\2.\\4."),
+                           country)) %>%
+  count(country, year) %>%
+  count(year) %>%
+  ggplot(aes(year, nn)) +
+  geom_line() +
+  theme_bw() +
+  scale_x_continuous(breaks = seq(1960, 2020, 10)) +
+  theme(axis.title.x = element_blank(),
+        axis.text.x  = element_text(angle = 90, vjust = .45, hjust = .95)) +
+  ylab("Countries Observed")
 
 cby_plot + ybc_plot
 ```
@@ -328,6 +342,123 @@ Differences in the welfare definition and the equivalence scale employed constit
 <!--I'll take up how we get from these incomparable observations to the SWIID estimates in the next post.  In the meantime, if you'd like to see the source data, you can [download it from here](https://github.com/fsolt/swiid/blob/master/data/swiid_source.csv). -->
 
 
-## Standardizing the Data
+## Measuring Income Inequality Comparably
 
+
+## Evaluating the Comparability of the SWIID's Estimates With Cross-Validation
+
+```{r load_kfold, include = FALSE}
+kfold_output <- rio::import("https://github.com/fsolt/swiid/raw/master/data/kfold_output.rda") %>% 
+    filter(!is.na(point_diff)) # exclude Luxembourg 1985 (LIS is first data available)
+kfold_output_by_country <- rio::import("https://github.com/fsolt/swiid/raw/master/data/kfold_output_by_country.rda") %>% 
+    filter(!is.na(point_diff)) # exclude Luxembourg 1985 (LIS is first data available)
+```
+
+
+How can we know if the approach just described actually works?
+[In previous work](/papers/solt2016/), I provided the most stringent test I could come up with:^[
+For the initial kernel of this idea, I remain grateful to participants in the Expert Group Meeting on Reducing Inequalities in the Context of Sustainable Development, Department of Economic and Social Affairs, United Nations, New York, October 24–25, 2013.]
+I examined LIS data on country-years that had been included in previously-released versions of the SWIID.
+The results were reassuring in some ways--only seven percent of the differences between new LIS and old SWIID observations were statistically significant and larger than two Gini points, a far better record than that achieved by data carefully selected from [the UNU-WIDER database](https://www.wider.unu.edu/project/wiid-world-income-inequality-database) or the [_All the Ginis_ dataset](https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Centers-and-Institutes/Stone-Center-on-Socio-Economic-Inequality/Core-Faculty,-Team,-and-Affiliated-LIS-Scholars/Branko-Milanovic/Datasets) adjusted in accordance with [its instructions](https://www.gc.cuny.edu/CUNY_GC/media/CUNY-Graduate-Center/PDF/Centers/LIS/Milanovic/Description-of-the-dataset_16.pdf)--but less so in others.
+Most disappointingly, only 72% of the differences had 95% confidence intervals that included zero, suggesting that the SWIID's standard errors were often too small.
+I've been working hard on the SWIID's estimation routine to fix these issues since I conducted that test back in 2014, but the LIS doesn't release new data frequently enough to allow for continuous testing of these revisions.
+So, instead, I've drawn on a technique developed in data science and machine learning, _k_-fold cross-validation, to assess the SWIID's progress.
+
+To get how _k_-fold cross-validation works, it helps to first understand the simpler form of cross-validation in which the available data are first divided into two groups of observations: the _training_ set and the _testing_ set.
+The model parameters are then estimated on only the training set.
+Finally, these results are used to predict the values of the testing set (that is, again, observations that were not used to estimate the model's parameters).
+By comparing the model's predictions against the test set, we avoid overfitting and get a good sense of how well the model performs in predicting other, as yet unknown, data.
+
+Still, that sense may be biased by the exact observations that happened to be assigned to each set.
+We can reduce this bias by performing the process repeatedly: this is _k_-fold cross-validation.
+The available data are divided into some number _k_ groups.
+One at a time, each of the _k_ groups is treated as the testing data, with all other groups forming the training data for estimating the model.
+The model's performance is then evaluated by considering how well it predicts _all_ of the groups, and  because every observation is included in the testing data at some point, the process allows us to check whether and for which observations the model is doing particularly poorly.
+
+To provide a first assessment of the SWIID's ability to predict the LIS, I randomly assigned the available LIS observations into groups of three, with an added check to ensure that no group included two observations from the same country.^[
+The goal of this exercise is really to assess how well the SWIID works within the LIS countries, so Egypt 2012, the only LIS observation for that country, is excluded from the analysis.  This is because holding out that observation makes Egypt a _non_-LIS country.  
+What happens when the SWIID is used to predict all of a country's LIS observations at once is discussed below.]
+(Because the SWIID routine relies only on relationships observed within-country for the countries included in the LIS, the check that only a single observation from a country be assigned to the test data at a time means that the exact size of the group doesn't really matter.)^[
+My experiments with groups sized from just one observation each up to six observations each confirmed this.
+Three observations per group struck a nice balance between the time it takes to randomly generate the groups (which increases with group size because it becomes more likely for a group to be rejected for containing two observations from a single country) and the demand the work puts on [UI's high performance computing cluster](https://wiki.uiowa.edu/display/hpcdocs/Argon+Cluster) (which increases with the number of groups--which is also the number of times the SWIID routine is re-run).
+I probably don't really need to worry about the latter, but whatever---like I said, it doesn't actually matter.]
+The figure below plots the difference between the SWIID prediction generated from this _k_-fold cross-validation and the LIS data for each country-year included in the LIS.  Observations for which the 95% credible interval for this difference includes zero are gray; those for which it doesn't are highlighted in blue. 
+
+```{r kfold_output, echo = FALSE, warning = FALSE}
+k_fold_obs_overall <- round(100 - 100*mean(kfold_output %>% filter(n > 1) %>% pull(problem), na.rm = TRUE))
+k_fold_obs_lt1 <- round(100*mean(abs(kfold_output %>% filter(n > 1) %>% pull(point_diff)) < .01, na.rm = TRUE))
+k_fold_obs_lt2 <- round(100*mean(abs(kfold_output %>% filter(n > 1) %>% pull(point_diff)) < .02, na.rm = TRUE))
+
+ggplot(kfold_output %>%
+         filter(n > 1)) +
+  geom_hline(yintercept=0, linetype=2, colour="gray60") +
+  geom_pointrange(fatten = 1,
+                  aes(x = forcats::fct_reorder(cy, point_diff), 
+                      y=point_diff*100, 
+                      ymin=point_diff*100 - 1.96*100*se_diff,
+                      ymax = point_diff*100 + 1.96*100*se_diff,
+                      colour = cy_color,
+                      alpha = problem)) +
+  theme_bw() + 
+  theme(legend.position="none") +
+  scale_colour_manual(values=c("#354995", "#5E5E5E")) +
+  scale_alpha_discrete(range = c(0.4, 1)) +
+  labs(x = "", y = latex2exp::TeX("SWIID By-Observation \\textit{k}-fold Prediction minus LIS")) + 
+  theme(panel.grid.minor=element_blank()) +
+  scale_y_continuous(breaks=c(-10, -5, -2, -1,  0, 1, 2, 5, 10)) +
+  scale_x_discrete(breaks = NULL) 
+```
+
+The results show that the SWIID does a very good job of predicting the LIS: the 95% credible interval for the difference between the two includes zero for `r k_fold_obs_overall`% of these observations.
+The point estimates for these differences are generally small, with `r k_fold_obs_lt2`% less than 2 Gini points and `r k_fold_obs_lt1`% less than a single Gini point.
+It's true that there are a few observations for which the estimated difference is quite large--on the far left of the plot, the SWIID routine underestimated the LIS Gini for Hungary in 1991 by 6 $\pm$ 4 points, and on the extreme right the SWIID routine overestimated that for Guatemala in 2014 by 7 $\pm$ 4 points--but there doesn't really seem to me to be much pattern in which countries and years are estimated poorly.
+
+This test, though, really only assesses how well the SWIID predicts LIS-comparable inequality figures in years without LIS data in the (now fifty) countries that are _included in the LIS_.
+We can get a better sense of how well the SWIID does predicting countries not covered by the LIS with another cross-validation that, one country at a time, excludes _all_ of the LIS observations for that country.
+The results of just such a test are plotted below. 
+
+```{r kfold_output_by_country, echo = FALSE, warning = FALSE}
+k_fold_by_country_overall <- round(100 - 100*mean(kfold_output_by_country %>% pull(problem), na.rm = TRUE))
+k_fold_by_country_lt1 <- round(100*mean(abs(kfold_output_by_country %>% pull(point_diff)) < .01, na.rm = TRUE))
+k_fold_by_country_lt2 <- round(100*mean(abs(kfold_output_by_country %>% pull(point_diff)) < .02, na.rm = TRUE))
+
+ggplot(kfold_output_by_country) +
+  geom_hline(yintercept=0, linetype=2, colour="gray60") +
+  geom_pointrange(fatten = 1,
+                  aes(x = forcats::fct_reorder(cy, point_diff), 
+                      y=point_diff*100, 
+                      ymin=point_diff*100 - 1.96*100*se_diff,
+                      ymax = point_diff*100 + 1.96*100*se_diff,
+                      colour = cy_color,
+                      alpha = problem)) +
+  theme_bw() + 
+  theme(legend.position="none") +
+  scale_colour_manual(values=c("#354995", "#5E5E5E")) +
+  scale_alpha_discrete(range = c(0.4, 1)) +
+  labs(x = "", y = latex2exp::TeX("SWIID By-Country \\textit{k}-fold Prediction minus LIS")) + 
+  theme(panel.grid.minor=element_blank()) +
+  scale_y_continuous(breaks=c(-20, -15, -10, -5, -2, -1,  0, 1, 2, 5, 10)) +
+  scale_x_discrete(breaks = NULL) 
+```
+
+Overall, the plot looks very similar to the one above.
+With each country's entire run of LIS data taking a turn being excluded, the 95% credible interval for the difference between the resulting SWIID estimate and the excluded LIS data contains zero `r k_fold_by_country_overall`% of the time.
+And here, too, most of the point estimates for these differences are small: `r k_fold_by_country_lt2`% are less than 2 Gini points, and `r k_fold_by_country_lt1`% are less than one Gini point.  
+
+This analysis, though, does point to a few rough spots in need of future attention.
+The first appears on the far left of the plot above.
+There we find that the largest difference is for the sole country-year for Egypt in the LIS--for 2012--which the SWIID routine underestimates by 16(!) $\pm$ 6 Gini points.
+Egypt is currently the only country in the LIS with just a single country-year observation; given that excluding the one observation is equivalent to excluding all of the country's observations, I skipped omitting it in the first cross-validation.
+LIS researchers [Checchi et al. report](https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2018-149.pdf) in a footnote that Egyptian income surveys before 2012 did not include any questions to capture self-employment income, and it's also true that most of the available Ginis for Egypt are based on the distribution of consumption expenditure, which sometimes only loosely track those for the distribution of income (see, e.g., India).
+These factors, however, are present in many non-LIS countries as well, so I'll continue working to come up with ways to improve the SWIID routine for such cases.
+
+The second is that there are two other countries for which the 95% credible interval for the differences between the LIS data and the SWIID routine's estimates for those countries when all of their LIS data are excluded does not contain zero in _any_ of the country's observations: Brazil and Peru.
+For Brazil, the cross-validation's estimates of the country's four LIS observations are all too high---by 2.5 $\pm$ 2.0 Gini points to 3.7 $\pm$ 2.1 Gini points.
+The cross-validation's estimates for Peru's four LIS observations, on the other hand, are all too low---by between 5.0 $\pm$ 2.9 and 5.4 $\pm$ 3.0 Gini points.
+So there is some room for improvement here too, and I'll keep working on it also.
+
+All in all, though, these _k_-fold cross-validation exercises show that the SWIID does a very good job of predicting the LIS, which inspires confidence that the SWIID is indeed maximizing the comparability of income inequality data across countries and over time.
+
+
+## References
 
