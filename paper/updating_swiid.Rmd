@@ -386,7 +386,8 @@ k_fold_obs_lt2 <- round(100*mean(abs(kfold_output %>% filter(n > 1) %>% pull(poi
 ggplot(kfold_output %>%
          filter(n > 1)) +
   geom_hline(yintercept=0, linetype=2, colour="gray60") +
-  geom_pointrange(fatten = .5,
+  geom_pointrange(fatten = .25,
+                  size = .25,
                   aes(x = forcats::fct_reorder(cy, point_diff), 
                       y=point_diff*100, 
                       ymin=point_diff*100 - 1.96*100*se_diff,
@@ -418,7 +419,8 @@ k_fold_by_country_lt2 <- round(100*mean(abs(kfold_output_by_country %>% pull(poi
 
 ggplot(kfold_output_by_country) +
   geom_hline(yintercept=0, linetype=2, colour="gray60") +
-  geom_pointrange(fatten = .5,
+  geom_pointrange(size = .25,
+                  fatten = .25,
                   aes(x = forcats::fct_reorder(cy, point_diff), 
                       y=point_diff*100, 
                       ymin=point_diff*100 - 1.96*100*se_diff,
