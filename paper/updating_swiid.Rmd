@@ -361,7 +361,7 @@ Most disappointingly, only 72% of the differences had 95% confidence intervals t
 The new SWIID estimation routine described in the preceding section was written and revised to address these issues, but new observations are not added to the LIS quickly enough to allow for continuous testing of these revisions.
 So, instead, I have drawn on a technique developed in data science and machine learning, _k_-fold cross-validation, to assess the SWIID's progress.
 
-To grasp how _k_-fold cross-validation works, it helps to first understand the simpler form of cross-validation in which the available data are first divided into two groups of observations: the _training_ set and the _testing_ set.
+To understand how _k_-fold cross-validation works, it helps to first consider the simpler form of cross-validation in which the available data are first divided into two groups of observations: the _training_ set and the _testing_ set.
 The model parameters are then estimated on only the training set.
 Finally, these results are used to predict the values of the testing set (that is, again, observations that were not used to estimate the model's parameters).
 By comparing the model's predictions against the test set, we avoid overfitting and get a good sense of how well the model performs in predicting other, as yet unknown, data.
@@ -378,7 +378,7 @@ What happens when the SWIID is used to predict all of a country's LIS observatio
 (Because the SWIID routine relies only on relationships observed within-country for the countries included in the LIS, the check that only a single observation from a country be assigned to the test data at a time means that the exact size of the group does not really matter, a point I confirmed in testing.)
 The figure below plots the difference between the SWIID prediction generated from this _k_-fold cross-validation and the LIS data for each country-year included in the LIS.  Observations for which the 95% credible interval for this difference includes zero are gray; those for which it doesn't are highlighted in blue. 
 
-```{r kfold_output, echo = FALSE, warning = FALSE, fig.height=3, fig.cap = "\\label{fig:kfold_output}_k_-fold Cross-Validation Results"}
+```{r kfold_output, echo = FALSE, warning = FALSE, fig.height=3, fig.cap = "\\label{fig:kfold_output}_k_-fold By-Observation Cross-Validation Results"}
 k_fold_obs_overall <- round(100 - 100*mean(kfold_output %>% filter(n > 1) %>% pull(problem), na.rm = TRUE))
 k_fold_obs_lt1 <- round(100*mean(abs(kfold_output %>% filter(n > 1) %>% pull(point_diff)) < .01, na.rm = TRUE))
 k_fold_obs_lt2 <- round(100*mean(abs(kfold_output %>% filter(n > 1) %>% pull(point_diff)) < .02, na.rm = TRUE))
@@ -398,7 +398,7 @@ ggplot(kfold_output %>%
   theme(legend.position="none") +
   scale_colour_manual(values=c("#354995", "#5E5E5E")) +
   scale_alpha_discrete(range = c(0.4, 1)) +
-  labs(x = "", y = latex2exp::TeX("SWIID By-Observation \\textit{k}-fold Prediction minus LIS")) + 
+  labs(x = "", y = latex2exp::TeX("SWIID \\textit{k}-fold Prediction minus LIS")) + 
   theme(panel.grid.minor=element_blank()) +
   scale_y_continuous(breaks=c(-10, -5, -2, -1,  0, 1, 2, 5, 10)) +
   scale_x_discrete(breaks = NULL) 
@@ -410,9 +410,9 @@ It's true that there are a few observations for which the estimated difference i
 
 This test, though, really only assesses how well the SWIID predicts LIS-comparable inequality figures in years without LIS data in the (now fifty) countries that are _included in the LIS_.
 We can get a better sense of how well the SWIID does predicting countries not covered by the LIS with another cross-validation that, one country at a time, excludes _all_ of the LIS observations for that country.
-The results of just such a test are plotted below. 
+The results of this test are plotted below. 
 
-```{r kfold_output_by_country, echo = FALSE, warning = FALSE, fig.height=3, fig.cap = "\\label{fig:kfold_output_by_country}_k_-fold Cross-Validation Results, Observations Excluded by Country"}
+```{r kfold_output_by_country, echo = FALSE, warning = FALSE, fig.height=3, fig.cap = "\\label{fig:kfold_output_by_country}_k_-fold By-Country Cross-Validation Results"}
 k_fold_by_country_overall <- round(100 - 100*mean(kfold_output_by_country %>% pull(problem), na.rm = TRUE))
 k_fold_by_country_lt1 <- round(100*mean(abs(kfold_output_by_country %>% pull(point_diff)) < .01, na.rm = TRUE))
 k_fold_by_country_lt2 <- round(100*mean(abs(kfold_output_by_country %>% pull(point_diff)) < .02, na.rm = TRUE))
@@ -449,8 +449,8 @@ LIS researchers @Checchi2018 [, 6] report that Egyptian income surveys before 20
 These factors, however, are present in many non-LIS countries as well, so I'll continue working to come up with ways to improve the SWIID routine for such cases.
 
 The second is that there are two other countries for which the 95% credible interval for the differences between the LIS data and the SWIID routine's estimates for those countries when all of their LIS data are excluded does not contain zero in _any_ of the country's observations: Brazil and Peru.
-For Brazil, the cross-validation's estimates of the country's four LIS observations are all too high---by $2.5 \pm 2.0$ Gini points to $3.7 \pm 2.1$ Gini points.
-The cross-validation's estimates for Peru's four LIS observations, on the other hand, are all too low---by between $5.0 \pm 2.9$ and $5.4 \pm 3.0$ Gini points.
+For Brazil, the cross-validation's estimates of the country's four LIS observations are all too high---by $2.5 \pm 2.1$ Gini points to $3.7 \pm 2.1$ Gini points.
+The cross-validation's estimates for Peru's four LIS observations, on the other hand, are all too low---by between $5.0 \pm 3.0$ and $5.4 \pm 3.0$ Gini points.
 So there is some room for improvement here too, and I'll keep working on it also.
 
 All in all, though, these _k_-fold cross-validation exercises show that the SWIID does a very good job of predicting the LIS, which inspires confidence that the SWIID is indeed maximizing the comparability of income inequality data across countries and over time.
