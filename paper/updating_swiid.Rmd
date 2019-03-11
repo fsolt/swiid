@@ -354,9 +354,9 @@ kfold_output_by_country <- rio::import("https://github.com/fsolt/swiid/raw/maste
 
 
 How can we know if the approach just described actually works?
-In previous work, I provided the most stringent test I could come up with: I examined LIS data on country-years that had been included in previously-released versions of the SWIID [@Solt2016, 1277-1278].^[
+In previous work, I put the SWIID to the most stringent test that occurred to me: I compared LIS data on country-years that had been included in previously-released versions of the SWIID [@Solt2016, 1277-1278].^[
 For the initial kernel of this idea, I remain grateful to participants in the Expert Group Meeting on Reducing Inequalities in the Context of Sustainable Development, Department of Economic and Social Affairs, United Nations, New York, October 24–25, 2013.]
-The results were reassuring in some ways---only seven percent of the differences between new LIS observations and old SWIID estimates were statistically significant and larger than two Gini points, a far better record than that achieved by data carefully selected from the UNU-WIDER [-@UNU2014] database or by the _All the Ginis_ dataset adjusted in accordance with its instructions [@Milanovic2010, 2-3]---but less so in others.
+The results were reassuring in some ways---only seven percent of the differences between new LIS observations and old SWIID estimates were statistically significant and larger than two Gini points, a far better record than that achieved by data carefully selected from the UNU-WIDER [-@UNU2014] database or by the _All the Ginis_ dataset adjusted in accordance with its instructions [@Milanovic2013, 8]---but less so in others.
 Most disappointingly, only 72% of the differences had 95% confidence intervals that included zero, suggesting that the SWIID's standard errors were often too small.
 The new SWIID estimation routine described in the preceding section was written and revised to address these issues, but new observations are not added to the LIS quickly enough to allow for continuous testing of these revisions.
 So, instead, I have drawn on a technique developed in data science and machine learning, _k_-fold cross-validation, to assess the SWIID's progress.
@@ -441,11 +441,11 @@ Overall, the plot looks very similar to the one above.
 With each country's entire run of LIS data taking a turn being excluded, the 95% credible interval for the difference between the resulting SWIID estimate and the excluded LIS data contains zero `r k_fold_by_country_overall`% of the time.
 And here, too, most of the point estimates for these differences are small: `r k_fold_by_country_lt2`% are less than 2 Gini points, and `r k_fold_by_country_lt1`% are less than one Gini point.  
 
-This analysis, though, does point to a few rough spots in need of future attention.
+This analysis, though, does point to two rough spots that are in need of future attention.
 The first appears on the far left of the plot above.
 There we find that the largest difference is for the sole country-year for Egypt in the LIS---for 2012---which the SWIID routine underestimates by $16 \pm 6$ Gini points.
 Egypt is currently the only country in the LIS with just a single country-year observation; given that excluding the one observation is equivalent to excluding all of the country's observations, I skipped omitting it in the first cross-validation.
-LIS researchers @Checchi2018 [, 6] report that Egyptian income surveys before 2012 did not include any questions to capture self-employment income, and it's also true that most of the available Ginis for Egypt are based on the distribution of consumption expenditure, which sometimes only loosely track those for the distribution of income (see, e.g., India).
+LIS researchers @Checchi2018 [, 6] report that Egyptian income surveys before 2012 did not include any questions to capture self-employment income, and it's also true that most of the available Ginis for Egypt are based on the distribution of consumption expenditure, which sometimes only loosely track those for the distribution of income (as can be seen in the SWIID source data for, e.g., India).
 These factors, however, are present in many non-LIS countries as well, so I'll continue working to come up with ways to improve the SWIID routine for such cases.
 
 The second is that there are two other countries for which the 95% credible interval for the differences between the LIS data and the SWIID routine's estimates for those countries when all of their LIS data are excluded does not contain zero in _any_ of the country's observations: Brazil and Peru.
