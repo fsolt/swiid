@@ -89,7 +89,8 @@ Between the lack of information on those out of the workforce and on how workers
 They need to have an identifiable welfare definition and equivalence scale (more on these below). 
 Finally, to ensure that these original sources are easily available to SWIID users, observations need to be available online, although not necessarily without paywalls.^[
 For scholarly articles, DOIs or JSTOR stable URLs were the preferred web addresses, but if those were unavailable the publisher's website or another repository was used.
-For books, the link is to the relevant page in Google Books.]
+For books, the link is to the relevant page in Google Books.
+The source data can be accessed and explored graphically on the web at <https://fsolt.org/swiid/swiid_source.html>.]
 
 ```{r data_by_method, echo=FALSE, fig.cap = "\\label{fig:data_by_method}Income Inequality Observations by Method of Collection"}
 
@@ -114,7 +115,7 @@ Most international organizations and a few national statistical offices use appl
 I took as much advantage of these resources as possible, as shown in Figure&nbsp;\ref{fig:data_by_method}.
 Although the sources with APIs were relatively few, they contained the most data: `r api_percent`% of the observations were collected this way.
 In the absence of an API, I scripted downloading and reading any available spreadsheets [see @Wickham2016a].
-If there was no spreadsheet, but data were available in pdf files, I automated downloading these files and then used the `tabulizer` package [@Leeper2016] to read the tables into R.
+When there was no spreadsheet, but data were available in pdf files, I automated downloading these files and then used the `tabulizer` package [@Leeper2016] to read the tables into R.
 In the rare absence of any file to download, I scripted the process of scraping the data from the web.^[
 Code for the entire process can be viewed here: <https://github.com/fsolt/swiid/blob/master/R/data_setup.R>.]
 Still, for a variety of reasons, a source's data may have been consigned to being entered in a separate spreadsheet.^[
@@ -166,12 +167,19 @@ ggplot(cy_coverage, aes(forcats::fct_reorder(source1, n_cy, .desc = TRUE), n_cy)
     geom_bar(stat="identity") +
     theme_bw() +
     theme(axis.title.x = element_blank()) +  
-    ylab("Country-Years") +
-    ggtitle("Income Inequality Datasets by Country-Years Covered")
+    ylab("Country-Years")
 ```
 
-The resulting dataset comprises `r swiid_source %>% nrow() %>% scales::comma()` Gini coefficients from `r swiid_source %>% count(country, year) %>% nrow() %>% scales::comma()` country-years in `r swiid_source %>% count(country) %>% nrow()` countries or territories; as shown in Figure \ref{data_by_coverage}, this makes the coverage of the SWIID source data broader than that of any other income inequality dataset.
-This is not surprising given that, with the exceptions of the two other secondary collections---the World Income Inequality Database [@UNU2018], which contains no original data and so is not drawn on at all, and the _All the Ginis_ database [@Milanovic2019], which contains very little original data and so is not drawn on much---the SWIID source data incorporates all of the data in these other datasets.  
+Data were collected from a total of `r swiid_source %>% count(source1) %>% nrow()` sources.  
+But the fact that observations are drawn from a single source does not necessarily make them comparable: as @Atkinson2009 [, 392] observed, inequality statistics can suffer from "a break in continuity" if "the underlying source is the same, but the methods changed."
+For example, @Eurostat2019 indicates breaks in the time series of its data for France occurred in 2000, 2003, and 2007.
+Rather than a single consistent series, then, these three breaks mean the Eurostat data for France actually consist of four separate series (1994-1999, 2000-2002, 2003-2006, and 2007-2016) that are not comparable with each other.
+That these breaks result in year-to-year jumps ranging in size from an entire Gini index point (in 2000) to more than three points (in 2007) underscore the importance of taking such breaks in continuity into account.
+Defining a series, then, as a group of one or more observations from the same country calculated using the same methodology, the resulting dataset comprises `r swiid_source %>% count(series) %>% nrow() %>% scales::comma()` series.
+
+All told, the SWIID source data include `r swiid_source %>% nrow() %>% scales::comma()` Gini coefficients from `r swiid_source %>% count(country, year) %>% nrow() %>% scales::comma()` country-years in `r swiid_source %>% count(country) %>% nrow()` countries or territories; as shown in Figure \ref{data_by_coverage}, this makes the coverage of the SWIID source data broader than that of any other income inequality dataset.
+This is not surprising given that, with the exceptions of the two other secondary collections---the World Income Inequality Database [@UNU2018], which contains no original data and so is not drawn on at all, and the _All the Ginis_ database [@Milanovic2019], which contains very little original data and so is not drawn on much---the SWIID source data incorporates all of the data in these other datasets.
+
 Turning from how the source data were collected to how they are composed reveals that there is much more data available about the income distribution in some countries than in others.
 Which countries are most data-rich?
 Figure \ref{countries_by_obs} below shows the top dozen countries by the count of observations.
@@ -272,7 +280,6 @@ Coverage is relatively good in all of the years from 2000 to 2015, with at least
 Before then, country coverage is pretty thin each year through the 1960s and 1970s and still is not great until the late 1980s.^[
 This is partly a result of the decision to insist on sources that are available online, but it's just as well: so little information is available about many of the so-excluded observations on that era that it is hard to have much confidence in them.]
 
-
 Above I mentioned that to be included in the SWIID source data observations need to have an identifiable welfare definition and equivalence scale; let us now consider these two aspects of the data.
 A welfare definition is an answer to the question, this Gini measures the distribution of what?
 The four welfare definitions employed in the SWIID source data are market income, gross income, disposable income, and consumption.
@@ -321,7 +328,7 @@ ggplot(wd_es, aes(forcats::fct_reorder(value, n, .desc = TRUE), n)) +
 
 ```
 
-Equivalence scales are the ways in which the size and composition of a household is incorporated into the calculation of its members' welfare.
+Equivalence scales are the ways in which the size and composition of a household are incorporated into the calculation of its members' welfare.
 On the one hand, these factors can simply be ignored, with all households with the same amount of income or consumption treated as if they enjoy the same level of welfare, regardless of their size.  One can improve on this household 'scale'^[
 Quoted because, strictly speaking, nothing is being scaled at all; it's simply treating the household as the unit of analysis.] by dividing the household's income by its number of members, that is, by using a per capita scale.
 Although undoubtedly superior to simply looking at households, the per capita scale is not ideal: a household of two members and an income of \$100,000 is better off than one with a single member and \$50,000 due to economies of scale---that is among the most important reasons why people look for roommates.
@@ -333,18 +340,37 @@ In previous versions of the SWIID, all adult-equivalent scales were considered a
 Now, the square-root scale and the OECD-modified scale have both been split out, leaving the remaining catch-all adult-equivalent category much smaller.
 The right panel of Figure \ref{wd_es} shows how many observations in the SWIID source data use each equivalence scale.
 
-In fact, all twenty combinations of welfare definition and equivalence scale are present in the source data.^[
+All twenty combinations of welfare definition and equivalence scale are present in the source data.^[
 The most common category, disposable income per capita, is used in 1766 observations, or just 11.4% of the total.]
 These broad differences between observations, along with less readily evident distinctions such as in the comprehensiveness of the income or consumption definitions employed or in the reporting period,^[
 One source of differences within a single welfare definition is the manner and extent to which nonmonetary income or expenditure---such as the value of food grown for the household's own consumption or of housing that the owner occupies---is included.
-Consumption definitions can vary considerably in whether and how observations treat expenditures of durable goods.
+Consumption definitions can vary considerably in whether and how observations treat expenditures on durable goods.
 Income definitions sometimes exclude such major categories as interest and dividends [see @Atkinson2001, 785] or self-employment income [see @Checchi2018, 6].] mean that they are far from comparable.
 So while the SWIID source data constitute the most comprehensive collection of the available observations of the distribution of income across the populations of the world's countries, they are not suitable for cross-national research.
 How to make use of all of these available data to estimate levels of income inequality that can be compared across countries and over time is the subject of the next section.
 
 ## Generating Comparable Income Inequality Estimates
 
-<!-- One possible cause of underestimated standard errors are the differences between series of data that remain even after their population coverage, welfare definition, and equivalence scale have been taken into account---that is, the lack of harmonization of the data within any of the categories of the SWIID's multiple-imputation model.   -->
+The starting point for the SWIID's estimates are two collections of Gini indices from the LIS, one of market income inequality and one of disposable income inequality, each using the square-root equivalence scale [@LIS2018].
+The LIS has meticulously harmonized its survey microdata to be as comparable cross-nationally as possible; inequality observations calculated from these harmonized microdata therefore serve as the baseline for the SWIID.^[
+Although New Zealand does not participate in the LIS, I treat the four observations of disposable income inequality (1982, 1986, 1991, 1996) specially prepared by Statistics New Zealand @StatisticsNZ1999 [, 73] to be comparable with the LIS to be part of the collection of disposable income inequality statistics from the LIS.] 
+These two LIS series anchor the SWIID's estimates of market and disposable income inequality. 
+The SWIID routine estimates the relationships between these LIS Gini indices and all of the other Ginis available for the same country-years and uses these relationships to estimate what the LIS Gini would be in country-years not included in the LIS but available from other sources.
+
+These relationships fall into four categories:
+
+  1. The ratio $\rho_{s}$ for each series $s$---again defining a series as a group of observations from the same country calculated using the same methodology---that include country-years that also appear in the LIS baseline,^[
+Because the two LIS collections do not contain the identical country-years (the collection of disposable income inequality Ginis has `r swiid_source %>% filter(str_detect(series, "LIS") & equiv_scale == "sqrt" & welfare_def == "disp") %>% nrow()` observations, while that for market income inequality has only `r swiid_source %>% filter(str_detect(series, "LIS") & equiv_scale == "sqrt" & welfare_def == "market") %>% nrow()`), these series vary somewhat when estimates for each of the two welfare definitions are being generated.] 
+such that
+  \[
+  G_{bkt} \sim \mathcal{N}(\rho_{s} \times G_{skt},\,\sigma_s^{2})
+  \]
+  where $G_{bkt}$ is the LIS Gini for baseline welfare definition $b$ in country $k$ at time $t$, $G_{skt}$ is the Gini from series $s$ in that same country $k$ and time $t$, and $\sigma_s^{2}$ is a series-specific error term.  That is, $\rho_{s}$ can be understood as the average ratio of the LIS baseline to the series $s$ in all years that the two overlap.  This is the most specific adjustment: the relationship is not only country-specific and includes the welfare definition and equivalence scale, but because each series uses a consistent methodology, such factors as the comprehensiveness of the income definition and the reporting period are also taken into account.
+  
+  2. The ratio $\rho_{kwe}$, estimated as the average ratio of the LIS baseline to Ginis with the same country-year for country $k$ with welfare definition $w$ and equivalence scale $e$.  Of course, like $\rho_{s}$, the first category of relationships, $\rho_{kwe}$ can only be estimated in the 50 countries that are included in the LIS.  In version 8.0, $\rho_{kwe}$ can be estimated for all observations in the source data for countries included in the LIS, and $\rho_{s}$ can be estimated for nearly half of these observations.
+
+  3. The ratio $rho_{kw}$, estimated as the average ratio of Ginis in country $k$ with welfare definition $w$ to Ginis with the same country-year and equivalence scale but the baseline welfare definition $b$, and the ratio $rho_{rwe}$, the average ratio of the LIS baseline
+
 
 <!-- The differences in the treatment of items such as non-monetary income and imputed rents, though much smaller than those resulting from the factors used to generate the SWIID's categories, nevertheless can be consequential.  For example, consider the 174 country-years of Gini indices found in Version 3b of the \citet{UNU2014} dataset that overlap with the coverage of the LIS and were calculated on the basis of household-adult-equivalent disposable income, the same combination of equivalence scale and welfare definition employed by the LIS.  Over a fifth of these were substantively and statistically significantly different from the LIS values [see @Solt2016, 1278].  Treating these data as if comparable by placing them in a single category fails to take into account the error that their differences introduce. -->
 
@@ -356,7 +382,7 @@ How to make use of all of these available data to estimate levels of income ineq
 
 <!-- For each country included in the LIS, the SWIID's estimates are based exclusively on relationships observed within the country.  First, for each country's series that share observed years with the LIS, the relationship $rho_as$ between the LIS data and the series were estimated as  -->
 
-<!-- $G_{at} \sim \mathcal{N}(rho_{as} \times G_{st},\,\sigma_s^{2})$ -->
+
 
 
 
