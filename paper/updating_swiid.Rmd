@@ -351,36 +351,46 @@ How to make use of all of these available data to estimate levels of income ineq
 
 ## Generating Comparable Income Inequality Estimates
 
-The starting point for the SWIID's estimates are two collections of Gini indices from the LIS, one of market income inequality and one of disposable income inequality, each using the square-root equivalence scale [@LIS2018].
-The LIS has meticulously harmonized its survey microdata to be as comparable cross-nationally as possible; inequality observations calculated from these harmonized microdata therefore serve as the baseline for the SWIID.^[
+```{r load_x, echo=FALSE}
+ineq2 <- rio::import(here::here("data/ineq.rda"), which = "ineq2")
+```
+
+The starting point for the SWIID's estimates are two sets of Gini indices from the LIS, one of market income inequality and one of disposable income inequality, each using the square-root equivalence scale [@LIS2018].
+The LIS has meticulously harmonized its survey microdata to be as comparable cross-nationally as possible; inequality observations calculated from these harmonized microdata therefore serve as the baselines for the SWIID.^[
 Although New Zealand does not participate in the LIS, I treat the four observations of disposable income inequality (1982, 1986, 1991, 1996) specially prepared by Statistics New Zealand @StatisticsNZ1999 [, 73] to be comparable with the LIS to be part of the collection of disposable income inequality statistics from the LIS.] 
-These two LIS series anchor the SWIID's estimates of market and disposable income inequality. 
+These two LIS baselines anchor the SWIID's estimates of market and disposable income inequality. 
 The SWIID routine estimates the relationships between these LIS Gini indices and all of the other Ginis available for the same country-years and uses these relationships to estimate what the LIS Gini would be in country-years not included in the LIS but available from other sources.
 
-These relationships fall into four categories:
+These relationships fall into four categories, varying in accordance with how much information is available: two for observations of countries included in the LIS and two more for countries that, as of yet, are not included.
 
-  1. The ratio $\rho_{s}$ for each series $s$---again defining a series as a group of observations from the same country calculated using the same methodology---that include country-years that also appear in the LIS baseline,^[
-Because the two LIS collections do not contain the identical country-years (the collection of disposable income inequality Ginis has `r swiid_source %>% filter(str_detect(series, "LIS") & equiv_scale == "sqrt" & welfare_def == "disp") %>% nrow()` observations, while that for market income inequality has only `r swiid_source %>% filter(str_detect(series, "LIS") & equiv_scale == "sqrt" & welfare_def == "market") %>% nrow()`), these series vary somewhat when estimates for each of the two welfare definitions are being generated.] 
-such that
+First, for each series $s$---again defining a series as a group of observations from the same country calculated using the same methodology---that includes more than two country-years that also appear in the LIS baseline,^[
+Because the two LIS baselines do not contain the identical country-years (the disposable income inequality baseline has `r swiid_source %>% filter(str_detect(series, "LIS") & equiv_scale == "sqrt" & welfare_def == "disp") %>% nrow()` observations, while that for market income inequality has only `r swiid_source %>% filter(str_detect(series, "LIS") & equiv_scale == "sqrt" & welfare_def == "market") %>% nrow()`), these series vary somewhat when estimates for each of the two welfare definitions are being generated.] the ratio $\hat{\rho}_{s}$ such that
   \[
-  G_{bkt} \sim \mathcal{N}(\rho_{s} \times G_{skt},\,\sigma_s^{2})
+  G_{bkt} \sim \mathcal{N}(\hat{\rho}_{s} \times G_{skt},\,\sigma_s^{2})
   \]
-  where $G_{bkt}$ is the LIS Gini for baseline welfare definition $b$ in country $k$ at time $t$, $G_{skt}$ is the Gini from series $s$ in that same country $k$ and time $t$, and $\sigma_s^{2}$ is a series-specific error term.  That is, $\rho_{s}$ can be understood as the average ratio of the LIS baseline to the series $s$ in all years that the two overlap.  This is the most specific adjustment: the relationship is not only country-specific and includes the welfare definition and equivalence scale, but because each series uses a consistent methodology, such factors as the comprehensiveness of the income definition and the reporting period are also taken into account.
+where $G_{bkt}$ is the LIS Gini for baseline welfare definition $b$ in country $k$ at time $t$, $G_{skt}$ is the Gini from series $s$ in that same country $k$ and time $t$, and $\sigma_s^{2}$ is a series-specific error term.
+That is, $\hat{\rho}_{s}$ is the estimated ratio of the LIS baseline to the series $s$ in all years that the two overlap.
+This relationship is not only country-specific and includes the welfare definition and equivalence scale, but because each series uses a consistent methodology, such factors as the comprehensiveness of the income definition and the reporting period are also taken into account.
+When looking only at countries included in the LIS, $\hat{\rho}_{s}$ can be estimated for series encompassing nearly half of the observations and over 70% of the observed country-years in the SWIID source data.
   
-  2. The ratio $\rho_{kwe}$, estimated as the average ratio of the LIS baseline to Ginis with the same country-year for country $k$ with welfare definition $w$ and equivalence scale $e$.  Of course, like $\rho_{s}$, the first category of relationships, $\rho_{kwe}$ can only be estimated in the 50 countries that are included in the LIS.  In version 8.0, $\rho_{kwe}$ can be estimated for all observations in the source data for countries included in the LIS, and $\rho_{s}$ can be estimated for nearly half of these observations.
+The SWIID routine next expands the observations used to estimate the relationship between the source data and the LIS baseline to include all of the observations in the country with the same welfare definition and equivalence scale.
+The relationship $\hat{\rho}_{kwe}$ is the estimated ratio of the LIS baseline to Ginis with the same country-year for each country $k$, welfare definition $w$, and equivalence scale $e$.
+Because it requires only that an observation's combination of welfare definition and equivalence scale---rather than the observation's series---share country-years with the LIS baseline data, $\hat{\rho}_{kwe}$ gives up the benefits of harmonization and consequently yields more uncertain estimates.
+On the other hand, the advantage of $\hat{\rho}_{kwe}$ is that it can be estimated for all of the remaining observations in the source data for countries included in the LIS.
 
-  3. The ratio $rho_{kw}$, estimated as the average ratio of Ginis in country $k$ with welfare definition $w$ to Ginis with the same country-year and equivalence scale but the baseline welfare definition $b$, and the ratio $rho_{rwe}$, the average ratio of the LIS baseline
+However, $\hat{\rho}_{kwe}$ cannot be estimated for any of the observations in the countries that are not included in the LIS: no matter how rich the country's data in any combination of welfare definition and equivalence scale, those data will have no country-years in common with the LIS baseline.
+For those countries, when possible, the relationship between source data observations and the LIS baseline data is estimated as the product of two factors.
+The first factor seeks to account for differences in welfare definition---the policy-sensitive effects of taxes and transfers---by reference only to data from the country in question.
+For each country $k$ and welfare definition $w$, $\hat{\rho}_{kw}$ is the estimate of the ratio of Ginis with the baseline welfare definition to those with the welfare definition $w$ in the same country-year.
+The second factor, to account for the much smaller differences across equivalence scales, is $\hat{\rho}_{re}$.
+The ratio $\hat{\rho}_{re}$ is the estimate of the ratio of LIS baseline observations to Ginis of the same country-year with the baseline welfare definition and equivalence scale $e$ across the region $r$ in which country $k$ is located.
+The product of $\hat{\rho}_{kw}$ and $\hat{\rho}_{re}$, then, estimates the relationship between a Gini in country $k$ in region $r$ with welfare definition $w$ and equivalence scale $e$ and the LIS baseline.
+This product can be estimated for more than two-thirds of the source data observations for countries outside the LIS, though these constitute only `r round((ineq2 %>% filter(k_bl_obs ==0 & kw) %>% distinct(country, year) %>% nrow())/(ineq2 %>% filter(k_bl_obs ==0) %>% distinct(country, year) %>% nrow()), 2) * 100`% of the observed country-years for those countries. 
+
+Lastly, where the source data for the country of an observation does not allow the relationship across welfare definitions to be estimated from in-country data as above, the 
+for the remaining observations, the estimated relationship $\hat{\rho}_{rwe}$ is used: the estimated ratio of the LIS baseline to Ginis with the same country-year for welfare definition $w$ and equivalence scale $e$ across the same region $r$ as the country of the observation.
 
 
-<!-- The differences in the treatment of items such as non-monetary income and imputed rents, though much smaller than those resulting from the factors used to generate the SWIID's categories, nevertheless can be consequential.  For example, consider the 174 country-years of Gini indices found in Version 3b of the \citet{UNU2014} dataset that overlap with the coverage of the LIS and were calculated on the basis of household-adult-equivalent disposable income, the same combination of equivalence scale and welfare definition employed by the LIS.  Over a fifth of these were substantively and statistically significantly different from the LIS values [see @Solt2016, 1278].  Treating these data as if comparable by placing them in a single category fails to take into account the error that their differences introduce. -->
-
-<!-- A potential partial solution, at least for more data-rich countries, would be to generate within-country estimates on the basis of the unique series of data provided by individual sources rather than collecting these series into the categories currently used.  To do this, the research team will first need to identify the breaks in those series provided by each source when that source's underlying methodology changes, that is, what \citet[389-393]{Atkinson2009} call ``breaks in continuity.''  For example, \citet{Eurostat2014a} indicates breaks in the time series of its data for France occurred in 2001, 2004, and 2008.  Rather than a single consistent series, then, these three breaks mean the Eurostat data for France actually consist of four separate series (1995-2000, 2001-2003, 2004-2007, and 2008-2013) that are not comparable with each other.\footnote{That these breaks result in year-to-year jumps ranging in size from an entire Gini index point (in 2001) to more than three points (in 2008) is another indication of the importance of harmonization.}  The source data will be recoded accordingly.  Next, the imputation model's code for generating within-country estimates through loess and linear regression will be expanded so that $\rho_{abit}$ are predicted not simply for all available combinations of categories $a$ and $b$ but for all available combinations of \emph{series}.  As these analyses are already performed in parallel, the dramatically larger number of combinations should not prove an obstacle. -->
-
-
-
-<!-- Making use of all of this available information is not straightforward.  One cannot simply ignore its many sources of incomparability. -->
-
-<!-- For each country included in the LIS, the SWIID's estimates are based exclusively on relationships observed within the country.  First, for each country's series that share observed years with the LIS, the relationship $rho_as$ between the LIS data and the series were estimated as  -->
 
 
 
