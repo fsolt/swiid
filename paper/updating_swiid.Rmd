@@ -387,8 +387,7 @@ The ratio $\hat{\rho}_{re}$ is the estimate of the ratio of LIS baseline observa
 The product of $\hat{\rho}_{kw}$ and $\hat{\rho}_{re}$, then, estimates the relationship between a Gini in country $k$ in region $r$ with welfare definition $w$ and equivalence scale $e$ and the LIS baseline.
 This product can be estimated for more than two-thirds of the source data observations for countries outside the LIS, though these constitute only `r round((ineq2 %>% filter(k_bl_obs ==0 & kw) %>% distinct(country, year) %>% nrow())/(ineq2 %>% filter(k_bl_obs ==0) %>% distinct(country, year) %>% nrow()), 2) * 100`% of the observed country-years for those countries. 
 
-Lastly, where the source data for the country of an observation does not allow the relationship across welfare definitions to be estimated from in-country data as above, the 
-for the remaining observations, the estimated relationship $\hat{\rho}_{rwe}$ is used: the estimated ratio of the LIS baseline to Ginis with the same country-year for welfare definition $w$ and equivalence scale $e$ across the same region $r$ as the country of the observation.
+Lastly, where the source data for the country of an observation does not allow the relationship across welfare definitions to be estimated from in-country data as above, the estimated relationship $\hat{\rho}_{rwe}$ is used: the estimated ratio of the LIS baseline to Ginis with the same country-year for welfare definition $w$ and equivalence scale $e$ across the same region $r$ as the country of the observation.
 
 
 
