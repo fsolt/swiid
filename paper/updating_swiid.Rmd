@@ -77,8 +77,8 @@ The SWIID source data consists of observations of the Gini coefficient in variou
 Because the Gini index is simply the Gini coefficient multiplied by 100, the two are equivalent, and both can be referred to as 'the Gini' with little cause for confusion.]
 The Gini is most intuitively defined as the average difference in income between all pairs in a population, divided by twice the average income in the population.
 It is by far the most commonly encountered summary statistic for measuring income inequality.
-The Gini has drawbacks---it is most sensitive to changes in the middle of the income distribution, rather than among those with the highest or lowest incomes, and it is not easily decomposed---that other metrics, such as the Atkinson index and the Theil indices, overcome.
-However, in light of the SWIID's goal of providing information on income inequality for the broadest possible sample of countries and years, the ubiquity of the Gini makes it the only plausible choice for this purpose.
+The Gini is more sensitive to changes in the middle of the income distribution than other metrics, such as the Atkinson index and the Theil indices, and unlike those measures it cannot be analytically decomposed.
+But in light of the SWIID's goal of providing information on income inequality for the broadest possible sample of countries and years, the ubiquity of the Gini makes it the only plausible choice for this purpose.
 
 To be included in the SWIID source data, Gini observations need to encompass the entire population of a country without regard to age, location, or employment status.^[
 The requirement for complete territorial coverage was relaxed for minor deviations such as data on Portugal that excludes Madeira and the Azores.
