@@ -118,7 +118,7 @@ In the absence of an API, I scripted downloading and reading any available sprea
 When there was no spreadsheet, but data were available in pdf files, I automated downloading these files and then used the `tabulizer` package [@Leeper2016] to read the tables into R.
 In the rare absence of any file to download, I scripted the process of scraping the data from the web.^[
 Code for the entire process can be viewed here: <https://github.com/fsolt/swiid/blob/master/R/data_setup.R>.]
-Still, for a variety of reasons, a source's data may have been consigned to being entered in a separate spreadsheet.^[
+Still, for a variety of reasons, a source's data may have been consigned to being entered manually in a separate spreadsheet.^[
 See <https://github.com/fsolt/swiid/blob/master/data-raw/fs_added_data.csv>.]
 Many sources contain just a handful or fewer observations, making the payoff to the often laborious process of data cleaning too small to justify the effort.
 Some sources---including most academic articles---are behind paywalls, making reproducibility particularly challenging in any event.
@@ -276,7 +276,8 @@ cby_plot + ybc_plot
 We can also get a sense of the breadth of the available income inequality data by turning the question around and asking about the number of countries covered across time.
 The right panel of Figure \ref{countries_by_years} shows, for each year, the number of countries for which the SWIID source data includes at least one observation.
 There are observations for `r swiid_source %>% filter(year==2005) %>% count(country) %>% nrow()` countries in 2005, the year with the broadest coverage.
-Coverage is relatively good in all of the years from 2000 to 2015, with at least 80 countries observed per year, before dropping to `r swiid_source %>% filter(year==2016) %>% count(country) %>% nrow()` countries for 2016 and just `r swiid_source %>% filter(year==2017) %>% count(country) %>% nrow()` for 2017.
+Coverage is relatively good in all of the years from 2000 to 2015, with at least 80 countries observed per year, before dropping to `r swiid_source %>% filter(year==2016) %>% count(country) %>% nrow()` countries for 2016 and just `r swiid_source %>% filter(year==2017) %>% count(country) %>% nrow()` for 2017.^[
+Data collection for version 8.0 was completed on February 18, 2019, too soon for any data for 2018 to yet be available.]
 Before then, country coverage is pretty thin each year through the 1960s and 1970s and still is not great until the late 1980s.^[
 This is partly a result of the decision to insist on sources that are available online, but it's just as well: so little information is available about many of the so-excluded observations on that era that it is hard to have much confidence in them.]
 
@@ -357,8 +358,14 @@ ineq2 <- rio::import(here::here("data/ineq.rda"), which = "ineq2")
 
 The starting point for the SWIID's estimates are two sets of Gini indices from the LIS, one of market income inequality and one of disposable income inequality, each using the square-root equivalence scale [@LIS2018].
 The LIS has meticulously harmonized its survey microdata to be as comparable cross-nationally as possible; inequality observations calculated from these harmonized microdata therefore serve as the baselines for the SWIID.^[
-Although New Zealand does not participate in the LIS, I treat the four observations of disposable income inequality (1982, 1986, 1991, 1996) specially prepared by Statistics New Zealand @StatisticsNZ1999 [, 73] to be comparable with the LIS to be part of the collection of disposable income inequality statistics from the LIS.] 
-These two LIS baselines anchor the SWIID's estimates of market and disposable income inequality. 
+These Ginis are calculated directly from the LIS microdata on the same basis as that used for the LIS Key Indicators.
+The code employed for this purpose can be found here: <https://github.com/fsolt/swiid/blob/master/R/lissy.R>.
+Most controversially, this procedure truncates high incomes at ten times the median income; this is done in an effort to maximize comparability across different countries given that the raw data may have been subject to different degrees of such top coding before being submitted to the LIS.
+The tradeoff, however, is that Ginis calculated with top coding underestimate the true extent of income inequality.
+I am grateful to Zsolt Darvas for drawing my attention to this issue.
+]
+These two LIS baselines anchor the SWIID's estimates of market and disposable income inequality.^[
+Although New Zealand does not participate in the LIS, I treat the four observations of disposable income inequality (1982, 1986, 1991, 1996) specially prepared by Statistics New Zealand @StatisticsNZ1999 [, 73] to be comparable with the LIS to be part of the collection of disposable income inequality statistics from the LIS.]  
 The SWIID routine estimates the relationships between these LIS Gini indices and all of the other Ginis available for the same country-years and uses these relationships to estimate what the LIS Gini would be in country-years not included in the LIS but available from other sources.
 
 These relationships fall into four categories, varying in accordance with how much information is available: two for observations of countries included in the LIS and two more for countries that, as of yet, are not included.
