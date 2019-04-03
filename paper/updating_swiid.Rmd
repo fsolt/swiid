@@ -404,55 +404,46 @@ The combination of the relative paucity of data and the heterogeneity of relatio
 Cross-validation tests confirmed that doing so best preserves the uncertainty implied by the scarcity and heterogeneity of the data available.
 The next section discusses cross-validation in detail.]
 
-```{r rho_by_region, echo=FALSE, fig.cap="Welfare Definitions and Equivalence Scales in the SWIID Source Data \\label{rho_by_reg}"}
+```{r rho_by_region, echo=FALSE, fig.height=4, fig.cap="Estimated Relationships by Region, Observed Country-Years \\label{rho_by_reg}"}
 
-rbr_obs <- ineq2 %>% 
-  mutate(type = factor(case_when(ibl ~ 1,
-                                 bl | obl ~ 2,
+rbr <- ineq2 %>% 
+  mutate(type = factor(case_when(ibl ~ 5,
+                                 bl | obl ~ 4,
                                  kbl ~ 3,
-                                 !kbl & kw ~ 4,
-                                 TRUE ~ 5), 
-                       labels = c("baseline", "rho_s", "rho_kw", "rho_kw x rho_re", "rho_rwe"))) %>% 
-  group_by(region) %>% 
-  count(type) %>% 
-  mutate(value = round(n/sum(n), 4) * 100)
-  
-  
-rbr_cy <- ineq2 %>% 
-  mutate(type = factor(case_when(ibl ~ 1,
-                                 bl | obl ~ 2,
-                                 kbl ~ 3,
-                                 !kbl & kw ~ 4,
-                                 TRUE ~ 5), 
-                       labels = c("baseline", "rho_s", "rho_kw", "rho_kw x rho_re", "rho_rwe"))) %>% 
-  group_by(country, year) %>% 
-  arrange(type) %>% 
+                                 !kbl & kw ~ 2,
+                                 TRUE ~ 1), 
+                       labels = c("rho_rwe", "rho_kw x rho_re", "rho_kwe", "rho_s", "baseline"))) %>% 
+  group_by(region, country, year) %>% 
+  arrange(desc(type)) %>% 
   slice(1) %>% 
-  ungroup() %>% 
+  ungroup()
+
+rbr_cy <- rbr %>% 
   group_by(region) %>% 
   count(type) %>% 
-  mutate(value = round(n/sum(n), 4) * 100)
+  mutate(value = round(n/sum(n), 4) * 100) %>% 
+  ungroup() %>% 
+  bind_rows(rbr %>%
+              count(type) %>% 
+              mutate(value = round(n/sum(n), 4) * 100,
+                     region = "Total")) %>%
+  mutate(region = as_factor(region) %>% 
+           fct_relevel("AES", "WE", "EE", "AT", "LAC", "FSU", "DAA", "Total"))
 
-
-
-
-sbr <- read.csv("/Users/fredsolt/Documents/Projects/Global Inequality/ SWIID v5.0/Paper/7byregion.csv")
-sbr$region <- with(sbr, factor(region, levels=region[order(order)]))
- 
-sbr2 <- reshape2::melt(sbr[1:8], id="region", variable.name="type")
-
-pdf(file="sbr.pdf",width=8.5, height=6)
-ggplot(sbr2, aes(region, value, fill = type)) + 
-    geom_bar(stat = "identity") + theme_bw() + theme(legend.position="right") +
-    labs(x = "", y = "") + 
-    theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
-    scale_fill_manual(values=c("#35505E", "#416F86", "#4E8EAF", "#66CCFF", "#DF6679", "#ca0020", "#000000"),
-                      name="Adjustment Type",
-                      breaks=c("lis", "low", "cd", "c", "reg", "ad", "g"),
-                      labels=c("Unadjusted LIS Data", "Country-Year", "Country-Decade", "Country", "Region", "Advanced/Developing", "Global"), 
-                      guide = guide_legend(reverse=TRUE))
-graphics.off()
-
+ggplot(rbr_cy, aes(region, value, fill = type)) + 
+  geom_bar(stat = "identity") +
+  theme_bw() + 
+  theme(legend.position="right") +
+  labs(x = NULL, y = NULL) + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  scale_fill_manual(values=c("#DF6679", "#66CCFF", "#4E8EAF", "#416F86", "#35505E"),
+                      name="Estimated\nRelationship",
+                      breaks=c("baseline", "rho_s", "rho_kwe", "rho_kw x rho_re", "rho_rwe"),
+                      labels=c("LIS Baseline", unname(latex2exp::TeX(c('$\\hat{\\rho}_{s}',  '$\\hat{\\rho}_{kwe}', '$\\hat{\\rho}_{kw} \\times \\hat{\\rho}_{re}', '$\\hat{\\rho}_{rwe}')))), 
+                      guide = guide_legend(reverse=TRUE)) +
+  scale_y_continuous(breaks = seq(0, 100, 20)) + 
+  scale_x_discrete(breaks = c("AES", "WE", "EE", "AT", "LAC", "FSU", "DAA", "Total"),
+                   labels = c("Adv English-Speaking", "Western Europe", "Adv Ex-Communist", "Japan and Asian Tigers", "Latin America", "Dev Ex-Communist", "Dev Africa and Asia", "Total"))
 ```
 
 
