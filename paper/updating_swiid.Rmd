@@ -384,7 +384,9 @@ When looking only at countries included in the LIS, $\hat{\rho}_{s}$ can be esti
 The SWIID routine next expands the observations used to estimate the relationship between the source data and the LIS baseline to include all of the observations in the country with the same welfare definition and equivalence scale.
 The relationship $\hat{\rho}_{kwe}$ is the estimated ratio of the LIS baseline to Ginis with the same country-year for each country $k$, welfare definition $w$, and equivalence scale $e$.
 Because it requires only that an observation's combination of welfare definition and equivalence scale---rather than the observation's series---share country-years with the LIS baseline data, $\hat{\rho}_{kwe}$ gives up the benefits of harmonization and consequently yields more uncertain estimates.
-On the other hand, the advantage of $\hat{\rho}_{kwe}$ is that it can be estimated for all of the remaining observations in the source data for countries included in the LIS.
+On the other hand, the advantage of $\hat{\rho}_{kwe}$ is that it can be estimated for all of the remaining observations in the source data for countries included in the LIS.^[
+Previous versions of the SWIID allowed $\hat{\rho}_{kwe}$ to vary over time, but much of what those parameters was capturing was the breaks in continuity across different series within each combination of welfare definition and equivalence scale; this variation, of course, is now parsed directly by $\hat{\rho}_{s}$.  Allowing $\hat{\rho}_{s}$ to vary by time for series of sufficient length is an enhancement planned for future versions of the SWIID. 
+]
 
 However, $\hat{\rho}_{kwe}$ cannot be estimated for any of the observations in the countries that are not included in the LIS: no matter how rich the country's data in any combination of welfare definition and equivalence scale, those data will have no country-years in common with the LIS baseline.
 For those countries, when possible, the relationship between source data observations and the LIS baseline data is estimated as the product of two factors.
@@ -393,7 +395,7 @@ For each country $k$ and welfare definition $w$, $\hat{\rho}_{kw}$ is the estima
 The second factor, to account for the much smaller differences across equivalence scales, is $\hat{\rho}_{re}$.
 The ratio $\hat{\rho}_{re}$ is the estimate of the ratio of LIS baseline observations to Ginis of the same country-year with the baseline welfare definition and equivalence scale $e$ across the region $r$ in which country $k$ is located.
 The product of $\hat{\rho}_{kw}$ and $\hat{\rho}_{re}$, then, estimates the relationship between a Gini in country $k$ in region $r$ with welfare definition $w$ and equivalence scale $e$ and the LIS baseline.
-This product can be estimated for more than two-thirds of the source data observations for countries outside the LIS, though these constitute only `r round((ineq2 %>% filter(k_bl_obs ==0 & kw) %>% distinct(country, year) %>% nrow())/(ineq2 %>% filter(k_bl_obs ==0) %>% distinct(country, year) %>% nrow()), 2) * 100`% of the observed country-years for those countries. 
+This product can be estimated for more than two-thirds of the source data observations for countries outside the LIS, though these constitute only `r round((ineq2 %>% filter(k_bl_obs == 0 & kw) %>% distinct(country, year) %>% nrow())/(ineq2 %>% filter(k_bl_obs ==0 ) %>% distinct(country, year) %>% nrow()), 2) * 100`% of the observed country-years for those countries. 
 
 Lastly, where the source data for the country of an observation does not allow the relationship across welfare definitions to be estimated from in-country data as above, the estimated relationship $\hat{\rho}_{rwe}$ is used: the estimated ratio of the LIS baseline to Ginis with the same country-year for welfare definition $w$ and equivalence scale $e$ across the same region $r$ as the country of the observation.^[
 The regions used are defined as follows: (1) the advanced English-speaking countries, (2) Western Europe, (3) Japan and the Asian Tigers, (4) the advanced ex-Communist countries, (5) Latin America, (6) the developing ex-Communist countries, and (7) Africa and developing Asia.
@@ -402,7 +404,56 @@ The combination of the relative paucity of data and the heterogeneity of relatio
 Cross-validation tests confirmed that doing so best preserves the uncertainty implied by the scarcity and heterogeneity of the data available.
 The next section discusses cross-validation in detail.]
 
+```{r rho_by_region, echo=FALSE, fig.cap="Welfare Definitions and Equivalence Scales in the SWIID Source Data \\label{rho_by_reg}"}
 
+rbr_obs <- ineq2 %>% 
+  mutate(type = factor(case_when(ibl ~ 1,
+                                 bl | obl ~ 2,
+                                 kbl ~ 3,
+                                 !kbl & kw ~ 4,
+                                 TRUE ~ 5), 
+                       labels = c("baseline", "rho_s", "rho_kw", "rho_kw x rho_re", "rho_rwe"))) %>% 
+  group_by(region) %>% 
+  count(type) %>% 
+  mutate(value = round(n/sum(n), 4) * 100)
+  
+  
+rbr_cy <- ineq2 %>% 
+  mutate(type = factor(case_when(ibl ~ 1,
+                                 bl | obl ~ 2,
+                                 kbl ~ 3,
+                                 !kbl & kw ~ 4,
+                                 TRUE ~ 5), 
+                       labels = c("baseline", "rho_s", "rho_kw", "rho_kw x rho_re", "rho_rwe"))) %>% 
+  group_by(country, year) %>% 
+  arrange(type) %>% 
+  slice(1) %>% 
+  ungroup() %>% 
+  group_by(region) %>% 
+  count(type) %>% 
+  mutate(value = round(n/sum(n), 4) * 100)
+
+
+
+
+sbr <- read.csv("/Users/fredsolt/Documents/Projects/Global Inequality/ SWIID v5.0/Paper/7byregion.csv")
+sbr$region <- with(sbr, factor(region, levels=region[order(order)]))
+ 
+sbr2 <- reshape2::melt(sbr[1:8], id="region", variable.name="type")
+
+pdf(file="sbr.pdf",width=8.5, height=6)
+ggplot(sbr2, aes(region, value, fill = type)) + 
+    geom_bar(stat = "identity") + theme_bw() + theme(legend.position="right") +
+    labs(x = "", y = "") + 
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+    scale_fill_manual(values=c("#35505E", "#416F86", "#4E8EAF", "#66CCFF", "#DF6679", "#ca0020", "#000000"),
+                      name="Adjustment Type",
+                      breaks=c("lis", "low", "cd", "c", "reg", "ad", "g"),
+                      labels=c("Unadjusted LIS Data", "Country-Year", "Country-Decade", "Country", "Region", "Advanced/Developing", "Global"), 
+                      guide = guide_legend(reverse=TRUE))
+graphics.off()
+
+```
 
 
 ## Evaluating the Comparability of the SWIID's Estimates With Cross-Validation
@@ -518,3 +569,4 @@ There is room for improvement here too, and this too will receive continued effo
 
 All in all, though, these _k_-fold cross-validation exercises show that the SWIID does a very good job of predicting the LIS, which inspires confidence that the SWIID is indeed maximizing the comparability of income inequality data across countries and over time.
 
+## Conclusion
