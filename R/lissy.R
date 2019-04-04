@@ -33,7 +33,7 @@ wNtile <- function(var, wgt, split) {
 
 topBottom <- function(var, botline, topline) {
   tb <- ifelse(var < botline, botline, var)
-  tb <- ifelse(tb > topline, topline, var)
+  tb <- ifelse(tb > topline, topline, tb)
   return(tb)
 }
 
