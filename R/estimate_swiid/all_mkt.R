@@ -53,7 +53,7 @@ skt0 <- x0 %>%
   mutate(sktcode = 1:n()) %>% 
   select(-firstyr, -lastyr)
 
-rho_we <- rho_we %>%
+rho_we_m <- rho_we_m %>%
   select(-ends_with("code")) %>% 
   inner_join(x0 %>% 
                select("country", "year", "wdes",
