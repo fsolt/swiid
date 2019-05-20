@@ -2194,7 +2194,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
       spread(key = wdes, value = gini_cat) %>% 
       mutate(bl = get(paste0(baseline_wd, "_", e))) %>% 
       mutate_at(vars(matches(e)),
-                funs(bl/.)) %>% 
+                list(~bl/.)) %>% 
       select(kcode, tcode, matches(e)) %>% 
       gather(key = wdes, value = rho_wd, -kcode, -tcode) %>% 
       filter(!is.na(rho_wd)) %>% 
@@ -2209,7 +2209,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
       spread(key = wdes, value = gini_cat_se) %>% 
       mutate(bl = get(paste0(baseline_wd, "_", e))) %>% 
       mutate_at(vars(matches(e)),
-                funs(sqrt(bl^2+.^2))) %>% 
+                list(~sqrt(bl^2+.^2))) %>% 
       select(kcode, tcode, matches(e)) %>% 
       gather(key = wdes, value = rho_wd_se, -kcode, -tcode) %>% 
       filter(!is.na(rho_wd_se)) %>% 
@@ -2249,7 +2249,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
       spread(key = wdes, value = gini_cat) %>%
       mutate(bl = get(paste0(w, "_", baseline_es))) %>%
       mutate_at(vars(matches(w)),
-                funs(bl/.)) %>%
+                list(~bl/.)) %>%
       select(kcode, tcode, matches(w)) %>%
       gather(key = wdes, value = rho_es, -kcode, -tcode) %>%
       filter(!is.na(rho_es)) %>%
@@ -2264,7 +2264,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
       spread(key = wdes, value = gini_cat_se) %>%
       mutate(bl = get(paste0(w, "_", baseline_es))) %>%
       mutate_at(vars(matches(w)),
-                funs(sqrt(bl^2+.^2))) %>%
+                list(~sqrt(bl^2+.^2))) %>%
       select(kcode, tcode, matches(w)) %>%
       gather(key = wdes, value = rho_es_se, -kcode, -tcode) %>%
       filter(!is.na(rho_es_se)) %>%
