@@ -1042,7 +1042,7 @@ kazstat <- read_excel("data-raw/kazstat.xls",
   filter(gini < 1) %>% # because 2017 ratio without 2017 gini on 2019-02-08 
   transmute(country = "Kazakhstan",
             year = as.numeric(str_replace(year, "X", "")),
-            gini = gini,
+            gini = as.numeric(gini) %>% round(3),
             gini_se = NA,
             welfare_def = "con",
             equiv_scale = "pc",
@@ -1373,7 +1373,8 @@ ssi1 <- read_excel("data-raw/ssi.xls",
 ssi2_link <- "https://pxweb.stat.si/SiStatDb/pxweb/en/10_Dem_soc/10_Dem_soc__08_zivljenjska_raven__08_silc_kazalniki_revsc__15_08673_porazdel_dohodka/0867312S.px/"
 download.file(ssi2_link, "data-raw/ssi2.csv")
 
-ssi2 <- read_delim("data-raw/ssi2.csv", ";", skip = 1) %>% 
+ssi2 <- read_delim("data-raw/ssi2.csv", ";", skip = 1, 
+                   col_types = cols(INCOME = "c", .default = "d")) %>% 
   filter(str_detect(INCOME, "pensions are included")) %>% 
   select(-INCOME) %>% 
   gather(key = "year", value = "value") %>% 
@@ -2150,7 +2151,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
     select(-gini_cat_se) %>% 
     spread(key = wdes, value = gini_cat) %>% 
     mutate_at(vars(matches("_")),
-              funs(baseline/.)) %>% 
+              list(~baseline/.)) %>% 
     select(-baseline) %>% 
     gather(key = wdes, value = rho, -kcode, -tcode) %>% 
     filter(!is.na(rho)) %>% 
@@ -2160,7 +2161,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
     select(-gini_cat) %>% 
     spread(key = wdes, value = gini_cat_se) %>% 
     mutate_at(vars(matches("_")),
-              funs(sqrt(baseline^2+.^2))) %>% 
+              list(~sqrt(baseline^2+.^2))) %>% 
     select(-matches("baseline")) %>% 
     gather(key = wdes, value = rho_se, -kcode, -tcode) %>% 
     filter(!is.na(rho_se)) %>% 
