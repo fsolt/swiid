@@ -805,9 +805,9 @@ geostat <- read_delim("https://raw.githubusercontent.com/fsolt/swiid/master/data
 
 
 # Statistics Hong Kong (update in 2022)
-hk2016_link <- "http://www.bycensus2016.gov.hk/data/16BC_Income_Report_Key_Statistics.xlsx"
-hk2011_link <- "http://www.statistics.gov.hk/pub/B11200572012XXXXB0100.pdf"
-hk2006_link <- "http://www.censtatd.gov.hk/fd.jsp?file=B11200452006XXXXB0400.pdf"
+hk2016_link <- "https://www.bycensus2016.gov.hk/data/16BC_Income_Report_Key_Statistics.xlsx"
+hk2011_link <- "https://www.statistics.gov.hk/pub/B11200572012XXXXB0100.pdf"
+hk2006_link <- "https://www.statistics.gov.hk/pub/B11200452006XXXXB0400.pdf"
 download.file(hk2016_link, "data-raw/hk2016.xlsx")
 download.file(hk2011_link, "data-raw/hk2011.pdf")
 download.file(hk2006_link, "data-raw/hk2006.pdf")
@@ -1346,7 +1346,7 @@ singstat <- read_csv("data-raw/singstat.csv", skip = 4) %>%
             link = "http://www.tablebuilder.singstat.gov.sg/")
 
 
-# Statistics Slovenia (archived; automated)
+# Statistics Slovenia (archived; update file)
 ssi1_link <- "https://www.stat.si/doc/vsebina/08/kazalniki_soc_povezanosti_Laekens_97_03.xls"
 download.file(ssi1_link, "data-raw/ssi.xls", method = "curl", extra = "-k")
 
@@ -1369,14 +1369,16 @@ ssi1 <- read_excel("data-raw/ssi.xls",
             page = "Laekens kazalniki 1997-2003",
             link = ssi1_link) 
 
-ssi2_link <- "http://pxweb.stat.si/pxweb/Database/Demographics/08_level_living/08_silc_poverty_indic/15_08673_income_distribution/0867312E.px"
-download.file(ssi2_link, "data-raw/ssi2.px")
+# update file (automate again soon?)
+ssi2_link <- "https://pxweb.stat.si/SiStatDb/pxweb/en/10_Dem_soc/10_Dem_soc__08_zivljenjska_raven__08_silc_kazalniki_revsc__15_08673_porazdel_dohodka/0867312S.px/"
+download.file(ssi2_link, "data-raw/ssi2.csv")
 
-ssi2 <- pxR::read.px("data-raw/ssi2.px") %>% 
-  pxR:::as.data.frame.px() %>% 
+ssi2 <- read_delim("data-raw/ssi2.csv", ";", skip = 1) %>% 
   filter(str_detect(INCOME, "pensions are included")) %>% 
+  select(-INCOME) %>% 
+  gather(key = "year", value = "value") %>% 
   transmute(country = "Slovenia",
-            year = as.numeric(as.character(YEAR)) - 1,
+            year = as.numeric(as.character(year)) - 1,
             gini = as.numeric(value)/100,
             gini_se = NA,
             welfare_def = "market",
