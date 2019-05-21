@@ -465,7 +465,7 @@ If no observation is available the random walk process spans the gap between las
 Although often neglected, like any other statistic calculated from a survey sample rather than the entire population of interest, the Gini has an associated standard error.
 In the source data, `r round(mean(!is.na(swiid_source$gini_se)), 2) * 100`% of the observations include standard errors.
 The 99th percentile of the relative standard errors of these observations was used to provide a (very conservative) imputed value for the remaining observations.
-This measurement error was taken into account by modeling each observation in the source data as normally distributed around the recorded Gini and with variance equal to the squared standard error.
+This measurement error was taken into account by modelling the true quantity of each observation in the source data as normally distributed around the observed Gini with deviation equal to the associated standard error.
 
 
 
