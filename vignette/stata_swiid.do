@@ -31,7 +31,7 @@ drop _merge
 save wvs_pwt.dta, replace
 
 // Now merge these data *into* the SWIID
-use swiid8_0.dta, clear
+use swiid8_1.dta, clear
 
 merge 1:m country year using wvs_pwt.dta
 drop if _merge!=3
