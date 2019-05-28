@@ -203,23 +203,23 @@ swiid_source %>%
   theme(axis.title.x = element_blank() ) +
   ylab("Observations")
 
-uk_nas <- {max(swiid_source$year) - min(swiid_source$year) - 
+uk_nas <- {1 + max(swiid_source$year) - min(swiid_source$year) - 
 {swiid_source %>% filter(country == "United Kingdom") %>% pull(year) %>% unique() %>% length()}} %>%
 wordify_numeral()
 
-sweden_nas <- {max(swiid_source$year) - min(swiid_source$year) - 
+sweden_nas <- {1+ max(swiid_source$year) - min(swiid_source$year) - 
 {swiid_source %>% filter(country == "Sweden") %>% pull(year) %>% unique() %>% length()}} %>%
 wordify_numeral()
 
-us_nas <- {max(swiid_source$year) - min(swiid_source$year) - 
+us_nas <- {1 + max(swiid_source$year) - min(swiid_source$year) - 
 {swiid_source %>% filter(country == "United States") %>% pull(year) %>% unique() %>% length()}} %>%
 wordify_numeral()
 
-japan_nas <- {max(swiid_source$year) - min(swiid_source$year) - 
+japan_nas <- {1 + max(swiid_source$year) - min(swiid_source$year) - 
 {swiid_source %>% filter(country == "Japan") %>% pull(year) %>% unique() %>% length()}} %>%
 wordify_numeral()
 
-taiwan_nas <- {max(swiid_source$year) - min(swiid_source$year) - 
+taiwan_nas <- {1 + max(swiid_source$year) - min(swiid_source$year) - 
 {swiid_source %>% filter(country == "Taiwan") %>% pull(year) %>% unique() %>% length()}} %>%
 wordify_numeral()
 
@@ -231,9 +231,9 @@ med_cy <- swiid_source %>% count(country, year) %>% count(country, name = "nn") 
 ```
 
 As discussed in the next section, observations for the same country in the same year, but with different welfare definitions and equivalence scales or from different sources, are important to generating the SWIID's cross-nationally comparable estimates.
-Still, we might be interested to know which countries have the most coverage of the years in the SWIID's current `r max(swiid_source$year) - min(swiid_source$year)`-year timeframe, from `r min(swiid_source$year)` to `r max(swiid_source$year)`, because the SWIID's inequality estimates for countries with fewer country-year observations will include more interpolated values, which in turn will have more uncertainty, and---because estimates are not extrapolated beyond the years observed in the source data---more years without any estimates at all.
+Still, we might be interested to know which countries have the most coverage of the years in the SWIID's current `r max(swiid_source$year) - min(swiid_source$year) + 1`-year timeframe, from `r min(swiid_source$year)` to `r max(swiid_source$year)`, because the SWIID's inequality estimates for countries with fewer country-year observations will include more interpolated values, which in turn will have more uncertainty, and---because estimates are not extrapolated beyond the years observed in the source data---more years without any estimates at all.
 The countries with the most observed years are shown in the left panel of Figure&nbsp;\ref{countries_by_years}.
-The source data includes observations in every covered year for Sweden and the United Kingdom.  There are observations in all but `r us_nas` years for the United States, and in all but `r japan_nas` years for Japan and Taiwan.
+The source data includes observations in all but one covered year for Sweden and the United Kingdom.  There are observations in all but `r us_nas` years for the United States, and in all but `r japan_nas` years for Japan and Taiwan.
 Iran and Argentina---countries that are not members of the LIS---also make the top ten, with observations in `r iran_obs` and `r arg_obs` country-years, respectively.
 The median country, though, has observations in just `r med_cy` different country-years.
 
@@ -277,7 +277,7 @@ cby_plot + ybc_plot
 We can also get a sense of the breadth of the available income inequality data by turning the question around and asking about the number of countries covered across time.
 The right panel of Figure&nbsp;\ref{countries_by_years} shows, for each year, the number of countries for which the SWIID source data includes at least one observation.
 There are observations for `r swiid_source %>% filter(year==2005) %>% count(country) %>% nrow()` countries in 2005, the year with the broadest coverage.
-Coverage is relatively good in all of the years from 2000 to 2016, with at least 80 countries observed per year, before dropping to `r swiid_source %>% filter(year==2017) %>% count(country) %>% nrow()` countries for 2017 and just `r swiid_source %>% filter(year==2018) %>% count(country) %>% nrow()` for 2018.^[
+Coverage is relatively good in all of the years from 2000 to 2016, with at least 80 countries observed per year, before dropping to `r swiid_source %>% filter(year==2017) %>% count(country) %>% nrow()` countries for 2017 and only `r swiid_source %>% filter(year==2018) %>% count(country) %>% nrow()` for 2018.^[
 Data collection for version 8.1 was completed on May 20, 2019.]
 Before then, country coverage is pretty thin each year through the 1960s and 1970s and still is not great until the late 1980s.^[
 This is partly a result of the decision to insist on sources that are available online, but it's just as well: so little information is available about many of the so-excluded observations on that era that it is hard to have much confidence in them.]
