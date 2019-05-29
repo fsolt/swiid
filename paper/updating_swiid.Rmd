@@ -409,9 +409,7 @@ That is, $\hat{\rho}_{s}$ is the estimated ratio of the LIS baseline to the seri
 This relationship is not only country-specific and includes the welfare definition and equivalence scale, but because each series uses a consistent methodology, such factors as the comprehensiveness of the income definition and the reporting period are also taken into account.
 These $\hat{\rho}_{s}$ can be estimated for series encompassing nearly half of the observations and over 70% of the observed country-years in the SWIID source data for the countries included in the LIS.
 As shown in the column labeled "Total" at the right of Figure&nbsp;\ref{rho_by_reg}, these country-years constitute just over a third of all observed country-years in the SWIID source data.
-This figure also reveals that the extent to which series-specific relationships can be estimated vary greatly by region.
-On the one hand, $\hat{\rho}_{s}$ can be estimated for over 70% of the observed country-years in the advanced English-speaking countries and nearly 60% of those in Western Europe.
-On the other, they can be estimated for only about `r rbr_cy %>% filter(region=="DAA" & type=="rho_s") %>% pull(value) %>% round()`% of country-years in the countries of Africa and developing Asia.
+This figure also reveals that the extent to which series-specific relationships can be estimated vary greatly by region: $\hat{\rho}_{s}$ can be estimated for over 70% of the observed country-years in the advanced English-speaking countries and nearly 60% of those in Western Europe, but only about `r rbr_cy %>% filter(region=="DAA" & type=="rho_s") %>% pull(value) %>% round()`% of the country-years in the countries of Africa and developing Asia.
 
 The SWIID routine next expands the observations used to estimate the relationship between the source data and the LIS baseline to include all of the observations in the country with the same welfare definition and equivalence scale.
 The relationship $\hat{\rho}_{kwe}$ is the estimated ratio of the LIS baseline to Ginis with the same country-year for each country $k$, welfare definition $w$, and equivalence scale $e$.
@@ -438,7 +436,7 @@ Less than 10% of the observed country-years for the countries of Western Europe-
 
 Lastly, where the source data for the country of an observation does not allow the relationship $\hat{\rho}_{kw}$ across welfare definitions to be estimated from in-country data as described in the preceding paragraph, the estimated relationship $\hat{\rho}_{rwe}$ is used: the estimated ratio of the LIS baseline to Ginis with the same country-year for welfare definition $w$ and equivalence scale $e$ across the same region $r$ as the country of the observation.
 Across all regions, data scarcity imposes this unfortunate reliance upon information only from other countries in the region to estimate the relationship between observed source data and the LIS baseline in `r round(rbr_cy %>% filter(region == "Total" & type == "rho_rwe") %>% pull(value))`% of the observed country-years in the SWIID source data.
-None of the relationships for the country-years of the advanced English-speaking countries rely on $\hat{\rho}_{rwe}$ (or indeed any information beyond in-country data); however, nearly 60% of the observed country-years for the countries of Africa and developing Asia do.
+None of the relationships for the country-years of the advanced English-speaking countries rely on $\hat{\rho}_{rwe}$ (or indeed any information beyond in-country data); however, the relationships to the LIS baseline of nearly 60% of the observed country-years for the countries of Africa and developing Asia are based on such regionwide data.
 
 ```{r rho_by_region_plot, echo=FALSE, fig.height=4, fig.cap="Estimated Relationships by Region, Observed Country-Years \\label{rho_by_reg}"}
 
