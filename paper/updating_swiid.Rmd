@@ -395,11 +395,10 @@ Most controversially, this procedure truncates high incomes at ten times the med
 The tradeoff, however, is that Ginis calculated with top coding underestimate the true extent of income inequality.
 I am grateful to Zsolt Darvas for drawing my attention to this issue.]
 These two LIS baselines anchor the SWIID's estimates of market and disposable income inequality.^[
-Although New Zealand does not participate in the LIS, I treat the four observations of disposable income inequality (1982, 1986, 1991, 1996) specially prepared by Statistics New Zealand @StatisticsNZ1999 [, 73] to be comparable with the LIS to be part of the collection of disposable income inequality statistics from the LIS.]  
+Although New Zealand does not participate in the LIS, I treat the four observations of disposable income inequality (1982, 1986, 1991, 1996) specially prepared by Statistics New Zealand @StatisticsNZ1999 [, 73] to be comparable with the LIS to be part of the collection of disposable income inequality statistics from the LIS.]
 The SWIID routine estimates the relationships between these LIS baseline Gini indices and all of the other Ginis available for the same country-years and uses these relationships to estimate what the LIS Gini would be in country-years not included in the LIS but available from other sources.
 
 These relationships fall into four categories, varying in accordance with how much information is available: two for observations of countries included in the LIS and two more for countries that, as of yet, are not included.
-
 First, for each series $s$---again defining a series as a group of observations from the same country calculated using the same methodology---that includes more than two country-years that also appear in the LIS baseline,^[
 Because the two LIS baselines do not contain the identical country-years (the disposable income inequality baseline has `r swiid_source %>% filter(str_detect(series, "LIS") & equiv_scale == "sqrt" & welfare_def == "disp") %>% nrow()` observations, while that for market income inequality has only `r swiid_source %>% filter(str_detect(series, "LIS") & equiv_scale == "sqrt" & welfare_def == "market") %>% nrow()`), these series vary somewhat when estimates for each of the two welfare definitions are being generated.] the ratio $\hat{\rho}_{s}$ such that
   \[
@@ -410,12 +409,16 @@ That is, $\hat{\rho}_{s}$ is the estimated ratio of the LIS baseline to the seri
 This relationship is not only country-specific and includes the welfare definition and equivalence scale, but because each series uses a consistent methodology, such factors as the comprehensiveness of the income definition and the reporting period are also taken into account.
 These $\hat{\rho}_{s}$ can be estimated for series encompassing nearly half of the observations and over 70% of the observed country-years in the SWIID source data for the countries included in the LIS.
 As shown in the column labeled "Total" at the right of Figure&nbsp;\ref{rho_by_reg}, these country-years constitute just over a third of all observed country-years in the SWIID source data.
-  
+This figure also reveals that the extent to which series-specific relationships can be estimated vary greatly by region.
+On the one hand, $\hat{\rho}_{s}$ can be estimated for over 70% of the observed country-years in the advanced English-speaking countries and nearly 60% of those in Western Europe.
+On the other, they can be estimated for only about `r rbr_cy %>% filter(region=="DAA" & type=="rho_s") %>% pull(value) %>% round()`% of country-years in the countries of Africa and developing Asia.
+
 The SWIID routine next expands the observations used to estimate the relationship between the source data and the LIS baseline to include all of the observations in the country with the same welfare definition and equivalence scale.
 The relationship $\hat{\rho}_{kwe}$ is the estimated ratio of the LIS baseline to Ginis with the same country-year for each country $k$, welfare definition $w$, and equivalence scale $e$.
 Because it requires only that an observation's combination of welfare definition and equivalence scale---rather than the observation's series---share country-years with the LIS baseline data, $\hat{\rho}_{kwe}$ gives up the benefits of harmonization and consequently yields more uncertain estimates.
 On the other hand, the advantage of $\hat{\rho}_{kwe}$ is that it can be estimated for all of the remaining observations in the source data for countries included in the LIS, some `r round(rbr_cy %>% filter(region == "Total" & type == "rho_kwe") %>% pull(value))`% of all the observed country-years.^[
 Previous versions of the SWIID allowed $\hat{\rho}_{kwe}$ to vary over time, but much of what those parameters was capturing was the breaks in continuity across different series within each combination of welfare definition and equivalence scale; this variation, of course, is now parsed directly by $\hat{\rho}_{s}$.  Allowing $\hat{\rho}_{s}$ to vary by time for series of sufficient length is an enhancement planned for future versions of the SWIID.]
+The share of observed country-years for which $\hat{\rho}_{kwe}$ provides the best estimate ranges from `r rbr_cy %>% filter(region=="AT" & type=="rho_kwe") %>% pull(value) %>% round()`% for Japan and the Asian Tigers to just over `r rbr_cy %>% filter(region=="FSU" & type=="rho_kwe") %>% pull(value) %>% round()`% among the developing ex-Communist countries.
 
 However, $\hat{\rho}_{kwe}$ cannot be estimated for any of the observations in the countries that are not included in the LIS: no matter how rich the country's data in any combination of welfare definition and equivalence scale, those data will have no country-years in common with the LIS baseline.
 For those countries, when possible, the relationship between source data observations and the LIS baseline data is estimated as the product of two factors.
@@ -431,19 +434,20 @@ The next section discusses cross-validation in detail.
 The complete list of countries and regions may be consulted at <https://github.com/fsolt/swiid/blob/master/data/reg.csv>.]
 The product of $\hat{\rho}_{kw}$ and $\hat{\rho}_{re}$, then, estimates the relationship between a Gini in country $k$ in region $r$ with welfare definition $w$ and equivalence scale $e$ and the LIS baseline.
 This product can be estimated for more than two-thirds of the source data observations for countries outside the LIS, though these constitute only `r round((ineq2 %>% filter(k_bl_obs == 0 & kw) %>% distinct(country, year) %>% nrow())/(ineq2 %>% filter(k_bl_obs ==0 ) %>% distinct(country, year) %>% nrow()), 2) * 100`% of the observed country-years for those countries.  Across all countries, as can be seen in the right-most column of Figure&nbsp;\ref{rho_by_reg}, these are `r round(rbr_cy %>% filter(region == "Total" & type == "rho_kw x rho_re") %>% pull(value))`% of the observed country-years in the SWIID source data.
+Less than 10% of the observed country-years for the countries of Western Europe---but nearly 60% of those for the developing ex-Communist countries---are best estimated in this fashion.
 
 Lastly, where the source data for the country of an observation does not allow the relationship $\hat{\rho}_{kw}$ across welfare definitions to be estimated from in-country data as described in the preceding paragraph, the estimated relationship $\hat{\rho}_{rwe}$ is used: the estimated ratio of the LIS baseline to Ginis with the same country-year for welfare definition $w$ and equivalence scale $e$ across the same region $r$ as the country of the observation.
 Across all regions, data scarcity imposes this unfortunate reliance upon information only from other countries in the region to estimate the relationship between observed source data and the LIS baseline in `r round(rbr_cy %>% filter(region == "Total" & type == "rho_rwe") %>% pull(value))`% of the observed country-years in the SWIID source data.
+None of the relationships for the country-years of the advanced English-speaking countries rely on $\hat{\rho}_{rwe}$ (or indeed any information beyond in-country data); however, nearly 60% of the observed country-years for the countries of Africa and developing Asia do.
 
 ```{r rho_by_region_plot, echo=FALSE, fig.height=4, fig.cap="Estimated Relationships by Region, Observed Country-Years \\label{rho_by_reg}"}
-
 
 ggplot(rbr_cy, aes(region, value, fill = type)) + 
   geom_bar(stat = "identity") +
   theme_bw() + 
   theme(legend.position="right") +
   labs(x = NULL, y = NULL) + 
-  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  theme(axis.text.x = element_text(angle = 60, hjust = 1)) + 
   scale_fill_manual(values=c("#DF6679", "#66CCFF", "#4E8EAF", "#416F86", "#35505E"),
                       name="Estimated\nRelationship",
                       breaks=c("baseline", "rho_s", "rho_kwe", "rho_kw x rho_re", "rho_rwe"),
@@ -454,20 +458,19 @@ ggplot(rbr_cy, aes(region, value, fill = type)) +
                    labels = c("Adv English-Speaking", "Western Europe", "Adv Ex-Communist", "Japan and Asian Tigers", "Latin America", "Dev Ex-Communist", "Dev Africa and Asia", "Total"))
 ```
 
+Although often neglected, like any other statistic calculated from a survey sample rather than the entire population of interest, the Gini has an associated standard error.
+In the source data, `r round(mean(!is.na(swiid_source$gini_se)), 2) * 100`% of the observations include standard errors.
+The 99th percentile of the relative standard errors of these observations was used to provide a (very conservative) imputed value for the remaining observations.
+This measurement error was taken into account before estimating any of the relationships described above by modelling the true quantity of each observation in the source data as normally distributed around the observed Gini with deviation equal to the associated standard error.
+
 To generate $\hat{G}_{bkt}$, the SWIID estimate of the LIS baseline based on the available source data for countries and years in which the LIS baseline is not available, I employ a fully Bayesian approach.  
 To take into account the fact that Ginis generally change only gradually from one year to the next [see, e.g., @Atkinson2009, 392], I specify a random walk prior process: within each country $k$, the SWIID estimate in year $t$ has a normal prior distribution that is centered on its value in the year $t - 1$:^[If a LIS baseline observation is available in the first observed year for country $k$, this data and its associated standard error are used as a normally distributed informative prior; otherwise, a weakly informative, lognormally distributed prior with $\mu = -1$ and $\sigma = .25$ is employed.]
   \[
   \hat{G}_{bkt} \sim \mathcal{N}(\hat{G}_{bk(t-1)},\,\sigma_G^{2})
   \]
 This specification also smoothly manages those country-years without any Ginis in the source data between each country's first and last observed years.
-Country-years with more observations in the source data have more information to update the estimate $\hat{G}_{bkt}$ based on $\hat{\rho}_{s}$, $\hat{\rho}_{kwe}$, the product of $\hat{\rho}_{kw}$ and $\hat{\rho}_{re}$, and/or $\hat{\rho}_{rwe}$.
-If no observation is available the random walk process spans the gap between last year to appear in the source data and the next year to appear.
-
-Although often neglected, like any other statistic calculated from a survey sample rather than the entire population of interest, the Gini has an associated standard error.
-In the source data, `r round(mean(!is.na(swiid_source$gini_se)), 2) * 100`% of the observations include standard errors.
-The 99th percentile of the relative standard errors of these observations was used to provide a (very conservative) imputed value for the remaining observations.
-This measurement error was taken into account by modelling the true quantity of each observation in the source data as normally distributed around the observed Gini with deviation equal to the associated standard error.
-
+Country-years with more observations in the source data have more information to update the estimate $\hat{G}_{bkt}$ based on $\hat{\rho}_{s}$, $\hat{\rho}_{kwe}$, the product of $\hat{\rho}_{kw}$ and $\hat{\rho}_{re}$, and $\hat{\rho}_{rwe}$, along with their corresponding $\sigma^2$.
+If no observation is available, the random walk process spans the gap between the last year to appear in the source data and the next year to appear.
 
 
 ## Evaluating the Comparability of the SWIID's Estimates With Cross-Validation
@@ -478,7 +481,6 @@ kfold_output <- rio::import("https://github.com/fsolt/swiid/raw/master/data/kfol
 kfold_output_by_country <- rio::import("https://github.com/fsolt/swiid/raw/master/data/kfold_output_by_country.rda") %>% 
     filter(!is.na(point_diff)) # exclude Luxembourg 1985 (LIS is first data available)
 ```
-
 
 How can we know if the approach just described actually works?
 In previous work, I put the SWIID to the most stringent test that occurred to me: I compared LIS data on country-years that had been included in previously-released versions of the SWIID [@Solt2016, 1277-1278].^[
