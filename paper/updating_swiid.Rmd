@@ -30,15 +30,20 @@ library(tidyverse)
 
 ## Introduction
 
-<!--Obviously this section needs work
+From its origins now over a decade ago, the goal of the Standardized World Income Inequality Database has been to provide estimates of income inequality for as many countries and years as possible while ensuring that these estimates are as comparable as the available data allow [see @Solt2009].
+That is to say, the SWIID's first prority is breadth of coverage, and its second is comparability.
+The starting point for the SWIID estimates is a dataset with the complementary priorities: the Luxembourg Income Study, which aims to maximize comparability and, given that primary concern, to include as many countries and years as possible.^[
+Still, even for the LIS prioritizing comparability has given way, to some degree, to the desire to cover more countries.
+@Checchi2018 have recently written about the difficulties the LIS team has encountered including middle-income countries due to the greater importance of non-monetary and self-employment income as well as the differences in direct taxation and social security contributions in these countries in comparison to high-income countries.
+Despite these issues, the LIS remains the most comparable income inequality data available.]
+Then, the SWIID routine estimates the relationships between Gini indices based on the LIS and all of the other Ginis available for the same country-years, and it uses these relationships to estimate what the LIS Gini _would be_ in country-years not included in the LIS but available from other sources.
+This approach has made the SWIID a preferred source of income inequality data for researchers pursuing broadly cross-national work.
 
-# From its origins now over ten years ago, the goal of the [Standardized World Income Inequality Database](/swiid/) has been to provide estimates of income inequality for as many countries and years as possible while ensuring that these estimates are as comparable as the available data allow.
-# That is to say, the SWIID's first prority is breadth of coverage, and its second is comparability.
-# The starting point for the SWIID estimates is a dataset with the complementary priorities: the [Luxembourg Income Study](https://www.lisdatacenter.org), which aims to maximize comparability and, given that primary concern, to include as many countries and years as possible.^[
-# Still, even for the LIS perfect comparability has given way to the desire to cover more middle-income countries.
-# [Teresa Munzi and Andrej Cupak recently wrote](https://www.lisdatacenter.org/newsletter/nl-2018-8-h-2/) about the difficulties the LIS team  encountered including middle-income countries due to the greater importance of non-monetary and self-employment income as well as the differences in direct taxation and social security contributions in these countries in comparison to high-income countries.
-# Despite these issues, the LIS remains the most comparable income inequality data available.]
-# Then the SWIID routine estimates the relationships between Gini indices based on the LIS and [all of the other Ginis available](/blog/2017/07/28/the-swiid-source-data/) for the same country-years, and it uses these relationships to estimate what the LIS Gini _would be_ in country-years not included in the LIS but available from other sources.-->
+The SWIID has recently been completely revised.
+This article explains, first, how the source data for the SWIID is now collected.
+It turns next to how these data are used to generate comparable estimates of income inequality across countries and over time.
+To demonstrate that this procedure succeeds in producing estimates are comparable to the LIS data, it then reviews evidence from two $k$-fold cross-validations.
+Finally, it concludes by explaining how researchers may best make use of the SWIID in their own research.
 
 
 ```{r data-setup, include=FALSE}
@@ -77,7 +82,7 @@ The SWIID source data consists of observations of the Gini coefficient in variou
 Because the Gini index is simply the Gini coefficient multiplied by 100, the two are equivalent, and both can be referred to as 'the Gini' with little cause for confusion.]
 The Gini is most intuitively defined as the average difference in income between all pairs in a population, divided by twice the average income in the population.
 It is by far the most commonly encountered summary statistic for measuring income inequality.
-The Gini is more sensitive to changes in the middle of the income distribution than other metrics, such as the Atkinson index and the Theil indices, and unlike those measures it cannot be analytically decomposed.
+The Gini is more sensitive to changes in the middle of the income distribution than some other metrics, such as the Atkinson index and the Theil indices, and unlike those measures it cannot be analytically decomposed.
 But in light of the SWIID's goal of providing information on income inequality for the broadest possible sample of countries and years, the ubiquity of the Gini makes it the only plausible choice for this purpose.
 
 To be included in the SWIID source data, Gini observations need to encompass the entire population of a country without regard to age, location, or employment status.^[
