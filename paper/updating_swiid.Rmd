@@ -418,7 +418,7 @@ This figure also reveals that the extent to which series-specific relationships 
 
 The SWIID routine next expands the observations used to estimate the relationship between the source data and the LIS baseline to include all of the observations in the country with the same welfare definition and equivalence scale.
 The relationship $\hat{\rho}_{kwe}$ is the estimated ratio of the LIS baseline to Ginis with the same country-year for each country $k$, welfare definition $w$, and equivalence scale $e$.
-Because it requires only that an observation's combination of welfare definition and equivalence scale---rather than the observation's series---share country-years with the LIS baseline data, $\hat{\rho}_{kwe}$ gives up the benefits of harmonization and consequently yields more uncertain estimates.
+Because it requires only that an observation's combination of welfare definition and equivalence scale---rather than the observation's series---share country-years with the LIS baseline data, $\hat{\rho}_{kwe}$ gives up the benefits of harmonization and consequently yields more uncertain estimates of these ratios.
 On the other hand, the advantage of $\hat{\rho}_{kwe}$ is that it can be estimated for all of the remaining observations in the source data for countries included in the LIS, some `r round(rbr_cy %>% filter(region == "Total" & type == "rho_kwe") %>% pull(value))`% of all the observed country-years.^[
 Previous versions of the SWIID allowed $\hat{\rho}_{kwe}$ to vary over time, but much of what those parameters was capturing was the breaks in continuity across different series within each combination of welfare definition and equivalence scale; this variation, of course, is now parsed directly by $\hat{\rho}_{s}$.  Allowing $\hat{\rho}_{s}$ to vary by time for series of sufficient length is an enhancement planned for future versions of the SWIID.]
 The share of observed country-years for which $\hat{\rho}_{kwe}$ provides the best estimate ranges from `r rbr_cy %>% filter(region=="AT" & type=="rho_kwe") %>% pull(value) %>% round()`% for Japan and the Asian Tigers to just over `r rbr_cy %>% filter(region=="FSU" & type=="rho_kwe") %>% pull(value) %>% round()`% among the developing ex-Communist countries.
@@ -471,16 +471,24 @@ To take into account the fact that Ginis generally change only gradually from on
   \[
   \hat{G}_{bkt} \sim \mathcal{N}(\hat{G}_{bk(t-1)},\,\sigma_G^{2})
   \]
-This specification also smoothly manages those country-years without any Ginis in the source data between each country's first and last observed years.
-Country-years with more observations in the source data have more information to update the estimate $\hat{G}_{bkt}$ based on $\hat{\rho}_{s}$, $\hat{\rho}_{kwe}$, the product of $\hat{\rho}_{kw}$ and $\hat{\rho}_{re}$, and $\hat{\rho}_{rwe}$, along with their corresponding $\sigma^2$.
-If no observation is available, the random walk process spans the gap between the last year to appear in the source data and the next year to appear.
+Estimates for country-years with LIS baseline data are updated from a normal distribution centered on the observed Gini with deviation equal to its associated standard error.
+Estimates for country-years without baseline data but with other source-data observations are updated using $\hat{\rho}_{s}$, $\hat{\rho}_{kwe}$, the product of $\hat{\rho}_{kw}$ and $\hat{\rho}_{re}$, and $\hat{\rho}_{rwe}$.
+For example, if $G_{skt}$ is present in the source data, then $\hat{G}_{bkt}$ is updated using:
+  \[
+  \hat{G}_{bkt} \sim \mathcal{N}(\hat{\rho}_{s} \times G_{skt},\,\sigma_s^{2})
+  \]
+.
+
+Country-years with more observations in the source data have more information to update the estimate.
+The random-walk specification smoothly manages those country-years without any Ginis in the source data between each country's first and last observed years: if no observation is available, the random walk process spans the gap between the last year to appear in the source data and the next year to appear.
 
 
 ## Evaluating the Comparability of the SWIID's Estimates With Cross-Validation
 
 ```{r load_kfold, include = FALSE}
-kfold_output <- rio::import("https://github.com/fsolt/swiid/raw/master/data/kfold_output.rda") %>% 
+kfold_output <- rio::import("https://github.com/fsolt/swiid/raw/master/data/kfold_output.rda") %>%
     filter(!is.na(point_diff)) # exclude Luxembourg 1985 (LIS is first data available)
+
 kfold_output_by_country <- rio::import("https://github.com/fsolt/swiid/raw/master/data/kfold_output_by_country.rda") %>% 
     filter(!is.na(point_diff)) # exclude Luxembourg 1985 (LIS is first data available)
 ```
@@ -508,7 +516,7 @@ To provide a first assessment of the SWIID's ability to predict the LIS, I rando
 The goal of this exercise is really to assess how well the SWIID works within the LIS countries, so Egypt 2012, the only LIS observation for that country, is excluded from the analysis.  This is because holding out that observation makes Egypt a _non_-LIS country.
 What happens when the SWIID is used to predict all of a country's LIS observations at once is discussed below.]
 (Because the SWIID routine relies only on relationships observed within-country for the countries included in the LIS, the check that only a single observation from a country be assigned to the test data at a time means that the exact size of the group does not really matter, a point I confirmed in testing.)
-The figure below plots the difference between the SWIID prediction generated from this _k_-fold cross-validation and the LIS data for each country-year included in the LIS.  Observations for which the 95% credible interval for this difference includes zero are gray; those for which it doesn't are highlighted in blue. 
+The figure below plots the difference between the SWIID prediction generated from this _k_-fold cross-validation and the LIS data for each country-year included in the LIS.  Observations for which the 95% credible interval for this difference includes zero are gray; those for which it does not are highlighted in blue. 
 
 ```{r kfold_output, echo = FALSE, warning = FALSE, fig.height=3, fig.cap = "\\label{fig:kfold_output}_k_-fold By-Observation Cross-Validation Results"}
 k_fold_obs_overall <- round(100 - 100*mean(kfold_output %>% filter(n > 1) %>% pull(problem), na.rm = TRUE))
@@ -538,13 +546,13 @@ ggplot(kfold_output %>%
 
 The results show that the SWIID does a very good job of predicting the LIS: the 95% credible interval for the difference between the two includes zero for `r k_fold_obs_overall`% of these observations.
 The point estimates for these differences are generally small, with `r k_fold_obs_lt2`% less than 2 Gini points and `r k_fold_obs_lt1`% less than a single Gini point.
-It's true that there are a few observations for which the estimated difference is quite large---on the far left of the plot, the SWIID routine underestimated the LIS Gini for Hungary in 1991 by $6 \pm 4$ points, and on the extreme right the SWIID routine overestimated that for Guatemala in 2014 by $7 \pm 4$ points---but there doesn't really seem to me to be much pattern in which countries and years are estimated poorly.
+It is true that there are a few observations for which the estimated difference is quite large---on the far left of the plot, the SWIID routine underestimated the LIS Gini for Hungary in 1991 by $6 \pm 4$ points, and on the extreme right the SWIID routine overestimated that for Guatemala in 2014 by $7 \pm 4$ points---but there does not seem to be much pattern in which countries and years are estimated poorly.
 
-This test, though, really only assesses how well the SWIID predicts LIS-comparable inequality figures in years without LIS data in the (now fifty) countries that are _included in the LIS_.
-We can get a better sense of how well the SWIID does predicting countries not covered by the LIS with another cross-validation that, one country at a time, excludes _all_ of the LIS observations for that country.
-The results of this test are plotted below. 
+This test, though, really only assesses how well the SWIID predicts LIS-comparable inequality figures in years without LIS data in the (now fifty) countries that are _included_ in the LIS.
+We can get a better sense of how well the SWIID does predicting countries _not_ covered by the LIS with another cross-validation that, one country at a time, excludes all of the LIS observations for that country.
+The results of this test are plotted below in Figure&nbsp;\ref{fig:kfold_output_by_country}. 
 
-```{r kfold_output_by_country, echo = FALSE, warning = FALSE, fig.height=3, fig.cap = "\\label{fig:kfold_output_by_country}_k_-fold By-Country Cross-Validation Results"}
+```{r kfold_output_by_country, echo = FALSE, warning = FALSE, fig.height=4, fig.cap = "\\label{fig:kfold_output_by_country}_k_-fold By-Country Cross-Validation Results"}
 k_fold_by_country_overall <- round(100 - 100*mean(kfold_output_by_country %>% pull(problem), na.rm = TRUE))
 k_fold_by_country_lt1 <- round(100*mean(abs(kfold_output_by_country %>% pull(point_diff)) < .01, na.rm = TRUE))
 k_fold_by_country_lt2 <- round(100*mean(abs(kfold_output_by_country %>% pull(point_diff)) < .02, na.rm = TRUE))
@@ -569,21 +577,21 @@ ggplot(kfold_output_by_country) +
   scale_x_discrete(breaks = NULL) 
 ```
 
-Overall, the plot looks very similar to the one above.
+Overall, the plot looks very similar to the one above in Figure&nbsp;\ref{fig:kfold_output}.
 With each country's entire run of LIS data being excluded in turn, the 95% credible interval for the difference between the resulting SWIID estimate and the excluded LIS data contains zero `r k_fold_by_country_overall`% of the time.
 And here, too, most of the point estimates for these differences are small: `r k_fold_by_country_lt2`% are less than 2 Gini points, and `r k_fold_by_country_lt1`% are less than one Gini point.  
 
 This analysis, though, does point to two areas that are in need of future attention.
 The first appears on the far left of the plot above.
 There we find that the largest difference is for the sole country-year for Egypt in the LIS---for 2012---which the SWIID routine underestimates by $16 \pm 6$ Gini points.
-Egypt is currently the only country in the LIS with just a single country-year observation; given that excluding the one observation is equivalent to excluding all of the country's observations, I skipped omitting it in the first cross-validation.
+Egypt is currently the only country in the LIS with only a single observation; given that excluding this one observation is equivalent to excluding all of the country's observations, it was not considered in the first cross-validation.
 LIS researchers @Checchi2018 [, 6] report that Egyptian income surveys before 2012 did not include any questions to capture self-employment income, and it is also true that most of the available Ginis for Egypt are based on the distribution of consumption expenditure, which sometimes only loosely track those for the distribution of income (as can be seen in the SWIID source data for, e.g., India).
 These factors, however, are present in many non-LIS countries as well.
 Finding ways to improve the SWIID routine to address them will be a priority.
 
 The second is that there are two other countries for which the 95% credible interval for the differences between the LIS data and the SWIID routine's estimates for those countries when all of their LIS data are excluded does not contain zero in _any_ of the country's observations: Brazil and Peru.
-For Brazil, the cross-validation's estimates of the country's four LIS observations are all too high---by $2.5 \pm 2.1$ Gini points to $3.7 \pm 2.1$ Gini points.
-The cross-validation's estimates for Peru's four LIS observations, on the other hand, are all too low---by between $5.0 \pm 3.0$ and $5.4 \pm 3.0$ Gini points.
+For Brazil, the cross-validation's estimates of the country's four LIS observations are all too high---by $2.4 \pm 2.1$ Gini points to $3.7 \pm 2.1$ Gini points.
+The cross-validation's estimates for Peru's four LIS observations, on the other hand, are all too low---by between $5.2 \pm 3.0$ and $5.3 \pm 3.0$ Gini points.
 There is room for improvement here too, and this too will receive continued efforts.
 
 All in all, though, these _k_-fold cross-validation exercises show that the SWIID does a very good job of predicting the LIS, which inspires confidence that the SWIID is indeed maximizing the comparability of income inequality data across countries and over time.
