@@ -54,26 +54,14 @@ save(kfold_output, file = "data/kfold_output.rda")
 
 # by country
 output_path <- "/Volumes/fsolt/swiid_kfold/output/by_country"
-(output_file_ids <- list.files(output_path) %>%
-    str_extract("\\d+(?=\\.)") %>%
-    unique())
-output_files <- list.files(output_path) %>% 
-  str_subset(output_file_ids %>% nth(length(output_file_ids)))
+output_files <- list.files(output_path)
 
 kfold_output_by_country <- map_dfr(output_files, function(output_file) {
-  if (readLines(file.path(output_path, output_file)) %>% 
-     paste(collapse = "") %>% 
-     str_detect("structure")) {
-    (readLines(file.path(output_path, output_file)) %>% 
-       paste(collapse = "") %>% 
-       str_extract("structure.*L\\)\\)") %>% 
-       parse(text = .) %>% 
-       eval() %>% 
-       mutate(fold = str_extract(output_file, "\\d{1,3}$"),
-              cy = paste(country, year),
-              cy_color = if_else(problem == 1, "#354995", "#5E5E5E"),
-              point_diff = mean - gini_b %>% round(5)))
-  }
+  rio::import(file.path(output_path, output_file)) %>% 
+    mutate(fold = str_extract(output_file, "\\d{1,3}$"),
+           cy = paste(country, year),
+           cy_color = if_else(problem == 1, "#354995", "#5E5E5E"),
+           point_diff = mean - gini_b %>% round(5))
 }) %>% 
   group_by(country) %>% 
   mutate(prob_perc = mean(problem, na.rm = TRUE),
@@ -90,9 +78,9 @@ kfold_output_by_country %>%
   arrange(-problem, -prob_perc, country, -t_diff) %>%
   View()
 
-1 - mean(kfold_output_by_country %>% filter(n > 1) %>% pull(problem), na.rm = TRUE)
-mean(abs(kfold_output_by_country %>% filter(n > 1) %>% pull(point_diff)) < .01, na.rm = TRUE)
-mean(abs(kfold_output_by_country %>% filter(n > 1) %>% pull(point_diff)) < .02, na.rm = TRUE)
+1 - mean(kfold_output_by_country %>% pull(problem), na.rm = TRUE)
+mean(abs(kfold_output_by_country %>% pull(point_diff)) < .01, na.rm = TRUE)
+mean(abs(kfold_output_by_country %>% pull(point_diff)) < .02, na.rm = TRUE)
 
 ggplot(kfold_output_by_country) +
   geom_hline(yintercept=0, linetype=2, colour="gray60") +
