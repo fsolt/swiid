@@ -472,13 +472,11 @@ To take into account the fact that Ginis generally change only gradually from on
   \hat{G}_{bkt} \sim \mathcal{N}(\hat{G}_{bk(t-1)},\,\sigma_G^{2})
   \]
 Estimates for country-years with LIS baseline data are updated from a normal distribution centered on the observed Gini with deviation equal to its associated standard error.
-Estimates for country-years without baseline data but with other source-data observations are updated using $\hat{\rho}_{s}$, $\hat{\rho}_{kwe}$, the product of $\hat{\rho}_{kw}$ and $\hat{\rho}_{re}$, and $\hat{\rho}_{rwe}$.
-For example, if $G_{skt}$ is present in the source data, then $\hat{G}_{bkt}$ is updated using:
+Estimates for country-years without LIS baseline data but with other source-data observations are updated using $\hat{\rho}_{s}$, $\hat{\rho}_{kwe}$, the product of $\hat{\rho}_{kw}$ and $\hat{\rho}_{re}$, and $\hat{\rho}_{rwe}$.
+For example, if $G_{skt}$ is present in the source data for a country-year $kt$ without LIS baseline data, then $\hat{G}_{bkt}$ is updated using $\hat{\rho}_{s}$ and $\sigma_s^{2}$ (recall that these quantities are estimated from those country-years in which both the LIS baseline data and series $s$ are observed):
   \[
   \hat{G}_{bkt} \sim \mathcal{N}(\hat{\rho}_{s} \times G_{skt},\,\sigma_s^{2})
   \]
-.
-
 Country-years with more observations in the source data have more information to update the estimate.
 The random-walk specification smoothly manages those country-years without any Ginis in the source data between each country's first and last observed years: if no observation is available, the random walk process spans the gap between the last year to appear in the source data and the next year to appear.
 
