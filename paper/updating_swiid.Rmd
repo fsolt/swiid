@@ -7,11 +7,11 @@ output:
     latex_engine: pdflatex
     template: svm-latex-ms2.tex
 title: "Measuring Income Inequality Across Countries and Over Time: The Standardized World Income Inequality Database [DRAFT]"
-thanks: "The paper's revision history and the materials needed to reproduce its analyses can be found [on Github here](http://github.com/fsolt/swiid). Corresponding author: [frederick-solt@uiowa.edu](mailto:frederick-solt@uiowa.edu). Current version: `r format(Sys.time(), '%d %B %Y')`."
+thanks: "This paper's revision history and the materials needed to reproduce its analyses can be found [on Github here](http://github.com/fsolt/swiid). The project is supported by U.S. National Science Foundation Award #1533746. Corresponding author: [frederick-solt@uiowa.edu](mailto:frederick-solt@uiowa.edu). Current version: `r format(Sys.time(), '%d %B %Y')`."
 author:
 - name: Frederick Solt
   affiliation: University of Iowa
-abstract: "_Objective_:_Methods_:_Results_:_Conclusion_:"
+abstract: "_Objective_: This article documents wide-ranging revisions to the Standardized World Income Inequality Database (SWIID), which seeks to maximize the comparability of income inequality estimates for the broadest possible coverage of countries and years. _Methods_: Two _k_-fold cross-validations, by observation and by country, are used to evaluate the SWIID's success in predicting the Luxembourg Income Study (LIS), recognized in the field as setting the standard for comparability. _Results_: The cross-validations indicate that for both the relatively data-rich countries included in the LIS and the relatively data-poor countries outside the LIS, the SWIID's estimates are both "close to the target" and "have good credible intervals." _Conclusion_: Given its superior coverage and comparability, the SWIID remains the optimum source of data for broadly cross-national research on income inequality."
 keywords: "income inequality, measurement"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 fontsize: 11pt
@@ -31,7 +31,7 @@ library(tidyverse)
 ## Introduction
 
 From its origins now over a decade ago, the goal of the Standardized World Income Inequality Database has been to provide estimates of income inequality for as many countries and years as possible while ensuring that these estimates are as comparable as the available data allow [see @Solt2009].
-That is to say, the SWIID's first prority is breadth of coverage, and its second is comparability.
+That is to say, the SWIID's first priority is breadth of coverage, and its second is comparability.
 The starting point for the SWIID estimates is a dataset with the complementary priorities: the Luxembourg Income Study, which aims to maximize comparability and, given that primary concern, to include as many countries and years as possible.^[
 Still, even for the LIS prioritizing comparability has given way, to some degree, to the desire to cover more countries.
 @Checchi2018 have recently written about the difficulties the LIS team has encountered including middle-income countries due to the greater importance of non-monetary and self-employment income as well as the differences in direct taxation and social security contributions in these countries in comparison to high-income countries.
@@ -42,8 +42,8 @@ This approach has made the SWIID a preferred source of income inequality data fo
 The SWIID has recently been completely revised.
 This article explains, first, how the source data for the SWIID is now collected.
 It turns next to how these data are used to generate comparable estimates of income inequality across countries and over time.
-To demonstrate that this procedure succeeds in producing estimates are comparable to the LIS data, it then reviews evidence from two $k$-fold cross-validations.
-Finally, it concludes by explaining how researchers may best make use of the SWIID in their own research.
+To demonstrate that this procedure succeeds in producing estimates that are comparable to the LIS data, it then reviews evidence from two $k$-fold cross-validations.
+Finally, it concludes by explaining how researchers may best make use of the SWIID in their own work.
 
 
 ```{r data-setup, include=FALSE}
@@ -82,7 +82,8 @@ The SWIID source data consists of observations of the Gini coefficient in variou
 Because the Gini index is simply the Gini coefficient multiplied by 100, the two are equivalent, and both can be referred to as 'the Gini' with little cause for confusion.]
 The Gini is most intuitively defined as the average difference in income between all pairs in a population, divided by twice the average income in the population.
 It is by far the most commonly encountered summary statistic for measuring income inequality.
-The Gini is more sensitive to changes in the middle of the income distribution than some other metrics, such as the Atkinson index and the Theil indices, and unlike those measures it cannot be analytically decomposed.
+The Gini is more sensitive to changes in the middle of the income distribution than some other metrics, such as the Atkinson index and the Theil indices, and unlike those measures it cannot be analytically decomposed.^[
+On this last, however, see @Darvas2019 [, 28-29], which demonstrates a very precise technique of _computationally_ decomposing changes in the Gini by analogy to chain-linked volume national accounts calculations.]
 But in light of the SWIID's goal of providing information on income inequality for the broadest possible sample of countries and years, the ubiquity of the Gini makes it the only plausible choice for this purpose.
 
 To be included in the SWIID source data, Gini observations need to encompass the entire population of a country without regard to age, location, or employment status.^[
@@ -189,7 +190,7 @@ This is not surprising given that, with the exceptions of the two other secondar
 Turning from how the source data were collected to how they are composed reveals that there is much more data available about the income distribution in some countries than in others.
 Which countries are most data-rich?
 Figure&nbsp;\ref{countries_by_obs} below shows the top dozen countries by the count of observations.
-Canada, by virtue of the excellent Statistics Canada as well as longstanding membership in the OECD and LIS, has `r nrow(swiid_source %>% filter(country=="Canada"))` observations, many more than any other country.
+Canada, by virtue of the excellent work of Statistics Canada as well as longstanding membership in the OECD and LIS, has `r nrow(swiid_source %>% filter(country=="Canada"))` observations, many more than any other country.
 The United Kingdom, Germany, and the United States are next, followed by a group dominated by European countries but including Mexico, Taiwan, and Brazil.
 All of these data-rich countries are members of the LIS.
 On the other hand, the `r single_obs_countries` most data-poor countries have only a single observation each in the SWIID source data.
@@ -341,7 +342,7 @@ Quoted because, strictly speaking, nothing is being scaled at all; it is simply 
 Although undoubtedly superior to simply looking at households, the per capita scale is not ideal: a household of two members and an income of \$100,000 is better off than one with a single member and \$50,000 due to economies of scale---that is among the most important reasons why people look for roommates.
 There are a variety of ways to try to account for these economies by calculating the number of 'equivalent adults' in the household.
 Of the most commonly used adult-equivalent scales, the square-root scale is the most straightforward: one simply divides the household income by the square root of the number of members.
-The 'OECD-modified' scale for the number of adult equivalents (which the OECD itself actually does not use, preferring the square-root scale) counts the first adult as 1, all other adults as .5, and each child as .3.
+The so-called 'OECD-modified' scale for the number of adult equivalents (which the OECD itself actually does not use, preferring the square-root scale) counts the first adult as 1, all other adults as .5, and each child as .3.
 And there are many other, less frequently employed adult-equivalent scales, from the 'old OECD' scale (1 for the first adult, 0.7 for each additional adult, and 0.5 for each child) to caloric-requirement-based scales (which are in fact very nearly per capita, as it turns out) to a number of country-specific scales.
 In previous versions of the SWIID, all adult-equivalent scales were considered a single category.
 Now, the square-root scale and the OECD-modified scale have both been split out, leaving the remaining catch-all adult-equivalent category much smaller.
@@ -356,11 +357,12 @@ These broad differences between observations, along with less readily evident di
 One source of differences within a single welfare definition is the manner and extent to which nonmonetary income or expenditure---such as the value of food grown for the household's own consumption or of housing that the owner occupies---is included.
 Consumption definitions can vary considerably in whether and how observations treat expenditures on durable goods.
 Income definitions sometimes exclude such major categories as interest and dividends [see @Atkinson2001, 785] or self-employment income [see @Checchi2018, 6].] mean that they are far from comparable.
-So while the SWIID source data constitute the most comprehensive collection of the available observations of the distribution of income across the populations of the world's countries, they are not comparable and so not suitable for cross-national research.
-If were we willing to put aside the less obvious incomparabilities across its observations and use the only data with most common combination of welfare definition and equivalence scale, disposable income per capita, we would be left with only `r ineq2 %>% filter(wdes == "disp_pc") %>% nrow()` observations, or just `r round((ineq2 %>% filter(wdes == "disp_pc") %>% nrow())/(ineq2 %>% nrow()) * 100)`% of the total information available.^[
+So while the SWIID source data constitute the most comprehensive collection of the available observations of the distribution of income across the populations of the world's countries, they are not comparable and so not suitable for cross-national research.^[
+The same, of course, is true of similar, smaller collections such as @UNU2018 or @Milanovic2019: as the data they include is calculated on the basis of different welfare definitions, equivalence scales, and in other, less conspicuous ways, they are simply not suited for making comparisons.]
+If we were willing to put aside the less obvious incomparabilities across its observations and use the only data with most common combination of welfare definition and equivalence scale, disposable income per capita, we would be left with only `r ineq2 %>% filter(wdes == "disp_pc") %>% nrow()` observations, or just `r round((ineq2 %>% filter(wdes == "disp_pc") %>% nrow())/(ineq2 %>% nrow()) * 100)`% of the total information available.^[
 This seemingly sensible approach, however, not only discards the vast majority of the available information, but also does a surprisingly poor job at yielding comparable income inequality figures [see @Solt2016, 1278] and can raise issues of problematic researcher degrees of freedom [see @Solt2015a, 686].
 Moreover, if the welfare concept relevant to our theory were in fact market income, these data would not be fit for our purpose at all [see @Atkinson2009, 389, 393].]
-How to make use of all of these available data to estimate levels of income inequality that can be compared across countries and over time is the subject of the next section.
+How the SWIID makes use of all of these available data to estimate levels of income inequality that can be compared across countries and over time is the subject of the next section.
 
 
 ## Generating Comparable Income Inequality Estimates
@@ -415,7 +417,13 @@ That is, $\hat{\rho}_{s}$ is the estimated ratio of the LIS baseline to the seri
 This relationship is not only country-specific and includes the welfare definition and equivalence scale, but because each series uses a consistent methodology, such factors as the comprehensiveness of the income definition and the reporting period are also taken into account.
 These $\hat{\rho}_{s}$ can be estimated for series encompassing nearly half of the observations and over 70% of the observed country-years in the SWIID source data for the countries included in the LIS.
 As shown in the column labeled "Total" at the right of Figure&nbsp;\ref{rho_by_reg}, these country-years constitute just over a third of all observed country-years in the SWIID source data.
-This figure also reveals that the extent to which series-specific relationships can be estimated vary greatly by region: $\hat{\rho}_{s}$ can be estimated for over 70% of the observed country-years in the advanced English-speaking countries and nearly 60% of those in Western Europe, but only about `r rbr_cy %>% filter(region=="DAA" & type=="rho_s") %>% pull(value) %>% round()`% of the country-years in the countries of Africa and developing Asia.
+This figure also reveals that the extent to which series-specific relationships can be estimated vary greatly by region:^[
+The regions used are defined as follows: (1) the advanced English-speaking countries, (2) Western Europe, (3) Japan and the Asian Tigers, (4) the advanced ex-Communist countries, (5) Latin America, (6) the developing ex-Communist countries, and (7) Africa and developing Asia.
+This follows the practice of previous versions of the SWIID with the exception that Africa and developing Asia, once considered separately, are now considered a single region.
+The combination of the relative paucity of data and the heterogeneity of relationships observed---particularly between consumption and other welfare definitions---among the countries of these two continents counseled in favor of considering them together.
+Cross-validation tests confirmed that doing so best preserves the uncertainty implied by the scarcity and heterogeneity of the data available; as more LIS data becomes available, the question will be re-examined.
+The next section discusses cross-validation in detail.
+The complete list of countries and regions may be consulted at <https://github.com/fsolt/swiid/blob/master/data/reg.csv>.] $\hat{\rho}_{s}$ can be estimated for over 70% of the observed country-years in the advanced English-speaking countries and nearly 60% of those in Western Europe, but only about `r rbr_cy %>% filter(region=="DAA" & type=="rho_s") %>% pull(value) %>% round()`% of the country-years in the countries of Africa and developing Asia.
 
 The SWIID routine next expands the observations used to estimate the relationship between the source data and the LIS baseline to include all of the observations in the country with the same welfare definition and equivalence scale.
 The relationship $\hat{\rho}_{kwe}$ is the estimated ratio of the LIS baseline to Ginis with the same country-year for each country $k$, welfare definition $w$, and equivalence scale $e$.
@@ -429,13 +437,7 @@ For those countries, when possible, the relationship between source data observa
 The first factor seeks to account for differences in welfare definition---the policy-sensitive effects of taxes and transfers---by reference only to data from the country in question.
 For each country $k$ and welfare definition $w$, $\hat{\rho}_{kw}$ is the estimate of the ratio of Ginis with the baseline welfare definition to those with the welfare definition $w$ in the same country-year.
 The second factor, to account for the much smaller differences across equivalence scales, is $\hat{\rho}_{re}$.
-The ratio $\hat{\rho}_{re}$ is the estimate of the ratio of LIS baseline observations to Ginis of the same country-year with the baseline welfare definition and equivalence scale $e$ across the region $r$ in which country $k$ is located.^[
-The regions used are defined as follows: (1) the advanced English-speaking countries, (2) Western Europe, (3) Japan and the Asian Tigers, (4) the advanced ex-Communist countries, (5) Latin America, (6) the developing ex-Communist countries, and (7) Africa and developing Asia.
-This follows the practice of previous versions of the SWIID with the exception that Africa and developing Asia, once considered separately, are now considered a single region.
-The combination of the relative paucity of data and the heterogeneity of relationships observed---particularly between consumption and other welfare definitions---among the countries of these two continents counseled in favor of considering them together.
-Cross-validation tests confirmed that doing so best preserves the uncertainty implied by the scarcity and heterogeneity of the data available; as more LIS data becomes available, the question will be re-examined.
-The next section discusses cross-validation in detail.
-The complete list of countries and regions may be consulted at <https://github.com/fsolt/swiid/blob/master/data/reg.csv>.]
+The ratio $\hat{\rho}_{re}$ is the estimate of the ratio of LIS baseline observations to Ginis of the same country-year with the baseline welfare definition and equivalence scale $e$ across the region $r$ in which country $k$ is located.
 The product of $\hat{\rho}_{kw}$ and $\hat{\rho}_{re}$, then, estimates the relationship between a Gini in country $k$ in region $r$ with welfare definition $w$ and equivalence scale $e$ and the LIS baseline.
 This product can be estimated for more than two-thirds of the source data observations for countries outside the LIS, though these constitute only `r round((ineq2 %>% filter(k_bl_obs == 0 & kw) %>% distinct(country, year) %>% nrow())/(ineq2 %>% filter(k_bl_obs ==0 ) %>% distinct(country, year) %>% nrow()), 2) * 100`% of the observed country-years for those countries.  Across all countries, as can be seen in the right-most column of Figure&nbsp;\ref{rho_by_reg}, these are `r round(rbr_cy %>% filter(region == "Total" & type == "rho_kw x rho_re") %>% pull(value))`% of the observed country-years in the SWIID source data.
 Less than 10% of the observed country-years for the countries of Western Europe---but nearly 60% of those for the developing ex-Communist countries---are best estimated in this fashion.
@@ -444,7 +446,7 @@ Lastly, where the source data for the country of an observation does not allow t
 Across all regions, data scarcity imposes this unfortunate reliance upon information only from other countries in the region to estimate the relationship between observed source data and the LIS baseline in `r round(rbr_cy %>% filter(region == "Total" & type == "rho_rwe") %>% pull(value))`% of the observed country-years in the SWIID source data.
 None of the relationships for the country-years of the advanced English-speaking countries rely on $\hat{\rho}_{rwe}$ (or indeed any information beyond in-country data); however, the relationships to the LIS baseline of nearly 60% of the observed country-years for the countries of Africa and developing Asia are based on such regionwide data.
 
-```{r rho_by_region_plot, echo=FALSE, fig.height=4, fig.cap="Estimated Relationships by Region, Observed Country-Years \\label{rho_by_reg}"}
+```{r rho_by_region_plot, echo=FALSE, fig.height=4, fig.cap="Estimated Relationships by Region, Observed Country-Years, Disposable Income Inequality \\label{rho_by_reg}"}
 
 ggplot(rbr_cy, aes(region, value, fill = type)) + 
   geom_bar(stat = "identity") +
@@ -481,6 +483,9 @@ For example, if $G_{skt}$ is present in the source data for a country-year $kt$ 
 Country-years with more observations in the source data have more information to update the estimate.
 The random-walk specification smoothly manages those country-years without any Ginis in the source data between each country's first and last observed years: if no observation is available, the random walk process spans the gap between the last year to appear in the source data and the next year to appear.
 
+In addition to these estimates of market inequality inequality and disposable income inequality, the SWIID incorporates two estimates of redistribution: absolute redistribution (the difference between the Ginis for market income and disposable income) and of relative redistribution (this difference divided by the Gini for market income and then multiplied by 100, that is, the percentage by which the market-income Gini is reduced).
+These measures of redistribution are only estimated for those countries with at least some observations in the source data for both (a) market income inequality and (b) either disposable income inequality or consumption inequality.^[
+When this requirement is not met, the difference between the SWIID's market-income and disposable-income Ginis reflects only information from other countries, and therefore it conveys no meaningful independent information about the country's own level of redistribution.]
 
 ## Evaluating the Comparability of the SWIID's Estimates With Cross-Validation
 
@@ -493,7 +498,7 @@ kfold_output_by_country <- rio::import("https://github.com/fsolt/swiid/raw/maste
 ```
 
 How can we know if the approach just described actually works?
-In previous work, I put the SWIID to the most stringent test that occurred to me: I compared LIS data on country-years that had been included in previously-released versions of the SWIID [@Solt2016, 1277-1278].^[
+In previous work, I put the SWIID to the most stringent test that I could come up with: I compared the SWIID's estimates to later-released figures from the LIS [@Solt2016, 1277-1278].^[
 For the initial kernel of this idea, I remain grateful to participants in the Expert Group Meeting on Reducing Inequalities in the Context of Sustainable Development, Department of Economic and Social Affairs, United Nations, New York, October 24–25, 2013.]
 The results were reassuring in some ways---only seven percent of the differences between new LIS observations and old SWIID estimates were statistically significant and larger than two Gini points, a far better record than that achieved by data carefully selected from the UNU-WIDER [-@UNU2014] database or by the then-current _All the Ginis_ dataset adjusted in accordance with its instructions [@Milanovic2013, 8]---but less so in others.
 Most disappointingly, only 72% of those differences had 95% confidence intervals that included zero, suggesting that the SWIID's standard errors were often too small.
@@ -595,4 +600,17 @@ There is room for improvement here too, and so this too will receive continued e
 
 All in all, though, these _k_-fold cross-validation exercises show that the SWIID does a very good job of predicting the LIS, which inspires confidence that the SWIID is indeed maximizing the comparability of income inequality data across countries and over time.
 
-## Conclusion
+## Using the SWIID for Cross-National Research
+Web app
+
+Stata
+
+The functions of the \texttt{purrr} package [@Henry2019, included within the widely-used \texttt{tidyverse} package] makes incorporating the uncertainty in the SWIID's estimates into an analysis conducted in \textsf{R} completely straightforward, scarcely more complex than omitting it.
+Step-by-step instructions on how to use these tools, complete with examples, are included in the data download.
+
+Despite its clear advantages for broadly cross-national research, the SWIID will not be the best choice for all work on income inequality.
+Those examining trends in income inequality within only a single country, in particular, will often find that national sources exist that meet their needs.
+To help this latter group of researchers identify these sources, a second web application focused on the SWIID source data is now available at the author's website.
+In addition to displaying graphically all of the available income inequality data for each country, the SWIID source data web application identifies the welfare definition and equivalence scale that each source employs and provides direct links to the electronic versions of these sources. 
+
+LIS
