@@ -7,11 +7,13 @@ data-raw/from_Hu.csv
 data-raw/LISSY/net_sqrt_ru_all.txt
 data-raw/article_data/*
 data-raw/OECD2008.pdf
+data-raw/ to_add/
 dev/*
 R/dcpo.R
 R/temp.stan
 R/ notes.txt
 R/estimate_swiid/all*rds
+R/estimate_swiid/precursors
 SWIIDv5_0.RData
 vignette/reference/*
 vignette/*.dta
@@ -27,8 +29,10 @@ data/lis_only_*.rda
 data/lis_gt*.rda
 data/all_*.rda
 data/series_gt*.rda
-data-raw/ to_add/
+data/by_country/
+data/by_fold/
 updating_swiid_paper/updating_swiid.tex
+paper/lit/
 *.bbl
 *.log
 *.out
