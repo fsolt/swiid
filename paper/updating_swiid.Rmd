@@ -37,7 +37,7 @@ Still, even for the LIS prioritizing comparability has given way, to some degree
 @Checchi2018 have recently written about the difficulties the LIS team has encountered including middle-income countries due to the greater importance of non-monetary and self-employment income as well as the differences in direct taxation and social security contributions in these countries in comparison to high-income countries.
 Despite these issues, the LIS remains the most comparable income inequality data available.]
 Then, the SWIID routine estimates the relationships between Gini indices based on the LIS and all of the other Ginis available for the same country-years, and it uses these relationships to estimate what the LIS Gini _would be_ in country-years not included in the LIS but available from other sources.
-This approach has made the SWIID a preferred source of income inequality data for researchers pursuing broadly cross-national work across a wide range of disciplines, including not only economics [e.g., @Berg2018; @Darvas2019], political science [e.g., @Dorsch2019; @Engler2020], and sociology [e.g., @Dawson2018; @JaimeCastillo2019] but also fields with more recent interests in the subject, like public health [e.g., @Ngamaba2016; @Alvarez2017] and psychology [e.g., @Blake2018; @Schmukle2019].
+This approach has made the SWIID a preferred source of income inequality data for researchers pursuing broadly cross-national work across a wide range of disciplines, including not only economics [e.g., @Berg2018; @Darvas2019; @Palma2019], political science [e.g., @Dorsch2019; @Iversen2019; @Engler2020], and sociology [e.g., @Steele2016; @Dawson2018; @JaimeCastillo2019] but also fields like public health [e.g., @Ngamaba2016; @Alvarez2017] and psychology [e.g., @Blake2018; @Schmukle2019].
 
 The SWIID has recently been completely revised.
 This article explains, first, how the source data for the SWIID is now collected.
@@ -178,7 +178,7 @@ ggplot(cy_coverage, aes(forcats::fct_reorder(source1, n_cy, .desc = TRUE), n_cy)
 ```
 
 Data were collected from a total of `r swiid_source %>% count(source1) %>% nrow()` sources.
-But even when observations are drawn from a single source does not necessarily make them comparable: as @Atkinson2009 [, 392] observed, inequality statistics can suffer from "a break in continuity" if "the underlying source is the same, but the methods changed."
+But even when observations are drawn from a single source, this does not necessarily make them comparable: as @Atkinson2009 [, 392] observed, inequality statistics can suffer from "a break in continuity" if "the underlying source is the same, but the methods changed."
 For example, @Eurostat2019 indicates breaks in the time series of its data for France occurred in 2000, 2003, and 2007.
 Rather than a single consistent series, then, these three breaks mean the Eurostat data for France actually consist of four separate series (1994-1999, 2000-2002, 2003-2006, and 2007-2016) that are not comparable with each other.
 That these breaks result in year-to-year jumps ranging in size from an entire Gini index point (in 2000) to more than three points (in 2007) underscore the importance of taking such breaks in continuity into account.
