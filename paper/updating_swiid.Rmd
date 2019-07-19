@@ -6,7 +6,7 @@ output:
     fig_caption: true
     latex_engine: pdflatex
     template: svm-latex-ms2.tex
-title: "Measuring Income Inequality Across Countries and Over Time: The Standardized World Income Inequality Database [DRAFT]"
+title: "Measuring Income Inequality Across Countries and Over Time: The Standardized World Income Inequality Database"
 thanks: "This paper's revision history and the materials needed to reproduce its analyses can be found [on Github here](http://github.com/fsolt/swiid). The project is supported by U.S. National Science Foundation Award #1533746. Corresponding author: [frederick-solt@uiowa.edu](mailto:frederick-solt@uiowa.edu). Current version: `r format(Sys.time(), '%d %B %Y')`."
 author:
 - name: Frederick Solt
