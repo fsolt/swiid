@@ -1029,7 +1029,7 @@ statinja <- read_csv("data-raw/statinja.csv") %>%
 
 
 # Kazakhstan Committee on Statistics (update link)
-kazstat_page <- "http://stat.gov.kz/getImg?id=ESTAT097178"
+kazstat_page <- "http://stat.gov.kz/api/getFile/?docId=ESTAT097178"
 download.file(kazstat_page, "data-raw/kazstat.xls")
 
 kazstat <- read_excel("data-raw/kazstat.xls",
