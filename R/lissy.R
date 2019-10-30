@@ -49,19 +49,19 @@ setups <- function(df) {
   df$disp_oecdm <- df$disp_hh / df$oecdm
   df$disp_ae <- df$disp_hh / df$ae
   
-  df$gross_hh <- topBottom(df$hi, botline, topline)
+  df$gross_hh <- topBottom(df$hitotal, botline, topline)
   df$gross_sqrt <- df$gross_hh / (df$nhhmem ^ 0.5)
   df$gross_pc <- df$gross_hh / df$nhhmem
   df$gross_oecdm <- df$gross_hh / df$oecdm
   df$gross_ae <- df$gross_hh / df$ae
   
-  df$market_hh <- topBottom(ifelse(!is.na(df$hitp), (df$factor + df$hitp), df$factor), botline, topline)
+  df$market_hh <- topBottom(ifelse(!is.na(df$hiprivate), (df$hifactor + df$hiprivate), df$hifactor), botline, topline)
   df$market_sqrt <- df$market_hh / (df$nhhmem ^ 0.5)
   df$market_pc <- df$market_hh / df$nhhmem
   df$market_oecdm <- df$market_hh / df$oecdm
   df$market_ae <- df$market_hh / df$ae
   
-  df$con_hh <- topBottom(df$hc, botline, topline)
+  df$con_hh <- topBottom(df$hcexp, botline, topline)
   df$con_sqrt <- df$con_hh / (df$nhhmem ^ 0.5)
   df$con_pc <- df$con_hh / df$nhhmem
   df$con_oecdm <- df$con_hh / df$oecdm
@@ -79,13 +79,12 @@ boot_gini_se <- function(data, var, reps=100) {
 }
 
 # For testing at home:
-# read.LIS <- function(data_file, labels, vars, subset) {
+# read.LIS <- function(data_file, labels, vars) {
 #   require(dplyr)
 #   data_file <- stringr::str_replace(data_file, "h", "ih.dta")
-#   df <- haven::read_dta(data_file)[, vars] %>%
-#     filter(eval(parse(text = subset), .))
+#   df <- haven::read_dta(data_file)[, vars]
 #   if (!labels) {
-#     df <- df %>% dplyr::mutate_all(funs(as.numeric))
+#     df <- df %>% dplyr::mutate_all(list(as.numeric))
 #   }
 #   return(df)
 # }
@@ -105,7 +104,7 @@ get_ginis <- function(cc, reps = 100) {
   yy <- as.character(c(c(67, 69, 71, 73:75, 78:99), paste0("0", 0:9), c(10:last_year_yy)))
 
   datasets <- paste0(rep(cc, each = length(yy)), rep(yy, times = length(cc)), "h")
-  vars <- c("dhi", "hi", "factor", "hitp", "hc", "hpopwgt", "nhhmem", "nhhmem13", "grossnet")
+  vars <- c("dhi", "hitotal", "hifactor", "hiprivate", "hcexp", "hpopwgt", "nhhmem", "nhhmem13", "grossnet")
 
   v <- c("market_hh", "market_sqrt", "market_pc", "market_oecdm", "market_ae",
          "gross_hh", "gross_sqrt", "gross_pc", "gross_oecdm", "gross_ae",
