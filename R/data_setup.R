@@ -1369,17 +1369,15 @@ ssi1 <- read_excel("data-raw/ssi.xls",
             page = "Laekens kazalniki 1997-2003",
             link = ssi1_link) 
 
-# update file (automate again soon?)
-ssi2_link <- "https://pxweb.stat.si/SiStatDb/pxweb/en/10_Dem_soc/10_Dem_soc__08_zivljenjska_raven__08_silc_kazalniki_revsc__15_08673_porazdel_dohodka/0867312S.px/"
-download.file(ssi2_link, "data-raw/ssi2.csv")
+# (automated)
+ssi2_link <- "https://pxweb.stat.si/SiStatDb/Resources/PX/Databases/10_Dem_soc/08_zivljenjska_raven/08_silc_kazalniki_revsc/15_08673_porazdel_dohodka/0867312S.px"
+download.file(ssi2_link, "data-raw/ssi2.px")
 
-ssi2 <- read_delim("data-raw/ssi2.csv", ";", skip = 1, 
-                   col_types = cols(INCOME = "c", .default = "d")) %>% 
-  filter(str_detect(INCOME, "pensions are included")) %>% 
-  select(-INCOME) %>% 
-  gather(key = "year", value = "value") %>% 
+ssi2 <- pxR::read.px("data-raw/ssi2.px") %>% 
+  pxR:::as.data.frame.px() %>% 
+  filter(str_detect(DOHODEK, "pokojnine so del")) %>% 
   transmute(country = "Slovenia",
-            year = as.numeric(as.character(year)) - 1,
+            year = as.numeric(as.character(LETO)) - 1,
             gini = as.numeric(value)/100,
             gini_se = NA,
             welfare_def = "market",
