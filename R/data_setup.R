@@ -1847,7 +1847,7 @@ inev <- read_excel("data-raw/inev.xls", skip = 3) %>%
 # http://www.gso.gov.vn/default_en.aspx?tabid=783 > Index of income inequality
 # WHOLE COUNTRY, all years > Comma delimited with heading
 # Note 12 Nov 2018: file now has only one sig.fig., so leaving previous (3 sf) version in place for now
-gso_vn1_link <- "http://www.gso.gov.vn/Modules/Doc_Download.aspx?DocID=16773"
+gso_vn1_link <- "https://web.archive.org/web/20170525163734/http://www.gso.gov.vn/Modules/Doc_Download.aspx?DocID=16773"
 gso_vn2_link <- "http://www.gso.gov.vn/default_en.aspx?tabid=783"
 download.file(gso_vn1_link, "data-raw/gso_vn2013.pdf")
 
