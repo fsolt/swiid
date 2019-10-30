@@ -1,6 +1,6 @@
 From: postbox@lisdatacenter.org
-Subject: job 591464 lt
-Date: December 21, 2018 at 12:18:26 PM CST
+Subject: job 671166 lt
+Date: October 30, 2019 at 10:58:53 AM CDT
 To: fsolt@mac.com
 
 ############################### NOTICE TO USERS ###############################
@@ -53,7 +53,7 @@ Loading required package: readstata13
 >  
 > topBottom <- function(var, botline, topline) { 
 +   tb <- ifelse(var < botline, botline, var) 
-+   tb <- ifelse(tb > topline, topline, var) 
++   tb <- ifelse(tb > topline, topline, tb) 
 +   return(tb) 
 + } 
 >  
@@ -69,19 +69,19 @@ Loading required package: readstata13
 +   df$disp_oecdm <- df$disp_hh / df$oecdm 
 +   df$disp_ae <- df$disp_hh / df$ae 
 +    
-+   df$gross_hh <- topBottom(df$hi, botline, topline) 
++   df$gross_hh <- topBottom(df$hitotal, botline, topline) 
 +   df$gross_sqrt <- df$gross_hh / (df$nhhmem ^ 0.5) 
 +   df$gross_pc <- df$gross_hh / df$nhhmem 
 +   df$gross_oecdm <- df$gross_hh / df$oecdm 
 +   df$gross_ae <- df$gross_hh / df$ae 
 +    
-+   df$market_hh <- topBottom(ifelse(!is.na(df$hitp), (df$factor + df$hitp), df$factor), botline, topline) 
++   df$market_hh <- topBottom(ifelse(!is.na(df$hiprivate), (df$hifactor + df$hiprivate), df$hifactor), botline, topline) 
 +   df$market_sqrt <- df$market_hh / (df$nhhmem ^ 0.5) 
 +   df$market_pc <- df$market_hh / df$nhhmem 
 +   df$market_oecdm <- df$market_hh / df$oecdm 
 +   df$market_ae <- df$market_hh / df$ae 
 +    
-+   df$con_hh <- topBottom(df$hc, botline, topline) 
++   df$con_hh <- topBottom(df$hcexp, botline, topline) 
 +   df$con_sqrt <- df$con_hh / (df$nhhmem ^ 0.5) 
 +   df$con_pc <- df$con_hh / df$nhhmem 
 +   df$con_oecdm <- df$con_hh / df$oecdm 
@@ -99,13 +99,12 @@ Loading required package: readstata13
 + } 
 >  
 > # For testing at home: 
-> # read.LIS <- function(data_file, labels, vars, subset) { 
+> # read.LIS <- function(data_file, labels, vars) { 
 > #   require(dplyr) 
 > #   data_file <- stringr::str_replace(data_file, "h", "ih.dta") 
-> #   df <- haven::read_dta(data_file)[, vars] %>% 
-> #     filter(eval(parse(text = subset), .)) 
+> #   df <- haven::read_dta(data_file)[, vars] 
 > #   if (!labels) { 
-> #     df <- df %>% dplyr::mutate_all(funs(as.numeric)) 
+> #     df <- df %>% dplyr::mutate_all(list(as.numeric)) 
 > #   } 
 > #   return(df) 
 > # } 
@@ -125,7 +124,7 @@ Loading required package: readstata13
 +   yy <- as.character(c(c(67, 69, 71, 73:75, 78:99), paste0("0", 0:9), c(10:last_year_yy))) 
 +  
 +   datasets <- paste0(rep(cc, each = length(yy)), rep(yy, times = length(cc)), "h") 
-+   vars <- c("dhi", "hi", "factor", "hitp", "hc", "hpopwgt", "nhhmem", "nhhmem13", "grossnet") 
++   vars <- c("dhi", "hitotal", "hifactor", "hiprivate", "hcexp", "hpopwgt", "nhhmem", "nhhmem13", "grossnet") 
 +  
 +   v <- c("market_hh", "market_sqrt", "market_pc", "market_oecdm", "market_ae", 
 +          "gross_hh", "gross_sqrt", "gross_pc", "gross_oecdm", "gross_ae", 
@@ -162,40 +161,50 @@ Loading required package: readstata13
 > # Call 
 > get_ginis("lt") 
 [1] "Loading dataset lt10h..."
-lt10h,market_hh,0.6238,0.0065,110
-lt10h,market_sqrt,0.5271,0.0066,110
-lt10h,market_pc,0.544,0.0069,110
-lt10h,market_oecdm,0.5295,0.0072,110
-lt10h,market_ae,0.5338,0.0077,110
-lt10h,gross_hh,0.4331,0.0049,110
-lt10h,gross_sqrt,0.356,0.0046,110
-lt10h,gross_pc,0.3524,0.0048,110
-lt10h,gross_oecdm,0.3508,0.006,110
+lt10h,market_hh,0.6238,0.007,110
+lt10h,market_sqrt,0.5271,0.0064,110
+lt10h,market_pc,0.544,0.0071,110
+lt10h,market_oecdm,0.5295,0.0067,110
+lt10h,market_ae,0.5338,0.0062,110
+lt10h,gross_hh,0.4331,0.005,110
+lt10h,gross_sqrt,0.356,0.0051,110
+lt10h,gross_pc,0.3524,0.0062,110
+lt10h,gross_oecdm,0.3508,0.0061,110
 lt10h,gross_ae,0.3479,0.0051,110
-lt10h,disp_hh,0.4013,0.0046,110
-lt10h,disp_sqrt,0.3253,0.0047,110
-lt10h,disp_pc,0.3269,0.0052,110
+lt10h,disp_hh,0.4013,0.0057,110
+lt10h,disp_sqrt,0.3253,0.0049,110
+lt10h,disp_pc,0.3269,0.0056,110
 lt10h,disp_oecdm,0.3198,0.0051,110
 lt10h,disp_ae,0.3183,0.0052,110
+lt10h,con_hh,NaN,NA,110
+lt10h,con_sqrt,NaN,NA,110
+lt10h,con_pc,NaN,NA,110
+lt10h,con_oecdm,NaN,NA,110
+lt10h,con_ae,NaN,NA,110
 [1] "Loading dataset lt13h..."
-lt13h,market_hh,0.6019,0.0068,110
-lt13h,market_sqrt,0.5086,0.0069,110
-lt13h,market_pc,0.5243,0.0059,110
-lt13h,market_oecdm,0.511,0.007,110
-lt13h,market_ae,0.5148,0.0074,110
-lt13h,gross_hh,0.446,0.006,110
-lt13h,gross_sqrt,0.369,0.0052,110
-lt13h,gross_pc,0.3663,0.0056,110
-lt13h,gross_oecdm,0.3657,0.0061,110
-lt13h,gross_ae,0.3628,0.0053,110
-lt13h,disp_hh,0.424,0.0051,110
+lt13h,market_hh,0.602,0.0067,110
+lt13h,market_sqrt,0.5086,0.0062,110
+lt13h,market_pc,0.5243,0.0065,110
+lt13h,market_oecdm,0.5111,0.0068,110
+lt13h,market_ae,0.5148,0.0067,110
+lt13h,gross_hh,0.446,0.0053,110
+lt13h,gross_sqrt,0.369,0.006,110
+lt13h,gross_pc,0.3663,0.0058,110
+lt13h,gross_oecdm,0.3657,0.0058,110
+lt13h,gross_ae,0.3628,0.0052,110
+lt13h,disp_hh,0.424,0.0059,110
 lt13h,disp_sqrt,0.3487,0.0056,110
 lt13h,disp_pc,0.3474,0.0061,110
-lt13h,disp_oecdm,0.3447,0.0062,110
-lt13h,disp_ae,0.3422,0.006,110
+lt13h,disp_oecdm,0.3447,0.0068,110
+lt13h,disp_ae,0.3422,0.0056,110
+lt13h,con_hh,NaN,NA,110
+lt13h,con_sqrt,NaN,NA,110
+lt13h,con_pc,NaN,NA,110
+lt13h,con_oecdm,NaN,NA,110
+lt13h,con_ae,NaN,NA,110
 > 
 > proc.time()
    user  system elapsed 
- 25.785   0.295  29.277 
+ 17.880   0.275  18.669 
 
 

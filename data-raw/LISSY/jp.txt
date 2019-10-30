@@ -1,6 +1,6 @@
 From: postbox@lisdatacenter.org
-Subject: job 591463 jp
-Date: December 21, 2018 at 11:50:01 AM CST
+Subject: job 671164 jp
+Date: October 30, 2019 at 10:55:27 AM CDT
 To: fsolt@mac.com
 
 ############################### NOTICE TO USERS ###############################
@@ -53,7 +53,7 @@ Loading required package: readstata13
 >  
 > topBottom <- function(var, botline, topline) { 
 +   tb <- ifelse(var < botline, botline, var) 
-+   tb <- ifelse(tb > topline, topline, var) 
++   tb <- ifelse(tb > topline, topline, tb) 
 +   return(tb) 
 + } 
 >  
@@ -69,19 +69,19 @@ Loading required package: readstata13
 +   df$disp_oecdm <- df$disp_hh / df$oecdm 
 +   df$disp_ae <- df$disp_hh / df$ae 
 +    
-+   df$gross_hh <- topBottom(df$hi, botline, topline) 
++   df$gross_hh <- topBottom(df$hitotal, botline, topline) 
 +   df$gross_sqrt <- df$gross_hh / (df$nhhmem ^ 0.5) 
 +   df$gross_pc <- df$gross_hh / df$nhhmem 
 +   df$gross_oecdm <- df$gross_hh / df$oecdm 
 +   df$gross_ae <- df$gross_hh / df$ae 
 +    
-+   df$market_hh <- topBottom(ifelse(!is.na(df$hitp), (df$factor + df$hitp), df$factor), botline, topline) 
++   df$market_hh <- topBottom(ifelse(!is.na(df$hiprivate), (df$hifactor + df$hiprivate), df$hifactor), botline, topline) 
 +   df$market_sqrt <- df$market_hh / (df$nhhmem ^ 0.5) 
 +   df$market_pc <- df$market_hh / df$nhhmem 
 +   df$market_oecdm <- df$market_hh / df$oecdm 
 +   df$market_ae <- df$market_hh / df$ae 
 +    
-+   df$con_hh <- topBottom(df$hc, botline, topline) 
++   df$con_hh <- topBottom(df$hcexp, botline, topline) 
 +   df$con_sqrt <- df$con_hh / (df$nhhmem ^ 0.5) 
 +   df$con_pc <- df$con_hh / df$nhhmem 
 +   df$con_oecdm <- df$con_hh / df$oecdm 
@@ -99,13 +99,12 @@ Loading required package: readstata13
 + } 
 >  
 > # For testing at home: 
-> # read.LIS <- function(data_file, labels, vars, subset) { 
+> # read.LIS <- function(data_file, labels, vars) { 
 > #   require(dplyr) 
 > #   data_file <- stringr::str_replace(data_file, "h", "ih.dta") 
-> #   df <- haven::read_dta(data_file)[, vars] %>% 
-> #     filter(eval(parse(text = subset), .)) 
+> #   df <- haven::read_dta(data_file)[, vars] 
 > #   if (!labels) { 
-> #     df <- df %>% dplyr::mutate_all(funs(as.numeric)) 
+> #     df <- df %>% dplyr::mutate_all(list(as.numeric)) 
 > #   } 
 > #   return(df) 
 > # } 
@@ -125,7 +124,7 @@ Loading required package: readstata13
 +   yy <- as.character(c(c(67, 69, 71, 73:75, 78:99), paste0("0", 0:9), c(10:last_year_yy))) 
 +  
 +   datasets <- paste0(rep(cc, each = length(yy)), rep(yy, times = length(cc)), "h") 
-+   vars <- c("dhi", "hi", "factor", "hitp", "hc", "hpopwgt", "nhhmem", "nhhmem13", "grossnet") 
++   vars <- c("dhi", "hitotal", "hifactor", "hiprivate", "hcexp", "hpopwgt", "nhhmem", "nhhmem13", "grossnet") 
 +  
 +   v <- c("market_hh", "market_sqrt", "market_pc", "market_oecdm", "market_ae", 
 +          "gross_hh", "gross_sqrt", "gross_pc", "gross_oecdm", "gross_ae", 
@@ -162,24 +161,31 @@ Loading required package: readstata13
 > # Call 
 > get_ginis("jp") 
 [1] "Loading dataset jp08h..."
-jp08h,market_hh,0.4854,0.0063,120
-jp08h,market_sqrt,0.4519,0.0062,120
-jp08h,market_pc,0.4701,0.0059,120
-jp08h,market_oecdm,0.4465,0.0062,120
-jp08h,market_ae,0.4521,0.006,120
-jp08h,gross_hh,0.4108,0.0055,120
-jp08h,gross_sqrt,0.3948,0.0057,120
-jp08h,gross_pc,0.4124,0.0059,120
-jp08h,gross_oecdm,0.3867,0.0056,120
-jp08h,gross_ae,0.3923,0.0058,120
-jp08h,disp_hh,0.3341,0.0052,120
-jp08h,disp_sqrt,0.3018,0.005,120
-jp08h,disp_pc,0.3211,0.0056,120
-jp08h,disp_oecdm,0.297,0.005,120
-jp08h,disp_ae,0.3034,0.0054,120
-> 
+jp08h,market_hh,0.5549,0.0088,120
+jp08h,market_sqrt,0.4983,0.0076,120
+jp08h,market_pc,0.5218,0.007,120
+jp08h,market_oecdm,0.4972,0.0067,120
+jp08h,market_ae,0.504,0.007,120
+jp08h,gross_hh,0.4467,0.0083,120
+jp08h,gross_sqrt,0.4103,0.006,120
+jp08h,gross_pc,0.4289,0.006,120
+jp08h,gross_oecdm,0.405,0.0058,120
+jp08h,gross_ae,0.4103,0.0061,120
+jp08h,disp_hh,0.3791,0.0067,120
+jp08h,disp_sqrt,0.3282,0.0061,120
+jp08h,disp_pc,0.3484,0.0067,120
+jp08h,disp_oecdm,0.3253,0.0059,120
+jp08h,disp_ae,0.3309,0.0062,120
+jp08h,con_hh,NaN,NA,120
+jp08h,con_sqrt,NaN,NA,120
+jp08h,con_pc,NaN,NA,120
+jp08h,con_oecdm,NaN,NA,120
+jp08h,con_ae,NaN,NA,120
+[1] "Loading dataset jp10h..."
+Error in if (f(x[[i]])) return(i) : missing value where TRUE/FALSE needed
+Calls: get_ginis -> setups -> wNtile -> Find -> Position
 > proc.time()
    user  system elapsed 
- 12.843   1.231 177.971 
+  7.601   0.217   8.165 
 
 

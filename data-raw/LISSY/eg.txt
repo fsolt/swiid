@@ -1,6 +1,6 @@
 From: postbox@lisdatacenter.org
-Subject: job 591443 eg
-Date: December 21, 2018 at 11:31:48 AM CST
+Subject: job 671114 eg
+Date: October 30, 2019 at 10:21:54 AM CDT
 To: fsolt@mac.com
 
 ############################### NOTICE TO USERS ###############################
@@ -53,7 +53,7 @@ Loading required package: readstata13
 >  
 > topBottom <- function(var, botline, topline) { 
 +   tb <- ifelse(var < botline, botline, var) 
-+   tb <- ifelse(tb > topline, topline, var) 
++   tb <- ifelse(tb > topline, topline, tb) 
 +   return(tb) 
 + } 
 >  
@@ -69,19 +69,19 @@ Loading required package: readstata13
 +   df$disp_oecdm <- df$disp_hh / df$oecdm 
 +   df$disp_ae <- df$disp_hh / df$ae 
 +    
-+   df$gross_hh <- topBottom(df$hi, botline, topline) 
++   df$gross_hh <- topBottom(df$hitotal, botline, topline) 
 +   df$gross_sqrt <- df$gross_hh / (df$nhhmem ^ 0.5) 
 +   df$gross_pc <- df$gross_hh / df$nhhmem 
 +   df$gross_oecdm <- df$gross_hh / df$oecdm 
 +   df$gross_ae <- df$gross_hh / df$ae 
 +    
-+   df$market_hh <- topBottom(ifelse(!is.na(df$hitp), (df$factor + df$hitp), df$factor), botline, topline) 
++   df$market_hh <- topBottom(ifelse(!is.na(df$hiprivate), (df$hifactor + df$hiprivate), df$hifactor), botline, topline) 
 +   df$market_sqrt <- df$market_hh / (df$nhhmem ^ 0.5) 
 +   df$market_pc <- df$market_hh / df$nhhmem 
 +   df$market_oecdm <- df$market_hh / df$oecdm 
 +   df$market_ae <- df$market_hh / df$ae 
 +    
-+   df$con_hh <- topBottom(df$hc, botline, topline) 
++   df$con_hh <- topBottom(df$hcexp, botline, topline) 
 +   df$con_sqrt <- df$con_hh / (df$nhhmem ^ 0.5) 
 +   df$con_pc <- df$con_hh / df$nhhmem 
 +   df$con_oecdm <- df$con_hh / df$oecdm 
@@ -99,13 +99,12 @@ Loading required package: readstata13
 + } 
 >  
 > # For testing at home: 
-> # read.LIS <- function(data_file, labels, vars, subset) { 
+> # read.LIS <- function(data_file, labels, vars) { 
 > #   require(dplyr) 
 > #   data_file <- stringr::str_replace(data_file, "h", "ih.dta") 
-> #   df <- haven::read_dta(data_file)[, vars] %>% 
-> #     filter(eval(parse(text = subset), .)) 
+> #   df <- haven::read_dta(data_file)[, vars] 
 > #   if (!labels) { 
-> #     df <- df %>% dplyr::mutate_all(funs(as.numeric)) 
+> #     df <- df %>% dplyr::mutate_all(list(as.numeric)) 
 > #   } 
 > #   return(df) 
 > # } 
@@ -125,7 +124,7 @@ Loading required package: readstata13
 +   yy <- as.character(c(c(67, 69, 71, 73:75, 78:99), paste0("0", 0:9), c(10:last_year_yy))) 
 +  
 +   datasets <- paste0(rep(cc, each = length(yy)), rep(yy, times = length(cc)), "h") 
-+   vars <- c("dhi", "hi", "factor", "hitp", "hc", "hpopwgt", "nhhmem", "nhhmem13", "grossnet") 
++   vars <- c("dhi", "hitotal", "hifactor", "hiprivate", "hcexp", "hpopwgt", "nhhmem", "nhhmem13", "grossnet") 
 +  
 +   v <- c("market_hh", "market_sqrt", "market_pc", "market_oecdm", "market_ae", 
 +          "gross_hh", "gross_sqrt", "gross_pc", "gross_oecdm", "gross_ae", 
@@ -162,24 +161,29 @@ Loading required package: readstata13
 > # Call 
 > get_ginis("eg") 
 [1] "Loading dataset eg12h..."
-eg12h,market_hh,0.5334,0.0038,200
-eg12h,market_sqrt,0.5017,0.0046,200
-eg12h,market_pc,0.5251,0.0035,200
-eg12h,market_oecdm,0.5035,0.0043,200
-eg12h,market_ae,0.5106,0.0041,200
-eg12h,gross_hh,0.4816,0.0044,200
-eg12h,gross_sqrt,0.4693,0.0043,200
-eg12h,gross_pc,0.4973,0.004,200
-eg12h,gross_oecdm,0.4703,0.0042,200
-eg12h,gross_ae,0.479,0.0041,200
-eg12h,disp_hh,0.4816,0.004,200
-eg12h,disp_sqrt,0.4693,0.0037,200
-eg12h,disp_pc,0.4973,0.0038,200
-eg12h,disp_oecdm,0.4703,0.004,200
-eg12h,disp_ae,0.479,0.0041,200
+eg12h,market_hh,0.533,0.0041,200
+eg12h,market_sqrt,0.5015,0.0039,200
+eg12h,market_pc,0.5248,0.0047,200
+eg12h,market_oecdm,0.5033,0.0048,200
+eg12h,market_ae,0.5103,0.0043,200
+eg12h,gross_hh,0.4814,0.0035,200
+eg12h,gross_sqrt,0.4692,0.0044,200
+eg12h,gross_pc,0.4972,0.0043,200
+eg12h,gross_oecdm,0.4702,0.0041,200
+eg12h,gross_ae,0.4789,0.0047,200
+eg12h,disp_hh,0.4814,0.0038,200
+eg12h,disp_sqrt,0.4692,0.0048,200
+eg12h,disp_pc,0.4972,0.0048,200
+eg12h,disp_oecdm,0.4702,0.0045,200
+eg12h,disp_ae,0.4789,0.0045,200
+eg12h,con_hh,NaN,NA,200
+eg12h,con_sqrt,NaN,NA,200
+eg12h,con_pc,NaN,NA,200
+eg12h,con_oecdm,NaN,NA,200
+eg12h,con_ae,NaN,NA,200
 > 
 > proc.time()
    user  system elapsed 
- 30.375   0.288  85.433 
+ 15.978   0.444  16.825 
 
 
