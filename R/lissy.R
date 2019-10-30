@@ -25,7 +25,7 @@ wNtile <- function(var, wgt, split) {
   y <- wgt[order(var)]
   z <- cumsum(y) / sum(y)
   cop <- rep(NA, length(split)) 
-  for (i in 1:length(cop)) {
+  for (i in seq_along(cop)) {
     cop[i] <- x[Find(function(h) z[h] > split[i], seq_along(z))]
   }
   return(cop)
@@ -91,11 +91,11 @@ boot_gini_se <- function(data, var, reps=100) {
 
 get_ginis <- function(cc, reps = 100) {
   set.seed(324)
-  ccs <- c("au", "at", "be", "br", "ca", "cl", "cn", "co", "cz", "dk", 
+  ccs <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk", 
            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", 
-           "in", "ie", "il", "it", "jp", "lu", "lt", "mx", "nl", "no", "pa",  
-           "py", "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es",  
-           "se", "ch", "tw", "uk", "us", "uy")
+           "in", "ie", "il", "it", "jp", "lt", "lu", "mx", "nl", "no", "pa", "py", 
+           "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se", 
+           "ch", "tw", "uk", "us", "uy", "vn")
   cc <- tolower(cc)
   if (!cc %in% ccs) {
     stop("Please specify a LIS country in iso2c format")
