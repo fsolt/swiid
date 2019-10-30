@@ -1,0 +1,83 @@
+CHARSET="ANSI";
+CODEPAGE="windows-1250";
+LANGUAGE="sl";
+LANGUAGES="sl","en";
+CREATION-DATE="20150219 10:30";
+DECIMALS=1;
+SHOWDECIMALS=1;
+MATRIX="0867312";
+SUBJECT-CODE="08673";
+SUBJECT-AREA="Življenjska raven - Level of living";
+SUBJECT-AREA[en]="Level of living";
+COPYRIGHT=YES;
+DESCRIPTION="Neenakost porazdelitve dohodka - Ginijev koliènik (%), Slovenija, letno";
+DESCRIPTION[en]="Inequality of income distribution - Gini coefficient (%), Slovenia, annually";
+TITLE="Neenakost porazdelitve dohodka - Ginijev koliènik (%) po: DOHODEK , LETO";
+TITLE[en]="Inequality of income distribution - Gini coefficient (%) by INCOME and YEAR";
+CONTENTS="Neenakost porazdelitve dohodka - Ginijev koliènik (%)";
+CONTENTS[en]="Inequality of income distribution - Gini coefficient (%)";
+UNITS="%";
+UNITS[en]="%";
+STUB="DOHODEK";
+STUB[en]="INCOME";
+HEADING="LETO";
+HEADING[en]="YEAR";
+VALUES("DOHODEK")="Ekvivalentni razpoložljivi dohodek (po socialnih transferjih)",
+"Ekvivalentni razpoložljivi dohodek pred socialnimi transferji (pokojnine niso del socialnih transferjev)",
+"Ekvivalentni razpoložljivi dohodek pred socialnimi transferji (pokojnine so del socialnih transferjev)";
+VALUES[en]("INCOME")="Equivalised disposable income after social transfers",
+"Equivalised disposable income before social transfers (pensions are not included in social transfers)",
+"Equivalised disposable income before social transfers (pensions are included in social transfers)";
+VALUES("LETO")="2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016",
+"2017","2018";
+VALUES[en]("YEAR")="2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015",
+"2016","2017","2018";
+TIMEVAL("LETO")=TLIST(A1),"2005","2006","2007","2008","2009","2010","2011","2012","2013","2014",
+"2015","2016","2017","2018";
+TIMEVAL[en]("YEAR")=TLIST(A1),"2005","2006","2007","2008","2009","2010","2011","2012","2013","2014",
+"2015","2016","2017","2018";
+CODES("DOHODEK")="1","2","3";
+CODES[en]("INCOME")="1","2","3";
+CODES("LETO")="2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016",
+"2017","2018";
+CODES[en]("YEAR")="2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015",
+"2016","2017","2018";
+ELIMINATION("DOHODEK")="Ekvivalentni razpoložljivi dohodek (po socialnih transferjih)";
+ELIMINATION[en]("INCOME")="Equivalised disposable income after social transfers";
+LAST-UPDATED="20190704 10:30";
+CONTACT="Stanka Intihar, +386 (0)1 23 40 808, stanka.intihar@gov.si";
+CONTACT[en]="Stanka Intihar, +386 (0)1 23 40 808, stanka.intihar@gov.si";
+DATABASE="SI-STAT";
+DATABASE[en]="SI-STAT";
+SOURCE="Statistièni urad Republike Slovenije";
+SOURCE[en]="Statistical Office of the Republic of Slovenia";
+NOTEX="Vir: Statistièni urad Republike Slovenije (SILC).##GINIJEV KOLIÈNIK je mera za koncentracijo dohodka in lahko zavzame vrednost med 0 in 1, ker ga prikazujemo v odstotkih, pa med 0 in 100 %. Višji je, veèja je neenakost porazdelitve dohodka v družbi."
+"##Izraèuni temeljijo na letnem (neto) razpoložljivem dohodku gospodinjstva (brez dohodka v naravi). Denarni razpoložljivi dohodek gospodinjstva obsega neto dohodke vseh èlanov gospodinjstva (iz zaposlitve, vkljuèno z nadomestilom za prehrano in prevoz na "
+"delo, iz samozaposlitve, pokojnine, nadomestila za brezposelnost, nadomestila za bolniško odsotnost, štipendije, družinske in socialne prejemke, obresti, dividende, denarne transferje, prejete od drugih gospodinjstev), od katerih se odštejejo transferji, "
+"plaèani drugim gospodinjstvom, ter davek na premoženje, vkljuèno z nadomestilom za uporabo stavbnega zemljišèa. Tako izraèunanemu denarnemu dohodku se prišteje tudi del dohodka v naravi (boniteta za uporabo službenega avtomobila za zasebne namene in del "
+"vrednosti lastne proizvodnje samozaposlenih, tj. vrednost izdelkov, prenesenih v gospodinjstvo iz lastne delavnice, podjetja ali trgovine).#Za izraèun EKVIVALENTNEGA DOHODKA (dohodka na ekvivalentnega odraslega èlana gospodinjstva) se uporablja "
+"prilagojeno OECD-jevo ekvivalenèno lestvico. Lestvica daje prvemu odraslemu èlanu utež 1, otrokom, mlajšim od 14 let, utež 0,3, drugim èlanom, starim 14 ali veè let, pa utež 0,5.";
+NOTEX[en]="Source: Statistical Office of the Republic of Slovenia (SILC).##GINI COEFFICIENT is the measure of income concentration. Its value is between 0 and 1 or between 0 and 100% when it is shown in percent. The higher it is the greater is the income "
+"inequality.##The calculations are based on annual (net) disposable household income (income in cash). Disposable household income in cash includes net incomes of all household members (employee cash or near cash income, including supplement for meals and "
+"transport to work, cash benefits or loses from self-employment, pensions, unemployment benefits, sickness benefits, education-related allowances, family allowances and social benefits, interests, dividends, regular inter-household cash transfers "
+"received) less regular inter-household cash transfers paid and regular taxes on wealth, including compensation for the use of building land. To income in cash calculated in this way part of income in kind (benefit for the use of company car for private "
+"purposes and the value of withdrawals from a business by a self-employed person) is added.#The OECD modified scale is used for the calculation of the EQUIVALISED INCOME (income per equivalent adult household member). The scale gives to the first adult in "
+"the household weight 1, to every other person aged 14 or more weight 0.5 and to children under 14 weight 0.3.";
+NOTEX("LETO")="Kazalnike dohodka, revšèine in socialne izkljuèenosti objavljamo za leto, v katerem se izvede raziskovanje Življenjski pogoji (SILC), podatki o dohodku za izraèun teh kazalnikov pa so iz leta pred tem, tj. iz leta pred izvedbo raziskovanja "
+"SILC.";
+NOTEX[en]("YEAR")="Income, poverty and social exclusion indicators are published for the SILC (Statistics on Income and Living Conditions) survey year. The data on income for calculating these indicators are from a year earlier, i.e. the year before the "
+"survey is conducted.";
+NOTE="Povezene vsebine:#- <A class=seznam HREF=http://www.stat.si/StatWeb/Common/PrikaziDokument.ashx?IdDatoteke=8141 target=_blank>Metodološka pojasnila</A>#";
+NOTE[en]="Linked content:#- <A class=seznam HREF=http://www.stat.si/StatWeb/Common/PrikaziDokument.ashx?IdDatoteke=8270 target=_blank>Methodological explanations</A>";
+DATASYMBOL1="N";
+DATASYMBOL1[en]="N";
+DATASYMBOL2="-";
+DATASYMBOL2[en]="-";
+DATASYMBOL3="...";
+DATASYMBOL3[en]="...";
+DATASYMBOL4="z";
+DATASYMBOL4[en]="z";
+DATA=
+23.8 23.7 23.2 23.4 22.7 23.8 23.8 23.7 24.4 25 24.5 24.4 23.7 23.4 
+30.7 29.9 29.3 28.9 28 29.8 30 30.1 30.6 31 30.3 30.1 29.3 28.8 
+42.6 41.8 41 40.4 39.4 42.1 42.6 43.1 44.1 44.3 43.9 43.6 43.1 42.5; 
