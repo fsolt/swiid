@@ -25,7 +25,7 @@ wNtile <- function(var, wgt, split) {
   y <- wgt[order(var)]
   z <- cumsum(y) / sum(y)
   cop <- rep(NA, length(split)) 
-  for (i in seq_along(cop)) {
+  for (i in 1:length(cop)) {
     cop[i] <- x[Find(function(h) z[h] > split[i], seq_along(z))]
   }
   return(cop)
