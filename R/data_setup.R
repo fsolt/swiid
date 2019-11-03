@@ -970,11 +970,13 @@ amar <- read_html(amar_link) %>%
 
 
 # CSO Ireland (automated)
-cso_ie_link <- "http://www.cso.ie/px/pxeirestat/Database/eirestat/Survey%20on%20Income%20and%20Living%20Conditions%20(SILC)/SIA47.px"
-download.file(cso_ie_link, "data-raw/cso_ie.px")
+cso_ie_link <- "https://statbank.cso.ie/StatbankServices/StatbankServices.svc/jsonservice/responseinstance/SIA47"
 
-cso_ie <- pxR::read.px("data-raw/cso_ie.px") %>% 
-  pxR:::as.data.frame.px() %>% 
+cso_ie0 <- jsonlite::fromJSON(cso_ie_link)
+
+cso_ie <- tibble(Year = rep(cso_ie0[["dataset"]][["dimension"]][["Year"]][["category"]][["label"]] %>% unlist(), each = 2),
+                 Statistic = rep(cso_ie0[["dataset"]][["dimension"]][["Statistic"]][["category"]][["label"]] %>% unlist(), length.out = length(Year)),
+                 value = cso_ie0[["dataset"]][["value"]]) %>% 
   filter(Statistic == "Gini Coefficient (%)") %>% 
   transmute(country = "Ireland",
             year = as.numeric(as.character(Year)),
