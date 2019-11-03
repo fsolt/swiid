@@ -27,7 +27,7 @@ body(countrycode)[[2]] <- substitute(
 )
 
 
-# LIS
+# LIS (update VN)
 format_lis <- function(x) {
   paste0("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/", 
          x, ".txt") %>%
@@ -92,10 +92,13 @@ lis_files <- c("au", "at", "be", "br", "ca", "cl", "cn", "co", "cz", "dk",
 lis <- lis_files %>% 
   map_df(format_lis) %>% 
   rbind(format_lis_xtra("nz")) %>% 
+  rbind(format_lis_xtra("vn_temp") %>% 
+          mutate(series = "LIS Key Figures Vietnam disp sqrt")) %>% 
   arrange(country, year, welfare_def, equiv_scale)
 
 ru_lis_old <- format_lis_xtra("ru_old") %>% 
   mutate(series = "LIS Key Figures Russia disp sqrt")
+
 
 # Socio-Economic Database for Latin America and the Caribbean (SEDLAC) (update link)
 format_sedlac <- function(df, sheet, link, es) {
