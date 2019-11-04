@@ -35,6 +35,18 @@ format_lis <- function(x) {
     str_subset("^\\D{2}\\d{2}h,.*") %>%
     paste(collapse = "\n") %>% 
     read_csv(col_names = FALSE) %>%
+    separate(X2, into = c("wd", "es"), sep = "_") %>% 
+    pivot_wider(names_from = "wd",
+                values_from = c("X3", "X4")) %>% 
+    mutate(X3_market = if_else(!X3_market==X3_disp, X3_market, NA_real_),
+           X3_gross = if_else(!X3_gross==X3_disp, X3_gross, NA_real_)) %>% 
+    pivot_longer(cols = X3_market:X4_con,
+                 names_to = c("var", "wd"),
+                 names_sep = "_",
+                 values_to = "value") %>% 
+    pivot_wider(names_from = "var",
+                values_from = "value") %>% 
+    filter(!is.na(X3)) %>% 
     transmute(country = str_extract(X1, "\\D{2}") %>%
                 toupper() %>% 
                 str_replace("UK", "GB") %>% 
@@ -44,8 +56,8 @@ format_lis <- function(x) {
                             str_extract(X1, "\\d{2}") %>% as.numeric() + 2000),
               gini = (str_trim(X3) %>% as.numeric()),
               gini_se = (str_trim(X4) %>% as.numeric()),
-              welfare_def = str_extract(X2, "[^_]*"),
-              equiv_scale = str_extract(X2, "(?<=_).*"),
+              welfare_def = wd,
+              equiv_scale = es,
               monetary = FALSE,
               series = paste("LIS", welfare_def, equiv_scale),
               source1 = "LISSY",
