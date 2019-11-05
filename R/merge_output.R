@@ -144,8 +144,8 @@ res_stata <- res %>% select(country, year,
 
 haven::write_dta(res_stata, "data/for_stata.dta", version = 12)   # for format_stata.do
 RStata::stata("R/format_stata.do")    # see https://github.com/lbraglia/RStata for setup instructions
-file.copy(from = "data/swiid8_1.dta", 
-          to = "vignette/swiid8_1.dta",
+file.copy(from = "data/swiid8_2.dta", 
+          to = "vignette/swiid8_2.dta",
           overwrite = TRUE)
 
 # R formatted
@@ -161,23 +161,23 @@ for (i in 1:100) {
   swiid[[i]] <- stemp
 }
 
-save(swiid, swiid_summary, file = "data/swiid8_1.rda")
-save(swiid, swiid_summary, file = "vignette/swiid8_1.rda")
+save(swiid, swiid_summary, file = "data/swiid8_2.rda")
+save(swiid, swiid_summary, file = "vignette/swiid8_2.rda")
 
 # for release
-dir.create("release/swiid8_1", recursive = TRUE)
-final_files <- c("data/swiid_summary.csv", "data/swiid8_1.rda", "data/swiid8_1.dta")
+dir.create("release/swiid8_2", recursive = TRUE)
+final_files <- c("data/swiid_summary.csv", "data/swiid8_2.rda", "data/swiid8_2.dta")
 file.copy(from = final_files,
-          to = str_replace(final_files, "data/", "release/swiid8_1/"),
+          to = str_replace(final_files, "data/", "release/swiid8_2/"),
           overwrite = TRUE)
-file.rename("release/swiid8_1/swiid_summary.csv", "release/swiid8_1/swiid8_1_summary.csv")
+file.rename("release/swiid8_2/swiid_summary.csv", "release/swiid8_2/swiid8_2_summary.csv")
 documentation_files <- c("vignette/R_swiid.pdf", "vignette/stata_swiid.pdf")
 file.copy(from = documentation_files,
-          to = str_replace(documentation_files, "vignette/", "release/swiid8_1/"),
+          to = str_replace(documentation_files, "vignette/", "release/swiid8_2/"),
           overwrite = TRUE)
 setwd("release")
-zip("swiid8_1.zip", "swiid8_1")
-dir.create("s81")
-file.copy("swiid8_1.zip", "s81/swiid8_1.zip", overwrite = TRUE)
-zip("s81.zip", "s81")
+zip("swiid8_2.zip", "swiid8_2")
+dir.create("s82")
+file.copy("swiid8_2.zip", "s82/swiid8_2.zip", overwrite = TRUE)
+zip("s82.zip", "s82")
 setwd("..")
