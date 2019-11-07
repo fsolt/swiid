@@ -145,7 +145,7 @@ sn <- x %>%
             sr1 = any(sktcode == skt1 & !is.na(gini_b)) %>% as.numeric()) %>% 
   ungroup() %>% 
   left_join(sj, by = c("scode", "country", "series")) %>% 
-  mutate(sj1 = if_else(is.na(sj1), 0, sj1))
+  mutate(sj1 = if_else(is.na(sj1), as.integer(0), sj1))
 
 mu_priors_by_wd <- function(x, var) {
   var <- rlang::ensym(var)
