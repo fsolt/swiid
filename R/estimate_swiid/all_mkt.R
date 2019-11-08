@@ -8,7 +8,7 @@ seed <- 324
 iter <- 6000
 warmup <- iter - 2500
 thin <- 5
-chains <- 3
+chains <- 4
 cores <- chains
 adapt_delta <- .9
 
@@ -280,7 +280,7 @@ lapply(get_sampler_params(out1, inc_warmup = FALSE),
        summary, digits = 2)
 
 save(x, out1, runtime, file = str_c("data/all_mkt_", iter/1000, "k_", 
-                           str_replace(Sys.time(), " ", "_") %>% str_replace("2018-", ""), ".rda"))
+                           str_replace(Sys.time(), " ", "_") %>% str_replace_all(":", ""), ".rda"))
 
 # Plots
 source("R/plot_tscs.R")

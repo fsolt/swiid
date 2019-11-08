@@ -280,7 +280,7 @@ lapply(get_sampler_params(out1, inc_warmup = FALSE),
        summary, digits = 2)
 
 save(x, out1, runtime, file = str_c("data/all_", iter/1000, "k_", 
-                           str_replace(Sys.time(), " ", "_") %>% str_replace("2018-", ""), ".rda"))
+                           str_replace(Sys.time(), " ", "_") %>% str_replace_all("2018-", ""), ".rda"))
 
 # Plots
 source("R/plot_tscs.R")
