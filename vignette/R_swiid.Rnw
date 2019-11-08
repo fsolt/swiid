@@ -157,7 +157,7 @@ m1 <- wvs_swiid[1:5] %>% map(~ lmer(religiosity ~ gini_disp + gdppc +
                                data = .x))
 @
 
-We could now use Rubin's (\citeyear{Rubin1987}) rules to calculate the mean and standard error for each fixed-effect estimate across these \sout{100} 5 sets of results (these rules are implemented in the package \verb+mitools+ \citep{Lumley2014} and others), but instead we will use simulation.  Using \verb+sim+ from the \verb+arm+ package \citep{Gelman2015}, we generate the distribution of fixed-effects estimates in the results both for each dataframe and across the \sout{100} 5 dataframes.  Then we will use these distributions to calculate estimates and standard errors for each fixed effect, putting them in a tidy dataframe like that achieved by using \verb+broom::tidy()+ \citep{Robinson2016}.
+We could now use Rubin's (\citeyear{Rubin1987}) rules to calculate the mean and standard error for each fixed-effect estimate across these \sout{100} 5 sets of results (these rules are implemented in the package \verb+mitools+ \citep{Lumley2014} and others), but instead we will use simulation.  Using \verb+sim+ from the \verb+arm+ package \citep{Gelman2015}, we generate the distribution of fixed-effects estimates in the results both for each dataframe and across the \sout{100} 5 dataframes.  Then we will use these distributions to calculate estimates and standard errors for each fixed effect, putting them in a tidy data frame like that achieved by using \verb+broom::tidy()+ \citep{Robinson2016}.
 
 <<label=06-sim>>==
 # Simulate distribution of estimates
@@ -166,12 +166,12 @@ m1_sims <- m1 %>%
     map_df(.  %>% slot("fixef") %>% as_tibble())
 
 # Generate a tidy dataframe of results (cf. broom::tidy())
-m1_tidy <- data_frame(term = names(m1_sims),
-                      estimate = summarise_all(m1_sims, funs(mean)) %>%
+m1_tidy <- tibble(term = names(m1_sims),
+                      estimate = summarise_all(m1_sims, list(mean)) %>%
                           t() %>%
                           as.vector(),
                       std.error = m1_sims %>% 
-                          summarise_all(funs(sd)) %>%
+                          summarise_all(list(sd)) %>%
                           t() %>%
                           as.vector())
 @
