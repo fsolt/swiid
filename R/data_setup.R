@@ -71,7 +71,7 @@ format_lis <- function(x) {
 format_lis_xtra <- function(x) {
   paste0("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/", 
          x, ".txt") %>%
-    readLines() %>% 
+    read_lines() %>% 
     str_subset("^\\D{2}\\d{2},.*") %>%
     paste(collapse = "\n") %>% 
     read_csv(col_names = FALSE) %>%
@@ -104,8 +104,7 @@ lis_files <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",
 lis <- lis_files %>% 
   map_df(format_lis) %>% 
   rbind(format_lis_xtra("nz")) %>% 
-  rbind(format_lis_xtra("vn_temp") %>% 
-          mutate(series = "LIS Key Figures Vietnam disp sqrt")) %>% 
+  rbind(format_lis_xtra("vn_temp")) %>% 
   arrange(country, year, welfare_def, equiv_scale)
 
 ru_lis_old <- format_lis_xtra("ru_old") %>% 
