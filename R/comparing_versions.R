@@ -41,30 +41,6 @@ swiid_latest_81_71_70 %>%
   group_by(decade) %>%
   summarize_at(vars(starts_with("v")), mean, na.rm = TRUE)
 
-swiid_latest_81_71_70 %>%
-  left_join(lis %>% 
-              filter(welfare_def == "disp" & equiv_scale == "sqrt") %>%
-              select(country, year, gini), by = c("country", "year")) %>% 
-  group_by(country, decade) %>% 
-  summarise(mean_diff = mean(vlatest_minus81, na.rm = TRUE),
-            lis_obs = as_factor(sum(!is.na(gini)))) %>% 
-  mutate(country_decade = paste(country, decade, sep = "_")) %>% 
-  filter(abs(mean_diff) > .5 & !country_decade == "France_1960") %>% # no observations in v7.1
-  ggplot(aes(x = forcats::fct_reorder(country_decade, mean_diff),
-             y = mean_diff, 
-             fill = lis_obs %>% 
-               fct_relevel(as.character(c(0:6, 10))))) +
-  geom_col(color = "#E6E6FF") +
-  theme_bw() +
-  theme(axis.text.x  = element_text(angle=90, vjust=0.5, size = 8),
-        legend.position=c(.99,.01), legend.justification=c(1, 0)) +
-  ylab(NULL) + 
-  xlab(NULL) +
-  scale_fill_brewer(name = "LIS Observations",
-                    palette = "Blues",
-                    guide = guide_legend(ncol = 2)) +
-  ggtitle("Latest Version Minus Version 8.1, By Country-Decade")
-
 # Mark's list of advanced countries only
 swiid_latest_81_71_70 %>%
   filter(country %in% c("Australia", "Austria", "Belgium", "Canada", "Czech Republic",
@@ -117,6 +93,9 @@ swiid_source81 <- read_csv("https://github.com/fsolt/swiid/raw/b85cf28f348977810
 swiid_source80 <- read_csv("https://github.com/fsolt/swiid/raw/19349a99255f749b2c4634f748def3950e3e8ac4/data/swiid_source.csv", col_types = "cdddcclcccc")
 lis_mkt <- swiid_source_latest %>% 
   filter(str_detect(source1, "LIS") & welfare_def == "market" & equiv_scale == "sqrt")
+lis_disp <- swiid_source_latest %>% 
+  filter(str_detect(source1, "LIS") & welfare_def == "disp" & equiv_scale == "sqrt")
+
 
 swiid_latest_81_71_70_mkt %>%
   filter(country %in% c("Australia", "Austria", "Belgium", "Canada", "Czech Republic",
@@ -144,6 +123,83 @@ swiid_latest_81_71_70_mkt %>%
                     palette = "Blues",
                     guide = guide_legend(ncol = 2)) +
   ggtitle("Latest Version Minus Version 8.1, By Country-Decade")
+
+
+swiid_latest_81_71_70 %>%
+  left_join(lis_disp %>% 
+              select(country, year, gini), by = c("country", "year")) %>% 
+  group_by(country, decade) %>% 
+  summarise(mean_diff = mean(vlatest_minus81, na.rm = TRUE),
+            lis_obs = as_factor(sum(!is.na(gini)))) %>% 
+  mutate(country_decade = paste(country, decade, sep = "_")) %>% 
+  filter(abs(mean_diff) > 4 & !country_decade == "France_1960") %>% # no observations in v7.1
+  ggplot(aes(x = forcats::fct_reorder(country_decade, mean_diff),
+             y = mean_diff, 
+             fill = lis_obs %>% 
+               fct_relevel(as.character(c(0:6, 10))))) +
+  geom_col(color = "#E6E6FF") +
+  theme_bw() +
+  theme(axis.text.x  = element_text(angle=90, vjust=0.5, size = 8),
+        legend.position=c(.99,.01), legend.justification=c(1, 0)) +
+  ylab(NULL) + 
+  xlab(NULL) +
+  scale_fill_brewer(name = "LIS Observations",
+                    palette = "Blues",
+                    guide = guide_legend(ncol = 2)) +
+  ggtitle("Latest Version Minus Version 8.1, By Country-Decade")
+
+
+swiid_latest_81_71_70_mkt %>%
+  filter(country %in% c("Australia", "Austria", "Belgium", "Canada", "Czech Republic",
+                        "Denmark", "Finland", "France", "Germany", "Greece", "Hong Kong",
+                        "Ireland", "Israel", "Italy", "Japan", "Netherlands", "New Zealand",
+                        "Norway", "Portugal", "Singapore", "South Korea", "Spain", "Sweden",
+                        "Switzerland", "United Kingdom", "United States" )) %>% 
+  left_join(lis_mkt %>% select(country, year, gini), by = c("country", "year")) %>% 
+  group_by(country, decade) %>% 
+  summarise(mean_diff = mean(vlatest_minus81, na.rm = TRUE),
+            lis_obs = as_factor(sum(!is.na(gini)))) %>% 
+  mutate(country_decade = paste(country, decade, sep = "_")) %>% 
+  filter(abs(mean_diff) > .5 & !country_decade == "France_1960") %>% # no observations in v7.1
+  ggplot(aes(x = forcats::fct_reorder(country_decade, mean_diff),
+             y = mean_diff, 
+             fill = lis_obs %>% 
+               fct_relevel(as.character(c(0:6, 10))))) +
+  geom_col(color = "#E6E6FF") +
+  theme_bw() +
+  theme(axis.text.x  = element_text(angle=90, vjust=0.5, size = 8),
+        legend.position=c(.99,.01), legend.justification=c(1, 0)) +
+  ylab(NULL) + 
+  xlab(NULL) +
+  scale_fill_brewer(name = "LIS Observations",
+                    palette = "Blues",
+                    guide = guide_legend(ncol = 2)) +
+  ggtitle("Latest Version Minus Version 8.1, By Country-Decade")
+
+
+swiid_latest_81_71_70 %>%
+  left_join(lis_disp %>% 
+              select(country, year, gini), by = c("country", "year")) %>% 
+  group_by(country, decade) %>% 
+  summarise(mean_diff = mean(vlatest_minus81, na.rm = TRUE),
+            lis_obs = as_factor(sum(!is.na(gini)))) %>% 
+  mutate(country_decade = paste(country, decade, sep = "_")) %>% 
+  filter(abs(mean_diff) %>% between(.5, 4) & !country_decade == "France_1960") %>% # no observations in v7.1
+  ggplot(aes(x = forcats::fct_reorder(country_decade, mean_diff),
+             y = mean_diff, 
+             fill = lis_obs %>% 
+               fct_relevel(as.character(c(0:6, 10))))) +
+  geom_col(color = "#E6E6FF") +
+  theme_bw() +
+  theme(axis.text.x  = element_text(angle=90, vjust=0.5, size = 8),
+        legend.position=c(.99,.01), legend.justification=c(1, 0)) +
+  ylab(NULL) + 
+  xlab(NULL) +
+  scale_fill_brewer(name = "LIS Observations",
+                    palette = "Blues",
+                    guide = guide_legend(ncol = 2)) +
+  ggtitle("Latest Version Minus Version 8.1, By Country-Decade")
+
 
 swiid_source71 <- "https://github.com/fsolt/swiid/raw/e86defc56d2e870c5d091a16e3a5036906b34177/data/swiid_source.csv" %>% 
   read_csv(col_types = "cdddcclcccc")
