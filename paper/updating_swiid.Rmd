@@ -290,7 +290,7 @@ This is partly a result of the decision to insist on sources that are available 
 Above I mentioned that to be included in the SWIID source data observations need to have an identifiable welfare definition and equivalence scale; let us now consider these two aspects of the data.
 A welfare definition is an answer to the question, this Gini measures the distribution of what?
 The four welfare definitions employed in the SWIID source data are market income, gross income, disposable income, and consumption.
-Market income is defined as the amount of money coming into the household, excluding any government cash or near-cash benefits as well as private transfers such as gifts or assistance from non-profit organizations; it constitutes the so-called 'pre-tax, pre-transfer' income.^[
+Market income is defined as the amount of money coming into the household, excluding any government cash or near-cash benefits as well as private transfers such as gifts, alimony, or assistance from non-profit organizations; it constitutes the so-called 'pre-tax, pre-transfer' income.^[
 It is important, though, to not think of the distribution of market income as 'pre-government.'
 Beyond taxes and transfers, governments seeking to shape the distribution of income have a wide array of 'market-conditioning' or 'predistribution' policy options, with minimum wage regulation and labor policy two obvious examples [see, e.g., @Morgan2013]. 
 Moreover, even taxes and transfers can profoundly shape the distribution of market income through 'second-order effects.'
