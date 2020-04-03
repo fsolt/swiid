@@ -337,7 +337,7 @@ ggplot(wd_es, aes(forcats::fct_reorder(value, n, .desc = TRUE), n)) +
 
 Equivalence scales are the ways in which the size and composition of a household are incorporated into the calculation of its members' welfare.
 On the one hand, these factors can simply be ignored, with all households with the same amount of income or consumption treated as if they enjoy the same level of welfare, regardless of their size.  One can improve on this household 'scale'^[
-Quoted because, strictly speaking, nothing is being scaled at all; it is simply treating the household as the unit of analysis.] by dividing the household's income by its number of members, that is, by using a per capita scale.
+Quoted because, strictly speaking, nothing is being scaled at all; it is simply treating the household as the unit of analysis.] by dividing the household's income by its number of members, that is, by using a per capita scale.^[In the per capita scale and those that follow, individuals are typically considered as the units of analysis, so the resulting incomes are then weighted by each household's number of members.]
 Although undoubtedly superior to simply looking at households, the per capita scale is not ideal: a household of two members and an income of \$100,000 is better off than one with a single member and \$50,000 due to economies of scale---that is among the most important reasons why people look for roommates.
 There are a variety of ways to try to account for these economies by calculating the number of 'equivalent adults' in the household.
 Of the most commonly used adult-equivalent scales, the square-root scale is the most straightforward: one simply divides the household income by the square root of the number of members.
