@@ -353,6 +353,8 @@ China,2012,0.474,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2013,,htt
 China,2013,0.473,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2014,,http://www.stats.gov.cn/english/PressRelease/201401/t20140120_502079.html
 China,2014,0.469,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2015,,http://www.stats.gov.cn/english/PressRelease/201501/t20150120_671038.html
 China,2015,0.462,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2015,,http://www.stats.gov.cn/english/PressRelease/201601/t20160119_1306072.html
+China,2016,0.465,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2018,"""1-4""",http://www.stats.gov.cn/tjsj/ndsj/2018/indexeh.htm
+China,2017,0.467,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2018,"""1-4""",http://www.stats.gov.cn/tjsj/ndsj/2018/indexeh.htm
 China,1981,0.2798,,disp,hh,FALSE,RC2007 disp hh,Ravallion and Chen 2007,20,https://doi.org/10.1016/j.jdeveco.2005.07.003
 China,1982,0.2591,,disp,hh,FALSE,RC2007 disp hh,Ravallion and Chen 2007,20,https://doi.org/10.1016/j.jdeveco.2005.07.003
 China,1983,0.2602,,disp,hh,FALSE,RC2007 disp hh,Ravallion and Chen 2007,20,https://doi.org/10.1016/j.jdeveco.2005.07.003
@@ -534,6 +536,11 @@ Estonia,2000,0.338,,con,pc,FALSE,MY2006 Estonia con pc 4,Mitra and Yemtsov 2006,
 Estonia,2001,0.332,,con,pc,FALSE,MY2006 Estonia con pc 4,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Estonia,2002,0.335,,con,pc,FALSE,MY2006 Estonia con pc 4,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Estonia,2003,0.33,,con,pc,FALSE,MY2006 Estonia con pc 4,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
+Ethiopia,1995,0.29,,con,pc,,NPC2017 Ethiopia con pc,National Planning Commission 2017,20,http://www.csa.gov.et/survey-report/category/357-poverty-analysis?download=901:2016-poverty-interim-report-1
+Ethiopia,1999,0.28,,con,pc,,NPC2017 Ethiopia con pc,National Planning Commission 2017,20,http://www.csa.gov.et/survey-report/category/357-poverty-analysis?download=901:2016-poverty-interim-report-1
+Ethiopia,2004,0.3,,con,pc,,NPC2017 Ethiopia con pc,National Planning Commission 2017,20,http://www.csa.gov.et/survey-report/category/357-poverty-analysis?download=901:2016-poverty-interim-report-1
+Ethiopia,2010,0.298,,con,pc,,NPC2017 Ethiopia con pc,National Planning Commission 2017,14,http://www.csa.gov.et/survey-report/category/357-poverty-analysis?download=901:2016-poverty-interim-report-1
+Ethiopia,2015,0.328,,con,pc,,NPC2017 Ethiopia con pc,National Planning Commission 2017,14,http://www.csa.gov.et/survey-report/category/357-poverty-analysis?download=901:2016-poverty-interim-report-1
 Fiji,1977,0.43,,gross,pc,FALSE,BJ2008 Fiji con pc 1,Brown and Jimenez 2008,551,http://doi.org/10.1002/jid.1474
 Fiji,1991,0.49,,gross,pc,FALSE,BJ2008 Fiji con pc 2,Brown and Jimenez 2008,551,http://doi.org/10.1002/jid.1474
 Fiji,2005,0.5,,gross,pc,,BJ2008 Fiji gross pc 1,Brown and Jimenez 2008,562,http://doi.org/10.1002/jid.1474
