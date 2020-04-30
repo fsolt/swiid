@@ -2,6 +2,9 @@ country,year,gini,gini_se,welfare_def,equiv_scale,monetary,series,source1,page,l
 Afghanistan,2008,0.297,,con,pc,,CSO Afghanistan con pc,Central Statistics Organization Afghanistan 2014,52,http://www.af.undp.org/content/dam/afghanistan/docs/MDGs/NRVA%20REPORT-rev-5%202013.pdf
 Afghanistan,2012,0.316,,con,pc,,CSO Afghanistan con pc,Central Statistics Organization Afghanistan 2014,52,http://www.af.undp.org/content/dam/afghanistan/docs/MDGs/NRVA%20REPORT-rev-5%202013.pdf
 Afghanistan,2007,0.278,,con,pc,,ZKM2014 Afghanistan con pc,"Zhuang, Kanbur, and Maligalig 2014",24,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA24
+Afghanistan,2008,0.29,,con,pc,,CSO Afghanistan con pc 2,Central Statistics Organization Afghanistan 2018,106,https://www.nsia.gov.af:8080/wp-content/uploads/2019/04/ALCS-2016-17-Analysis-report-.pdf
+Afghanistan,2012,0.33,,con,pc,,CSO Afghanistan con pc 2,Central Statistics Organization Afghanistan 2018,106,https://www.nsia.gov.af:8080/wp-content/uploads/2019/04/ALCS-2016-17-Analysis-report-.pdf
+Afghanistan,2017,0.312,,con,pc,,CSO Afghanistan con pc 2,Central Statistics Organization Afghanistan 2018,106,https://www.nsia.gov.af:8080/wp-content/uploads/2019/04/ALCS-2016-17-Analysis-report-.pdf
 Albania,1997,0.291,,con,pc,,FR2008 Albania con pc,Ferreira and Ravallion 2008,35,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Albania,2004,0.311,,con,pc,,FR2008 Albania con pc,Ferreira and Ravallion 2008,35,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Albania,1996,0.291,,con,pc,FALSE,MY2006 Albania con pc 1,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
@@ -111,6 +114,7 @@ Bahamas,2001,0.5745,,con,pc,TRUE,Statistics Bahamas con pc,Statistics Bahamas 20
 Bahamas,2013,0.414,,con,pc,TRUE,Statistics Bahamas con pc,Statistics Bahamas 2016,21,https://www.bahamas.gov.bs/wps/wcm/connect/5312dd47-5cd9-45f5-bf6c-dea99f3a6226/Bahamas+Household+Expenditure+Survey+2013+Report_v2.pdf?MOD=AJPERES
 Bahamas,2003,0.48,,market,hh,,Statistics Bahamas market hh,Statistics Bahamas 2005,20,https://web.archive.org/web/20180427210852/http://www.centralbankbahamas.com/download/LFS_report_2004.pdf
 Bahamas,2004,0.43,,market,hh,,Statistics Bahamas market hh,Statistics Bahamas 2005,20,https://web.archive.org/web/20180427210852/http://www.centralbankbahamas.com/download/LFS_report_2004.pdf
+Bahamas,2013,0.414,,con,pc,TRUE,Statistics Bahamas con pc,Statistics Bahamas 2016,21,https://www.bahamas.gov.bs/wps/wcm/connect/5312dd47-5cd9-45f5-bf6c-dea99f3a6226/Bahamas+Household+Expenditure+Survey+2013+Report_v2.pdf?MOD=AJPERES
 Bahrain,2014,0.596,,gross,pc,,IGA 2017,Bahrain Information & eGovernment Authority 2017,51,http://www.data.gov.bh/en/ResourceCenter/DownloadFile?id=2484
 Bangladesh,1967,0.304,,con,hh,,A1976 Bangladesh con hh,Azfar 1976,60,https://www.jstor.org/stable/25821355
 Bangladesh,1967,0.347,,gross,hh,,A1976 Bangladesh gross hh,Azfar 1976,60,https://www.jstor.org/stable/25821355
