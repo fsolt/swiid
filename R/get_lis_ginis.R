@@ -11,7 +11,7 @@ get_lis_ginis <- function(ccs, wait = 180) {
   gmail_user <- getOption("gmail_user")         # set all of these in .Rprofile, e.g.: 
   gmail_password <- getOption("gmail_password") # options("gmail_user" = "juanita_herrera@gmail.com", 
   lis_user <- getOption("lis_user")             #         "gmail_password" = "my_password")
-  lis_password <- getOption("lis_password")
+  lis_password <- getOption("lis_password")     # also confirm that https://myaccount.google.com/lesssecureapps is on
   
   purrr::walk(ccs, function(cc) {
     lissy <- readLines("R/lissy.R") %>% 
