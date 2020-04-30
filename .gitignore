@@ -9,6 +9,10 @@ data-raw/article_data/*
 data-raw/OECD2008.pdf
 data-raw/ to_add/
 dev/*
+paper/how_to_switch*
+paper/updating_swiid_*
+paper/word-styles-reference-01.docx
+paper/slides/Solt_KIRL*
 R/dcpo.R
 R/temp.stan
 R/ notes.txt
