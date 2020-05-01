@@ -818,6 +818,21 @@ geostat <- read_delim("https://raw.githubusercontent.com/fsolt/swiid/master/data
             link = "http://pc-axis.geostat.ge/PXWeb/pxweb/ka/Database")
 
 
+# Statbank Greenland (automated)
+greenland <- read_csv("http://bank.stat.gl/sq/c9908617-937d-468d-af45-b6ee974e5a99") %>%
+  transmute(country = "Greenland",
+            year = as.numeric(time),
+            gini = `Gini index`,
+            gini_se = NA,
+            welfare_def = "disp",
+            equiv_scale = "oecd",
+            monetary = NA,
+            series = paste("Statbank Greenland", welfare_def, equiv_scale),
+            source1 = "Statbank Greenland",
+            page = "",
+            link = "http://bank.stat.gl/pxweb/en/Greenland/Greenland__IN__IN40/INXF1.px")
+
+
 # Statistics Hong Kong (update in 2022)
 hk2016_link <- "https://www.bycensus2016.gov.hk/data/16BC_Income_Report_Key_Statistics.xlsx"
 hk2011_link <- "https://www.statistics.gov.hk/pub/B11200572012XXXXB0100.pdf"
@@ -2054,7 +2069,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
                      sedlac, cepal, cepal_sdi, oecd1, eurostat,
                      transmonee, ceq1, afr_gini, wb,
                      armstat, abs, inebo, ipea, belstat, statcan, dane, ineccr, dkstat,
-                     capmas, statee, statfi, insee, geostat,
+                     capmas, statee, statfi, insee, geostat, greenland,
                      stathk, bpsid, amar, cso_ie, istat, statinja, kazstat, kostat, nsck,
                      epumy, nbs, monstat, snz, nzmsd, ssb, dgeec, psa,
                      rosstat, ru_lis_old, singstat, ssi, ine, statslk, scb, 
