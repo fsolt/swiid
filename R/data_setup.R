@@ -1237,11 +1237,11 @@ snz <- read_excel("data-raw/snz.xls",
 # update link from http://www.msd.govt.nz/about-msd-and-our-work/publications-resources/monitoring/household-incomes/index.html
 # (if a .doc file, install LibreOffice, follow instructions at https://ask.libreoffice.org/en/question/12084/how-to-convert-documents-to-pdf-on-osx/?answer=50029#post-id-50029, and convert via command line)
 # update wrangle (including publication year)
-nzmsd_link <- "https://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2018/2018-household-incomes-in-new-zealand-report.doc"
+nzmsd_link <- "https://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2019/household-incomes-report-2019.doc"
 download.file(nzmsd_link, "data-raw/nzmsd.doc")
 system('soffice --headless --convert-to pdf:"writer_pdf_Export" --outdir ./data-raw data-raw/nzmsd.doc')
 
-nzmsd <- extract_tables("data-raw/nzmsd.pdf", pages = 97) %>% 
+nzmsd <- extract_tables("data-raw/nzmsd.pdf", pages = 108) %>% 
   first() %>% 
   as_tibble() %>% 
   filter(str_detect(V1, "\\d{4}")) %>% 
@@ -1252,8 +1252,8 @@ nzmsd <- extract_tables("data-raw/nzmsd.pdf", pages = 97) %>%
             welfare_def = "disp",
             equiv_scale = "sqrt",
             monetary = NA,
-            series = paste("Perry 2018", welfare_def, equiv_scale),
-            source1 = "Perry 2018",
+            series = paste("Perry 2019", welfare_def, equiv_scale),
+            source1 = "Perry 2019",
             page = "95",
             link = nzmsd_link) %>% 
   filter(!is.na(gini))
