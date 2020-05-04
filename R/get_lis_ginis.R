@@ -7,7 +7,7 @@ ccs <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",
          "pe", "pl", "ps", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se", 
          "ch", "tw", "uk", "us", "uy", "vn")
 
-get_lis_ginis <- function(ccs, wait = 180) {
+get_lis_ginis <- function(ccs, wait = 360) {
   gmail_user <- getOption("gmail_user")         # set all of these in .Rprofile, e.g.: 
   gmail_password <- getOption("gmail_password") # options("gmail_user" = "juanita_herrera@gmail.com", 
   lis_user <- getOption("lis_user")             #         "gmail_password" = "my_password")
