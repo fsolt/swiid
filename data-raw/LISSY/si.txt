@@ -1,7 +1,7 @@
-From: postbox@lisdatacenter.org
-Subject: job 671193 si
-Date: October 30, 2019 at 11:40:13 AM CDT
-To: fsolt@mac.com
+From: <postbox@lisdatacenter.org>
+Subject: job 718790 si
+Date: May 4, 2020 at 12:08:51 AM CDT
+To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
                                                                         
@@ -111,11 +111,11 @@ Loading required package: readstata13
 >  
 > get_ginis <- function(cc, reps = 100) { 
 +   set.seed(324) 
-+   ccs <- c("au", "at", "be", "br", "ca", "cl", "cn", "co", "cz", "dk",  
++   ccs <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",  
 +            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is",  
-+            "in", "ie", "il", "it", "jp", "lu", "lt", "mx", "nl", "no", "pa",   
-+            "py", "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es",   
-+            "se", "ch", "tw", "uk", "us", "uy") 
++            "in", "ie", "il", "it", "jp", "lt", "lu", "mx", "nl", "no", "pa", "py",  
++            "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
++            "ch", "tw", "uk", "us", "uy", "vn") 
 +   cc <- tolower(cc) 
 +   if (!cc %in% ccs) { 
 +     stop("Please specify a LIS country in iso2c format") 
@@ -286,9 +286,30 @@ si12h,con_sqrt,0.2552,0.0039,200
 si12h,con_pc,0.2768,0.0048,200
 si12h,con_oecdm,0.256,0.0048,200
 si12h,con_ae,0.26,0.0045,200
+[1] "Loading dataset si15h..."
+si15h,market_hh,0.5382,0.0066,200
+si15h,market_sqrt,0.436,0.0058,200
+si15h,market_pc,0.4463,0.0056,200
+si15h,market_oecdm,0.4341,0.0059,200
+si15h,market_ae,0.4365,0.0071,200
+si15h,gross_hh,0.3431,0.0041,200
+si15h,gross_sqrt,0.2626,0.0041,200
+si15h,gross_pc,0.2644,0.004,200
+si15h,gross_oecdm,0.2535,0.004,200
+si15h,gross_ae,0.2526,0.0042,200
+si15h,disp_hh,0.3431,0.0043,200
+si15h,disp_sqrt,0.2626,0.0045,200
+si15h,disp_pc,0.2644,0.0046,200
+si15h,disp_oecdm,0.2535,0.004,200
+si15h,disp_ae,0.2526,0.0039,200
+si15h,con_hh,0.3168,0.0048,200
+si15h,con_sqrt,0.2455,0.0047,200
+si15h,con_pc,0.2599,0.0045,200
+si15h,con_oecdm,0.2442,0.0051,200
+si15h,con_ae,0.2459,0.0044,200
 > 
 > proc.time()
    user  system elapsed 
- 38.098   0.188  73.494 
+ 41.338   0.313  42.785 
 
 

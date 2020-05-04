@@ -1,7 +1,7 @@
-From: postbox@lisdatacenter.org
-Subject: job 671195 kr
-Date: October 30, 2019 at 11:44:45 AM CDT
-To: fsolt@mac.com
+From: <postbox@lisdatacenter.org>
+Subject: job 718794 kr
+Date: May 4, 2020 at 12:24:49 AM CDT
+To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
                                                                         
@@ -111,11 +111,11 @@ Loading required package: readstata13
 >  
 > get_ginis <- function(cc, reps = 100) { 
 +   set.seed(324) 
-+   ccs <- c("au", "at", "be", "br", "ca", "cl", "cn", "co", "cz", "dk",  
++   ccs <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",  
 +            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is",  
-+            "in", "ie", "il", "it", "jp", "lu", "lt", "mx", "nl", "no", "pa",   
-+            "py", "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es",   
-+            "se", "ch", "tw", "uk", "us", "uy") 
++            "in", "ie", "il", "it", "jp", "lt", "lu", "mx", "nl", "no", "pa", "py",  
++            "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
++            "ch", "tw", "uk", "us", "uy", "vn") 
 +   cc <- tolower(cc) 
 +   if (!cc %in% ccs) { 
 +     stop("Please specify a LIS country in iso2c format") 
@@ -247,6 +247,6 @@ kr12h,con_ae,0.2857,0.0026,110
 > 
 > proc.time()
    user  system elapsed 
- 57.148   0.499  59.042 
+ 57.229   0.431  58.527 
 
 

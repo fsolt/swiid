@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 718531 eg
-Date: May 3, 2020 at 9:14:39 AM CDT
+Subject: job 718719 eg
+Date: May 3, 2020 at 8:03:36 PM CDT
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -184,6 +184,6 @@ eg12h,con_ae,NaN,NA,200
 > 
 > proc.time()
    user  system elapsed 
- 16.096   0.354  16.943 
+ 15.911   0.397  16.591 
 
 
