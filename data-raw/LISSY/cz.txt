@@ -1,7 +1,7 @@
-From: postbox@lisdatacenter.org
-Subject: job 671106 cz
-Date: October 30, 2019 at 10:20:48 AM CDT
-To: fsolt@mac.com
+From: <postbox@lisdatacenter.org>
+Subject: job 718582 cz
+Date: May 3, 2020 at 11:10:18 AM CDT
+To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
                                                                         
@@ -111,11 +111,11 @@ Loading required package: readstata13
 >  
 > get_ginis <- function(cc, reps = 100) { 
 +   set.seed(324) 
-+   ccs <- c("au", "at", "be", "br", "ca", "cl", "cn", "co", "cz", "dk",  
++   ccs <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",  
 +            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is",  
-+            "in", "ie", "il", "it", "jp", "lu", "lt", "mx", "nl", "no", "pa",   
-+            "py", "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es",   
-+            "se", "ch", "tw", "uk", "us", "uy") 
++            "in", "ie", "il", "it", "jp", "lt", "lu", "mx", "nl", "no", "pa", "py",  
++            "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
++            "ch", "tw", "uk", "us", "uy", "vn") 
 +   cc <- tolower(cc) 
 +   if (!cc %in% ccs) { 
 +     stop("Please specify a LIS country in iso2c format") 
@@ -307,9 +307,30 @@ cz13h,con_sqrt,NaN,NA,100
 cz13h,con_pc,NaN,NA,100
 cz13h,con_oecdm,NaN,NA,100
 cz13h,con_ae,NaN,NA,100
+[1] "Loading dataset cz16h..."
+cz16h,market_hh,0.5349,0.0041,100
+cz16h,market_sqrt,0.4405,0.0042,100
+cz16h,market_pc,0.4598,0.0045,100
+cz16h,market_oecdm,0.4396,0.0049,100
+cz16h,market_ae,0.4448,0.0044,100
+cz16h,gross_hh,0.3597,0.0033,100
+cz16h,gross_sqrt,0.2856,0.0037,100
+cz16h,gross_pc,0.2853,0.0039,100
+cz16h,gross_oecdm,0.2787,0.0036,100
+cz16h,gross_ae,0.2765,0.0036,100
+cz16h,disp_hh,0.3273,0.0031,100
+cz16h,disp_sqrt,0.251,0.0034,100
+cz16h,disp_pc,0.2541,0.0029,100
+cz16h,disp_oecdm,0.2434,0.0037,100
+cz16h,disp_ae,0.2416,0.0032,100
+cz16h,con_hh,NaN,NA,100
+cz16h,con_sqrt,NaN,NA,100
+cz16h,con_pc,NaN,NA,100
+cz16h,con_oecdm,NaN,NA,100
+cz16h,con_ae,NaN,NA,100
 > 
 > proc.time()
    user  system elapsed 
-106.290   0.681 108.999 
+117.588   0.718 120.351 
 
 
