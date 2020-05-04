@@ -94,7 +94,7 @@ get_ginis <- function(cc, reps = 100) {
   ccs <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk", 
            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", 
            "in", "ie", "il", "it", "jp", "lt", "lu", "mx", "nl", "no", "pa", "py", 
-           "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se", 
+           "pe", "pl", "ps", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se", 
            "ch", "tw", "uk", "us", "uy", "vn")
   cc <- tolower(cc)
   if (!cc %in% ccs) {
