@@ -341,9 +341,11 @@ transmonee <- read_excel("data-raw/transmonee.xls",
             page = "",
             link = transmonee_link)
 
+
 # Commitment to Equity (update by hand; see http://www.commitmentoequity.org/publications-ceqworkingpapers/ and http://www.commitmentoequity.org/data/ )
 ceq <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/ceq.csv", col_types = "cnnncclcccc") %>% 
   mutate(series = paste("CEQ", welfare_def, equiv_scale))
+
 
 # World Bank Africa Poverty Database (bespoke analysis of subset of WB surveys; archived)
 afr_gini <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv", 
