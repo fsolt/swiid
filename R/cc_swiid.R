@@ -26,8 +26,9 @@ cc_swiid <- countrycode::codelist %>%
                                            swiid.name == "Dominica" ~ "dominica\\b",
                                            swiid.name == "Dominican Republic" ~ "dominican",
                                            TRUE ~ country.name.en.regex)) %>% 
-  full_join(tibble(swiid.name = "Soviet Union", 
-                   country.name.en.regex = "soviet.?union|u\\.?s\\.?s\\.?r|socialist.?republics"),
+  full_join(tibble(swiid.name = c("Soviet Union", "Greenland"),
+                   country.name.en.regex = c("soviet.?union|u\\.?s\\.?s\\.?r|socialist.?republics",
+                                             "greenland")),
             by = c("country.name.en.regex", "swiid.name")) %>% 
   left_join(read_csv("data/reg.csv", col_types = "cc"), by = "swiid.name") 
 
