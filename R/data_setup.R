@@ -1,6 +1,6 @@
 if (!require(pacman)) install.packages("pacman"); library(pacman)
 p_load(tidyverse, readxl, 
-       eurostat, rsdmx, xml2, rvest,
+       eurostat, povcalnetR, rsdmx, xml2, rvest,
        countrycode, janitor, pdftools)
 p_load_gh("ropensci/tabulizerjars", "ropensci/tabulizer") # read PDF tables; see https://github.com/ropensci/tabulizer for installation help if needed
 p_load_gh("ropengov/dkstat")
@@ -362,39 +362,19 @@ afr_gini <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-
 
 
 # World Bank Povcalnet (automated)
-wb_zip <- "http://databank.worldbank.org/data/download/WDI_csv.zip"
-download.file(wb_zip, "data-raw/wb.zip")
-
-wb_fn <- read_csv(unz("data-raw/wb.zip", "WDIFootNote.csv")) %>% 
-  filter(SeriesCode == "SI.POV.GINI") %>% 
-  mutate(year = str_replace(Year, "YR", "")) %>% 
-  select(CountryCode, year, DESCRIPTION)
-
-wb <- read_csv(unz("data-raw/wb.zip", "WDIData.csv")) %>% 
-  filter(`Indicator Code` == "SI.POV.GINI") %>% 
-  select(-`Country Name`, -contains("Indicator"), -contains("X")) %>% 
-  gather(key = year, value = gini, -`Country Code`) %>% 
-  rename(CountryCode = `Country Code`) %>% 
-  filter(!is.na(gini)) %>% 
-  left_join(wb_fn, by = c("CountryCode", "year")) %>% 
-  filter(!str_detect(DESCRIPTION, "[Uu]rban|[Rr]ural")) %>% 
-  group_by(CountryCode) %>% 
-  mutate(desc = as.integer(as.factor(DESCRIPTION))) %>% 
-  ungroup() %>% 
-  transmute(country = countrycode(CountryCode, origin = "wb_api3c", "swiid.name", custom_dict = cc_swiid),
-            year = as.numeric(year),
-            gini = as.numeric(gini)/100,
+wb <- povcalnet() %>% 
+  filter(coveragetype %in% c("N", "A") & !is.na(gini)) %>% 
+  transmute(country = countrycode(countrycode, origin = "wb_api3c", "swiid.name", custom_dict = cc_swiid),
+            year = as.numeric(datayear),
+            gini = as.numeric(gini),
             gini_se = NA,
-            welfare_def = if_else(str_detect(DESCRIPTION, "income"), "gross", "con"),
+            welfare_def = if_else(str_detect(datatype, "income"), "gross", "con"),
             equiv_scale = "pc",
             monetary = FALSE,
-            series = paste("Povcalnet", country, welfare_def, equiv_scale, desc),
+            series = paste("Povcalnet", country, welfare_def, equiv_scale),
             source1 = "World Bank Povcalnet",
             page = "",
-            link = wb_zip)
-
-rm(wb_fn)
-unlink("data-raw/wb.zip")   # too big to keep around
+            link = "http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all")
 
 
 ## National Statistics Offices
