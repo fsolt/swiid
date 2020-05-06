@@ -749,7 +749,7 @@ statee <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data-ra
 
 
 # Statistics Finland (automated)
-statfi <- pxweb_get_data(url = "http://pxnet2.stat.fi/PXWeb/api/v1/fi/StatFin/tul/tjt/statfin_tjt_pxt_015.px",
+statfi <- pxweb_get_data(url = "http://pxnet2.stat.fi/PXWeb/api/v1/fi/StatFin_Passiivi/tul/tjt/statfinpas_tjt_pxt_015_201700.px",
                          pxweb_query(list(Tulokäsite = c('SL2', '4L2', '6L2'),
                                           Tiedot = c('Gini'),
                                           Vuosi = c('*')))) %>% 
@@ -765,7 +765,7 @@ statfi <- pxweb_get_data(url = "http://pxnet2.stat.fi/PXWeb/api/v1/fi/StatFin/tu
             series = paste("Statistics Finland", welfare_def, equiv_scale),
             source1 = "Statistics Finland",
             page = "",
-            link = "http://pxnet2.stat.fi/PXWeb/api/v1/en/StatFin/tul/tjt/270_tjt_tau_117.px")
+            link = "http://pxnet2.stat.fi/PXWeb/sq/7c6273ca-537e-418d-a63e-57dd4543d4ae")
 
 
 # Insee France (archived)
@@ -1257,6 +1257,7 @@ nzmsd <- extract_tables("data-raw/nzmsd.pdf", pages = 108) %>%
             page = "95",
             link = nzmsd_link) %>% 
   filter(!is.na(gini))
+
 
 # Statistics Norway (automated)
 ssb <- pxweb_get_data(url = "https://data.ssb.no/api/v0/en/table/07756/",
