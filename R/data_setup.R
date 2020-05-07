@@ -367,7 +367,7 @@ afr_gini <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-
 wb <- povcalnet() %>% 
   filter(coveragetype %in% c("N", "A") & !is.na(gini)) %>% 
   transmute(country = countrycode(countrycode, origin = "wb_api3c", "swiid.name", custom_dict = cc_swiid),
-            year = as.numeric(datayear),
+            year = as.numeric(year),
             gini = as.numeric(gini),
             gini_se = NA,
             welfare_def = if_else(str_detect(datatype, "income"), "gross", "con"),
