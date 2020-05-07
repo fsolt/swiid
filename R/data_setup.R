@@ -807,7 +807,7 @@ greenland <- read_csv("http://bank.stat.gl/sq/c9908617-937d-468d-af45-b6ee974e5a
             gini = `Gini index`,
             gini_se = NA,
             welfare_def = "disp",
-            equiv_scale = "oecd",
+            equiv_scale = "oecdm",
             monetary = NA,
             series = paste("Statbank Greenland", welfare_def, equiv_scale),
             source1 = "Statbank Greenland",
