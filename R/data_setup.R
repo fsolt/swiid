@@ -804,7 +804,7 @@ geostat <- read_delim("https://raw.githubusercontent.com/fsolt/swiid/master/data
 greenland <- read_csv("http://bank.stat.gl/sq/c9908617-937d-468d-af45-b6ee974e5a99") %>%
   transmute(country = "Greenland",
             year = as.numeric(time),
-            gini = `Gini index`,
+            gini = `Gini index`/100,
             gini_se = NA,
             welfare_def = "disp",
             equiv_scale = "oecdm",
