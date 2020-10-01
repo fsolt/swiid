@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 718783 ru
-Date: May 3, 2020 at 11:53:01 PM CDT
+Subject: job 765624 ru
+Date: September 24, 2020 at 11:36:26 PM CDT
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -114,7 +114,7 @@ Loading required package: readstata13
 +   ccs <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",  
 +            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is",  
 +            "in", "ie", "il", "it", "jp", "lt", "lu", "mx", "nl", "no", "pa", "py",  
-+            "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
++            "pe", "pl", "ps", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
 +            "ch", "tw", "uk", "us", "uy", "vn") 
 +   cc <- tolower(cc) 
 +   if (!cc %in% ccs) { 
@@ -349,9 +349,30 @@ ru16h,con_sqrt,NaN,NA,120
 ru16h,con_pc,NaN,NA,120
 ru16h,con_oecdm,NaN,NA,120
 ru16h,con_ae,NaN,NA,120
+[1] "Loading dataset ru17h..."
+ru17h,market_hh,0.4808,0.003,120
+ru17h,market_sqrt,0.4349,0.0031,120
+ru17h,market_pc,0.4654,0.003,120
+ru17h,market_oecdm,0.4376,0.0031,120
+ru17h,market_ae,0.4465,0.0031,120
+ru17h,gross_hh,0.3664,0.0025,120
+ru17h,gross_sqrt,0.328,0.003,120
+ru17h,gross_pc,0.3556,0.0032,120
+ru17h,gross_oecdm,0.3279,0.0029,120
+ru17h,gross_ae,0.3355,0.0034,120
+ru17h,disp_hh,0.3566,0.0028,120
+ru17h,disp_sqrt,0.3184,0.0028,120
+ru17h,disp_pc,0.3471,0.003,120
+ru17h,disp_oecdm,0.3181,0.0033,120
+ru17h,disp_ae,0.326,0.003,120
+ru17h,con_hh,NaN,NA,120
+ru17h,con_sqrt,NaN,NA,120
+ru17h,con_pc,NaN,NA,120
+ru17h,con_oecdm,NaN,NA,120
+ru17h,con_ae,NaN,NA,120
 > 
 > proc.time()
    user  system elapsed 
-468.455   4.708 476.196 
+553.665   4.738 562.004 
 
 

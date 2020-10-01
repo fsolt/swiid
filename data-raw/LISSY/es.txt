@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 718796 es
-Date: May 4, 2020 at 12:34:35 AM CDT
+Subject: job 765634 es
+Date: September 25, 2020 at 12:02:47 AM CDT
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -114,7 +114,7 @@ Loading required package: readstata13
 +   ccs <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",  
 +            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is",  
 +            "in", "ie", "il", "it", "jp", "lt", "lu", "mx", "nl", "no", "pa", "py",  
-+            "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
++            "pe", "pl", "ps", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
 +            "ch", "tw", "uk", "us", "uy", "vn") 
 +   cc <- tolower(cc) 
 +   if (!cc %in% ccs) { 
@@ -373,6 +373,6 @@ es16h,con_ae,NaN,NA,110
 > 
 > proc.time()
    user  system elapsed 
-145.079   0.662 148.820 
+145.979   0.680 147.826 
 
 

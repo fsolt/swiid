@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 718801 tw
-Date: May 4, 2020 at 1:00:15 AM CDT
+Subject: job 765638 tw
+Date: September 25, 2020 at 12:21:10 AM CDT
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -114,7 +114,7 @@ Loading required package: readstata13
 +   ccs <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",  
 +            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is",  
 +            "in", "ie", "il", "it", "jp", "lt", "lu", "mx", "nl", "no", "pa", "py",  
-+            "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
++            "pe", "pl", "ps", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
 +            "ch", "tw", "uk", "us", "uy", "vn") 
 +   cc <- tolower(cc) 
 +   if (!cc %in% ccs) { 
@@ -182,24 +182,24 @@ tw81h,con_pc,0.2545,0.0016,100
 tw81h,con_oecdm,0.2234,0.0019,100
 tw81h,con_ae,0.2303,0.0019,100
 [1] "Loading dataset tw86h..."
-tw86h,market_hh,0.3053,0.0019,100
+tw86h,market_hh,0.3053,0.002,100
 tw86h,market_sqrt,0.2748,0.002,100
 tw86h,market_pc,0.301,0.0023,100
 tw86h,market_oecdm,0.2777,0.0026,100
 tw86h,market_ae,0.2841,0.0024,100
-tw86h,gross_hh,0.3031,0.0024,100
+tw86h,gross_hh,0.3031,0.0023,100
 tw86h,gross_sqrt,0.2735,0.0021,100
-tw86h,gross_pc,0.3001,0.0022,100
+tw86h,gross_pc,0.3001,0.0021,100
 tw86h,gross_oecdm,0.2762,0.0023,100
 tw86h,gross_ae,0.2827,0.0024,100
-tw86h,disp_hh,0.2983,0.0022,100
-tw86h,disp_sqrt,0.2683,0.0017,100
+tw86h,disp_hh,0.2983,0.002,100
+tw86h,disp_sqrt,0.2683,0.0016,100
 tw86h,disp_pc,0.2949,0.0019,100
 tw86h,disp_oecdm,0.2703,0.002,100
 tw86h,disp_ae,0.2769,0.0019,100
-tw86h,con_hh,0.2668,0.0018,100
+tw86h,con_hh,0.2668,0.0019,100
 tw86h,con_sqrt,0.2274,0.0021,100
-tw86h,con_pc,0.2542,0.0019,100
+tw86h,con_pc,0.2542,0.0018,100
 tw86h,con_oecdm,0.2314,0.0021,100
 tw86h,con_ae,0.2366,0.002,100
 [1] "Loading dataset tw91h..."
@@ -394,6 +394,6 @@ tw16h,con_ae,0.2191,0.002,110
 > 
 > proc.time()
    user  system elapsed 
-166.286   0.628 170.357 
+166.563   0.576 168.519 
 
 
