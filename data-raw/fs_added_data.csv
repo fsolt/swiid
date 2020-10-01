@@ -1282,7 +1282,10 @@ Korea,2017,0.354,,disp,ae,,Kostat2019 disp ae ,Statistics Korea 2019,38,http://k
 Korea,2017,0.406,,market,ae,,Kostat2019 market ae ,Statistics Korea 2019,38,http://kostat.go.kr/portal/korea/kor_nw/1/1/index.board?bmode=download&bSeq=&aSeq=379367&ord=1
 Korea,2018,0.345,,disp,ae,,Kostat2019 disp ae ,Statistics Korea 2019,38,http://kostat.go.kr/portal/korea/kor_nw/1/1/index.board?bmode=download&bSeq=&aSeq=379367&ord=1
 Korea,2018,0.402,,market,ae,,Kostat2019 market ae ,Statistics Korea 2019,38,http://kostat.go.kr/portal/korea/kor_nw/1/1/index.board?bmode=download&bSeq=&aSeq=379367&ord=1
+Kuwait,1973,0.471,,market,hh,,Al-Qudsi 1981,Al-Qudsi 1981,22,https://www.researchgate.net/publication/315647707_Income_distribution_in_Kuwait
+Kuwait,1987,0.3468,,con,pc,,KMP2002 con pc,Ali 2003 [KMP 2002],16,http://www.arab-api.org/jodep/products/delivery/wps0307.pdf
 Kuwait,1998,0.32,,con,pc,,FR2008 Kuwait con pc,Ferreira and Ravallion 2008,37,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
+Kuwait,1999,0.3602,,con,pc,,KMP2002 con pc,Ali 2003 [KMP 2002],16,http://www.arab-api.org/jodep/products/delivery/wps0307.pdf
 Kyrgyzstan,1988,0.312,,gross,pc,,AG1993 Kyrgyzstan gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,120,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Kyrgyzstan,1990,0.308,,gross,pc,,AG1993 Kyrgyzstan gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,120,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Kyrgyzstan,1994,0.537,,con,pc,FALSE,MY2006 Kyrgyzstan con pc 2,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
@@ -1338,9 +1341,9 @@ Lithuania,2002,0.305,,con,pc,FALSE,MY2006 Lithuania con pc 5,Mitra and Yemtsov 2
 Lithuania,2003,0.325,,con,pc,FALSE,MY2006 Lithuania con pc 5,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Macedonia,2009,0.409,,disp,oecdm,TRUE,Eurostat The former Yugoslav Republic of Macedonia disp oecdm 1,Statistics Macedonia,,http://makstat.stat.gov.mk/PXWeb/pxweb/en/MakStat/MakStat__ZivotenStandard__LaekenIndikatorSiromastija/125_ZivStd_Mk_LaekenGENERAL_en.px/?rxid=46ee0f64-2992-4b45-a2d9-cb4e5f7ec5ef
 Macedonia,2010,0.385,,disp,oecdm,TRUE,Eurostat The former Yugoslav Republic of Macedonia disp oecdm 1,Statistics Macedonia,,http://makstat.stat.gov.mk/PXWeb/pxweb/en/MakStat/MakStat__ZivotenStandard__LaekenIndikatorSiromastija/125_ZivStd_Mk_LaekenGENERAL_en.px/?rxid=46ee0f64-2992-4b45-a2d9-cb4e5f7ec5ef
-"Macedonia, FYR",1996,0.34,,con,pc,FALSE,MY2006 Macedonia con pc 1,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
-"Macedonia, FYR",2002,0.368,,con,pc,FALSE,MY2006 Macedonia con pc 2,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
-"Macedonia, FYR",2003,0.373,,con,pc,FALSE,MY2006 Macedonia con pc 2,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
+Macedonia,1996,0.34,,con,pc,FALSE,MY2006 Macedonia con pc 1,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
+Macedonia,2002,0.368,,con,pc,FALSE,MY2006 Macedonia con pc 2,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
+Macedonia,2003,0.373,,con,pc,FALSE,MY2006 Macedonia con pc 2,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Madagascar,1962,0.391,,gross,hh,,Pryor1990 Madagascar gross hh,Pryor 1990,26,http://www.jstor.org/stable/1154102 
 Madagascar,1980,0.489,,gross,hh,,Pryor1990 Madagascar gross hh,Pryor 1990,26,http://www.jstor.org/stable/1154102 
 Malawi,1969,0.448,,gross,hh,,Pryor1990 Malawi gross hh,Pryor 1990,26,http://www.jstor.org/stable/1154102 
@@ -1538,6 +1541,7 @@ Norway,1988,0.21,,disp,hh,,Park1995 Norway disp hh,Tabatabai 1996; Park 1995,127
 Norway,1988,0.309,,disp,hh,,SSB1993 Norway disp hh,Statistics Norway 1993,41,https://www.ssb.no/a/histstat/nos/nos_c070.pdf
 Norway,1989,0.343,,disp,hh,,SSB1993 Norway disp hh,Statistics Norway 1993,41,https://www.ssb.no/a/histstat/nos/nos_c070.pdf
 Norway,1990,0.334,,disp,hh,,SSB1993 Norway disp hh,Statistics Norway 1993,41,https://www.ssb.no/a/histstat/nos/nos_c070.pdf
+Oman,2000,0.3986,,con,pc,,OMNE2002 con pc,Ali 2003 [OMNE 2002],16,http://www.arab-api.org/jodep/products/delivery/wps0307.pdf
 Oman,2010,0.307,,con,hh,,NCSI2012 Oman con hh,Oman National Center for Statistics and Information 2012,23,https://ncsi.gov.om/Elibrary/LibraryContentDoc/ben_Final%20Findings%20E%202010%20-%202011_964e4334-f010-4f48-aad6-9401454cf803.pdf
 Pakistan,1964,0.386,,disp,hh,,PBS1995 Pakistan disp hh,Tabatabai 1996; PBS1995,102,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Pakistan,1964,0.356,,gross,hh,,Mahmood1984 Pakistan gross hh,Mahmood 1984,372,http://www.jstor.org/stable/41258679
@@ -2449,6 +2453,7 @@ Vietnam,2008,0.356,,con,pc,,ZKM2014 Viet Nam con pc,"Zhuang, Kanbur, and Maligal
 Vietnam,2008,0.445,,gross,pc,,ZKM2014 Viet Nam gross pc,"Zhuang, Kanbur, and Maligalig 2014",22,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA22
 Yemen,1992,0.395,,con,pc,,FR2008 Yemen con pc,Ferreira and Ravallion 2008,40,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Yemen,1998,0.335,,con,pc,,Hassine2015 Yemen con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
+Yemen,1998,0.3428,,con,pc,,YCSO1999 con pc,Ali 2003 [YCSO 1999],16,http://www.arab-api.org/jodep/products/delivery/wps0307.pdf
 Yemen,2006,0.378,,con,pc,,Hassine2015 Yemen con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Yugoslavia,1973,0.32,,disp,hh,,vGP1984 Yugoslavia disp hh,Tabatabai 1996; van Ginneken and Park 1984,123,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Yugoslavia,1978,0.33,,disp,hh,,vGP1984 Yugoslavia disp hh,Tabatabai 1996; van Ginneken and Park 1984,123,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
