@@ -1384,12 +1384,11 @@ ssi1 <- read_excel("data-raw/ssi.xls",
             link = ssi1_link) 
 
 # (automated)
-ssi2_link <- "https://pxweb.stat.si/SiStatDb/Resources/PX/Databases/10_Dem_soc/08_zivljenjska_raven/08_silc_kazalniki_revsc/15_08673_porazdel_dohodka/0867312S.px"
+ssi2_link <- "https://pxweb.stat.si:443/SiStatData/sq/279"
 download.file(ssi2_link, "data-raw/ssi2.px")
 
 ssi2 <- pxR::read.px("data-raw/ssi2.px") %>% 
   pxR:::as.data.frame.px() %>% 
-  filter(str_detect(DOHODEK, "pokojnine so del")) %>% 
   transmute(country = "Slovenia",
             year = as.numeric(as.character(LETO)) - 1,
             gini = as.numeric(value)/100,
@@ -1428,8 +1427,9 @@ ine <- read_csv("data-raw/ine.csv", skip = 4) %>%
 
 
 # Statistics Sri Lanka (archived)
-statslk_link <- "http://www.statistics.gov.lk/HIES/HIES2012_13FinalReport.pdf"
-download.file(statslk_link, "data-raw/statslk2015.pdf")
+statslk_link <- "https://web.archive.org/web/20200215071622/http://www.statistics.gov.lk/HIES/HIES2012_13FinalReport.pdf"
+statslk_link1 <- "https://github.com/fsolt/swiid/raw/master/data-raw/statslk2015.pdf"
+download.file(statslk_link1, "data-raw/statslk2015.pdf")
 
 statslk <- extract_tables("data-raw/statslk2015.pdf", pages = 22)[[1]] %>%
   as_tibble() %>% 
