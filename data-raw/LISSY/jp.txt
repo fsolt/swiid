@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 765590 jp
-Date: September 24, 2020 at 10:11:52 PM CDT
+Subject: job 770267 jp
+Date: October 8, 2020 at 3:20:01 PM CDT
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -59,7 +59,7 @@ Loading required package: readstata13
 >  
 > setups <- function(df) { 
 +   botline <- 0 
-+   topline <- 10 * wNtile(df$dhi, df$hpopwgt, 0.5) 
++   topline <- exp(log(wNtile(df$dhi, df$hpopwgt, 0.75)) + 3 * (log(wNtile(df$dhi, df$hpopwgt, 0.75)) - log(wNtile(df$dhi, df$hpopwgt, 0.25)))) 
 +   df$oecdm <- 1 + .5 * (df$nhhmem - df$nhhmem13 - 1) + .3 * df$nhhmem13 
 +   df$ae <- 1 + .7 * (df$nhhmem - df$nhhmem13 - 1) + .5 * df$nhhmem13 
 +    
@@ -161,21 +161,21 @@ Loading required package: readstata13
 > # Call 
 > get_ginis("jp") 
 [1] "Loading dataset jp08h..."
-jp08h,market_hh,0.5549,0.0088,120
-jp08h,market_sqrt,0.4983,0.0076,120
-jp08h,market_pc,0.5218,0.007,120
-jp08h,market_oecdm,0.4972,0.0067,120
-jp08h,market_ae,0.504,0.007,120
-jp08h,gross_hh,0.4467,0.0083,120
-jp08h,gross_sqrt,0.4103,0.006,120
-jp08h,gross_pc,0.4289,0.006,120
-jp08h,gross_oecdm,0.405,0.0058,120
-jp08h,gross_ae,0.4103,0.0061,120
+jp08h,market_hh,0.5566,0.009,120
+jp08h,market_sqrt,0.5007,0.008,120
+jp08h,market_pc,0.5236,0.0072,120
+jp08h,market_oecdm,0.4993,0.007,120
+jp08h,market_ae,0.506,0.0071,120
+jp08h,gross_hh,0.4485,0.0087,120
+jp08h,gross_sqrt,0.4129,0.0063,120
+jp08h,gross_pc,0.4308,0.0061,120
+jp08h,gross_oecdm,0.4073,0.0061,120
+jp08h,gross_ae,0.4124,0.0064,120
 jp08h,disp_hh,0.3791,0.0067,120
 jp08h,disp_sqrt,0.3282,0.0061,120
 jp08h,disp_pc,0.3484,0.0067,120
 jp08h,disp_oecdm,0.3253,0.0059,120
-jp08h,disp_ae,0.3309,0.0062,120
+jp08h,disp_ae,0.331,0.0062,120
 jp08h,con_hh,NaN,NA,120
 jp08h,con_sqrt,NaN,NA,120
 jp08h,con_pc,NaN,NA,120
@@ -186,6 +186,6 @@ Error in if (f(x[[i]])) return(i) : missing value where TRUE/FALSE nee
 Calls: get_ginis -> setups -> wNtile -> Find -> Position
 > proc.time()
    user  system elapsed 
-  7.682   0.286   8.242 
+  7.706   0.273   8.369 
 
 

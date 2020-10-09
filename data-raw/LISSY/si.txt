@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 765629 si
-Date: September 24, 2020 at 11:42:52 PM CDT
+Subject: job 770304 si
+Date: October 9, 2020 at 1:22:11 AM CDT
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -59,7 +59,7 @@ Loading required package: readstata13
 >  
 > setups <- function(df) { 
 +   botline <- 0 
-+   topline <- 10 * wNtile(df$dhi, df$hpopwgt, 0.5) 
++   topline <- exp(log(wNtile(df$dhi, df$hpopwgt, 0.75)) + 3 * (log(wNtile(df$dhi, df$hpopwgt, 0.75)) - log(wNtile(df$dhi, df$hpopwgt, 0.25)))) 
 +   df$oecdm <- 1 + .5 * (df$nhhmem - df$nhhmem13 - 1) + .3 * df$nhhmem13 
 +   df$ae <- 1 + .7 * (df$nhhmem - df$nhhmem13 - 1) + .5 * df$nhhmem13 
 +    
@@ -176,11 +176,11 @@ si97h,disp_sqrt,0.2293,0.0045,200
 si97h,disp_pc,0.2412,0.0038,200
 si97h,disp_oecdm,0.2237,0.0042,200
 si97h,disp_ae,0.2265,0.005,200
-si97h,con_hh,0.3336,0.0056,200
-si97h,con_sqrt,0.2903,0.0048,200
-si97h,con_pc,0.3165,0.0051,200
-si97h,con_oecdm,0.2962,0.0045,200
-si97h,con_ae,0.3021,0.0046,200
+si97h,con_hh,0.3351,0.0063,200
+si97h,con_sqrt,0.2919,0.0052,200
+si97h,con_pc,0.318,0.0054,200
+si97h,con_oecdm,0.2978,0.005,200
+si97h,con_ae,0.3036,0.0052,200
 [1] "Loading dataset si99h..."
 si99h,market_hh,0.4791,0.0067,200
 si99h,market_sqrt,0.373,0.0052,200
@@ -266,42 +266,42 @@ si10h,con_pc,0.2818,0.0043,200
 si10h,con_oecdm,0.2621,0.0036,200
 si10h,con_ae,0.2662,0.0045,200
 [1] "Loading dataset si12h..."
-si12h,market_hh,0.5565,0.0069,200
-si12h,market_sqrt,0.4497,0.0062,200
-si12h,market_pc,0.4615,0.0057,200
-si12h,market_oecdm,0.45,0.0064,200
-si12h,market_ae,0.4526,0.0057,200
-si12h,gross_hh,0.356,0.0048,200
-si12h,gross_sqrt,0.2705,0.0045,200
-si12h,gross_pc,0.2729,0.0051,200
-si12h,gross_oecdm,0.2634,0.0045,200
-si12h,gross_ae,0.2624,0.0039,200
-si12h,disp_hh,0.356,0.0051,200
-si12h,disp_sqrt,0.2705,0.0039,200
-si12h,disp_pc,0.2729,0.0048,200
-si12h,disp_oecdm,0.2634,0.0047,200
-si12h,disp_ae,0.2624,0.0052,200
+si12h,market_hh,0.5568,0.0069,200
+si12h,market_sqrt,0.4502,0.0063,200
+si12h,market_pc,0.462,0.0057,200
+si12h,market_oecdm,0.4504,0.0065,200
+si12h,market_ae,0.453,0.0058,200
+si12h,gross_hh,0.3565,0.0048,200
+si12h,gross_sqrt,0.2711,0.0047,200
+si12h,gross_pc,0.2734,0.0051,200
+si12h,gross_oecdm,0.2639,0.0047,200
+si12h,gross_ae,0.2629,0.004,200
+si12h,disp_hh,0.3565,0.0052,200
+si12h,disp_sqrt,0.2711,0.004,200
+si12h,disp_pc,0.2734,0.0048,200
+si12h,disp_oecdm,0.2639,0.0049,200
+si12h,disp_ae,0.2629,0.0053,200
 si12h,con_hh,0.3258,0.0045,200
 si12h,con_sqrt,0.2552,0.0039,200
 si12h,con_pc,0.2768,0.0048,200
 si12h,con_oecdm,0.256,0.0048,200
 si12h,con_ae,0.26,0.0045,200
 [1] "Loading dataset si15h..."
-si15h,market_hh,0.5382,0.0066,200
-si15h,market_sqrt,0.436,0.0058,200
-si15h,market_pc,0.4463,0.0056,200
-si15h,market_oecdm,0.4341,0.0059,200
-si15h,market_ae,0.4365,0.0071,200
-si15h,gross_hh,0.3431,0.0041,200
-si15h,gross_sqrt,0.2626,0.0041,200
-si15h,gross_pc,0.2644,0.004,200
-si15h,gross_oecdm,0.2535,0.004,200
-si15h,gross_ae,0.2526,0.0042,200
-si15h,disp_hh,0.3431,0.0043,200
-si15h,disp_sqrt,0.2626,0.0045,200
-si15h,disp_pc,0.2644,0.0046,200
-si15h,disp_oecdm,0.2535,0.004,200
-si15h,disp_ae,0.2526,0.0039,200
+si15h,market_hh,0.5383,0.0067,200
+si15h,market_sqrt,0.4362,0.0059,200
+si15h,market_pc,0.4464,0.0056,200
+si15h,market_oecdm,0.4343,0.0059,200
+si15h,market_ae,0.4367,0.0072,200
+si15h,gross_hh,0.3433,0.0042,200
+si15h,gross_sqrt,0.2628,0.0042,200
+si15h,gross_pc,0.2645,0.0041,200
+si15h,gross_oecdm,0.2536,0.004,200
+si15h,gross_ae,0.2528,0.0043,200
+si15h,disp_hh,0.3433,0.0044,200
+si15h,disp_sqrt,0.2628,0.0046,200
+si15h,disp_pc,0.2645,0.0047,200
+si15h,disp_oecdm,0.2536,0.0041,200
+si15h,disp_ae,0.2528,0.0039,200
 si15h,con_hh,0.3168,0.0048,200
 si15h,con_sqrt,0.2455,0.0047,200
 si15h,con_pc,0.2599,0.0045,200
@@ -310,6 +310,6 @@ si15h,con_ae,0.2459,0.0044,200
 > 
 > proc.time()
    user  system elapsed 
- 42.205   0.309  43.073 
+ 42.529   0.335  43.512 
 
 
