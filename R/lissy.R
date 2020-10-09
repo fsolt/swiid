@@ -39,7 +39,7 @@ topBottom <- function(var, botline, topline) {
 
 setups <- function(df) {
   botline <- 0
-  topline <- 10 * wNtile(df$dhi, df$hpopwgt, 0.5)
+  topline <- exp(log(wNtile(df$dhi, df$hpopwgt, 0.75)) + 3 * (log(wNtile(df$dhi, df$hpopwgt, 0.75)) - log(wNtile(df$dhi, df$hpopwgt, 0.25))))
   df$oecdm <- 1 + .5 * (df$nhhmem - df$nhhmem13 - 1) + .3 * df$nhhmem13
   df$ae <- 1 + .7 * (df$nhhmem - df$nhhmem13 - 1) + .5 * df$nhhmem13
   
