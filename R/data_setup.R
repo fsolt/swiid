@@ -99,7 +99,7 @@ lis_files <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",
                "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", 
                "in", "ie", "il", "it", "jp", "lt", "lu", "mx", "nl", "no", "pa", "py", 
                "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se", 
-               "ch", "tw", "uk", "us", "uy") # add "vn" and "tn" when LIS releases data
+               "ch", "tw", "uk", "us", "uy") # add "la", lv", "ml" and "vn" when LIS releases data
 
 lis <- lis_files %>% 
   map_df(format_lis) %>% 
