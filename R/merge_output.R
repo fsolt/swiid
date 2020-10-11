@@ -1,5 +1,8 @@
 library(tidyverse)
 
+version <- "9_0"
+ver <- str_replace(version, "_", "")
+
 load("data/ineq.rda")
 
 all_file <- list.files("data/", "all_[^m]") %>% 
@@ -144,8 +147,8 @@ res_stata <- res %>% select(country, year,
 
 haven::write_dta(res_stata, "data/for_stata.dta", version = 12)   # for format_stata.do
 RStata::stata("R/format_stata.do")    # see https://github.com/lbraglia/RStata for setup instructions
-file.copy(from = "data/swiid8_3.dta", 
-          to = "vignette/swiid8_3.dta",
+file.copy(from = paste0("data/swiid", version, ".dta"), 
+          to = paste0("vignette/swiid", version, ".dta"),
           overwrite = TRUE)
 
 # R formatted
@@ -161,23 +164,23 @@ for (i in 1:100) {
   swiid[[i]] <- stemp
 }
 
-save(swiid, swiid_summary, file = "data/swiid8_3.rda")
-save(swiid, swiid_summary, file = "vignette/swiid8_3.rda")
+save(swiid, swiid_summary, file = paste0("data/swiid", version, ".rda"))
+save(swiid, swiid_summary, file = paste0("vignette/swiid", version, ".rda"))
 
 # for release
-dir.create("release/swiid8_3", recursive = TRUE)
-final_files <- c("data/swiid_summary.csv", "data/swiid8_3.rda", "data/swiid8_3.dta")
+dir.create(paste0("release/swiid", version, ""), recursive = TRUE)
+final_files <- c("data/swiid_summary.csv", paste0("data/swiid", version, ".rda"), paste0("data/swiid", version, ".dta"))
 file.copy(from = final_files,
-          to = str_replace(final_files, "data/", "release/swiid8_3/"),
+          to = str_replace(final_files, "data/", paste0("release/swiid", version, "/")),
           overwrite = TRUE)
-file.rename("release/swiid8_3/swiid_summary.csv", "release/swiid8_3/swiid8_3_summary.csv")
+file.rename(paste0("release/swiid", version, "/swiid_summary.csv"), paste0("release/swiid", version, "/swiid", version, "_summary.csv"))
 documentation_files <- c("vignette/R_swiid.pdf", "vignette/stata_swiid.pdf")
 file.copy(from = documentation_files,
-          to = str_replace(documentation_files, "vignette/", "release/swiid8_3/"),
+          to = str_replace(documentation_files, "vignette/", paste0("release/swiid", version, "/")),
           overwrite = TRUE)
 setwd("release")
-zip("swiid8_3.zip", "swiid8_3")
-dir.create("s83")
-file.copy("swiid8_3.zip", "s83/swiid8_3.zip", overwrite = TRUE)
-zip("s83.zip", "s83")
+zip(paste0("swiid", version, ".zip"), "swiid9_0")
+dir.create(paste0("s", ver))
+file.copy(paste0("swiid", version, ".zip"), paste0("s83/swiid", version, ".zip"), overwrite = TRUE)
+zip(paste0("s", ver, ".zip"), paste0("s", ver))
 setwd("..")
