@@ -763,29 +763,9 @@ Bangladesh,2010,0.321,,con,hh,,BBS con hh,Bangladesh Bureau of Statistics 2011,x
 Bangladesh,2010,0.458,,gross,hh,,BBS gross hh,Bangladesh Bureau of Statistics 2011,30,http://203.112.218.65/WebTestApplication/userfiles/Image/LatestReports/HIES-10.pdf
 Bangladesh,2010,0.3213032,,con,pc,FALSE,Povcalnet Bangladesh con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Bangladesh,2016,0.3238527,,con,pc,FALSE,Povcalnet Bangladesh con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-Barbados,1960,0.463,,gross,pc,,HP1989 Barbados gross pc,Holder and Prescod 1989,98,https://www.jstor.org/stable/27864853
-Barbados,1960,0.4,,disp,pc,,HP1989 Barbados gross pc,Holder and Prescod 1989,98,https://www.jstor.org/stable/27864853
-Barbados,1962,0.455,,gross,pc,,HP1989 Barbados gross pc,Holder and Prescod 1989,98,https://www.jstor.org/stable/27864853
-Barbados,1962,0.391,,disp,pc,,HP1989 Barbados gross pc,Holder and Prescod 1989,98,https://www.jstor.org/stable/27864853
-Barbados,1971,0.424,,gross,pc,,HP1989 Barbados gross pc,Holder and Prescod 1989,98,https://www.jstor.org/stable/27864853
-Barbados,1971,0.372,,disp,pc,,HP1989 Barbados gross pc,Holder and Prescod 1989,98,https://www.jstor.org/stable/27864853
-Barbados,1972,0.389,,gross,pc,,HP1989 Barbados gross pc,Holder and Prescod 1989,98,https://www.jstor.org/stable/27864853
-Barbados,1972,0.342,,disp,pc,,HP1989 Barbados gross pc,Holder and Prescod 1989,98,https://www.jstor.org/stable/27864853
-Barbados,1973,0.371,,gross,pc,,HP1989 Barbados gross pc,Holder and Prescod 1989,98,https://www.jstor.org/stable/27864853
-Barbados,1973,0.328,,disp,pc,,HP1989 Barbados gross pc,Holder and Prescod 1989,98,https://www.jstor.org/stable/27864853
-Barbados,1976,0.358,,gross,pc,,HP1989 Barbados gross pc,Holder and Prescod 1989,98,https://www.jstor.org/stable/27864853
-Barbados,1976,0.307,,disp,pc,,HP1989 Barbados gross pc,Holder and Prescod 1989,98,https://www.jstor.org/stable/27864853
-Barbados,1978,0.359,,gross,pc,,HP1989 Barbados gross pc,Holder and Prescod 1989,98,https://www.jstor.org/stable/27864853
-Barbados,1978,0.307,,disp,pc,,HP1989 Barbados gross pc,Holder and Prescod 1989,98,https://www.jstor.org/stable/27864853
 Barbados,1979,0.464,,disp,hh,,Downes1987 disp hh,Downes 1987,143,http://www.jstor.org/stable/27862918
 Barbados,1979,0.484,,gross,hh,,Downes1987 gross hh,Downes 1987,143,http://www.jstor.org/stable/27862918
-Barbados,1979,0.4,,gross,pc,,HP1989 Barbados gross pc,Holder and Prescod 1989,98,https://www.jstor.org/stable/27864853
-Barbados,1979,0.35,,disp,pc,,HP1989 Barbados gross pc,Holder and Prescod 1989,98,https://www.jstor.org/stable/27864853
 Barbados,1979,0.46,,con,pc,,SALISES 2012 Barbados con pc 1,SALISES 2012,vii,https://web.archive.org/web/20181012153352/http://www.caribank.org/uploads/2012/12/Barbados-CALC-Volume-1-MainReport-FINAL-Dec-2012.pdf
-Barbados,1980,0.345,,gross,pc,,HP1989 Barbados gross pc,Holder and Prescod 1989,98,https://www.jstor.org/stable/27864853
-Barbados,1980,0.307,,disp,pc,,HP1989 Barbados gross pc,Holder and Prescod 1989,98,https://www.jstor.org/stable/27864853
-Barbados,1981,0.323,,gross,pc,,HP1989 Barbados gross pc,Holder and Prescod 1989,98,https://www.jstor.org/stable/27864853
-Barbados,1981,0.286,,disp,pc,,HP1989 Barbados gross pc,Holder and Prescod 1989,98,https://www.jstor.org/stable/27864853
 Barbados,1997,0.39,,con,hh,,TW2002 Barbados con hh,Thomas and Wint 2002; Canterbury 2005,861,http://dx.doi.org/10.1080/02255189.2005.9669090
 Barbados,2010,0.43,,con,pc,,IDB 2017 Barbados con pc,IDB 2017,"""03-10""",https://publications.iadb.org/publications/english/document/Barbados-Survey-of-Living-Conditions-2016.zip
 Barbados,2010,0.47,,con,pc,,SALISES 2012 Barbados con pc 2,SALISES 2012,27,https://web.archive.org/web/20181012153352/http://www.caribank.org/uploads/2012/12/Barbados-CALC-Volume-1-MainReport-FINAL-Dec-2012.pdf
@@ -3496,7 +3476,7 @@ Croatia,2016,0.299,,disp,oecdm,TRUE,Eurostat Croatia disp oecdm 1,Eurostat,"",ht
 Croatia,2016,0.3089973,,gross,pc,FALSE,Povcalnet Croatia gross pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Croatia,2017,0.297,,disp,oecdm,TRUE,Eurostat Croatia disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Croatia,2017,0.3035458,,gross,pc,FALSE,Povcalnet Croatia gross pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-Croatia,2018,0.293,,disp,oecdm,TRUE,Eurostat Croatia disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Croatia,2018,0.292,,disp,oecdm,TRUE,Eurostat Croatia disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Cyprus,1985,0.296,,con,hh,,Park1995 Cyprus con hh,Tabatabai 1996; Park 1995,118,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Cyprus,1985,0.371,,disp,hh,,Park1995 Cyprus disp hh,Tabatabai 1996; Park 1995,118,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Cyprus,1991,0.279,,con,hh,,Park1995 Cyprus con hh,Tabatabai 1996; Park 1995,118,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -10786,7 +10766,7 @@ Netherlands,2016,0.445,,market,sqrt,FALSE,"OECD Netherlands market sqrt, current
 Netherlands,2016,0.2817357,,gross,pc,FALSE,Povcalnet Netherlands gross pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Netherlands,2017,0.27399999999999997,,disp,oecdm,TRUE,Eurostat Netherlands disp oecdm 3,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Netherlands,2017,0.2853582,,gross,pc,FALSE,Povcalnet Netherlands gross pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-Netherlands,2018,0.266,,disp,oecdm,TRUE,Eurostat Netherlands disp oecdm 3,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+Netherlands,2018,0.268,,disp,oecdm,TRUE,Eurostat Netherlands disp oecdm 3,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 New Zealand,1982,0.269,0.00118,disp,sqrt,FALSE,LIS New Zealand disp sqrt,Statistics New Zealand 1999,73,https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf
 New Zealand,1982,0.272,,disp,sqrt,,Perry 2019 disp sqrt,Perry 2019,95,https://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2019/household-incomes-report-2019.doc
 New Zealand,1982,0.259,,disp,oecdm,,Statistics New Zealand 1999 disp oecdm,Statistics New Zealand 1999,100,https://web.archive.org/web/20170407020304/http://www2.stats.govt.nz/domino/external/pasfull/pasfull.nsf/84bf91b1a7b5d7204c256809000460a4/4c2567ef00247c6acc256b03000bdbe0/$FILE/Incomes.pdf
@@ -15556,73 +15536,73 @@ Turkey,2005,0.449,,disp,oecdm,TRUE,Eurostat Turkey disp oecdm 1,Eurostat,"",http
 Turkey,2005,0.4261466,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Turkey,2006,0.43200000000000005,,disp,oecdm,TRUE,Eurostat Turkey disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Turkey,2006,0.3964741,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-Turkey,2006,0.403307913077814,,disp,hh,FALSE,Turkstat disp hh,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=2354
-Turkey,2006,0.428,,disp,oecdm,FALSE,Turkstat disp oecdm,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=1601
+Turkey,2006,0.403307913077814,,disp,hh,FALSE,tuik disp hh,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
+Turkey,2006,0.428,,disp,oecdm,FALSE,tuik disp oecdm,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
 Turkey,2007,0.43,,disp,oecdm,TRUE,Eurostat Turkey disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Turkey,2007,0.409,,disp,sqrt,FALSE,"OECD Turkey disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2007,0.384428,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-Turkey,2007,0.386765368791995,,disp,hh,FALSE,Turkstat disp hh,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=2354
-Turkey,2007,0.406,,disp,oecdm,FALSE,Turkstat disp oecdm,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=1601
+Turkey,2007,0.386765368791995,,disp,hh,FALSE,tuik disp hh,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
+Turkey,2007,0.406,,disp,oecdm,FALSE,tuik disp oecdm,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
 Turkey,2008,0.442,,disp,oecdm,TRUE,Eurostat Turkey disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Turkey,2008,0.3902054,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-Turkey,2008,0.385697413563645,,disp,hh,FALSE,Turkstat disp hh,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=2354
-Turkey,2008,0.405,,disp,oecdm,FALSE,Turkstat disp oecdm,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=1601
+Turkey,2008,0.385697413563645,,disp,hh,FALSE,tuik disp hh,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
+Turkey,2008,0.405,,disp,oecdm,FALSE,tuik disp oecdm,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
 Turkey,2009,0.435,,disp,oecdm,TRUE,Eurostat Turkey disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Turkey,2009,0.411,,disp,sqrt,FALSE,"OECD Turkey disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2009,0.3896531,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-Turkey,2009,0.394306678787898,,disp,hh,FALSE,Turkstat disp hh,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=2354
-Turkey,2009,0.415,,disp,oecdm,FALSE,Turkstat disp oecdm,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=1601
+Turkey,2009,0.394306678787898,,disp,hh,FALSE,tuik disp hh,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
+Turkey,2009,0.415,,disp,oecdm,FALSE,tuik disp oecdm,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
 Turkey,2010,0.433,,disp,oecdm,TRUE,Eurostat Turkey disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Turkey,2010,0.417,,disp,sqrt,FALSE,"OECD Turkey disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2010,0.477,,market,sqrt,FALSE,"OECD Turkey market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2010,0.3878508,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-Turkey,2010,0.38,,disp,hh,FALSE,Turkstat disp hh,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=2354
-Turkey,2010,0.402,,disp,oecdm,FALSE,Turkstat disp oecdm,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=1601
+Turkey,2010,0.38,,disp,hh,FALSE,tuik disp hh,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
+Turkey,2010,0.402,,disp,oecdm,FALSE,tuik disp oecdm,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
 Turkey,2011,0.428,,disp,oecdm,TRUE,Eurostat Turkey disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Turkey,2011,0.412,,disp,sqrt,FALSE,"OECD Turkey disp sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2011,0.403,,disp,sqrt,FALSE,"OECD Turkey disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2011,0.474,,market,sqrt,FALSE,"OECD Turkey market sqrt, current def, 2011 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2011,0.427,,market,sqrt,FALSE,"OECD Turkey market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2011,0.4003935,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-Turkey,2011,0.383,,disp,hh,FALSE,Turkstat disp hh,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=2354
-Turkey,2011,0.404,,disp,oecdm,FALSE,Turkstat disp oecdm,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=1601
+Turkey,2011,0.383,,disp,hh,FALSE,tuik disp hh,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
+Turkey,2011,0.404,,disp,oecdm,FALSE,tuik disp oecdm,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
 Turkey,2012,0.42100000000000004,,disp,oecdm,TRUE,Eurostat Turkey disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Turkey,2012,0.399,,disp,sqrt,FALSE,"OECD Turkey disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2012,0.422,,market,sqrt,FALSE,"OECD Turkey market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2012,0.4016894,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-Turkey,2012,0.382,,disp,hh,FALSE,Turkstat disp hh,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=2354
-Turkey,2012,0.402,,disp,oecdm,FALSE,Turkstat disp oecdm,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=1601
+Turkey,2012,0.382,,disp,hh,FALSE,tuik disp hh,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
+Turkey,2012,0.402,,disp,oecdm,FALSE,tuik disp oecdm,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
 Turkey,2013,0.41200000000000003,,disp,oecdm,TRUE,Eurostat Turkey disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Turkey,2013,0.39,,disp,sqrt,FALSE,"OECD Turkey disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2013,0.416,,market,sqrt,FALSE,"OECD Turkey market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2013,0.401785,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-Turkey,2013,0.382,,disp,hh,FALSE,Turkstat disp hh,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=2354
-Turkey,2013,0.4,,disp,oecdm,FALSE,Turkstat disp oecdm,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=1601
+Turkey,2013,0.382,,disp,hh,FALSE,tuik disp hh,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
+Turkey,2013,0.4,,disp,oecdm,FALSE,tuik disp oecdm,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
 Turkey,2014,0.419,,disp,oecdm,TRUE,Eurostat Turkey disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Turkey,2014,0.398,,disp,sqrt,FALSE,"OECD Turkey disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2014,0.423,,market,sqrt,FALSE,"OECD Turkey market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2014,0.4123656,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-Turkey,2014,0.379,,disp,hh,FALSE,Turkstat disp hh,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=2354
-Turkey,2014,0.391,,disp,oecdm,FALSE,Turkstat disp oecdm,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=1601
+Turkey,2014,0.379,,disp,hh,FALSE,tuik disp hh,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
+Turkey,2014,0.391,,disp,oecdm,FALSE,tuik disp oecdm,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
 Turkey,2015,0.426,,disp,oecdm,TRUE,Eurostat Turkey disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Turkey,2015,0.404,,disp,sqrt,FALSE,"OECD Turkey disp sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2015,0.429,,market,sqrt,FALSE,"OECD Turkey market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2015,0.4285446,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-Turkey,2015,0.386,,disp,hh,FALSE,Turkstat disp hh,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=2354
-Turkey,2015,0.397,,disp,oecdm,FALSE,Turkstat disp oecdm,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=1601
+Turkey,2015,0.386,,disp,hh,FALSE,tuik disp hh,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
+Turkey,2015,0.397,,disp,oecdm,FALSE,tuik disp oecdm,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
 Turkey,2016,0.43,,disp,oecdm,TRUE,Eurostat Turkey disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Turkey,2016,0.418737,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-Turkey,2016,0.396,,disp,hh,FALSE,Turkstat disp hh,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=2354
-Turkey,2016,0.404,,disp,oecdm,FALSE,Turkstat disp oecdm,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=1601
+Turkey,2016,0.396,,disp,hh,FALSE,tuik disp hh,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
+Turkey,2016,0.404,,disp,oecdm,FALSE,tuik disp oecdm,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
 Turkey,2017,0.43,,disp,oecdm,TRUE,Eurostat Turkey disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Turkey,2017,0.4140567,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-Turkey,2017,0.4,,disp,hh,FALSE,Turkstat disp hh,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=2354
-Turkey,2017,0.405,,disp,oecdm,FALSE,Turkstat disp oecdm,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=1601
+Turkey,2017,0.4,,disp,hh,FALSE,tuik disp hh,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
+Turkey,2017,0.405,,disp,oecdm,FALSE,tuik disp oecdm,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
 Turkey,2018,0.4187752,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-Turkey,2018,0.403,,disp,hh,FALSE,Turkstat disp hh,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=2354
-Turkey,2018,0.408,,disp,oecdm,FALSE,Turkstat disp oecdm,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=1601
-Turkey,2019,0.387,,disp,hh,FALSE,Turkstat disp hh,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=2354
-Turkey,2019,0.395,,disp,oecdm,FALSE,Turkstat disp oecdm,Turkish Statistical Institute,"",http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=1601
+Turkey,2018,0.403,,disp,hh,FALSE,tuik disp hh,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
+Turkey,2018,0.408,,disp,oecdm,FALSE,tuik disp oecdm,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
+Turkey,2019,0.387,,disp,hh,FALSE,tuik disp hh,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
+Turkey,2019,0.395,,disp,oecdm,FALSE,tuik disp oecdm,Turkish Statistical Institute,"",https://data.tuik.gov.tr/en/
 Turkmenistan,1988,0.316,,gross,pc,,AG1993 Turkmenistan gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,122,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Turkmenistan,1988,0.264,,gross,pc,FALSE,Milanovic1998 Turkenistan gross pc,Milanovic 1998,179,https://books.google.com/books?id=cQl9xbuhvNkC
 Turkmenistan,1989,0.279,,disp,pc,FALSE,Transmonee Turkmenistan disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
