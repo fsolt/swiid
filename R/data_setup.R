@@ -1625,16 +1625,17 @@ nesdb <- pmap_df(list(nesdb_list, names(nesdb_list), nesdb_links),
                                   link = link_x) })
 
 
-# Statistics Turkey (automated)
-turkstat_links <- paste0("http://www.turkstat.gov.tr/PreIstatistikTablo.do?istab_id=", c(1601, 2354))
-download.file(turkstat_links[1], "data-raw/turkstat_oecdm.xls")
-download.file(turkstat_links[2], "data-raw/turkstat_hh.xls")
+# Statistics Turkey (update files)
+# https://data.tuik.gov.tr/en > Income, Living, Consumption, and Poverty > 
+# [Check] Income Distribution and Living Conditions Statistics [Search] > 
+# [Select tab] Statistical Table > first line under Equivalised Household Disposable Income & first line under Household Disposable Income
+tuik_link <- paste0("https://data.tuik.gov.tr/en/")
 
-turkstat_oecdm <- read_excel("data-raw/turkstat_oecdm.xls", skip = 3) 
-turkstat_hh <- read_excel("data-raw/turkstat_hh.xls", skip = 3) 
-turkstat_list <- list(turkstat_oecdm = turkstat_oecdm, turkstat_hh = turkstat_hh)
+tuik_oecdm <- read_excel("data-raw/tuik_oecdm.xls", skip = 3) 
+tuik_hh <- read_excel("data-raw/tuik_hh.xls", skip = 3) 
+tuik_list <- list(tuik_oecdm = tuik_oecdm, tuik_hh = tuik_hh)
 
-turkstat <- pmap_df(list(turkstat_list, names(turkstat_list), turkstat_links),
+tuik <- pmap_df(list(tuik_list, names(tuik_list), tuik_link),
                     function(x, name_x, link_x) {
                       names(x)[1] <- "var" 
                       es <- str_extract(name_x, "[^_]*$")
@@ -1649,12 +1650,12 @@ turkstat <- pmap_df(list(turkstat_list, names(turkstat_list), turkstat_links),
                                   welfare_def = "disp",
                                   equiv_scale = es,
                                   monetary = FALSE,
-                                  series = paste("Turkstat", welfare_def, equiv_scale),
+                                  series = paste("tuik", welfare_def, equiv_scale),
                                   source1 = "Turkish Statistical Institute",
                                   page = "",
                                   link = link_x) })
 
-rm(turkstat_list, turkstat_hh, turkstat_oecdm)
+rm(tuik_list, tuik_hh, tuik_oecdm)
 
 
 # U.K. Office for National Statistics (update links; join with latest file last)
@@ -2056,7 +2057,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
                      stathk, bpsid, amar, cso_ie, istat, statinja, kazstat, kostat, nsck,
                      epumy, nbs, monstat, snz, nzmsd, ssb, dgeec, psa,
                      rosstat, ru_lis_old, singstat, ssi, ine, statslk, scb, 
-                     tdgbas, nso_thailand, nesdb, turkstat, ons, ifs, cbo, uscb, uine, inev, gso_vn,
+                     tdgbas, nso_thailand, nesdb, tuik, ons, ifs, cbo, uscb, uine, inev, gso_vn,
                      atg, gidd,
                      added_data) %>% 
     rename(gini_m = gini,
