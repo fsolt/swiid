@@ -1,21 +1,21 @@
 cd "/Users/fredsolt/Documents/Projects/swiid/vignette"
 
-// Get GDP per capita data from the Penn World Tables, Version 9.0 (Feenstra et al. 2015)
-// download from http://www.rug.nl/research/ggdc/data/pwt/v90/pwt90.xlsx
+// Get GDP per capita data from the Penn World Tables, Version 9.1 (Feenstra et al. 2015)
+// download from https://www.rug.nl/ggdc/docs/pwt91.dta
 // create gdppc and save as .dta
 
-import excel using pwt90.xlsx, sheet("Data") firstrow clear
+use pwt91.dta, clear
 gen gdppc = rgdpe/pop/1000
 drop if gdppc==.
 keep country year gdppc
-save pwt90_gdppc.dta, replace
+save pwt91_gdppc.dta, replace
 
 
-// Get World Values Survey 6-wave data 
+// Get World Values Survey 7-wave data 
 // from http://www.worldvaluessurvey.org/WVSDocumentationWVL.jsp
 // generate variables of interest, merge in the PWT data, and save
 
-use WVS_Longitudinal_1981_2014_stata_v2015_04_18.dta, clear
+use WVS_Longitudinal_1981_2016_stata_v20180912.dta, clear
 kountry S003, from(iso3n)
 rename NAMES_STD country
 gen year = S020
@@ -25,13 +25,13 @@ gen age = X003 if X003>0
 gen educ = X025 if X025>0
 gen male = (X001 == 1) if X001>0
 keep country year country_year religiosity male educ age
-merge m:1 country year using pwt90_gdppc.dta
+merge m:1 country year using pwt91_gdppc.dta
 drop if _merge!=3
 drop _merge
 save wvs_pwt.dta, replace
 
 // Now merge these data *into* the SWIID
-use swiid8_3.dta, clear
+use swiid9_0.dta, clear
 
 merge 1:m country year using wvs_pwt.dta
 drop if _merge!=3
