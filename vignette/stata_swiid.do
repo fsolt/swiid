@@ -31,7 +31,7 @@ drop _merge
 save wvs_pwt.dta, replace
 
 // Now merge these data *into* the SWIID
-use swiid9_0.dta, clear
+use "../data/swiid9_0_vig.dta", clear
 
 merge 1:m country year using wvs_pwt.dta
 drop if _merge!=3
@@ -56,4 +56,5 @@ twoway rspike gini_disp_95ub gini_disp_95lb name_length, lstyle(ci) || ///
     scatter gini_disp name_length, msize(small) ///
     legend(order(2 "SWIID Disposable-Income Inequality")) 
 
-graph save "stata_scatter.png", replace
+g graph export "/Users/fredsolt/Documents/Projects/swiid/vignette/stata_scatter.png", as(png) name("Graph") replace
+
