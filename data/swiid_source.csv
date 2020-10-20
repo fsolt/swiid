@@ -7153,16 +7153,22 @@ Iceland,2015,0.289,,gross,sqrt,FALSE,"OECD Iceland gross sqrt, current def, 2012
 Iceland,2015,0.385,,market,sqrt,FALSE,"OECD Iceland market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Iceland,2015,0.2678797,,gross,pc,FALSE,Povcalnet Iceland gross pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Iceland,2016,0.252,,disp,oecdm,TRUE,Eurostat Iceland disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+India,1971,0.314,,con,ae,,CP2019 con ae,Chancel and Piketty 2019,A3,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12439&file=roiw12439-sup-0001-AppendixS1-S14.xlsx
+India,1973,0.326,,con,ae,,CP2019 con ae,Chancel and Piketty 2019,A3,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12439&file=roiw12439-sup-0001-AppendixS1-S14.xlsx
 India,1973,0.357,,con,pc,,Yotopoulos1989 India con pc,Yotopoulos 1989,366,https://doi.org/10.1111/j.1475-4991.1989.tb00598.x
 India,1976,0.42,,disp,hh,,vGP1984 India disp hh,Tabatabai 1996; van Ginneken and Park 1984,95,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 India,1976,0.38,,disp,pc,,vGP1984 India disp pc,Tabatabai 1996; van Ginneken and Park 1984,95,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+India,1978,0.358,,con,ae,,CP2019 con ae,Chancel and Piketty 2019,A3,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12439&file=roiw12439-sup-0001-AppendixS1-S14.xlsx
+India,1982,0.396,,market,ae,,CP2019 market ae,Chancel and Piketty 2019,S51,https://doi.org/10.1111/roiw.12439
 India,1983,0.325,,con,pc,,Bhalla2003 India con pc,Bhalla 2003,346,http://www.jstor.org/stable/4413132
+India,1983,0.334,,con,ae,,CP2019 con ae,Chancel and Piketty 2019,A3,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12439&file=roiw12439-sup-0001-AppendixS1-S14.xlsx
 India,1983,0.3211588,,con,pc,FALSE,Povcalnet India con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 India,1983,0.3206,,con,pc,,Ravallion2000 India con pc,Ravallion 2000,3247,http://www.jstor.org/stable/4409692
 India,1987,0.352,,con,pc,,CN2016 con pc,Chadha and Nandwani 2016,22,http://hdl.handle.net/10419/161488
 India,1987,0.3255158,,con,pc,FALSE,Povcalnet India con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 India,1987,0.3368,,con,pc,,Ravallion2000 India con pc,Ravallion 2000,3247,http://www.jstor.org/stable/4409692
 India,1988,0.329,,con,pc,,Bhalla2003 India con pc,Bhalla 2003,346,http://www.jstor.org/stable/4413132
+India,1988,0.340000004,,con,ae,,CP2019 con ae,Chancel and Piketty 2019,A3,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12439&file=roiw12439-sup-0001-AppendixS1-S14.xlsx
 India,1988,0.3308,,con,pc,,Ravallion2000 India con pc,Ravallion 2000,3247,http://www.jstor.org/stable/4409692
 India,1989,0.3293,,con,pc,,Ravallion2000 India con pc,Ravallion 2000,3247,http://www.jstor.org/stable/4409692
 India,1990,0.3184,,con,pc,,Ravallion2000 India con pc,Ravallion 2000,3247,http://www.jstor.org/stable/4409692
@@ -7173,6 +7179,7 @@ India,1993,0.3169618,,con,pc,FALSE,Povcalnet India con pc,World Bank Povcalnet,"
 India,1993,0.325,,con,pc,,ZKM2014 India con pc,"Zhuang, Kanbur, and Maligalig 2014",24,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA24
 India,1994,0.325,,con,pc,,Bhalla2003 India con pc,Bhalla 2003,346,http://www.jstor.org/stable/4413132
 India,1994,0.35,,con,pc,,CN2016 con pc,Chadha and Nandwani 2016,22,http://hdl.handle.net/10419/161488
+India,1994,0.334,,con,ae,,CP2019 con ae,Chancel and Piketty 2019,A3,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12439&file=roiw12439-sup-0001-AppendixS1-S14.xlsx
 India,1994,0.3152,,con,pc,,Ravallion2000 India con pc,Ravallion 2000,3247,http://www.jstor.org/stable/4409692
 India,1994,0.35,,con,pc,,TD2013 con pc,Thorat and Dubey 2013,42,http://www.pnud.org/content/dam/india/docs/human-development/how-inclusive-has-growth-been-in-india-during-1993-94-2009-10.pdf
 India,1995,0.3632,,con,pc,,Ravallion2000 India con pc,Ravallion 2000,3247,http://www.jstor.org/stable/4409692
@@ -7180,10 +7187,12 @@ India,1996,0.407,,disp,pc,FALSE,MSR2011 India disp pc,"Mukhopadhaya, Shantakumar
 India,1996,0.3286,,con,pc,,Ravallion2000 India con pc,Ravallion 2000,3247,http://www.jstor.org/stable/4409692
 India,1997,0.3783,,con,pc,,Ravallion2000 India con pc,Ravallion 2000,3247,http://www.jstor.org/stable/4409692
 India,2000,0.32,,con,pc,,Bhalla2003 India con pc,Bhalla 2003,346,http://www.jstor.org/stable/4413132
+India,2000,0.32,,con,ae,,CP2019 con ae,Chancel and Piketty 2019,A3,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12439&file=roiw12439-sup-0001-AppendixS1-S14.xlsx
 India,2000,0.29,,con,pc,,GIDD India con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
 India,2002,0.443,,disp,pc,FALSE,MSR2011 India disp pc,"Mukhopadhaya, Shantakumar, and Rao 2011",102,https://books.google.com/books?id=_aapAgAAQBAJ
 India,2004,0.347,,con,pc,,CMSPP2016 con pc,"Chauhan, Mohanty, Subramanian, Parida, and Padhi 2016",1280,http://doi.org/10.1007/s11205-015-1006-6
 India,2004,0.352,,con,pc,,CN2016 con pc,Chadha and Nandwani 2016,22,http://hdl.handle.net/10419/161488
+India,2004,0.524,,market,ae,,CP2019 market ae,Chancel and Piketty 2019,A2.15,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12439&file=roiw12439-sup-0002-Appendix.docx
 India,2004,0.368,,con,pc,,FR2008 India con pc,Ferreira and Ravallion 2008,37,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 India,2004,0.3638,0.0021,con,ae,FALSE,LIS India con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/in.txt
 India,2004,0.3894,0.0022,con,hh,FALSE,LIS India con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/in.txt
@@ -7207,14 +7216,17 @@ India,2004,0.489,,market,sqrt,FALSE,"OECD India market sqrt, current def, 2012 m
 India,2004,0.3440633,,con,pc,FALSE,Povcalnet India con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 India,2004,0.35,,con,sqrt,TRUE,VD2013 con sqrt,Vanneman and Dubey 2013,446,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA446
 India,2004,0.48,,disp,sqrt,TRUE,VD2013 disp sqrt,Vanneman and Dubey 2013,446,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA446
+India,2005,0.353,,con,ae,,CP2019 con ae,Chancel and Piketty 2019,A3,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12439&file=roiw12439-sup-0001-AppendixS1-S14.xlsx
 India,2005,0.35,,con,pc,,TD2013 con pc,Thorat and Dubey 2013,42,http://www.pnud.org/content/dam/india/docs/human-development/how-inclusive-has-growth-been-in-india-during-1993-94-2009-10.pdf
 India,2007,0.36,,con,pc,,CN2016 con pc,Chadha and Nandwani 2016,22,http://hdl.handle.net/10419/161488
 India,2009,0.3538034,,con,pc,FALSE,Povcalnet India con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 India,2010,0.396,,con,pc,,CN2016 con pc,Chadha and Nandwani 2016,22,http://hdl.handle.net/10419/161488
+India,2010,0.364,,con,ae,,CP2019 con ae,Chancel and Piketty 2019,A3,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12439&file=roiw12439-sup-0001-AppendixS1-S14.xlsx
 India,2010,0.563,,disp,pc,FALSE,MSR2011 India disp pc,"Mukhopadhaya, Shantakumar, and Rao 2011",102,https://books.google.com/books?id=_aapAgAAQBAJ
 India,2010,0.37,,con,pc,,TD2013 con pc,Thorat and Dubey 2013,42,http://www.pnud.org/content/dam/india/docs/human-development/how-inclusive-has-growth-been-in-india-during-1993-94-2009-10.pdf
 India,2010,0.37,,con,pc,,ZKM2014 India con pc,"Zhuang, Kanbur, and Maligalig 2014",24,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA24
 India,2011,0.359,,con,pc,,CMSPP2016 con pc,"Chauhan, Mohanty, Subramanian, Parida, and Padhi 2016",1280,http://doi.org/10.1007/s11205-015-1006-6
+India,2011,0.579,,market,ae,,CP2019 market ae,Chancel and Piketty 2019,A2.15,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12439&file=roiw12439-sup-0002-Appendix.docx
 India,2011,0.368,,con,pc,,CSI2013 con pc,Central Statistics Office of India 2013,38,http://mospi.nic.in/sites/default/files/publication_reports/SAARC_India_Rep_29aug13.pdf
 India,2011,0.3668,0.0025,con,ae,FALSE,LIS India con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/in.txt
 India,2011,0.392,0.0025,con,hh,FALSE,LIS India con hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/in.txt
@@ -7237,6 +7249,7 @@ India,2011,0.495,,gross,sqrt,FALSE,"OECD India gross sqrt, current def, 2012 met
 India,2011,0.508,,market,sqrt,FALSE,"OECD India market sqrt, current def, 2012 method",OECD,,https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 India,2011,0.3571258,,con,pc,FALSE,Povcalnet India con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 India,2012,0.375,,con,pc,,CN2016 con pc,Chadha and Nandwani 2016,22,http://hdl.handle.net/10419/161488
+India,2015,0.603,,market,ae,,CP2019 market ae,Chancel and Piketty 2019,S51,https://doi.org/10.1111/roiw.12439
 Indonesia,1965,0.34,,con,pc,,Cameron2002 Indonesia con pc,Cameron 2002; Booth 2000,3,https://doi.org/10.1111/1467-8411.00119
 Indonesia,1965,0.35,,con,pc,,vdE2009 con pc,van der Eng 2009,22,https://mpra.ub.uni-muenchen.de/12725/1/MPRA_paper_12725.pdf
 Indonesia,1970,0.33,,con,pc,,Cameron2002 Indonesia con pc,Cameron 2002; Booth 2000,3,https://doi.org/10.1111/1467-8411.00119

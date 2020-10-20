@@ -181,6 +181,6 @@ file.copy(from = documentation_files,
 setwd("release")
 zip(paste0("swiid", version, ".zip"), "swiid9_0")
 dir.create(paste0("s", ver))
-file.copy(paste0("swiid", version, ".zip"), paste0("s83/swiid", version, ".zip"), overwrite = TRUE)
+file.copy(paste0("swiid", version, ".zip"), paste0("s", str_replace(version, "_", ""), "/swiid", version, ".zip"), overwrite = TRUE)
 zip(paste0("s", ver, ".zip"), paste0("s", ver))
 setwd("..")
