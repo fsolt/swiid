@@ -1650,7 +1650,7 @@ tuik <- pmap_df(list(tuik_list, names(tuik_list), tuik_link),
                                   welfare_def = "disp",
                                   equiv_scale = es,
                                   monetary = FALSE,
-                                  series = paste("tuik", welfare_def, equiv_scale),
+                                  series = paste("TUIK", welfare_def, equiv_scale),
                                   source1 = "Turkish Statistical Institute",
                                   page = "",
                                   link = link_x) })
