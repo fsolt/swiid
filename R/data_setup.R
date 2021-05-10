@@ -480,10 +480,11 @@ abs_format <- function(sheet, wd, es) {
   x <- read_excel("data-raw/abs.xlsx",
                   sheet = sheet,
                   skip = 4) %>%
-    filter(str_detect(...1, "Gini")) %>%
+    filter(str_detect(`...1`, "Gini")) %>%
     mutate(var = c("gini", "gini_se")) %>% 
     gather(year, value, -var) %>% 
     spread(var, value) %>% 
+    filter(!str_detect(year, "\\.\\.\\.")) %>% 
     separate(year, into = c("year", "series"), sep = "\\(", fill = "right") %>% 
     transmute(country = "Australia",
               year = ifelse(str_extract(year, "\\d{2}$") %>% as.numeric() > 50,
