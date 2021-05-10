@@ -16,6 +16,8 @@ Brazil,2011,0.509,,sqrt,disp,FALSE,,"Higgins, Lustig, Ruble, and Smeeding 2013",
 Chile,2009,0.5637,,pc,market,FALSE,,Lustig 2015,,http://www.commitmentoequity.org/publications_files/Comparative/CEQWPNo30%20RedisImpactGovntSpendEducHealth%20March%202015.pdf
 Chile,2013,0.5028,,pc,market,FALSE,,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/07/CEQSI_Jun28_2019.xlsx
 Chile,2013,0.4668,,pc,disp,FALSE,,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/07/CEQSI_Jun28_2019.xlsx
+China,2014,0.544,,pc,market,FALSE,,Lustig and Wang 2020,12,http://repec.tulane.edu/RePEc/ceq/ceq93.pdf
+China,2014,0.509,,pc,disp,FALSE,,Lustig and Wang 2020,12,http://repec.tulane.edu/RePEc/ceq/ceq93.pdf
 Colombia,2010,0.5766,,pc,market,FALSE,,Lustig 2017,21,http://www.commitmentoequity.org/publications_files/Latin%20America/CEQ_WP62_Lustig_Feb22_2017.pdf
 Colombia,2010,0.5687,,pc,disp,FALSE,,Lustig 2017,21,http://www.commitmentoequity.org/publications_files/Latin%20America/CEQ_WP62_Lustig_Feb22_2017.pdf
 Colombia,2014,0.5746,,pc,market,FALSE,,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/07/CEQSI_Jun28_2019.xlsx
@@ -40,6 +42,7 @@ Indonesia,2012,0.389,,pc,con,FALSE,,"Jellama, Wai-Poi, and Afkar 2017",18,http:/
 Iran,2012,0.4286,,pc,market,FALSE,,"Enami, Lustig, and Taqdiri 2017",18,http://www.commitmentoequity.org/wp-content/uploads/2017/09/CEQ_WP48_Ali-Enami-Nora-Lustig-Alireza-Taqdiri_Iran_Sept2017.pdf
 Iran,2012,0.3686,,pc,disp,FALSE,,"Enami, Lustig, and Taqdiri 2017",18,http://www.commitmentoequity.org/wp-content/uploads/2017/09/CEQ_WP48_Ali-Enami-Nora-Lustig-Alireza-Taqdiri_Iran_Sept2017.pdf
 Jordan,2010,0.328,,pc,con,FALSE,,"Alam, Inchauste, and Serajuddin 2017",17,http://www.commitmentoequity.org/wp-content/uploads/2017/11/CEQ-WP44_Shamma-Inchauste-Serajuddin_Jordan_May2017.pdf
+Kenya,2015,0.41,,pc,con,FALSE,,"Kulundu Manda, Mutegi, Kipruto, Muriithi, Samoei, Oleche, Mwahu, and Younger 2020",15,http://repec.tulane.edu/RePEc/ceq/ceq101.pdf
 Mexico,1996,0.5202,,pc,disp,FALSE,,"Lopez-Calva, Lustig, Scott, and Castaneda 2014",,http://www.commitmentoequity.org/publications_files/Mexico/CEQWPNo17%20Lopez%20Calva%20et%20al-MexGasto%20social%20y%20redistribucion-Oct11_2013%20010714.pdf
 Mexico,2008,0.5293,,pc,market,FALSE,,Scott 2014,,http://dx.doi.org/10.1177/1091142113497394
 Mexico,2008,0.5094,,pc,disp,FALSE,,Scott 2014,,http://dx.doi.org/10.1177/1091142113497394
@@ -65,12 +68,17 @@ Russia,2010,0.491,,pc,market,FALSE,,"Lopez-Calva, Lustig, Matytsin, and Popova 2
 Russia,2010,0.359,,pc,disp,FALSE,,"Lopez-Calva, Lustig, Matytsin, and Popova 2017",28,http://www.commitmentoequity.org/wp-content/uploads/2017/09/CEQ_WP39_LopezCalva-Lustig-Matytsin-Popova_Russia_May2017.pdf
 South Africa,2011,0.771,,pc,market,FALSE,,"Inchauste, Lustig, Maboshe, Purlfield, and Woolard 2015",41,http://www.commitmentoequity.org/publications_files/South%20Africa/CEQWPNo29%20DistributImpactFisPolSouthAfrica%20Feb%202015.pdf
 South Africa,2011,0.694,,pc,disp,FALSE,,"Inchauste, Lustig, Maboshe, Purlfield, and Woolard 2015",41,http://www.commitmentoequity.org/publications_files/South%20Africa/CEQWPNo29%20DistributImpactFisPolSouthAfrica%20Feb%202015.pdf
+Spain,2016,0.51,,pc,market,FALSE,,Go_mez Bengoechea and Quan 2020,19,http://repec.tulane.edu/RePEc/ceq/ceq95.pdf
+Spain,2016,0.32,,pc,disp,FALSE,,Go_mez Bengoechea and Quan 2020,19,http://repec.tulane.edu/RePEc/ceq/ceq95.pdf
 Sri Lanka,2010,0.3646,,pc,con,FALSE,,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/07/CEQSI_Jun28_2019.xlsx
 Tanzania,2012,0.3574,,pc,con,FALSE,,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/07/CEQSI_Jun28_2019.xlsx
 Tunisia,2010,0.3972,,pc,con,FALSE,,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/07/CEQSI_Jun28_2019.xlsx
+Turkey,2016,0.485,,pc,market,FALSE,,"Cuevas, Lucchetti, and Nebiler 2020",18,http://repec.tulane.edu/RePEc/ceq/ceq100.pdf
+Turkey,2016,0.419,,pc,disp,FALSE,,"Cuevas, Lucchetti, and Nebiler 2020",18,http://repec.tulane.edu/RePEc/ceq/ceq100.pdf
 United States,2011,0.448,,sqrt,market,FALSE,,"Higgins, Lustig, Ruble, and Smeeding 2013",,http://www.commitmentoequity.org/publications_files/Brazil/Higgins%20Lustig%20Ruble%20Smeeding%20Comparing%20Brazil%20US%20Nov%2030%202013.pdf
 United States,2011,0.376,,sqrt,disp,FALSE,,"Higgins, Lustig, Ruble, and Smeeding 2013",,http://www.commitmentoequity.org/publications_files/Brazil/Higgins%20Lustig%20Ruble%20Smeeding%20Comparing%20Brazil%20US%20Nov%2030%202013.pdf
 Uganda,2013,0.4,,pc,con,FALSE,,"Jellema, Lustig, Haas, and Wolf 2017",26,http://www.commitmentoequity.org/wp-content/uploads/2017/08/CEQ_WP53_Jellema-Lustig-Haas-Wolf_June2017.pdf
+Uganda,2016,0.419,,pc,con,FALSE,,"Younger, Musisi, Asiimwe, Ntungire, Rauschendorfer, and Manwaring 2021",9,http://repec.tulane.edu/RePEc/ceq/ceq110.pdf
 Uruguay,1986,0.42,,pc,disp,FALSE,,"Burdin, Esponda, and Vigorito 2014",,http://www.commitmentoequity.org/publications_files/Uruguay/CEQWPNo21%20IneqTopIncomesUruguay%20May%202014.pdf
 Uruguay,1990,0.419,,pc,disp,FALSE,,"Burdin, Esponda, and Vigorito 2014",,http://www.commitmentoequity.org/publications_files/Uruguay/CEQWPNo21%20IneqTopIncomesUruguay%20May%202014.pdf
 Uruguay,1995,0.422,,pc,disp,FALSE,,"Burdin, Esponda, and Vigorito 2014",,http://www.commitmentoequity.org/publications_files/Uruguay/CEQWPNo21%20IneqTopIncomesUruguay%20May%202014.pdf
