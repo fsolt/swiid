@@ -194,52 +194,59 @@ rm(sedlac_ei, sedlac_hh, sedlac_pc)
 
 
 # CEPALStat (automated)
-cepal_link <- "http://interwp.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250"
-cepal0 <- cepal_link %>% read_xml() 
-cepal_extract <- function(x) {
-  cepal0 %>% xml_find_all(x) %>% 
+cepal_link1 <- "https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=3289"
+cepal_link2 <- "https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250"
+
+cepal_extract <- function(df, x) {
+  df %>% xml_find_all(x) %>% 
     xml_attrs() %>% 
     map_df(function(y) data.frame(as.list(y), stringsAsFactors = FALSE)) %>% 
     return()
 }
 
-cepal_raw <- cepal_extract("//dato")
-cepal_labels <- cepal_extract("//des") %>% 
-  select(-`in.`)
-cepal_notes <- cepal_extract("//nota")
-
-cepal <- left_join(cepal_raw, cepal_labels, by = c("dim_208" = "id")) %>%
-  filter(!name=="Latin America (simple average)") %>% 
-  mutate(country = countrycode(as.character(name), 
-                               origin = "country.name.en", 
-                               destination = "swiid.name",
-                               custom_dict = cc_swiid)) %>% 
-  filter(!is.na(country)) %>%
-  select(-name) %>% 
-  left_join(cepal_labels, by = c("dim_29117" = "id")) %>%
-  mutate(year = as.numeric(name)) %>% 
-  select(-name) %>% 
-  left_join(cepal_labels, by = c("dim_326" = "id")) %>%
-  mutate(area = as.character(name)) %>%
-  filter(area == "National" | (area == "Urban" & (country == "Argentina" | country == "Uruguay"))) %>% 
-  select(-name) %>% 
-  left_join(cepal_notes, by = c("ids_notas" = "id")) %>%
-  group_by(country) %>% 
-  transmute(year = year,
-            gini = as.numeric(as.character(valor)),
-            gini_se = NA,
-            welfare_def = "disp",
-            equiv_scale = "pc",
-            monetary = TRUE,
-            notes = paste(area, ifelse(is.na(descripcion), "", as.character(descripcion))),
-            series = paste("CEPAL", country, "disp pc", as.numeric(factor(notes, levels = unique(notes)))),
-            source1 = "CEPALStat",
-            page = area,
-            link = cepal_link) %>% 
-  ungroup() %>% 
-  select(-notes)
-
-rm(cepal0, cepal_raw, cepal_labels, cepal_notes)
+cepal <- purrr::map_df(c(cepal_link1, cepal_link2), function(cepal_link) {
+  cepal0 <- cepal_link %>% read_xml() 
+  cepal_raw <- cepal_extract(cepal0, "//dato")
+  cepal_labels <- cepal_extract(cepal0, "//des") %>% 
+    select(-`in.`)
+  cepal_notes <- cepal_extract(cepal0, "//nota")
+  
+  cepal1 <- left_join(cepal_raw, cepal_labels, by = c("dim_208" = "id")) %>%
+    filter(!name=="Latin America (simple average)") %>% 
+    mutate(country = countrycode(as.character(name), 
+                                 origin = "country.name.en", 
+                                 destination = "swiid.name",
+                                 custom_dict = cc_swiid)) %>% 
+    filter(!is.na(country)) %>%
+    select(-name) %>% 
+    left_join(cepal_labels, by = c("dim_29117" = "id")) %>%
+    mutate(year = as.numeric(name)) %>% 
+    select(-name) %>% 
+    left_join(cepal_labels, by = c("dim_326" = "id")) %>%
+    mutate(area = as.character(name)) %>%
+    filter(area == "National" | (area == "Urban" & (country == "Argentina" | country == "Uruguay"))) %>% 
+    select(-name) %>% 
+    left_join(cepal_notes, by = c("ids_notas" = "id")) %>%
+    group_by(country) %>% 
+    transmute(year = year,
+              gini = as.numeric(as.character(valor)),
+              gini_se = NA,
+              welfare_def = "disp",
+              equiv_scale = "pc",
+              monetary = TRUE,
+              notes = paste(area, ifelse(is.na(descripcion), "", as.character(descripcion)), cepal_link),
+              series = paste("CEPAL", country, "disp pc", as.numeric(factor(notes, levels = unique(notes)))),
+              source1 = "CEPALStat",
+              page = area,
+              link = cepal_link) %>% 
+    ungroup() %>% 
+    select(-notes)
+  
+  # rm(cepal0, cepal_raw, cepal_labels, cepal_notes)
+  
+  return(cepal1)
+}) %>% 
+  arrange(country, year, series)
 
 
 # CEPAL Serie Distribución del Ingreso (archived)
@@ -448,7 +455,7 @@ armstat <- arm_reports %>%
   arrange(desc(report), desc(year), v1) %>% 
   distinct(year, v1, .keep_all = TRUE) %>% 
   transmute(country = "Armenia",
-            year = as.numeric(year),
+            year = as.numeric(str_extract(year, "\\d{4}")),
             gini = as.numeric(gini),
             gini_se = NA,
             welfare_def = if_else(str_detect(v1, "consumption"), "con", "gross"),
@@ -466,13 +473,14 @@ rm(arm_page, arm_reports)
 # confirm latest release at: http://www.abs.gov.au/AUSSTATS/abs@.nsf/second+level+view?ReadForm&prodno=6523.0&viewtitle=Household%20Income%20and%20Wealth,%20Australia~2013-14~Latest~04/09/2015&&tabname=Past%20Future%20Issues&prodno=6523.0&issue=2013-14&num=&view=&
 # latest release link > downloads tab > copy link to download xls for "Household Income and Income Distribution, Australia, 1994–95 to [year]"
 
-abs_link <- "http://www.abs.gov.au/AUSSTATS/subscriber.nsf/log?openagent&65230do001_201516.xls&6523.0&Data%20Cubes&D855CA80E6B4C593CA2582D5001333CC&0&2015-16&26.07.2018&Latest"
-download.file(abs_link, "data-raw/abs.xls")
+abs_link <- "https://www.abs.gov.au/statistics/economy/finance/household-income-and-wealth-australia/2017-18/Household%20income%20and%20income%20distribution%2C%20Australia.xlsx"
+download.file(abs_link, "data-raw/abs.xlsx")
 
 abs_format <- function(sheet, wd, es) {
-  x <- read_excel("data-raw/abs.xls",
+  x <- read_excel("data-raw/abs.xlsx",
                   sheet = sheet,
-                  skip = 4) %>% `[`(c(38, 90), 3:15) %>%
+                  skip = 4) %>%
+    filter(str_detect(...1, "Gini")) %>%
     mutate(var = c("gini", "gini_se")) %>% 
     gather(year, value, -var) %>% 
     spread(var, value) %>% 
