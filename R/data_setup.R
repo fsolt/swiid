@@ -123,7 +123,11 @@ format_sedlac <- function(df, sheet, link, es) {
   countries_sedlac <- "Argentina|Bolivia|Brazil|Chile|Colombia|Costa|Dominican|Ecuador|El Salvador|Guatemala|Honduras|Mexico|Nicaragua|Panama|Paraguay|Peru|Uruguay|Venezuela|Caribbean|Belice|Guyana|Haiti|Jamaica|Suriname"
   x$h_co <- str_detect(x$heading, countries_sedlac)
   x$country <- ifelse(x$h_co, str_trim(x$heading), NA)
-  x$country <- c(NA, zoo::na.locf(x$country)) 
+  if (is.na(x$country[1])) {
+    x$country <- c(NA, zoo::na.locf(x$country))
+  } else {
+    x$country <- zoo::na.locf(x$country)
+  }
   x$country <- x$country %>% 
     str_replace("Dominican Rep.", "Dominican Republic") %>% 
     str_replace("Belice", "Belize")
@@ -159,7 +163,7 @@ format_sedlac <- function(df, sheet, link, es) {
   return(x)
 }
 
-sedlac_link <- "http://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2018_inequality_LAC.xlsx"
+sedlac_link <- "https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2020_inequality_LAC.xlsx"
 download.file(sedlac_link, "data-raw/sedlac.xlsx")
 
 sedlac_pc <- read_excel(path = "data-raw/sedlac.xlsx", 
