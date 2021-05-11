@@ -1,6 +1,6 @@
 if (!require(pacman)) install.packages("pacman"); library(pacman)
 p_load(tidyverse, readxl, 
-       eurostat, povcalnetR, rsdmx, xml2, rvest,
+       eurostat, povcalnetR, rsdmx, xml2, rvest, csodata,
        countrycode, janitor, pdftools)
 p_load_gh("ropensci/tabulizerjars", "ropensci/tabulizer") # read PDF tables; see https://github.com/ropensci/tabulizer for installation help if needed
 p_load_gh("ropengov/dkstat")
@@ -832,10 +832,14 @@ geostat <- pxweb_get_data(url = geostat_link,
 
 
 # Statbank Greenland (automated)
-greenland <- read_csv("http://bank.stat.gl/sq/c9908617-937d-468d-af45-b6ee974e5a99") %>%
+greenland_link <- "https://bank.stat.gl:443/api/v1/en/Greenland/IN/IN40/INXIU101.px"
+greenland <- pxweb_get_data(url = greenland_link,
+                            pxweb_query(list(indicator = c('0'),
+                                             time = c('*')))) %>%
+  janitor::clean_names() %>% 
   transmute(country = "Greenland",
             year = as.numeric(time),
-            gini = `Gini index`/100,
+            gini = inequality_indicators_on_equivalised_disposable_income/100,
             gini_se = NA,
             welfare_def = "disp",
             equiv_scale = "oecdm",
@@ -843,7 +847,7 @@ greenland <- read_csv("http://bank.stat.gl/sq/c9908617-937d-468d-af45-b6ee974e5a
             series = paste("Statbank Greenland", welfare_def, equiv_scale),
             source1 = "Statbank Greenland",
             page = "",
-            link = "http://bank.stat.gl/pxweb/en/Greenland/Greenland__IN__IN40/INXF1.px")
+            link = greenland_link)
 
 
 # Statistics Hong Kong (update in 2022)
@@ -990,13 +994,11 @@ rm(bpsid1, bpsid2)
 # Statistical Center of Iran (update link--search site with Google; blocked as of 12-08-2018, so use archive.org version)
 # https://www.google.com/search?hl=en&as_q=gini&as_sitesearch=https%3A%2F%2Fwww.amar.org.ir%2Fenglish
 
-amar_link <- "https://web.archive.org/web/20170524160512/https://www.amar.org.ir/english/Latest-Releases-Page/articleType/ArticleView/articleId/475"
-
-amar <- read_html(amar_link) %>% 
-  html_node(".articleEntry table") %>% 
-  html_table(header = TRUE) %>% 
-  filter(Description == "Gini coefficient") %>% 
-  select(-Description) %>% 
+amar_link <- "https://www.amar.org.ir/Portals/1/releases/heis/total/Gini%20coefficient%20of%20the%20years%201380-1396.xlsx?ver=2019-04-09-101341-147"
+download.file(amar_link, "data-raw/amar.xlsx")
+amar <- read_excel("data-raw/amar.xlsx", skip = 2) %>% 
+  filter(...1 == "Gini coefficient") %>% 
+  select(-...1) %>% 
   gather(key = year, value = gini) %>% 
   transmute(country = "Iran",
             year = as.numeric(year) + 621,
@@ -1012,25 +1014,19 @@ amar <- read_html(amar_link) %>%
 
 
 # CSO Ireland (automated)
-cso_ie_link <- "https://statbank.cso.ie/StatbankServices/StatbankServices.svc/jsonservice/responseinstance/SIA47"
-
-cso_ie0 <- jsonlite::fromJSON(cso_ie_link)
-
-cso_ie <- tibble(Year = rep(cso_ie0[["dataset"]][["dimension"]][["Year"]][["category"]][["label"]] %>% unlist(), each = 2),
-                 Statistic = rep(cso_ie0[["dataset"]][["dimension"]][["Statistic"]][["category"]][["label"]] %>% unlist(), length.out = length(Year)),
-                 value = cso_ie0[["dataset"]][["value"]]) %>% 
-  filter(Statistic == "Gini Coefficient (%)") %>% 
+cso_ie <- cso_get_data("SIA47", wide_format = "tall", use_factors = FALSE, cache = FALSE) %>% 
+  filter(str_detect(Statistic, "Gini")) %>% 
   transmute(country = "Ireland",
             year = as.numeric(as.character(Year)),
             gini = as.numeric(value)/100,
             gini_se = NA,
             welfare_def = "disp",
-            equiv_scale = "pc",
+            equiv_scale = "ae",
             monetary = FALSE,
             series = paste("CSO Ireland", welfare_def, equiv_scale),
             source1 = "CSO Ireland",
             page = "",
-            link = cso_ie_link)
+            link = "https://data.cso.ie/table/SIA47")
 
 
 # Istat (update file, but doesn't appear to be maintained)
