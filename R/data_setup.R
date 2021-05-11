@@ -552,46 +552,42 @@ ipea <- read_csv("data-raw/ipea.csv", skip = 1) %>%
 
 
 # Belarus National Statistical Committee (automated, but will probably need to update wrangle)
-belstat_page <- "http://www.belstat.gov.by/en/ofitsialnaya-statistika/social-sector/uroven-zhizni-naseleniya/publikatsii__1/"
+belstat_page <- "https://www.belstat.gov.by/en/ofitsialnaya-statistika/Demographic-and-social-statistics/income-and-consumption/household-incomes-and-consumption/publications/"
 try(
   {
     belstat_zip <- html_session(belstat_page) %>% 
-      follow_link("Social Conditions and Standard of Living") %>% 
+      follow_link("Social conditions and standard of living") %>% 
       follow_link("Download")
     belstat_link <- belstat_zip$back[1]
-    belstat_temp <- tempfile(fileext = ".zip")
+    belstat_temp <- tempfile(fileext = ".pdf")
     writeBin(belstat_zip$response$content, belstat_temp)
-    belstat_dir <- file.path(tempdir(), "belstat")
-    unzip(belstat_temp, exdir = belstat_dir) 
-    belstat_file <- list.files(belstat_dir) %>% 
-      str_subset(".pdf") %>% 
-      file.path(belstat_dir, .)
-    file.rename(belstat_file, "data-raw/belstat.pdf")
+    file.rename(belstat_temp, "data-raw/belstat.pdf")
     unlink(c(belstat_temp, belstat_dir), recursive = TRUE)
-    rm(belstat_zip)
   }
 )
 
 if (!exists("belstat_link")) belstat_link <- belstat_page 
 
-belstat <- extract_tables("data-raw/belstat.pdf", pages = 76)[[1]] %>%
+belstat_page <- 59
+
+belstat <- extract_tables("data-raw/belstat.pdf", pages = belstat_page)[[1]] %>%
   as_data_frame() %>% 
-  filter(V1 == ""| V1 == "concentration)") %>% 
-  select(-V1) %>% 
-  first_row_to_names() %>% 
+  filter(str_detect(V4, "concentration\\)")) %>% 
+  select(V2, V3) %>% 
+  transmute(V5 = paste(V2, V3)) %>% 
+  separate(V5, paste0("x", 2013:2018), sep = " ") %>% 
   gather(key = year, value = gini) %>% 
   transmute(country = "Belarus",
-            year = as.numeric(year),
-            gini = as.numeric(gini),
+            year = as.numeric(str_extract(year, "\\d{4}")),
+            gini = as.numeric(str_replace(gini, ",", ".")),
             gini_se = NA,
             welfare_def = "disp",
             equiv_scale = "pc",
             monetary = FALSE,
             series = paste("Belstat", welfare_def, equiv_scale),
             source1 = "Belarus National Committee of Statistics",
-            page = "",
+            page = belstat_page,
             link = belstat_link)
-
 
 # Statistics Canada (automated)
 get_statcan <- function(pid) {
@@ -635,15 +631,15 @@ statcan <- get_statcan(11100134) %>%
 
 
 # DANE Colombia (automated)
-dane_file <- "http://www.dane.gov.co/index.php/estadisticas-por-tema/pobreza-y-condiciones-de-vida/pobreza-y-desigualdad/" %>% 
-  html_session() %>% 
-  follow_link("Pobreza monetaria") %>%
-  follow_link("Anexos")
-dane_link <- dane_file$url
-writeBin(dane_file$response$content, "data-raw/dane.xls")
-rm(dane_file)
+dane_link <- "https://www.dane.gov.co/index.php/estadisticas-por-tema/pobreza-y-condiciones-de-vida/pobreza-monetaria" %>% 
+  read_html() %>%
+  html_node(xpath="//a[contains(@href, 'anexo_pobreza')]") %>% 
+  html_attr("href") %>% 
+  str_c("https://www.dane.gov.co", .)
+  
+download.file(dane_link, "data-raw/dane.xls")
 
-dane <- read_excel("data-raw/dane.xls", sheet = "Gini", skip = 15) %>% 
+dane <- read_excel("data-raw/dane.xls", sheet = "Gini", skip = 14) %>% 
   rename(region = 1) %>% 
   filter(region == "Nacional") %>% 
   gather(key = year, value = gini, -region) %>% 
