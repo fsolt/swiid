@@ -656,13 +656,17 @@ dane <- read_excel("data-raw/dane.xls", sheet = "Gini", skip = 14) %>%
             link = dane_link)
 
 
-# Costa Rica (update file; as of 2017-05 page not sufficiently responsive to automate)
-# http://www.inec.go.cr/pobreza-y-desigualdad/desigualdad
-ineccr_link <- "http://www.inec.go.cr/sites/default/files/documetos-biblioteca-virtual/repobrezaenaho2010-2017-01.xlsx"
+# Costa Rica (automated)
+ineccr_link <- "https://www.inec.cr/pobreza-y-desigualdad/desigualdad" %>% 
+  read_html() %>%
+  html_node(xpath="//a[contains(@href, 'gini')]") %>% 
+  html_attr("href")
+  
+download.file(ineccr_link, "data-raw/ineccr.xlsx")
 
 ineccr <- read_excel("data-raw/ineccr.xlsx",
                      skip = 4,
-                     sheet = "1") %>%
+                     sheet = "Cuadro 1") %>%
   select(Año, Total) %>% 
   filter(!is.na(Año)) %>% 
   mutate(es = if_else(cumsum(str_detect(Año, "por persona")) == 1, "pc", "hh")) %>% 
