@@ -725,27 +725,50 @@ capmas <- read_excel("data-raw/capmas.xls", skip = 7) %>%
             link = capmas_link) 
 
 
-# Statistics Estonia (archived; though check to see if API now out of beta)
-statee <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/statistics_estonia.tsv", 
-                   col_names = FALSE,
-                   col_types = "idd") %>% 
-  rename(year = X1, pc = X2, oecdm = X3) %>% 
-  gather(key = equiv_scale, value = gini, pc:oecdm) %>% 
+# Statistics Estonia (automated)
+statee_con_url <- "https://andmed.stat.ee/api/v1/en/stat/LE30"
+statee_con <- pxweb_get(url = statee_con_url,
+                        query = list("Aasta"=c("*"),
+                                     "Tarbimiskaalud"=c("1","2","4"))) %>% 
+  as.data.frame(column.name.type = "text", variable.value.type = "text") %>% 
+  rename_with(~ tolower(str_replace(.x, "[\\s:].*", ""))) %>% 
   transmute(country = "Estonia",
-            year = year,
-            gini = gini,
+            year = as.numeric(year),
+            gini = as.numeric(le30),
             gini_se = NA,
             welfare_def = "con",
-            equiv_scale = equiv_scale,
+            equiv_scale = case_when(str_detect(equivalence, "Estonian") ~ "ae",
+                                    str_detect(equivalence, "OECD modified") ~ "oecdm",
+                                    TRUE ~ "pc"),
             monetary = FALSE,
             series = paste("Statistics Estonia", welfare_def, equiv_scale),
             source1 = "Statistics Estonia",
             page = "",
-            link = "http://pub.stat.ee/px-web.2001/dialog/varval.asp?ma=HH30")
+            link = "https://andmed.stat.ee/api/v1/en/stat/LE30")
 
+statee_url <- "https://andmed.stat.ee/api/v1/en/stat/LES25"
+statee <- pxweb_get(url = statee_url,
+                    query = list("Näitaja"=c("6"),
+                                 "Aasta"=c("*"),
+                                 "Rahvus/kodakondsus"=c("1"))) %>% 
+  as.data.frame(column.name.type = "text", variable.value.type = "text") %>% 
+  rename_with(~ tolower(str_replace(.x, ":.*", ""))) %>% 
+  filter(!is.na(les25)) %>% 
+  transmute(country = "Estonia",
+            year = as.numeric(year),
+            gini = as.numeric(les25),
+            gini_se = NA,
+            welfare_def = "disp",
+            equiv_scale = "ae",
+            monetary = FALSE,
+            series = paste("Statistics Estonia", welfare_def, equiv_scale),
+            source1 = "Statistics Estonia",
+            page = "",
+            link = statee_url) %>% 
+  bind_rows(statee_con)
 
 # Statistics Finland (automated)
-statfi <- pxweb_get_data(url = "http://pxnet2.stat.fi/PXWeb/api/v1/fi/StatFin_Passiivi/tul/tjt/statfinpas_tjt_pxt_015_201700.px",
+statfi <- pxweb_get_data(url = "https://pxnet2.stat.fi/PXWeb/api/v1/fi/StatFin_Passiivi/tul/tjt/statfinpas_tjt_pxt_015_201700.px",
                          pxweb_query(list(Tulokäsite = c('SL2', '4L2', '6L2'),
                                           Tiedot = c('Gini'),
                                           Vuosi = c('*')))) %>% 
@@ -761,7 +784,7 @@ statfi <- pxweb_get_data(url = "http://pxnet2.stat.fi/PXWeb/api/v1/fi/StatFin_Pa
             series = paste("Statistics Finland", welfare_def, equiv_scale),
             source1 = "Statistics Finland",
             page = "",
-            link = "http://pxnet2.stat.fi/PXWeb/sq/7c6273ca-537e-418d-a63e-57dd4543d4ae")
+            link = "https://pxnet2.stat.fi/PXWeb/sq/7c6273ca-537e-418d-a63e-57dd4543d4ae")
 
 
 # Insee France (archived)
@@ -789,29 +812,23 @@ insee <- readLines(insee_link) %>%              # kickin' it old skool . . .
             link = insee_link)
 
 
-# Statistics Georgia (update file)
-# http://pc-axis.geostat.ge/PXWeb/pxweb/ka/Database
-# Social Statistics > Standard of Living, Subsistance Minimum > Gini Coefficients by Year and Indicator
-# All years, "By total incomes" and "By total expenditures"
-
-geostat <- read_delim("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/geostat.csv",
-                      delim = ";",
-                      skip = 3, 
-                      col_names = c("year", "gross", "con"),
-                      col_types = "cdd") %>%
-  filter(!is.na(gross)) %>% 
-  gather(key = "welfare_def", value = "gini", gross:con) %>% 
+# Statistics Georgia (automated)
+geostat_link <- "http://pc-axis.geostat.ge/PXweb/api/v1/en/Database/Social%20Statistics/Standard%20of%20Living,%20Subsistence%20Minimum/Gini_Coefficients.px"
+geostat <- pxweb_get_data(url = geostat_link,
+                          pxweb_query(list(Indicator = c('0', '5'),
+                                           Year = c('*')))) %>% 
+  janitor::clean_names() %>% 
   transmute(country = "Georgia",
             year = as.numeric(year),
-            gini = gini,
+            gini = as.numeric(gini_coefficients),
             gini_se = NA,
-            welfare_def = welfare_def,
+            welfare_def = if_else(str_detect(indicator, "incomes"), "gross", "con"),
             equiv_scale = "pc",
             monetary = FALSE,
             series = paste("Geostat", welfare_def, equiv_scale),
             source1 = "Statistics Georgia",
             page = "",
-            link = "http://pc-axis.geostat.ge/PXWeb/pxweb/ka/Database")
+            link = geostat_link)
 
 
 # Statbank Greenland (automated)
