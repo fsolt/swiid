@@ -511,15 +511,16 @@ rm(abs_de, abs_gh)
 
 
 # Instituto Naciónal de Estadística de Bolivia (update file)
-# https://www.ine.gob.bo/index.php/podreza-desarrollo/introduccion-2
-# > Cuadros Estadisticos (tab) > LINEA > all years > Generar
-inebo_link <- "https://www.ine.gob.bo/index.php/podreza-desarrollo/introduccion-2"
-inebo <- read_excel("data-raw/inebo.xlsx", skip = 6) %>% 
-  filter(DESCRIPCION=="Bolivia") %>% 
-  select(matches("\\d{4}")) %>% 
+# https://www.ine.gob.bo/index.php/estadisticas-economicas/encuestas-de-hogares/
+# > Desigualdad > BOLIVIA: ÍNDICE DE GINI PARA EL INGRESO PER CÁPITA MENSUAL, SEGÚN ÁREA, 2005 – 2020
+inebo_link <- "https://nube.ine.gob.bo/index.php/s/8ENNmIWUzBopwbJ/download"
+download.file(inebo_link, "data-raw/inebo.xlsx")
+inebo <- read_excel("data-raw/inebo.xlsx", skip = 4) %>% 
+  filter(INDICADOR=="Bolivia") %>% 
+  select(-INDICADOR) %>% 
   gather(key = year, value = gini) %>% 
   transmute(country = "Bolivia",
-            year = as.numeric(year),
+            year = as.numeric(str_extract(year, "\\d{4}")),
             gini = gini,
             gini_se = NA,
             welfare_def = "gross",
