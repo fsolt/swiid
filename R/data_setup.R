@@ -1029,11 +1029,12 @@ cso_ie <- cso_get_data("SIA47", wide_format = "tall", use_factors = FALSE, cache
             link = "https://data.cso.ie/table/SIA47")
 
 
-# Istat (update file, but doesn't appear to be maintained)
-# http://dati.istat.it/Index.aspx?DataSetCode=DCCV_INDCONSUMI&Lang=en#
-# Customize > Territory: Italy > Data Type: Gini
+# Istat (update istat2 file)
+# http://dati.istat.it/
+# Sidebar: Household Economic Condiitons and Disparities > Consumption distribution > Regions
+# Customize > Territory: Italy > Data Type: Gini > Years: all years
 
-istat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/istat.csv",
+istat1 <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/istat.csv",
                   col_types = "ccccicdc") %>% 
   transmute(country = "Italy",
             year = Year,
@@ -1042,27 +1043,45 @@ istat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw
             welfare_def = "con",
             equiv_scale = "hh",
             monetary = FALSE,
-            series = paste("Istat", welfare_def, equiv_scale),
+            series = paste("Istat", welfare_def, equiv_scale, "1"),
             source1 = "Istat",
             page = "",
             link = "http://dati.istat.it/Index.aspx?DataSetCode=DCCV_INDCONSUMI&Lang=en")
 
+istat2 <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/istat2.csv",
+                   col_types = "ccccccdddcc") %>% 
+  transmute(country = "Italy",
+            year = TIME,
+            gini = Value,
+            gini_se = NA,
+            welfare_def = "con",
+            equiv_scale = "hh",
+            monetary = FALSE,
+            series = paste("Istat", welfare_def, equiv_scale, "2"),
+            source1 = "Istat",
+            page = "",
+            link = "http://dati.istat.it/")
+
+istat <- bind_rows(istat1, istat2)
+rm(istat1, istat2)
 
 # Statinja (update file)
 # http://statinja.gov.jm/living_conditions_poverty.aspx
-# Incidence of Poverty > Gini Coefficient, Jamaica > Download > csv
+# Incidence of Poverty > Gini Coefficient, Jamaica > Download > unclick "Dates Across Top" > csv
 
-statinja <- read_csv("data-raw/statinja.csv") %>% 
-  filter(`Series title` == "Old Gini") %>%   # consumption per capita https://www.pioj.gov.jm/Portals/0/Social_Sector/Executive%20SummaryFinal.pdf at XIII
-  select_if(is.numeric) %>% 
-  gather(key = date, value = gini) %>% 
+statinja <- read_csv("data-raw/statinja.csv", skip = 13, col_types = "cdd") %>% 
+  rename(date = DATE, old = VALUE, new = VALUE_1) %>% 
+  pivot_longer(cols = old:new,
+               names_to = "series",
+               values_to = "gini") %>% 
+  filter(!is.na(gini)) %>% 
   transmute(country = "Jamaica",
             year = as.numeric(str_extract(date, "\\d{4}")),
             gini = gini,
             gini_se = NA,
             welfare_def = "con",
             equiv_scale = "pc",
-            series = paste("Statinja", welfare_def, equiv_scale),
+            series = paste("Statinja", welfare_def, equiv_scale, if_else(series=="old", 1, 2)),
             source1 = "Statistical Institute of Jamaica",
             page = "",
             link = "http://statinja.gov.jm/living_conditions_poverty.aspx")
@@ -1077,7 +1096,7 @@ kazstat <- read_excel("data-raw/kazstat.xls",
                       .name_repair = ~ make.names(.x, unique = TRUE)) %>%
   rename(region = 1) %>% 
   filter(region == "Republic of Kazakhstan") %>% 
-  select(-region, -ends_with("\\.1")) %>% 
+  select(-region, -ends_with(".1")) %>% 
   gather(key = year, value = gini) %>% 
   filter(gini < 1) %>% # because 2017 ratio without 2017 gini on 2019-02-08 
   transmute(country = "Kazakhstan",
