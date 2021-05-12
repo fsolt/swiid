@@ -1159,7 +1159,15 @@ nsck <- read_excel("data-raw/nsck.xls") %>%
             link = nsck_link)
 
 
-# Economy Planning Unit of Malaysia (update link--http://epu.gov.my/ms/search/node/gini)
+# Economy Planning Unit of Malaysia (automated)
+epumy_link <- "https://www.epu.gov.my/en/socio-economic-statistics/household-income-poverty-and-household-expenditure" %>% 
+  read_html() %>%
+  html_node(xpath="//a[contains(@href, 'gini')]") %>% 
+  html_attr("href") %>% 
+  str_c("https://www.epu.gov.my", .)
+
+download.file(epumy_link, "data-raw/epumy.pdf")
+
 epumy_link <- "http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf"
 tryCatch(download.file(epumy_link, "data-raw/epumy.pdf"),
          error = function(e) {
@@ -1171,7 +1179,7 @@ epumy <- extract_tables("data-raw/epumy.pdf") %>%
   t() %>% 
   as_tibble() %>% 
   transmute(country = "Malaysia",
-            year = as.numeric(V1),
+            year = as.numeric(str_extract(V1, "\\d{4}")),
             gini = as.numeric(V2),
             gini_se = NA,
             welfare_def = "gross",
