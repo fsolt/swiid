@@ -1168,12 +1168,6 @@ epumy_link <- "https://www.epu.gov.my/en/socio-economic-statistics/household-inc
 
 download.file(epumy_link, "data-raw/epumy.pdf")
 
-epumy_link <- "http://epu.gov.my/sites/default/files/Jadual%206%20-%20Pekali%20Gini%20Mengikut%20Kumpulan%20Etnik%2C%20Strata%20dan%20Negeri%2C%20Malaysia%2C%201970-2016.pdf"
-tryCatch(download.file(epumy_link, "data-raw/epumy.pdf"),
-         error = function(e) {
-           download.file("https://github.com/fsolt/swiid/raw/master/data-raw/epumy.pdf", "data-raw/epumy.pdf")
-         })
-
 epumy <- extract_tables("data-raw/epumy.pdf") %>% 
   first() %>% 
   t() %>% 
@@ -1193,7 +1187,7 @@ epumy <- extract_tables("data-raw/epumy.pdf") %>%
 
 
 # National Bureau of Statistics Moldova (update link: check Statistical Yearbook to find table number)
-nbs_link <- "http://www.statistica.md/public/files/serii_de_timp/venituri_cheltuieli/veniturile_gospodariilor/4.2.5.xls"
+nbs_link <- "https://www.statistica.md/public/files/serii_de_timp/venituri_cheltuieli/veniturile_gospodariilor/4.2.5.xls"
 download.file(nbs_link, "data-raw/nbs.xls")
 
 nbs <- read_excel("data-raw/nbs.xls", skip = 2, sheet = "Лист1") %>%
