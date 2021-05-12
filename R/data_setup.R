@@ -1187,10 +1187,10 @@ epumy <- extract_tables("data-raw/epumy.pdf") %>%
 
 
 # National Bureau of Statistics Moldova (update link: check Statistical Yearbook to find table number)
-nbs_link <- "https://www.statistica.md/public/files/serii_de_timp/venituri_cheltuieli/veniturile_gospodariilor/4.2.5.xls"
-download.file(nbs_link, "data-raw/nbs.xls")
+nbs0_link <- "https://github.com/fsolt/swiid/raw/master/data-raw/nbs.xls"
+download.file(nbs0_link, "data-raw/nbs0.xls")
 
-nbs <- read_excel("data-raw/nbs.xls", skip = 2, sheet = "Лист1") %>%
+nbs0 <- read_excel("data-raw/nbs0.xls", skip = 2, sheet = "Лист1") %>%
   first_row_to_names() %>% 
   filter(str_detect(v1, "coeficientul Gini")) %>% 
   select(-v1) %>% 
@@ -1202,10 +1202,41 @@ nbs <- read_excel("data-raw/nbs.xls", skip = 2, sheet = "Лист1") %>%
             welfare_def = "disp",
             equiv_scale = "pc",
             monetary = FALSE,
-            series = paste("NBS Moldova", welfare_def, equiv_scale),
+            series = paste("NBS Moldova", welfare_def, equiv_scale, 1),
             source1 = "National Bureau of Statistics of Moldova",
-            page = "Лист1",
-            link = nbs_link)
+            page = "112",
+            link = "https://statistica.gov.md/public/files/publicatii_electronice/Anuar_Statistic/2017/Anuar_statistic_2017.pdf")
+
+nbs_link <-  "https://statistica.gov.md/pageview.php?l=en&id=2422&idc=350" %>% # Publications
+  html_session() %>% 
+  follow_link(xpath = "//a[contains(text(), 'Statistical yearbook')]") %>% 
+  follow_link(xpath = "//a[contains(@href, 'eniturile')]")
+
+nbs_zip <- tempfile(fileext = ".zip")
+writeBin(nbs_link$response$content, nbs_zip)
+nbs_temp <- tempdir()
+unzip(nbs_zip, exdir = nbs_temp)
+file.copy(file.path(nbs_temp, "4.2.xlsx"), "data-raw/nbs.xlsx")
+
+nbs <- bind_rows(nbs0, read_excel("data-raw/nbs.xlsx", skip = 1, sheet = "5.") %>%
+  filter(str_detect(...1, "coeficientul Gini")) %>% 
+  select(-...1) %>% 
+  gather(key = year, value = gini) %>% 
+  separate(year, into = c("year", "series"), sep = " ", fill = "right") %>% 
+  mutate(series = if_else(is.na(series), "", series),
+                                series = as.numeric(as.factor(series))) %>% 
+  transmute(country = "Moldova",
+            year = as.numeric(str_extract(year, "\\d{4}")),
+            gini = gini,
+            gini_se = NA,
+            welfare_def = "disp",
+            equiv_scale = "pc",
+            monetary = FALSE,
+            series = paste("NBS Moldova", welfare_def, equiv_scale, series),
+            source1 = "National Bureau of Statistics of Moldova",
+            page = "5.",
+            link = nbs_link$url))
+
 
 
 
