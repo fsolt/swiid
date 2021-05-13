@@ -99,12 +99,11 @@ lis_files <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",
                "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", 
                "in", "ie", "il", "it", "jp", "lt", "lu", "mx", "nl", "no", "pa", "py", 
                "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se", 
-               "ch", "tw", "uk", "us", "uy") # add "la", lv", "ml" and "vn" when LIS releases data
+               "ch", "tw", "uk", "us", "uy", "vn") # add "la", lv", and "ml" when LIS releases data
 
 lis <- lis_files %>% 
   map_df(format_lis) %>% 
-  rbind(format_lis_xtra("nz")) %>% 
-  rbind(format_lis_xtra("vn_temp")) %>% 
+  rbind(format_lis_xtra("nz")) %>%
   arrange(country, year, welfare_def, equiv_scale)
 
 ru_lis_old <- format_lis_xtra("ru_old") %>% 
@@ -1492,7 +1491,10 @@ rm(ssi1, ssi2)
 ine_link <- "http://www.ine.es/jaxiT3/files/t/es/csv_c/9966.csv?nocab=1"
 download.file(ine_link, "data-raw/ine.csv")
 
-ine <- read_csv("data-raw/ine.csv", skip = 4) %>% 
+ine <- "data-raw/ine.csv" %>% 
+  readLines() %>% 
+  str_replace_all("(?<=\\d{2}),(?=\\d,)", ".") %>% 
+  read_csv(skip = 4) %>% 
   filter(str_detect(X1, "con alquiler imputado")) %>% 
   gather(key = year, value = gini) %>% 
   filter(str_detect(year, "\\d{4}")) %>% 
