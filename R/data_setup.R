@@ -1238,8 +1238,6 @@ nbs <- bind_rows(nbs0, read_excel("data-raw/nbs.xlsx", skip = 1, sheet = "5.") %
             link = nbs_link$url))
 
 
-
-
 # Statistics Office of Montenegro (automated, but update backup Internet Archive link)
 # Slow server, so get from Internet Archive if it times out
 get_monstat_file <- function() {
@@ -1252,8 +1250,9 @@ get_monstat_file <- function() {
 
 monstat_link <- tryCatch(get_monstat_file(), 
                          error = function(e) {
-                           monstat_file <- html_session("https://web.archive.org/web/20170613040141/http://www.monstat.org/eng/index.php") %>% 
-                             follow_link("Poverty line") %>% 
+                           monstat_file <- html_session("https://web.archive.org/web/20210421010924/https://www.monstat.org/eng/index.php") %>% 
+                             follow_link("Household consumption") %>% 
+                             follow_link("poverty line") %>% 
                              follow_link("Data")
                            writeBin(httr::content(monstat_file$response, "raw"), "data-raw/monstat.xls")
                            return(monstat_file$response$url)
@@ -1338,30 +1337,33 @@ ssb <- pxweb_get_data(url = "https://data.ssb.no/api/v0/en/table/07756/",
             link = "https://www.ssb.no/en/statbank/table/07756/")
 
 
-# DGEEC Paraguay (update link and, probably, wrangle)
-# http://www.dgeec.gov.py > Publicaciones > Pobreza
-dgeec_link <- "https://web.archive.org/web/20180319151156/http://www.dgeec.gov.py/Publicaciones/Biblioteca/diptico%20desigualdad%20ingreso/diptico%20DESIGUALDAD%20DE%20INGRESOS.pdf"
-download.file(dgeec_link, "data-raw/dgeec.pdf")
+# DGEEC Paraguay (automated)
+# https://www.ine.gov.py > ESTÁDISTICA POR TEMA > Ingresos
+dgeec_link <- "https://www.ine.gov.py/default.php?publicacion=5" %>% 
+    read_html() %>% 
+    html_node(xpath = "//a[contains(@href, 'desigualdad')]") %>% 
+    html_attr("href") %>% 
+    str_c("https://www.ine.gov.py/", .) %>% 
+    str_replace_all(" ", "%20")
 
-dgeec <- extract_tables("data-raw/dgeec.pdf", pages = 2) %>% 
-  first() %>% 
-  as_tibble() %>%
+download.file(dgeec_link, "data-raw/dgeec.xls")
+
+dgeec <- read_excel("data-raw/dgeec.xls", skip = 3) %>% 
+  janitor::clean_names() %>% 
+  filter(!is.na(x1) & !is.na(coeficiente_de_gini_2)) %>%
   transmute(country = "Paraguay",
-            year = str_trim(V1) %>% 
+            year = str_trim(x1) %>% 
               str_extract("\\d{4}/?\\d{0,2}") %>% 
               str_replace("(\\d{2})\\d{2}/(\\d{2})", "\\1\\2") %>% 
               as.numeric(),
-            gini = str_trim(V1) %>% 
-              str_extract("01?,\\d{3}") %>% 
-              str_replace("1?,", ".") %>% 
-              as.numeric(),
+            gini = coeficiente_de_gini_2,
             gini_se = NA,
             welfare_def = "gross",
             equiv_scale = "pc",
             monetary = TRUE,
             series = paste("DGEEC", welfare_def, equiv_scale),
-            source1 = "Dirección General de Estadística, Encuestas y Censos 2017",
-            page = "2",
+            source1 = "Dirección General de Estadística, Encuestas y Censos",
+            page = "",
             link = dgeec_link) %>% 
   filter(!is.na(gini))
 
