@@ -1392,16 +1392,18 @@ psa <- read_csv("data-raw/psa.csv", skip = 3) %>%
 
 
 # Russian Federal State Statistics Service (update link)
-# http://www.gks.ru/wps/wcm/connect/rosstat_main/rosstat/en/main/
-# Social and Economic Indicators of the Russian Federation ('Attachment to the Yearbook')
-rosstat_link <- "http://www.gks.ru/free_doc/doc_2017/year/pril_year17-eng.xls"
+# https://rosstat.gov.ru/publications-plans > look for \\d{4} of last year and 'Российский статистический ежегодник (на русском и английском языках) [Russian Statiscal Yearbook (in Russian and English)]'
+# https://rosstat.gov.ru/folder/210/document/12994 > first link should be 'ПРИЛОЖЕНИЕ к Ежегоднику [Yearbook Supplement]'
+# https://rosstat.gov.ru/folder/210/document/13396 > find xls
+
+rosstat_link <- "https://rosstat.gov.ru/storage/mediabank/cbAGFbtY/pril-year_2020.xls"
 download.file(rosstat_link, "data-raw/rosstat.xls")
 
-rosstat <- read_excel("data-raw/rosstat.xls", sheet = "Sec.5", skip = 1) %>% 
-  filter(str_detect(INDICATORS, "Gini")) %>% 
+rosstat <- read_excel("data-raw/rosstat.xls", sheet = "Раз.5", skip = 1) %>% 
+  filter(str_detect(ПОКАЗАТЕЛИ, "Джини")) %>% 
   gather(key = year, value = gini) %>% 
+  filter(str_detect(year, "\\d{4}")) %>% 
   mutate_all(as.numeric) %>% 
-  filter(!is.na(gini)) %>% 
   transmute(country = "Russian Federation",
             year = year,
             gini = gini,
@@ -1411,7 +1413,7 @@ rosstat <- read_excel("data-raw/rosstat.xls", sheet = "Sec.5", skip = 1) %>%
             monetary = TRUE,
             series = paste("Rosstat", welfare_def, equiv_scale),
             source1 = "Russian Federal State Statistics Service",
-            page = "Sec.5",
+            page = "Раз.5",
             link = rosstat_link)
 
 
@@ -1421,7 +1423,7 @@ rosstat <- read_excel("data-raw/rosstat.xls", sheet = "Sec.5", skip = 1) %>%
 #  to be among the poorest), plus all non-resident households (surely poor).
 # Note also that income definition excludes income from capital.
 # These data therefore should be considered a lower bound.  Blech.
-# http://www.tablebuilder.singstat.gov.sg/ > search "gini" > Key Indicators > Search variable "gini" > Create
+# https://www.tablebuilder.singstat.gov.sg/ > search "gini" > Key Indicators > Search variable "gini" > Create
 # Export > CSV
 singstat <- read_csv("data-raw/singstat.csv", skip = 4) %>% 
   filter(!is.na(`2000`)) %>%
