@@ -1559,7 +1559,15 @@ scb <- pxweb_get_data(url = "http://api.scb.se/OV0104/v1/doris/sv/ssd/HE/HE0103/
 
 
 # Federal Statistics Office, Switzerland (update link)
-fso_ch_link <- "https://www.bfs.admin.ch/bfsstatic/dam/assets/4362566/appendix"
+# "https://www.bfs.admin.ch/bfs/en/home/statistics.html" >
+# Economic and social situation >
+# Social situation, well-being >
+# Inequality of income distribution >
+# Redistribution of income >
+# Trends in Gini: Details and download >
+# Appendix: Data of the graph
+
+fso_ch_link <- "https://www.bfs.admin.ch/bfsstatic/dam/assets/15544637/appendix"
 fso_ch0 <- read_csv2(fso_ch_link, skip = 1) %>% 
   filter(!is.na(`primary equivalised income`)) %>%
   transmute(year = as.numeric(X1),
