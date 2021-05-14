@@ -1691,31 +1691,27 @@ nso_thailand <- bind_rows(nso_thailand1, nso_thailand2)
 
 rm(nso_thailand1, nso_thailand2)
 
-# NESDB Thailand (update files; note--get pdfs because xls files are unreadable)
-nesdb_links <- c("http://social.nesdb.go.th/SocialStat/StatReport_Final.aspx?reportid=688&template=1R1C&yeartype=M&subcatid=69", # con
-                 "http://social.nesdb.go.th/SocialStat/StatReport_Final.aspx?reportid=685&template=1R1C&yeartype=M&subcatid=68") # gross
+# NESDC Thailand (update file)
+nesdb_link <- c("https://www.nesdc.go.th/ewt_dl_link.php?nid=3518&filename=social")
 
-nesdb_gross <- tabulizer::extract_tables("data-raw/nesdb_th_gross.pdf")[[1]]
-nesdb_con <- tabulizer::extract_tables("data-raw/nesdb_th_con.pdf")[[1]]
-nesdb_list <- list(nesdb_gross = nesdb_gross, nesdb_con = nesdb_con)
-
-nesdb <- pmap_df(list(nesdb_list, names(nesdb_list), nesdb_links),
-                    function(x, name_x, link_x) {
-                      wd <- str_extract(name_x, "[^_]*$")
-                      x %>% 
-                        as_tibble() %>% 
-                        filter(!V1=="") %>% 
-                        transmute(country = "Thailand",
-                                  year = as.numeric(V1)-543,
-                                  gini = as.numeric(V3),
-                                  gini_se = NA,
-                                  welfare_def = wd,
-                                  equiv_scale = "pc",
-                                  monetary = NA,
-                                  series = paste("NESDB Thailand", welfare_def, equiv_scale),
-                                  source1 = "NESDB Thailand",
-                                  page = "",
-                                  link = link_x) })
+nesdb <- read_excel("data-raw/nesdc.xlsx", sheet = "11.1", skip = 2) %>% 
+  janitor::clean_names() %>% 
+  filter(str_detect(taw_chi_wad, "Gini") & !is.na(x2531)) %>% 
+  mutate(across(.cols = starts_with("x"), as.numeric)) %>% 
+  mutate(wd = c("gross", "con")) %>% 
+  select(-taw_chi_wad) %>% 
+  pivot_longer(cols = starts_with("x"), names_to = "year", values_to = "gini") %>% 
+  transmute(country = "Thailand",
+            year = as.numeric(year)-543,
+            gini = as.numeric(gini),
+            gini_se = NA,
+            welfare_def = wd,
+            equiv_scale = "pc",
+            monetary = NA,
+            series = paste("NESDC Thailand", welfare_def, equiv_scale),
+            source1 = "NESDC Thailand",
+            page = "",
+            link = nesdb_link)
 
 
 # Statistics Turkey (update files)
