@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 770304 si
-Date: October 9, 2020 at 1:22:11 AM CDT
+Subject: job 840442 si
+Date: May 13, 2021 at 12:50:37 PM CDT
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -310,6 +310,6 @@ si15h,con_ae,0.2459,0.0044,200
 > 
 > proc.time()
    user  system elapsed 
- 42.529   0.335  43.512 
+ 65.047   0.446  66.277 
 
 

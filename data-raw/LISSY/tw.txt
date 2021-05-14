@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 770314 tw
-Date: October 9, 2020 at 1:22:14 AM CDT
+Subject: job 840462 tw
+Date: May 13, 2021 at 1:32:13 PM CDT
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -182,24 +182,24 @@ tw81h,con_pc,0.2545,0.0016,100
 tw81h,con_oecdm,0.2234,0.0019,100
 tw81h,con_ae,0.2303,0.0019,100
 [1] "Loading dataset tw86h..."
-tw86h,market_hh,0.3054,0.002,100
+tw86h,market_hh,0.3054,0.0019,100
 tw86h,market_sqrt,0.2749,0.002,100
 tw86h,market_pc,0.301,0.0023,100
 tw86h,market_oecdm,0.2778,0.0026,100
 tw86h,market_ae,0.2841,0.0024,100
-tw86h,gross_hh,0.3031,0.0023,100
+tw86h,gross_hh,0.3031,0.0024,100
 tw86h,gross_sqrt,0.2736,0.0021,100
-tw86h,gross_pc,0.3002,0.0021,100
+tw86h,gross_pc,0.3002,0.0022,100
 tw86h,gross_oecdm,0.2762,0.0023,100
 tw86h,gross_ae,0.2827,0.0024,100
-tw86h,disp_hh,0.2984,0.002,100
-tw86h,disp_sqrt,0.2684,0.0016,100
+tw86h,disp_hh,0.2984,0.0022,100
+tw86h,disp_sqrt,0.2684,0.0017,100
 tw86h,disp_pc,0.295,0.0019,100
 tw86h,disp_oecdm,0.2704,0.002,100
 tw86h,disp_ae,0.277,0.0019,100
-tw86h,con_hh,0.2668,0.0019,100
+tw86h,con_hh,0.2668,0.0018,100
 tw86h,con_sqrt,0.2274,0.0021,100
-tw86h,con_pc,0.2542,0.0018,100
+tw86h,con_pc,0.2542,0.0019,100
 tw86h,con_oecdm,0.2314,0.0021,100
 tw86h,con_ae,0.2366,0.002,100
 [1] "Loading dataset tw91h..."
@@ -394,6 +394,6 @@ tw16h,con_ae,0.2191,0.002,110
 > 
 > proc.time()
    user  system elapsed 
-165.198   0.618 168.916 
+207.026   0.595 209.331 
 
 

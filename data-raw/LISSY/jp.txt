@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 770267 jp
-Date: October 8, 2020 at 3:20:01 PM CDT
+Subject: job 840382 jp
+Date: May 13, 2021 at 10:35:18 AM CDT
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -182,10 +182,50 @@ jp08h,con_pc,NaN,NA,120
 jp08h,con_oecdm,NaN,NA,120
 jp08h,con_ae,NaN,NA,120
 [1] "Loading dataset jp10h..."
-Error in if (f(x[[i]])) return(i) : missing value where TRUE/FALSE needed
-Calls: get_ginis -> setups -> wNtile -> Find -> Position
+jp10h,market_hh,0.5626,0.0127,120
+jp10h,market_sqrt,0.4979,0.0091,120
+jp10h,market_pc,0.5231,0.0089,120
+jp10h,market_oecdm,0.4948,0.0087,120
+jp10h,market_ae,0.5026,0.01,120
+jp10h,gross_hh,0.4332,0.0086,120
+jp10h,gross_sqrt,0.3875,0.0088,120
+jp10h,gross_pc,0.4034,0.0087,120
+jp10h,gross_oecdm,0.3804,0.0072,120
+jp10h,gross_ae,0.385,0.0078,120
+jp10h,disp_hh,0.3776,0.008,120
+jp10h,disp_sqrt,0.3084,0.0065,120
+jp10h,disp_pc,0.321,0.0072,120
+jp10h,disp_oecdm,0.3022,0.0076,120
+jp10h,disp_ae,0.3059,0.0069,120
+jp10h,con_hh,NaN,NA,120
+jp10h,con_sqrt,NaN,NA,120
+jp10h,con_pc,NaN,NA,120
+jp10h,con_oecdm,NaN,NA,120
+jp10h,con_ae,NaN,NA,120
+[1] "Loading dataset jp13h..."
+jp13h,market_hh,0.5635,0.0115,120
+jp13h,market_sqrt,0.5001,0.01,120
+jp13h,market_pc,0.528,0.0116,120
+jp13h,market_oecdm,0.5007,0.0112,120
+jp13h,market_ae,0.509,0.0113,120
+jp13h,gross_hh,0.4265,0.0115,120
+jp13h,gross_sqrt,0.3764,0.0093,120
+jp13h,gross_pc,0.3934,0.0098,120
+jp13h,gross_oecdm,0.3721,0.0083,120
+jp13h,gross_ae,0.3767,0.0103,120
+jp13h,disp_hh,0.3839,0.0112,120
+jp13h,disp_sqrt,0.3163,0.0083,120
+jp13h,disp_pc,0.3289,0.0098,120
+jp13h,disp_oecdm,0.3089,0.0084,120
+jp13h,disp_ae,0.3124,0.0093,120
+jp13h,con_hh,NaN,NA,120
+jp13h,con_sqrt,NaN,NA,120
+jp13h,con_pc,NaN,NA,120
+jp13h,con_oecdm,NaN,NA,120
+jp13h,con_ae,NaN,NA,120
+> 
 > proc.time()
    user  system elapsed 
-  7.706   0.273   8.369 
+ 28.219   0.328  29.526 
 
 

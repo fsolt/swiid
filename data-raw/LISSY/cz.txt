@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 770154 cz
-Date: October 8, 2020 at 1:39:28 PM CDT
+Subject: job 840358 cz
+Date: May 13, 2021 at 8:41:37 AM CDT
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -161,26 +161,26 @@ Loading required package: readstata13
 > # Call 
 > get_ginis("cz") 
 [1] "Loading dataset cz92h..."
-cz92h,market_hh,0.5011,0.0031,100
-cz92h,market_sqrt,0.3969,0.0026,100
-cz92h,market_pc,0.4167,0.0027,100
-cz92h,market_oecdm,0.3927,0.0027,100
-cz92h,market_ae,0.3992,0.003,100
-cz92h,gross_hh,0.3181,0.0022,100
-cz92h,gross_sqrt,0.2297,0.0024,100
-cz92h,gross_pc,0.2274,0.002,100
-cz92h,gross_oecdm,0.2171,0.0021,100
-cz92h,gross_ae,0.2149,0.0018,100
-cz92h,disp_hh,0.2955,0.0023,100
-cz92h,disp_sqrt,0.2054,0.0024,100
-cz92h,disp_pc,0.2067,0.0023,100
-cz92h,disp_oecdm,0.192,0.0021,100
-cz92h,disp_ae,0.1902,0.0024,100
-cz92h,con_hh,NaN,NA,100
-cz92h,con_sqrt,NaN,NA,100
-cz92h,con_pc,NaN,NA,100
-cz92h,con_oecdm,NaN,NA,100
-cz92h,con_ae,NaN,NA,100
+cz92h,market_hh,0.5011,0.0031,300
+cz92h,market_sqrt,0.3969,0.0026,300
+cz92h,market_pc,0.4167,0.0027,300
+cz92h,market_oecdm,0.3927,0.0027,300
+cz92h,market_ae,0.3992,0.003,300
+cz92h,gross_hh,0.3181,0.0022,300
+cz92h,gross_sqrt,0.2297,0.0024,300
+cz92h,gross_pc,0.2274,0.002,300
+cz92h,gross_oecdm,0.2171,0.0021,300
+cz92h,gross_ae,0.2149,0.0018,300
+cz92h,disp_hh,0.2955,0.0023,300
+cz92h,disp_sqrt,0.2054,0.0024,300
+cz92h,disp_pc,0.2067,0.0023,300
+cz92h,disp_oecdm,0.192,0.0021,300
+cz92h,disp_ae,0.1902,0.0024,300
+cz92h,con_hh,NaN,NA,300
+cz92h,con_sqrt,NaN,NA,300
+cz92h,con_pc,NaN,NA,300
+cz92h,con_oecdm,NaN,NA,300
+cz92h,con_ae,NaN,NA,300
 [1] "Loading dataset cz96h..."
 cz96h,market_hh,0.5262,0.0029,100
 cz96h,market_sqrt,0.4331,0.003,100
@@ -331,6 +331,6 @@ cz16h,con_ae,NaN,NA,100
 > 
 > proc.time()
    user  system elapsed 
-116.445   0.628 124.007 
+148.576   0.854 152.072 
 
 

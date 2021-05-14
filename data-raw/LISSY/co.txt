@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 770143 co
-Date: October 8, 2020 at 1:59:48 PM CDT
+Subject: job 840352 co
+Date: May 13, 2021 at 7:50:10 AM CDT
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -162,21 +162,21 @@ Loading required package: readstata13
 > get_ginis("co") 
 [1] "Loading dataset co04h..."
 [1] "Loading dataset co07h..."
-co07h,market_hh,0.5813,0.0026,100
-co07h,market_sqrt,0.5666,0.0023,100
-co07h,market_pc,0.5998,0.0023,100
-co07h,market_oecdm,0.5719,0.0023,100
-co07h,market_ae,0.5818,0.0026,100
-co07h,gross_hh,0.5719,0.0023,100
-co07h,gross_sqrt,0.564,0.0024,100
-co07h,gross_pc,0.5979,0.0021,100
-co07h,gross_oecdm,0.5687,0.0023,100
-co07h,gross_ae,0.579,0.0025,100
-co07h,disp_hh,0.5642,0.0022,100
-co07h,disp_sqrt,0.5557,0.0022,100
-co07h,disp_pc,0.5898,0.0024,100
-co07h,disp_oecdm,0.5604,0.0022,100
-co07h,disp_ae,0.5707,0.0021,100
+co07h,market_hh,0.5813,0.0023,100
+co07h,market_sqrt,0.5667,0.0025,100
+co07h,market_pc,0.6003,0.0026,100
+co07h,market_oecdm,0.5722,0.0027,100
+co07h,market_ae,0.5822,0.0024,100
+co07h,gross_hh,0.5722,0.0027,100
+co07h,gross_sqrt,0.5644,0.0024,100
+co07h,gross_pc,0.5987,0.0023,100
+co07h,gross_oecdm,0.5693,0.0022,100
+co07h,gross_ae,0.5797,0.0023,100
+co07h,disp_hh,0.5646,0.0022,100
+co07h,disp_sqrt,0.5562,0.0022,100
+co07h,disp_pc,0.5906,0.0025,100
+co07h,disp_oecdm,0.561,0.0024,100
+co07h,disp_ae,0.5714,0.002,100
 co07h,con_hh,NaN,NA,100
 co07h,con_sqrt,NaN,NA,100
 co07h,con_pc,NaN,NA,100
@@ -212,34 +212,34 @@ co13h,market_ae,0.5321,0.0022,100
 co13h,gross_hh,0.5256,0.0021,100
 co13h,gross_sqrt,0.5112,0.002,100
 co13h,gross_pc,0.5447,0.0021,100
-co13h,gross_oecdm,0.5142,0.0021,100
+co13h,gross_oecdm,0.5142,0.002,100
 co13h,gross_ae,0.5246,0.0022,100
 co13h,disp_hh,0.5139,0.0019,100
 co13h,disp_sqrt,0.4988,0.0021,100
 co13h,disp_pc,0.5325,0.002,100
 co13h,disp_oecdm,0.5016,0.0021,100
-co13h,disp_ae,0.5121,0.0018,100
+co13h,disp_ae,0.5121,0.0019,100
 co13h,con_hh,NaN,NA,100
 co13h,con_sqrt,NaN,NA,100
 co13h,con_pc,NaN,NA,100
 co13h,con_oecdm,NaN,NA,100
 co13h,con_ae,NaN,NA,100
 [1] "Loading dataset co16h..."
-co16h,market_hh,0.5267,0.002,100
-co16h,market_sqrt,0.501,0.002,100
-co16h,market_pc,0.5328,0.0019,100
-co16h,market_oecdm,0.5042,0.0018,100
-co16h,market_ae,0.5138,0.0021,100
-co16h,gross_hh,0.5096,0.0019,100
-co16h,gross_sqrt,0.4906,0.0018,100
-co16h,gross_pc,0.5244,0.0018,100
-co16h,gross_oecdm,0.4933,0.0022,100
-co16h,gross_ae,0.5037,0.002,100
-co16h,disp_hh,0.4966,0.0018,100
-co16h,disp_sqrt,0.4768,0.0018,100
-co16h,disp_pc,0.5109,0.0018,100
-co16h,disp_oecdm,0.4792,0.0017,100
-co16h,disp_ae,0.4898,0.0018,100
+co16h,market_hh,0.5249,0.0019,100
+co16h,market_sqrt,0.4989,0.0019,100
+co16h,market_pc,0.5323,0.0018,100
+co16h,market_oecdm,0.5031,0.0018,100
+co16h,market_ae,0.5131,0.0021,100
+co16h,gross_hh,0.5075,0.0018,100
+co16h,gross_sqrt,0.4883,0.0017,100
+co16h,gross_pc,0.5238,0.0018,100
+co16h,gross_oecdm,0.492,0.0021,100
+co16h,gross_ae,0.5028,0.0019,100
+co16h,disp_hh,0.4946,0.0018,100
+co16h,disp_sqrt,0.4746,0.0017,100
+co16h,disp_pc,0.5104,0.0018,100
+co16h,disp_oecdm,0.478,0.0017,100
+co16h,disp_ae,0.489,0.0018,100
 co16h,con_hh,NaN,NA,100
 co16h,con_sqrt,NaN,NA,100
 co16h,con_pc,NaN,NA,100
@@ -248,6 +248,6 @@ co16h,con_ae,NaN,NA,100
 > 
 > proc.time()
     user   system  elapsed 
-1328.453    5.736 1342.932 
+1346.366    6.886 1360.767 
 
 
