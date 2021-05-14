@@ -1833,11 +1833,13 @@ cbo <- read_excel("data-raw/cbo.xlsx", sheet = "Exhibit 22", col_names = FALSE, 
 
 # U.S. Census Bureau (update link [probably only /p60/xxx/tableA] and wrangle)
 # https://www.census.gov/topics/income-poverty/income-inequality/data/data-tables.html
-uscb_links <- paste0("https://www2.census.gov/programs-surveys/demo/tables/p60/263/tableA", 2:3, ".xls")
-download.file(uscb_links[1], "data-raw/uscb_hh.xls")
-download.file(uscb_links[2], "data-raw/uscb_ae.xls")
+# Selected Measures of Household Income Dispersion:  1967 to 20xx																																																			
+# Selected Measures of Equivalence-Adjusted Income Dispersion: 1967 to 20xx																																																			
+uscb_links <- paste0("https://www2.census.gov/programs-surveys/demo/tables/p60/270/tableA", 4:5, ".xlsx")
+download.file(uscb_links[1], "data-raw/uscb_hh.xlsx")
+download.file(uscb_links[2], "data-raw/uscb_ae.xlsx")
 
-uscb_hh <- read_excel("data-raw/uscb_hh.xls", skip = 5) %>% 
+uscb_hh <- read_excel("data-raw/uscb_hh.xlsx", skip = 3) %>% 
   filter(str_detect(`Measures of income dispersion`, "Gini")) %>% 
   mutate(var = c("gini", "gini_se")) %>% 
   select(-`Measures of income dispersion`) %>% 
@@ -1860,7 +1862,7 @@ uscb_hh <- read_excel("data-raw/uscb_hh.xls", skip = 5) %>%
             page = "",
             link = uscb_links[1])
 
-uscb_ae <- read_excel("data-raw/uscb_ae.xls", skip = 4) %>% 
+uscb_ae <- read_excel("data-raw/uscb_ae.xlsx", skip = 3) %>% 
   filter(str_detect(`Measures of income dispersion`, "Gini")) %>% 
   mutate(var = c("gini", "gini_se")) %>% 
   select(-`Measures of income dispersion`) %>% 
