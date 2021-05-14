@@ -1752,7 +1752,7 @@ rm(tuik_list, tuik_hh, tuik_oecdm)
 ons_link <- "https://www.ons.gov.uk/visualisations/dvc861/fig8/datadownload.xlsx"
 download.file(ons_link, "data-raw/ons.xlsx")
 
-ons <- read_excel("data-raw/ons1.xlsx", skip = 1) %>% 
+ons <- read_excel("data-raw/ons.xlsx", skip = 1) %>% 
   pivot_longer(cols = matches("\\d"), 
                names_to = c("wd", "series0"),
                names_sep = "\\.\\.\\.",
@@ -1804,13 +1804,15 @@ ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3,
 
 
 # U.S. Congressional Budget Office (update link)
-# https://www.cbo.gov/search?search=gini
-cbo_link <- "https://www.cbo.gov/system/files/2018-11/54646-data-underlying-figures.xlsx"
+# https://www.cbo.gov/search?search=gini >
+# The Distribution of Household Income, 20xx >
+# Data Underlying Exhibits
+cbo_link <- "https://www.cbo.gov/system/files/2020-10/56575-Data-Underlying-Exhibits.xlsx"
 download.file(cbo_link, "data-raw/cbo.xlsx")
 
-cbo <- read_excel("data-raw/cbo.xlsx", sheet = "Figure 16", col_names = FALSE, skip = 8,
+cbo <- read_excel("data-raw/cbo.xlsx", sheet = "Exhibit 22", col_names = FALSE, skip = 7,
                   .name_repair = ~ make.names(.x, unique = TRUE)) %>% 
-  filter(!is.na(X) & !is.na(X.1)) %>% 
+  filter(!is.na(as.numeric(X)) & !is.na(X.1)) %>% 
   transmute(year = as.numeric(X),
             market = as.numeric(X.1),
             gross = as.numeric(X.3),
