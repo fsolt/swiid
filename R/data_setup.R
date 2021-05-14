@@ -1885,8 +1885,29 @@ uscb_ae <- read_excel("data-raw/uscb_ae.xlsx", skip = 3) %>%
             page = "",
             link = uscb_links[2])
 
-uscb <- bind_rows(uscb_ae, uscb_hh)
-rm(uscb_ae, uscb_hh)
+uscb_fam_link <- "https://www2.census.gov/library/publications/1998/demographics/p60-203.pdf"
+download.file(uscb_fam_link, "data-raw/uscb1998.pdf")
+
+uscb_fam0 <- extract_tables("data-raw/uscb1998.pdf", pages = 102)[[1]]
+uscb_fam <- as_tibble(uscb_fam0[4:16,1:2]) %>% 
+  bind_rows(as_tibble(uscb_fam0[4:16,c(3,5)])) %>% 
+  bind_rows(as_tibble(uscb_fam0[4:16,c(6,8)])) %>% 
+  bind_rows(as_tibble(uscb_fam0[4:16,c(9,11)])) %>% 
+  transmute(country = "United States",
+            year = as.numeric(str_extract(V1, "^\\d{4}")),
+            gini = as.numeric(V2),
+            gini_se = NA,
+            welfare_def = "gross",
+            equiv_scale = "hh",
+            monetary = TRUE,
+            series = paste("US Census Bureau", welfare_def, equiv_scale, "family"),
+            source1 = "U.S. Census Bureau 1998",
+            page = "102",
+            link = uscb_fam_link) %>% 
+  filter(year>=1960)
+
+uscb <- bind_rows(uscb_ae, uscb_hh, uscb_fam)
+rm(uscb_ae, uscb_hh, uscb_fam, uscb_fam0)
 
 
 # Uruguay Instituto Nacional de Estadística (archived)
