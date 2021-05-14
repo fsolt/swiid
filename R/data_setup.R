@@ -27,7 +27,7 @@ body(countrycode)[[2]] <- substitute(
 )
 
 
-# LIS (update VN)
+# LIS
 format_lis <- function(x) {
   paste0("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/", 
          x, ".txt") %>%
@@ -262,7 +262,7 @@ cepal_sdi <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data
             equiv_scale = equiv_scale,
             series = paste("CEPAL SDI", country, welfare_def, equiv_scale, survey),
             source1 = source,
-            page = NA,
+            page = "",
             link = link)
 
 
@@ -281,7 +281,7 @@ oecd0 <- oecd_link %>%
             series = paste("OECD", welfare_def, "sqrt,", tolower(DEFINITION), "def,", 
                            tolower(str_replace(METHODO, "METH", "")), "method"),
             source1 = "OECD",
-            page = NA, 
+            page = "", 
             link = oecd_link,
             measure = MEASURE)
 
@@ -567,7 +567,7 @@ try(
 
 if (!exists("belstat_link")) belstat_link <- belstat_page 
 
-belstat_page <- 59
+belstat_page <- "59"
 
 belstat <- extract_tables("data-raw/belstat.pdf", pages = belstat_page)[[1]] %>%
   as_data_frame() %>% 
@@ -2163,7 +2163,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
                      capmas, statee, statfi, insee, geostat, greenland,
                      stathk, bpsid, amar, cso_ie, istat, statinja, kazstat, kostat, nsck,
                      epumy, nbs, monstat, snz, nzmsd, ssb, dgeec, psa,
-                     rosstat, ru_lis_old, singstat, ssi, ine, statslk, scb, 
+                     rosstat, ru_lis_old, singstat, ssi, ine, statslk, scb,
                      tdgbas, nso_thailand, nesdb, tuik, ons, ifs, cbo, uscb, uine, inev, gso_vn,
                      atg, gidd,
                      added_data) %>% 
