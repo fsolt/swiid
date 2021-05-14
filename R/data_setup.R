@@ -1891,6 +1891,7 @@ rm(uscb_ae, uscb_hh)
 
 # Uruguay Instituto Nacional de Estadística (archived)
 # add new observations (from 2018 onward) to fs_added_data
+# though consider https://www.ine.gub.uy/linea-de-pobreza > Índice de Gini, por año, según área geográfica 
 uine_link1 <- "https://www.ine.gub.uy/documents/10181/35933/Informe+pobreza+y+desigualdad.pdf/2a797c4b-fec4-410e-bd7e-da7a57841112"
 download.file(uine_link1, "data-raw/uine1.pdf")
 
@@ -1933,16 +1934,25 @@ uine <- extract_tables("data-raw/uine1.pdf", pages = 13, area = list(c(122.1, 87
 
 
 # Venezuela Instituto Nacional de Estadística (update link)
-inev_link <- "https://web.archive.org/web/20181115092154/http://www.ine.gov.ve/documentos/Social/Pobreza/xls/Serie_%20GINI_1s1997-1s2015.xls"
+inev_link <- "https://web.archive.org/web/20191220153331/http://www.ine.gov.ve/documentos/Social/Pobreza/xls/Serie_%20GINI_1s1997-1s2018.xls"
 download.file(inev_link, "data-raw/inev.xls")
 
-inev <- read_excel("data-raw/inev.xls", skip = 3) %>% 
-  filter(`Coeficiente Gini y Quintiles` == "Coeficiente de Gini") %>% 
-  select(matches("\\d{4}")) %>% 
-  gather(key = year, value = gini) %>% 
+inev <- read_excel("data-raw/inev.xls", skip = 2) %>% 
+  select(matches("[AV]")) %>% 
+  filter(!is.na(`Año...1`) & str_detect(`Año...1`, "\\d")) %>% 
+  mutate(across(.cols = everything(), .fns = as.numeric)) %>% 
+  pivot_longer(cols = everything(), 
+               names_to = c("var", "set"),
+               names_sep = "\\.\\.\\.",
+               values_to = "value") %>% 
+  mutate(var = if_else(str_detect(var, "A"), "year", "gini"),
+         year = if_else(var=="year",
+                        value,
+                        lag(value))) %>% 
+  filter(!is.na(value) & value < 1) %>% 
   transmute(country = "Venezuela",
-            year = as.numeric(str_extract(year, "\\d{4}")),
-            gini = gini,
+            year = year,
+            gini = value,
             gini_se = NA,
             welfare_def = "disp",
             equiv_scale = "pc",
