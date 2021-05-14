@@ -1964,11 +1964,11 @@ inev <- read_excel("data-raw/inev.xls", skip = 2) %>%
 
 
 # General Statistics Office of Vietnam (update file for gso_vn2; check 'page')
-# http://www.gso.gov.vn/default_en.aspx?tabid=783 > Index of income inequality
+# https://www.gso.gov.vn/en/px-web/?pxid=E1135&theme=Health%2C%20Culture%2C%20Sport%20and%20Living%20standard&subtheme=Index%20of%20income%20inequality%20distribution%20(GINI%20index)
 # WHOLE COUNTRY, all years > Comma delimited with heading
-# Note 12 Nov 2018: file now has only one sig.fig., so leaving previous (3 sf) version in place for now
+# Note 14 May 2021: Save function doesn't work, but workaround with 'Save Your Retrieval' (which doesn't allow updates, but does allow current file to be saved)
 gso_vn1_link <- "https://web.archive.org/web/20170525163734/http://www.gso.gov.vn/Modules/Doc_Download.aspx?DocID=16773"
-gso_vn2_link <- "http://www.gso.gov.vn/default_en.aspx?tabid=783"
+gso_vn2_link <- "https://www.gso.gov.vn/en/px-web/?pxid=E1135&theme=Health%2C%20Culture%2C%20Sport%20and%20Living%20standard&subtheme=Index%20of%20income%20inequality%20distribution%20(GINI%20index)"
 download.file(gso_vn1_link, "data-raw/gso_vn2013.pdf")
 
 gso_vn1 <- extract_tables("data-raw/gso_vn2013.pdf", pages = 84)[[1]][-1, ] %>% 
@@ -1986,12 +1986,14 @@ gso_vn1 <- extract_tables("data-raw/gso_vn2013.pdf", pages = 84)[[1]][-1, ] %>%
             monetary = TRUE,
             series = paste("GSO Vietnam", welfare_def, equiv_scale),
             source1 = "General Statistics Office of Vietnam 2013",
-            page = "",
+            page = "84",
             link = gso_vn1_link)
 
-gso_vn2 <- read_csv("data-raw/gso_vn2.csv", skip = 1) %>% 
-  filter(Iterms == "WHOLE COUNTRY") %>% 
-  select(-Iterms) %>% 
+gso_vn2 <- read_csv("data-raw/gso_vn2.csv", skip = 2,
+                    col_types = cols(Items = col_character(),
+                                     .default = col_double())) %>% 
+  filter(Items == "WHOLE COUNTRY") %>% 
+  select(-Items) %>% 
   gather(key = year, value = gini) %>% 
   transmute(country = "Vietnam",
             year = as.numeric(str_extract(year, "\\d{4}")),
@@ -2002,7 +2004,7 @@ gso_vn2 <- read_csv("data-raw/gso_vn2.csv", skip = 1) %>%
             monetary = TRUE,
             series = paste("GSO Vietnam", welfare_def, equiv_scale),
             source1 = "General Statistics Office of Vietnam",
-            page = "28",
+            page = "",
             link = gso_vn2_link)  
 
 gso_vn <- bind_rows(gso_vn1, gso_vn2)
