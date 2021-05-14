@@ -1718,7 +1718,7 @@ nesdb <- read_excel("data-raw/nesdc.xlsx", sheet = "11.1", skip = 2) %>%
 # https://data.tuik.gov.tr/en > Income, Living, Consumption, and Poverty > 
 # [Check] Income Distribution and Living Conditions Statistics [Search] > 
 # [Select tab] Statistical Table > first line under Equivalised Household Disposable Income & first line under Household Disposable Income
-tuik_link <- paste0("https://data.tuik.gov.tr/en/")
+tuik_link <- paste0("https://data.tuik.gov.tr/Kategori/GetKategori?p=Income,-Living,-Consumption-and-Poverty-107")
 
 tuik_oecdm <- read_excel("data-raw/tuik_oecdm.xls", skip = 3) 
 tuik_hh <- read_excel("data-raw/tuik_hh.xls", skip = 3) 
