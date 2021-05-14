@@ -1718,7 +1718,7 @@ nesdb <- read_excel("data-raw/nesdc.xlsx", sheet = "11.1", skip = 2) %>%
 # https://data.tuik.gov.tr/en > Income, Living, Consumption, and Poverty > 
 # [Check] Income Distribution and Living Conditions Statistics [Search] > 
 # [Select tab] Statistical Table > first line under Equivalised Household Disposable Income & first line under Household Disposable Income
-tuik_link <- paste0("https://data.tuik.gov.tr/Kategori/GetKategori?p=Income,-Living,-Consumption-and-Poverty-107")
+tuik_link <- "https://data.tuik.gov.tr/Kategori/GetKategori?p=Income,-Living,-Consumption-and-Poverty-107"
 
 tuik_oecdm <- read_excel("data-raw/tuik_oecdm.xls", skip = 3) 
 tuik_hh <- read_excel("data-raw/tuik_hh.xls", skip = 3) 
@@ -1749,55 +1749,33 @@ rm(tuik_list, tuik_hh, tuik_oecdm)
 
 # U.K. Office for National Statistics (update links; join with latest file last)
 # https://www.ons.gov.uk/atoz?query=effects+taxes+benefits (new releases in April and January)
-ons_link1 <- "https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/theeffectsoftaxesandbenefitsonhouseholdincome/financialyearending2016/bd6b2fe3&format=csv"
-download.file(ons_link1, "data-raw/ons1.csv")
+ons_link <- "https://www.ons.gov.uk/visualisations/dvc861/fig8/datadownload.xlsx"
+download.file(ons_link, "data-raw/ons.xlsx")
 
-ons1 <- read_csv("data-raw/ons1.csv", skip = 6, col_types = "cdddd") %>% 
-  transmute(year = X1,
-            market = Original,
-            gross = Gross,
-            disp = Disposable) %>% 
-  gather(key = welfare_def, value = gini, -year) %>% 
+ons <- read_excel("data-raw/ons1.xlsx", skip = 1) %>% 
+  pivot_longer(cols = matches("\\d"), 
+               names_to = c("wd", "series0"),
+               names_sep = "\\.\\.\\.",
+               values_to = "gini") %>% 
+  mutate(welfare_def = case_when(wd == "Original" ~ "market",
+                                 wd == "Gross" ~ "gross",
+                                 wd == "Disposable" ~ "disp",
+                                 TRUE ~ NA_character_),
+         series = if_else(as.numeric(series0) < 7, 2, 1)) %>% 
+  filter(!is.na(gini) & !is.na(welfare_def)) %>% 
   transmute(country = "United Kingdom",
-            year = ifelse(str_extract(year, "\\d{2}$") %>% as.numeric() > 50,
-                          str_extract(year, "\\d{2}$") %>% as.numeric() + 1900,
-                          str_extract(year, "\\d{2}$") %>% as.numeric() + 2000),
+            year = ifelse(str_extract(Year, "\\d{2}$") %>% as.numeric() > 50,
+                          str_extract(Year, "\\d{2}$") %>% as.numeric() + 1900,
+                          str_extract(Year, "\\d{2}$") %>% as.numeric() + 2000),
             gini = gini/100,
             gini_se = NA,
             welfare_def = welfare_def,
             equiv_scale = "oecdm",
             monetary = FALSE,
-            series = paste("ONS", welfare_def, equiv_scale),
+            series = paste("ONS", welfare_def, equiv_scale, series),
             source1 = "UK Office for National Statistics",
             page = "",
-            link = ons_link1)  
-
-
-ons_link2 <- "https://www.ons.gov.uk/generator?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/householddisposableincomeandinequality/financialyearending2017/51fff87e&format=csv"
-download.file(ons_link2, "data-raw/ons2.csv")
-
-ons2 <- read_csv("data-raw/ons2.csv", skip = 6, col_types = "cddd") %>% 
-  transmute(year = X1,
-            market = Original,
-            gross = Gross,
-            disp = Disposable) %>% 
-  gather(key = welfare_def, value = gini, -year) %>% 
-  transmute(country = "United Kingdom",
-            year = as.numeric(str_replace(year, "^(\\d{2}).*(\\d{2})$", "\\1\\2")),
-            gini = gini/100,
-            gini_se = NA,
-            welfare_def = welfare_def,
-            equiv_scale = "oecdm",
-            monetary = FALSE,
-            series = paste("ONS", welfare_def, equiv_scale),
-            source1 = "UK Office for National Statistics",
-            page = "",
-            link = ons_link2) 
-
-ons <- ons1 %>%
-  anti_join(ons2, by = c("year", "welfare_def")) %>% 
-  bind_rows(ons2) %>% 
-  arrange(welfare_def, year)
+            link = ons_link)
 
 # U.K. Institute for Fiscal Studies (automated)
 ifs <- "https://www.ifs.org.uk/tools_and_resources/incomes_in_uk" %>% 
