@@ -1889,23 +1889,47 @@ uscb <- bind_rows(uscb_ae, uscb_hh)
 rm(uscb_ae, uscb_hh)
 
 
-# Uruguay Instituto Nacional de Estadística (update link and wrangle)
-uine_link <- "http://www.ine.gub.uy/documents/10181/364159/Estimación+de+la+pobreza+por+el+Método+del+Ingreso+2017/f990baaf-1c32-44c5-beda-59a20dd8325c"
-download.file(uine_link, "data-raw/uine.pdf")
+# Uruguay Instituto Nacional de Estadística (archived)
+# add new observations (from 2018 onward) to fs_added_data
+uine_link1 <- "https://www.ine.gub.uy/documents/10181/35933/Informe+pobreza+y+desigualdad.pdf/2a797c4b-fec4-410e-bd7e-da7a57841112"
+download.file(uine_link1, "data-raw/uine1.pdf")
 
-uine <- extract_tables("data-raw/uine.pdf", pages = 47, area = list(c(137.3, 86.7, 296.8, 177.5)))[[1]][, c(1, 4)] %>% 
+uine_link2 <- "https://www.ine.gub.uy/documents/10181/364159/Estimación+de+la+pobreza+por+el+Método+del+Ingreso+2017/f990baaf-1c32-44c5-beda-59a20dd8325c"
+download.file(uine_link2, "data-raw/uine2.pdf")
+
+uine <- extract_tables("data-raw/uine1.pdf", pages = 13, area = list(c(122.1, 87.4, 284.8, 515.9)))[[1]] %>% 
   as_tibble() %>% 
+  first_row_to_names() %>% 
+  mutate(imputed_rent = str_extract(Región, "Sin|Con"),
+         imputed_rent = zoo::na.locf(imputed_rent, na.rm = FALSE),
+         monetary = (imputed_rent=="Sin")) %>% 
+  filter(Región == "Total país") %>% 
+  select(-Región, -imputed_rent) %>% 
+  pivot_longer(cols = matches("\\d"), names_to = "year", values_to = "gini") %>% 
   transmute(country = "Uruguay",
-            year = as.numeric(V1),
-            gini = as.numeric(sub(",", ".", V2, fixed = TRUE)),
+            year = as.numeric(year),
+            gini = as.numeric(sub(",", ".", gini, fixed = TRUE)),
             gini_se = NA,
             welfare_def = "disp",
             equiv_scale = "pc",
-            monetary = TRUE,
-            series = paste("Instituto Nacional de Estadistica Uruguay", welfare_def, equiv_scale),
+            monetary = monetary,
+            series = paste("Instituto Nacional de Estadistica Uruguay", welfare_def, equiv_scale, as.numeric(as.factor(1-monetary))),
             source1 = "Instituto Nacional de Estadística Uruguay",
-            page = "45",
-            link = uine_link)
+            page = "11",
+            link = uine_link1) %>% 
+  bind_rows(extract_tables("data-raw/uine2.pdf", pages = 47, area = list(c(137.3, 86.7, 296.8, 177.5)))[[1]][, c(1, 4)] %>% 
+              as_tibble() %>% 
+              transmute(country = "Uruguay",
+                        year = as.numeric(V1),
+                        gini = as.numeric(sub(",", ".", V2, fixed = TRUE)),
+                        gini_se = NA,
+                        welfare_def = "disp",
+                        equiv_scale = "pc",
+                        monetary = FALSE,
+                        series = paste("Instituto Nacional de Estadistica Uruguay", welfare_def, equiv_scale, "2"),
+                        source1 = "Instituto Nacional de Estadística Uruguay",
+                        page = "45",
+                        link = uine_link2))
 
 
 # Venezuela Instituto Nacional de Estadística (update link)
