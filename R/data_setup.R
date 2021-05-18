@@ -1701,8 +1701,9 @@ nesdb <- read_excel("data-raw/nesdc.xlsx", sheet = "11.1", skip = 2) %>%
   mutate(wd = c("gross", "con")) %>% 
   select(-taw_chi_wad) %>% 
   pivot_longer(cols = starts_with("x"), names_to = "year", values_to = "gini") %>% 
+  filter(!is.na(gini)) %>% 
   transmute(country = "Thailand",
-            year = as.numeric(year)-543,
+            year = as.numeric(str_extract(year, "\\d{4}"))-543,
             gini = as.numeric(gini),
             gini_se = NA,
             welfare_def = wd,
