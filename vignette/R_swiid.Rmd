@@ -151,7 +151,7 @@ Once the desired subset has been extracted and any additional variables created 
 ```{r 05-estimate, cache=FALSE}
 library(lme4)
 
-# Estimate model on first five dataframes
+# Estimate model on all 100 dataframes
 m1 <- wvs_swiid %>% map(~ lmer(religiosity ~ gini_disp + gdppc +
                                  age + educ + male +
                                  (1 | country/year),
