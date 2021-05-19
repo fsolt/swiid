@@ -1,6 +1,6 @@
 library(tidyverse)
 
-version <- "9_0"
+version <- "9_1"
 ver <- str_replace(version, "_", "")
 
 load("data/ineq.rda")
@@ -179,7 +179,7 @@ file.copy(from = documentation_files,
           to = str_replace(documentation_files, "vignette/", paste0("release/swiid", version, "/")),
           overwrite = TRUE)
 setwd("release")
-zip(paste0("swiid", version, ".zip"), "swiid9_0")
+zip(paste0("swiid", version, ".zip"), paste0("swiid", version))
 dir.create(paste0("s", ver))
 file.copy(paste0("swiid", version, ".zip"), paste0("s", str_replace(version, "_", ""), "/swiid", version, ".zip"), overwrite = TRUE)
 zip(paste0("s", ver, ".zip"), paste0("s", ver))
