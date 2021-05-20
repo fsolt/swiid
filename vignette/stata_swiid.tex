@@ -41,11 +41,11 @@ The Standardized World Income Inequality Database (SWIID) takes a Bayesian appro
 
 As described in \citet{Solt2020}, the SWIID maximizes the comparability of available income inequality data for the broadest possible sample of countries and years.  But incomparability remains, and it is sometimes substantial.  This remaining incomparability is reflected in the standard errors of the SWIID estimates, making it often crucial to take this uncertainty into account when making comparisons across countries or over time (\citealt[238]{Solt2009}; \citealt[14]{Solt2016_nv}; \citealt{Solt2020}).  It was once the case that incorporating the standard errors into an analysis required considerable effort.  It is now straightforward.
 
-In version 9.0 of the SWIID, the inequality estimates and their associated uncertainty are represented by 100 draws from the posterior
-distribution: for any given observation, the differences across these imputations capture the uncertainty in the estimate.  The \verb+swiid9_0.zip+ includes the file \verb+swiid9_0.dta+, which is pre-formatted to facilitate taking this uncertainty into account.  The following sections describe how to subset the data, merge in additional variables, and do analyses.
+In version 9.1 of the SWIID, the inequality estimates and their associated uncertainty are represented by 100 draws from the posterior
+distribution: for any given observation, the differences across these imputations capture the uncertainty in the estimate.  The \verb+swiid9_1.zip+ includes the file \verb+swiid9_1.dta+, which is pre-formatted to facilitate taking this uncertainty into account.  The following sections describe how to subset the data, merge in additional variables, and do analyses.
 
 \section{Getting Started}
-The \verb+swiid9_0.dta+ file is pre-formatted for use with Stata's tools for analyzing multiply imputed data.  Estimates of each of four inequality measures and their associated uncertainty are represented by a placeholder variable (which has the measure's name but only missing data for all observations) plus 100 separate variables (prefixed with \verb+_1_+, \verb+_2_+, etc.): for any given observation, the differences across these 100 variables capture the uncertainty in the estimate.   
+The \verb+swiid9_1.dta+ file is pre-formatted for use with Stata's tools for analyzing multiply imputed data.  Estimates of each of four inequality measures and their associated uncertainty are represented by a placeholder variable (which has the measure's name but only missing data for all observations) plus 100 separate variables (prefixed with \verb+_1_+, \verb+_2_+, etc.): for any given observation, the differences across these 100 variables capture the uncertainty in the estimate.   
 
 The four measures are:
 \begin{itemize}
@@ -56,7 +56,7 @@ The four measures are:
 \end{itemize}
 
 \begin{verbatim}
-use swiid9_0.dta, clear
+use swiid9_1.dta, clear
 \end{verbatim}
 
 \section{Adding Variables}
@@ -105,7 +105,7 @@ drop _merge
 save wvs_pwt.dta, replace
 
 // Now merge these data *into* the SWIID
-use swiid9_0.dta, clear
+use swiid9_1.dta, clear
 
 merge 1:m country year using wvs_pwt.dta
 drop if _merge!=3
@@ -152,7 +152,7 @@ purposes. The SWIID is presented in this format in the
 
 
 \begin{verbatim}
-import delimited "swiid9_0_summary.csv", clear
+import delimited "swiid9_1_summary.csv", clear
  
 // Calculate the bounds of the 95% uncertainty intervals
 gen gini_disp_95ub = gini_disp + 1.96*gini_disp_se
@@ -181,7 +181,7 @@ twoway rspike gini_disp_95ub gini_disp_95lb name_length, lstyle(ci) || ///
 Please cite to the SWIID by referring to its article of record and including the version number and date of release:\\
 
 \begin{hangparas}{.25in}{1}
-Solt, Frederick. 2020. ``Measuring Income Inequality Across Countries and Over Time: The Standardized World Income Inequality Database.'' \emph{Social Science Quarterly}.  SWIID Version 9.0, October 2020.
+Solt, Frederick. 2020. ``Measuring Income Inequality Across Countries and Over Time: The Standardized World Income Inequality Database.'' \emph{Social Science Quarterly}.  SWIID Version 9.1, May 2021.
 \end{hangparas}
 
 \bibliographystyle{apsr}
