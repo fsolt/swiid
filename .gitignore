@@ -25,7 +25,7 @@ vignette/R_swiid.tex
 vignette/cache
 vignette/figure
 vignette/framed.sty
-vignette/pwt90.xlsx
+vignette/pwt*
 vignette/*.rda
 vignette/*.dta
 vignette/*.csv
