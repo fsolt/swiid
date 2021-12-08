@@ -8,24 +8,6 @@ p_load_gh("ropengov/pxweb")
 
 # Custom country codes (defined in R/cc_swiid.R)
 load("data/cc_swiid.rda")
-body(countrycode)[[2]] <- substitute(
-  if (is.null(custom_dict) | as.list(match.call())[["custom_dict"]] == "cc_swiid") {
-    if (origin == "country.name") {
-      origin <- "country.name.en"
-    }
-    if (destination == "country.name") {
-      destination <- "country.name.en"
-    }
-    if (origin %in% c("country.name.en", "country.name.de")) {
-      origin <- paste0(origin, ".regex")
-      origin_regex <- TRUE
-    }
-    else {
-      origin_regex <- FALSE
-    }
-  }
-)
-
 
 # LIS
 format_lis <- function(x) {
@@ -34,7 +16,7 @@ format_lis <- function(x) {
     readLines() %>% 
     str_subset("^\\D{2}\\d{2}h,.*") %>%
     paste(collapse = "\n") %>% 
-    read_csv(col_names = FALSE) %>%
+    read_csv(col_names = FALSE, col_types = "ccddd") %>%
     separate(X2, into = c("wd", "es"), sep = "_") %>% 
     pivot_wider(names_from = "wd",
                 values_from = c("X3", "X4")) %>% 
@@ -193,8 +175,7 @@ rm(sedlac_ei, sedlac_hh, sedlac_pc)
 
 
 # CEPALStat (automated)
-cepal_link1 <- "https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=3289"
-cepal_link2 <- "https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250"
+cepal_link1 <- "https://estadisticas.cepal.org/sisgen/ws/cepalstat/xml/834853.xml"
 
 cepal_extract <- function(df, x) {
   df %>% xml_find_all(x) %>% 
@@ -203,7 +184,7 @@ cepal_extract <- function(df, x) {
     return()
 }
 
-cepal <- purrr::map_df(c(cepal_link1, cepal_link2), function(cepal_link) {
+cepal <- purrr::map_df(c(cepal_link1), function(cepal_link) {
   cepal0 <- cepal_link %>% read_xml() 
   cepal_raw <- cepal_extract(cepal0, "//dato")
   cepal_labels <- cepal_extract(cepal0, "//des") %>% 
@@ -212,8 +193,8 @@ cepal <- purrr::map_df(c(cepal_link1, cepal_link2), function(cepal_link) {
   
   cepal1 <- left_join(cepal_raw, cepal_labels, by = c("dim_208" = "id")) %>%
     filter(!name=="Latin America (simple average)") %>% 
-    mutate(country = countrycode(as.character(name), 
-                                 origin = "country.name.en", 
+    mutate(country = countrycode(iso3, 
+                                 origin = "iso3c", 
                                  destination = "swiid.name",
                                  custom_dict = cc_swiid)) %>% 
     filter(!is.na(country)) %>%
@@ -392,8 +373,10 @@ wb <- povcalnet() %>%
 ## National Statistics Offices
 
 first_row_to_names <- function(x) {
-  names(x) <- x[1, ]
-  names(x)[which(names(x) == "" | is.na(names(x)))] <- paste0("v", 1:length(which(names(x) == "" | is.na(names(x)))))
+  names(x) <- as.character(x[1, ]) %>% 
+    replace(.,
+            is.na(.) | . == "",
+            paste0("v", seq(length(which(is.na(.))) + length(which(. == "")))))
   x <- x[-1, ]
   return(x)
 }
@@ -514,7 +497,7 @@ rm(abs_de, abs_gh)
 # > Desigualdad > BOLIVIA: ÍNDICE DE GINI PARA EL INGRESO PER CÁPITA MENSUAL, SEGÚN ÁREA, 2005 – 2020
 inebo_link <- "https://nube.ine.gob.bo/index.php/s/8ENNmIWUzBopwbJ/download"
 download.file(inebo_link, "data-raw/inebo.xlsx")
-inebo <- read_excel("data-raw/inebo.xlsx", skip = 4) %>% 
+inebo <- read_excel("data-raw/inebo.xlsx", skip = 3) %>% 
   filter(INDICADOR=="Bolivia") %>% 
   select(-INDICADOR) %>% 
   gather(key = year, value = gini) %>% 
@@ -629,14 +612,10 @@ statcan <- get_statcan(11100134) %>%
             link = link)
 
 
-# DANE Colombia (automated)
-dane_link <- "https://www.dane.gov.co/index.php/estadisticas-por-tema/pobreza-y-condiciones-de-vida/pobreza-monetaria" %>% 
-  read_html() %>%
-  html_node(xpath="//a[contains(@href, 'anexo_pobreza')]") %>% 
-  html_attr("href") %>% 
-  str_c("https://www.dane.gov.co", .)
-  
-download.file(dane_link, "data-raw/dane.xls")
+# DANE Colombia (update link and file; site throws 403 error to R)
+# https://www.dane.gov.co/index.php/estadisticas-por-tema/pobreza-y-condiciones-de-vida/pobreza-monetaria >
+# Anexo pobreza monetaria nacional > Descargar
+dane_link <- "https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2020/anexo_pobreza_monetaria_20_nacional.xls"
 
 dane <- read_excel("data-raw/dane.xls", sheet = "Gini", skip = 14) %>% 
   rename(region = 1) %>% 
@@ -664,7 +643,7 @@ ineccr_link <- "https://www.inec.cr/pobreza-y-desigualdad/desigualdad" %>%
 download.file(ineccr_link, "data-raw/ineccr.xlsx")
 
 ineccr <- read_excel("data-raw/ineccr.xlsx",
-                     skip = 4,
+                     skip = 6,
                      sheet = "Cuadro 1") %>%
   select(Año, Total) %>% 
   filter(!is.na(Año)) %>% 
@@ -1068,8 +1047,10 @@ rm(istat1, istat2)
 # http://statinja.gov.jm/living_conditions_poverty.aspx
 # Incidence of Poverty > Gini Coefficient, Jamaica > Download > unclick "Dates Across Top" > csv
 
-statinja <- read_csv("data-raw/statinja.csv", skip = 13, col_types = "cdd") %>% 
-  rename(date = DATE, old = VALUE, new = VALUE_1) %>% 
+statinja <- read_csv("data-raw/statinja.csv",
+                     skip = 14,
+                     col_names = c("date", "old", "new"),
+                     col_types = "cdd") %>% 
   pivot_longer(cols = old:new,
                names_to = "series",
                values_to = "gini") %>% 
@@ -1186,7 +1167,7 @@ epumy <- extract_tables("data-raw/epumy.pdf") %>%
 
 
 # National Bureau of Statistics Moldova (update link: check Statistical Yearbook to find table number)
-nbs0_link <- "https://github.com/fsolt/swiid/raw/master/data-raw/nbs.xls"
+nbs0_link <- "https://github.com/fsolt/swiid/raw/master/data-raw/nbs0.xls"
 download.file(nbs0_link, "data-raw/nbs0.xls")
 
 nbs0 <- read_excel("data-raw/nbs0.xls", skip = 2, sheet = "Лист1") %>%
@@ -1215,7 +1196,7 @@ nbs_zip <- tempfile(fileext = ".zip")
 writeBin(nbs_link$response$content, nbs_zip)
 nbs_temp <- tempdir()
 unzip(nbs_zip, exdir = nbs_temp)
-file.copy(file.path(nbs_temp, "4.2.xlsx"), "data-raw/nbs.xlsx")
+file.copy(file.path(nbs_temp, "4.2.xlsx"), "data-raw/nbs.xlsx", overwrite = TRUE)
 
 nbs <- bind_rows(nbs0, read_excel("data-raw/nbs.xlsx", skip = 1, sheet = "5.") %>%
   filter(str_detect(...1, "coeficientul Gini")) %>% 
@@ -2160,7 +2141,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
            gini_b_se = gini_se * se_factor) %>%
     select(-gini, -gini_se) %>%
     mutate(country = countrycode(country, "country.name", "swiid.name", custom_dict = cc_swiid),
-           region = countrycode(country, "swiid.name", "swiid.region", custom_dict = cc_swiid)) %>% 
+           region = countrycode(country, "swiid.name", "swiid.region", custom_dict = {cc_swiid %>% distinct(swiid.name, .keep_all = TRUE)})) %>% 
     group_by(region) %>% 
     mutate(r_bl_obs = n()) %>% 
     ungroup() %>% 
@@ -2192,7 +2173,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
     rename(gini_m = gini,
            gini_m_se = gini_se) %>%
     mutate(country = countrycode(country, "country.name", "swiid.name", custom_dict = cc_swiid),
-           region = countrycode(country, "swiid.name", "swiid.region", custom_dict = cc_swiid)) %>% 
+           region = countrycode(country, "swiid.name", "swiid.region", custom_dict = {cc_swiid %>% distinct(swiid.name, .keep_all = TRUE)})) %>% 
     group_by(country) %>% 
     mutate(country_obs = n()) %>% 
     ungroup() %>% 
