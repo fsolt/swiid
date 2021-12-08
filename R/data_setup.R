@@ -1475,8 +1475,10 @@ download.file(ine_link, "data-raw/ine.csv")
 ine <- "data-raw/ine.csv" %>% 
   readLines() %>% 
   str_replace_all("(?<=\\d{2}),(?=\\d,)", ".") %>% 
-  read_csv(skip = 4) %>% 
-  filter(str_detect(X1, "con alquiler imputado")) %>% 
+  `[`(., c(5:7)) %>% 
+  read_csv(file = I(.)) %>%
+  first_row_to_names() %>% 
+  filter(str_detect(v1, "con alquiler imputado")) %>% 
   gather(key = year, value = gini) %>% 
   filter(str_detect(year, "\\d{4}")) %>% 
   transmute(country = "Spain",
