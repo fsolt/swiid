@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 840437 ru
-Date: May 13, 2021 at 12:44:20 PM CDT
+Subject: job 906862 ru
+Date: December 7, 2021 at 10:38:47 AM CST
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -360,19 +360,40 @@ ru17h,gross_sqrt,0.328,0.003,120
 ru17h,gross_pc,0.3556,0.0032,120
 ru17h,gross_oecdm,0.3279,0.0029,120
 ru17h,gross_ae,0.3355,0.0034,120
-ru17h,disp_hh,0.3566,0.0028,120
-ru17h,disp_sqrt,0.3184,0.0028,120
-ru17h,disp_pc,0.3471,0.003,120
-ru17h,disp_oecdm,0.3181,0.0033,120
-ru17h,disp_ae,0.326,0.003,120
+ru17h,disp_hh,0.3564,0.0028,120
+ru17h,disp_sqrt,0.3183,0.0028,120
+ru17h,disp_pc,0.3469,0.003,120
+ru17h,disp_oecdm,0.318,0.0033,120
+ru17h,disp_ae,0.3259,0.003,120
 ru17h,con_hh,NaN,NA,120
 ru17h,con_sqrt,NaN,NA,120
 ru17h,con_pc,NaN,NA,120
 ru17h,con_oecdm,NaN,NA,120
 ru17h,con_ae,NaN,NA,120
+[1] "Loading dataset ru18h..."
+ru18h,market_hh,0.4812,0.0035,120
+ru18h,market_sqrt,0.4349,0.0035,120
+ru18h,market_pc,0.4634,0.0033,120
+ru18h,market_oecdm,0.4371,0.0035,120
+ru18h,market_ae,0.4452,0.0033,120
+ru18h,gross_hh,0.3675,0.0039,120
+ru18h,gross_sqrt,0.3301,0.0037,120
+ru18h,gross_pc,0.3552,0.0031,120
+ru18h,gross_oecdm,0.3297,0.0035,120
+ru18h,gross_ae,0.3363,0.0034,120
+ru18h,disp_hh,0.3582,0.003,120
+ru18h,disp_sqrt,0.321,0.0041,120
+ru18h,disp_pc,0.3471,0.0035,120
+ru18h,disp_oecdm,0.3206,0.0036,120
+ru18h,disp_ae,0.3274,0.0033,120
+ru18h,con_hh,NaN,NA,120
+ru18h,con_sqrt,NaN,NA,120
+ru18h,con_pc,NaN,NA,120
+ru18h,con_oecdm,NaN,NA,120
+ru18h,con_ae,NaN,NA,120
 > 
 > proc.time()
    user  system elapsed 
-590.570   3.474 598.033 
+645.952   3.898 658.615 
 
 
