@@ -28,6 +28,9 @@ cc_swiid <- countrycode::codelist %>%
                                            TRUE ~ country.name.en.regex)) %>% 
   add_row(swiid.name = "Soviet Union",
           country.name.en.regex = "soviet.?union|u\\.?s\\.?s\\.?r|socialist.?republics") %>% 
-  left_join(read_csv("data/reg.csv", col_types = "cc"), by = "swiid.name") 
+  left_join(read_csv("data/reg.csv", col_types = "cc"), by = "swiid.name") %>% 
+  rename(country.name = country.name.en)
+
+attr(cc_swiid, "origin_regex") <- "country.name.en.regex"
 
 save(cc_swiid, file = "data/cc_swiid.rda")
