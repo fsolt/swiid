@@ -25,6 +25,23 @@ Anguilla,2002,0.31,,con,pc,,MM2009 Anguilla con pc,Mendoza and Machado 2009,112,
 Anguilla,2009,0.39,,con,pc,,NAT Anguilla con pc,National Assessment Team of Anguilla 2010,xxi,http://www.bb.undp.org/content/dam/barbados/docs/aboutcountry/Anguilla_CPA_Main_Report.pdf
 Antigua and Barbuda,2007,0.48,,con,pc,,SALISES 2012 Antigua and  Barbuda con pc,SALISES 2012,27,https://web.archive.org/web/20181012153352/http://www.caribank.org/uploads/2012/12/Barbados-CALC-Volume-1-MainReport-FINAL-Dec-2012.pdf
 Argentina,1970,0.44,,disp,hh,,vGP1984 Argentina disp hh,Tabatabai 1996; van Ginneken and Park 1984,111,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Argentina,1990,0.501,,disp,pc,TRUE,CEPAL Argentina disp pc 1,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Argentina,1992,0.482,,disp,pc,TRUE,CEPAL Argentina disp pc 2,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Argentina,1994,0.515,,disp,pc,TRUE,CEPAL Argentina disp pc 3,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Argentina,1997,0.53,,disp,pc,TRUE,CEPAL Argentina disp pc 4,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Argentina,1999,0.539,,disp,pc,TRUE,CEPAL Argentina disp pc 5,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Argentina,2000,0.544,,disp,pc,TRUE,CEPAL Argentina disp pc 6,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Argentina,2001,0.56,,disp,pc,TRUE,CEPAL Argentina disp pc 6,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Argentina,2002,0.578,,disp,pc,TRUE,CEPAL Argentina disp pc 7,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Argentina,2004,0.578,,disp,pc,TRUE,CEPAL Argentina disp pc 5,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Argentina,2005,0.558,,disp,pc,TRUE,CEPAL Argentina disp pc 5,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Argentina,2006,0.549,,disp,pc,TRUE,CEPAL Argentina disp pc 8,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Argentina,2009,0.51,,disp,pc,TRUE,CEPAL Argentina disp pc 8,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Argentina,2010,0.509,,disp,pc,TRUE,CEPAL Argentina disp pc 8,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Argentina,2011,0.492,,disp,pc,TRUE,CEPAL Argentina disp pc 8,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Argentina,2012,0.475,,disp,pc,TRUE,CEPAL Argentina disp pc 8,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Argentina,2013,0.472,,disp,pc,TRUE,CEPAL Argentina disp pc 8,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Argentina,2014,0.47,,disp,pc,TRUE,CEPAL Argentina disp pc 8,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Armenia,1988,0.28,,gross,pc,,AG1993 Armenia gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,119,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Armenia,1990,0.269,,gross,pc,,AG1993 Armenia gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,119,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Armenia,1996,0.444,,con,pc,FALSE,MY2006 Armenia con pc 1,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
@@ -180,6 +197,16 @@ Benin,2015,0.47,0.004,con,pc,,INSA Benin con pc,INSAE Benin 2015,19,http://www.i
 Bhutan,2003,0.416,,con,pc,,NSBB con pc,National Statistics Bureau of Bhutan 2004,9,http://www.nsb.gov.bt/publication/files/pub10ks2884sy.pdf
 Bhutan,2007,0.3809,,con,pc,,NSBB con pc,National Statistics Bureau of Bhutan 2014,72,http://www.nsb.gov.bt/publication/files/pub2yu10210bx.pdf
 Bhutan,2012,0.3875,,con,pc,,NSBB con pc,National Statistics Bureau of Bhutan 2014,72,http://www.nsb.gov.bt/publication/files/pub2yu10210bx.pdf
+Bolivia,1997,0.595,,disp,pc,TRUE,CEPAL Bolivia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Bolivia,1999,0.586,,disp,pc,TRUE,CEPAL Bolivia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Bolivia,2000,0.643,,disp,pc,TRUE,CEPAL Bolivia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Bolivia,2001,0.609,,disp,pc,TRUE,CEPAL Bolivia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Bolivia,2002,0.614,,disp,pc,TRUE,CEPAL Bolivia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Bolivia,2004,0.561,,disp,pc,TRUE,CEPAL Bolivia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Bolivia,2007,0.565,,disp,pc,TRUE,CEPAL Bolivia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Bolivia,2009,0.508,,disp,pc,TRUE,CEPAL Bolivia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Bolivia,2011,0.472,,disp,pc,TRUE,CEPAL Bolivia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Bolivia,2013,0.491,,disp,pc,TRUE,CEPAL Bolivia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Bosnia and Herzegovina,2001,0.263,,con,pc,FALSE,MY2006 Bosnia con pc 1,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Bosnia and Herzegovina,2003,0.295,,con,pc,FALSE,MY2006 Bosnia con pc 1,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Bosnia and Herzegovina,2007,0.3406,,con,pc,,BHAS con pc,Bosnia and Herzgovina Agency for Statistics 2008,42,http://www.bhas.ba/ankete/hbs_07_001-en.pdf
@@ -207,18 +234,36 @@ Brazil,1988,0.54,,con,hh,,GLS2006 Brazil con hh,"Goni, Lopez, and Serven 2006",2
 Brazil,1988,0.609,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
 Brazil,1989,0.625,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
 Brazil,1990,0.604,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,1990,0.627,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Brazil,1992,0.573,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
 Brazil,1993,0.595,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,1993,0.621,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Brazil,1995,0.591,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,1995,0.629,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Brazil,1996,0.55,,con,hh,,GLS2006 Brazil con hh,"Goni, Lopez, and Serven 2006",27,http://papers.ssrn.com/sol3/papers.cfm?abstract_id=875741
 Brazil,1996,0.591,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,1996,0.637,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Brazil,1997,0.593,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
 Brazil,1998,0.591,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
 Brazil,1999,0.585,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,1999,0.64,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Brazil,2001,0.586,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,2001,0.639,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Brazil,2002,0.58,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,2002,0.634,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Brazil,2003,0.575,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,2003,0.621,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Brazil,2004,0.564,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
+Brazil,2004,0.612,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Brazil,2005,0.613,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Brazil,2006,0.605,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Brazil,2007,0.59,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Brazil,2008,0.594,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Brazil,2009,0.576,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Brazil,2011,0.559,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Brazil,2012,0.567,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Brazil,2013,0.553,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Brazil,2014,0.548,,disp,pc,TRUE,CEPAL Brazil disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Brazil,2016,0.549,0.008,gross,pc,,IBGE2018 gross pc,IBGE 2018,Rendimento_Efetivamente_rec,ftp://ftp.ibge.gov.br/Trabalho_e_Rendimento/Pesquisa_Nacional_por_Amostra_de_Domicilios_continua/Anual/Rendimento_de_Todas_as_Fontes_2017/PNAD_Continua_2017_Rendimento_de_Todas_as_Fontes.xls
 Brazil,2016,0.541,,gross,pc,,Soares2018 gross pc,Soares 2018,7,http://www.ipea.gov.br/portal/images/stories/PDFs/TDs/ingles/dp_237.pdf
 Brazil,2017,0.549,0.008,gross,pc,,IBGE2018 gross pc,IBGE 2018,Rendimento_Efetivamente_rec,ftp://ftp.ibge.gov.br/Trabalho_e_Rendimento/Pesquisa_Nacional_por_Amostra_de_Domicilios_continua/Anual/Rendimento_de_Todas_as_Fontes_2017/PNAD_Continua_2017_Rendimento_de_Todas_as_Fontes.xls
@@ -296,14 +341,25 @@ Chile,1990,0.437,,gross,hh,,IR1993 Chile gross hh,Infante and Revoredo 1993,156,
 Chile,1990,0.514,,gross,pc,,Berry1997 gross pc,Berry 1997,15,http://www.jstor.org/stable/2503865
 Chile,1990,0.449,,market,hh,,IR1993 Chile market hh,Infante and Revoredo 1993,156,https://books.google.com/books?id=XjOj8mFck_IC&pg=PA156
 Chile,1990,0.568,,market,pc,FALSE,ST2008 markete pc,Solimano and Torche 2008,29,https://www.researchgate.net/publication/28245961_La_Distribucion_del_Ingreso_en_Chile_1987-2006_Analisis_y_Consideraciones_de_Politica
+Chile,1990,0.554,,disp,pc,TRUE,CEPAL Chile disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Chile,1991,0.488,,gross,pc,,Berry1997 gross pc,Berry 1997,15,http://www.jstor.org/stable/2503865
 Chile,1992,0.565,,market,pc,FALSE,ST2008 markete pc,Solimano and Torche 2008,29,https://www.researchgate.net/publication/28245961_La_Distribucion_del_Ingreso_en_Chile_1987-2006_Analisis_y_Consideraciones_de_Politica
+Chile,1992,0.551,,disp,pc,TRUE,CEPAL Chile disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Chile,1994,0.569,,market,pc,FALSE,ST2008 markete pc,Solimano and Torche 2008,29,https://www.researchgate.net/publication/28245961_La_Distribucion_del_Ingreso_en_Chile_1987-2006_Analisis_y_Consideraciones_de_Politica
+Chile,1994,0.552,,disp,pc,TRUE,CEPAL Chile disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Chile,1996,0.571,,market,pc,FALSE,ST2008 markete pc,Solimano and Torche 2008,29,https://www.researchgate.net/publication/28245961_La_Distribucion_del_Ingreso_en_Chile_1987-2006_Analisis_y_Consideraciones_de_Politica
+Chile,1996,0.553,,disp,pc,TRUE,CEPAL Chile disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Chile,1998,0.579,,market,pc,FALSE,ST2008 markete pc,Solimano and Torche 2008,29,https://www.researchgate.net/publication/28245961_La_Distribucion_del_Ingreso_en_Chile_1987-2006_Analisis_y_Consideraciones_de_Politica
+Chile,1998,0.56,,disp,pc,TRUE,CEPAL Chile disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Chile,2000,0.58,,market,pc,FALSE,ST2008 markete pc,Solimano and Torche 2008,29,https://www.researchgate.net/publication/28245961_La_Distribucion_del_Ingreso_en_Chile_1987-2006_Analisis_y_Consideraciones_de_Politica
+Chile,2000,0.564,,disp,pc,TRUE,CEPAL Chile disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Chile,2003,0.571,,market,pc,FALSE,ST2008 markete pc,Solimano and Torche 2008,29,https://www.researchgate.net/publication/28245961_La_Distribucion_del_Ingreso_en_Chile_1987-2006_Analisis_y_Consideraciones_de_Politica
+Chile,2003,0.552,,disp,pc,TRUE,CEPAL Chile disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Chile,2006,0.543,,market,pc,FALSE,ST2008 markete pc,Solimano and Torche 2008,29,https://www.researchgate.net/publication/28245961_La_Distribucion_del_Ingreso_en_Chile_1987-2006_Analisis_y_Consideraciones_de_Politica
+Chile,2006,0.522,,disp,pc,TRUE,CEPAL Chile disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Chile,2009,0.524,,disp,pc,TRUE,CEPAL Chile disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Chile,2011,0.516,,disp,pc,TRUE,CEPAL Chile disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Chile,2013,0.509,,disp,pc,TRUE,CEPAL Chile disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 China,1978,0.3043,,disp,pc,,CPH2018 disp pc,"Chen, Pu, and Hou 2018",,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3150410
 China,1978,0.31,,disp,pc,,SY2011 disp pc,Sutherland and Yao 2011,101,http://cjres.oxfordjournals.org/content/4/1/91.full.pdf
 China,1979,0.3094,,disp,pc,,CPH2018 disp pc,"Chen, Pu, and Hou 2018",,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3150410
@@ -414,23 +470,58 @@ China,2015,0.462,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2015,,htt
 China,2016,0.465,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2018,"""1-4""",http://www.stats.gov.cn/tjsj/ndsj/2018/indexeh.htm
 China,2017,0.467,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2018,"""1-4""",http://www.stats.gov.cn/tjsj/ndsj/2018/indexeh.htm
 China,2018,0.468,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2019,"""1-4""",http://www.stats.gov.cn/tjsj/ndsj/2019/indexeh.htm
-China,2019,0.463,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2020,"""1-4""",http://www.stats.gov.cn/tjsj/ndsj/2020/indexeh.htm
+China,2019,0.465,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2020,"""1-4""",http://www.stats.gov.cn/tjsj/ndsj/2021/indexch.htm
+China,2020,0.468,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2020,"""1-4""",http://www.stats.gov.cn/tjsj/ndsj/2021/indexch.htm
 Colombia,1978,0.545,,disp,hh,,WorldBank1994 Colombia disp hh,World Bank 1994 ,229,https://web.archive.org/web/20180427221719/http://documents.worldbank.org/curated/en/853931468019216759/pdf/1375710SPANISH.pdf
 Colombia,1988,0.512,,disp,hh,,WorldBank1994 Colombia disp hh,World Bank 1994 ,229,https://web.archive.org/web/20180427221719/http://documents.worldbank.org/curated/en/853931468019216759/pdf/1375710SPANISH.pdf
+Colombia,1991,0.531,,disp,pc,TRUE,CEPAL Colombia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Colombia,1994,0.601,,disp,pc,TRUE,CEPAL Colombia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Colombia,1997,0.53,,con,hh,,GLS2006 Colombia con hh,"Goni, Lopez, and Serven 2006",27,http://papers.ssrn.com/sol3/papers.cfm?abstract_id=875741
+Colombia,1997,0.569,,disp,pc,TRUE,CEPAL Colombia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Colombia,1999,0.572,,disp,pc,TRUE,CEPAL Colombia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Colombia,2002,0.567,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Colombia,2003,0.5,,con,hh,,GLS2006 Colombia con hh,"Goni, Lopez, and Serven 2006",27,http://papers.ssrn.com/sol3/papers.cfm?abstract_id=875741
+Colombia,2003,0.548,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Colombia,2004,0.553,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Colombia,2005,0.551,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Colombia,2008,0.562,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Colombia,2009,0.553,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Colombia,2010,0.557,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Colombia,2011,0.545,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Colombia,2012,0.536,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Colombia,2013,0.536,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Colombia,2014,0.535,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 "Congo, Republic of",2005,0.416,,gross,hh,FALSE,CNSEE Republic of Congo gross hh,CNSEE Republic of Congo 2006,28,http://www.cnsee.org/Donnees/Enquete/PDF/Ecom.pdf
 Costa Rica,1981,0.49,,disp,hh,,vGP1984 Costa Rica disp hh,Tabatabai 1996; van Ginneken and Park 1984,113,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Costa Rica,1983,0.393,,market,hh,,IR1993 market hh,Infante and Revoredo 1993,156,https://books.google.com/books?id=XjOj8mFck_IC&pg=PA156
 Costa Rica,1986,0.396,,market,hh,,IR1993 market hh,Infante and Revoredo 1993,156,https://books.google.com/books?id=XjOj8mFck_IC&pg=PA156
 Costa Rica,1988,0.354,,con,pc,,Park1995 Costa Rica con pc,Tabatabai 1996; Park 1995,113,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Costa Rica,1988,0.396,,disp,pc,,Park1995 Costa Rica disp pc,Tabatabai 1996; Park 1995,113,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Costa Rica,1990,0.438,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Costa Rica,1992,0.443,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Costa Rica,1994,0.461,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Costa Rica,1997,0.45,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Costa Rica,1999,0.473,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Costa Rica,2000,0.474,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Costa Rica,2001,0.489,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Costa Rica,2002,0.488,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Costa Rica,2004,0.478,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Costa Rica,2005,0.47,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Costa Rica,2006,0.482,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Costa Rica,2007,0.484,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Costa Rica,2008,0.473,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Costa Rica,2009,0.501,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Costa Rica,2010,0.492,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Costa Rica,2011,0.503,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Costa Rica,2012,0.504,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Costa Rica,2013,0.4632,,con,hh,,INEC  con hh,Instituto Naciónal de Estadística y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-13.xlsx
 Costa Rica,2013,0.4801,,con,pc,,INEC con pc,Instituto Naciónal de Estadística y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-13.xlsx
 Costa Rica,2013,0.4937,,disp,hh,,INEC  disp hh,Instituto Naciónal de Estadística y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-09_0.xlsx
 Costa Rica,2013,0.5094,,disp,pc,,INEC disp pc,Instituto Naciónal de Estadística y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-09_0.xlsx
 Costa Rica,2013,0.5042,,gross,hh,,INEC gross hh 2,Instituto Naciónal de Estadística y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-09_0.xlsx
 Costa Rica,2013,0.5189,,gross,pc,,INEC gross pc 2,Instituto Naciónal de Estadística y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-09_0.xlsx
+Costa Rica,2013,0.512,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Costa Rica,2014,0.505,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Cote d'Ivoire,2002,0.484,,con,pc,,FR2008 Cote D'Ivoire con pc,Ferreira and Ravallion 2008,36,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Croatia,1998,0.279,,con,pc,,MY2006b Croatia con pc,Mitra and Yemtsov 2006b,11,http://siteresources.worldbank.org/INTDECABC2006/Resources/pradeepmitra.PDF
 Croatia,2000,0.31,,disp,hh,FALSE,CBS disp hh 1,Croatian Bureau of Statistics 2004,,http://www.dzs.hr/Eng/publication/2004/13-2-2_1e2004.htm
@@ -518,9 +609,33 @@ Djibouti,2002,0.399,,con,pc,,Hassine2015 Djibouti con pc,Hassine 2015,537,https:
 Dominica,2002,0.35,,con,hh,,TW2002 Dominica con hh,Thomas and Wint 2002; Canterbury 2005,861,http://dx.doi.org/10.1080/02255189.2005.9669090 
 Dominica,2008,0.4442,,con,ae,,KC2010 con ae,Kairi Consultants 2010,45,https://web.archive.org/web/20141006130711/https://www.caribank.org/uploads/publications-reports/economics-statistics/country-poverty-assessment-reports/Dominica+CPA+-+Main+Report+Final+(Submitted).pdf
 Dominica,2010,0.44,,con,pc,,SALISES 2012 Dominica con pc,SALISES 2012,27,https://web.archive.org/web/20181012153352/http://www.caribank.org/uploads/2012/12/Barbados-CALC-Volume-1-MainReport-FINAL-Dec-2012.pdf
+Dominican Republic,2002,0.537,,disp,pc,TRUE,CEPAL Dominican Republic disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Dominican Republic,2004,0.586,,disp,pc,TRUE,CEPAL Dominican Republic disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Dominican Republic,2005,0.569,,disp,pc,TRUE,CEPAL Dominican Republic disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Dominican Republic,2006,0.583,,disp,pc,TRUE,CEPAL Dominican Republic disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Dominican Republic,2007,0.556,,disp,pc,TRUE,CEPAL Dominican Republic disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Dominican Republic,2008,0.55,,disp,pc,TRUE,CEPAL Dominican Republic disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Dominican Republic,2009,0.574,,disp,pc,TRUE,CEPAL Dominican Republic disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Dominican Republic,2010,0.554,,disp,pc,TRUE,CEPAL Dominican Republic disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Dominican Republic,2011,0.558,,disp,pc,TRUE,CEPAL Dominican Republic disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Dominican Republic,2012,0.517,,disp,pc,TRUE,CEPAL Dominican Republic disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Dominican Republic,2013,0.544,,disp,pc,TRUE,CEPAL Dominican Republic disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Dominican Republic,2014,0.519,,disp,pc,TRUE,CEPAL Dominican Republic disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Ecuador,1998,0.443,,con,pc,,INEC con pc,Instituto Nacional de Estadistica y Censos 2015,98,http://www.ecuadorencifras.gob.ec//documentos/web-inec/Bibliotecas/Libros/reportePobreza.pdf
+Ecuador,2000,0.559,,disp,pc,TRUE,CEPAL Ecuador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Ecuador,2001,0.539,,disp,pc,TRUE,CEPAL Ecuador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Ecuador,2004,0.513,,disp,pc,TRUE,CEPAL Ecuador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Ecuador,2005,0.531,,disp,pc,TRUE,CEPAL Ecuador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Ecuador,2006,0.455,,con,pc,,INEC con pc,Instituto Nacional de Estadistica y Censos 2015,98,http://www.ecuadorencifras.gob.ec//documentos/web-inec/Bibliotecas/Libros/reportePobreza.pdf
+Ecuador,2006,0.527,,disp,pc,TRUE,CEPAL Ecuador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Ecuador,2007,0.54,,disp,pc,TRUE,CEPAL Ecuador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Ecuador,2008,0.504,,disp,pc,TRUE,CEPAL Ecuador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Ecuador,2009,0.5,,disp,pc,TRUE,CEPAL Ecuador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Ecuador,2010,0.495,,disp,pc,TRUE,CEPAL Ecuador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Ecuador,2011,0.46,,disp,pc,TRUE,CEPAL Ecuador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Ecuador,2013,0.477,,disp,pc,TRUE,CEPAL Ecuador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Ecuador,2014,0.408,,con,pc,,INEC con pc,Instituto Nacional de Estadistica y Censos 2015,98,http://www.ecuadorencifras.gob.ec//documentos/web-inec/Bibliotecas/Libros/reportePobreza.pdf
+Ecuador,2014,0.452,,disp,pc,TRUE,CEPAL Ecuador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Egypt,1975,0.37,,disp,hh,,vGP1984 Egypt disp hh,Tabatabai 1996; van Ginneken and Park 1984,107,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Egypt,1975,0.34,,disp,pc,,vGP1984 Egypt disp pc,Tabatabai 1996; van Ginneken and Park 1984,107,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Egypt,1991,0.32,,con,pc,,Shaban2016 Egypt con pc,Povcalnet; Shaban 2016,196,https://link.springer.com/chapter/10.1057/9781137554598_6
@@ -554,6 +669,17 @@ Egypt,2012,0.295,0.02,con,pc,,KANRVZ2017 Egypt con pc 2,"Krafft, Assaad, Nazier,
 Egypt,2012,0.296,,con,pc,,UNESCWA2018 Egypt con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
 Egypt,2012,0.3133,,disp,sqrt,,HCV2020 Egypt disp sqrt,"Hlasny, Ceriani, and Verme 2020",24,https://www.lisdatacenter.org/wps/liswps/792.pdf
 Egypt,2015,0.313,,con,pc,,UNESCWA2018 Egypt con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
+El Salvador,1995,0.507,,disp,pc,TRUE,CEPAL El Salvador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+El Salvador,1997,0.51,,disp,pc,TRUE,CEPAL El Salvador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+El Salvador,1999,0.518,,disp,pc,TRUE,CEPAL El Salvador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+El Salvador,2000,0.531,,disp,pc,TRUE,CEPAL El Salvador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+El Salvador,2001,0.525,,disp,pc,TRUE,CEPAL El Salvador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+El Salvador,2004,0.493,,disp,pc,TRUE,CEPAL El Salvador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+El Salvador,2009,0.478,,disp,pc,TRUE,CEPAL El Salvador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+El Salvador,2010,0.454,,disp,pc,TRUE,CEPAL El Salvador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+El Salvador,2012,0.437,,disp,pc,TRUE,CEPAL El Salvador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+El Salvador,2013,0.453,,disp,pc,TRUE,CEPAL El Salvador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+El Salvador,2014,0.436,,disp,pc,TRUE,CEPAL El Salvador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Estonia,1988,0.278,,gross,pc,,AG1993 Estonia gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,119,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Estonia,1988,0.23,,gross,pc,FALSE,Milanovic1998 Estonia gross pc,Milanovic 1998,172,https://books.google.com/books?id=cQl9xbuhvNkC
 Estonia,1990,0.24,,gross,pc,,AG1993 Estonia gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,120,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -673,8 +799,13 @@ Grenada,2008,0.37,,con,ae,,KC2009 Grenada con ae,Kairi Consultants 2009,39,https
 Grenada,2008,0.37,,con,pc,,SALISES 2012 Grenada con pc,SALISES 2012,27,https://web.archive.org/web/20181012153352/http://www.caribank.org/uploads/2012/12/Barbados-CALC-Volume-1-MainReport-FINAL-Dec-2012.pdf
 Guatemala,1981,0.427,,con,hh,,Park1995 Guatemala con hh,Tabatabai 1996; Park 1995,115,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Guatemala,1981,0.49,,disp,hh,,Park1995 Guatemala disp hh,Tabatabai 1996; Park 1995,115,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Guatemala,1989,0.582,,disp,pc,TRUE,CEPAL Guatemala disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Guatemala,1998,0.56,,disp,pc,TRUE,CEPAL Guatemala disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Guatemala,2000,0.476,,con,pc,,INE2002 con pc,Instituto Nacional de Estadi_stica de Guatemala 2002 ,20,https://www.ine.gob.gt/sistema/uploads/2014/01/15/v8ukWQ78M4VJrnYqyN2oCumMy1GiBzaf.pdf
 Guatemala,2000,0.57,,gross,pc,,INE2002 gross pc,Instituto Nacional de Estadi_stica de Guatemala 2002 ,20,https://www.ine.gob.gt/sistema/uploads/2014/01/15/v8ukWQ78M4VJrnYqyN2oCumMy1GiBzaf.pdf
+Guatemala,2002,0.542,,disp,pc,TRUE,CEPAL Guatemala disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Guatemala,2006,0.585,,disp,pc,TRUE,CEPAL Guatemala disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Guatemala,2014,0.553,,disp,pc,TRUE,CEPAL Guatemala disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Guinea,1993,0.4,,con,pc,,FR2008 Guinea con pc,Ferreira and Ravallion 2008,37,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Guinea,1995,0.449,,con,pc,,INS Guinea con pc,Institut National de la Statistique Guinea 2012,12,http://www.stat-guinee.org/www.old/DSRP/PDF/Pauvrete%20Inegalite%20Guinee_fVer2_%2021%2008%20%202012.pdf
 Guinea,2003,0.403,,con,pc,,INS Guinea con pc,Institut National de la Statistique Guinea 2012,12,http://www.stat-guinee.org/www.old/DSRP/PDF/Pauvrete%20Inegalite%20Guinee_fVer2_%2021%2008%20%202012.pdf
@@ -688,6 +819,19 @@ Guyana,2007,0.5,,con,pc,,MM2009 Guyana con pc,Mendoza and Machado 2009,112,http:
 Haiti,2001,0.61,,gross,pc,FALSE,WBH gross pc,World Bank 2014,6,http://www.ihsi.ht/pdf/ecvmas/ecvmas_seuil/pauvrete%20et%20inclusion%20sociale%20en%20haiti%20francais.pdf
 Haiti,2012,0.676,,gross,hh,FALSE,Herrera gross hh,Herrera et al. 2014,75,http://www.ihsi.ht/pdf/ecvmas/analyse/IHSI_DIAL_Rapport%20complet_11072014.pdf
 Haiti,2012,0.61,,gross,pc,FALSE,WBH gross pc,World Bank 2014,6,http://www.ihsi.ht/pdf/ecvmas/ecvmas_seuil/pauvrete%20et%20inclusion%20sociale%20en%20haiti%20francais.pdf
+Honduras,1990,0.615,,disp,pc,TRUE,CEPAL Honduras disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Honduras,1992,0.566,,disp,pc,TRUE,CEPAL Honduras disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Honduras,1994,0.56,,disp,pc,TRUE,CEPAL Honduras disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Honduras,1997,0.558,,disp,pc,TRUE,CEPAL Honduras disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Honduras,1999,0.564,,disp,pc,TRUE,CEPAL Honduras disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Honduras,2001,0.577,,disp,pc,TRUE,CEPAL Honduras disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Honduras,2002,0.588,,disp,pc,TRUE,CEPAL Honduras disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Honduras,2003,0.587,,disp,pc,TRUE,CEPAL Honduras disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Honduras,2006,0.604,,disp,pc,TRUE,CEPAL Honduras disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Honduras,2007,0.579,,disp,pc,TRUE,CEPAL Honduras disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Honduras,2009,0.553,,disp,pc,TRUE,CEPAL Honduras disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Honduras,2010,0.572,,disp,pc,TRUE,CEPAL Honduras disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Honduras,2013,0.564,,disp,pc,TRUE,CEPAL Honduras disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Hong Kong,1964,0.462,,gross,hh,,Lin1985 gross hh 2,Lin 1985,395,https://doi.org/10.1111/j.1746-1049.1985.tb00067.x
 Hong Kong,1966,0.467,,gross,hh,,Lin1985 gross hh 1,Lin 1985,395,https://doi.org/10.1111/j.1746-1049.1985.tb00067.x
 Hong Kong,1971,0.409,,gross,hh,,Lin1985 gross hh 1,Lin 1985,395,https://doi.org/10.1111/j.1746-1049.1985.tb00067.x
@@ -830,7 +974,6 @@ Iceland,2008,0.37,,disp,oecdm,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 20
 Iceland,2008,0.479,,gross,oecdm,TRUE,OK2010 gross oecdm,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
 Iceland,2008,0.488,,market,oecdm,TRUE,OK2010 market oecdm ,Olafsson and Kristjansson 2010,15,http://www.lisdatacenter.org/conference/papers/olafsson-kristjansson.pdf
 Iceland,2009,0.34,,disp,oecdm,TRUE,OK2013 disp sqrt,Olafsson and Kristjansson 2013,422,https://books.google.com/books?id=XaGWoJbFGG0C&pg=PA422
-Ireland,2018,0.44,,gross,hh,,CSO Ireland gross hh,CSO Ireland 2020,,https://www.cso.ie/en/releasesandpublications/ep/p-hfcs/householdfinanceandconsumptionsurvey2018/incomeandwealthinequality/
 India,1971,0.314,,con,ae,,CP2019 con ae,Chancel and Piketty 2019,A3,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12439&file=roiw12439-sup-0001-AppendixS1-S14.xlsx
 India,1973,0.326,,con,ae,,CP2019 con ae,Chancel and Piketty 2019,A3,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12439&file=roiw12439-sup-0001-AppendixS1-S14.xlsx
 India,1973,0.357,,con,pc,,Yotopoulos1989 India con pc,Yotopoulos 1989,366,https://doi.org/10.1111/j.1475-4991.1989.tb00598.x
@@ -1046,6 +1189,7 @@ Ireland,1987,0.404,,disp,hh,,Park1995 Ireland disp hh,Tabatabai 1996; Park 1995,
 Ireland,1987,0.387,,gross,ae,TRUE,W1999 Ireland gross ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 Ireland,1987,0.398,,gross,hh,,CN1993 Ireland gross hh,Callan and Nolan 1993,5,http://www.esri.ie/pubs/WP043.pdf
 Ireland,2003,0.311,,disp,pc,,CSO Ireland disp pc,CSO Ireland 2007,13,http://www.cso.ie/en/media/csoie/releasespublications/documents/eusilc/2006/eusilc_2006.pdf
+Ireland,2018,0.44,,gross,hh,,CSO Ireland gross hh,CSO Ireland 2020,,https://www.cso.ie/en/releasesandpublications/ep/p-hfcs/householdfinanceandconsumptionsurvey2018/incomeandwealthinequality/
 Israel,1979,0.3181,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
 Israel,1979,0.319,,disp,ae,,A1996 Israel disp ae 2,Achdut 1996,S25,https://www-jstor-org.proxy.lib.uiowa.edu/stable/2554807
 Israel,1979,0.318,,disp,ae,,Achdut1997 Israel disp ae,Achdut 1997,139,https://books.google.com/books?hl=en&lr=&id=QK3yypiMK3EC&pg=PA132
@@ -1254,8 +1398,8 @@ Jordan,2010,0.354,,con,pc,,Shaban2016 Jordan con pc,Povcalnet; Shaban 2016,196,h
 Jordan,2010,0.362,,con,pc,,UNESCWA2018 Jordan con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
 Jordan,2010,0.4101,,disp,sqrt,,HCV2020 Jordan disp sqrt,"Hlasny, Ceriani, and Verme 2020",24,https://www.lisdatacenter.org/wps/liswps/792.pdf
 Jordan,2013,0.331,,con,pc,,UNESCWA2018 Jordan con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
-Jordan,2014,0.353,0.012,con,pc,,KANRCZ2017 Jordan con pc 2,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
 Jordan,2013,0.3782,,disp,sqrt,,HCV2020 Jordan disp sqrt,"Hlasny, Ceriani, and Verme 2020",24,https://www.lisdatacenter.org/wps/liswps/792.pdf
+Jordan,2014,0.353,0.012,con,pc,,KANRCZ2017 Jordan con pc 2,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
 Kazakhstan,1988,0.257,,gross,pc,FALSE,Milanovic1998 Kazakhstan gross pc,Milanovic 1998,181,https://books.google.com/books?id=cQl9xbuhvNkC
 Kazakhstan,1993,0.327,,gross,pc,FALSE,Milanovic1998 Kazakhstan gross pc,Milanovic 1998,181,https://books.google.com/books?id=cQl9xbuhvNkC
 Kazakhstan,1996,0.353,,con,pc,FALSE,MY2006 Kazakhstan con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
@@ -1428,10 +1572,24 @@ Mexico,1984,0.5,,con,hh,,GLS2006 Mexico con hh,"Goni, Lopez, and Serven 2006",27
 Mexico,1984,0.388,,con,hh,,Park1995 Mexico con hh,Tabatabai 1996; Park 1995,116,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Mexico,1984,0.435,,disp,hh,,Park1995 Mexico disp hh,Tabatabai 1996; Park 1995,116,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Mexico,1989,0.5,,con,hh,,GLS2006 Mexico con hh,"Goni, Lopez, and Serven 2006",27,http://papers.ssrn.com/sol3/papers.cfm?abstract_id=875741
+Mexico,1989,0.536,,disp,pc,TRUE,CEPAL Mexico disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Mexico,1992,0.542,,disp,pc,TRUE,CEPAL Mexico disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Mexico,1994,0.49,,con,hh,,GLS2006 Mexico con hh,"Goni, Lopez, and Serven 2006",27,http://papers.ssrn.com/sol3/papers.cfm?abstract_id=875741
+Mexico,1994,0.539,,disp,pc,TRUE,CEPAL Mexico disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Mexico,1995,0.537,,con,pc,,FR2008 Mexico con pc,Ferreira and Ravallion 2008,38,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Mexico,1996,0.46,,con,hh,,GLS2006 Mexico con hh,"Goni, Lopez, and Serven 2006",27,http://papers.ssrn.com/sol3/papers.cfm?abstract_id=875741
+Mexico,1996,0.526,,disp,pc,TRUE,CEPAL Mexico disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Mexico,1998,0.539,,disp,pc,TRUE,CEPAL Mexico disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Mexico,2000,0.542,,disp,pc,TRUE,CEPAL Mexico disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Mexico,2002,0.49,,con,hh,,GLS2006 Mexico con hh,"Goni, Lopez, and Serven 2006",27,http://papers.ssrn.com/sol3/papers.cfm?abstract_id=875741
+Mexico,2002,0.514,,disp,pc,TRUE,CEPAL Mexico disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Mexico,2004,0.516,,disp,pc,TRUE,CEPAL Mexico disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Mexico,2005,0.528,,disp,pc,TRUE,CEPAL Mexico disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Mexico,2006,0.506,,disp,pc,TRUE,CEPAL Mexico disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Mexico,2008,0.515,,disp,pc,TRUE,CEPAL Mexico disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Mexico,2010,0.481,,disp,pc,TRUE,CEPAL Mexico disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Mexico,2012,0.492,,disp,pc,TRUE,CEPAL Mexico disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Mexico,2014,0.491,,disp,pc,TRUE,CEPAL Mexico disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 "Micronesia, Fed. States of",1998,0.45,,con,pc,,ZKM2014 Micronesia con pc,"Zhuang, Kanbur, and Maligalig 2014",25,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA25
 Moldova,1988,0.264,,gross,pc,,AG1993 Moldova gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,121,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Moldova,1988,0.241,,gross,pc,FALSE,Milanovic1998 Moldova gross pc,Milanovic 1998,178,https://books.google.com/books?id=cQl9xbuhvNkC
@@ -1544,6 +1702,11 @@ New Zealand,2010,0.302,,disp,ae,,CE2016 disp ae ,Creedy and Eedrah 2016,141,http
 New Zealand,2010,0.356,,disp,hh,,CE2016 disp hh ,Creedy and Eedrah 2016,141,https://doi.org/10.1080/00779954.2014.997455 
 New Zealand,2010,0.477,,market,ae,,CE2016 market ae,Creedy and Eedrah 2016,141,https://doi.org/10.1080/00779954.2014.997455 
 New Zealand,2010,0.513,,market,hh,,CE2016 market hh ,Creedy and Eedrah 2016,141,https://doi.org/10.1080/00779954.2014.997455 
+Nicaragua,1993,0.582,,disp,pc,TRUE,CEPAL Nicaragua disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Nicaragua,1998,0.583,,disp,pc,TRUE,CEPAL Nicaragua disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Nicaragua,2001,0.579,,disp,pc,TRUE,CEPAL Nicaragua disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Nicaragua,2005,0.532,,disp,pc,TRUE,CEPAL Nicaragua disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Nicaragua,2009,0.478,,disp,pc,TRUE,CEPAL Nicaragua disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Nigeria,2004,0.3898,,con,hh,,NBS Nigeria con hh,National Bureau of Statistics Nigeria 2013,107,http://www.nigerianstat.gov.ng/pdfuploads/annual_abstract_2012.pdf
 Nigeria,2004,0.4296,,con,pc,,NBS Nigeria con pc,National Bureau of Statistics Nigeria 2012,11,http://www.nigerianstat.gov.ng/pdfuploads/Nigeria%20Poverty%20Profile%202010.pdf
 Nigeria,2010,0.4161,,con,hh,,NBS Nigeria con hh,National Bureau of Statistics Nigeria 2013,107,http://www.nigerianstat.gov.ng/pdfuploads/annual_abstract_2012.pdf
@@ -1648,27 +1811,65 @@ Palestinian Territories,2009,0.377,,con,pc,,UNESCWA2018 Palestinian Territories 
 Palestinian Territories,2010,0.392,,con,pc,,UNESCWA2018 Palestinian Territories con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
 Palestinian Territories,2011,0.384,,con,pc,,UNESCWA2018 Palestinian Territories con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
 Panama,1970,0.57,,disp,hh,,vGP1984 Panama disp hh,Tabatabai 1996; van Ginneken and Park 1984,116,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Panama,2001,0.555,,disp,pc,TRUE,CEPAL Panama disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Panama,2002,0.567,,disp,pc,TRUE,CEPAL Panama disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Panama,2003,0.563,,disp,pc,TRUE,CEPAL Panama disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Panama,2004,0.541,,disp,pc,TRUE,CEPAL Panama disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Panama,2005,0.529,,disp,pc,TRUE,CEPAL Panama disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Panama,2006,0.54,,disp,pc,TRUE,CEPAL Panama disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Panama,2007,0.524,,disp,pc,TRUE,CEPAL Panama disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Panama,2008,0.524,,disp,pc,TRUE,CEPAL Panama disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Panama,2009,0.526,,disp,pc,TRUE,CEPAL Panama disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Panama,2010,0.528,,disp,pc,TRUE,CEPAL Panama disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Panama,2011,0.532,,disp,pc,TRUE,CEPAL Panama disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Panama,2013,0.527,,disp,pc,TRUE,CEPAL Panama disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Panama,2014,0.519,,disp,pc,TRUE,CEPAL Panama disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Papua New Guinea,1996,0.509,,con,pc,,ZKM2014 Papua New Guinea con pc,"Zhuang, Kanbur, and Maligalig 2014",25,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA25
+Paraguay,1999,0.558,,disp,pc,TRUE,CEPAL Paraguay disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Paraguay,2001,0.558,,disp,pc,TRUE,CEPAL Paraguay disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Paraguay,2003,0.563,,disp,pc,TRUE,CEPAL Paraguay disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Paraguay,2004,0.536,,disp,pc,TRUE,CEPAL Paraguay disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Paraguay,2005,0.528,,disp,pc,TRUE,CEPAL Paraguay disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Paraguay,2007,0.548,,disp,pc,TRUE,CEPAL Paraguay disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Paraguay,2008,0.529,,disp,pc,TRUE,CEPAL Paraguay disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Paraguay,2009,0.512,,disp,pc,TRUE,CEPAL Paraguay disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Paraguay,2010,0.533,,disp,pc,TRUE,CEPAL Paraguay disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Paraguay,2011,0.546,,disp,pc,TRUE,CEPAL Paraguay disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Paraguay,2012,0.502,,disp,pc,TRUE,CEPAL Paraguay disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Paraguay,2013,0.522,,disp,pc,TRUE,CEPAL Paraguay disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Paraguay,2014,0.536,,disp,pc,TRUE,CEPAL Paraguay disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Peru,1995,0.46,,con,hh,,GLS2006 Peru con hh,"Goni, Lopez, and Serven 2006",27,http://papers.ssrn.com/sol3/papers.cfm?abstract_id=875741
+Peru,1997,0.532,,disp,pc,TRUE,CEPAL Peru disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Peru,1999,0.5,,con,hh,,GLS2006 Peru con hh,"Goni, Lopez, and Serven 2006",27,http://papers.ssrn.com/sol3/papers.cfm?abstract_id=875741
+Peru,1999,0.545,,disp,pc,TRUE,CEPAL Peru disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Peru,2001,0.49,,con,hh,,GLS2006 Peru con hh,"Goni, Lopez, and Serven 2006",27,http://papers.ssrn.com/sol3/papers.cfm?abstract_id=875741
+Peru,2001,0.525,,disp,pc,TRUE,CEPAL Peru disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Peru,2003,0.48,,con,hh,,GLS2006 Peru con hh,"Goni, Lopez, and Serven 2006",27,http://papers.ssrn.com/sol3/papers.cfm?abstract_id=875741
+Peru,2003,0.53,,disp,pc,TRUE,CEPAL Peru disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Peru,2007,0.41,,con,pc,,INEI Peru con pc,INEI 2017,23,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
 Peru,2007,0.5,,gross,pc,FALSE,INEI Peru gross pc,INEI 2017,32,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
+Peru,2007,0.5,,disp,pc,TRUE,CEPAL Peru disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Peru,2008,0.38,,con,pc,,INEI Peru con pc,INEI 2017,23,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
 Peru,2008,0.48,,gross,pc,FALSE,INEI Peru gross pc,INEI 2017,32,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
+Peru,2008,0.476,,disp,pc,TRUE,CEPAL Peru disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Peru,2009,0.39,,con,pc,,INEI Peru con pc,INEI 2017,23,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
 Peru,2009,0.47,,gross,pc,FALSE,INEI Peru gross pc,INEI 2017,32,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
+Peru,2009,0.469,,disp,pc,TRUE,CEPAL Peru disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Peru,2010,0.37,,con,pc,,INEI Peru con pc,INEI 2017,23,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
 Peru,2010,0.46,,gross,pc,FALSE,INEI Peru gross pc,INEI 2017,32,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
+Peru,2010,0.458,,disp,pc,TRUE,CEPAL Peru disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Peru,2011,0.36,,con,pc,,INEI Peru con pc,INEI 2017,23,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
 Peru,2011,0.45,,gross,pc,FALSE,INEI Peru gross pc,INEI 2017,32,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
+Peru,2011,0.452,,disp,pc,TRUE,CEPAL Peru disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Peru,2012,0.36,,con,pc,,INEI Peru con pc,INEI 2017,23,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
 Peru,2012,0.45,,gross,pc,FALSE,INEI Peru gross pc,INEI 2017,32,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
+Peru,2012,0.449,,disp,pc,TRUE,CEPAL Peru disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Peru,2013,0.35,,con,pc,,INEI Peru con pc,INEI 2017,23,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
 Peru,2013,0.44,,gross,pc,FALSE,INEI Peru gross pc,INEI 2017,32,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
+Peru,2013,0.444,,disp,pc,TRUE,CEPAL Peru disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Peru,2014,0.35,,con,pc,,INEI Peru con pc,INEI 2017,23,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
 Peru,2014,0.44,,gross,pc,FALSE,INEI Peru gross pc,INEI 2017,32,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
+Peru,2014,0.439,,disp,pc,TRUE,CEPAL Peru disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Peru,2015,0.35,,con,pc,,INEI Peru con pc,INEI 2017,23,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
 Peru,2015,0.44,,gross,pc,FALSE,INEI Peru gross pc,INEI 2017,32,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
 Peru,2016,0.34,,con,pc,,INEI Peru con pc,INEI 2017,23,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
@@ -2470,6 +2671,32 @@ United States,1999,0.305,,con,sqrt,TRUE,JST2005 con sqrt,"Johnson, Smeeding, and
 United States,1999,0.406,,disp,sqrt,TRUE,JST2005 disp sqrt,"Johnson, Smeeding, and Torrey 2005",14,https://www.bls.gov/opub/mlr/2005/04/art2full.pdf
 United States,2001,0.307,,con,sqrt,TRUE,JST2005 con sqrt,"Johnson, Smeeding, and Torrey 2005",14,https://www.bls.gov/opub/mlr/2005/04/art2full.pdf
 United States,2001,0.4,,disp,sqrt,TRUE,JST2005 disp sqrt,"Johnson, Smeeding, and Torrey 2005",14,https://www.bls.gov/opub/mlr/2005/04/art2full.pdf
+Uruguay,1990,0.492,,disp,pc,TRUE,CEPAL Uruguay disp pc 1,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Uruguay,1992,0.416,,disp,pc,TRUE,CEPAL Uruguay disp pc 1,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Uruguay,1994,0.423,,disp,pc,TRUE,CEPAL Uruguay disp pc 1,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Uruguay,1997,0.43,,disp,pc,TRUE,CEPAL Uruguay disp pc 1,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Uruguay,1999,0.44,,disp,pc,TRUE,CEPAL Uruguay disp pc 1,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Uruguay,2000,0.447,,disp,pc,TRUE,CEPAL Uruguay disp pc 1,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Uruguay,2001,0.452,,disp,pc,TRUE,CEPAL Uruguay disp pc 1,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Uruguay,2002,0.455,,disp,pc,TRUE,CEPAL Uruguay disp pc 1,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Uruguay,2004,0.464,,disp,pc,TRUE,CEPAL Uruguay disp pc 1,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Uruguay,2005,0.451,,disp,pc,TRUE,CEPAL Uruguay disp pc 1,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Uruguay,2007,0.457,,disp,pc,TRUE,CEPAL Uruguay disp pc 1,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Uruguay,2007,0.456,,disp,pc,TRUE,CEPAL Uruguay disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Uruguay,2008,0.446,,disp,pc,TRUE,CEPAL Uruguay disp pc 1,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Uruguay,2008,0.445,,disp,pc,TRUE,CEPAL Uruguay disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Uruguay,2009,0.433,,disp,pc,TRUE,CEPAL Uruguay disp pc 1,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Uruguay,2009,0.433,,disp,pc,TRUE,CEPAL Uruguay disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Uruguay,2010,0.422,,disp,pc,TRUE,CEPAL Uruguay disp pc 1,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Uruguay,2010,0.422,,disp,pc,TRUE,CEPAL Uruguay disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Uruguay,2011,0.402,,disp,pc,TRUE,CEPAL Uruguay disp pc 1,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Uruguay,2011,0.402,,disp,pc,TRUE,CEPAL Uruguay disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Uruguay,2012,0.38,,disp,pc,TRUE,CEPAL Uruguay disp pc 1,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Uruguay,2012,0.379,,disp,pc,TRUE,CEPAL Uruguay disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Uruguay,2013,0.383,,disp,pc,TRUE,CEPAL Uruguay disp pc 1,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Uruguay,2013,0.382,,disp,pc,TRUE,CEPAL Uruguay disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Uruguay,2014,0.379,,disp,pc,TRUE,CEPAL Uruguay disp pc 1,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Uruguay,2014,0.379,,disp,pc,TRUE,CEPAL Uruguay disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Uruguay,2018,0.38,0.004,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2019,10,https://www.ine.gub.uy/c/document_library/get_file?uuid=f605ab36-693d-4975-a919-fe8d5646f409&groupId=10181
 Uruguay,2019,0.383,0.004,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2020,11,https://www.ine.gub.uy/documents/10181/30913/Estimación+de+la+pobreza+por+el+método+de+ingreso+2019/c0c832b4-7e5c-4c2a-92e9-7ea69a75e92a
 Uruguay,2020,0.387,,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2021,9,https://www.ine.gub.uy/documents/10181/30913/Pobreza0321/c18681f1-7aa9-4d0a-bd6b-265049f3e26e
@@ -2497,6 +2724,24 @@ Vanuatu,2006,0.46,,con,pc,,ZKM2014 Vanuatu con pc,"Zhuang, Kanbur, and Maligalig
 Vanuatu,2010,0.31,,con,hh,,VNSO con hh,Vanuatu National Statistics Office 2013,13,http://www.vnso.gov.vu/index.php/component/advlisting/?view=download&fileId=2007
 Vanuatu,2010,0.37,,con,pc,,VNSO con pc,Vanuatu National Statistics Office 2013,13,http://www.vnso.gov.vu/index.php/component/advlisting/?view=download&fileId=2007
 Venezuela,1970,0.49,,disp,hh,,vGP1984 Venezuela disp hh,Tabatabai 1996; van Ginneken and Park 1984,117,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Venezuela,1990,0.471,,disp,pc,TRUE,CEPAL Venezuela disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Venezuela,1992,0.471,,disp,pc,TRUE,CEPAL Venezuela disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Venezuela,1994,0.486,,disp,pc,TRUE,CEPAL Venezuela disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Venezuela,1997,0.507,,disp,pc,TRUE,CEPAL Venezuela disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Venezuela,1999,0.498,,disp,pc,TRUE,CEPAL Venezuela disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Venezuela,2000,0.468,,disp,pc,TRUE,CEPAL Venezuela disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Venezuela,2001,0.486,,disp,pc,TRUE,CEPAL Venezuela disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Venezuela,2002,0.5,,disp,pc,TRUE,CEPAL Venezuela disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Venezuela,2004,0.47,,disp,pc,TRUE,CEPAL Venezuela disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Venezuela,2005,0.49,,disp,pc,TRUE,CEPAL Venezuela disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Venezuela,2006,0.447,,disp,pc,TRUE,CEPAL Venezuela disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Venezuela,2007,0.427,,disp,pc,TRUE,CEPAL Venezuela disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Venezuela,2008,0.412,,disp,pc,TRUE,CEPAL Venezuela disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Venezuela,2009,0.416,,disp,pc,TRUE,CEPAL Venezuela disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Venezuela,2010,0.394,,disp,pc,TRUE,CEPAL Venezuela disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Venezuela,2011,0.397,,disp,pc,TRUE,CEPAL Venezuela disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Venezuela,2012,0.405,,disp,pc,TRUE,CEPAL Venezuela disp pc 3,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Venezuela,2013,0.407,,disp,pc,TRUE,CEPAL Venezuela disp pc 3,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Vietnam,1993,0.357,,con,pc,,FR2008 Vietnam con pc,Ferreira and Ravallion 2008,40,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Vietnam,1999,0.39,,gross,pc,FALSE,GSO Vietnam 2005 gross pc,General Statistics Office of Vietnam 2005,,http://www.gso.gov.vn/default_en.aspx?tabid=508&ItemID=2510
 Vietnam,2002,0.42,,gross,pc,FALSE,GSO Vietnam 2005 gross pc,General Statistics Office of Vietnam 2005,,http://www.gso.gov.vn/default_en.aspx?tabid=508&ItemID=2510
