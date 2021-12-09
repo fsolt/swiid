@@ -1819,11 +1819,17 @@ cbo <- read_excel("data-raw/cbo.xlsx", sheet = "Exhibit 22", col_names = FALSE, 
 # https://www.census.gov/topics/income-poverty/income-inequality/data/data-tables.html
 # Selected Measures of Household Income Dispersion:  1967 to 20xx																																																			
 # Selected Measures of Equivalence-Adjusted Income Dispersion: 1967 to 20xx																																																			
-uscb_links <- paste0("https://www2.census.gov/programs-surveys/demo/tables/p60/270/tableA", 4:5, ".xlsx")
+uscb_links <- paste0("https://www2.census.gov/programs-surveys/demo/tables/p60/273/tableA", 4:5, ".xlsx")
 download.file(uscb_links[1], "data-raw/uscb_hh.xlsx")
 download.file(uscb_links[2], "data-raw/uscb_ae.xlsx")
 
-uscb_hh <- read_excel("data-raw/uscb_hh.xlsx", skip = 3) %>% 
+download.file("https://github.com/fsolt/swiid/raw/015a7a1f19f68b77bcc3a5a315fb27745b4fc33f/data-raw/uscb_hh.xlsx", 
+              "data-raw/uscb_hh_se.xlsx")
+
+download.file("https://github.com/fsolt/swiid/raw/015a7a1f19f68b77bcc3a5a315fb27745b4fc33f/data-raw/uscb_ae.xlsx", 
+              "data-raw/uscb_ae_se.xlsx")
+
+uscb_hh_se <- read_excel("data-raw/uscb_hh_se.xlsx", skip = 3) %>% 
   filter(str_detect(`Measures of income dispersion`, "Gini")) %>% 
   mutate(var = c("gini", "gini_se")) %>% 
   select(-`Measures of income dispersion`) %>% 
@@ -1832,11 +1838,10 @@ uscb_hh <- read_excel("data-raw/uscb_hh.xlsx", skip = 3) %>%
   mutate(year = as.numeric(str_extract(year, "\\d{4}")),
          gini = as.numeric(gini),
          gini_se = as.numeric(gini_se),
-         break_yr = (year == 1993 | (year == 2013 & gini_se > .003))) %>%
+         break_yr = (year == 1993 | (year == 2013 & gini_se > .005) | (year == 2017 & gini_se == 0.0036))) %>%
   arrange(year, break_yr) %>% 
   transmute(country = "United States",
             year = year,
-            gini = gini,
             gini_se = gini_se,
             welfare_def = "gross",
             equiv_scale = "hh",
@@ -1846,7 +1851,27 @@ uscb_hh <- read_excel("data-raw/uscb_hh.xlsx", skip = 3) %>%
             page = "",
             link = uscb_links[1])
 
-uscb_ae <- read_excel("data-raw/uscb_ae.xlsx", skip = 3) %>% 
+uscb_hh <- read_excel("data-raw/uscb_hh.xlsx", sheet = "A4b", skip = 7) %>% 
+  clean_names() %>% 
+  transmute(year = as.numeric(str_extract(x1, "\\d{4}")),
+         gini = as.numeric(x14),
+         break_yr = (year == 1993 | (year == 2013 & gini > .48) | (year == 2017 & gini == .489))) %>%
+  arrange(year, break_yr) %>% 
+  filter(!is.na(gini)) %>% 
+  transmute(country = "United States",
+            year = year,
+            gini = gini,
+            welfare_def = "gross",
+            equiv_scale = "hh",
+            monetary = TRUE,
+            series = paste("US Census Bureau", welfare_def, equiv_scale, cumsum(break_yr) + 1),
+            source1 = "U.S. Census Bureau",
+            page = "",
+            link = uscb_links[1]) %>% 
+  left_join(uscb_hh_se, by = c("country", "year", "welfare_def", "equiv_scale",
+                               "monetary", "series", "source1", "page", "link"))
+
+uscb_ae_se <- read_excel("data-raw/uscb_ae_se.xlsx", skip = 3) %>% 
   filter(str_detect(`Measures of income dispersion`, "Gini")) %>% 
   mutate(var = c("gini", "gini_se")) %>% 
   select(-`Measures of income dispersion`) %>% 
@@ -1855,11 +1880,10 @@ uscb_ae <- read_excel("data-raw/uscb_ae.xlsx", skip = 3) %>%
   mutate(year = as.numeric(str_extract(year, "\\d{4}")),
          gini = as.numeric(gini),
          gini_se = as.numeric(gini_se),
-         break_yr = (year == 1993 | (year == 2013 & gini_se > .003))) %>%
+         break_yr = (year == 1993 | (year == 2013 & gini_se == .0064) | (year == 2017 & gini_se == 0.0036))) %>%
   arrange(year, break_yr) %>% 
   transmute(country = "United States",
             year = year,
-            gini = gini,
             gini_se = gini_se,
             welfare_def = "gross",
             equiv_scale = "ae",
@@ -1868,6 +1892,21 @@ uscb_ae <- read_excel("data-raw/uscb_ae.xlsx", skip = 3) %>%
             source1 = "U.S. Census Bureau",
             page = "",
             link = uscb_links[2])
+
+uscb_ae <- read_excel("data-raw/uscb_ae.xlsx", skip = 6) %>% 
+  clean_names() %>% 
+  transmute(year = as.numeric(str_extract(x1, "\\d{4}")),
+            gini = as.numeric(x7),
+            break_yr = (year == 1993 | (year == 2013 & gini > .48) | (year == 2017 & gini == .489))) %>%
+  arrange(year, break_yr) %>% 
+  filter(!is.na(gini)) %>% 
+  transmute(country = "United States",
+            year = year,
+            gini = gini,
+            welfare_def = "gross",
+            equiv_scale = "ae",
+            series = paste("US Census Bureau", welfare_def, equiv_scale, cumsum(break_yr) + 1)) %>% 
+  left_join(uscb_ae_se, by = c("country", "year", "welfare_def", "equiv_scale", "series"))
 
 uscb_fam_link <- "https://www2.census.gov/library/publications/1998/demographics/p60-203.pdf"
 download.file(uscb_fam_link, "data-raw/uscb1998.pdf")
@@ -2142,7 +2181,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
     mutate(gini_b = gini,
            gini_b_se = gini_se * se_factor) %>%
     select(-gini, -gini_se) %>%
-    mutate(country = countrycode(country, "country.name", "swiid.name", custom_dict = cc_swiid),
+    mutate(country = countrycode(country, "country.name.en.regex", "swiid.name", custom_dict = cc_swiid),
            region = countrycode(country, "swiid.name", "swiid.region", custom_dict = {cc_swiid %>% distinct(swiid.name, .keep_all = TRUE)})) %>% 
     group_by(region) %>% 
     mutate(r_bl_obs = n()) %>% 
@@ -2174,7 +2213,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
                      added_data) %>% 
     rename(gini_m = gini,
            gini_m_se = gini_se) %>%
-    mutate(country = countrycode(country, "country.name", "swiid.name", custom_dict = cc_swiid),
+    mutate(country = countrycode(country, "country.name.en.regex", "swiid.name", custom_dict = cc_swiid),
            region = countrycode(country, "swiid.name", "swiid.region", custom_dict = {cc_swiid %>% distinct(swiid.name, .keep_all = TRUE)})) %>% 
     group_by(country) %>% 
     mutate(country_obs = n()) %>% 
@@ -2258,7 +2297,8 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
               gini_cat = mean(gini_m), 
               gini_cat_se = ifelse(n_obs == 1,
                                    gini_m_se,
-                                   sqrt(mean(gini_m_se^2) + (1+1/n_obs)*var(gini_m)))) %>%  # per Rubin (1987)
+                                   sqrt(mean(gini_m_se^2) + (1+1/n_obs)*var(gini_m))),
+              dplyr.summarise.inform = FALSE) %>%  # per Rubin (1987)
     ungroup() %>% 
     select(-n_obs) %>% 
     unite(wdes, welfare_def, equiv_scale) %>% 
@@ -2266,7 +2306,8 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
                 group_by(kcode, tcode) %>% 
                 summarize(gini_cat = first(gini_b),
                           gini_cat_se = first(gini_b_se),
-                          wdes = "baseline") %>% 
+                          wdes = "baseline",
+                          dplyr.summarise.inform = FALSE) %>% 
                 ungroup())
   
   
@@ -2347,7 +2388,8 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
     left_join(rho_wd_se, by = c("kcode", "tcode", "wd")) %>% 
     group_by(kcode, tcode, wd) %>%
     summarize(rho_wd = max(rho_wd),
-              rho_wd_se = max(rho_wd_se)) %>%
+              rho_wd_se = max(rho_wd_se),
+              dplyr.summarise.inform = FALSE) %>%
     ungroup() %>%
     left_join(ineq %>% select(country, year, kcode, tcode, rcode, kbl) %>% distinct(),
               by = c("kcode", "tcode")) %>% 
@@ -2402,7 +2444,8 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
     left_join(rho_es_se, by = c("kcode", "tcode", "es")) %>%
     group_by(kcode, tcode, es) %>%
     summarize(rho_es = max(rho_es),
-              rho_es_se = max(rho_es_se)) %>%
+              rho_es_se = max(rho_es_se),
+              dplyr.summarise.inform = FALSE) %>%
     ungroup() %>%
     left_join(ineq %>% select(country, year, kcode, tcode, rcode, kbl) %>% distinct(),
               by = c("kcode", "tcode")) %>%
@@ -2422,7 +2465,8 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
     group_by(kcode) %>%
     summarize(firstyr = min(year),
               lastyr = max(year),
-              n_yrs = year %>% unique() %>% length()) %>% 
+              n_yrs = year %>% unique() %>% length(),
+              dplyr.summarise.inform = FALSE) %>% 
     ungroup()
   
   ineq2 <- ineq %>% 
