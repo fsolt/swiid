@@ -1397,30 +1397,32 @@ rosstat <- read_excel("data-raw/rosstat.xls", sheet = "Раз.5", skip = 1) %>%
             link = rosstat_link)
 
 
-# Singapore Department of Statistics (update file--and check for inclusion in API)
+# Singapore Department of Statistics (automatic)
 # Note: Population covered is only resident households with at least one worker 
 #  and so excludes 8-11% of resident households (which, from other data, appear
 #  to be among the poorest), plus all non-resident households (surely poor).
 # Note also that income definition excludes income from capital.
 # These data therefore should be considered a lower bound.  Blech.
-# https://www.tablebuilder.singstat.gov.sg/ > search "gini" > Key Indicators > Search variable "gini" > Create
-# Export > CSV
-singstat <- read_csv("data-raw/singstat.csv", skip = 4) %>% 
-  filter(!is.na(`2000`)) %>%
-  select(-starts_with("X")) %>% 
-  gather(key = year, value = gini, -Variables) %>% 
+
+singstat_url <- "https://www.tablebuilder.singstat.gov.sg/publicfacing/rest/timeseries/tabledata/12307?offset=0&limit=2000"
+
+singstat <- jsonlite::fromJSON(singstat_url) %>% 
+  pluck("records") %>% 
+  as_tibble() %>% 
+  arrange(time, variableName) %>% 
+  filter(str_detect(variableName, "^Gini")) %>% 
   transmute(country = "Singapore",
-            year = as.numeric(year),
-            gini = as.numeric(gini),
+            year = as.numeric(time),
+            gini = as.numeric(value),
             gini_se = NA,
-            welfare_def = if_else(str_detect(Variables, "After"), "disp", "market"),
-            equiv_scale = if_else(str_detect(Variables, "OECD"), "oecdm",
-                                  if_else(str_detect(Variables, "Square"), "sqrt", "pc")),
+            welfare_def = if_else(str_detect(variableName, "After"), "disp", "market"),
+            equiv_scale = if_else(str_detect(variableName, "OECD"), "oecdm",
+                                  if_else(str_detect(variableName, "Square"), "sqrt", "pc")),
             monetary = TRUE,
             series = paste("Singstat", welfare_def, equiv_scale),
             source1 = "Singapore Department of Statistics",
             page = "",
-            link = "http://www.tablebuilder.singstat.gov.sg/")
+            link = singstat_url)
 
 
 # Statistics Slovenia (archived; update file)
