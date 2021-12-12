@@ -320,7 +320,7 @@ transmonee <- read_excel("data-raw/transmonee.xls",
   select(-notes) %>% 
   gather(key = year, value = gini, -country) %>% 
   filter(!is.na(gini)) %>% 
-  transmute(country = countrycode(country, "country.name", "swiid.name", custom_dict = cc_swiid),
+  transmute(country = countrycode(country, "country.name.en.regex", "swiid.name", custom_dict = cc_swiid),
             year = as.numeric(year),
             gini = gini,
             gini_se = NA,
@@ -2150,7 +2150,7 @@ gidd <- map_df(gidd_raw$countrylong %>% unique(), function(x) {
   
   return(df)
 }) %>% 
-  transmute(country = countrycode(country, "country.name", "swiid.name", custom_dict = cc_swiid),
+  transmute(country = countrycode(country, "country.name.en.regex", "swiid.name", custom_dict = cc_swiid),
             year = year,
             gini = gini,
             gini_se = NA,
