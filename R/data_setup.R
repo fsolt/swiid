@@ -144,7 +144,7 @@ format_sedlac <- function(df, sheet, link, es) {
   return(x)
 }
 
-sedlac_link <- "https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2020_inequality_LAC.xlsx"
+sedlac_link <- "https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2021_inequality_LAC.xlsx"
 download.file(sedlac_link, "data-raw/sedlac.xlsx")
 
 sedlac_pc <- read_excel(path = "data-raw/sedlac.xlsx", 
@@ -553,7 +553,7 @@ if (!exists("belstat_link")) belstat_link <- belstat_page
 belstat_page <- "59"
 
 belstat <- extract_tables("data-raw/belstat.pdf", pages = belstat_page)[[1]] %>%
-  as_data_frame() %>% 
+  as_tibble() %>% 
   filter(str_detect(V4, "concentration\\)")) %>% 
   select(V2, V3) %>% 
   transmute(V5 = paste(V2, V3)) %>% 
