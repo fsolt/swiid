@@ -56,7 +56,7 @@ format_lis_xtra <- function(x) {
     read_lines() %>% 
     str_subset("^\\D{2}\\d{2},.*") %>%
     paste(collapse = "\n") %>% 
-    read_csv(col_names = FALSE) %>%
+    read_csv(col_names = FALSE, show_col_types = FALSE) %>%
     transmute(country = str_extract(X1, "\\D{2}") %>% 
                 toupper() %>% 
                 countrycode("iso2c", "swiid.name", custom_dict = cc_swiid),
@@ -355,19 +355,21 @@ afr_gini <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-
 
 
 # World Bank Povcalnet (automated)
-wb <- povcalnet() %>% 
-  filter(coveragetype %in% c("N", "A") & !is.na(gini)) %>% 
-  transmute(country = countrycode(countrycode, origin = "wb_api3c", "swiid.name", custom_dict = cc_swiid),
-            year = as.numeric(year),
-            gini = as.numeric(gini),
+wb_link <- "http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all"
+
+wb <- read_csv(wb_link, show_col_types = FALSE) %>% 
+  filter(CoverageType %in% c("N", "A") & !is.na(Gini)) %>% 
+  transmute(country = countrycode(CountryCode, origin = "wb_api3c", "swiid.name", custom_dict = cc_swiid),
+            year = as.numeric(RequestYear),
+            gini = as.numeric(Gini),
             gini_se = NA,
-            welfare_def = if_else(str_detect(datatype, "income"), "gross", "con"),
+            welfare_def = if_else(str_detect(DataType, "Y"), "gross", "con"),
             equiv_scale = "pc",
             monetary = FALSE,
             series = paste("Povcalnet", country, welfare_def, equiv_scale),
             source1 = "World Bank Povcalnet",
             page = "",
-            link = "http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all")
+            link = wb_link)
 
 
 ## National Statistics Offices
