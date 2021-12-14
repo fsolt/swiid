@@ -358,7 +358,7 @@ afr_gini <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-
 wb_link <- "http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all"
 
 wb <- read_csv(wb_link, show_col_types = FALSE) %>% 
-  filter(CoverageType %in% c("N", "A") & !is.na(Gini)) %>% 
+  filter(CoverageType %in% c("N", "A") & Gini < 0) %>% 
   transmute(country = countrycode(CountryCode, origin = "wb_api3c", "swiid.name", custom_dict = cc_swiid),
             year = as.numeric(RequestYear),
             gini = as.numeric(Gini),
