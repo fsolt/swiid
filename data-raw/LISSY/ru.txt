@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 906862 ru
-Date: December 7, 2021 at 10:38:47 AM CST
+Subject: job 908537 ru
+Date: December 13, 2021 at 3:23:46 PM CST
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -391,9 +391,30 @@ ru18h,con_sqrt,NaN,NA,120
 ru18h,con_pc,NaN,NA,120
 ru18h,con_oecdm,NaN,NA,120
 ru18h,con_ae,NaN,NA,120
+[1] "Loading dataset ru19h..."
+ru19h,market_hh,0.4822,0.0059,120
+ru19h,market_sqrt,0.4383,0.0058,120
+ru19h,market_pc,0.4678,0.0051,120
+ru19h,market_oecdm,0.4407,0.0072,120
+ru19h,market_ae,0.4492,0.0067,120
+ru19h,gross_hh,0.369,0.0062,120
+ru19h,gross_sqrt,0.3331,0.0066,120
+ru19h,gross_pc,0.3596,0.0052,120
+ru19h,gross_oecdm,0.3328,0.0065,120
+ru19h,gross_ae,0.3399,0.0065,120
+ru19h,disp_hh,0.3587,0.006,120
+ru19h,disp_sqrt,0.3228,0.0071,120
+ru19h,disp_pc,0.3504,0.0056,120
+ru19h,disp_oecdm,0.3222,0.0065,120
+ru19h,disp_ae,0.3297,0.0063,120
+ru19h,con_hh,NaN,NA,120
+ru19h,con_sqrt,NaN,NA,120
+ru19h,con_pc,NaN,NA,120
+ru19h,con_oecdm,NaN,NA,120
+ru19h,con_ae,NaN,NA,120
 > 
 > proc.time()
    user  system elapsed 
-645.952   3.898 658.615 
+768.641   3.536 781.613 
 
 
