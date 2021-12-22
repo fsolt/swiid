@@ -31,13 +31,13 @@ drop _merge
 save wvs_pwt.dta, replace
 
 // Now merge these data *into* the SWIID
-use "../data/swiid9_1_vig.dta", clear
+use "../data/swiid9_1.dta", clear
 
 merge 1:m country year using wvs_pwt.dta
 drop if _merge!=3
 drop _merge
 
-mi estimate: mixed religiosity gini_disp gdppc age educ male || country: || country_year:
+// mi estimate: mixed religiosity gini_disp gdppc age educ male || country: || country_year:
 
 //import delimited "../data/swiid_summary.csv", clear
 insheet using "/Users/fredsolt/Documents/Projects/swiid/data/swiid_summary.csv", comma clear
@@ -56,5 +56,5 @@ twoway rspike gini_disp_95ub gini_disp_95lb name_length, lstyle(ci) || ///
     scatter gini_disp name_length, msize(small) ///
     legend(order(2 "SWIID Disposable-Income Inequality")) 
 
-g graph export "/Users/fredsolt/Documents/Projects/swiid/vignette/stata_scatter.png", as(png) name("Graph") replace
+graph export "/Users/fredsolt/Documents/Projects/swiid/vignette/stata_scatter.png", as(png) name("Graph") replace
 

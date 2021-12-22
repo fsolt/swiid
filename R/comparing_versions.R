@@ -2,6 +2,9 @@ library(tidyverse)
 
 swiid_summary_latest <- read_csv("data/swiid_summary.csv", col_types = "cddddddddd") %>% 
   mutate(decade = floor(year/10) * 10)
+swiid_summary91 <- "https://raw.githubusercontent.com/fsolt/swiid/d884b45fea1309d69c879964e6343dbb148753d6/data/swiid_summary.csv" %>% 
+  read_csv(col_types = "cddddddddd") %>% 
+  mutate(decade = floor(year/10) * 10)
 swiid_summary90 <- "https://raw.githubusercontent.com/fsolt/swiid/eb799f41a08915ad4b6ab92c92f45b28995a93ed/data/swiid_summary.csv" %>% 
   read_csv(col_types = "cddddddddd") %>% 
   mutate(decade = floor(year/10) * 10)
@@ -28,9 +31,9 @@ swiid_summary71 <- "https://github.com/fsolt/swiid/raw/master/data/swiid7_1_summ
 swiid_latest_83_71 <- swiid_summary_latest %>% 
   select(country, year, decade, gini_disp) %>% 
   rename(gini_latest = gini_disp) %>% 
-  left_join(swiid_summary90 %>%
+  left_join(swiid_summary91 %>%
               select(country, year, decade, gini_disp) %>% 
-              rename(gini90 = gini_disp),
+              rename(gini91 = gini_disp),
             by = c("country", "year", "decade")) %>% 
   left_join(swiid_summary83 %>%
               select(country, year, decade, gini_disp) %>% 
@@ -40,7 +43,7 @@ swiid_latest_83_71 <- swiid_summary_latest %>%
               select(country, year, decade, gini_disp) %>% 
               rename(gini71 = gini_disp),
             by = c("country", "year", "decade")) %>% 
-  mutate(vlatest_minus90 = gini_latest - gini90,
+  mutate(vlatest_minus91 = gini_latest - gini91,
          vlatest_minus83 = gini_latest - gini83,
          vlatest_minus71 = gini_latest - gini71,
          v83minus71 = gini83 - gini71)
@@ -65,9 +68,9 @@ swiid_latest_83_71_mkt <- swiid_summary_latest %>%
   mutate(decade = floor(year/10) * 10) %>% 
   select(country, year, decade, gini_mkt) %>% 
   rename(gini_latest = gini_mkt) %>% 
-  left_join(swiid_summary90 %>%
+  left_join(swiid_summary91 %>%
               select(country, year, decade, gini_mkt) %>% 
-              rename(gini90 = gini_mkt),
+              rename(gini91 = gini_mkt),
             by = c("country", "year", "decade")) %>% 
   left_join(swiid_summary83 %>%
               select(country, year, decade, gini_mkt) %>% 
@@ -77,7 +80,7 @@ swiid_latest_83_71_mkt <- swiid_summary_latest %>%
               select(country, year, decade, gini_mkt) %>% 
               rename(gini71 = gini_mkt),
             by = c("country", "year", "decade")) %>% 
-  mutate(vlatest_minus90 = gini_latest - gini90,
+  mutate(vlatest_minus91 = gini_latest - gini91,
          vlatest_minus83 = gini_latest-gini83,
          vlatest_minus71 = gini_latest-gini71,
          v83minus71 = gini83-gini71)
@@ -98,6 +101,7 @@ swiid_latest_83_71_mkt %>%
   summarize_at(vars(starts_with("v")), mean, na.rm = TRUE) 
 
 swiid_source_latest <- read_csv("data/swiid_source.csv", col_types = "cdddcclcccc")
+swiid_source91 <- read_csv("https://github.com/fsolt/swiid/blob/7ced9cfb2e229be5e95d0bd0fe15aeb0e19a6015/data/swiid_source.csv?raw=true", col_types = "cdddcclcccc")
 swiid_source83 <- read_csv("https://github.com/fsolt/swiid/raw/227cf225cf43de6d01a58df2a6be9a9b86a213e6/data/swiid_source.csv", col_types = "cdddcclcccc")
 # swiid_source82 <- read_csv("https://github.com/fsolt/swiid/raw/f099f92aaf335554844b2af6df77bc5e8db47fd7/data/swiid_source.csv", col_types = "cdddcclcccc")
 # swiid_source81 <- read_csv("https://github.com/fsolt/swiid/raw/b85cf28f34897781098fe3b992da8434bf758993/data/swiid_source.csv", col_types = "cdddcclcccc")
@@ -116,7 +120,7 @@ swiid_latest_83_71_mkt %>%
                         "Switzerland", "United Kingdom", "United States" )) %>% 
   left_join(lis_mkt %>% select(country, year, gini), by = c("country", "year")) %>% 
   group_by(country, decade) %>% 
-  summarise(mean_diff = mean(vlatest_minus83, na.rm = TRUE),
+  summarise(mean_diff = mean(vlatest_minus91, na.rm = TRUE),
             lis_obs = as_factor(sum(!is.na(gini)))) %>% 
   mutate(country_decade = paste(country, decade, sep = "_")) %>% 
   filter(abs(mean_diff) > .5) %>% # & !country_decade == "France_1960") %>% # no observations in v7.1
@@ -133,14 +137,14 @@ swiid_latest_83_71_mkt %>%
   scale_fill_brewer(name = "LIS Observations",
                     palette = "Blues",
                     guide = guide_legend(ncol = 2)) +
-  ggtitle("Mkt Latest Minus Version 8.3, By Country-Decade")
+  ggtitle("Mkt Latest Minus Version 9.1, By Country-Decade")
 
 
 swiid_latest_83_71 %>%
   left_join(lis_disp %>% 
               select(country, year, gini), by = c("country", "year")) %>% 
   group_by(country, decade) %>% 
-  summarise(mean_diff = mean(vlatest_minus83, na.rm = TRUE),
+  summarise(mean_diff = mean(vlatest_minus91, na.rm = TRUE),
             lis_obs = as_factor(sum(!is.na(gini)))) %>% 
   mutate(country_decade = paste(country, decade, sep = "_")) %>% 
   filter(abs(mean_diff) > 1) %>% # & !country_decade == "France_1960") %>% # no observations in v7.1
@@ -157,7 +161,7 @@ swiid_latest_83_71 %>%
   scale_fill_brewer(name = "LIS Observations",
                     palette = "Blues",
                     guide = guide_legend(ncol = 2)) +
-  ggtitle("Latest Version Minus Version 8.3, By Country-Decade")
+  ggtitle("Latest Version Minus Version 9.1, By Country-Decade")
 
 
 swiid_latest_83_71_mkt %>%
@@ -218,10 +222,10 @@ swiid_source71 <- "https://github.com/fsolt/swiid/raw/e86defc56d2e870c5d091a16e3
 check_source <- function(cc) {
   country_source_latest <- swiid_source_latest %>% 
     filter(country == cc)
-  country_source83 <- swiid_source83 %>% 
+  country_source91 <- swiid_source91 %>% 
     filter(country == cc)
   
-  anti_join(country_source_latest, country_source83)
+  anti_join(country_source_latest[, 1:10], country_source91[, 1:10])
 }
 
 check_source("Ireland") %>% View()

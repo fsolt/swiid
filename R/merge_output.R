@@ -1,6 +1,6 @@
 library(tidyverse)
 
-version <- "9_1"
+version <- "9_2"
 ver <- str_replace(version, "_", "")
 
 load("data/ineq.rda")
@@ -75,7 +75,8 @@ load("data/cc_swiid.rda")
 k_redist <- rho_wd_m %>% 
   filter(wd == "disp" | wd == "con") %>% 
   distinct(country) %>%
-  mutate(region = countrycode::countrycode(country, "swiid.name", "swiid.region", custom_dict = cc_swiid),
+  mutate(region = countrycode::countrycode(country, "swiid.name", "swiid.region", 
+                                           custom_dict = {cc_swiid %>% distinct(swiid.name, .keep_all = TRUE)}),
          redist_after = recode(region, 
                                "AES" = 1975L,
                                "DAA" = 1985L,
