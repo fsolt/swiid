@@ -535,18 +535,20 @@ ipea <- read_csv("data-raw/ipea.csv", skip = 1) %>%
             link = "http://www.ipeadata.gov.br")
 
 
-# Belarus National Statistical Committee (automated, but will probably need to update wrangle)
-belstat_page <- "https://www.belstat.gov.by/en/ofitsialnaya-statistika/Demographic-and-social-statistics/income-and-consumption/household-incomes-and-consumption/publications/"
+# Belarus National Statistical Committee (update link)
+# https://www.belstat.gov.by/en/ofitsialnaya-statistika/Demographic-and-social-statistics/income-and-consumption/household-incomes-and-consumption/
+belstat_link <- "https://www.belstat.gov.by/upload/iblock/f56/f564f0383b073caf078fea341f59fbea.pdf"
 try(
   {
-    belstat_zip <- html_session(belstat_page) %>% 
-      follow_link("Social conditions and standard of living") %>% 
-      follow_link("Download")
-    belstat_link <- belstat_zip$back[1]
-    belstat_temp <- tempfile(fileext = ".pdf")
-    writeBin(belstat_zip$response$content, belstat_temp)
-    file.rename(belstat_temp, "data-raw/belstat.pdf")
-    unlink(c(belstat_temp, belstat_dir), recursive = TRUE)
+    # belstat_zip <- html_session(belstat_page) %>% 
+    #   follow_link("Social conditions and standard of living") %>% 
+    #   follow_link("Download")
+    # belstat_link <- belstat_zip$back[1]
+    # belstat_temp <- tempfile(fileext = ".pdf")
+    # writeBin(belstat_zip$response$content, belstat_temp)
+    # file.rename(belstat_temp, "data-raw/belstat.pdf")
+    # unlink(c(belstat_temp, belstat_dir), recursive = TRUE)
+    download.file(belstat_link, "data-raw/belstat.pdf")
   }
 )
 
@@ -617,7 +619,7 @@ statcan <- get_statcan(11100134) %>%
 # DANE Colombia (update link and file; site throws 403 error to R)
 # https://www.dane.gov.co/index.php/estadisticas-por-tema/pobreza-y-condiciones-de-vida/pobreza-monetaria >
 # Anexo pobreza monetaria nacional > Descargar
-dane_link <- "https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2020/anexo_pobreza_monetaria_20_nacional.xls"
+dane_link <- "https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls"
 
 dane <- read_excel("data-raw/dane.xls", sheet = "Gini", skip = 14) %>% 
   rename(region = 1) %>% 
