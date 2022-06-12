@@ -1100,11 +1100,11 @@ kazstat <- read_excel("data-raw/kazstat.xls",
             link = kazstat_page)
 
 
-# Statistics Korea (update file)
-# http://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1L6E001&conn_path=I2&language=en
-# Item: all households and urban; By index of distribution: Gini's; Time: all; Pivot By income, Time Period, Item x By index of distribution 
+# Statistics Korea (update kostat2 file)
+# https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1L6E001&conn_path=I2&language=en
+kostat2_link <- "https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1HDLF05&conn_path=I2&language=en"
 
-kostat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/kostat.csv",
+kostat1 <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/kostat1.csv",
                    col_types = cols(
                      .default = col_double(),
                      Item = col_character(),
@@ -1118,11 +1118,27 @@ kostat <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-ra
             welfare_def = if_else(str_detect(`By income`, "Disposable"), "disp", "market"),
             equiv_scale = "ae",
             monetary = NA,
-            series = paste("Kostat", welfare_def, equiv_scale, if_else(Item == "All households", "national", "urban")),
+            series = paste("Kostat", welfare_def, equiv_scale, if_else(Item == "All households", "national", "urban"), "1"),
             source1 = "Statistics Korea",
             page = "",
             link = "http://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1L6E001&conn_path=I2&language=en")
 
+kostat2 <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/kostat2.csv",
+                    col_types = "dcd") %>%
+  janitor::clean_names() %>% 
+  transmute(country = "Korea",
+            year = as.numeric(period),
+            gini = gini_coefficient,
+            gini_se = NA,
+            welfare_def = if_else(str_detect(item, "Disposable"), "disp", "market"),
+            equiv_scale = "ae",
+            monetary = NA,
+            series = paste("Kostat", welfare_def, equiv_scale, "national 2"),
+            source1 = "Statistics Korea",
+            page = "",
+            link = kostat2_link)
+
+kostat <- bind_rows(kostat1, kostat2)
 
 # National Statistical Committee of Kyrgyzstan (automated)
 nsck_link <- "http://www.stat.kg/en/statistics/download/dynamic/543/"
@@ -1195,36 +1211,25 @@ nbs0 <- read_excel("data-raw/nbs0.xls", skip = 2, sheet = "Лист1") %>%
             page = "112",
             link = "https://statistica.gov.md/public/files/publicatii_electronice/Anuar_Statistic/2017/Anuar_statistic_2017.pdf")
 
-nbs_link <-  "https://statistica.gov.md/pageview.php?l=en&id=2422&idc=350" %>% # Publications
-  html_session() %>% 
-  follow_link(xpath = "//a[contains(text(), 'Statistical yearbook')]") %>% 
-  follow_link(xpath = "//a[contains(@href, 'eniturile')]")
-
-nbs_zip <- tempfile(fileext = ".zip")
-writeBin(nbs_link$response$content, nbs_zip)
-nbs_temp <- tempdir()
-unzip(nbs_zip, exdir = nbs_temp)
-file.copy(file.path(nbs_temp, "4.2.xlsx"), "data-raw/nbs.xlsx", overwrite = TRUE)
-
-nbs <- bind_rows(nbs0, read_excel("data-raw/nbs.xlsx", skip = 1, sheet = "5.") %>%
-  filter(str_detect(...1, "coeficientul Gini")) %>% 
-  select(-...1) %>% 
-  gather(key = year, value = gini) %>% 
-  separate(year, into = c("year", "series"), sep = " ", fill = "right") %>% 
-  mutate(series = if_else(is.na(series), "", series),
-                                series = as.numeric(as.factor(series))) %>% 
+nbs1_link <- "https://statbank.statistica.md/pxweb/api/v1/en/30%20Statistica%20sociala/04%20NIV/NIV070/NIV071200.px"
+nbs1 <- pxweb_get_data(url = nbs1_link,
+                         query = list("Medii"=c("0"),
+                                      "Indicatori"=c("0","2"),
+                                      "Ani"=c("*"))) %>% 
+  janitor::clean_names() %>% 
   transmute(country = "Moldova",
-            year = as.numeric(str_extract(year, "\\d{4}")),
-            gini = gini,
+            year = as.numeric(years),
+            gini = inequality_measures_by_areas,
             gini_se = NA,
-            welfare_def = "disp",
+            welfare_def = if_else(str_detect(indicators, "disp"), "disp", "con"),
             equiv_scale = "pc",
             monetary = FALSE,
-            series = paste("NBS Moldova", welfare_def, equiv_scale, series),
+            series = paste("NBS Moldova", welfare_def, equiv_scale, 2),
             source1 = "National Bureau of Statistics of Moldova",
-            page = "5.",
-            link = nbs_link$url))
+            page = "",
+            link = nbs1_link)
 
+nbs <- bind_rows(nbs0, nbs1)
 
 # Statistics Office of Montenegro (automated, but update backup Internet Archive link)
 # Slow server, so get from Internet Archive if it times out
