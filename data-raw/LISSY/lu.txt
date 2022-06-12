@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 906831 lu
-Date: December 7, 2021 at 9:25:41 AM CST
+Subject: job 968717 lu
+Date: June 11, 2022 at 7:07:00 PM GMT+2
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -352,6 +352,6 @@ lu13h,con_ae,NaN,NA,100
 > 
 > proc.time()
    user  system elapsed 
- 84.937   0.305  86.871 
+145.843   4.226 252.275 
 
 

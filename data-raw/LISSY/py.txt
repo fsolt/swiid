@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 908533 py
-Date: December 13, 2021 at 2:54:39 PM CST
+Subject: job 968723 py
+Date: June 11, 2022 at 7:34:35 PM GMT+2
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -625,6 +625,6 @@ py20h,con_ae,NaN,NA,320
 > 
 > proc.time()
    user  system elapsed 
-300.458   0.787 306.158 
+422.576   9.992 685.181 
 
 

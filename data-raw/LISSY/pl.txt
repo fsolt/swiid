@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 908534 pl
-Date: December 13, 2021 at 3:10:40 PM CST
+Subject: job 968725 pl
+Date: June 11, 2022 at 7:52:57 PM GMT+2
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -216,42 +216,42 @@ pl95h,con_pc,NaN,NA,320
 pl95h,con_oecdm,NaN,NA,320
 pl95h,con_ae,NaN,NA,320
 [1] "Loading dataset pl99h..."
-pl99h,market_hh,0.5495,0.0022,320
-pl99h,market_sqrt,0.4777,0.0023,320
-pl99h,market_pc,0.5029,0.0024,320
-pl99h,market_oecdm,0.484,0.0022,320
-pl99h,market_ae,0.4906,0.0022,320
-pl99h,gross_hh,0.3241,0.0016,320
-pl99h,gross_sqrt,0.2931,0.0017,320
-pl99h,gross_pc,0.3292,0.0018,320
-pl99h,gross_oecdm,0.297,0.0016,320
-pl99h,gross_ae,0.3067,0.0016,320
-pl99h,disp_hh,0.3218,0.0017,320
-pl99h,disp_sqrt,0.2876,0.002,320
-pl99h,disp_pc,0.3221,0.0018,320
-pl99h,disp_oecdm,0.2907,0.002,320
-pl99h,disp_ae,0.2999,0.0015,320
-pl99h,con_hh,NaN,NA,320
-pl99h,con_sqrt,NaN,NA,320
-pl99h,con_pc,NaN,NA,320
-pl99h,con_oecdm,NaN,NA,320
-pl99h,con_ae,NaN,NA,320
+pl99h,market_hh,0.5404,0.0022,200
+pl99h,market_sqrt,0.4683,0.0024,200
+pl99h,market_pc,0.4919,0.0025,200
+pl99h,market_oecdm,0.4743,0.0022,200
+pl99h,market_ae,0.4803,0.0023,200
+pl99h,gross_hh,0.3204,0.0017,200
+pl99h,gross_sqrt,0.2877,0.0017,200
+pl99h,gross_pc,0.3233,0.0017,200
+pl99h,gross_oecdm,0.2914,0.0016,200
+pl99h,gross_ae,0.3008,0.0016,200
+pl99h,disp_hh,0.3204,0.0016,200
+pl99h,disp_sqrt,0.2877,0.0021,200
+pl99h,disp_pc,0.3233,0.0019,200
+pl99h,disp_oecdm,0.2914,0.002,200
+pl99h,disp_ae,0.3008,0.0015,200
+pl99h,con_hh,0.3176,0.0019,200
+pl99h,con_sqrt,0.2894,0.002,200
+pl99h,con_pc,0.3318,0.0018,200
+pl99h,con_oecdm,0.2969,0.0019,200
+pl99h,con_ae,0.308,0.002,200
 [1] "Loading dataset pl04h..."
-pl04h,market_hh,0.5917,0.0025,200
-pl04h,market_sqrt,0.5199,0.0025,200
-pl04h,market_pc,0.5456,0.0021,200
-pl04h,market_oecdm,0.5276,0.0025,200
-pl04h,market_ae,0.534,0.0023,200
-pl04h,gross_hh,0.3511,0.002,200
-pl04h,gross_sqrt,0.3197,0.0021,200
-pl04h,gross_pc,0.3593,0.0019,200
-pl04h,gross_oecdm,0.3267,0.0018,200
-pl04h,gross_ae,0.3368,0.0019,200
-pl04h,disp_hh,0.3511,0.002,200
-pl04h,disp_sqrt,0.3197,0.0018,200
-pl04h,disp_pc,0.3593,0.002,200
-pl04h,disp_oecdm,0.3267,0.0019,200
-pl04h,disp_ae,0.3368,0.002,200
+pl04h,market_hh,0.5903,0.0025,200
+pl04h,market_sqrt,0.5188,0.0025,200
+pl04h,market_pc,0.5443,0.0021,200
+pl04h,market_oecdm,0.5265,0.0025,200
+pl04h,market_ae,0.5328,0.0022,200
+pl04h,gross_hh,0.3487,0.002,200
+pl04h,gross_sqrt,0.3166,0.0021,200
+pl04h,gross_pc,0.3562,0.0019,200
+pl04h,gross_oecdm,0.3236,0.0018,200
+pl04h,gross_ae,0.3337,0.0019,200
+pl04h,disp_hh,0.3487,0.002,200
+pl04h,disp_sqrt,0.3166,0.0019,200
+pl04h,disp_pc,0.3562,0.002,200
+pl04h,disp_oecdm,0.3236,0.0019,200
+pl04h,disp_ae,0.3337,0.0019,200
 pl04h,con_hh,0.3434,0.0019,200
 pl04h,con_sqrt,0.3126,0.0018,200
 pl04h,con_pc,0.3585,0.0022,200
@@ -595,7 +595,7 @@ pl20h,con_oecdm,0.2744,0.0021,200
 pl20h,con_ae,0.2816,0.0019,200
 > 
 > proc.time()
-   user  system elapsed 
-944.071   2.409 957.652 
+    user   system  elapsed 
+1042.593   12.119 1305.096 
 
 

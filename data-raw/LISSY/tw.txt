@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 906901 tw
-Date: December 7, 2021 at 12:01:12 PM CST
+Subject: job 968747 tw
+Date: June 11, 2022 at 8:27:23 PM GMT+2
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -394,6 +394,6 @@ tw16h,con_ae,0.2191,0.002,110
 > 
 > proc.time()
    user  system elapsed 
-206.646   0.639 210.920 
+259.773   4.265 358.803 
 
 
