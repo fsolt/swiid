@@ -1235,7 +1235,8 @@ nbs <- bind_rows(nbs0, nbs1)
 # Slow server, so get from Internet Archive if it times out
 get_monstat_file <- function() {
   monstat_file <- html_session("https://www.monstat.org/eng/index.php") %>% 
-    follow_link("Poverty line") %>% 
+    follow_link("Household consumption") %>% 
+    follow_link("Absolute poverty line") %>% 
     follow_link("Data")
   writeBin(httr::content(monstat_file$response, "raw"), "data-raw/monstat.xls")
   return(monstat_file$response$url)
@@ -1288,13 +1289,13 @@ snz <- read_excel("data-raw/snz.xls",
 
 # New Zealand Ministry of Social Development
 # update link from http://www.msd.govt.nz/about-msd-and-our-work/publications-resources/monitoring/household-incomes/index.html
-# (if a .doc file, install LibreOffice, follow instructions at https://ask.libreoffice.org/en/question/12084/how-to-convert-documents-to-pdf-on-osx/?answer=50029#post-id-50029, and convert via command line)
+# (if a .doc file, install LibreOffice, follow instructions at https://ask.libreoffice.org/en/question/12084/how-to-convert-documents-to-pdf-on-osx/?answer=50029#post-id-50029 (copy the script bc the link is dead), and convert via command line)
 # update wrangle (including publication year)
 nzmsd_link <- "https://www.msd.govt.nz/documents/about-msd-and-our-work/publications-resources/monitoring/household-income-report/2019/household-incomes-report-2019.doc"
 download.file(nzmsd_link, "data-raw/nzmsd.doc")
 system('soffice --headless --convert-to pdf:"writer_pdf_Export" --outdir ./data-raw data-raw/nzmsd.doc')
 
-nzmsd <- extract_tables("data-raw/nzmsd.pdf", pages = 108) %>% 
+nzmsd <- extract_tables("data-raw/nzmsd.pdf", pages = 105) %>% 
   first() %>% 
   as_tibble() %>% 
   filter(str_detect(V1, "\\d{4}")) %>% 
@@ -1385,14 +1386,16 @@ psa <- read_csv("data-raw/psa.csv", skip = 3) %>%
 
 
 # Russian Federal State Statistics Service (update link)
-# https://rosstat.gov.ru/publications-plans > look for \\d{4} of last year and 'Российский статистический ежегодник (на русском и английском языках) [Russian Statiscal Yearbook (in Russian and English)]'
+# https://rosstat.gov.ru/publications-plans > look for \\d{4} of last year and 'Российский статистический ежегодник (на русском и английском языках) [Russian Statistical Yearbook (in Russian and English)]'
 # https://rosstat.gov.ru/folder/210/document/12994 > first link should be 'ПРИЛОЖЕНИЕ к Ежегоднику [Yearbook Supplement]'
 # https://rosstat.gov.ru/folder/210/document/13396 > find xls
 
-rosstat_link <- "https://rosstat.gov.ru/storage/mediabank/cbAGFbtY/pril-year_2020.xls"
-download.file(rosstat_link, "data-raw/rosstat.xls")
+rosstat_link <- "https://rosstat.gov.ru/storage/mediabank/pril-year_2021.rar"
+download.file(rosstat_link, "data-raw/rosstat.rar")
+untar("data-raw/rosstat.rar",
+      exdir = "data-raw/rosstat")
 
-rosstat <- read_excel("data-raw/rosstat.xls", sheet = "Раз.5", skip = 1) %>% 
+rosstat <- read_excel("data-raw/rosstat/Ретро_2021_Раздел5.xls", skip = 2) %>% 
   filter(str_detect(ПОКАЗАТЕЛИ, "Джини")) %>% 
   gather(key = year, value = gini) %>% 
   filter(str_detect(year, "\\d{4}")) %>% 
@@ -1406,7 +1409,7 @@ rosstat <- read_excel("data-raw/rosstat.xls", sheet = "Раз.5", skip = 1) %>%
             monetary = TRUE,
             series = paste("Rosstat", welfare_def, equiv_scale),
             source1 = "Russian Federal State Statistics Service",
-            page = "Раз.5",
+            page = "Ретро_2021_Раздел5.xls",
             link = rosstat_link)
 
 
