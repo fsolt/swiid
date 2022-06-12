@@ -2,10 +2,10 @@ library(tidyverse)
 library(mailR)
 
 ccs <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk", 
-         "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", 
-         "in", "ie", "il", "it", "jp", "lt", "lu", "mx", "nl", "no", "pa", "py", 
+         "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", "in",
+         "ie", "il", "it", "jp", "lt", "lu", "ml", "mx", "nl", "no", "pa", "py", 
          "pe", "pl", "ps", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se", 
-         "ch", "tw", "uk", "us", "uy", "vn") # la
+         "ch", "tw", "uk", "us", "uy", "vn") # la lv here and lissy.R when released
 
 get_lis_ginis <- function(ccs, wait = 240) {
   yahoo_user <- getOption("yahoo_user")        # set all of these in .Rprofile, e.g.:
