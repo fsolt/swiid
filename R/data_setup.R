@@ -1839,7 +1839,7 @@ cbo <- read_excel("data-raw/cbo.xlsx", sheet = "Exhibit 26", col_names = FALSE, 
          link = cbo_link)
 
 
-# U.S. Census Bureau (update link [probably only /p60/xxx/tableA] and wrangle)
+# U.S. Census Bureau (update link [probably only /p60/xxx/tableA] and wrangle; updated in Sept)
 # https://www.census.gov/topics/income-poverty/income-inequality/data/data-tables.html
 # Selected Measures of Household Income Dispersion:  1967 to 20xx																																																			
 # Selected Measures of Equivalence-Adjusted Income Dispersion: 1967 to 20xx																																																			
@@ -2002,7 +2002,7 @@ uine <- extract_tables("data-raw/uine1.pdf", pages = 13, area = list(c(122.1, 87
 
 
 # Venezuela Instituto Nacional de Estadística (update link)
-inev_link <- "https://web.archive.org/web/20191220153331/http://www.ine.gov.ve/documentos/Social/Pobreza/xls/Serie_%20GINI_1s1997-1s2018.xls"
+inev_link <- "http://www.ine.gov.ve/documentos/Social/Pobreza/xls/Serie_%20GINI_1s1997-1s2020.xls"
 download.file(inev_link, "data-raw/inev.xls")
 
 inev <- read_excel("data-raw/inev.xls", skip = 2) %>% 
