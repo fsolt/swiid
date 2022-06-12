@@ -1420,20 +1420,19 @@ rosstat <- read_excel("data-raw/rosstat/Ретро_2021_Раздел5.xls", skip
 # Note also that income definition excludes income from capital.
 # These data therefore should be considered a lower bound.  Blech.
 
-singstat_url <- "https://www.tablebuilder.singstat.gov.sg/publicfacing/rest/timeseries/tabledata/12307?offset=0&limit=2000"
+singstat_url <- "https://tablebuilder.singstat.gov.sg/api/table/tabledata/17733"
 
 singstat <- jsonlite::fromJSON(singstat_url) %>% 
-  pluck("records") %>% 
+  pluck("Data") %>%
+  pluck("row") %>% 
   as_tibble() %>% 
-  arrange(time, variableName) %>% 
-  filter(str_detect(variableName, "^Gini")) %>% 
+  unnest(columns) %>% 
   transmute(country = "Singapore",
-            year = as.numeric(time),
+            year = as.numeric(key),
             gini = as.numeric(value),
             gini_se = NA,
-            welfare_def = if_else(str_detect(variableName, "After"), "disp", "market"),
-            equiv_scale = if_else(str_detect(variableName, "OECD"), "oecdm",
-                                  if_else(str_detect(variableName, "Square"), "sqrt", "pc")),
+            welfare_def = if_else(str_detect(rowText, "After"), "disp", "market"),
+            equiv_scale = "pc",
             monetary = TRUE,
             series = paste("Singstat", welfare_def, equiv_scale),
             source1 = "Singapore Department of Statistics",
@@ -1441,7 +1440,7 @@ singstat <- jsonlite::fromJSON(singstat_url) %>%
             link = singstat_url)
 
 
-# Statistics Slovenia (archived; update file)
+# Statistics Slovenia (automated)
 ssi1_link <- "https://www.stat.si/doc/vsebina/08/kazalniki_soc_povezanosti_Laekens_97_03.xls"
 download.file(ssi1_link, "data-raw/ssi.xls", method = "curl", extra = "-k")
 
@@ -1496,7 +1495,7 @@ ine <- "data-raw/ine.csv" %>%
   `[`(., c(5:7)) %>% 
   read_csv(file = I(.)) %>%
   first_row_to_names() %>% 
-  filter(str_detect(v1, "con alquiler imputado")) %>% 
+  # filter(str_detect(v1, "con alquiler imputado")) %>% 
   gather(key = year, value = gini) %>% 
   filter(str_detect(year, "\\d{4}")) %>% 
   transmute(country = "Spain",
@@ -1571,13 +1570,13 @@ scb <- pxweb_get_data(url = "http://api.scb.se/OV0104/v1/doris/sv/ssd/HE/HE0103/
 fso_ch_link <- "https://www.bfs.admin.ch/bfsstatic/dam/assets/15544637/appendix"
 fso_ch0 <- read_csv2(fso_ch_link, skip = 1) %>% 
   filter(!is.na(`primary equivalised income`)) %>%
-  transmute(year = as.numeric(X1),
+  transmute(year = as.numeric(...1),
             market = as.numeric(`primary equivalised income`),
-            market_se = as.numeric(X3)/1.96,
+            market_se = as.numeric(...3)/1.96,
             gross = as.numeric(`gross equivalised income`),
-            gross_se = as.numeric(X5)/1.96,
+            gross_se = as.numeric(...5)/1.96,
             disp = as.numeric(`disposable equivalised income`),
-            disp_se = as.numeric(X7)/1.96) %>% 
+            disp_se = as.numeric(...7)/1.96) %>% 
   gather(key = "welfare_def", value = "gini", -year)
 
 fso_ch <- fso_ch0 %>% 
@@ -1751,26 +1750,33 @@ rm(tuik_list, tuik_hh, tuik_oecdm)
 
 # U.K. Office for National Statistics (update links; join with latest file last)
 # https://www.ons.gov.uk/atoz?query=effects+taxes+benefits (new releases in April and January)
-ons_link <- "https://www.ons.gov.uk/visualisations/dvc861/fig8/datadownload.xlsx"
+ons_link <- "https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/datasets/householddisposableincomeandinequality/financialyearending2021/hdiireferencetables202021.xlsx"
 download.file(ons_link, "data-raw/ons.xlsx")
 
-ons <- read_excel("data-raw/ons.xlsx", skip = 1) %>% 
+ons <- read_excel("data-raw/ons.xlsx", sheet = "Table 9", skip = 7) %>% 
+  janitor::clean_names() %>% 
+  select(year, original_2, gross_3, disposable_4) %>% 
   pivot_longer(cols = matches("\\d"), 
                names_to = c("wd", "series0"),
-               names_sep = "\\.\\.\\.",
+               names_sep = "_",
                values_to = "gini") %>% 
-  mutate(welfare_def = case_when(wd == "Original" ~ "market",
-                                 wd == "Gross" ~ "gross",
-                                 wd == "Disposable" ~ "disp",
+  mutate(welfare_def = case_when(wd == "original" ~ "market",
+                                 wd == "gross" ~ "gross",
+                                 wd == "disposable" ~ "disp",
                                  TRUE ~ NA_character_),
-         series = if_else(as.numeric(series0) < 7, 2, 1)) %>% 
+         gini = as.numeric(gini)/100,
+         gini_se = case_when(wd == "original" ~ gini * .015, # per Table 11
+                                 wd == "gross" ~ gini * .02,
+                                 wd == "disposable" ~ gini * .018,
+                                 TRUE ~ NA_real_),
+         series = 1) %>% 
   filter(!is.na(gini) & !is.na(welfare_def)) %>% 
   transmute(country = "United Kingdom",
-            year = ifelse(str_extract(Year, "\\d{2}$") %>% as.numeric() > 50,
-                          str_extract(Year, "\\d{2}$") %>% as.numeric() + 1900,
-                          str_extract(Year, "\\d{2}$") %>% as.numeric() + 2000),
-            gini = gini/100,
-            gini_se = NA,
+            year = ifelse(str_extract(year, "\\d{2}$") %>% as.numeric() > 70,
+                          str_extract(year, "\\d{2}$") %>% as.numeric() + 1900,
+                          str_extract(year, "\\d{2}$") %>% as.numeric() + 2000),
+            gini = gini,
+            gini_se = gini_se,
             welfare_def = welfare_def,
             equiv_scale = "oecdm",
             monetary = FALSE,
@@ -1809,10 +1815,10 @@ ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3,
 # https://www.cbo.gov/search?search=gini >
 # The Distribution of Household Income, 20xx >
 # Data Underlying Exhibits
-cbo_link <- "https://www.cbo.gov/system/files/2020-10/56575-Data-Underlying-Exhibits.xlsx"
+cbo_link <- "https://www.cbo.gov/system/files/2021-08/57061-Data-Underlying-Exhibits.xlsx"
 download.file(cbo_link, "data-raw/cbo.xlsx")
 
-cbo <- read_excel("data-raw/cbo.xlsx", sheet = "Exhibit 22", col_names = FALSE, skip = 7,
+cbo <- read_excel("data-raw/cbo.xlsx", sheet = "Exhibit 26", col_names = FALSE, skip = 8,
                   .name_repair = ~ make.names(.x, unique = TRUE)) %>% 
   filter(!is.na(as.numeric(X)) & !is.na(X.1)) %>% 
   transmute(year = as.numeric(X),
