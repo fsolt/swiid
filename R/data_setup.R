@@ -79,9 +79,9 @@ format_lis_xtra <- function(x) {
 
 lis_files <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",
                "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", 
-               "in", "ie", "il", "it", "jp", "lt", "lu", "mx", "nl", "no", "pa", "py", 
+               "in", "ie", "il", "it", "jp", "lt", "lu", "ml", "mx", "nl", "no", "pa", "py", 
                "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se", 
-               "ch", "tw", "uk", "us", "uy", "vn") # add "la", lv", and "ml" when LIS releases data
+               "ch", "tw", "uk", "us", "uy", "vn") # add "la" and "lv" when LIS releases data
 
 lis <- lis_files %>% 
   map_df(format_lis) %>% 
