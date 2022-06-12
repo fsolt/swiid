@@ -2082,7 +2082,7 @@ rm(gso_vn1, gso_vn2)
 # Additional Inequality Datasets
 
 # Milanovic All the Ginis (update if possible)
-atg_link <- "https://www.gc.cuny.edu/getmedia/92e1b3ac-eae5-4787-aa20-5306913eca90/allginis_2016"
+atg_link <- "https://www.dropbox.com/s/h3riybl79nk6fft/allginis_2016.dta?dl=1"
 tryCatch(writeBin(httr::content(html_session(atg_link)$response, "raw"), "data-raw/atg.dta"), 
          error = function(e) {
            download.file("https://github.com/fsolt/swiid/raw/master/data-raw/atg.dta", "data-raw/atg.dta")
