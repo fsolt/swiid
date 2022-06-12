@@ -1,7 +1,8 @@
-﻿ITTER107,Territory,TIPO_DATO8,Data type,QUANTILE,Total equivalent expenditure quantile,TIME,Select time,Value,Flag Codes,Flags
-IT,Italy,DISUG_CONSUMI_GINI,Gini concentration index,ALL,all items,2014,2014,0.311,,
-IT,Italy,DISUG_CONSUMI_GINI,Gini concentration index,ALL,all items,2015,2015,0.309,,
-IT,Italy,DISUG_CONSUMI_GINI,Gini concentration index,ALL,all items,2016,2016,0.312,,
-IT,Italy,DISUG_CONSUMI_GINI,Gini concentration index,ALL,all items,2017,2017,0.321,,
-IT,Italy,DISUG_CONSUMI_GINI,Gini concentration index,ALL,all items,2018,2018,0.316,,
-IT,Italy,DISUG_CONSUMI_GINI,Gini concentration index,ALL,all items,2019,2019,0.313,,
+﻿"ITTER107","Territory","TIPO_DATO8","Data type","QUANTILE","Total equivalent expenditure quantile","TIME","Select time","Value","Flag Codes","Flags"
+"IT","Italy","DISUG_CONSUMI_GINI","Gini concentration index","ALL","all items","2014","2014",0.311,,
+"IT","Italy","DISUG_CONSUMI_GINI","Gini concentration index","ALL","all items","2015","2015",0.309,,
+"IT","Italy","DISUG_CONSUMI_GINI","Gini concentration index","ALL","all items","2016","2016",0.312,,
+"IT","Italy","DISUG_CONSUMI_GINI","Gini concentration index","ALL","all items","2017","2017",0.321,,
+"IT","Italy","DISUG_CONSUMI_GINI","Gini concentration index","ALL","all items","2018","2018",0.316,,
+"IT","Italy","DISUG_CONSUMI_GINI","Gini concentration index","ALL","all items","2019","2019",0.313,,
+"IT","Italy","DISUG_CONSUMI_GINI","Gini concentration index","ALL","all items","2020","2020",0.311,,

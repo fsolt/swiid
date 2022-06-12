@@ -794,23 +794,26 @@ insee <- readLines(insee_link) %>%              # kickin' it old skool . . .
             link = insee_link)
 
 
-# Statistics Georgia (automated)
-geostat_link <- "http://pc-axis.geostat.ge/PXweb/api/v1/en/Database/Social%20Statistics/Standard%20of%20Living,%20Subsistence%20Minimum/Gini_Coefficients.px"
-geostat <- pxweb_get_data(url = geostat_link,
-                          pxweb_query(list(Indicator = c('0', '5'),
-                                           Year = c('*')))) %>% 
-  janitor::clean_names() %>% 
+# Statistics Georgia (update link)
+# http://pc-axis.geostat.ge/PXweb/pxweb/en/Database/Database__Social%20Statistics__Living%20Conditions,%20Subsistence%20Minimum/Gini_Coefficients.px/
+geostat_link <- "http://pc-axis.geostat.ge/PXweb/sq/afae9e32-940b-4842-8365-16552a12e7f1"
+download.file(geostat_link, "data-raw/geostat.csv")
+geostat <- read_csv("data-raw/geostat.csv", skip = 2) %>% 
+  pivot_longer(!matches("Year"), names_to = "indicator", values_to = "gini_coefficients") %>% 
   transmute(country = "Georgia",
-            year = as.numeric(year),
+            year = as.numeric(Year),
             gini = as.numeric(gini_coefficients),
             gini_se = NA,
-            welfare_def = if_else(str_detect(indicator, "incomes"), "gross", "con"),
+            welfare_def = case_when(indicator == "By total incomes" ~ "gross",
+                                    indicator == "By total consumption expenditures" ~ "con",
+                                    TRUE ~ NA_character_),
             equiv_scale = "pc",
             monetary = FALSE,
             series = paste("Geostat", welfare_def, equiv_scale),
             source1 = "Statistics Georgia",
             page = "",
-            link = geostat_link)
+            link = geostat_link) %>% 
+  filter(!is.na(welfare_def))
 
 
 # Statbank Greenland (automated)
@@ -931,7 +934,7 @@ rm(hk2006, hk2011, hk2016)
 
 bpsid1_link <- "https://www.bps.go.id/website/tabelExcelIndo/indo_23_6.xls"
 download.file(bpsid1_link, "data-raw/bpsid1.xls")
-bpsid2_link <- "https://www.bps.go.id/website/tabelExcelIndo/indo_05_21.xls"
+bpsid2_link <- "https://www.bps.go.id/statictable/download.html?nrbvfeve=OTQ2&sdfs=sdngrbfjgrdejrh&zxcv=L3dlYnNpdGU%3D&xzmn=aHR0cHM6Ly93d3cuYnBzLmdvLmlkL3N0YXRpY3RhYmxlLzIwMTQvMDkvMDgvOTQ2L2Rpc3RyaWJ1c2ktcGVtYmFnaWFuLXBlbmdlbHVhcmFuLXBlci1rYXBpdGEtZGFuLWluZGVrcy1naW5pLS0yMDEwLTIwMjEuaHRtbA%3D%3D&twoadfnoarfeauf=MjAyMi0wNi0xMiAxMzowMjozOQ%3D%3D"
 download.file(bpsid2_link, "data-raw/bpsid2.xls")
 
 bpsid1 <- read_excel("data-raw/bpsid1.xls", skip = 2) %>% 
@@ -951,9 +954,10 @@ bpsid1 <- read_excel("data-raw/bpsid1.xls", skip = 2) %>%
             link = bpsid1_link)
 
 bpsid2 <- read_excel("data-raw/bpsid2.xls", skip = 2) %>% 
-  fill(Daerah) %>% 
-  filter(Daerah == "Kota+Desa" & !is.na(Tahun)) %>% 
-  rename(year = Tahun, gini = `Indeks Gini`) %>% 
+  janitor::clean_names() %>% 
+  fill(area) %>% 
+  filter(area == "Urban + Rural" & !is.na(year_month)) %>% 
+  rename(year = year_month, gini = `gini_index`) %>% 
   transmute(country = "Indonesia",
             year = year,
             gini = gini,
