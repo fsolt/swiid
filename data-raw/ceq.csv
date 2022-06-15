@@ -10,6 +10,8 @@ Armenia,2011,0.469,,pc,market,FALSE,,Younger and Khachatryan 2017,18,http://www.
 Armenia,2011,0.373,,pc,disp,FALSE,,Younger and Khachatryan 2017,18,http://www.commitmentoequity.org/wp-content/uploads/2017/09/CEQ-WP43_Younger-Khachatryan__Armenia_April-2017.pdf
 Bolivia,2009,0.503,,pc,market,FALSE,,Lustig 2015,,http://www.commitmentoequity.org/publications_files/Comparative/CEQWPNo30%20RedisImpactGovntSpendEducHealth%20March%202015.pdf
 Bolivia,2009,0.493,,pc,disp,FALSE,,Lustig and Aranda 2015,,http://www.commitmentoequity.org/publications_files/Comparative/CEQWPNo32ImpyTransPobrDesigRuralUrb%20Septiembre2015.pdf
+Bolivia,2015,0.462,,pc,market,FALSE,,"Ya_nez, Jimenez, and Paz Arauco 2022",30,http://repec.tulane.edu/RePEc/ceq/ceq115.pdf
+Bolivia,2015,0.45,,pc,disp,FALSE,,"Ya_nez, Jimenez, and Paz Arauco 2022",30,http://repec.tulane.edu/RePEc/ceq/ceq115.pdf
 Brazil,2009,0.579,,pc,market,FALSE,,Higgins and Pereira 2014,,http://dx.doi.org/10.1177/1091142113501714
 Brazil,2009,0.551,,sqrt,market,FALSE,,"Higgins, Lustig, Ruble, and Smeeding 2013",,http://www.commitmentoequity.org/publications_files/Brazil/Higgins%20Lustig%20Ruble%20Smeeding%20Comparing%20Brazil%20US%20Nov%2030%202013.pdf
 Brazil,2009,0.545,,pc,disp,FALSE,,Higgins and Pereira 2014,,http://dx.doi.org/10.1177/1091142113501714
@@ -26,11 +28,14 @@ Colombia,2014,0.5746,,pc,market,FALSE,,CEQ 2019,,http://commitmentoequity.org/wp
 Colombia,2014,0.5655,,pc,disp,FALSE,,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/07/CEQSI_Jun28_2019.xlsx
 Costa Rica,2010,0.508,,pc,market,FALSE,,Sauma and Trejos 2014,,http://www.commitmentoequity.org/publications_files/Costa%20Rica/CEQWPNo18%20PubSpendTaxRedistIncandPover%20Costa%20Rica.pdf
 Costa Rica,2010,0.489,,pc,disp,FALSE,,Sauma and Trejos 2014,,http://www.commitmentoequity.org/publications_files/Costa%20Rica/CEQWPNo18%20PubSpendTaxRedistIncandPover%20Costa%20Rica.pdf
+Costa Rica,2018,0.538,,pc,market,FALSE,,Feoli and Cabrera 2022,11,http://repec.tulane.edu/RePEc/ceq/ceq119.pdf
+Costa Rica,2018,0.498,,pc,disp,FALSE,,Feoli and Cabrera 2022,11,http://repec.tulane.edu/RePEc/ceq/ceq119.pdf
 Ecuador,2012,0.4785,,pc,market,FALSE,,"Llerena, Llerena, Saa, and Llerena 2015",,http://www.commitmentoequity.org/publications_files/Ecuador/CEQWPNo28%20SocSpendTaxIncomeRedistEcuador%20Feb%202015.pdf
 Ecuador,2012,0.457,,pc,disp,FALSE,,"Llerena, Llerena, Saa, and Llerena 2015",,http://www.commitmentoequity.org/publications_files/Ecuador/CEQWPNo28%20SocSpendTaxIncomeRedistEcuador%20Feb%202015.pdf
 El Salvador,2011,0.4369,,pc,market,FALSE,,"Beneke, Lustig, and Oliva 2017",20,http://www.commitmentoequity.org/wp-content/uploads/2017/08/CEQ_WP57_Margarita-Beneke-Nora-Lustig-Jose-Andres-Oliva_June2017.pdf
 El Salvador,2011,0.424,,pc,disp,FALSE,,"Beneke, Lustig, and Oliva 2017",20,http://www.commitmentoequity.org/wp-content/uploads/2017/08/CEQ_WP57_Margarita-Beneke-Nora-Lustig-Jose-Andres-Oliva_June2017.pdf
 Ethiopia,2011,0.302,,pc,con,FALSE,,"Hill, Inchauste, Lustig, Tsehaye, and Woldehanna 2017",16,http://www.commitmentoequity.org/wp-content/uploads/2017/09/CEQ-WP41_Hill-Inchauste-Lustig-Tsehaye-Woldehanna_Ethiopia_April2017.pdf
+Gambia,2016,0.359,,pc,con,FALSE,,"Carrasco, Jawara, and Meyer 2022",24,http://repec.tulane.edu/RePEc/ceq/ceq117.pdf
 Georgia,2013,0.507,,pc,market,FALSE,,Cancho and Bondarenko 2017,25,http://www.commitmentoequity.org/wp-content/uploads/2017/09/CEQ-WP42_Cancho-Bondarenko_Georgia_May2017.pdf
 Georgia,2013,0.395,,pc,disp,FALSE,,Cancho and Bondarenko 2017,25,http://www.commitmentoequity.org/wp-content/uploads/2017/09/CEQ-WP42_Cancho-Bondarenko_Georgia_May2017.pdf
 Ghana,2013,0.4233,,pc,con,FALSE,,"Younger, Osei-Assibey, and Oppong 2015",7,http://www.commitmentoequity.org/publications_files/Ghana/Fiscal%20Policy%20Inequality%20and%20Poverty%20-%20A%20CEQ%20Assessment%20for%20Ghana%20Oct%2029%202015.pdf
@@ -40,6 +45,7 @@ Guatemala,2011,0.5144,,pc,market,FALSE,,CEQ 2019,,http://commitmentoequity.org/w
 Guatemala,2011,0.5031,,pc,disp,FALSE,,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/07/CEQSI_Jun28_2019.xlsx
 Honduras,2011,0.5612,,pc,market,FALSE,,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/07/CEQSI_Jun28_2019.xlsx
 Honduras,2011,0.5563,,pc,disp,FALSE,,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/07/CEQSI_Jun28_2019.xlsx
+India,2012,0.357,,pc,con,FALSE,,Kundu and Cabrera 2022,18,http://repec.tulane.edu/RePEc/ceq/ceq120.pdf
 Indonesia,2012,0.389,,pc,con,FALSE,,"Jellama, Wai-Poi, and Afkar 2017",18,http://www.commitmentoequity.org/wp-content/uploads/2017/09/CEQ-WP40_Jellema-WaiPoi-Afkar_Indonesia_May2017.pdf
 Iran,2012,0.4286,,pc,market,FALSE,,"Enami, Lustig, and Taqdiri 2017",18,http://www.commitmentoequity.org/wp-content/uploads/2017/09/CEQ_WP48_Ali-Enami-Nora-Lustig-Alireza-Taqdiri_Iran_Sept2017.pdf
 Iran,2012,0.3686,,pc,disp,FALSE,,"Enami, Lustig, and Taqdiri 2017",18,http://www.commitmentoequity.org/wp-content/uploads/2017/09/CEQ_WP48_Ali-Enami-Nora-Lustig-Alireza-Taqdiri_Iran_Sept2017.pdf
