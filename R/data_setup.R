@@ -769,10 +769,10 @@ statfi <- pxweb_get_data(url = "https://pxnet2.stat.fi/PXWeb/api/v1/fi/StatFin_P
             link = "https://pxnet2.stat.fi/PXWeb/sq/7c6273ca-537e-418d-a63e-57dd4543d4ae")
 
 
-# Insee France (archived)
-insee_link <- "https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie"
+# Insee France (archived; update link)
+insee_link1 <- "https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie"
 
-insee <- readLines(insee_link) %>%              # kickin' it old skool . . .
+insee1 <- readLines(insee_link1) %>%              # kickin' it old skool . . .
   str_subset("etendue-ligne|tab-chiffre") %>% 
   str_replace(".*>([\\d,]*)<.*", "\\1") %>% 
   str_replace(",", ".") %>% 
@@ -791,8 +791,32 @@ insee <- readLines(insee_link) %>%              # kickin' it old skool . . .
             series = paste("Insee", welfare_def, equiv_scale),
             source1 = "Institut National de la Statistique et des Études Économiques France",
             page = "",
-            link = insee_link)
+            link = insee_link1)
 
+insee_link2 <- "https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx"
+download.file(insee_link2, here::here("data-raw", "insee2.xlsx"))
+
+insee2 <- read_excel("data-raw/insee2.xlsx", sheet = "Figure 5", skip = 3) %>% 
+  transmute(year = ...1,
+            market = `Indice de Gini...2`,
+            disp = `Indice de Gini...5`) %>% 
+  pivot_longer(cols = c("market", "disp"),
+               names_to = "welfare_def",
+               values_to = "gini") %>% 
+  filter(!is.na(gini)) %>%
+  transmute(country = "France",
+            year = year,
+            gini = gini,
+            gini_se = NA,
+            welfare_def = welfare_def,
+            equiv_scale = "oecdm",
+            monetary = FALSE,
+            series = paste("Insee", welfare_def, equiv_scale, if_else(welfare_def == "disp", 2, 1)),
+            source1 = "Institut National de la Statistique et des Études Économiques France",
+            page = "Figure 5",
+            link = insee_link2)
+
+insee <- bind_rows(insee1, insee2)
 
 # Statistics Georgia (update link)
 # http://pc-axis.geostat.ge/PXweb/pxweb/en/Database/Database__Social%20Statistics__Living%20Conditions,%20Subsistence%20Minimum/Gini_Coefficients.px/

@@ -6294,11 +6294,11 @@ Finland,2018,0.2732977,,gross,pc,FALSE,Povcalnet Finland gross pc,World Bank Pov
 Finland,2019,0.265,,disp,oecdm,TRUE,Eurostat Finland disp oecdm 3,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 France,1962,0.4809,,market,hh,,Sollogoub1988 market hh,Sollogoub 1988,551,https://www.jstor.org/stable/3501851
 France,1965,0.4607,,market,hh,,Sollogoub1988 market hh,Sollogoub 1988,551,https://www.jstor.org/stable/3501851
-France,1970,0.331,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,1970,0.331,,disp,oecdm,FALSE,Insee disp oecdm 1,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
 France,1970,0.4391,,market,hh,,Sollogoub1988 market hh,Sollogoub 1988,551,https://www.jstor.org/stable/3501851
 France,1975,0.3340000152587891,,disp,hh,,Brandolini1998 France disp hh,Milanovic 2016; Brandolini 1998,"",https://www.dropbox.com/s/h3riybl79nk6fft/allginis_2016.dta?dl=1
 France,1975,0.328,,disp,pc,,CV1990 disp pc,Canceil and Villeneuve 1990,69,https://www.persee.fr/docAsPDF/estat_0336-1454_1990_num_230_1_5432.pdf
-France,1975,0.317,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,1975,0.317,,disp,oecdm,FALSE,Insee disp oecdm 1,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
 France,1975,0.3359,0.002,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1975,0.3748,0.0019,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1975,0.326,0.0021,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -6324,7 +6324,7 @@ France,1978,0.3457,,gross,oecdm,,FvH1998 France gross oecdm,Fitoussi and Van Hae
 France,1978,0.351675,,gross,pc,FALSE,Povcalnet France gross pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 France,1979,0.3110000038146973,,disp,hh,,Brandolini1998 France disp hh,Milanovic 2016; Brandolini 1998,"",https://www.dropbox.com/s/h3riybl79nk6fft/allginis_2016.dta?dl=1
 France,1979,0.314,,disp,pc,,CV1990 disp pc,Canceil and Villeneuve 1990,69,https://www.persee.fr/docAsPDF/estat_0336-1454_1990_num_230_1_5432.pdf
-France,1979,0.297,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,1979,0.297,,disp,oecdm,FALSE,Insee disp oecdm 1,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
 France,1979,0.3144,0.0032,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1979,0.348,0.0026,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1979,0.3043,0.0024,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -6346,7 +6346,7 @@ France,1984,0.311,,disp,pc,,CV1990 disp pc,Canceil and Villeneuve 1990,69,https:
 France,1984,0.304,,disp,oecdm,,FvH1998 France disp oecdm,Fitoussi and Van Haeperen 1998,40,https://dial.uclouvain.be/downloader/downloader.php?pid=boreal:32564&datastream=PDF_01
 France,1984,0.3744,,gross,hh,,FvH1998 France gross hh,Fitoussi and Van Haeperen 1998,40,https://dial.uclouvain.be/downloader/downloader.php?pid=boreal:32564&datastream=PDF_01
 France,1984,0.3416,,gross,oecdm,,FvH1998 France gross oecdm,Fitoussi and Van Haeperen 1998,40,https://dial.uclouvain.be/downloader/downloader.php?pid=boreal:32564&datastream=PDF_01
-France,1984,0.291,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,1984,0.291,,disp,oecdm,FALSE,Insee disp oecdm 1,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
 France,1984,0.3102,0.002,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1984,0.3496,0.0019,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1984,0.3016,0.002,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -6371,7 +6371,7 @@ France,1989,0.3219,,gross,ae,TRUE,W1999 France gross ae 1,Wagstaff et al. 1999,8
 France,1989,0.329,,gross,ae,TRUE,W1999 France gross ae 2,Wagstaff et al. 1999,86,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 France,1989,0.295,0.003,con,oecdm,FALSE,ZdV2001 France con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 France,1990,0.29200000762939454,,disp,hh,,Brandolini1998 France disp hh,Milanovic 2016; Brandolini 1998,"",https://www.dropbox.com/s/h3riybl79nk6fft/allginis_2016.dta?dl=1
-France,1990,0.277,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,1990,0.277,,disp,oecdm,FALSE,Insee disp oecdm 1,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
 France,1990,0.297,0.0019,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1990,0.3383,0.0019,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1990,0.2884,0.0019,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -6391,7 +6391,9 @@ France,1994,0.29,,disp,oecdm,TRUE,Eurostat France disp oecdm 1,Eurostat,"",http:
 France,1994,0.3233052,,gross,pc,FALSE,Povcalnet France gross pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 France,1995,0.29,,disp,oecdm,TRUE,Eurostat France disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 France,1996,0.29,,disp,oecdm,TRUE,Eurostat France disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
-France,1996,0.279,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,1996,0.279,,disp,oecdm,FALSE,Insee disp oecdm 1,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,1996,0.282,,disp,oecdm,FALSE,Insee disp oecdm 2,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
+France,1996,0.358,,market,oecdm,FALSE,Insee market oecdm 1,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
 France,1996,0.2962,0.0018,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1996,0.3332,0.0017,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1996,0.2873,0.0017,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -6410,7 +6412,9 @@ France,1996,0.4801,0.0028,market,sqrt,FALSE,LIS France market sqrt,LISSY,"",http
 France,1996,0.277,,disp,sqrt,FALSE,"OECD France disp sqrt, current def, 2011 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 France,1996,0.473,,market,sqrt,FALSE,"OECD France market sqrt, current def, 2011 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 France,1997,0.28,,disp,oecdm,TRUE,Eurostat France disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
-France,1997,0.279,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,1997,0.279,,disp,oecdm,FALSE,Insee disp oecdm 1,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,1997,0.281,,disp,oecdm,FALSE,Insee disp oecdm 2,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
+France,1997,0.36,,market,oecdm,FALSE,Insee market oecdm 1,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
 France,1997,0.2954,0.0011,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1997,0.3342,0.0013,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1997,0.287,0.0013,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -6428,7 +6432,9 @@ France,1997,0.5048,0.002,market,pc,FALSE,LIS France market pc,LISSY,"",https://r
 France,1997,0.4844,0.0019,market,sqrt,FALSE,LIS France market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1997,0.278,,disp,sqrt,FALSE,"OECD France disp sqrt, current def, 2011 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 France,1998,0.29,,disp,oecdm,TRUE,Eurostat France disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
-France,1998,0.276,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,1998,0.276,,disp,oecdm,FALSE,Insee disp oecdm 1,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,1998,0.279,,disp,oecdm,FALSE,Insee disp oecdm 2,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
+France,1998,0.362,,market,oecdm,FALSE,Insee market oecdm 1,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
 France,1998,0.2925,0.001,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1998,0.3334,0.001,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1998,0.284,0.0012,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -6446,7 +6452,9 @@ France,1998,0.513,0.0021,market,pc,FALSE,LIS France market pc,LISSY,"",https://r
 France,1998,0.4929,0.0017,market,sqrt,FALSE,LIS France market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1998,0.276,,disp,sqrt,FALSE,"OECD France disp sqrt, current def, 2011 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 France,1999,0.28,,disp,oecdm,TRUE,Eurostat France disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
-France,1999,0.284,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,1999,0.284,,disp,oecdm,FALSE,Insee disp oecdm 1,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,1999,0.286,,disp,oecdm,FALSE,Insee disp oecdm 2,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
+France,1999,0.369,,market,oecdm,FALSE,Insee market oecdm 1,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
 France,1999,0.3005,0.0014,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1999,0.3412,0.0013,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1999,0.2918,0.0013,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -6464,7 +6472,9 @@ France,1999,0.5153,0.0017,market,pc,FALSE,LIS France market pc,LISSY,"",https://
 France,1999,0.4939,0.0017,market,sqrt,FALSE,LIS France market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,1999,0.284,,disp,sqrt,FALSE,"OECD France disp sqrt, current def, 2011 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 France,2000,0.27,,disp,oecdm,TRUE,Eurostat France disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
-France,2000,0.286,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,2000,0.286,,disp,oecdm,FALSE,Insee disp oecdm 1,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,2000,0.289,,disp,oecdm,FALSE,Insee disp oecdm 2,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
+France,2000,0.369,,market,oecdm,FALSE,Insee market oecdm 1,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
 France,2000,0.3021,0.0011,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2000,0.3447,0.0013,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2000,0.2941,0.0013,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -6484,7 +6494,9 @@ France,2000,0.287,,disp,sqrt,FALSE,"OECD France disp sqrt, current def, 2011 met
 France,2000,0.49,,market,sqrt,FALSE,"OECD France market sqrt, current def, 2011 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 France,2000,0.3108606,,gross,pc,FALSE,Povcalnet France gross pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 France,2001,0.27,,disp,oecdm,TRUE,Eurostat France disp oecdm 2,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
-France,2001,0.286,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,2001,0.286,,disp,oecdm,FALSE,Insee disp oecdm 1,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,2001,0.288,,disp,oecdm,FALSE,Insee disp oecdm 2,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
+France,2001,0.368,,market,oecdm,FALSE,Insee market oecdm 1,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
 France,2001,0.3006,0.0012,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2001,0.3422,0.0012,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2001,0.2923,0.0015,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -6501,7 +6513,9 @@ France,2001,0.4896,0.0019,market,oecdm,FALSE,LIS France market oecdm,LISSY,"",ht
 France,2001,0.5099,0.0017,market,pc,FALSE,LIS France market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2001,0.4889,0.0017,market,sqrt,FALSE,LIS France market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2001,0.287,,disp,sqrt,FALSE,"OECD France disp sqrt, current def, 2011 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
-France,2002,0.281,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,2002,0.281,,disp,oecdm,FALSE,Insee disp oecdm 1,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,2002,0.284,,disp,oecdm,FALSE,Insee disp oecdm 2,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
+France,2002,0.359,,market,oecdm,FALSE,Insee market oecdm 1,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
 France,2002,0.2943,0.0019,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2002,0.3424,0.0018,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2002,0.2873,0.0019,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -6519,7 +6533,9 @@ France,2002,0.4976,0.0024,market,pc,FALSE,LIS France market pc,LISSY,"",https://
 France,2002,0.4786,0.0022,market,sqrt,FALSE,LIS France market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2002,0.284,,disp,sqrt,FALSE,"OECD France disp sqrt, current def, 2011 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 France,2003,0.282,,disp,oecdm,TRUE,Eurostat France disp oecdm 3,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
-France,2003,0.28,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,2003,0.28,,disp,oecdm,FALSE,Insee disp oecdm 1,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,2003,0.283,,disp,oecdm,FALSE,Insee disp oecdm 2,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
+France,2003,0.358,,market,oecdm,FALSE,Insee market oecdm 1,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
 France,2003,0.293,0.0018,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2003,0.3425,0.0018,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2003,0.286,0.002,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -6538,7 +6554,9 @@ France,2003,0.4807,0.0027,market,sqrt,FALSE,LIS France market sqrt,LISSY,"",http
 France,2003,0.282,,disp,sqrt,FALSE,"OECD France disp sqrt, current def, 2011 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 France,2003,0.3141112,,gross,pc,FALSE,Povcalnet France gross pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 France,2004,0.27699999999999997,,disp,oecdm,TRUE,Eurostat France disp oecdm 3,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
-France,2004,0.281,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,2004,0.281,,disp,oecdm,FALSE,Insee disp oecdm 1,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,2004,0.283,,disp,oecdm,FALSE,Insee disp oecdm 2,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
+France,2004,0.359,,market,oecdm,FALSE,Insee market oecdm 1,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
 France,2004,0.2936,0.0023,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2004,0.3454,0.0023,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2004,0.2869,0.0024,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -6557,7 +6575,9 @@ France,2004,0.483,0.003,market,sqrt,FALSE,LIS France market sqrt,LISSY,"",https:
 France,2004,0.283,,disp,sqrt,FALSE,"OECD France disp sqrt, current def, 2011 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 France,2004,0.3064734,,gross,pc,FALSE,Povcalnet France gross pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 France,2005,0.273,,disp,oecdm,TRUE,Eurostat France disp oecdm 3,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
-France,2005,0.286,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,2005,0.286,,disp,oecdm,FALSE,Insee disp oecdm 1,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,2005,0.289,,disp,oecdm,FALSE,Insee disp oecdm 2,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
+France,2005,0.36,,market,oecdm,FALSE,Insee market oecdm 1,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
 France,2005,0.2999,0.0024,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2005,0.3501,0.0021,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2005,0.293,0.0022,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -6577,7 +6597,9 @@ France,2005,0.288,,disp,sqrt,FALSE,"OECD France disp sqrt, current def, 2011 met
 France,2005,0.485,,market,sqrt,FALSE,"OECD France market sqrt, current def, 2011 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 France,2005,0.2983401,,gross,pc,FALSE,Povcalnet France gross pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 France,2006,0.266,,disp,oecdm,TRUE,Eurostat France disp oecdm 3,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
-France,2006,0.291,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,2006,0.291,,disp,oecdm,FALSE,Insee disp oecdm 1,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,2006,0.293,,disp,oecdm,FALSE,Insee disp oecdm 2,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
+France,2006,0.364,,market,oecdm,FALSE,Insee market oecdm 1,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
 France,2006,0.3023,0.0021,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2006,0.352,0.0021,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2006,0.2954,0.0021,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -6596,7 +6618,9 @@ France,2006,0.4863,0.0023,market,sqrt,FALSE,LIS France market sqrt,LISSY,"",http
 France,2006,0.293,,disp,sqrt,FALSE,"OECD France disp sqrt, current def, 2011 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 France,2006,0.2969109,,gross,pc,FALSE,Povcalnet France gross pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 France,2007,0.298,,disp,oecdm,TRUE,Eurostat France disp oecdm 4,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
-France,2007,0.289,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,2007,0.289,,disp,oecdm,FALSE,Insee disp oecdm 1,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,2007,0.292,,disp,oecdm,FALSE,Insee disp oecdm 2,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
+France,2007,0.362,,market,oecdm,FALSE,Insee market oecdm 1,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
 France,2007,0.3021,0.0023,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2007,0.3531,0.0017,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2007,0.2953,0.0022,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -6615,7 +6639,9 @@ France,2007,0.4872,0.0026,market,sqrt,FALSE,LIS France market sqrt,LISSY,"",http
 France,2007,0.292,,disp,sqrt,FALSE,"OECD France disp sqrt, current def, 2011 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 France,2007,0.3242773,,gross,pc,FALSE,Povcalnet France gross pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 France,2008,0.299,,disp,oecdm,TRUE,Eurostat France disp oecdm 4,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
-France,2008,0.289,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,2008,0.289,,disp,oecdm,FALSE,Insee disp oecdm 1,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,2008,0.292,,disp,oecdm,FALSE,Insee disp oecdm 2,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
+France,2008,0.362,,market,oecdm,FALSE,Insee market oecdm 1,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
 France,2008,0.3016,0.0022,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2008,0.3561,0.0023,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2008,0.2958,0.0025,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -6635,7 +6661,9 @@ France,2008,0.293,,disp,sqrt,FALSE,"OECD France disp sqrt, current def, 2011 met
 France,2008,0.483,,market,sqrt,FALSE,"OECD France market sqrt, current def, 2011 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 France,2008,0.3299648,,gross,pc,FALSE,Povcalnet France gross pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 France,2009,0.298,,disp,oecdm,TRUE,Eurostat France disp oecdm 4,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
-France,2009,0.29,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,2009,0.29,,disp,oecdm,FALSE,Insee disp oecdm 1,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,2009,0.293,,disp,oecdm,FALSE,Insee disp oecdm 2,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
+France,2009,0.365,,market,oecdm,FALSE,Insee market oecdm 1,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
 France,2009,0.3036,0.0018,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2009,0.357,0.0019,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2009,0.2977,0.0019,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -6655,7 +6683,9 @@ France,2009,0.293,,disp,sqrt,FALSE,"OECD France disp sqrt, current def, 2011 met
 France,2009,0.493,,market,sqrt,FALSE,"OECD France market sqrt, current def, 2011 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 France,2009,0.3266127,,gross,pc,FALSE,Povcalnet France gross pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 France,2010,0.308,,disp,oecdm,TRUE,Eurostat France disp oecdm 4,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
-France,2010,0.303,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,2010,0.303,,disp,oecdm,FALSE,Insee disp oecdm 1,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,2010,0.302,,disp,oecdm,FALSE,Insee disp oecdm 2,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
+France,2010,0.375,,market,oecdm,FALSE,Insee market oecdm 1,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
 France,2010,0.3107,0.0024,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2010,0.3622,0.0019,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2010,0.305,0.002,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -6675,7 +6705,9 @@ France,2010,0.303,,disp,sqrt,FALSE,"OECD France disp sqrt, current def, 2011 met
 France,2010,0.505,,market,sqrt,FALSE,"OECD France market sqrt, current def, 2011 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 France,2010,0.3372048,,gross,pc,FALSE,Povcalnet France gross pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 France,2011,0.305,,disp,oecdm,TRUE,Eurostat France disp oecdm 4,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
-France,2011,0.306,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,2011,0.306,,disp,oecdm,FALSE,Insee disp oecdm 1,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,2011,0.305,,disp,oecdm,FALSE,Insee disp oecdm 2,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
+France,2011,0.38,,market,oecdm,FALSE,Insee market oecdm 1,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
 France,2011,0.3165,0.002,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2011,0.3695,0.0018,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2011,0.3109,0.0019,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -6698,7 +6730,9 @@ France,2011,0.512,,market,sqrt,FALSE,"OECD France market sqrt, current def, 2011
 France,2011,0.513,,market,sqrt,FALSE,"OECD France market sqrt, previous def, 2012 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 France,2011,0.3329475,,gross,pc,FALSE,Povcalnet France gross pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 France,2012,0.301,,disp,oecdm,TRUE,Eurostat France disp oecdm 4,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
-France,2012,0.303,,disp,oecdm,FALSE,Insee disp oecdm,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,2012,0.303,,disp,oecdm,FALSE,Insee disp oecdm 1,Institut National de la Statistique et des Études Économiques France,"",https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie
+France,2012,0.302,,disp,oecdm,FALSE,Insee disp oecdm 2,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
+France,2012,0.38,,market,oecdm,FALSE,Insee market oecdm 1,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
 France,2012,0.3149,0.0018,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2012,0.367,0.0018,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2012,0.3088,0.0022,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -6722,6 +6756,8 @@ France,2012,0.515,,market,sqrt,FALSE,"OECD France market sqrt, current def, 2012
 France,2012,0.517,,market,sqrt,FALSE,"OECD France market sqrt, previous def, 2012 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 France,2012,0.3311486,,gross,pc,FALSE,Povcalnet France gross pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 France,2013,0.292,,disp,oecdm,TRUE,Eurostat France disp oecdm 4,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+France,2013,0.288,,disp,oecdm,FALSE,Insee disp oecdm 2,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
+France,2013,0.368,,market,oecdm,FALSE,Insee market oecdm 1,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
 France,2013,0.3028,0.002,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2013,0.3521,0.0019,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2013,0.2957,0.0021,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -6742,6 +6778,8 @@ France,2013,0.326,,gross,sqrt,FALSE,"OECD France gross sqrt, current def, 2012 m
 France,2013,0.501,,market,sqrt,FALSE,"OECD France market sqrt, current def, 2012 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 France,2013,0.3251264,,gross,pc,FALSE,Povcalnet France gross pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 France,2014,0.292,,disp,oecdm,TRUE,Eurostat France disp oecdm 4,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+France,2014,0.289,,disp,oecdm,FALSE,Insee disp oecdm 2,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
+France,2014,0.372,,market,oecdm,FALSE,Insee market oecdm 1,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
 France,2014,0.3015,0.0021,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2014,0.3526,0.0021,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2014,0.2949,0.0021,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -6762,6 +6800,8 @@ France,2014,0.329,,gross,sqrt,FALSE,"OECD France gross sqrt, current def, 2012 m
 France,2014,0.51,,market,sqrt,FALSE,"OECD France market sqrt, current def, 2012 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 France,2014,0.3226218,,gross,pc,FALSE,Povcalnet France gross pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 France,2015,0.293,,disp,oecdm,TRUE,Eurostat France disp oecdm 4,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+France,2015,0.292,,disp,oecdm,FALSE,Insee disp oecdm 2,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
+France,2015,0.375,,market,oecdm,FALSE,Insee market oecdm 1,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
 France,2015,0.3026,0.002,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2015,0.3528,0.0018,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2015,0.2958,0.0022,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -6782,6 +6822,8 @@ France,2015,0.33,,gross,sqrt,FALSE,"OECD France gross sqrt, current def, 2012 me
 France,2015,0.516,,market,sqrt,FALSE,"OECD France market sqrt, current def, 2012 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 France,2015,0.3270434,,gross,pc,FALSE,Povcalnet France gross pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 France,2016,0.28800000000000003,,disp,oecdm,TRUE,Eurostat France disp oecdm 4,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+France,2016,0.288,,disp,oecdm,FALSE,Insee disp oecdm 2,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
+France,2016,0.374,,market,oecdm,FALSE,Insee market oecdm 1,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
 France,2016,0.2999,0.002,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2016,0.3517,0.002,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2016,0.293,0.0022,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -6802,6 +6844,8 @@ France,2016,0.326,,gross,sqrt,FALSE,"OECD France gross sqrt, current def, 2012 m
 France,2016,0.516,,market,sqrt,FALSE,"OECD France market sqrt, current def, 2012 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 France,2016,0.3192374,,gross,pc,FALSE,Povcalnet France gross pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 France,2017,0.285,,disp,oecdm,TRUE,Eurostat France disp oecdm 4,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+France,2017,0.289,,disp,oecdm,FALSE,Insee disp oecdm 2,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
+France,2017,0.374,,market,oecdm,FALSE,Insee market oecdm 1,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
 France,2017,0.3004,0.0022,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2017,0.353,0.0017,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2017,0.294,0.0022,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
@@ -6822,6 +6866,8 @@ France,2017,0.327,,gross,sqrt,FALSE,"OECD France gross sqrt, current def, 2012 m
 France,2017,0.519,,market,sqrt,FALSE,"OECD France market sqrt, current def, 2012 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 France,2017,0.3163207,,gross,pc,FALSE,Povcalnet France gross pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 France,2018,0.292,,disp,oecdm,TRUE,Eurostat France disp oecdm 4,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
+France,2018,0.298,,disp,oecdm,FALSE,Insee disp oecdm 2,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
+France,2018,0.383,,market,oecdm,FALSE,Insee market oecdm 1,Institut National de la Statistique et des Études Économiques France,Figure 5,https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx
 France,2018,0.3049,0.0021,disp,ae,FALSE,LIS France disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2018,0.3602,0.002,disp,hh,FALSE,LIS France disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
 France,2018,0.2994,0.0022,disp,oecdm,FALSE,LIS France disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/fr.txt
