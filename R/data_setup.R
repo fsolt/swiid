@@ -952,14 +952,14 @@ stathk <- bind_rows(hk2006, hk2011, hk2016)
 rm(hk2006, hk2011, hk2016)
 
 
-# BPS Indonesia (automated)
-# may need to update bpsid2_link: check https://www.bps.go.id/statictable/2014/09/08/946/distribusi-pembagian-pengeluaran-per-kapita-dan-indeks-gini-2010-2017.html > Download Table
-# with http://wheregoes.com/retracer.php to find download link
+# BPS Indonesia (automated; update file)
+# # may need to update bpsid2_link: check https://www.bps.go.id/statictable/2014/09/08/946/distribusi-pembagian-pengeluaran-per-kapita-dan-indeks-gini-2010-2017.html > Download Table
+# # with http://wheregoes.com/retracer.php to find download link
 
 bpsid1_link <- "https://www.bps.go.id/website/tabelExcelIndo/indo_23_6.xls"
 download.file(bpsid1_link, "data-raw/bpsid1.xls")
-bpsid2_link <- "https://www.bps.go.id/statictable/download.html?nrbvfeve=OTQ2&sdfs=sdngrbfjgrdejrh&zxcv=L3dlYnNpdGU%3D&xzmn=aHR0cHM6Ly93d3cuYnBzLmdvLmlkL3N0YXRpY3RhYmxlLzIwMTQvMDkvMDgvOTQ2L2Rpc3RyaWJ1c2ktcGVtYmFnaWFuLXBlbmdlbHVhcmFuLXBlci1rYXBpdGEtZGFuLWluZGVrcy1naW5pLS0yMDEwLTIwMjEuaHRtbA%3D%3D&twoadfnoarfeauf=MjAyMi0wNi0xMiAxMzowMjozOQ%3D%3D"
-download.file(bpsid2_link, "data-raw/bpsid2.xls")
+bpsid2_link <- "https://www.bps.go.id/statictable/2014/09/08/946/distribusi-pembagian-pengeluaran-per-kapita-dan-indeks-gini-2010-2017.html"
+# download.file(bpsid2_link, "data-raw/bpsid2.xls")
 
 bpsid1 <- read_excel("data-raw/bpsid1.xls", skip = 2) %>% 
   filter(Provinsi == "INDONESIA") %>% 
@@ -1243,7 +1243,7 @@ nbs1 <- pxweb_get_data(url = nbs1_link,
   janitor::clean_names() %>% 
   transmute(country = "Moldova",
             year = as.numeric(years),
-            gini = inequality_measures_by_areas,
+            gini = inequality_measures,
             gini_se = NA,
             welfare_def = if_else(str_detect(indicators, "disp"), "disp", "con"),
             equiv_scale = "pc",
