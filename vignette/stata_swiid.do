@@ -15,7 +15,7 @@ save pwt91_gdppc.dta, replace
 // from http://www.worldvaluessurvey.org/WVSDocumentationWVL.jsp
 // generate variables of interest, merge in the PWT data, and save
 
-use WVS_Longitudinal_1981_2016_stata_v20180912.dta, clear
+use WVS_TimeSeries_stata_v1_6.dta, clear
 kountry S003, from(iso3n)
 rename NAMES_STD country
 gen year = S020
@@ -31,7 +31,7 @@ drop _merge
 save wvs_pwt.dta, replace
 
 // Now merge these data *into* the SWIID
-use "../data/swiid9_1.dta", clear
+use "../data/swiid9_3.dta", clear
 
 merge 1:m country year using wvs_pwt.dta
 drop if _merge!=3
