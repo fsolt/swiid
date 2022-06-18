@@ -1,16 +1,8 @@
+library(cmdstanr)
 library(tidyverse)
-library(rstan)
 library(beepr)
 
 load("data/ineq.rda")
-
-seed <- 324
-iter <- 10000
-warmup <- iter - 2500
-thin <- 5
-chains <- 3
-cores <- chains
-adapt_delta <- .9
 
 baseline_series <- "LIS disp sqrt"
 baseline_wd <- str_split(baseline_series, "\\s")[[1]] %>% nth(-2)
@@ -189,7 +181,7 @@ source_data <- list(  K = max(x$kcode),
                       RW = max(x$rwcode),
                       W = max(x$wcode),
                       E = max(x$ecode),
-
+                      
                       N = nrow(x),
                       N_ibl = nrow(x %>% filter(ibl)),
                       N_wbl = nrow(x %>% filter(!is.na(gini_b))),
@@ -247,7 +239,7 @@ source_data <- list(  K = max(x$kcode),
                       kwp = rho_wd$kwcode,
                       rho_w = rho_wd$rho_wd,
                       rho_w_se = rho_wd$rho_wd_se,
-
+                      
                       prior_m_s = 0,
                       prior_s_s = .2,
                       prior_m_kwe = mu_priors_by_wd(x, kwecode),
@@ -258,33 +250,44 @@ source_data <- list(  K = max(x$kcode),
                       prior_s_kw = s_priors_by_wd(x, kwcode)
 )
 
-# Stan
-rstan_options(auto_write = TRUE)
+# Stam
+iter <- 2000
 
 start <- proc.time()
-out1 <- stan(file = "R/estimate_swiid/all.stan",
-             data = source_data,
-             seed = seed,
-             iter = iter,
-             warmup = warmup,
-             thin = thin,
-             cores = cores,
-             chains = chains,
-             pars = c("gini"),
-             control = list(max_treedepth = 20,
-                            adapt_delta = adapt_delta))
+all <- cmdstan_model(here::here("R", "estimate_swiid", "all.stan"))
+out1 <- all$sample(
+  data = source_data, 
+  max_treedepth = 20,
+  adapt_delta = 0.9,
+  seed = 324, 
+  chains = 4, 
+  parallel_chains = 4,
+  iter_warmup = iter*.25,
+  iter_sampling = iter*.75,
+  refresh = iter/50
+)
 runtime <- proc.time() - start
 runtime
 
-lapply(get_sampler_params(out1, inc_warmup = FALSE),
-       summary, digits = 2)
+results_path <- here::here(file.path("data", 
+                                     "swiid_estimates",
+                                     str_c("all_",
+                                           iter/1000,
+                                           "k-", 
+                                           str_replace_all(Sys.time(), "[-:]", "_") %>%
+                                             str_replace(" ", "-") %>% 
+                                             str_replace("^\\d{4}_", "") %>% 
+                                             str_replace("_\\d{2}$", ""))))
+dir.create(results_path, 
+           showWarnings = FALSE, 
+           recursive = TRUE)
+out1$save_data_file(dir = results_path,
+                    random = FALSE)
+out1$save_output_files(dir = results_path,
+                       random = FALSE)
+save(x, file = file.path(results_path,
+                         "all_in.rda"))
 
-save(x, out1, runtime, file = str_c("data/all_", iter/1000, "k_", 
-                           str_replace(Sys.time(), " ", "_") %>% str_replace_all("2018-", ""), ".rda"))
-
-# Plots
-source("R/plot_tscs.R")
-plot_tscs(x, out1, save_pdf = "paper/figures/swiid.pdf")
+out1$cmdstan_diagnose()
 
 beep() # chime
-shinystan::launch_shinystan(out1)
