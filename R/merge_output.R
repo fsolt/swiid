@@ -1,27 +1,28 @@
 library(tidyverse)
+library(cmdstanr)
 
-version <- "9_2"
+version <- "9_3"
 ver <- str_replace(version, "_", "")
 
 load("data/ineq.rda")
 
-all_file <- list.files("data/", "all_[^m]") %>% 
+all_dir <- list.files("data/swiid_estimates/", "all_[^m]") %>% 
   last() %>% 
-  file.path("data", .)
+  file.path("data", "swiid_estimates", .)
 
-all_mkt_file <- list.files("data/", "all_mkt") %>% 
+all_mkt_dir <- list.files("data/swiid_estimates/", "all_mkt") %>% 
   last() %>% 
-  file.path("data", .)
+  file.path("data", "swiid_estimates", .)
 
-load(all_file)
-all_in <- x
-all_out <- out1
+all_in <- rio::import(here::here(all_dir,
+                                 "all_in.rda"))
+all_out <- as_cmdstan_fit(here::here(all_dir,
+                                     list.files(all_dir, pattern = "csv$")))
 
-load(all_mkt_file)
-all_mkt_in <- x
-all_mkt_out <- out1
-
-rm(x, out1)
+all_mkt_in <- rio::import(here::here(all_mkt_dir,
+                                 "all_mkt_in.rda"))
+all_mkt_out <- as_cmdstan_fit(here::here(all_mkt_dir,
+                                         list.files(all_mkt_dir, pattern = "csv$")))
 
 summary_kt <- function(input, output, probs = c(.025, .975)) {
   ktcodes <- input %>%  
@@ -37,17 +38,14 @@ summary_kt <- function(input, output, probs = c(.025, .975)) {
     ungroup() %>% 
     mutate(ktcode = 1:n())
 
-  gini_res <- rstan::summary(output, pars="gini", probs=probs) %>%
-    first() %>%
-    as.data.frame() %>%
-    rownames_to_column("parameter") %>%
-    as_tibble() %>%
-    janitor::clean_names() %>% 
+  gini_res <- output$summary("gini",
+                             ~posterior::quantile2(., probs = probs),
+                             c("mean", "sd")) %>%
     mutate(gini = mean,
-           lb = get(paste0("x", str_replace(probs*100, "\\.", "_"), "_percent")[1]),
-           ub = get(paste0("x", str_replace(probs*100, "\\.", "_"), "_percent")[2]),
-           se = round((ub - lb)/(qnorm(.975)*2), 3),
-           ktcode = as.numeric(str_extract(parameter, "(?<=\\[)\\d+"))) %>%
+           lb = get(paste0("q", probs[1]*100)),
+           ub = get(paste0("q", probs[2]*100)),
+           se = sd,
+           ktcode = as.numeric(str_extract(variable, "(?<=\\[)\\d+"))) %>%
     left_join(ktcodes, by="ktcode") %>% 
     select(country, year, gini, lb, ub, se, ktcode) %>% 
     arrange(ktcode)
@@ -90,6 +88,7 @@ k_redist <- rho_wd_m %>%
 swiid_summary <- left_join(swiid_disp_summary, swiid_mkt_summary, by = c("country", "year")) %>% 
   left_join(k_redist, by = c("country")) %>% 
   mutate(redist = (year >= redist_after),
+         redist = if_else(!is.na(redist), redist, FALSE),
          abs_red = ifelse(redist, (gini_mkt - gini_disp) %>% round(1), NA_real_),
          abs_red_se = ifelse(redist, sqrt(gini_mkt_se^2 + gini_disp_se^2) %>% round(1), NA_real_),
          rel_red = ifelse(redist, ((abs_red/gini_mkt)*100) %>% round(1), NA_real_),
@@ -119,24 +118,34 @@ swiid_kt <- function(input, output, probs = c(.025, .975)) {
   
   gini_type <- ifelse(str_detect(as.list(match.call())["input"], "_mkt"), "gini_mkt_", "gini_disp_")
   
-  res <- rstan::extract(output, pars="gini") %>% # should be output; it's lis_out for testing
-    first() %>%
+  res <- output$draws(variables = "gini", 
+                      format = "df") %>% 
+    select(contains("gini")) %>% 
     t() %>%               # parameters in rows, iterations in columns
     as.data.frame() %>% 
-    select(V1:V100) %>% 
+    transmute(across(V1:V100,
+              ~ . * 100)) %>% 
     rowid_to_column("ktcode") %>% 
     left_join(ktcodes, by = "ktcode") %>% 
-    rename_all(funs(str_replace(., "V", gini_type))) %>% 
+    rename_with(~ str_replace(., "V", gini_type)) %>% 
     select(country, year, everything(), -ktcode)
   
   return(res)
 }
 
-res <- swiid_kt(all_in, all_out) %>%  
-  left_join(swiid_kt(all_mkt_in, all_mkt_out),
-            by = c("country", "year")) %>% 
+res <- swiid_kt(all_in, all_out) %>% 
+  pivot_longer(cols = starts_with("gini_disp_"), names_to = "iter", values_to = "gini_disp") %>% 
+  mutate(iter = as.numeric(str_extract(iter, "\\d+"))) %>% 
+  left_join(swiid_kt(all_mkt_in, all_mkt_out) %>% 
+              pivot_longer(cols = starts_with("gini_mkt_"), names_to = "iter", values_to = "gini_mkt") %>% 
+              mutate(iter = as.numeric(str_extract(iter, "\\d+")))) %>% 
   left_join(kt_redist, by = c("country", "year")) %>% 
-  arrange(country, year)
+  mutate(abs_red = ifelse(redist, (gini_mkt - gini_disp) %>% round(1), NA_real_),
+         rel_red = ifelse(redist, ((abs_red/gini_mkt)*100) %>% round(1), NA_real_)) %>% 
+  pivot_longer(cols = c("gini_disp", "gini_mkt", "abs_red", "rel_red")) %>% 
+  unite(col = "var", c("name", "iter"), sep = "_") %>% 
+  pivot_wider(names_from = var,
+              values_from = value)
 
 # Stata formatted
 res_stata <- res %>% select(country, year, 
