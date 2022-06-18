@@ -788,7 +788,7 @@ insee1 <- readLines(insee_link1) %>%              # kickin' it old skool . . .
             welfare_def = "disp",
             equiv_scale = "oecdm",
             monetary = FALSE,
-            series = paste("Insee", welfare_def, equiv_scale),
+            series = paste("Insee", welfare_def, equiv_scale, 1),
             source1 = "Institut National de la Statistique et des Études Économiques France",
             page = "",
             link = insee_link1)
@@ -805,7 +805,7 @@ insee2 <- read_excel("data-raw/insee2.xlsx", sheet = "Figure 5", skip = 3) %>%
                values_to = "gini") %>% 
   filter(!is.na(gini)) %>%
   transmute(country = "France",
-            year = year,
+            year = as.numeric(year),
             gini = gini,
             gini_se = NA,
             welfare_def = welfare_def,
