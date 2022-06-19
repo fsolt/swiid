@@ -186,6 +186,7 @@ Belarus,1999,0.299,,con,pc,FALSE,MY2006 Belarus con pc 3,Mitra and Yemtsov 2006,
 Belarus,2000,0.293,,con,pc,FALSE,MY2006 Belarus con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Belarus,2001,0.301,,con,pc,FALSE,MY2006 Belarus con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Belarus,2002,0.292,,con,pc,FALSE,MY2006 Belarus con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
+Belgium,1974,0.306,,disp,hh,,Sawyer1976 Belgium disp hh,"Sawyer 1976; Dryzek1978; Atkinson, Rainwater, and Smeeding 1994",404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
 Belgium,1979,0.212,0.003,con,oecdm,FALSE,ZdV2001 Belgium con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Belgium,1988,0.236,0.004,con,oecdm,FALSE,ZdV2001 Belgium con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Belize,1996,0.51,,con,hh,,TW2002 Belize con hh,Thomas and Wint 2002; Canterbury 2005,861,http://dx.doi.org/10.1080/02255189.2005.9669090 
@@ -291,6 +292,7 @@ Cambodia,2012,0.29,,con,pc,FALSE,WRM2015 Cambodia con pc,"Warr, Rasphone, and Me
 Canada,1969,0.2662,,con,sqrt,,Sarlo2017 Canada con sqrt 1,Sarlo 2017,69,https://web.archive.org/web/20190331131651/https://www.fraserinstitute.org/sites/default/files/towards-a-better-understanding-of-income-inequality-in-canada.pdf
 Canada,1969,0.3009,,disp,sqrt,,Sarlo2017 Canada disp sqrt 1,Sarlo 2017,69,https://web.archive.org/web/20190331131651/https://www.fraserinstitute.org/sites/default/files/towards-a-better-understanding-of-income-inequality-in-canada.pdf
 Canada,1969,0.3322,,gross,sqrt,,Sarlo2017 Canada gross sqrt 1,Sarlo 2017,70,https://web.archive.org/web/20190331131651/https://www.fraserinstitute.org/sites/default/files/towards-a-better-understanding-of-income-inequality-in-canada.pdf
+Canada,1969,0.354,,disp,hh,,Sawyer1976 Canada disp hh,"Sawyer 1976; Dryzek1978; Atkinson, Rainwater, and Smeeding 1994",404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
 Canada,1974,0.3008,,gross,sqrt,,Sarlo2017 Canada gross sqrt 1,Sarlo 2017,70,https://web.archive.org/web/20190331131651/https://www.fraserinstitute.org/sites/default/files/towards-a-better-understanding-of-income-inequality-in-canada.pdf
 Canada,1978,0.2543,,con,sqrt,,Sarlo2017 Canada con sqrt 1,Sarlo 2017,69,https://web.archive.org/web/20190331131651/https://www.fraserinstitute.org/sites/default/files/towards-a-better-understanding-of-income-inequality-in-canada.pdf
 Canada,1978,0.2765,,disp,sqrt,,Sarlo2017 Canada disp sqrt 1,Sarlo 2017,69,https://web.archive.org/web/20190331131651/https://www.fraserinstitute.org/sites/default/files/towards-a-better-understanding-of-income-inequality-in-canada.pdf
@@ -1305,6 +1307,7 @@ Israel,1993,0.329,,disp,ae,,A1996 Israel disp ae,Achdut 1996,S4,https://www-jsto
 Italy,1967,0.391,,disp,pc,TRUE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
 Italy,1968,0.408,,disp,pc,TRUE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
 Italy,1969,0.397,,disp,pc,TRUE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
+Italy,1969,0.398,,disp,hh,,Sawyer1976 Italy disp hh,"Sawyer 1976; Dryzek1978; Atkinson, Rainwater, and Smeeding 1994",404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
 Italy,1970,0.383,,disp,pc,TRUE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
 Italy,1971,0.397,,disp,pc,TRUE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
 Italy,1972,0.385,,disp,pc,TRUE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
@@ -2380,6 +2383,7 @@ Spain,1974,0.3398,,con,pc,FALSE,IVIE con pc,Caixa Galicia Foundation and Ivie (V
 Spain,1974,0.3341,,con,sqrt,FALSE,IVIE con sqrt,Caixa Galicia Foundation and Ivie (Valencian Institute of Economic Research) 2009,bloque2/GTU_ID_7374.xls,http://www.ivie.es/downloads/desigualdad/desigualdad.zip
 Spain,1974,0.37,,disp,hh,,vGP1984 Spain disp hh,Tabatabai 1996; van Ginneken and Park 1984,127,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Spain,1974,0.34,,disp,pc,,vGP1984 Spain disp pc,Tabatabai 1996; van Ginneken and Park 1984,128,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Spain,1974,0.355,,disp,hh,,Sawyer1976 Spain disp hh,"Sawyer 1976; Dryzek1978; Atkinson, Rainwater, and Smeeding 1994",404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
 Spain,1980,0.317,0.002,con,oecdm,FALSE,ZdV2001 Spain con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Spain,1981,0.3562,,con,hh,FALSE,IVIE con hh,Caixa Galicia Foundation and Ivie (Valencian Institute of Economic Research) 2009,bloque2/GTH_ID_8081.xls,http://www.ivie.es/downloads/desigualdad/desigualdad.zip
 Spain,1981,0.332,,con,pc,FALSE,IVIE con pc,Caixa Galicia Foundation and Ivie (Valencian Institute of Economic Research) 2009,bloque2/GTP_ID_8081.xls,http://www.ivie.es/downloads/desigualdad/desigualdad.zip
@@ -2533,6 +2537,7 @@ Sweden,1969,0.4847,,gross,ae,TRUE,JL2009 gross ae 1,Johansson and Lindh 2009,"Al
 Sweden,1970,0.4715,,gross,ae,TRUE,JL2009 gross ae 1,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1971,0.4659,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1972,0.4571,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
+Sweden,1972,0.302,,disp,hh,,Sawyer1976 Sweden disp hh,"Sawyer 1976; Dryzek1978; Atkinson, Rainwater, and Smeeding 1994",404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
 Sweden,1973,0.4486,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1974,0.4168,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1975,0.213,0.004,disp,ae,,GP2002 disp sqrt,Gustafsson and Palmer 2002,559,https://doi.org/10.1111/1475-4991.00067
@@ -2883,3 +2888,7 @@ Zimbabwe,1995,0.501,,con,pc,,FR2008 Zimbabwe con pc,Ferreira and Ravallion 2008,
 Zimbabwe,1995,0.501,,con,pc,FALSE,Zimstat  con pc,Zimbabwe National Statistics Agency 2013,42,http://www.zimstat.co.zw/sites/default/files/img/publications/Finance/Poverty2011.pdf
 Zimbabwe,2001,0.489,,con,pc,FALSE,Zimstat  con pc,Zimbabwe National Statistics Agency 2013,42,http://www.zimstat.co.zw/sites/default/files/img/publications/Finance/Poverty2011.pdf
 Zimbabwe,2011,0.423,,con,pc,FALSE,Zimstat  con pc,Zimbabwe National Statistics Agency 2013,42,http://www.zimstat.co.zw/sites/default/files/img/publications/Finance/Poverty2011.pdf
+Ireland,1966,0.359,,disp,hh,,Sawyer1976 Ireland disp hh,Sawyer 1976; Dryzek1978,404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
+Japan,1969,0.316,,disp,hh,,Sawyer1976 Japan disp hh,Sawyer 1976; Dryzek1978,404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
+United Kingdom,1973,0.318,,disp,hh,,Sawyer1976 United Kingdom disp hh,"Sawyer 1976; Dryzek1978; Atkinson, Rainwater, and Smeeding 1994",404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
+United States,1972,0.381,,disp,hh,,Sawyer1976 United States disp hh,"Sawyer 1976; Dryzek1978; Atkinson, Rainwater, and Smeeding 1994",404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x

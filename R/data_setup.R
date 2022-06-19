@@ -1386,9 +1386,9 @@ dgeec <- read_excel("data-raw/dgeec.xls", skip = 3) %>%
   filter(!is.na(gini))
 
 
-# Philippines Statistical Agency (automated)
+# Philippines Statistical Agency (update)
 psa_link <- "https://psa.gov.ph/sites/default/files/T2_9a_0.csv"
-download.file(psa_link, "data-raw/psa.csv")
+# download.file(psa_link, "data-raw/psa.csv")
 
 psa <- read_csv("data-raw/psa.csv", skip = 3) %>% 
   first_row_to_names() %>% 
@@ -2563,3 +2563,4 @@ write_csv(swiid_source, "data/swiid_source.csv", na = "")
 write_csv(swiid_source, "../SWIIDweb_source/swiid_source.csv", na = "")
 save.image(file = "data/ineq0.rda")
 save(list = c("ineq2", "rho_we", "rho_wd", "ineq2_m", "rho_we_m", "rho_wd_m"), file = "data/ineq.rda")
+beepr::beep()
