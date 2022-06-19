@@ -1083,6 +1083,7 @@ Belarus,2017,0.2544457,,con,pc,FALSE,Povcalnet Belarus con pc,World Bank Povcaln
 Belarus,2018,0.275,,disp,pc,FALSE,Belstat disp pc,Belarus National Committee of Statistics,59,https://www.belstat.gov.by/upload/iblock/f56/f564f0383b073caf078fea341f59fbea.pdf
 Belarus,2018,0.2524053,,con,pc,FALSE,Povcalnet Belarus con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Belarus,2019,0.2527785,,con,pc,FALSE,Povcalnet Belarus con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
+Belgium,1974,0.306,,disp,hh,,Sawyer1976 Belgium disp hh,"Sawyer 1976; Dryzek1978; Atkinson, Rainwater, and Smeeding 1994",404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
 Belgium,1979,0.212,0.003,con,oecdm,FALSE,ZdV2001 Belgium con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Belgium,1985,0.2304,0.0026,disp,ae,FALSE,LIS Belgium disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/be.txt
 Belgium,1985,0.2888,0.0022,disp,hh,FALSE,LIS Belgium disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/be.txt
@@ -2209,6 +2210,7 @@ Cameroon,2014,0.41229999999999994,,con,sqrt,FALSE,World Bank Africa Poverty Data
 Canada,1969,0.2662,,con,sqrt,,Sarlo2017 Canada con sqrt 1,Sarlo 2017,69,https://web.archive.org/web/20190331131651/https://www.fraserinstitute.org/sites/default/files/towards-a-better-understanding-of-income-inequality-in-canada.pdf
 Canada,1969,0.3009,,disp,sqrt,,Sarlo2017 Canada disp sqrt 1,Sarlo 2017,69,https://web.archive.org/web/20190331131651/https://www.fraserinstitute.org/sites/default/files/towards-a-better-understanding-of-income-inequality-in-canada.pdf
 Canada,1969,0.3322,,gross,sqrt,,Sarlo2017 Canada gross sqrt 1,Sarlo 2017,70,https://web.archive.org/web/20190331131651/https://www.fraserinstitute.org/sites/default/files/towards-a-better-understanding-of-income-inequality-in-canada.pdf
+Canada,1969,0.354,,disp,hh,,Sawyer1976 Canada disp hh,"Sawyer 1976; Dryzek1978; Atkinson, Rainwater, and Smeeding 1994",404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
 Canada,1971,0.3729999923706055,,disp,hh,,Brandolini1998 Canada disp hh,Milanovic 2016; Brandolini 1998,"",https://www.dropbox.com/s/h3riybl79nk6fft/allginis_2016.dta?dl=1
 Canada,1971,0.3911,0.0023,disp,hh,FALSE,LIS Canada disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
 Canada,1971,0.3738,0.0022,disp,pc,FALSE,LIS Canada disp pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/ca.txt
@@ -9385,6 +9387,7 @@ Iraq,2012,0.367,,con,pc,,UNESCWA2018 Iraq con pc,UNESCWA 2018,35,https://www.une
 Iraq,2012,0.295,,con,pc,,WB Iraq 2013 con pc,World Bank 2013,19,http://microdata.worldbank.org/index.php/catalog/2334/download/34771
 Iraq,2012,0.295,,con,pc,,WB Iraq 2016 con pc,World Bank 2016,7,http://microdata.worldbank.org/index.php/catalog/2334/download/34771
 Iraq,2014,0.285,,con,pc,,WB Iraq 2016 con pc,World Bank 2016,7,http://microdata.worldbank.org/index.php/catalog/2334/download/34771
+Ireland,1966,0.359,,disp,hh,,Sawyer1976 Ireland disp hh,Sawyer 1976; Dryzek1978,404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
 Ireland,1973,0.367,,disp,hh,,CN1993 Ireland disp hh,Callan and Nolan 1993,7,http://www.esri.ie/pubs/WP043.pdf
 Ireland,1973,0.379,,gross,hh,,CN1993 Ireland gross hh,Callan and Nolan 1993,5,http://www.esri.ie/pubs/WP043.pdf
 Ireland,1973,0.27,,disp,ae,,vGP1984 Ireland disp ae,Tabatabai 1996; van Ginneken and Park 1984,126,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -10313,6 +10316,7 @@ Israel,2018,0.444,,market,sqrt,FALSE,"OECD Israel market sqrt, current def, 2012
 Italy,1967,0.391,,disp,pc,TRUE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
 Italy,1968,0.408,,disp,pc,TRUE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
 Italy,1969,0.397,,disp,pc,TRUE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
+Italy,1969,0.398,,disp,hh,,Sawyer1976 Italy disp hh,"Sawyer 1976; Dryzek1978; Atkinson, Rainwater, and Smeeding 1994",404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
 Italy,1970,0.383,,disp,pc,TRUE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
 Italy,1971,0.397,,disp,pc,TRUE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
 Italy,1972,0.385,,disp,pc,TRUE,BV2011 disp pc,Brandolini and Vecchi 2011,30,http://www.finanzaecomunicazione.it/wp-content/uploads/downloads/2011/10/Brandolini_Vecchi.pdf
@@ -10753,6 +10757,7 @@ Japan,1967,0.352,,market,hh,,MT1992 Japan market hh,Tabatabai 1996; Mizoguchi an
 Japan,1967,0.375,,market,hh,,Tachibanaki 2006 market hh,Tachibanaki 2006,3,http://doi.org/10.1111/j.1468-5876.2006.00355.x
 Japan,1968,0.353,,market,hh,,MT1992 Japan market hh,Tabatabai 1996; Mizoguchi and Terasaki 1992,126,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Japan,1969,0.365,,market,hh,,MT1992 Japan market hh,Tabatabai 1996; Mizoguchi and Terasaki 1992,126,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Japan,1969,0.316,,disp,hh,,Sawyer1976 Japan disp hh,Sawyer 1976; Dryzek1978,404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
 Japan,1970,0.407,,market,hh,,MT1992 Japan market hh,Tabatabai 1996; Mizoguchi and Terasaki 1992,126,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Japan,1971,0.384,,market,hh,,MT1992 Japan market hh,Tabatabai 1996; Mizoguchi and Terasaki 1992,126,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Japan,1972,0.349,,market,hh,,MT1992 Japan market hh,Tabatabai 1996; Mizoguchi and Terasaki 1992,126,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -17246,6 +17251,7 @@ Soviet Union,1990,0.281,,gross,pc,,AG1993 USSR gross pc,Tabatabai 1996; Alexeev 
 Spain,1974,0.3762,,con,hh,FALSE,IVIE con hh,Caixa Galicia Foundation and Ivie (Valencian Institute of Economic Research) 2009,bloque2/GTH_ID_7374.xls,http://www.ivie.es/downloads/desigualdad/desigualdad.zip
 Spain,1974,0.3398,,con,pc,FALSE,IVIE con pc,Caixa Galicia Foundation and Ivie (Valencian Institute of Economic Research) 2009,bloque2/GTP_ID_7374.xls,http://www.ivie.es/downloads/desigualdad/desigualdad.zip
 Spain,1974,0.3341,,con,sqrt,FALSE,IVIE con sqrt,Caixa Galicia Foundation and Ivie (Valencian Institute of Economic Research) 2009,bloque2/GTU_ID_7374.xls,http://www.ivie.es/downloads/desigualdad/desigualdad.zip
+Spain,1974,0.355,,disp,hh,,Sawyer1976 Spain disp hh,"Sawyer 1976; Dryzek1978; Atkinson, Rainwater, and Smeeding 1994",404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
 Spain,1974,0.37,,disp,hh,,vGP1984 Spain disp hh,Tabatabai 1996; van Ginneken and Park 1984,127,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Spain,1974,0.34,,disp,pc,,vGP1984 Spain disp pc,Tabatabai 1996; van Ginneken and Park 1984,128,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Spain,1980,0.3166,0.0021,con,ae,FALSE,LIS Spain con ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/es.txt
@@ -17679,6 +17685,7 @@ Sweden,1969,0.4847,,gross,ae,TRUE,JL2009 gross ae 1,Johansson and Lindh 2009,"Al
 Sweden,1970,0.4715,,gross,ae,TRUE,JL2009 gross ae 1,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1971,0.4659,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1972,0.4571,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
+Sweden,1972,0.302,,disp,hh,,Sawyer1976 Sweden disp hh,"Sawyer 1976; Dryzek1978; Atkinson, Rainwater, and Smeeding 1994",404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
 Sweden,1973,0.4486,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1974,0.4168,,gross,ae,TRUE,JL2009 gross ae 2,Johansson and Lindh 2009,"Alla, Samtliga",https://doi.org/10.5878/002735
 Sweden,1975,0.213,0.004,disp,ae,,GP2002 disp sqrt,Gustafsson and Palmer 2002,559,https://doi.org/10.1111/1475-4991.00067
@@ -19194,6 +19201,7 @@ United Kingdom,1972,0.3032999992370605,,disp,pc,,AtG United Kingdom disp pc,Mila
 United Kingdom,1972,0.2693,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"","https://ifs.org.uk/uploads/Incomes,%20poverty%20and%20inequality.xlsx"
 United Kingdom,1973,0.293700008392334,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.dropbox.com/s/h3riybl79nk6fft/allginis_2016.dta?dl=1
 United Kingdom,1973,0.2586,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"","https://ifs.org.uk/uploads/Incomes,%20poverty%20and%20inequality.xlsx"
+United Kingdom,1973,0.318,,disp,hh,,Sawyer1976 United Kingdom disp hh,"Sawyer 1976; Dryzek1978; Atkinson, Rainwater, and Smeeding 1994",404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
 United Kingdom,1974,0.2868000030517578,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.dropbox.com/s/h3riybl79nk6fft/allginis_2016.dta?dl=1
 United Kingdom,1974,0.2511,,disp,oecdm,TRUE,IFS GB disp oecdm,Institute for Fiscal Studies,"","https://ifs.org.uk/uploads/Incomes,%20poverty%20and%20inequality.xlsx"
 United Kingdom,1974,0.327,0.0035,disp,hh,FALSE,LIS United Kingdom disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/uk.txt
@@ -20045,6 +20053,7 @@ United States,1971,0.396,0.0104,gross,hh,TRUE,US Census Bureau gross hh 1,U.S. C
 United States,1971,0.355,,gross,hh,TRUE,US Census Bureau gross hh family,U.S. Census Bureau 1998,102,https://www2.census.gov/library/publications/1998/demographics/p60-203.pdf
 United States,1972,0.253,,con,ae,TRUE,CK1992 con ae,Cutler and Katz 1992,6,http://www.nber.org/papers/w3964.pdf
 United States,1972,0.371,,gross,ae,TRUE,CK1992 gross ae,Cutler and Katz 1992,6,http://www.nber.org/papers/w3964.pdf
+United States,1972,0.381,,disp,hh,,Sawyer1976 United States disp hh,"Sawyer 1976; Dryzek1978; Atkinson, Rainwater, and Smeeding 1994",404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
 United States,1972,0.362,0.0047,gross,ae,TRUE,US Census Bureau gross ae 1,U.S. Census Bureau,"",https://www2.census.gov/programs-surveys/demo/tables/p60/273/tableA5.xlsx
 United States,1972,0.401,0.0114,gross,hh,TRUE,US Census Bureau gross hh 1,U.S. Census Bureau,"",https://www2.census.gov/programs-surveys/demo/tables/p60/273/tableA4.xlsx
 United States,1972,0.359,,gross,hh,TRUE,US Census Bureau gross hh family,U.S. Census Bureau 1998,102,https://www2.census.gov/library/publications/1998/demographics/p60-203.pdf
