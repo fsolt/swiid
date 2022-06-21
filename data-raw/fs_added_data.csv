@@ -226,6 +226,8 @@ Botswana,2003,0.626,,disp,hh,TRUE,Statistics Botswana disp hh 2,Central Statisti
 Botswana,2010,0.495,,con,hh,TRUE,Statistics Botswana con hh,Statistics Botswana 2013,49,http://www.statsbots.org.bw/sites/default/files/BCWIS%202009%2010%20MAIN%20REPORT.pdf
 Botswana,2010,0.645,,disp,hh,FALSE,Statistics Botswana disp hh 1,Statistics Botswana 2013,48,http://www.statsbots.org.bw/sites/default/files/BCWIS%202009%2010%20MAIN%20REPORT.pdf
 Botswana,2010,0.757,,disp,hh,TRUE,Statistics Botswana disp hh 2,Statistics Botswana 2013,48,http://www.statsbots.org.bw/sites/default/files/BCWIS%202009%2010%20MAIN%20REPORT.pdf
+Brazil,1972,0.605,,gross,pc,FALSE,Altimir1987 Brazil gross pc 1,Altimir 1987,154,https://doi.org/10.1111/j.1475-4991.1987.tb00667.x
+Brazil,1972,0.662,,gross,pc,FALSE,Altimir1987 Brazil gross pc 2,Altimir 1987,154,https://doi.org/10.1111/j.1475-4991.1987.tb00667.x
 Brazil,1974,0.361,,con,hh,,Yotopoulos1989 Brazil con hh,Yotopoulos 1989,366,https://doi.org/10.1111/j.1475-4991.1989.tb00598.x
 Brazil,1981,0.574,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
 Brazil,1982,0.581,,gross,pc,FALSE,FLL2007 gross pc,"Ferreira, Leite, and Litchfield 2007",4,http://siteresources.worldbank.org/INTPOVRES/Resources/477227-1142543871921/Rise_and_fall_FLL_MDY07013%5B001-032%5D.pdf
@@ -477,10 +479,9 @@ China,2017,0.467,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2018,"""1
 China,2018,0.468,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2019,"""1-4""",http://www.stats.gov.cn/tjsj/ndsj/2019/indexeh.htm
 China,2019,0.465,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2020,"""1-4""",http://www.stats.gov.cn/tjsj/ndsj/2021/indexch.htm
 China,2020,0.468,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2020,"""1-4""",http://www.stats.gov.cn/tjsj/ndsj/2021/indexch.htm
-Colombia,1971,0.5268,,market,hh,,Londo–o1990 Colombia market hh,Londo–o 1990,7a,https://www.proquest.com/openview/55b4229f522c56a76ff9b199566844b4/1?pq-origsite=gscholar&cbl=18750&diss=y
-Colombia,1978,0.4814,,market,hh,,Londo–o1990 Colombia market hh,Londo–o 1990,7a,https://www.proquest.com/openview/55b4229f522c56a76ff9b199566844b4/1?pq-origsite=gscholar&cbl=18750&diss=y
+Colombia,1972,0.618,,gross,pc,FALSE,Altimir1987 Colombia gross pc 1,Altimir 1987,154,https://doi.org/10.1111/j.1475-4991.1987.tb00667.x
+Colombia,1972,0.607,,gross,pc,FALSE,Altimir1987 Colombia gross pc 2,Altimir 1987,154,https://doi.org/10.1111/j.1475-4991.1987.tb00667.x
 Colombia,1978,0.545,,disp,hh,,WorldBank1994 Colombia disp hh,World Bank 1994 ,229,https://web.archive.org/web/20180427221719/http://documents.worldbank.org/curated/en/853931468019216759/pdf/1375710SPANISH.pdf
-Colombia,1988,0.4765,,market,hh,,Londo–o1990 Colombia market hh,Londo–o 1990,7a,https://www.proquest.com/openview/55b4229f522c56a76ff9b199566844b4/1?pq-origsite=gscholar&cbl=18750&diss=y
 Colombia,1988,0.512,,disp,hh,,WorldBank1994 Colombia disp hh,World Bank 1994 ,229,https://web.archive.org/web/20180427221719/http://documents.worldbank.org/curated/en/853931468019216759/pdf/1375710SPANISH.pdf
 Colombia,1991,0.531,,disp,pc,TRUE,CEPAL Colombia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Colombia,1994,0.601,,disp,pc,TRUE,CEPAL Colombia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
@@ -1248,6 +1249,7 @@ Iraq,2012,0.367,,con,pc,,UNESCWA2018 Iraq con pc,UNESCWA 2018,35,https://www.une
 Iraq,2012,0.295,,con,pc,,WB Iraq 2013 con pc,World Bank 2013,19,http://microdata.worldbank.org/index.php/catalog/2334/download/34771
 Iraq,2012,0.295,,con,pc,,WB Iraq 2016 con pc,World Bank 2016,7,http://microdata.worldbank.org/index.php/catalog/2334/download/34771
 Iraq,2014,0.285,,con,pc,,WB Iraq 2016 con pc,World Bank 2016,7,http://microdata.worldbank.org/index.php/catalog/2334/download/34771
+Ireland,1966,0.359,,disp,hh,,Sawyer1976 Ireland disp hh,Sawyer 1976; Dryzek1978,404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
 Ireland,1973,0.367,,disp,hh,,CN1993 Ireland disp hh,Callan and Nolan 1993,7,http://www.esri.ie/pubs/WP043.pdf
 Ireland,1973,0.379,,gross,hh,,CN1993 Ireland gross hh,Callan and Nolan 1993,5,http://www.esri.ie/pubs/WP043.pdf
 Ireland,1973,0.27,,disp,ae,,vGP1984 Ireland disp ae,Tabatabai 1996; van Ginneken and Park 1984,126,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -1354,6 +1356,7 @@ Japan,1967,0.352,,market,hh,,MT1992 Japan market hh,Tabatabai 1996; Mizoguchi an
 Japan,1967,0.375,,market,hh,,Tachibanaki 2006 market hh,Tachibanaki 2006,3,http://doi.org/10.1111/j.1468-5876.2006.00355.x
 Japan,1968,0.353,,market,hh,,MT1992 Japan market hh,Tabatabai 1996; Mizoguchi and Terasaki 1992,126,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Japan,1969,0.365,,market,hh,,MT1992 Japan market hh,Tabatabai 1996; Mizoguchi and Terasaki 1992,126,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Japan,1969,0.316,,disp,hh,,Sawyer1976 Japan disp hh,Sawyer 1976; Dryzek1978,404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
 Japan,1970,0.407,,market,hh,,MT1992 Japan market hh,Tabatabai 1996; Mizoguchi and Terasaki 1992,126,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Japan,1971,0.384,,market,hh,,MT1992 Japan market hh,Tabatabai 1996; Mizoguchi and Terasaki 1992,126,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Japan,1972,0.349,,market,hh,,MT1992 Japan market hh,Tabatabai 1996; Mizoguchi and Terasaki 1992,126,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -1662,10 +1665,16 @@ Mauritius,1997,0.387,,disp,ae,,Statistics Mauritius  disp ae,Statistics Mauritiu
 Mauritius,2002,0.371,,disp,ae,,Statistics Mauritius  disp ae,Statistics Mauritius 2015,,http://statsmauritius.govmu.org/English/StatsbySubj/Documents/Poverty/Poverty%20Analysis%202012.pdf
 Mauritius,2007,0.388,,disp,ae,,Statistics Mauritius  disp ae,Statistics Mauritius 2015,,http://statsmauritius.govmu.org/English/StatsbySubj/Documents/Poverty/Poverty%20Analysis%202012.pdf
 Mauritius,2012,0.414,,disp,ae,,Statistics Mauritius  disp ae,Statistics Mauritius 2015,,http://statsmauritius.govmu.org/English/StatsbySubj/Documents/Poverty/Poverty%20Analysis%202012.pdf
+Mexico,1963,0.53,,gross,pc,FALSE,Altimir1987 Mexico gross pc 1,Altimir 1987,154,https://doi.org/10.1111/j.1475-4991.1987.tb00667.x
+Mexico,1963,0.606,,gross,pc,FALSE,Altimir1987 Mexico gross pc 2,Altimir 1987,154,https://doi.org/10.1111/j.1475-4991.1987.tb00667.x
+Mexico,1968,0.521,,gross,pc,FALSE,Altimir1987 Mexico gross pc 1,Altimir 1987,154,https://doi.org/10.1111/j.1475-4991.1987.tb00667.x
+Mexico,1968,0.586,,gross,pc,FALSE,Altimir1987 Mexico gross pc 2,Altimir 1987,154,https://doi.org/10.1111/j.1475-4991.1987.tb00667.x
 Mexico,1968,0.466,,con,hh,,van Ginneken1976 Mexico con hh,Tabatabai 1996; van Ginneken 1976,116,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Mexico,1968,0.56,,disp,ae,,vGP1984 Mexico disp ae,Tabatabai 1996; van Ginneken and Park 1984,116,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Mexico,1968,0.56,,disp,hh,,vGP1984 Mexico disp hh,Tabatabai 1996; van Ginneken and Park 1984,116,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Mexico,1968,0.58,,disp,pc,,vGP1984 Mexico disp pc,Tabatabai 1996; van Ginneken and Park 1984,116,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Mexico,1977,0.482,,gross,pc,FALSE,Altimir1987 Mexico gross pc 1,Altimir 1987,154,https://doi.org/10.1111/j.1475-4991.1987.tb00667.x
+Mexico,1977,0.518,,gross,pc,FALSE,Altimir1987 Mexico gross pc 2,Altimir 1987,154,https://doi.org/10.1111/j.1475-4991.1987.tb00667.x
 Mexico,1984,0.5,,con,hh,,GLS2006 Mexico con hh,"Goni, Lopez, and Serven 2006",27,http://papers.ssrn.com/sol3/papers.cfm?abstract_id=875741
 Mexico,1984,0.388,,con,hh,,Park1995 Mexico con hh,Tabatabai 1996; Park 1995,116,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Mexico,1984,0.435,,disp,hh,,Park1995 Mexico disp hh,Tabatabai 1996; Park 1995,116,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -1947,6 +1956,8 @@ Paraguay,2011,0.546,,disp,pc,TRUE,CEPAL Paraguay disp pc 1,CEPALStat,National,ht
 Paraguay,2012,0.502,,disp,pc,TRUE,CEPAL Paraguay disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Paraguay,2013,0.522,,disp,pc,TRUE,CEPAL Paraguay disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Paraguay,2014,0.536,,disp,pc,TRUE,CEPAL Paraguay disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Peru,1972,0.568,,gross,pc,FALSE,Altimir1987 Peru gross pc 1,Altimir 1987,154,https://doi.org/10.1111/j.1475-4991.1987.tb00667.x
+Peru,1972,0.603,,gross,pc,FALSE,Altimir1987 Peru gross pc 2,Altimir 1987,154,https://doi.org/10.1111/j.1475-4991.1987.tb00667.x
 Peru,1995,0.46,,con,hh,,GLS2006 Peru con hh,"Goni, Lopez, and Serven 2006",27,http://papers.ssrn.com/sol3/papers.cfm?abstract_id=875741
 Peru,1997,0.532,,disp,pc,TRUE,CEPAL Peru disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Peru,1999,0.545,,disp,pc,TRUE,CEPAL Peru disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
@@ -2384,9 +2395,9 @@ South Africa,2015,0.68,,gross,pc,FALSE,SSA2017 gross pc,Statistics South Africa 
 Spain,1974,0.3762,,con,hh,FALSE,IVIE con hh,Caixa Galicia Foundation and Ivie (Valencian Institute of Economic Research) 2009,bloque2/GTH_ID_7374.xls,http://www.ivie.es/downloads/desigualdad/desigualdad.zip
 Spain,1974,0.3398,,con,pc,FALSE,IVIE con pc,Caixa Galicia Foundation and Ivie (Valencian Institute of Economic Research) 2009,bloque2/GTP_ID_7374.xls,http://www.ivie.es/downloads/desigualdad/desigualdad.zip
 Spain,1974,0.3341,,con,sqrt,FALSE,IVIE con sqrt,Caixa Galicia Foundation and Ivie (Valencian Institute of Economic Research) 2009,bloque2/GTU_ID_7374.xls,http://www.ivie.es/downloads/desigualdad/desigualdad.zip
+Spain,1974,0.355,,disp,hh,,Sawyer1976 Spain disp hh,"Sawyer 1976; Dryzek1978; Atkinson, Rainwater, and Smeeding 1994",404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
 Spain,1974,0.37,,disp,hh,,vGP1984 Spain disp hh,Tabatabai 1996; van Ginneken and Park 1984,127,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Spain,1974,0.34,,disp,pc,,vGP1984 Spain disp pc,Tabatabai 1996; van Ginneken and Park 1984,128,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Spain,1974,0.355,,disp,hh,,Sawyer1976 Spain disp hh,"Sawyer 1976; Dryzek1978; Atkinson, Rainwater, and Smeeding 1994",404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
 Spain,1980,0.317,0.002,con,oecdm,FALSE,ZdV2001 Spain con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Spain,1981,0.3562,,con,hh,FALSE,IVIE con hh,Caixa Galicia Foundation and Ivie (Valencian Institute of Economic Research) 2009,bloque2/GTH_ID_8081.xls,http://www.ivie.es/downloads/desigualdad/desigualdad.zip
 Spain,1981,0.332,,con,pc,FALSE,IVIE con pc,Caixa Galicia Foundation and Ivie (Valencian Institute of Economic Research) 2009,bloque2/GTP_ID_8081.xls,http://www.ivie.es/downloads/desigualdad/desigualdad.zip
@@ -2754,6 +2765,7 @@ Ukraine,2003,0.268,,con,pc,FALSE,MY2006 Ukraine con pc 6,Mitra and Yemtsov 2006,
 United Arab Emirates,1998,0.61,,market,pc,,AAP2018 United Arab Emirates market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 United Arab Emirates,2008,0.395,,con,pc,,Hassine2015 UAE con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 United Arab Emirates,2009,0.64,,market,pc,,AAP2018 United Arab Emirates market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+United Kingdom,1973,0.318,,disp,hh,,Sawyer1976 United Kingdom disp hh,"Sawyer 1976; Dryzek1978; Atkinson, Rainwater, and Smeeding 1994",404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
 United Kingdom,1985,0.291,0.004,con,oecdm,FALSE,ZdV2001 United Kingdom con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 United Kingdom,1988,0.313,0.005,con,oecdm,FALSE,ZdV2001 United Kingdom con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 United Kingdom,1993,0.3768,,disp,ae,TRUE,W1999 United Kingdom disp ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
@@ -2762,6 +2774,7 @@ United States,1961,0.278,,con,ae,TRUE,CK1992 con ae,Cutler and Katz 1992,6,http:
 United States,1963,0.379,,gross,ae,TRUE,CK1992 gross ae,Cutler and Katz 1992,6,http://www.nber.org/papers/w3964.pdf
 United States,1972,0.253,,con,ae,TRUE,CK1992 con ae,Cutler and Katz 1992,6,http://www.nber.org/papers/w3964.pdf
 United States,1972,0.371,,gross,ae,TRUE,CK1992 gross ae,Cutler and Katz 1992,6,http://www.nber.org/papers/w3964.pdf
+United States,1972,0.381,,disp,hh,,Sawyer1976 United States disp hh,"Sawyer 1976; Dryzek1978; Atkinson, Rainwater, and Smeeding 1994",404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
 United States,1980,0.275,,con,ae,TRUE,CK1992 con ae,Cutler and Katz 1992,6,http://www.nber.org/papers/w3964.pdf
 United States,1980,0.27,,con,hh,TRUE,CK1992 con hh,Cutler and Katz 1992,10,http://www.nber.org/papers/w3964.pdf
 United States,1980,0.323,,con,pc,TRUE,CK1992 con pc,Cutler and Katz 1992,10,http://www.nber.org/papers/w3964.pdf
@@ -2853,6 +2866,8 @@ Vanuatu,2006,0.46,,con,pc,,ZKM2014 Vanuatu con pc,"Zhuang, Kanbur, and Maligalig
 Vanuatu,2010,0.31,,con,hh,,VNSO con hh,Vanuatu National Statistics Office 2013,13,http://www.vnso.gov.vu/index.php/component/advlisting/?view=download&fileId=2007
 Vanuatu,2010,0.37,,con,pc,,VNSO con pc,Vanuatu National Statistics Office 2013,13,http://www.vnso.gov.vu/index.php/component/advlisting/?view=download&fileId=2007
 Venezuela,1970,0.49,,disp,hh,,vGP1984 Venezuela disp hh,Tabatabai 1996; van Ginneken and Park 1984,117,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
+Venezuela,1971,0.494,,gross,pc,FALSE,Altimir1987 Venezuela gross pc 1,Altimir 1987,154,https://doi.org/10.1111/j.1475-4991.1987.tb00667.x
+Venezuela,1971,0.505,,gross,pc,FALSE,Altimir1987 Venezuela gross pc 2,Altimir 1987,154,https://doi.org/10.1111/j.1475-4991.1987.tb00667.x
 Venezuela,1990,0.471,,disp,pc,TRUE,CEPAL Venezuela disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Venezuela,1992,0.471,,disp,pc,TRUE,CEPAL Venezuela disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Venezuela,1994,0.486,,disp,pc,TRUE,CEPAL Venezuela disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
@@ -2891,7 +2906,3 @@ Zimbabwe,1995,0.501,,con,pc,,FR2008 Zimbabwe con pc,Ferreira and Ravallion 2008,
 Zimbabwe,1995,0.501,,con,pc,FALSE,Zimstat  con pc,Zimbabwe National Statistics Agency 2013,42,http://www.zimstat.co.zw/sites/default/files/img/publications/Finance/Poverty2011.pdf
 Zimbabwe,2001,0.489,,con,pc,FALSE,Zimstat  con pc,Zimbabwe National Statistics Agency 2013,42,http://www.zimstat.co.zw/sites/default/files/img/publications/Finance/Poverty2011.pdf
 Zimbabwe,2011,0.423,,con,pc,FALSE,Zimstat  con pc,Zimbabwe National Statistics Agency 2013,42,http://www.zimstat.co.zw/sites/default/files/img/publications/Finance/Poverty2011.pdf
-Ireland,1966,0.359,,disp,hh,,Sawyer1976 Ireland disp hh,Sawyer 1976; Dryzek1978,404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
-Japan,1969,0.316,,disp,hh,,Sawyer1976 Japan disp hh,Sawyer 1976; Dryzek1978,404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
-United Kingdom,1973,0.318,,disp,hh,,Sawyer1976 United Kingdom disp hh,"Sawyer 1976; Dryzek1978; Atkinson, Rainwater, and Smeeding 1994",404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
-United States,1972,0.381,,disp,hh,,Sawyer1976 United States disp hh,"Sawyer 1976; Dryzek1978; Atkinson, Rainwater, and Smeeding 1994",404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
