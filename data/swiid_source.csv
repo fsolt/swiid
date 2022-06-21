@@ -974,10 +974,10 @@ Bahamas,2003,0.48,,market,hh,,Statistics Bahamas market hh,Statistics Bahamas 20
 Bahamas,2004,0.43,,market,hh,,Statistics Bahamas market hh,Statistics Bahamas 2005,20,https://web.archive.org/web/20180427210852/http://www.centralbankbahamas.com/download/LFS_report_2004.pdf
 Bahamas,2013,0.414,,con,pc,TRUE,Statistics Bahamas con pc,Statistics Bahamas 2016,21,https://www.bahamas.gov.bs/wps/wcm/connect/5312dd47-5cd9-45f5-bf6c-dea99f3a6226/Bahamas+Household+Expenditure+Survey+2013+Report_v2.pdf?MOD=AJPERES
 Bahamas,2013,0.414,,con,pc,TRUE,Statistics Bahamas con pc,Statistics Bahamas 2016,21,https://www.bahamas.gov.bs/wps/wcm/connect/5312dd47-5cd9-45f5-bf6c-dea99f3a6226/Bahamas+Household+Expenditure+Survey+2013+Report_v2.pdf?MOD=AJPERES
-Bahrain,1995,0.59,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
-Bahrain,2005,0.56,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Bahrain,1995,0.59,,market,pc,,AAP2018 Bahrain market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Bahrain,2005,0.56,,market,pc,,AAP2018 Bahrain market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Bahrain,2014,0.596,,gross,pc,,IGA 2017,Bahrain Information & eGovernment Authority 2017,51,http://www.data.gov.bh/en/ResourceCenter/DownloadFile?id=2484
-Bahrain,2015,0.57,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Bahrain,2015,0.57,,market,pc,,AAP2018 Bahrain market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Bangladesh,1964,0.359,,gross,hh,,Muqtada1986 Bangladesh gross hh,Tabatabai 1996; Muqtada 1986,90,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Bangladesh,1967,0.304,,con,hh,,A1976 Bangladesh con hh,Azfar 1976,60,https://www.jstor.org/stable/25821355
 Bangladesh,1967,0.347,,gross,hh,,A1976 Bangladesh gross hh,Azfar 1976,60,https://www.jstor.org/stable/25821355
@@ -3645,8 +3645,12 @@ China,2019,0.465,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2020,"""1
 China,2020,0.468,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2020,"""1-4""",http://www.stats.gov.cn/tjsj/ndsj/2021/indexch.htm
 Colombia,1970,0.56,,gross,hh,FALSE,CEPAL SDI Colombia gross hh McLure,CEPAL Serie Distribucion del Ingreso 1 (1986),"",http://hdl.handle.net/11362/8916
 Colombia,1971,0.51,,gross,hh,FALSE,CEPAL SDI Colombia gross hh EH/PF,CEPAL Serie Distribucion del Ingreso 1 (1986),"",http://hdl.handle.net/11362/8916
+Colombia,1971,0.5268,,gross,hh,,Londo�o1990 Colombia market hh,Londo�o 1990,7a,https://www.proquest.com/openview/55b4229f522c56a76ff9b199566844b4/1?pq-origsite=gscholar&cbl=18750&diss=y
 Colombia,1972,0.51,,gross,hh,FALSE,CEPAL SDI Colombia gross hh EH/PF,CEPAL Serie Distribucion del Ingreso 1 (1986),"",http://hdl.handle.net/11362/8916
+Colombia,1974,0.46,,gross,hh,FALSE,CEPAL SDI Colombia gross hh EDSB,CEPAL Serie Distribucion del Ingreso 1 (1986),"",http://hdl.handle.net/11362/8916
+Colombia,1978,0.4814,,gross,hh,,Londo�o1990 Colombia market hh,Londo�o 1990,7a,https://www.proquest.com/openview/55b4229f522c56a76ff9b199566844b4/1?pq-origsite=gscholar&cbl=18750&diss=y
 Colombia,1978,0.545,,disp,hh,,WorldBank1994 Colombia disp hh,World Bank 1994,229,https://web.archive.org/web/20180427221719/http://documents.worldbank.org/curated/en/853931468019216759/pdf/1375710SPANISH.pdf
+Colombia,1988,0.4765,,gross,hh,,Londo�o1990 Colombia market hh,Londo�o 1990,7a,https://www.proquest.com/openview/55b4229f522c56a76ff9b199566844b4/1?pq-origsite=gscholar&cbl=18750&diss=y
 Colombia,1988,0.512,,disp,hh,,WorldBank1994 Colombia disp hh,World Bank 1994,229,https://web.archive.org/web/20180427221719/http://documents.worldbank.org/curated/en/853931468019216759/pdf/1375710SPANISH.pdf
 Colombia,1991,0.531,,disp,pc,TRUE,CEPAL Colombia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Colombia,1992,0.5145367,,gross,pc,FALSE,Povcalnet Colombia gross pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
@@ -3678,7 +3682,7 @@ Colombia,2001,0.52986286,,disp,hh,TRUE,SEDLAC Colombia disp hh 1,SEDLAC,gini1,ht
 Colombia,2001,0.56197817,0.00359052,disp,pc,TRUE,SEDLAC Colombia disp pc 1,SEDLAC,intervals pci,https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2021_inequality_LAC.xlsx
 Colombia,2002,0.567,,disp,pc,TRUE,CEPAL Colombia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/xml/834853.xml
 Colombia,2002,0.567,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Colombia,2002,0.572,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
+Colombia,2002,0.572,,gross,pc,FALSE,DANE Colombia gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
 Colombia,2002,0.5413,0.0025,disp,ae,FALSE,LIS Colombia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2002,0.5374,0.0033,disp,hh,FALSE,LIS Colombia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2002,0.5307,0.0027,disp,oecdm,FALSE,LIS Colombia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
@@ -3700,7 +3704,7 @@ Colombia,2002,0.5254429,,disp,hh,TRUE,SEDLAC Colombia disp hh 1,SEDLAC,gini1,htt
 Colombia,2002,0.5594712,0.0056437,disp,pc,TRUE,SEDLAC Colombia disp pc 1,SEDLAC,intervals pci,https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2021_inequality_LAC.xlsx
 Colombia,2003,0.549,,disp,pc,TRUE,CEPAL Colombia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/xml/834853.xml
 Colombia,2003,0.548,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Colombia,2003,0.554,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
+Colombia,2003,0.554,,gross,pc,FALSE,DANE Colombia gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
 Colombia,2003,0.5,,con,hh,,GLS2006 Colombia con hh,"Goni, Lopez, and Serven 2006",27,http://papers.ssrn.com/sol3/papers.cfm?abstract_id=875741
 Colombia,2003,0.5204,0.0021,disp,ae,FALSE,LIS Colombia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2003,0.5162,0.002,disp,hh,FALSE,LIS Colombia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
@@ -3723,7 +3727,7 @@ Colombia,2003,0.49864752,,disp,hh,TRUE,SEDLAC Colombia disp hh 1,SEDLAC,gini1,ht
 Colombia,2003,0.53481684,0.00234034,disp,pc,TRUE,SEDLAC Colombia disp pc 1,SEDLAC,intervals pci,https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2021_inequality_LAC.xlsx
 Colombia,2004,0.554,,disp,pc,TRUE,CEPAL Colombia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/xml/834853.xml
 Colombia,2004,0.553,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Colombia,2004,0.558,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
+Colombia,2004,0.558,,gross,pc,FALSE,DANE Colombia gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
 Colombia,2004,0.5299,0.0021,disp,ae,FALSE,LIS Colombia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2004,0.5237,0.0019,disp,hh,FALSE,LIS Colombia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2004,0.5189,0.0021,disp,oecdm,FALSE,LIS Colombia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
@@ -3745,7 +3749,7 @@ Colombia,2004,0.5149217,,disp,hh,TRUE,SEDLAC Colombia disp hh 1,SEDLAC,gini1,htt
 Colombia,2004,0.54938992,0.00269272,disp,pc,TRUE,SEDLAC Colombia disp pc 1,SEDLAC,intervals pci,https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2021_inequality_LAC.xlsx
 Colombia,2005,0.55,,disp,pc,TRUE,CEPAL Colombia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/xml/834853.xml
 Colombia,2005,0.551,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Colombia,2005,0.557,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
+Colombia,2005,0.557,,gross,pc,FALSE,DANE Colombia gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
 Colombia,2005,0.5305,0.0019,disp,ae,FALSE,LIS Colombia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2005,0.5217,0.0021,disp,hh,FALSE,LIS Colombia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2005,0.519,0.0024,disp,oecdm,FALSE,LIS Colombia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
@@ -3797,7 +3801,7 @@ Colombia,2007,0.5976,0.0024,market,pc,FALSE,LIS Colombia market pc,LISSY,"",http
 Colombia,2007,0.5634,0.0024,market,sqrt,FALSE,LIS Colombia market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2008,0.572,,disp,pc,TRUE,CEPAL Colombia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/xml/834853.xml
 Colombia,2008,0.562,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Colombia,2008,0.567,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
+Colombia,2008,0.567,,gross,pc,FALSE,DANE Colombia gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
 Colombia,2008,0.5411,0.0021,disp,ae,FALSE,LIS Colombia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2008,0.5344,0.0023,disp,hh,FALSE,LIS Colombia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2008,0.5306,0.002,disp,oecdm,FALSE,LIS Colombia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
@@ -3819,7 +3823,7 @@ Colombia,2008,0.52005523,,disp,hh,TRUE,SEDLAC Colombia disp hh 2,SEDLAC,gini1,ht
 Colombia,2008,0.55138684,0.00109917,disp,pc,TRUE,SEDLAC Colombia disp pc 2,SEDLAC,intervals pci,https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2021_inequality_LAC.xlsx
 Colombia,2009,0.557,,disp,pc,TRUE,CEPAL Colombia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/xml/834853.xml
 Colombia,2009,0.553,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Colombia,2009,0.557,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
+Colombia,2009,0.557,,gross,pc,FALSE,DANE Colombia gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
 Colombia,2009,0.5242,0.0019,disp,ae,FALSE,LIS Colombia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2009,0.5212,0.0017,disp,hh,FALSE,LIS Colombia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2009,0.514,0.002,disp,oecdm,FALSE,LIS Colombia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
@@ -3843,7 +3847,7 @@ Colombia,2010,0.56,,disp,pc,TRUE,CEPAL Colombia disp pc 1,CEPALStat,National,htt
 Colombia,2010,0.557,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Colombia,2010,0.5687000000000001,,disp,pc,FALSE,CEQ Colombia disp pc,Lustig 2017,21,http://www.commitmentoequity.org/publications_files/Latin%20America/CEQ_WP62_Lustig_Feb22_2017.pdf
 Colombia,2010,0.5766000000000001,,market,pc,FALSE,CEQ Colombia market pc,Lustig 2017,21,http://www.commitmentoequity.org/publications_files/Latin%20America/CEQ_WP62_Lustig_Feb22_2017.pdf
-Colombia,2010,0.56,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
+Colombia,2010,0.56,,gross,pc,FALSE,DANE Colombia gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
 Colombia,2010,0.5256,0.0018,disp,ae,FALSE,LIS Colombia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2010,0.5221,0.0018,disp,hh,FALSE,LIS Colombia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2010,0.5148,0.002,disp,oecdm,FALSE,LIS Colombia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
@@ -3865,7 +3869,7 @@ Colombia,2010,0.51640368,,disp,hh,TRUE,SEDLAC Colombia disp hh 2,SEDLAC,gini1,ht
 Colombia,2010,0.54496164,0.00118635,disp,pc,TRUE,SEDLAC Colombia disp pc 2,SEDLAC,intervals pci,https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2021_inequality_LAC.xlsx
 Colombia,2011,0.549,,disp,pc,TRUE,CEPAL Colombia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/xml/834853.xml
 Colombia,2011,0.545,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Colombia,2011,0.548,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
+Colombia,2011,0.548,,gross,pc,FALSE,DANE Colombia gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
 Colombia,2011,0.5141,0.0023,disp,ae,FALSE,LIS Colombia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2011,0.5127,0.0017,disp,hh,FALSE,LIS Colombia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2011,0.5036,0.0023,disp,oecdm,FALSE,LIS Colombia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
@@ -3887,7 +3891,7 @@ Colombia,2011,0.50760918,,disp,hh,TRUE,SEDLAC Colombia disp hh 2,SEDLAC,gini1,ht
 Colombia,2011,0.53396838,0.00126782,disp,pc,TRUE,SEDLAC Colombia disp pc 2,SEDLAC,intervals pci,https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2021_inequality_LAC.xlsx
 Colombia,2012,0.539,,disp,pc,TRUE,CEPAL Colombia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/xml/834853.xml
 Colombia,2012,0.536,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Colombia,2012,0.539,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
+Colombia,2012,0.539,,gross,pc,FALSE,DANE Colombia gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
 Colombia,2012,0.5045,0.0018,disp,ae,FALSE,LIS Colombia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2012,0.5041,0.0019,disp,hh,FALSE,LIS Colombia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2012,0.494,0.0017,disp,oecdm,FALSE,LIS Colombia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
@@ -3909,7 +3913,7 @@ Colombia,2012,0.49968121,,disp,hh,TRUE,SEDLAC Colombia disp hh 2,SEDLAC,gini1,ht
 Colombia,2012,0.52530045,0.00114445,disp,pc,TRUE,SEDLAC Colombia disp pc 2,SEDLAC,intervals pci,https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2021_inequality_LAC.xlsx
 Colombia,2013,0.54,,disp,pc,TRUE,CEPAL Colombia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/xml/834853.xml
 Colombia,2013,0.536,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Colombia,2013,0.539,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
+Colombia,2013,0.539,,gross,pc,FALSE,DANE Colombia gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
 Colombia,2013,0.5043,0.0018,disp,ae,FALSE,LIS Colombia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2013,0.5055,0.0018,disp,hh,FALSE,LIS Colombia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2013,0.4938,0.0019,disp,oecdm,FALSE,LIS Colombia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
@@ -3933,7 +3937,7 @@ Colombia,2014,0.54,,disp,pc,TRUE,CEPAL Colombia disp pc 1,CEPALStat,National,htt
 Colombia,2014,0.535,,disp,pc,TRUE,CEPAL Colombia disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Colombia,2014,0.5655,,disp,pc,FALSE,CEQ Colombia disp pc,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/07/CEQSI_Jun28_2019.xlsx
 Colombia,2014,0.5746000000000001,,market,pc,FALSE,CEQ Colombia market pc,CEQ 2019,,http://commitmentoequity.org/wp-content/uploads/2019/07/CEQSI_Jun28_2019.xlsx
-Colombia,2014,0.538,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
+Colombia,2014,0.538,,gross,pc,FALSE,DANE Colombia gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
 Colombia,2014,0.503,0.0024,disp,ae,FALSE,LIS Colombia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2014,0.5049,0.0021,disp,hh,FALSE,LIS Colombia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2014,0.4918,0.0023,disp,oecdm,FALSE,LIS Colombia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
@@ -3954,7 +3958,7 @@ Colombia,2014,0.50110271,0.00150166,disp,ae,TRUE,SEDLAC Colombia disp ae 2,SEDLA
 Colombia,2014,0.49882568,,disp,hh,TRUE,SEDLAC Colombia disp hh 2,SEDLAC,gini1,https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2021_inequality_LAC.xlsx
 Colombia,2014,0.52420085,0.00154553,disp,pc,TRUE,SEDLAC Colombia disp pc 2,SEDLAC,intervals pci,https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2021_inequality_LAC.xlsx
 Colombia,2015,0.524,,disp,pc,TRUE,CEPAL Colombia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/xml/834853.xml
-Colombia,2015,0.522,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
+Colombia,2015,0.522,,gross,pc,FALSE,DANE Colombia gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
 Colombia,2015,0.4859,0.0017,disp,ae,FALSE,LIS Colombia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2015,0.4908,0.0017,disp,hh,FALSE,LIS Colombia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2015,0.4752,0.0019,disp,oecdm,FALSE,LIS Colombia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
@@ -3975,7 +3979,7 @@ Colombia,2015,0.4857297,0.00127565,disp,ae,TRUE,SEDLAC Colombia disp ae 2,SEDLAC
 Colombia,2015,0.48587615,,disp,hh,TRUE,SEDLAC Colombia disp hh 2,SEDLAC,gini1,https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2021_inequality_LAC.xlsx
 Colombia,2015,0.50860301,0.00115379,disp,pc,TRUE,SEDLAC Colombia disp pc 2,SEDLAC,intervals pci,https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2021_inequality_LAC.xlsx
 Colombia,2016,0.521,,disp,pc,TRUE,CEPAL Colombia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/xml/834853.xml
-Colombia,2016,0.517,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
+Colombia,2016,0.517,,gross,pc,FALSE,DANE Colombia gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
 Colombia,2016,0.4838,0.0015,disp,ae,FALSE,LIS Colombia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2016,0.4894,0.0017,disp,hh,FALSE,LIS Colombia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2016,0.4728,0.0016,disp,oecdm,FALSE,LIS Colombia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
@@ -3996,7 +4000,7 @@ Colombia,2016,0.48112628,0.00102305,disp,ae,TRUE,SEDLAC Colombia disp ae 2,SEDLA
 Colombia,2016,0.48132615,,disp,hh,TRUE,SEDLAC Colombia disp hh 2,SEDLAC,gini1,https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2021_inequality_LAC.xlsx
 Colombia,2016,0.50434968,9.3305e-4,disp,pc,TRUE,SEDLAC Colombia disp pc 2,SEDLAC,intervals pci,https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2021_inequality_LAC.xlsx
 Colombia,2017,0.511,,disp,pc,TRUE,CEPAL Colombia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/xml/834853.xml
-Colombia,2017,0.508,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
+Colombia,2017,0.508,,gross,pc,FALSE,DANE Colombia gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
 Colombia,2017,0.4748,0.0016,disp,ae,FALSE,LIS Colombia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2017,0.4795,0.0015,disp,hh,FALSE,LIS Colombia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2017,0.4635,0.0018,disp,oecdm,FALSE,LIS Colombia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
@@ -4017,7 +4021,7 @@ Colombia,2017,0.47196996,0.00102321,disp,ae,TRUE,SEDLAC Colombia disp ae 2,SEDLA
 Colombia,2017,0.47140016,,disp,hh,TRUE,SEDLAC Colombia disp hh 2,SEDLAC,gini1,https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2021_inequality_LAC.xlsx
 Colombia,2017,0.49560105,0.00125903,disp,pc,TRUE,SEDLAC Colombia disp pc 2,SEDLAC,intervals pci,https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2021_inequality_LAC.xlsx
 Colombia,2018,0.52,,disp,pc,TRUE,CEPAL Colombia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/xml/834853.xml
-Colombia,2018,0.517,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
+Colombia,2018,0.517,,gross,pc,FALSE,DANE Colombia gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
 Colombia,2018,0.4799,0.0017,disp,ae,FALSE,LIS Colombia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2018,0.4848,0.0017,disp,hh,FALSE,LIS Colombia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2018,0.4689,0.0017,disp,oecdm,FALSE,LIS Colombia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
@@ -4038,7 +4042,7 @@ Colombia,2018,0.47941233,0.00107522,disp,ae,TRUE,SEDLAC Colombia disp ae 2,SEDLA
 Colombia,2018,0.47861608,,disp,hh,TRUE,SEDLAC Colombia disp hh 2,SEDLAC,gini1,https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2021_inequality_LAC.xlsx
 Colombia,2018,0.5026975,0.00120965,disp,pc,TRUE,SEDLAC Colombia disp pc 2,SEDLAC,intervals pci,https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2021_inequality_LAC.xlsx
 Colombia,2019,0.529,,disp,pc,TRUE,CEPAL Colombia disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/xml/834853.xml
-Colombia,2019,0.526,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
+Colombia,2019,0.526,,gross,pc,FALSE,DANE Colombia gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
 Colombia,2019,0.4951,0.0021,disp,ae,FALSE,LIS Colombia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2019,0.498,0.0017,disp,hh,FALSE,LIS Colombia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2019,0.4841,0.0018,disp,oecdm,FALSE,LIS Colombia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
@@ -4058,7 +4062,7 @@ Colombia,2019,0.5133497,,gross,pc,FALSE,Povcalnet Colombia gross pc,World Bank P
 Colombia,2019,0.48911567,0.00110412,disp,ae,TRUE,SEDLAC Colombia disp ae 2,SEDLAC,intervals ei,https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2021_inequality_LAC.xlsx
 Colombia,2019,0.48574366,,disp,hh,TRUE,SEDLAC Colombia disp hh 2,SEDLAC,gini1,https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2021_inequality_LAC.xlsx
 Colombia,2019,0.51168745,0.00110058,disp,pc,TRUE,SEDLAC Colombia disp pc 2,SEDLAC,intervals pci,https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2021_inequality_LAC.xlsx
-Colombia,2020,0.544,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
+Colombia,2020,0.544,,gross,pc,FALSE,DANE Colombia gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
 Colombia,2020,0.5185,0.003,disp,ae,FALSE,LIS Colombia disp ae,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2020,0.5191,0.0026,disp,hh,FALSE,LIS Colombia disp hh,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2020,0.5075,0.0029,disp,oecdm,FALSE,LIS Colombia disp oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
@@ -4074,7 +4078,7 @@ Colombia,2020,0.5615,0.0031,market,hh,FALSE,LIS Colombia market hh,LISSY,"",http
 Colombia,2020,0.5429,0.0032,market,oecdm,FALSE,LIS Colombia market oecdm,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2020,0.5701,0.003,market,pc,FALSE,LIS Colombia market pc,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
 Colombia,2020,0.5377,0.0034,market,sqrt,FALSE,LIS Colombia market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/co.txt
-Colombia,2021,0.523,,gross,pc,FALSE,DANE gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
+Colombia,2021,0.523,,gross,pc,FALSE,DANE Colombia gross pc,Departamento Administrativo Nacional de Estadística Colombia,"",https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls
 Comoros,2004,0.5592516,,con,pc,FALSE,Povcalnet Comoros con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Comoros,2004,0.5426,,con,sqrt,FALSE,World Bank Africa Poverty Database Comoros con sqrt,"Personal communication, K. Beegle, 2016-08-01","",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
 Comoros,2005,0.629,,con,pc,,GIDD Comoros con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
@@ -5358,7 +5362,7 @@ Egypt,1996,0.345,,con,pc,,AP2003 Egypt con pc,Adams and Page 2003,2040,https://d
 Egypt,1996,0.301,,con,pc,,Shaban2016 Egypt con pc,Povcalnet; Shaban 2016,196,https://link.springer.com/chapter/10.1057/9781137554598_6
 Egypt,1997,0.35,,con,pc,,AP2003 Egypt con pc,Adams and Page 2003,2040,https://doi.org/10.1016/j.worlddev.2003.04.004
 Egypt,1998,0.327,0.01,con,pc,,KANRVZ2017 Egypt con pc 2,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
-Egypt,1999,0.53,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Egypt,1999,0.53,,market,pc,,AAP2018 Egypt market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Egypt,1999,0.3504,,disp,sqrt,,HCV2020 Egypt disp sqrt,"Hlasny, Ceriani, and Verme 2020",24,https://www.lisdatacenter.org/wps/liswps/792.pdf
 Egypt,1999,0.3276144,,con,pc,FALSE,Povcalnet Egypt con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Egypt,1999,0.339,,con,pc,,UNESCWA2018 Egypt con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
@@ -5367,7 +5371,7 @@ Egypt,2000,0.36100000000000004,,con,pc,FALSE,CAPMAS con pc,Central Agency for Pu
 Egypt,2000,0.335,,con,pc,,Hassine2015 Egypt con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Egypt,2000,0.339,0.033,con,pc,,KANRVZ2017 Egypt con pc,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
 Egypt,2000,0.328,,con,pc,,Shaban2016 Egypt con pc,Povcalnet; Shaban 2016,196,https://link.springer.com/chapter/10.1057/9781137554598_6
-Egypt,2004,0.51,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Egypt,2004,0.51,,market,pc,,AAP2018 Egypt market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Egypt,2004,0.332,,con,pc,FALSE,CAPMAS con pc,Central Agency for Public Mobilization and Statistics Egypt,"",https://web.archive.org/web/20180425181619/http://www.msrintranet.capmas.gov.eg/pdf/studies/inds/EG-LIV-E-I.xls
 Egypt,2004,0.3455,,disp,sqrt,,HCV2020 Egypt disp sqrt,"Hlasny, Ceriani, and Verme 2020",24,https://www.lisdatacenter.org/wps/liswps/792.pdf
 Egypt,2004,0.3184755,,con,pc,FALSE,Povcalnet Egypt con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
@@ -5377,7 +5381,7 @@ Egypt,2005,0.317,,con,pc,,Hassine2015 Egypt con pc,Hassine 2015,537,https://doi.
 Egypt,2005,0.32,0.028,con,pc,,KANRVZ2017 Egypt con pc,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
 Egypt,2005,0.321,,con,pc,,Shaban2016 Egypt con pc,Povcalnet; Shaban 2016,196,https://link.springer.com/chapter/10.1057/9781137554598_6
 Egypt,2006,0.328,0.009,con,pc,,KANRVZ2017 Egypt con pc 2,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
-Egypt,2008,0.5,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Egypt,2008,0.5,,market,pc,,AAP2018 Egypt market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Egypt,2008,0.311,,con,pc,FALSE,CAPMAS con pc,Central Agency for Public Mobilization and Statistics Egypt,"",https://web.archive.org/web/20180425181619/http://www.msrintranet.capmas.gov.eg/pdf/studies/inds/EG-LIV-E-I.xls
 Egypt,2008,0.3366,,disp,sqrt,,HCV2020 Egypt disp sqrt,"Hlasny, Ceriani, and Verme 2020",24,https://www.lisdatacenter.org/wps/liswps/792.pdf
 Egypt,2008,0.3110244,,con,pc,FALSE,Povcalnet Egypt con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
@@ -5386,12 +5390,12 @@ Egypt,2008,0.313,,con,pc,,UNESCWA2018 Egypt con pc,UNESCWA 2018,35,https://www.u
 Egypt,2009,0.306,,con,pc,,Hassine2015 Egypt con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Egypt,2009,0.3398,0.007,con,pc,,HV2013 Egypt con pc,Hlasny and Verme 2013,27,http://www.ecineq.org/milano/WP/ECINEQ2013-303.pdf
 Egypt,2009,0.4411,0.0389,disp,pc,,HV2013 Egypt disp pc,Hlasny and Verme 2013,27,http://www.ecineq.org/milano/WP/ECINEQ2013-303.pdf
-Egypt,2010,0.48,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Egypt,2010,0.48,,market,pc,,AAP2018 Egypt market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Egypt,2010,0.31,,con,pc,FALSE,CAPMAS con pc,Central Agency for Public Mobilization and Statistics Egypt,"",https://web.archive.org/web/20180425181619/http://www.msrintranet.capmas.gov.eg/pdf/studies/inds/EG-LIV-E-I.xls
 Egypt,2010,0.3243,,disp,sqrt,,HCV2020 Egypt disp sqrt,"Hlasny, Ceriani, and Verme 2020",24,https://www.lisdatacenter.org/wps/liswps/792.pdf
 Egypt,2010,0.3019146,,con,pc,FALSE,Povcalnet Egypt con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Egypt,2010,0.314,,con,pc,,UNESCWA2018 Egypt con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
-Egypt,2012,0.47,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Egypt,2012,0.47,,market,pc,,AAP2018 Egypt market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Egypt,2012,0.3133,,disp,sqrt,,HCV2020 Egypt disp sqrt,"Hlasny, Ceriani, and Verme 2020",24,https://www.lisdatacenter.org/wps/liswps/792.pdf
 Egypt,2012,0.297,0.02,con,pc,,KANRVZ2017 Egypt con pc,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
 Egypt,2012,0.295,0.02,con,pc,,KANRVZ2017 Egypt con pc 2,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
@@ -5407,7 +5411,7 @@ Egypt,2012,0.5614,0.0086,market,pc,FALSE,LIS Egypt market pc,LISSY,"",https://ra
 Egypt,2012,0.5389,0.008,market,sqrt,FALSE,LIS Egypt market sqrt,LISSY,"",https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/eg.txt
 Egypt,2012,0.282922,,con,pc,FALSE,Povcalnet Egypt con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Egypt,2012,0.296,,con,pc,,UNESCWA2018 Egypt con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
-Egypt,2015,0.5,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Egypt,2015,0.5,,market,pc,,AAP2018 Egypt market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Egypt,2015,0.3182336,,con,pc,FALSE,Povcalnet Egypt con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Egypt,2015,0.313,,con,pc,,UNESCWA2018 Egypt con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
 Egypt,2017,0.3153395,,con,pc,FALSE,Povcalnet Egypt con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
@@ -9354,13 +9358,13 @@ Iran,2007,0.4337,,con,pc,,Statistical Center of Iran con pc,Statistical Center o
 Iran,2008,0.4122,,con,pc,,Statistical Center of Iran con pc,Statistical Center of Iran,"",https://www.amar.org.ir/Portals/1/releases/heis/total/Gini%20coefficient%20of%20the%20years%201380-1396.xlsx?ver=2019-04-09-101341-147
 Iran,2009,0.4205002,,con,pc,FALSE,Povcalnet Iran con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Iran,2009,0.4111,,con,pc,,Statistical Center of Iran con pc,Statistical Center of Iran,"",https://www.amar.org.ir/Portals/1/releases/heis/total/Gini%20coefficient%20of%20the%20years%201380-1396.xlsx?ver=2019-04-09-101341-147
-Iran,2010,0.57,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Iran,2010,0.57,,market,pc,,AAP2018 Iran market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Iran,2010,0.4099,,con,pc,,Statistical Center of Iran con pc,Statistical Center of Iran,"",https://www.amar.org.ir/Portals/1/releases/heis/total/Gini%20coefficient%20of%20the%20years%201380-1396.xlsx?ver=2019-04-09-101341-147
 Iran,2011,0.37001,,con,pc,,Statistical Center of Iran con pc,Statistical Center of Iran,"",https://www.amar.org.ir/Portals/1/releases/heis/total/Gini%20coefficient%20of%20the%20years%201380-1396.xlsx?ver=2019-04-09-101341-147
 Iran,2012,0.3686,,disp,pc,FALSE,CEQ Iran disp pc,"Enami, Lustig, and Taqdiri 2017",18,http://www.commitmentoequity.org/wp-content/uploads/2017/09/CEQ_WP48_Ali-Enami-Nora-Lustig-Alireza-Taqdiri_Iran_Sept2017.pdf
 Iran,2012,0.42860000000000004,,market,pc,FALSE,CEQ Iran market pc,"Enami, Lustig, and Taqdiri 2017",18,http://www.commitmentoequity.org/wp-content/uploads/2017/09/CEQ_WP48_Ali-Enami-Nora-Lustig-Alireza-Taqdiri_Iran_Sept2017.pdf
 Iran,2012,0.36587,,con,pc,,Statistical Center of Iran con pc,Statistical Center of Iran,"",https://www.amar.org.ir/Portals/1/releases/heis/total/Gini%20coefficient%20of%20the%20years%201380-1396.xlsx?ver=2019-04-09-101341-147
-Iran,2013,0.53,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Iran,2013,0.53,,market,pc,,AAP2018 Iran market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Iran,2013,0.3735951,,con,pc,FALSE,Povcalnet Iran con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Iran,2013,0.36496,,con,pc,,Statistical Center of Iran con pc,Statistical Center of Iran,"",https://www.amar.org.ir/Portals/1/releases/heis/total/Gini%20coefficient%20of%20the%20years%201380-1396.xlsx?ver=2019-04-09-101341-147
 Iran,2013,0.365,,gross,pc,,Statistical Center of Iran gross pc,Statistical Center of Iran 2015,14,https://web.archive.org/web/20171122202936/https://www.amar.org.ir/Portals/1/releases/s_heis_ur_1392.pdf
@@ -9374,7 +9378,7 @@ Iran,2017,0.4080294,,con,pc,FALSE,Povcalnet Iran con pc,World Bank Povcalnet,"",
 Iran,2017,0.39812,,con,pc,,Statistical Center of Iran con pc,Statistical Center of Iran,"",https://www.amar.org.ir/Portals/1/releases/heis/total/Gini%20coefficient%20of%20the%20years%201380-1396.xlsx?ver=2019-04-09-101341-147
 Iran,2018,0.420033,,con,pc,FALSE,Povcalnet Iran con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Iraq,2006,0.2860061,,con,pc,FALSE,Povcalnet Iraq con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-Iraq,2007,0.58,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Iraq,2007,0.58,,market,pc,,AAP2018 Iran market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Iraq,2007,0.356,,con,pc,,Hassine2015 Iraq con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Iraq,2007,0.4225,,disp,sqrt,,HCV2020 Iraq disp sqrt,"Hlasny, Ceriani, and Verme 2020",24,https://www.lisdatacenter.org/wps/liswps/792.pdf
 Iraq,2007,0.351,,con,pc,,UNESCWA2018 Iraq con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
@@ -10930,39 +10934,39 @@ Japan,2018,0.501,,market,sqrt,FALSE,"OECD Japan market sqrt, current def, 2012 m
 Jordan,1986,0.3606143,,con,pc,FALSE,Povcalnet Jordan con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Jordan,1987,0.361,,con,pc,,AP2003 Jordan con pc,Adams and Page 2003,2040,https://doi.org/10.1016/j.worlddev.2003.04.004
 Jordan,1987,0.34,,con,hh,,Park1995 Jordan con hh,Tabatabai 1996; Park 1995,109,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Jordan,1992,0.57,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Jordan,1992,0.57,,market,pc,,AAP2018 Jordan market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Jordan,1992,0.4,,con,pc,,AP2003 Jordan con pc,Adams and Page 2003,2040,https://doi.org/10.1016/j.worlddev.2003.04.004
 Jordan,1992,0.434,,con,pc,,FR2008 Jordan con pc,Ferreira and Ravallion 2008,37,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Jordan,1992,0.4336262,,con,pc,FALSE,Povcalnet Jordan con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Jordan,1997,0.364,,con,pc,,AP2003 Jordan con pc,Adams and Page 2003,2040,https://doi.org/10.1016/j.worlddev.2003.04.004
 Jordan,1997,0.3642056,,con,pc,FALSE,Povcalnet Jordan con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-Jordan,2002,0.51,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Jordan,2002,0.51,,market,pc,,AAP2018 Jordan market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Jordan,2002,0.389,,con,pc,,FR2008 Jordan con pc,Ferreira and Ravallion 2008,37,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Jordan,2002,0.406,,con,pc,,GIDD Jordan con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
 Jordan,2002,0.351,,con,pc,,Hassine2015 Jordan con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Jordan,2002,0.4028,,disp,sqrt,,HCV2020 Jordan disp sqrt,"Hlasny, Ceriani, and Verme 2020",24,https://www.lisdatacenter.org/wps/liswps/792.pdf
 Jordan,2002,0.3695462,,con,pc,FALSE,Povcalnet Jordan con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Jordan,2002,0.355,,con,pc,,UNESCWA2018 Jordan con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
-Jordan,2006,0.52,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Jordan,2006,0.52,,market,pc,,AAP2018 Jordan market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Jordan,2006,0.343,,con,pc,,Hassine2015 Jordan con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Jordan,2006,0.4032,,disp,sqrt,,HCV2020 Jordan disp sqrt,"Hlasny, Ceriani, and Verme 2020",24,https://www.lisdatacenter.org/wps/liswps/792.pdf
 Jordan,2006,0.3385625,,con,pc,FALSE,Povcalnet Jordan con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Jordan,2006,0.377,,con,pc,,Shaban2016 Jordan con pc,Povcalnet; Shaban 2016,196,https://link.springer.com/chapter/10.1057/9781137554598_6
 Jordan,2006,0.358,,con,pc,,UNESCWA2018 Jordan con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
-Jordan,2008,0.51,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Jordan,2008,0.51,,market,pc,,AAP2018 Jordan market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Jordan,2008,0.326,,con,pc,,Hassine2015 Jordan con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Jordan,2008,0.4033,,disp,sqrt,,HCV2020 Jordan disp sqrt,"Hlasny, Ceriani, and Verme 2020",24,https://www.lisdatacenter.org/wps/liswps/792.pdf
 Jordan,2008,0.3257345,,con,pc,FALSE,Povcalnet Jordan con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Jordan,2008,0.338,,con,pc,,Shaban2016 Jordan con pc,Povcalnet; Shaban 2016,196,https://link.springer.com/chapter/10.1057/9781137554598_6
 Jordan,2008,0.34,,con,pc,,UNESCWA2018 Jordan con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
-Jordan,2010,0.55,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Jordan,2010,0.55,,market,pc,,AAP2018 Jordan market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Jordan,2010,0.328,,con,pc,FALSE,CEQ Jordan con pc,"Alam, Inchauste, and Serajuddin 2017",17,http://www.commitmentoequity.org/wp-content/uploads/2017/11/CEQ-WP44_Shamma-Inchauste-Serajuddin_Jordan_May2017.pdf
 Jordan,2010,0.4101,,disp,sqrt,,HCV2020 Jordan disp sqrt,"Hlasny, Ceriani, and Verme 2020",24,https://www.lisdatacenter.org/wps/liswps/792.pdf
 Jordan,2010,0.362,0.034,con,pc,,KANRCZ2017 Jordan con pc,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
 Jordan,2010,0.3365573,,con,pc,FALSE,Povcalnet Jordan con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Jordan,2010,0.354,,con,pc,,Shaban2016 Jordan con pc,Povcalnet; Shaban 2016,196,https://link.springer.com/chapter/10.1057/9781137554598_6
 Jordan,2010,0.362,,con,pc,,UNESCWA2018 Jordan con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
-Jordan,2013,0.52,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Jordan,2013,0.52,,market,pc,,AAP2018 Jordan market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Jordan,2013,0.3782,,disp,sqrt,,HCV2020 Jordan disp sqrt,"Hlasny, Ceriani, and Verme 2020",24,https://www.lisdatacenter.org/wps/liswps/792.pdf
 Jordan,2013,0.331,,con,pc,,UNESCWA2018 Jordan con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
 Jordan,2014,0.353,0.012,con,pc,,KANRCZ2017 Jordan con pc 2,"Krafft, Assaad, Nazier, Ramadan, Vahidmanesh, and Zouari 2017",26,http://erf.org.eg/publications/estimating-poverty-and-inequality-in-the-absence-of-consumption-data-an-application-to-the-middle-east-and-north-africa/
@@ -11359,8 +11363,8 @@ Kuwait,1973,0.471,,market,hh,,Al-Qudsi 1981,Al-Qudsi 1981,22,https://www.researc
 Kuwait,1987,0.3468,,con,pc,,KMP2002 con pc,Ali 2003 [KMP 2002],16,http://www.arab-api.org/jodep/products/delivery/wps0307.pdf
 Kuwait,1998,0.32,,con,pc,,FR2008 Kuwait con pc,Ferreira and Ravallion 2008,37,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Kuwait,1999,0.3602,,con,pc,,KMP2002 con pc,Ali 2003 [KMP 2002],16,http://www.arab-api.org/jodep/products/delivery/wps0307.pdf
-Kuwait,2007,0.59,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
-Kuwait,2013,0.6,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Kuwait,2007,0.59,,market,pc,,AAP2018 Kuwait market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Kuwait,2013,0.6,,market,pc,,AAP2018 Kuwait market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Kyrgyzstan,1988,0.312,,gross,pc,,AG1993 Kyrgyzstan gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,120,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Kyrgyzstan,1989,0.27,,disp,pc,FALSE,Transmonee Kyrgyzstan disp pc,Transmonee 2012,"",https://web.archive.org/web/20131030195756/http://www.transmonee.org/Downloads/EN/2012/TransMonEE_2012.xls
 Kyrgyzstan,1990,0.308,,gross,pc,,AG1993 Kyrgyzstan gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,120,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -11585,18 +11589,18 @@ Latvia,2019,0.47,,market,sqrt,FALSE,"OECD Latvia market sqrt, current def, 2012 
 Lebanon,1995,0.435,,con,pc,,CAS Lebanon con pc,Central Administration of Statistics Lebanon 1998; UNDP 2008,11,http://www.undp.org/content/dam/lebanon/docs/MDG/Publications/MDG_en.pdf
 Lebanon,2004,0.361,,con,pc,,CAS Lebanon con pc,Central Administration of Statistics Lebanon; UNDP 2008,11,http://www.undp.org/content/dam/lebanon/docs/MDG/Publications/MDG_en.pdf
 Lebanon,2004,0.387,,con,pc,,Hassine2015 Lebanon con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
-Lebanon,2005,0.56,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
-Lebanon,2006,0.55,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
-Lebanon,2007,0.61,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
-Lebanon,2008,0.62,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
-Lebanon,2009,0.61,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
-Lebanon,2010,0.62,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
-Lebanon,2011,0.62,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Lebanon,2005,0.56,,market,pc,,AAP2018 Lebanon market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Lebanon,2006,0.55,,market,pc,,AAP2018 Lebanon market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Lebanon,2007,0.61,,market,pc,,AAP2018 Lebanon market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Lebanon,2008,0.62,,market,pc,,AAP2018 Lebanon market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Lebanon,2009,0.61,,market,pc,,AAP2018 Lebanon market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Lebanon,2010,0.62,,market,pc,,AAP2018 Lebanon market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Lebanon,2011,0.62,,market,pc,,AAP2018 Lebanon market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Lebanon,2011,0.3183245,,con,pc,FALSE,Povcalnet Lebanon con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-Lebanon,2012,0.62,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Lebanon,2012,0.62,,market,pc,,AAP2018 Lebanon market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Lebanon,2012,0.32,,con,pc,,CAS Lebanon con pc,Central Administration of Statistics Lebanon 2015,2,http://www.cas.gov.lb/images/Excel/Poverty/Snapshot%20of%20Poverty%20and%20Labor%20Market%20in%20Lebanon.pdf
-Lebanon,2013,0.62,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
-Lebanon,2014,0.62,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Lebanon,2013,0.62,,market,pc,,AAP2018 Lebanon market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Lebanon,2014,0.62,,market,pc,,AAP2018 Lebanon market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Lesotho,1986,0.5601606,,con,pc,FALSE,Povcalnet Lesotho con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Lesotho,1987,0.607,,con,pc,FALSE,GM1994 Lesotho con hh,Gustafsson and Makonnen 1994,378,https://doi.org/10.1002/jid.3380060403
 Lesotho,1987,0.609,,disp,hh,,GM1994 Lesotho disp hh,Gustafsson and Makonnen 1994,378,https://doi.org/10.1002/jid.3380060403
@@ -13945,7 +13949,7 @@ Norway,2019,0.427,,market,sqrt,FALSE,"OECD Norway market sqrt, current def, 2012
 Norway,2019,0.259,,disp,oecdm,TRUE,SSB disp oecdm,Statistics Norway,"",https://www.ssb.no/en/statbank/table/07756/
 Norway,2020,0.262,,disp,oecdm,TRUE,SSB disp oecdm,Statistics Norway,"",https://www.ssb.no/en/statbank/table/07756/
 Oman,2000,0.3986,,con,pc,,OMNE2002 con pc,Ali 2003 [OMNE 2002],16,http://www.arab-api.org/jodep/products/delivery/wps0307.pdf
-Oman,2010,0.64,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Oman,2010,0.64,,market,pc,,AAP2018 Oman market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Oman,2010,0.307,,con,hh,,NCSI2012 Oman con hh,Oman National Center for Statistics and Information 2012,23,https://ncsi.gov.om/Elibrary/LibraryContentDoc/ben_Final%20Findings%20E%202010%20-%202011_964e4334-f010-4f48-aad6-9401454cf803.pdf
 Pakistan,1964,0.356,,gross,hh,,Mahmood1984 Pakistan gross hh,Mahmood 1984,372,http://www.jstor.org/stable/41258679
 Pakistan,1964,0.386,,disp,hh,,PBS1995 Pakistan disp hh,Tabatabai 1996; PBS1995,102,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -14000,39 +14004,39 @@ Palau,2006,0.42,,con,pc,,ZKM2014 Palau con pc,"Zhuang, Kanbur, and Maligalig 201
 Palau,2014,0.43,,con,hh,FALSE,OPS Palau con hh,Palau Office of Planning and Statistics 2016,69,https://www.palaugov.pw/wp-content/uploads/2016/04/2014-ROP-HIES.pdf
 Palau,2014,0.51,,gross,hh,FALSE,OPS Palau gross hh,Palau Office of Planning and Statistics 2016,69,https://www.palaugov.pw/wp-content/uploads/2016/04/2014-ROP-HIES.pdf
 Palau,2014,0.53,,gross,hh,TRUE,OPS Palau gross hh,Palau Office of Planning and Statistics 2016,69,https://www.palaugov.pw/wp-content/uploads/2016/04/2014-ROP-HIES.pdf
-Palestinian Territories,1996,0.55,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Palestinian Territories,1996,0.55,,market,pc,,AAP2018 Palestine market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Palestinian Territories,1996,0.353,,con,pc,,Hassine2015 Palestine con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Palestinian Territories,1996,0.355,,con,pc,,UNESCWA2018 Palestinian Territories con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
-Palestinian Territories,1997,0.55,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Palestinian Territories,1997,0.55,,market,pc,,AAP2018 Palestine market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Palestinian Territories,1997,0.345,,con,pc,,Hassine2015 Palestine con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Palestinian Territories,1997,0.341,,con,pc,,UNESCWA2018 Palestinian Territories con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
-Palestinian Territories,1998,0.55,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Palestinian Territories,1998,0.55,,market,pc,,AAP2018 Palestine market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Palestinian Territories,1998,0.352,,con,pc,,Hassine2015 Palestine con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Palestinian Territories,1998,0.345,,con,pc,,UNESCWA2018 Palestinian Territories con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
-Palestinian Territories,2004,0.56,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Palestinian Territories,2004,0.56,,market,pc,,AAP2018 Palestine market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Palestinian Territories,2004,0.362,,con,pc,,Hassine2015 Palestine con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Palestinian Territories,2004,0.3404466,,con,pc,FALSE,Povcalnet Palestinian Territories con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Palestinian Territories,2004,0.36,,con,pc,,UNESCWA2018 Palestinian Territories con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
-Palestinian Territories,2005,0.58,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Palestinian Territories,2005,0.58,,market,pc,,AAP2018 Palestine market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Palestinian Territories,2005,0.369,,con,pc,,Hassine2015 Palestine con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Palestinian Territories,2005,0.3474262,,con,pc,FALSE,Povcalnet Palestinian Territories con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Palestinian Territories,2005,0.381,,con,pc,,UNESCWA2018 Palestinian Territories con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
-Palestinian Territories,2006,0.58,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Palestinian Territories,2006,0.58,,market,pc,,AAP2018 Palestine market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Palestinian Territories,2006,0.364,,con,pc,,Hassine2015 Palestine con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Palestinian Territories,2006,0.3395928,,con,pc,FALSE,Povcalnet Palestinian Territories con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Palestinian Territories,2006,0.377,,con,pc,,UNESCWA2018 Palestinian Territories con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
-Palestinian Territories,2007,0.6,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Palestinian Territories,2007,0.6,,market,pc,,AAP2018 Palestine market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Palestinian Territories,2007,0.391,,con,pc,,Hassine2015 Palestine con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Palestinian Territories,2007,0.3560608,,con,pc,FALSE,Povcalnet Palestinian Territories con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Palestinian Territories,2007,0.408,,con,pc,,UNESCWA2018 Palestinian Territories con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
-Palestinian Territories,2008,0.58,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Palestinian Territories,2008,0.58,,market,pc,,AAP2018 Palestine market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Palestinian Territories,2009,0.365,,con,pc,,Hassine2015 Palestine con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Palestinian Territories,2009,0.3446397,,con,pc,FALSE,Povcalnet Palestinian Territories con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Palestinian Territories,2009,0.377,,con,pc,,UNESCWA2018 Palestinian Territories con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
-Palestinian Territories,2010,0.6,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Palestinian Territories,2010,0.6,,market,pc,,AAP2018 Palestine market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Palestinian Territories,2010,0.3529443,,con,pc,FALSE,Povcalnet Palestinian Territories con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Palestinian Territories,2010,0.392,,con,pc,,UNESCWA2018 Palestinian Territories con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
-Palestinian Territories,2011,0.58,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Palestinian Territories,2011,0.58,,market,pc,,AAP2018 Palestine market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Palestinian Territories,2011,0.3441524,,con,pc,FALSE,Povcalnet Palestinian Territories con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Palestinian Territories,2011,0.384,,con,pc,,UNESCWA2018 Palestinian Territories con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
 Palestinian Territories,2013,0.4252,,disp,sqrt,,HCV2020 Palestine disp sqrt,"Hlasny, Ceriani, and Verme 2020",24,https://www.lisdatacenter.org/wps/liswps/792.pdf
@@ -15802,9 +15806,9 @@ Puerto Rico,2014,0.5472,0.0067,gross,hh,TRUE,USCB Puerto Rico gross hh,U.S. Cens
 Puerto Rico,2015,0.5589,0.0077,gross,hh,TRUE,USCB Puerto Rico gross hh,U.S. Census Bureau,,https://factfinder.census.gov/bkmk/table/1.0/en/ACS/15_1YR/B19083/0400000US72
 Puerto Rico,2016,0.5419,0.0073,gross,hh,TRUE,USCB Puerto Rico gross hh,U.S. Census Bureau,,https://factfinder.census.gov/bkmk/table/1.0/en/ACS/16_1YR/B19083/0400000US72
 Qatar,1988,0.379,,con,pc,,Park1995 Qatar con pc,Tabatabai 1996; Park 1995,110,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Qatar,2007,0.59,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Qatar,2007,0.59,,market,pc,,AAP2018 Qatar market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Qatar,2007,0.411,,con,pc,,Shaban2016 Qatar con pc,Povcalnet; Shaban 2016,196,https://link.springer.com/chapter/10.1057/9781137554598_6
-Qatar,2012,0.57,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Qatar,2012,0.57,,market,pc,,AAP2018 Qatar market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Qatar,2013,0.404,,disp,oecdm,,MDPS Qatar disp oecdm,Ministry of Development Planning and Statistics Qatar 2014,43-3,http://www.mdps.gov.qa/en/statistics/Surveys/Household_Expenditure_Eng.pdf
 Romania,1989,0.233,,disp,pc,,Cornia1994 Romania disp pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Romania,1989,0.312,,market,pc,,Cornia1994 Romania market pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
@@ -18396,7 +18400,7 @@ Syria,1996,0.3516938,,con,pc,FALSE,Povcalnet Syria con pc,World Bank Povcalnet,"
 Syria,1997,0.326,,con,pc,,AIAGEL2011 con pc,"Abu-Ismail, Abdel-Gadir, and El-Laithy 2011",11,http://www.undp.org/content/dam/rbas/doc/poverty/BG_15_Poverty%20and%20Inequality%20in%20Syria_FeB.pdf
 Syria,1997,0.324,,con,pc,,Hassine2015 Syria con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Syria,2003,0.375146,,con,pc,FALSE,Povcalnet Syria con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-Syria,2004,0.56,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Syria,2004,0.56,,market,pc,,AAP2018 Syria market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Syria,2004,0.375,,con,pc,,AIAGEL2011 con pc,"Abu-Ismail, Abdel-Gadir, and El-Laithy 2011",12,http://www.undp.org/content/dam/rbas/doc/poverty/BG_15_Poverty%20and%20Inequality%20in%20Syria_FeB.pdf
 Syria,2004,0.376,,con,pc,,Hassine2015 Syria con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Syria,2007,0.342,,con,pc,,AIAGEL2011 con pc,"Abu-Ismail, Abdel-Gadir, and El-Laithy 2011",13,http://www.undp.org/content/dam/rbas/doc/poverty/BG_15_Poverty%20and%20Inequality%20in%20Syria_FeB.pdf
@@ -18958,52 +18962,52 @@ Turkey,1987,0.435,,disp,sqrt,FALSE,"OECD Turkey disp sqrt, previous def, 2011 me
 Turkey,1987,0.33,,con,hh,,Park1995 Turkey con hh,Tabatabai 1996; Park 1995,118,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Turkey,1987,0.438,,disp,hh,,Park1995 Turkey disp hh,Tabatabai 1996; Park 1995,118,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Turkey,1987,0.4347706,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-Turkey,1994,0.6,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Turkey,1994,0.6,,market,pc,,AAP2018 Turkey market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Turkey,1994,0.49,,disp,sqrt,FALSE,"OECD Turkey disp sqrt, current def, 2011 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,1994,0.491,,disp,sqrt,FALSE,"OECD Turkey disp sqrt, previous def, 2011 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,1994,0.413152,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Turkey,2001,0.46,,disp,oecdm,TRUE,Eurostat Turkey disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
-Turkey,2002,0.6,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Turkey,2002,0.6,,market,pc,,AAP2018 Turkey market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Turkey,2002,0.365,,con,pc,,GIDD Turkey con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008","",https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
 Turkey,2002,0.4139638,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-Turkey,2003,0.59,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Turkey,2003,0.59,,market,pc,,AAP2018 Turkey market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Turkey,2003,0.4218434,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-Turkey,2004,0.58,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Turkey,2004,0.58,,market,pc,,AAP2018 Turkey market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Turkey,2004,0.43,,disp,sqrt,FALSE,"OECD Turkey disp sqrt, current def, 2011 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2004,0.4128751,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-Turkey,2005,0.56,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Turkey,2005,0.56,,market,pc,,AAP2018 Turkey market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Turkey,2005,0.449,,disp,oecdm,TRUE,Eurostat Turkey disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Turkey,2005,0.4261466,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-Turkey,2006,0.54,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Turkey,2006,0.54,,market,pc,,AAP2018 Turkey market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Turkey,2006,0.43200000000000005,,disp,oecdm,TRUE,Eurostat Turkey disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Turkey,2006,0.3964741,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Turkey,2006,0.403307913077814,,disp,hh,FALSE,TUIK disp hh,Turkish Statistical Institute,"","https://data.tuik.gov.tr/Kategori/GetKategori?p=Income,-Living,-Consumption-and-Poverty-107"
 Turkey,2006,0.428,,disp,oecdm,FALSE,TUIK disp oecdm,Turkish Statistical Institute,"","https://data.tuik.gov.tr/Kategori/GetKategori?p=Income,-Living,-Consumption-and-Poverty-107"
-Turkey,2007,0.53,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Turkey,2007,0.53,,market,pc,,AAP2018 Turkey market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Turkey,2007,0.43,,disp,oecdm,TRUE,Eurostat Turkey disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Turkey,2007,0.409,,disp,sqrt,FALSE,"OECD Turkey disp sqrt, current def, 2011 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2007,0.384428,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Turkey,2007,0.386765368791995,,disp,hh,FALSE,TUIK disp hh,Turkish Statistical Institute,"","https://data.tuik.gov.tr/Kategori/GetKategori?p=Income,-Living,-Consumption-and-Poverty-107"
 Turkey,2007,0.406,,disp,oecdm,FALSE,TUIK disp oecdm,Turkish Statistical Institute,"","https://data.tuik.gov.tr/Kategori/GetKategori?p=Income,-Living,-Consumption-and-Poverty-107"
-Turkey,2008,0.54,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Turkey,2008,0.54,,market,pc,,AAP2018 Turkey market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Turkey,2008,0.442,,disp,oecdm,TRUE,Eurostat Turkey disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Turkey,2008,0.3902054,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Turkey,2008,0.385697413563645,,disp,hh,FALSE,TUIK disp hh,Turkish Statistical Institute,"","https://data.tuik.gov.tr/Kategori/GetKategori?p=Income,-Living,-Consumption-and-Poverty-107"
 Turkey,2008,0.405,,disp,oecdm,FALSE,TUIK disp oecdm,Turkish Statistical Institute,"","https://data.tuik.gov.tr/Kategori/GetKategori?p=Income,-Living,-Consumption-and-Poverty-107"
-Turkey,2009,0.56,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Turkey,2009,0.56,,market,pc,,AAP2018 Turkey market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Turkey,2009,0.435,,disp,oecdm,TRUE,Eurostat Turkey disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Turkey,2009,0.411,,disp,sqrt,FALSE,"OECD Turkey disp sqrt, current def, 2011 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2009,0.3896531,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Turkey,2009,0.394306678787898,,disp,hh,FALSE,TUIK disp hh,Turkish Statistical Institute,"","https://data.tuik.gov.tr/Kategori/GetKategori?p=Income,-Living,-Consumption-and-Poverty-107"
 Turkey,2009,0.415,,disp,oecdm,FALSE,TUIK disp oecdm,Turkish Statistical Institute,"","https://data.tuik.gov.tr/Kategori/GetKategori?p=Income,-Living,-Consumption-and-Poverty-107"
-Turkey,2010,0.55,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Turkey,2010,0.55,,market,pc,,AAP2018 Turkey market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Turkey,2010,0.433,,disp,oecdm,TRUE,Eurostat Turkey disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Turkey,2010,0.417,,disp,sqrt,FALSE,"OECD Turkey disp sqrt, current def, 2011 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2010,0.477,,market,sqrt,FALSE,"OECD Turkey market sqrt, current def, 2011 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2010,0.3878508,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Turkey,2010,0.38,,disp,hh,FALSE,TUIK disp hh,Turkish Statistical Institute,"","https://data.tuik.gov.tr/Kategori/GetKategori?p=Income,-Living,-Consumption-and-Poverty-107"
 Turkey,2010,0.402,,disp,oecdm,FALSE,TUIK disp oecdm,Turkish Statistical Institute,"","https://data.tuik.gov.tr/Kategori/GetKategori?p=Income,-Living,-Consumption-and-Poverty-107"
-Turkey,2011,0.56,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Turkey,2011,0.56,,market,pc,,AAP2018 Turkey market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Turkey,2011,0.428,,disp,oecdm,TRUE,Eurostat Turkey disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Turkey,2011,0.412,,disp,sqrt,FALSE,"OECD Turkey disp sqrt, current def, 2011 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2011,0.403,,disp,sqrt,FALSE,"OECD Turkey disp sqrt, current def, 2012 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
@@ -19012,35 +19016,35 @@ Turkey,2011,0.427,,market,sqrt,FALSE,"OECD Turkey market sqrt, current def, 2012
 Turkey,2011,0.4003935,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Turkey,2011,0.383,,disp,hh,FALSE,TUIK disp hh,Turkish Statistical Institute,"","https://data.tuik.gov.tr/Kategori/GetKategori?p=Income,-Living,-Consumption-and-Poverty-107"
 Turkey,2011,0.404,,disp,oecdm,FALSE,TUIK disp oecdm,Turkish Statistical Institute,"","https://data.tuik.gov.tr/Kategori/GetKategori?p=Income,-Living,-Consumption-and-Poverty-107"
-Turkey,2012,0.56,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Turkey,2012,0.56,,market,pc,,AAP2018 Turkey market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Turkey,2012,0.42100000000000004,,disp,oecdm,TRUE,Eurostat Turkey disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Turkey,2012,0.399,,disp,sqrt,FALSE,"OECD Turkey disp sqrt, current def, 2012 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2012,0.422,,market,sqrt,FALSE,"OECD Turkey market sqrt, current def, 2012 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2012,0.4016894,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Turkey,2012,0.382,,disp,hh,FALSE,TUIK disp hh,Turkish Statistical Institute,"","https://data.tuik.gov.tr/Kategori/GetKategori?p=Income,-Living,-Consumption-and-Poverty-107"
 Turkey,2012,0.402,,disp,oecdm,FALSE,TUIK disp oecdm,Turkish Statistical Institute,"","https://data.tuik.gov.tr/Kategori/GetKategori?p=Income,-Living,-Consumption-and-Poverty-107"
-Turkey,2013,0.55,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Turkey,2013,0.55,,market,pc,,AAP2018 Turkey market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Turkey,2013,0.41200000000000003,,disp,oecdm,TRUE,Eurostat Turkey disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Turkey,2013,0.39,,disp,sqrt,FALSE,"OECD Turkey disp sqrt, current def, 2012 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2013,0.416,,market,sqrt,FALSE,"OECD Turkey market sqrt, current def, 2012 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2013,0.401785,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Turkey,2013,0.382,,disp,hh,FALSE,TUIK disp hh,Turkish Statistical Institute,"","https://data.tuik.gov.tr/Kategori/GetKategori?p=Income,-Living,-Consumption-and-Poverty-107"
 Turkey,2013,0.4,,disp,oecdm,FALSE,TUIK disp oecdm,Turkish Statistical Institute,"","https://data.tuik.gov.tr/Kategori/GetKategori?p=Income,-Living,-Consumption-and-Poverty-107"
-Turkey,2014,0.56,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Turkey,2014,0.56,,market,pc,,AAP2018 Turkey market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Turkey,2014,0.419,,disp,oecdm,TRUE,Eurostat Turkey disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Turkey,2014,0.398,,disp,sqrt,FALSE,"OECD Turkey disp sqrt, current def, 2012 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2014,0.423,,market,sqrt,FALSE,"OECD Turkey market sqrt, current def, 2012 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2014,0.4123656,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Turkey,2014,0.379,,disp,hh,FALSE,TUIK disp hh,Turkish Statistical Institute,"","https://data.tuik.gov.tr/Kategori/GetKategori?p=Income,-Living,-Consumption-and-Poverty-107"
 Turkey,2014,0.391,,disp,oecdm,FALSE,TUIK disp oecdm,Turkish Statistical Institute,"","https://data.tuik.gov.tr/Kategori/GetKategori?p=Income,-Living,-Consumption-and-Poverty-107"
-Turkey,2015,0.57,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Turkey,2015,0.57,,market,pc,,AAP2018 Turkey market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Turkey,2015,0.426,,disp,oecdm,TRUE,Eurostat Turkey disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
 Turkey,2015,0.404,,disp,sqrt,FALSE,"OECD Turkey disp sqrt, current def, 2012 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2015,0.429,,market,sqrt,FALSE,"OECD Turkey market sqrt, current def, 2012 method",OECD,"",https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all
 Turkey,2015,0.4285446,,con,pc,FALSE,Povcalnet Turkey con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Turkey,2015,0.386,,disp,hh,FALSE,TUIK disp hh,Turkish Statistical Institute,"","https://data.tuik.gov.tr/Kategori/GetKategori?p=Income,-Living,-Consumption-and-Poverty-107"
 Turkey,2015,0.397,,disp,oecdm,FALSE,TUIK disp oecdm,Turkish Statistical Institute,"","https://data.tuik.gov.tr/Kategori/GetKategori?p=Income,-Living,-Consumption-and-Poverty-107"
-Turkey,2016,0.58,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Turkey,2016,0.58,,market,pc,,AAP2018 Turkey market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Turkey,2016,0.41900000000000004,,disp,pc,FALSE,CEQ Turkey disp pc,"Cuevas, Lucchetti, and Nebiler 2020",18,http://repec.tulane.edu/RePEc/ceq/ceq100.pdf
 Turkey,2016,0.48500000000000004,,market,pc,FALSE,CEQ Turkey market pc,"Cuevas, Lucchetti, and Nebiler 2020",18,http://repec.tulane.edu/RePEc/ceq/ceq100.pdf
 Turkey,2016,0.43,,disp,oecdm,TRUE,Eurostat Turkey disp oecdm 1,Eurostat,"",http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en
@@ -19154,9 +19158,9 @@ Ukraine,2016,0.250022,,con,pc,FALSE,Povcalnet Ukraine con pc,World Bank Povcalne
 Ukraine,2017,0.2604905,,con,pc,FALSE,Povcalnet Ukraine con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Ukraine,2018,0.2607149,,con,pc,FALSE,Povcalnet Ukraine con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Ukraine,2019,0.2661947,,con,pc,FALSE,Povcalnet Ukraine con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-United Arab Emirates,1998,0.61,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+United Arab Emirates,1998,0.61,,market,pc,,AAP2018 United Arab Emirates market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 United Arab Emirates,2008,0.395,,con,pc,,Hassine2015 UAE con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
-United Arab Emirates,2009,0.64,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+United Arab Emirates,2009,0.64,,market,pc,,AAP2018 United Arab Emirates market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 United Arab Emirates,2013,0.3251042,,gross,pc,FALSE,Povcalnet United Arab Emirates gross pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 United Arab Emirates,2018,0.2596615,,gross,pc,FALSE,Povcalnet United Arab Emirates gross pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 United Kingdom,1961,0.29389999389648436,,disp,pc,,AtG United Kingdom disp pc,Milanovic 2016,"",https://www.dropbox.com/s/h3riybl79nk6fft/allginis_2016.dta?dl=1
@@ -21717,7 +21721,7 @@ Yemen,1998,0.335,,con,pc,,Hassine2015 Yemen con pc,Hassine 2015,537,https://doi.
 Yemen,1998,0.3499779,,con,pc,FALSE,Povcalnet Yemen con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Yemen,1998,0.3428,,con,pc,,YCSO1999 con pc,Ali 2003 [YCSO 1999],16,http://www.arab-api.org/jodep/products/delivery/wps0307.pdf
 Yemen,2005,0.3473233,,con,pc,FALSE,Povcalnet Yemen con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
-Yemen,2006,0.56,,market,pc,,AAP2018 market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
+Yemen,2006,0.56,,market,pc,,AAP2018 Yemen market pc,"Alvaredo, Assouad, and Piketty 2018",Table B4,https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Froiw.12385&file=roiw12385-sup-0001-Appendix.pdf
 Yemen,2006,0.378,,con,pc,,Hassine2015 Yemen con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Yemen,2014,0.3670709,,con,pc,FALSE,Povcalnet Yemen con pc,World Bank Povcalnet,"",http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all
 Yugoslavia,1973,0.32,,disp,hh,,vGP1984 Yugoslavia disp hh,Tabatabai 1996; van Ginneken and Park 1984,123,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
