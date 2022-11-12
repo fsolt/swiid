@@ -130,7 +130,7 @@ sn <- x %>%
   group_by(scode) %>% 
   summarize(country = first(country),
             series = first(series),
-            shnoo = as.numeric(sum(is.na(gini_b)) > 0),
+            shnoo = as.numeric(sum(is.na(gini_b)) > 2),
             skt1 = min(sktcode),
             yrspan = max(year) - min(year) + 1,
             s_bl_obs = sum(!is.na(gini_b)),
