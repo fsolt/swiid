@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 968720 no
-Date: June 11, 2022 at 7:49:01 PM GMT+2
+Subject: job 1014432 no
+Date: November 12, 2022 at 11:10:50 AM CST
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -112,8 +112,8 @@ Loading required package: readstata13
 > get_ginis <- function(cc, reps = 100) { 
 +   set.seed(324) 
 +   ccs <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",  
-+            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is",  
-+            "in", "ie", "il", "it", "jp", "lt", "lu", "mx", "nl", "no", "pa", "py",  
++            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", "in",  
++            "ie", "il", "it", "jp", "lt", "lu", "ml", "mx", "nl", "no", "pa", "py",  
 +            "pe", "pl", "ps", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
 +            "ch", "tw", "uk", "us", "uy", "vn") 
 +   cc <- tolower(cc) 
@@ -383,9 +383,30 @@ no19h,con_sqrt,NaN,NA,110
 no19h,con_pc,NaN,NA,110
 no19h,con_oecdm,NaN,NA,110
 no19h,con_ae,NaN,NA,110
+[1] "Loading dataset no20h..."
+no20h,market_hh,0.5771,7e-04,110
+no20h,market_sqrt,0.4788,8e-04,110
+no20h,market_pc,0.4965,7e-04,110
+no20h,market_oecdm,0.476,8e-04,110
+no20h,market_ae,0.4801,8e-04,110
+no20h,gross_hh,0.3934,6e-04,110
+no20h,gross_sqrt,0.3026,6e-04,110
+no20h,gross_pc,0.3106,6e-04,110
+no20h,gross_oecdm,0.2951,7e-04,110
+no20h,gross_ae,0.2947,6e-04,110
+no20h,disp_hh,0.3588,5e-04,110
+no20h,disp_sqrt,0.2623,5e-04,110
+no20h,disp_pc,0.2752,6e-04,110
+no20h,disp_oecdm,0.254,6e-04,110
+no20h,disp_ae,0.2545,5e-04,110
+no20h,con_hh,NaN,NA,110
+no20h,con_sqrt,NaN,NA,110
+no20h,con_pc,NaN,NA,110
+no20h,con_oecdm,NaN,NA,110
+no20h,con_ae,NaN,NA,110
 > 
 > proc.time()
     user   system  elapsed 
-1881.373   12.979 2061.704 
+2256.349   13.727 2377.948 
 
 

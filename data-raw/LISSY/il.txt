@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 968711 il
-Date: June 11, 2022 at 6:55:53 PM GMT+2
+Subject: job 1014415 il
+Date: November 12, 2022 at 10:15:34 AM CST
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -112,8 +112,8 @@ Loading required package: readstata13
 > get_ginis <- function(cc, reps = 100) { 
 +   set.seed(324) 
 +   ccs <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",  
-+            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is",  
-+            "in", "ie", "il", "it", "jp", "lt", "lu", "mx", "nl", "no", "pa", "py",  
++            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", "in",  
++            "ie", "il", "it", "jp", "lt", "lu", "ml", "mx", "nl", "no", "pa", "py",  
 +            "pe", "pl", "ps", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
 +            "ch", "tw", "uk", "us", "uy", "vn") 
 +   cc <- tolower(cc) 
@@ -553,6 +553,6 @@ il18h,con_pc,0.3791,0.004,120
 > 
 > proc.time()
    user  system elapsed 
-347.187   7.907 560.641 
+323.843   9.524 471.970 
 
 
