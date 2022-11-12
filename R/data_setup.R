@@ -1008,7 +1008,7 @@ rm(bpsid1, bpsid2)
 # Statistical Center of Iran (update link--search site with Google; blocked as of 12-08-2018, so use archive.org version)
 # https://www.google.com/search?hl=en&as_q=gini&as_sitesearch=https%3A%2F%2Fwww.amar.org.ir%2Fenglish
 
-amar_link <- "https://www.amar.org.ir/Portals/1/releases/heis/total/Gini%20coefficient%20of%20the%20years%201380-1396.xlsx?ver=2019-04-09-101341-147"
+amar_link <- "https://web.archive.org/web/20191116072717/https://www.amar.org.ir/Portals/1/releases/heis/total/Gini%20coefficient%20of%20the%20years%201380-1396.xlsx?ver=2019-04-09-101341-147"
 download.file(amar_link, "data-raw/amar.xlsx")
 amar <- read_excel("data-raw/amar.xlsx", skip = 2) %>% 
   filter(...1 == "Gini coefficient") %>% 
@@ -1567,10 +1567,10 @@ statslk <- extract_tables("data-raw/statslk2015.pdf", pages = 22)[[1]] %>%
 
 
 # Statistics Sweden (automated)
-scb <- pxweb_get_data(url = "http://api.scb.se/OV0104/v1/doris/sv/ssd/HE/HE0103/HE0103A/DispInk8",
-                      pxweb_query(list(Hushallsdef = c('FAME'),
-                                  InkomstTyp = c('*'),
-                                  ContentsCode = c('HE0103AD'),
+scb <- pxweb_get_data(url = "https://api.scb.se/OV0104/v1/doris/sv/ssd/HE/HE0110/HE0110F/Tab1DispInkN",
+                      pxweb_query(list(Region = c('00'),
+                                  InkomstTyp = c("FastInkIn","DispInkInkl"),
+                                  ContentsCode = c("000002VW"),
                                   Tid = c('*')))) %>%
   transmute(country = "Sweden",
             year = as.numeric(as.character(år)),
