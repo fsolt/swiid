@@ -175,59 +175,63 @@ rm(sedlac_ei, sedlac_hh, sedlac_pc)
 
 
 # CEPALStat (automated)
-cepal_link1 <- "https://estadisticas.cepal.org/sisgen/ws/cepalstat/xml/834853.xml"
+cepal_link <- "https://api-cepalstat.cepal.org//cepalstat/api/v1/indicator/3289/data"
 
-cepal_extract <- function(df, x) {
-  df %>% xml_find_all(x) %>% 
-    xml_attrs() %>% 
-    map_df(function(y) data.frame(as.list(y), stringsAsFactors = FALSE)) %>% 
-    return()
-}
+cepal0 <- cepal_link %>% 
+  jsonlite::fromJSON()
 
-cepal <- purrr::map_df(c(cepal_link1), function(cepal_link) {
-  cepal0 <- cepal_link %>% read_xml() 
-  cepal_raw <- cepal_extract(cepal0, "//dato")
-  cepal_labels <- cepal_extract(cepal0, "//des") %>% 
-    select(-`in.`)
-  cepal_notes <- cepal_extract(cepal0, "//nota")
-  
-  cepal1 <- left_join(cepal_raw, cepal_labels, by = c("dim_208" = "id")) %>%
-    filter(!name=="Latin America (simple average)") %>% 
-    mutate(country = countrycode(iso3, 
-                                 origin = "iso3c", 
-                                 destination = "swiid.name",
-                                 custom_dict = cc_swiid)) %>% 
-    filter(!is.na(country)) %>%
-    select(-name) %>% 
-    left_join(cepal_labels, by = c("dim_29117" = "id")) %>%
-    mutate(year = as.numeric(name)) %>% 
-    select(-name) %>% 
-    left_join(cepal_labels, by = c("dim_326" = "id")) %>%
-    mutate(area = as.character(name)) %>%
-    filter(area == "National" | (area == "Urban" & (country == "Argentina" | country == "Uruguay"))) %>% 
-    select(-name) %>% 
-    left_join(cepal_notes, by = c("ids_notas" = "id")) %>%
-    group_by(country) %>% 
-    transmute(year = year,
-              gini = as.numeric(as.character(valor)),
-              gini_se = NA,
-              welfare_def = "disp",
-              equiv_scale = "pc",
-              monetary = TRUE,
-              notes = paste(area, ifelse(is.na(descripcion), "", as.character(descripcion)), cepal_link),
-              series = paste("CEPAL", country, "disp pc", as.numeric(factor(notes, levels = unique(notes)))),
-              source1 = "CEPALStat",
-              page = area,
-              link = cepal_link) %>% 
-    ungroup() %>% 
-    select(-notes)
-  
-  # rm(cepal0, cepal_raw, cepal_labels, cepal_notes)
-  
-  return(cepal1)
-}) %>% 
+n_notes <- cepal0 %>% 
+  pluck("body") %>% 
+  pluck("data") %>%
+  mutate(n_notes = (str_count(notes_ids, ",") + 1)) %>% 
+  pull(n_notes) %>% 
+  max()
+
+cepal <- cepal0 %>% 
+  pluck("body") %>% 
+  pluck("data") %>% 
+  left_join(cepal0 %>% 
+              pluck("body") %>% 
+              pluck("dimensions") %>% 
+              pluck("members") %>% 
+              nth(2) %>% 
+              select(year = order, 
+                     dim_29117 = id),
+            by = "dim_29117") %>% 
+  left_join(cepal0 %>% 
+              pluck("body") %>% 
+              pluck("dimensions") %>% 
+              pluck("members") %>% 
+              nth(3) %>% 
+              select(area = name, 
+                     dim_326 = id),
+            by = "dim_326") %>% 
+  mutate(country = countrycode(iso3, 
+                               origin = "iso3c", 
+                               destination = "swiid.name",
+                               custom_dict = cc_swiid)) %>% 
+  filter(!is.na(country)) %>%
+  group_by(country, area) %>% 
+  mutate(series = as.numeric(as.factor(notes_ids))) %>% 
+  ungroup() %>% 
+  filter(area == "National" |
+           (area == "Urban" & 
+              (country == "Argentina" | country == "Uruguay"))) %>% 
+  group_by(country) %>% 
+  transmute(year = year,
+            gini = as.numeric(as.character(value)),
+            gini_se = NA,
+            welfare_def = "disp",
+            equiv_scale = "pc",
+            monetary = TRUE,
+            notes = paste(area, series),
+            series = paste("CEPAL", country, "disp pc", as.numeric(factor(notes, levels = unique(notes)))),
+            source1 = "CEPALStat",
+            page = NA,
+            link = cepal_link) %>% 
+  ungroup() %>% 
+  select(-notes) %>% 
   arrange(country, year, series)
-
 
 # CEPAL Serie Distribución del Ingreso (archived)
 cepal_sdi <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/repositorio_cepal.tsv",
@@ -1935,11 +1939,7 @@ uscb_ae_se <- read_excel("data-raw/uscb_ae_se.xlsx", skip = 3) %>%
             gini_se = gini_se,
             welfare_def = "gross",
             equiv_scale = "ae",
-            monetary = TRUE,
-            series = paste("US Census Bureau", welfare_def, equiv_scale, cumsum(break_yr) + 1),
-            source1 = "U.S. Census Bureau",
-            page = "",
-            link = uscb_links[2])
+            series = paste("US Census Bureau", welfare_def, equiv_scale, cumsum(break_yr) + 1))
 
 uscb_ae <- read_excel("data-raw/uscb_ae.xlsx", skip = 6) %>% 
   clean_names() %>% 
@@ -1953,7 +1953,11 @@ uscb_ae <- read_excel("data-raw/uscb_ae.xlsx", skip = 6) %>%
             gini = gini,
             welfare_def = "gross",
             equiv_scale = "ae",
-            series = paste("US Census Bureau", welfare_def, equiv_scale, cumsum(break_yr) + 1)) %>% 
+            monetary = TRUE,
+            series = paste("US Census Bureau", welfare_def, equiv_scale, cumsum(break_yr) + 1),
+            source1 = "U.S. Census Bureau",
+            page = "",
+            link = uscb_links[2]) %>% 
   left_join(uscb_ae_se, by = c("country", "year", "welfare_def", "equiv_scale", "series"))
 
 uscb_fam_link <- "https://www2.census.gov/library/publications/1998/demographics/p60-203.pdf"
