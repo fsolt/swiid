@@ -15,12 +15,12 @@ TITLE="Neenakost porazdelitve dohodka - Ginijev koliènik (%) po: LETO ,  DOHODEK
 CONTENTS="Neenakost porazdelitve dohodka - Ginijev koliènik (%)";
 STUB="LETO";
 HEADING="DOHODEK";
-VALUES("LETO")="2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020";
+VALUES("LETO")="2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021";
 VALUES("DOHODEK")="Ekvivalentni razpoložljivi dohodek pred socialnimi transferji (pokojnine so del socialnih transferjev)";
-TIMEVAL("LETO")=TLIST(A1),"2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020";
-CODES("LETO")="2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020";
+TIMEVAL("LETO")=TLIST(A1),"2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021";
+CODES("LETO")="2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021";
 CODES("DOHODEK")="3";
-LAST-UPDATED="20220105 10:30";
+LAST-UPDATED="20220707 10:30";
 UNITS="%";
 CONTACT="Statistièni urad RS, T: (01) 241 64 04, E: gp.surs@gov.si";
 DATABASE="SI-STAT";
@@ -32,7 +32,7 @@ NOTEX="#GINIJEV KOLIÈNIK je mera za koncentracijo dohodka in lahko zavzame vredn
 "ost izdelkov, prenesenih v gospodinjstvo iz lastne delavnice, podjetja ali trgovine).#Za izraèun EKVIVALENTNEGA DOHODKA (dohodka na ekvivalentnega odraslega èlana gospodinjstva) se uporablja prilagojeno OECD-jevo ekvivalenèno lestvico. Lestvica daje prve"
 "mu odraslemu èlanu utež 1, otrokom, mlajšim od 14 let, utež 0,3, drugim èlanom, starim 14 ali veè let, pa utež 0,5.";
 NOTEX("LETO")="Kazalnike dohodka, revšèine in socialne izkljuèenosti objavljamo za leto, v katerem se izvede raziskovanje Življenjski pogoji (SILC), podatki o dohodku za izraèun teh kazalnikov pa so iz leta pred tem, tj. iz leta pred izvedbo raziskovanja SILC.";
-NOTE="Povezene vsebine:#- <A class=seznam HREF=http://www.stat.si/StatWeb/Common/PrikaziDokument.ashx?IdDatoteke=8141 target=_blank>Metodološka pojasnila</A>#";
+NOTE="Povezane vsebine:#- <A class=seznam HREF= https://www.stat.si/StatWeb/File/DocSysFile/8291 target=_blank>Metodološka pojasnila</A>";
 DATASYMBOL1="N";
 DATASYMBOL2="-";
 DATASYMBOL4="z";
@@ -42,11 +42,11 @@ TITLE[en]="Inequality of income distribution - Gini coefficient (%) by YEAR and 
 CONTENTS[en]="Inequality of income distribution - Gini coefficient (%)";
 STUB[en]="YEAR";
 HEADING[en]="INCOME";
-VALUES[en]("YEAR")="2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020";
+VALUES[en]("YEAR")="2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021";
 VALUES[en]("INCOME")="Equivalised disposable income before social transfers (pensions are included in social transfers)";
-TIMEVAL[en]("YEAR")=TLIST(A1),"2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020";
+TIMEVAL[en]("YEAR")=TLIST(A1),"2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021";
 CODES[en]("INCOME")="3";
-LAST-UPDATED[en]="20220105 10:30";
+LAST-UPDATED[en]="20220707 10:30";
 UNITS[en]="%";
 CONTACT[en]="Statistical Office of the Republic of Slovenia, T: +386 1 241 64 04, E: gp.surs@gov.si";
 DATABASE[en]="SI-STAT";
@@ -59,7 +59,7 @@ NOTEX[en]="# (SILC).#GINI COEFFICIENT is the measure of income concentration. It
 " and to children under 14 weight 0.3.";
 NOTEX[en]("YEAR")="Income, poverty and social exclusion indicators are published for the SILC (Statistics on Income and Living Conditions) survey year. The data on income for calculating these indicators are from a year earlier, i.e. the year before the survey is conducted"
 ".";
-NOTE[en]="Linked content:#- <A class=seznam HREF=http://www.stat.si/StatWeb/Common/PrikaziDokument.ashx?IdDatoteke=8270 target=_blank>Methodological explanations</A>";
+NOTE[en]="Linked content:#- <A class=seznam HREF= https://www.stat.si/StatWeb/File/DocSysFile/8108 target=_blank>Methodological explanations</A>";
 DATASYMBOL1[en]="N";
 DATASYMBOL2[en]="-";
 DATASYMBOL4[en]="z";
@@ -80,4 +80,5 @@ DATA=
 42.5 
 42.7 
 42.3 
+42.8 
 ;
