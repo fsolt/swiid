@@ -500,8 +500,8 @@ rm(abs_de, abs_gh)
 
 # Instituto Naciónal de Estadística de Bolivia (update file)
 # https://www.ine.gob.bo/index.php/estadisticas-economicas/encuestas-de-hogares/
-# > Desigualdad > BOLIVIA: ÍNDICE DE GINI PARA EL INGRESO PER CÁPITA MENSUAL, SEGÚN ÁREA, 2005 – 2020
-inebo_link <- "https://nube.ine.gob.bo/index.php/s/8ENNmIWUzBopwbJ/download"
+# > Pobreza y Desigualdad > BOLIVIA: ÍNDICE DE GINI PARA EL INGRESO PER CÁPITA MENSUAL, SEGÚN ÁREA, 2005 – 202x
+inebo_link <- "https://nube.ine.gob.bo/index.php/s/hEbUGkzh0c16WqH/download"
 download.file(inebo_link, "data-raw/inebo.xlsx")
 inebo <- read_excel("data-raw/inebo.xlsx", skip = 3) %>% 
   filter(INDICADOR=="Bolivia") %>% 
@@ -642,11 +642,10 @@ dane <- read_excel("data-raw/dane.xls", sheet = "Gini", skip = 14) %>%
             link = dane_link)
 
 
-# Costa Rica (automated)
-ineccr_link <- "https://www.inec.cr/pobreza-y-desigualdad/desigualdad" %>% 
-  read_html() %>%
-  html_node(xpath="//a[contains(@href, 'gini')]") %>% 
-  html_attr("href")
+# Costa Rica (update link)
+# https://inec.cr/es/tematicas/listado?filtertext=gini
+# ENAHO. 202x. Coeficiente de Gini por hogar y per cápita, julio 2010 - 202x.
+ineccr_link <- "https://admin.inec.cr/sites/default/files/media/repobrezaenaho2010-2021-01_gini_2.xlsx"
   
 download.file(ineccr_link, "data-raw/ineccr.xlsx")
 
@@ -754,8 +753,9 @@ statee <- pxweb_get(url = statee_url,
   bind_rows(statee_con)
 
 # Statistics Finland (automated)
-statfi <- pxweb_get_data(url = "https://pxnet2.stat.fi/PXWeb/api/v1/fi/StatFin_Passiivi/tul/tjt/statfinpas_tjt_pxt_015_201700.px",
-                         pxweb_query(list(Tulokäsite = c('SL2', '4L2', '6L2'),
+statfi_link <- "https://statfin.stat.fi/PXWeb/api/v1/fi/StatFin_Passiivi/tjt/statfinpas_tjt_pxt_015_201700.px"
+statfi <- pxweb_get_data(url = statfi_link,
+                         pxweb_query(list(Tulokäsite = c("SL2","4L2","6L2"),
                                           Tiedot = c('Gini'),
                                           Vuosi = c('*')))) %>% 
   transmute(country = "Finland",
