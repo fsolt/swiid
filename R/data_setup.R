@@ -461,7 +461,7 @@ rm(arm_page, arm_reports)
 # confirm latest release at: http://www.abs.gov.au/AUSSTATS/abs@.nsf/second+level+view?ReadForm&prodno=6523.0&viewtitle=Household%20Income%20and%20Wealth,%20Australia~2013-14~Latest~04/09/2015&&tabname=Past%20Future%20Issues&prodno=6523.0&issue=2013-14&num=&view=&
 # latest release link > downloads tab > copy link to download xls for "Household Income and Income Distribution, Australia, 1994–95 to [year]"
 
-abs_link <- "https://www.abs.gov.au/statistics/economy/finance/household-income-and-wealth-australia/2017-18/Household%20income%20and%20income%20distribution%2C%20Australia.xlsx"
+abs_link <- "https://www.abs.gov.au/statistics/economy/finance/household-income-and-wealth-australia/2019-20/1.%20Household%20income%20and%20income%20distribution%2C%20Australia.xlsx"
 download.file(abs_link, "data-raw/abs.xlsx")
 
 abs_format <- function(sheet, wd, es) {
