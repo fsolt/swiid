@@ -115,9 +115,9 @@ format_sedlac <- function(df, sheet, link, es) {
   
   x$year <- ifelse(str_detect(x$heading, ".*(\\d{4}).*"),
                    str_replace(x$heading, "(\\d{4}).*", "\\1"), NA)
-  
-  x$h_ser <- ((!x$h_co) && is.na(x$year))
-  x$series <- ifelse(!x$h_co & is.na(x$year), x$heading, NA)
+  x <- x %>% 
+    mutate(h_ser = !h_co & is.na(year),
+           series = ifelse(!x$h_co & is.na(x$year), x$heading, NA))
   
   x <- x %>%
     group_by(country) %>%
@@ -144,7 +144,7 @@ format_sedlac <- function(df, sheet, link, es) {
   return(x)
 }
 
-sedlac_link <- "https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2021_inequality_LAC.xlsx"
+sedlac_link <- "https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2022_inequality_LAC.xlsx"
 download.file(sedlac_link, "data-raw/sedlac.xlsx")
 
 sedlac_pc <- read_excel(path = "data-raw/sedlac.xlsx", 
