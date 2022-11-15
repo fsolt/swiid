@@ -539,34 +539,14 @@ ipea <- read_csv("data-raw/ipea.csv", skip = 1) %>%
             link = "http://www.ipeadata.gov.br")
 
 
-# Belarus National Statistical Committee (update link)
-# https://www.belstat.gov.by/en/ofitsialnaya-statistika/Demographic-and-social-statistics/income-and-consumption/household-incomes-and-consumption/
-belstat_link <- "https://www.belstat.gov.by/upload/iblock/f56/f564f0383b073caf078fea341f59fbea.pdf"
-try(
-  {
-    # belstat_zip <- html_session(belstat_page) %>% 
-    #   follow_link("Social conditions and standard of living") %>% 
-    #   follow_link("Download")
-    # belstat_link <- belstat_zip$back[1]
-    # belstat_temp <- tempfile(fileext = ".pdf")
-    # writeBin(belstat_zip$response$content, belstat_temp)
-    # file.rename(belstat_temp, "data-raw/belstat.pdf")
-    # unlink(c(belstat_temp, belstat_dir), recursive = TRUE)
-    download.file(belstat_link, "data-raw/belstat.pdf")
-  }
-)
+# Belarus National Statistical Committee (update file)
+belstat_link <- "http://dataportal.belstat.gov.by/Indicators/Preview?key=228371#"
 
-if (!exists("belstat_link")) belstat_link <- belstat_page 
-
-belstat_page <- "59"
-
-belstat <- extract_tables("data-raw/belstat.pdf", pages = belstat_page)[[1]] %>%
-  as_tibble() %>% 
-  filter(str_detect(V4, "concentration\\)")) %>% 
-  select(V2, V3) %>% 
-  transmute(V5 = paste(V2, V3)) %>% 
-  separate(V5, paste0("x", 2013:2018), sep = " ") %>% 
-  gather(key = year, value = gini) %>% 
+belstat <- read_excel("data-raw/belstat.xls", skip = 1) %>%
+  select(starts_with("2")) %>% 
+  pivot_longer(cols = starts_with("2"),
+               names_to = "year",
+               values_to = "gini") %>% 
   transmute(country = "Belarus",
             year = as.numeric(str_extract(year, "\\d{4}")),
             gini = as.numeric(str_replace(gini, ",", ".")),
@@ -576,7 +556,7 @@ belstat <- extract_tables("data-raw/belstat.pdf", pages = belstat_page)[[1]] %>%
             monetary = FALSE,
             series = paste("Belstat", welfare_def, equiv_scale),
             source1 = "Belarus National Committee of Statistics",
-            page = belstat_page,
+            page = NA,
             link = belstat_link)
 
 # Statistics Canada (automated)
@@ -689,7 +669,7 @@ dkstat <- dst_get_data(table = "IFOR41",
 
 
 # CAPMAS Egypt (archived)
-capmas_link <- "https://web.archive.org/web/20180425181619/http://www.msrintranet.capmas.gov.eg/pdf/studies/inds/EG-LIV-E-I.xls" # this file isn't updated anymore
+capmas_link <- "https://web.archive.org/web/20180425181619/http://www.msrintranet.capmas.gov.eg/pdf/studies/inds/EG-LIV-E-I.xls" # this file isn't kept up to date anymore
 download.file(capmas_link, "data-raw/capmas.xls") 
 
 capmas <- read_excel("data-raw/capmas.xls", skip = 7) %>% 
@@ -774,7 +754,7 @@ statfi <- pxweb_get_data(url = statfi_link,
 
 
 # Insee France (archived; update link)
-insee_link1 <- "https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie"
+insee_link1 <- "https://www.insee.fr/fr/statistiques/fichier/5762455/IA70.xlsx"
 
 insee1 <- readLines(insee_link1) %>%              # kickin' it old skool . . .
   str_subset("etendue-ligne|tab-chiffre") %>% 
@@ -863,7 +843,7 @@ greenland <- pxweb_get_data(url = greenland_link,
             link = greenland_link)
 
 
-# Statistics Hong Kong (update in 2022)
+# Statistics Hong Kong (update with 2022 census in 2023)
 hk2016_link <- "https://www.bycensus2016.gov.hk/data/16BC_Income_Report_Key_Statistics.xlsx"
 hk2011_link <- "https://www.statistics.gov.hk/pub/B11200572012XXXXB0100.pdf"
 hk2006_link <- "https://www.statistics.gov.hk/pub/B11200452006XXXXB0400.pdf"
@@ -1045,7 +1025,7 @@ cso_ie <- cso_get_data("SIA47", wide_format = "tall", use_factors = FALSE, cache
 
 # Istat (update istat2 file)
 # http://dati.istat.it/
-# Sidebar: Household Economic Condiitons and Disparities > Consumption distribution > Regions
+# Sidebar: Household Economic Conditions and Disparities > Consumption expenditure > Consumption distribution > Regions
 # Customize > Territory: Italy > Data Type: Gini > Years: all years
 
 istat1 <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/istat.csv",
