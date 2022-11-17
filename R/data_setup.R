@@ -1198,7 +1198,7 @@ epumy <- extract_tables("data-raw/epumy.pdf") %>%
   filter(!is.na(gini))
 
 
-# National Bureau of Statistics Moldova (update link: check Statistical Yearbook to find table number)
+# National Bureau of Statistics Moldova (archived; automated)
 nbs0_link <- "https://github.com/fsolt/swiid/raw/master/data-raw/nbs0.xls"
 download.file(nbs0_link, "data-raw/nbs0.xls")
 
@@ -1242,20 +1242,20 @@ nbs <- bind_rows(nbs0, nbs1)
 # Statistics Office of Montenegro (automated, but update backup Internet Archive link)
 # Slow server, so get from Internet Archive if it times out
 get_monstat_file <- function() {
-  monstat_file <- html_session("https://www.monstat.org/eng/index.php") %>% 
-    follow_link("Household consumption") %>% 
-    follow_link("Absolute poverty line") %>% 
-    follow_link("Data")
+  monstat_file <- session("https://www.monstat.org/eng/index.php") %>% 
+    session_follow_link("Household consumption") %>% 
+    session_follow_link("Absolute poverty line") %>% 
+    session_follow_link("Data")
   writeBin(httr::content(monstat_file$response, "raw"), "data-raw/monstat.xls")
   return(monstat_file$response$url)
 }
 
 monstat_link <- tryCatch(get_monstat_file(), 
                          error = function(e) {
-                           monstat_file <- html_session("https://web.archive.org/web/20210421010924/https://www.monstat.org/eng/index.php") %>% 
-                             follow_link("Household consumption") %>% 
-                             follow_link("poverty line") %>% 
-                             follow_link("Data")
+                           monstat_file <- session("https://web.archive.org/web/20210421010924/https://www.monstat.org/eng/index.php") %>% 
+                             session_follow_link("Household consumption") %>% 
+                             session_follow_link("poverty line") %>% 
+                             session_follow_link("Data")
                            writeBin(httr::content(monstat_file$response, "raw"), "data-raw/monstat.xls")
                            return(monstat_file$response$url)
                          })
@@ -1569,7 +1569,7 @@ scb <- pxweb_get_data(url = "https://api.scb.se/OV0104/v1/doris/sv/ssd/HE/HE0110
 # Federal Statistics Office, Switzerland (update link)
 # "https://www.bfs.admin.ch/bfs/en/home/statistics.html" >
 # Economic and social situation >
-# Social situation, well-being >
+# Social situation, well-being, and poverty >
 # Inequality of income distribution >
 # Redistribution of income >
 # Trends in Gini: Details and download >
@@ -1607,6 +1607,7 @@ fso_ch <- fso_ch0 %>%
             page = "",
             link = fso_ch_link) 
 
+rm(fso_ch0)
 
 # Taiwan Directorate General of Budget, Accounting, and Statistics 
 # update file from tdfbas_link2; otherwise automated
@@ -1699,28 +1700,43 @@ nso_thailand <- bind_rows(nso_thailand1, nso_thailand2)
 
 rm(nso_thailand1, nso_thailand2)
 
-# NESDC Thailand (update file)
-nesdb_link <- c("https://www.nesdc.go.th/ewt_dl_link.php?nid=3518&filename=social")
+# NESDC Thailand (automatic, but might need to update wrangle)
+nesdc_link <- c("https://www.nesdc.go.th/ewt_dl_link.php?nid=3518&filename=social")
+download.file(nesdb_link, "data-raw/nesdc.xlsx")
 
-nesdb <- read_excel("data-raw/nesdc.xlsx", sheet = "11.1", skip = 2) %>% 
-  janitor::clean_names() %>% 
-  filter(str_detect(taw_chi_wad, "Gini") & !is.na(x2531)) %>% 
-  mutate(across(.cols = starts_with("x"), as.numeric)) %>% 
-  mutate(wd = c("gross", "con")) %>% 
-  select(-taw_chi_wad) %>% 
-  pivot_longer(cols = starts_with("x"), names_to = "year", values_to = "gini") %>% 
-  filter(!is.na(gini)) %>% 
+nesdc_gross <- read_excel("data-raw/nesdc.xlsx", sheet = "8.1", skip = 2) %>%
+  select(year = 1, gini = 2) %>% 
+  filter(str_detect(year, "^\\d{4}")) %>% 
   transmute(country = "Thailand",
             year = as.numeric(str_extract(year, "\\d{4}"))-543,
             gini = as.numeric(gini),
             gini_se = NA,
-            welfare_def = wd,
+            welfare_def = "gross",
+            equiv_scale = "pc",
+            monetary = NA,
+            series = paste("NESDC Thailand", welfare_def, equiv_scale),
+            source1 = "NESDC Thailand",
+            page = "8.1",
+            link = nesdc_link)
+
+nesdc_con <- read_excel("data-raw/nesdc.xlsx", sheet = "9.1", skip = 3) %>% 
+  select(year = 1, gini = 2) %>% 
+  filter(str_detect(year, "^\\d{4}")) %>% 
+  transmute(country = "Thailand",
+            year = as.numeric(str_extract(year, "\\d{4}"))-543,
+            gini = as.numeric(gini),
+            gini_se = NA,
+            welfare_def = "con",
             equiv_scale = "pc",
             monetary = NA,
             series = paste("NESDC Thailand", welfare_def, equiv_scale),
             source1 = "NESDC Thailand",
             page = "",
-            link = nesdb_link)
+            link = nesdc_link)
+
+nesdc <- bind_rows(nesdc_gross, nesdc_con)
+
+rm(nesdc_gross, nesdc_con)
 
 
 # Statistics Turkey (update files)
@@ -2239,8 +2255,8 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
                      capmas, statee, statfi, insee, geostat, greenland,
                      stathk, bpsid, amar, cso_ie, istat, statinja, kazstat, kostat, nsck,
                      epumy, nbs, monstat, snz, nzmsd, ssb, dgeec, psa,
-                     rosstat, ru_lis_old, singstat, ssi, ine, statslk, scb,
-                     tdgbas, nso_thailand, nesdb, tuik, ons, ifs, cbo, uscb, uine, inev, gso_vn,
+                     rosstat, ru_lis_old, singstat, ssi, ine, statslk, scb, fso_ch,
+                     tdgbas, nso_thailand, nesdc, tuik, ons, ifs, cbo, uscb, uine, inev, gso_vn,
                      atg, gidd,
                      added_data) %>% 
     rename(gini_m = gini,
