@@ -1774,7 +1774,7 @@ rm(tuik_list, tuik_hh, tuik_oecdm)
 
 # U.K. Office for National Statistics (update links; join with latest file last)
 # https://www.ons.gov.uk/atoz?query=effects+taxes+benefits (new releases in April and January)
-ons_link <- "https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/datasets/householddisposableincomeandinequality/financialyearending2021/hdiireferencetables202021.xlsx"
+ons_link <- "https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/datasets/theeffectsoftaxesandbenefitsonhouseholdincomefinancialyearending2014/financialyearending2021/etbtables202021.xlsx"
 download.file(ons_link, "data-raw/ons.xlsx")
 
 ons <- read_excel("data-raw/ons.xlsx", sheet = "Table 9", skip = 7) %>% 
@@ -1839,10 +1839,10 @@ ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3,
 # https://www.cbo.gov/search?search=gini >
 # The Distribution of Household Income, 20xx >
 # Data Underlying Exhibits
-cbo_link <- "https://www.cbo.gov/system/files/2021-08/57061-Data-Underlying-Exhibits.xlsx"
+cbo_link <- "https://www.cbo.gov/system/files/2022-11/58353_data_underlying_exhibits.xlsx"
 download.file(cbo_link, "data-raw/cbo.xlsx")
 
-cbo <- read_excel("data-raw/cbo.xlsx", sheet = "Exhibit 26", col_names = FALSE, skip = 8,
+cbo <- read_excel("data-raw/cbo.xlsx", sheet = "Exhibit 22", col_names = FALSE, skip = 8,
                   .name_repair = ~ make.names(.x, unique = TRUE)) %>% 
   filter(!is.na(as.numeric(X)) & !is.na(X.1)) %>% 
   transmute(year = as.numeric(X),
@@ -1867,7 +1867,7 @@ cbo <- read_excel("data-raw/cbo.xlsx", sheet = "Exhibit 26", col_names = FALSE, 
 # https://www.census.gov/topics/income-poverty/income-inequality/data/data-tables.html
 # Selected Measures of Household Income Dispersion:  1967 to 20xx																																																			
 # Selected Measures of Equivalence-Adjusted Income Dispersion: 1967 to 20xx																																																			
-uscb_links <- paste0("https://www2.census.gov/programs-surveys/demo/tables/p60/273/tableA", 4:5, ".xlsx")
+uscb_links <- paste0("https://www2.census.gov/programs-surveys/demo/tables/p60/276/tableA", 4:5, ".xlsx")
 download.file(uscb_links[1], "data-raw/uscb_hh.xlsx")
 download.file(uscb_links[2], "data-raw/uscb_ae.xlsx")
 
@@ -1899,13 +1899,13 @@ uscb_hh_se <- read_excel("data-raw/uscb_hh_se.xlsx", skip = 3) %>%
             page = "",
             link = uscb_links[1])
 
-uscb_hh <- read_excel("data-raw/uscb_hh.xlsx", sheet = "A4b", skip = 7) %>% 
+uscb_hh <- read_excel("data-raw/uscb_hh.xlsx", sheet = "tableA4b", skip = 6) %>% 
   clean_names() %>% 
+  filter(str_detect(x1, "^\\d{4}")) %>% 
   transmute(year = as.numeric(str_extract(x1, "\\d{4}")),
          gini = as.numeric(x14),
          break_yr = (year == 1993 | (year == 2013 & gini > .48) | (year == 2017 & gini == .489))) %>%
   arrange(year, break_yr) %>% 
-  filter(!is.na(gini)) %>% 
   transmute(country = "United States",
             year = year,
             gini = gini,
@@ -1939,8 +1939,9 @@ uscb_ae_se <- read_excel("data-raw/uscb_ae_se.xlsx", skip = 3) %>%
 
 uscb_ae <- read_excel("data-raw/uscb_ae.xlsx", skip = 6) %>% 
   clean_names() %>% 
+  filter(str_detect(x1, "^\\d{4}")) %>% 
   transmute(year = as.numeric(str_extract(x1, "\\d{4}")),
-            gini = as.numeric(x7),
+            gini = as.numeric(x10),
             break_yr = (year == 1993 | (year == 2013 & gini > .48) | (year == 2017 & gini == .489))) %>%
   arrange(year, break_yr) %>% 
   filter(!is.na(gini)) %>% 
