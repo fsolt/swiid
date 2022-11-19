@@ -2012,7 +2012,7 @@ uine1 <- extract_tables("data-raw/uine1.pdf", pages = 13,
             link = uine_link1)
 
 uine_link2 <- "https://www.ine.gub.uy/c/document_library/get_file?uuid=8504f46a-ed45-40e5-9a25-12c1b0c869ac&groupId=10181"
-download.file(uine_link, "data-raw/uine2.xlsx")
+download.file(uine_link2, "data-raw/uine2.xlsx")
 
 uine2 <- read_excel("data-raw/uine2.xlsx", skip = 3) %>% 
   select(year = 1,
