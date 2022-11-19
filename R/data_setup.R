@@ -2032,6 +2032,7 @@ uine2 <- read_excel("data-raw/uine2.xlsx", skip = 3) %>%
 uine <- bind_rows(uine1, uine2)
 
 # Venezuela Instituto Nacional de Estadística (update link)
+# http://www.ine.gov.ve/ > Sociales tab > Coeficiente Gini tab
 inev_link <- "http://www.ine.gov.ve/documentos/Social/Pobreza/xls/Serie_%20GINI_1s1997-1s2020.xls"
 download.file(inev_link, "data-raw/inev.xls")
 
