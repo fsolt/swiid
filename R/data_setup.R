@@ -754,7 +754,7 @@ statfi <- pxweb_get_data(url = statfi_link,
 
 
 # Insee France (archived; update link)
-insee_link1 <- "https://www.insee.fr/fr/statistiques/fichier/5762455/IA70.xlsx"
+insee_link1 <- "https://web.archive.org/web/20151206151022/http://www.insee.fr/fr/themes/series-longues.asp?indicateur=gini-niveaux-vie"
 
 insee1 <- readLines(insee_link1) %>%              # kickin' it old skool . . .
   str_subset("etendue-ligne|tab-chiffre") %>% 
@@ -1702,7 +1702,7 @@ rm(nso_thailand1, nso_thailand2)
 
 # NESDC Thailand (automatic, but might need to update wrangle)
 nesdc_link <- c("https://www.nesdc.go.th/ewt_dl_link.php?nid=3518&filename=social")
-download.file(nesdb_link, "data-raw/nesdc.xlsx")
+download.file(nesdc_link, "data-raw/nesdc.xlsx")
 
 nesdc_gross <- read_excel("data-raw/nesdc.xlsx", sheet = "8.1", skip = 2) %>%
   select(year = 1, gini = 2) %>% 
@@ -1777,16 +1777,17 @@ rm(tuik_list, tuik_hh, tuik_oecdm)
 ons_link <- "https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/datasets/theeffectsoftaxesandbenefitsonhouseholdincomefinancialyearending2014/financialyearending2021/etbtables202021.xlsx"
 download.file(ons_link, "data-raw/ons.xlsx")
 
-ons <- read_excel("data-raw/ons.xlsx", sheet = "Table 9", skip = 7) %>% 
+ons <- read_excel("data-raw/ons.xlsx", sheet = "Table 6a", skip = 3) %>% 
   janitor::clean_names() %>% 
-  select(year, original_2, gross_3, disposable_4) %>% 
-  pivot_longer(cols = matches("\\d"), 
+  select(year, original_income, gross_income, disposable_income, expenditure) %>% 
+  pivot_longer(cols = matches("[_x]"), 
                names_to = c("wd", "series0"),
                names_sep = "_",
                values_to = "gini") %>% 
   mutate(welfare_def = case_when(wd == "original" ~ "market",
                                  wd == "gross" ~ "gross",
                                  wd == "disposable" ~ "disp",
+                                 wd == "expenditure" ~ "con",
                                  TRUE ~ NA_character_),
          gini = as.numeric(gini)/100,
          gini_se = case_when(wd == "original" ~ gini * .015, # per Table 11
