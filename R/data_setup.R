@@ -359,19 +359,18 @@ afr_gini <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-
 
 
 # World Bank Povcalnet (automated)
-wb_link <- "http://iresearch.worldbank.org/povcalnet/povcalnetapi.ashx?PovertyLine=1.9&Countries=all&SurveyYears=all"
+wb_link <- "https://api.worldbank.org/pip/v1/pip?country=all&year=all&povline=1.9&fill_gaps=false&welfare_type=all&reporting_level=national&format=csv"
 
 wb <- read_csv(wb_link, show_col_types = FALSE) %>% 
-  filter(CoverageType %in% c("N", "A") & !(Gini == -1)) %>% 
-  transmute(country = countrycode(CountryCode, origin = "wb_api3c", "swiid.name", custom_dict = cc_swiid),
-            year = as.numeric(RequestYear),
-            gini = as.numeric(Gini),
+  transmute(country = countrycode(country_code, origin = "wb_api3c", "swiid.name", custom_dict = cc_swiid),
+            year = round(as.numeric(survey_year)),
+            gini = as.numeric(gini),
             gini_se = NA,
-            welfare_def = if_else(str_detect(DataType, "Y"), "gross", "con"),
+            welfare_def = if_else(str_detect(welfare_type, "income"), "gross", "con"),
             equiv_scale = "pc",
             monetary = FALSE,
-            series = paste("Povcalnet", country, welfare_def, equiv_scale),
-            source1 = "World Bank Povcalnet",
+            series = paste("PIP", country, welfare_def, equiv_scale),
+            source1 = "World Bank Poverty & Inequality Platform",
             page = "",
             link = wb_link)
 
@@ -521,7 +520,7 @@ inebo <- read_excel("data-raw/inebo.xlsx", skip = 3) %>%
   filter(!is.na(gini))
 
 
-# IPEA Brazil (update file)
+# IPEA Brazil (update file; currently to 2014)
 # http://www.ipeadata.gov.br > [Tab] Social > Temas > Renda
 ipea <- read_csv("data-raw/ipea.csv", skip = 1) %>% 
   select(matches("\\d{4}")) %>% 
@@ -543,8 +542,8 @@ ipea <- read_csv("data-raw/ipea.csv", skip = 1) %>%
 belstat_link <- "http://dataportal.belstat.gov.by/Indicators/Preview?key=228371#"
 
 belstat <- read_excel("data-raw/belstat.xls", skip = 1) %>%
-  select(starts_with("2")) %>% 
-  pivot_longer(cols = starts_with("2"),
+  select(matches("^[12]")) %>% 
+  pivot_longer(cols = matches("^[12]"),
                names_to = "year",
                values_to = "gini") %>% 
   transmute(country = "Belarus",
@@ -625,12 +624,12 @@ dane <- read_excel("data-raw/dane.xls", sheet = "Gini", skip = 14) %>%
 # Costa Rica (update link)
 # https://inec.cr/es/tematicas/listado?filtertext=gini
 # ENAHO. 202x. Coeficiente de Gini por hogar y per cápita, julio 2010 - 202x.
-ineccr_link <- "https://admin.inec.cr/sites/default/files/media/repobrezaenaho2010-2021-01_gini_2.xlsx"
+ineccr_link <- "https://admin.inec.cr/sites/default/files/2022-12/repobrezaenaho2010-2022-01_gini.xlsx"
   
 download.file(ineccr_link, "data-raw/ineccr.xlsx")
 
 ineccr <- read_excel("data-raw/ineccr.xlsx",
-                     skip = 6,
+                     skip = 3,
                      sheet = "Cuadro 1") %>%
   select(Año, Total) %>% 
   filter(!is.na(Año)) %>% 
@@ -777,15 +776,15 @@ insee1 <- readLines(insee_link1) %>%              # kickin' it old skool . . .
             page = "",
             link = insee_link1)
 
-insee_link2 <- "https://www.insee.fr/fr/statistiques/fichier/5371279/RPM2021-VE1.xlsx"
+# https://www.insee.fr/fr/statistiques/5431993
+insee_link2 <- "https://www.insee.fr/fr/statistiques/fichier/5431993/ip1875.xlsx"
 download.file(insee_link2, here::here("data-raw", "insee2.xlsx"))
 
-insee2 <- read_excel("data-raw/insee2.xlsx", sheet = "Figure 5", skip = 3) %>% 
-  transmute(year = ...1,
-            market = `Indice de Gini...2`,
-            disp = `Indice de Gini...5`) %>% 
-  pivot_longer(cols = c("market", "disp"),
-               names_to = "welfare_def",
+insee2 <- read_excel("data-raw/insee2.xlsx", sheet = "Figure complémentaire 2", skip = 2) %>% 
+  filter(str_detect(...1, "Gini")) %>% 
+  mutate(welfare_def = c("disp", "market")) %>% 
+  pivot_longer(cols = matches("^[12]"),
+               names_to = "year",
                values_to = "gini") %>% 
   filter(!is.na(gini)) %>%
   transmute(country = "France",
@@ -797,7 +796,7 @@ insee2 <- read_excel("data-raw/insee2.xlsx", sheet = "Figure 5", skip = 3) %>%
             monetary = FALSE,
             series = paste("Insee", welfare_def, equiv_scale, if_else(welfare_def == "disp", 2, 1)),
             source1 = "Institut National de la Statistique et des Études Économiques France",
-            page = "Figure 5",
+            page = "Figure complémentaire 2",
             link = insee_link2)
 
 insee <- bind_rows(insee1, insee2)
@@ -843,7 +842,7 @@ greenland <- pxweb_get_data(url = greenland_link,
             link = greenland_link)
 
 
-# Statistics Hong Kong (update with 2022 census in 2023)
+# Statistics Hong Kong (2021 census added to fs_added_data 6/2023; update with 2026 census when available)
 hk2016_link <- "https://www.bycensus2016.gov.hk/data/16BC_Income_Report_Key_Statistics.xlsx"
 hk2011_link <- "https://www.statistics.gov.hk/pub/B11200572012XXXXB0100.pdf"
 hk2006_link <- "https://www.statistics.gov.hk/pub/B11200452006XXXXB0400.pdf"
@@ -942,8 +941,8 @@ rm(hk2006, hk2011, hk2016)
 
 bpsid1_link <- "https://www.bps.go.id/website/tabelExcelIndo/indo_23_6.xls"
 download.file(bpsid1_link, "data-raw/bpsid1.xls")
-bpsid2_link <- "https://www.bps.go.id/statictable/2014/09/08/946/distribusi-pembagian-pengeluaran-per-kapita-dan-indeks-gini-2010-2017.html"
-# download.file(bpsid2_link, "data-raw/bpsid2.xls")
+bpsid2_link <- "https://www.bps.go.id/statictable/download.html?nrbvfeve=OTQ2&sdfs=sdngrbfjgrdejrh&zxcv=L3dlYnNpdGU%3D&xzmn=aHR0cHM6Ly93d3cuYnBzLmdvLmlkL3N0YXRpY3RhYmxlLzIwMTQvMDkvMDgvOTQ2L2Rpc3RyaWJ1c2ktcGVtYmFnaWFuLXBlbmdlbHVhcmFuLXBlci1rYXBpdGEtZGFuLWluZGVrcy1naW5pLS0yMDEwLTIwMjIuaHRtbA%3D%3D&twoadfnoarfeauf=MjAyMy0wNi0xNiAyMzo0NToyOA%3D%3D"
+download.file(bpsid2_link, "data-raw/bpsid2.xls")
 
 bpsid1 <- read_excel("data-raw/bpsid1.xls", skip = 2) %>% 
   filter(Provinsi == "INDONESIA") %>% 
@@ -987,6 +986,7 @@ rm(bpsid1, bpsid2)
 
 # Statistical Center of Iran (update link--search site with Google; blocked as of 12-08-2018, so use archive.org version)
 # https://www.google.com/search?hl=en&as_q=gini&as_sitesearch=https%3A%2F%2Fwww.amar.org.ir%2Fenglish
+# Still blocked 6/2023
 
 amar_link <- "https://web.archive.org/web/20191116072717/https://www.amar.org.ir/Portals/1/releases/heis/total/Gini%20coefficient%20of%20the%20years%201380-1396.xlsx?ver=2019-04-09-101341-147"
 download.file(amar_link, "data-raw/amar.xlsx")
@@ -1083,8 +1083,8 @@ statinja <- read_csv("data-raw/statinja.csv",
             link = "http://statinja.gov.jm/living_conditions_poverty.aspx")
 
 
-# Kazakhstan Committee on Statistics (update link)
-kazstat_page <- "http://stat.gov.kz/api/getFile/?docId=ESTAT097178"
+# Kazakhstan Committee on Statistics (update link; check https://kazstat.github.io/sdg-site-kazstat/en/10-4-2/ also)
+kazstat_page <- "https://old.stat.gov.kz/api/getFile/?docId=ESTAT097178"
 download.file(kazstat_page, "data-raw/kazstat.xls")
 
 kazstat <- read_excel("data-raw/kazstat.xls",
@@ -1345,7 +1345,7 @@ dgeec_link <- "https://www.ine.gov.py/default.php?publicacion=5" %>%
     read_html() %>% 
     html_node(xpath = "//a[contains(@href, 'desigualdad')]") %>% 
     html_attr("href") %>% 
-    str_c("https://www.ine.gov.py/", .) %>% 
+    # str_c("https://www.ine.gov.py/", .) %>% 
     str_replace_all(" ", "%20")
 
 download.file(dgeec_link, "data-raw/dgeec.xls")
@@ -1372,7 +1372,7 @@ dgeec <- read_excel("data-raw/dgeec.xls", skip = 3) %>%
 
 # Philippines Statistical Agency (update)
 psa_link <- "https://psa.gov.ph/sites/default/files/T2_9a_0.csv"
-# download.file(psa_link, "data-raw/psa.csv")
+download.file(psa_link, "data-raw/psa.csv")
 
 psa <- read_csv("data-raw/psa.csv", skip = 3) %>% 
   first_row_to_names() %>% 
@@ -1393,17 +1393,17 @@ psa <- read_csv("data-raw/psa.csv", skip = 3) %>%
             link = psa_link)
 
 
-# Russian Federal State Statistics Service (update link)
+# Russian Federal State Statistics Service (update link: https://eng.rosstat.gov.ru/Publications/document/74811)
 # https://rosstat.gov.ru/publications-plans > look for \\d{4} of last year and 'Российский статистический ежегодник (на русском и английском языках) [Russian Statistical Yearbook (in Russian and English)]'
 # https://rosstat.gov.ru/folder/210/document/12994 > first link should be 'ПРИЛОЖЕНИЕ к Ежегоднику [Yearbook Supplement]'
 # https://rosstat.gov.ru/folder/210/document/13396 > find xls
 
-rosstat_link <- "https://rosstat.gov.ru/storage/mediabank/pril-year_2021.rar"
-download.file(rosstat_link, "data-raw/rosstat.rar")
+rosstat1_link <- "https://rosstat.gov.ru/storage/mediabank/pril-year_2021.rar"
+download.file(rosstat1_link, "data-raw/rosstat.rar")
 untar("data-raw/rosstat.rar",
       exdir = "data-raw/rosstat")
 
-rosstat <- read_excel("data-raw/rosstat/Ретро_2021_Раздел5.xls", skip = 2) %>% 
+rosstat1 <- read_excel("data-raw/rosstat/Ретро_2021_Раздел5.xls", skip = 2) %>% 
   filter(str_detect(ПОКАЗАТЕЛИ, "Джини")) %>% 
   gather(key = year, value = gini) %>% 
   filter(str_detect(year, "\\d{4}")) %>% 
@@ -1418,8 +1418,35 @@ rosstat <- read_excel("data-raw/rosstat/Ретро_2021_Раздел5.xls", skip
             series = paste("Rosstat", welfare_def, equiv_scale),
             source1 = "Russian Federal State Statistics Service",
             page = "Ретро_2021_Раздел5.xls",
-            link = rosstat_link)
+            link = rosstat1_link)
 
+rosstat2_link <- "https://eng.rosstat.gov.ru/storage/mediabank/National%20set%20of%20SDG%20indicators_data(1).xlsx"
+download.file(rosstat2_link, "data-raw/rosstat_sdg.xlsx")
+
+rosstat2 <- read_excel("data-raw/rosstat_sdg.xlsx", sheet = "130", skip = 1) %>% 
+  filter(str_detect(...1, "Russia")) %>% 
+  gather(key = year, value = gini) %>% 
+  filter(str_detect(year, "\\d{4}")) %>% 
+  mutate(across(everything(), as.numeric)) %>% 
+  transmute(country = "Russian Federation",
+            year = year,
+            gini = gini,
+            gini_se = NA,
+            welfare_def = "gross",
+            equiv_scale = "pc",
+            monetary = TRUE,
+            series = paste("Rosstat", welfare_def, equiv_scale),
+            source1 = "Russian Federal State Statistics Service SDG",
+            page = "130",
+            link = rosstat1_link)
+
+rosstat <- bind_rows(rosstat1, 
+                     anti_join(rosstat2,
+                               rosstat1,
+                               by = c("year", "gini"))) %>% 
+  arrange(country, year)
+
+rm(rosstat1, rosstat2)
 
 # Singapore Department of Statistics (automatic)
 # Note: Population covered is only resident households with at least one worker 
@@ -1428,7 +1455,7 @@ rosstat <- read_excel("data-raw/rosstat/Ретро_2021_Раздел5.xls", skip
 # Note also that income definition excludes income from capital.
 # These data therefore should be considered a lower bound.  Blech.
 
-singstat_url <- "https://tablebuilder.singstat.gov.sg/api/table/tabledata/17733"
+singstat_url <- "https://tablebuilder.singstat.gov.sg/api/table/tabledata/17806"
 
 singstat <- jsonlite::fromJSON(singstat_url) %>% 
   pluck("Data") %>%
@@ -1547,10 +1574,12 @@ statslk <- extract_tables("data-raw/statslk2015.pdf", pages = 22)[[1]] %>%
 
 
 # Statistics Sweden (automated)
-scb <- pxweb_get_data(url = "https://api.scb.se/OV0104/v1/doris/sv/ssd/HE/HE0110/HE0110F/Tab1DispInkN",
+scb_link <- "https://api.scb.se/OV0104/v1/doris/sv/ssd/HE/HE0110/HE0110F/TabVX1DispInkN"
+
+scb <- pxweb_get_data(url = scb_link,
                       pxweb_query(list(Region = c('00'),
                                   InkomstTyp = c("FastInkIn","DispInkInkl"),
-                                  ContentsCode = c("000002VW"),
+                                  ContentsCode = c("000006PO"),
                                   Tid = c('*')))) %>%
   transmute(country = "Sweden",
             year = as.numeric(as.character(år)),
@@ -1563,7 +1592,7 @@ scb <- pxweb_get_data(url = "https://api.scb.se/OV0104/v1/doris/sv/ssd/HE/HE0110
             series = paste("Statistics Sweden", welfare_def, equiv_scale, ifelse(year<1991, 1, 2)),
             source1 = "Statistics Sweden",
             page = "",
-            link = "http://www.scb.se/en_/Finding-statistics/Statistics-by-subject-area/Household-finances/Income-and-income-distribution/Households-finances/Aktuell-Pong/7296/Income-aggregate-19752011/163550")
+            link = scb_link)
 
 
 # Federal Statistics Office, Switzerland (update link)
@@ -1985,9 +2014,8 @@ rm(uscb_ae, uscb_hh, uscb_fam, uscb_fam0)
 
 # Uruguay Instituto Nacional de Estadística (archived)
 # add new observations (from 2018 onward) to fs_added_data
-# though consider https://www.ine.gub.uy/linea-de-pobreza > Índice de Gini, por año, según área geográfica 
-uine_link1 <- "https://www.ine.gub.uy/documents/10181/35933/Informe+pobreza+y+desigualdad.pdf/2a797c4b-fec4-410e-bd7e-da7a57841112"
-download.file(uine_link1, "data-raw/uine1.pdf")
+uine_link1 <- "https://web.archive.org/web/20151016101651/https://www.ine.gub.uy/documents/10181/35933/Informe+pobreza+y+desigualdad.pdf/2a797c4b-fec4-410e-bd7e-da7a57841112"
+#download.file(uine_link1, "data-raw/uine1.pdf")
 
 uine1 <- extract_tables("data-raw/uine1.pdf", pages = 13,
                         area = list(c(122.1, 87.4, 284.8, 515.9)))[[1]] %>% 
@@ -2011,8 +2039,8 @@ uine1 <- extract_tables("data-raw/uine1.pdf", pages = 13,
             page = "11",
             link = uine_link1)
 
-uine_link2 <- "https://www.ine.gub.uy/c/document_library/get_file?uuid=8504f46a-ed45-40e5-9a25-12c1b0c869ac&groupId=10181"
-download.file(uine_link2, "data-raw/uine2.xlsx")
+uine_link2 <- "https://web.archive.org/web/20181114034033/https://www.ine.gub.uy/c/document_library/get_file?uuid=8504f46a-ed45-40e5-9a25-12c1b0c869ac&groupId=10181"
+# download.file(uine_link2, "data-raw/uine2.xlsx")
 
 uine2 <- read_excel("data-raw/uine2.xlsx", skip = 3) %>% 
   select(year = 1,
@@ -2032,10 +2060,10 @@ uine2 <- read_excel("data-raw/uine2.xlsx", skip = 3) %>%
 
 uine <- bind_rows(uine1, uine2)
 
-# Venezuela Instituto Nacional de Estadística (update link)
+# Venezuela Instituto Nacional de Estadística (update file)
 # http://www.ine.gov.ve/ > Sociales tab > Coeficiente Gini tab
-inev_link <- "http://www.ine.gov.ve/documentos/Social/Pobreza/xls/Serie_%20GINI_1s1997-1s2020.xls"
-download.file(inev_link, "data-raw/inev.xls")
+inev_link <- "http://www.ine.gob.ve/index.php?option=com_content&view=category&id=104&Itemid=45#"
+# download.file(inev_link, "data-raw/inev.xls")
 
 inev <- read_excel("data-raw/inev.xls", skip = 2) %>% 
   select(matches("[AV]")) %>% 
@@ -2069,7 +2097,7 @@ inev <- read_excel("data-raw/inev.xls", skip = 2) %>%
 # Note 14 May 2021: Save function doesn't work, but workaround with 'Save Your Retrieval' (which doesn't allow updates, but does allow current file to be saved)
 gso_vn1_link <- "https://web.archive.org/web/20170525163734/http://www.gso.gov.vn/Modules/Doc_Download.aspx?DocID=16773"
 gso_vn2_link <- "https://www.gso.gov.vn/en/px-web/?pxid=E1135&theme=Health%2C%20Culture%2C%20Sport%20and%20Living%20standard&subtheme=Index%20of%20income%20inequality%20distribution%20(GINI%20index)"
-download.file(gso_vn1_link, "data-raw/gso_vn2013.pdf")
+# download.file(gso_vn1_link, "data-raw/gso_vn2013.pdf")
 
 gso_vn1 <- extract_tables("data-raw/gso_vn2013.pdf", pages = 84)[[1]][-1, ] %>% 
   as_tibble() %>% 
