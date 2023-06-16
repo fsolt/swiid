@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 1014413 ie
-Date: November 12, 2022 at 10:14:44 AM CST
+Subject: job 1091262 ie
+Date: June 14, 2023 at 11:02:14 PM CDT
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -429,18 +429,18 @@ ie09h,con_ae,NaN,NA,110
 ie10h,market_hh,0.6309,0.0074,110
 ie10h,market_sqrt,0.5791,0.0075,110
 ie10h,market_pc,0.598,0.0083,110
-ie10h,market_oecdm,0.5839,0.0079,110
-ie10h,market_ae,0.5884,0.0075,110
+ie10h,market_oecdm,0.5836,0.008,110
+ie10h,market_ae,0.5882,0.0075,110
 ie10h,gross_hh,0.4169,0.0064,110
 ie10h,gross_sqrt,0.3695,0.0073,110
 ie10h,gross_pc,0.3862,0.0061,110
-ie10h,gross_oecdm,0.3705,0.0064,110
-ie10h,gross_ae,0.3739,0.006,110
+ie10h,gross_oecdm,0.3701,0.0064,110
+ie10h,gross_ae,0.3735,0.006,110
 ie10h,disp_hh,0.3516,0.0047,110
 ie10h,disp_sqrt,0.2985,0.0063,110
 ie10h,disp_pc,0.3237,0.0055,110
-ie10h,disp_oecdm,0.2985,0.005,110
-ie10h,disp_ae,0.3045,0.0054,110
+ie10h,disp_oecdm,0.2981,0.005,110
+ie10h,disp_ae,0.3041,0.0054,110
 ie10h,con_hh,NaN,NA,110
 ie10h,con_sqrt,NaN,NA,110
 ie10h,con_pc,NaN,NA,110
@@ -614,9 +614,30 @@ ie18h,con_sqrt,NaN,NA,110
 ie18h,con_pc,NaN,NA,110
 ie18h,con_oecdm,NaN,NA,110
 ie18h,con_ae,NaN,NA,110
+[1] "Loading dataset ie19h..."
+ie19h,market_hh,0.5858,0.0064,110
+ie19h,market_sqrt,0.5053,0.0071,110
+ie19h,market_pc,0.5247,0.0065,110
+ie19h,market_oecdm,0.5072,0.0077,110
+ie19h,market_ae,0.5121,0.0074,110
+ie19h,gross_hh,0.4183,0.0055,110
+ie19h,gross_sqrt,0.3542,0.0062,110
+ie19h,gross_pc,0.3661,0.0064,110
+ie19h,gross_oecdm,0.3514,0.0059,110
+ie19h,gross_ae,0.3535,0.0057,110
+ie19h,disp_hh,0.3586,0.0054,110
+ie19h,disp_sqrt,0.2871,0.0053,110
+ie19h,disp_pc,0.3059,0.0052,110
+ie19h,disp_oecdm,0.2827,0.0056,110
+ie19h,disp_ae,0.2869,0.0059,110
+ie19h,con_hh,NaN,NA,110
+ie19h,con_sqrt,NaN,NA,110
+ie19h,con_pc,NaN,NA,110
+ie19h,con_oecdm,NaN,NA,110
+ie19h,con_ae,NaN,NA,110
 > 
 > proc.time()
    user  system elapsed 
-313.354   7.435 447.575 
+357.529   9.886 516.853 
 
 

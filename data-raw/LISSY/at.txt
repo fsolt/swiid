@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 1014368 at
-Date: November 12, 2022 at 8:05:46 AM CST
+Subject: job 1091235 at
+Date: June 14, 2023 at 8:45:26 PM CDT
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -685,9 +685,30 @@ at19h,con_sqrt,NaN,NA,110
 at19h,con_pc,NaN,NA,110
 at19h,con_oecdm,NaN,NA,110
 at19h,con_ae,NaN,NA,110
+[1] "Loading dataset at20h..."
+at20h,market_hh,0.5775,0.0049,110
+at20h,market_sqrt,0.4994,0.0052,110
+at20h,market_pc,0.5283,0.0056,110
+at20h,market_oecdm,0.5003,0.0066,110
+at20h,market_ae,0.5088,0.0063,110
+at20h,gross_hh,0.3761,0.0048,110
+at20h,gross_sqrt,0.3163,0.0042,110
+at20h,gross_pc,0.3404,0.005,110
+at20h,gross_oecdm,0.3132,0.0045,110
+at20h,gross_ae,0.3193,0.005,110
+at20h,disp_hh,0.3387,0.0039,110
+at20h,disp_sqrt,0.2719,0.0041,110
+at20h,disp_pc,0.2984,0.0046,110
+at20h,disp_oecdm,0.2673,0.0039,110
+at20h,disp_ae,0.2739,0.0044,110
+at20h,con_hh,NaN,NA,110
+at20h,con_sqrt,NaN,NA,110
+at20h,con_pc,NaN,NA,110
+at20h,con_oecdm,NaN,NA,110
+at20h,con_ae,NaN,NA,110
 > 
 > proc.time()
    user  system elapsed 
-389.774   8.456 715.029 
+420.774  11.762 619.223 
 
 

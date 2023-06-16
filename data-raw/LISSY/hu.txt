@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 1014405 hu
-Date: November 12, 2022 at 9:11:35 AM CST
+Subject: job 1091258 hu
+Date: June 14, 2023 at 9:49:32 PM CDT
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -220,10 +220,117 @@ hu99h,disp_oecdm,0.2878,0.0078,200
 hu99h,disp_ae,0.2894,0.0074,200
 hu99h,con_hh,0.3385,0.0072,200
 hu99h,con_sqrt,0.2756,0.0074,200
-Error in gzfile(file, "rb") : cannot open the connection
-Calls: get_ginis ... .rlang_cli_format_fallback -> .rlang_cli_compat -> 
+hu99h,con_pc,0.3011,0.0074,200
+hu99h,con_oecdm,0.2791,0.0075,200
+hu99h,con_ae,0.2841,0.008,200
+[1] "Loading dataset hu05h..."
+hu05h,market_hh,0.6154,0.0105,200
+hu05h,market_sqrt,0.5268,0.011,200
+hu05h,market_pc,0.55,0.0107,200
+hu05h,market_oecdm,0.5311,0.0097,200
+hu05h,market_ae,0.5374,0.0089,200
+hu05h,gross_hh,0.3562,0.0081,200
+hu05h,gross_sqrt,0.2877,0.0079,200
+hu05h,gross_pc,0.3056,0.0093,200
+hu05h,gross_oecdm,0.2871,0.0088,200
+hu05h,gross_ae,0.2904,0.0089,200
+hu05h,disp_hh,0.3562,0.0069,200
+hu05h,disp_sqrt,0.2877,0.0083,200
+hu05h,disp_pc,0.3056,0.0097,200
+hu05h,disp_oecdm,0.2871,0.0087,200
+hu05h,disp_ae,0.2904,0.0095,200
+hu05h,con_hh,0.3116,0.0057,200
+hu05h,con_sqrt,0.2544,0.0061,200
+hu05h,con_pc,0.2895,0.0069,200
+hu05h,con_oecdm,0.2574,0.0066,200
+hu05h,con_ae,0.2663,0.006,200
+[1] "Loading dataset hu07h..."
+hu07h,market_hh,0.5951,0.0105,200
+hu07h,market_sqrt,0.5096,0.0107,200
+hu07h,market_pc,0.533,0.0098,200
+hu07h,market_oecdm,0.5115,0.0092,200
+hu07h,market_ae,0.5182,0.0096,200
+hu07h,gross_hh,0.3467,0.0077,200
+hu07h,gross_sqrt,0.2701,0.0088,200
+hu07h,gross_pc,0.2844,0.0092,200
+hu07h,gross_oecdm,0.2646,0.0097,200
+hu07h,gross_ae,0.2672,0.0087,200
+hu07h,disp_hh,0.3467,0.0081,200
+hu07h,disp_sqrt,0.2701,0.0077,200
+hu07h,disp_pc,0.2844,0.0071,200
+hu07h,disp_oecdm,0.2646,0.0085,200
+hu07h,disp_ae,0.2672,0.0074,200
+hu07h,con_hh,0.2949,0.0053,200
+hu07h,con_sqrt,0.2364,0.0048,200
+hu07h,con_pc,0.2714,0.0049,200
+hu07h,con_oecdm,0.238,0.0052,200
+hu07h,con_ae,0.2464,0.0052,200
+[1] "Loading dataset hu09h..."
+hu09h,market_hh,0.6114,0.009,200
+hu09h,market_sqrt,0.5348,0.0101,200
+hu09h,market_pc,0.558,0.0091,200
+hu09h,market_oecdm,0.5356,0.009,200
+hu09h,market_ae,0.5427,0.0086,200
+hu09h,gross_hh,0.3309,0.0059,200
+hu09h,gross_sqrt,0.2706,0.006,200
+hu09h,gross_pc,0.2909,0.0076,200
+hu09h,gross_oecdm,0.2654,0.007,200
+hu09h,gross_ae,0.2704,0.006,200
+hu09h,disp_hh,0.3309,0.0054,200
+hu09h,disp_sqrt,0.2706,0.0062,200
+hu09h,disp_pc,0.2909,0.0057,200
+hu09h,disp_oecdm,0.2654,0.0056,200
+hu09h,disp_ae,0.2704,0.0068,200
+hu09h,con_hh,0.2841,0.0056,200
+hu09h,con_sqrt,0.2418,0.0057,200
+hu09h,con_pc,0.2896,0.0065,200
+hu09h,con_oecdm,0.2451,0.0056,200
+hu09h,con_ae,0.2585,0.0061,200
+[1] "Loading dataset hu12h..."
+hu12h,market_hh,0.6149,0.0086,200
+hu12h,market_sqrt,0.5361,0.0104,200
+hu12h,market_pc,0.5599,0.0095,200
+hu12h,market_oecdm,0.539,0.0097,200
+hu12h,market_ae,0.546,0.0098,200
+hu12h,gross_hh,0.3445,0.0071,200
+hu12h,gross_sqrt,0.2885,0.0075,200
+hu12h,gross_pc,0.3089,0.0073,200
+hu12h,gross_oecdm,0.2868,0.0082,200
+hu12h,gross_ae,0.2913,0.0083,200
+hu12h,disp_hh,0.3445,0.0075,200
+hu12h,disp_sqrt,0.2885,0.0079,200
+hu12h,disp_pc,0.3089,0.0075,200
+hu12h,disp_oecdm,0.2868,0.009,200
+hu12h,disp_ae,0.2913,0.0094,200
+hu12h,con_hh,0.291,0.0061,200
+hu12h,con_sqrt,0.2599,0.0059,200
+hu12h,con_pc,0.3179,0.0068,200
+hu12h,con_oecdm,0.2676,0.0068,200
+hu12h,con_ae,0.2844,0.0066,200
+[1] "Loading dataset hu15h..."
+hu15h,market_hh,0.567,0.0069,200
+hu15h,market_sqrt,0.4807,0.0078,200
+hu15h,market_pc,0.5075,0.0083,200
+hu15h,market_oecdm,0.4833,0.0086,200
+hu15h,market_ae,0.4909,0.0078,200
+hu15h,gross_hh,0.3437,0.0058,200
+hu15h,gross_sqrt,0.2682,0.0057,200
+hu15h,gross_pc,0.2812,0.0062,200
+hu15h,gross_oecdm,0.2623,0.0057,200
+hu15h,gross_ae,0.2647,0.0048,200
+hu15h,disp_hh,0.3437,0.0051,200
+hu15h,disp_sqrt,0.2682,0.0051,200
+hu15h,disp_pc,0.2812,0.0059,200
+hu15h,disp_oecdm,0.2623,0.0056,200
+hu15h,disp_ae,0.2647,0.0062,200
+hu15h,con_hh,0.2861,0.0051,200
+hu15h,con_sqrt,0.2421,0.0052,200
+hu15h,con_pc,0.2806,0.0056,200
+hu15h,con_oecdm,0.2415,0.0055,200
+hu15h,con_ae,0.2522,0.0052,200
+> 
 > proc.time()
    user  system elapsed 
- 43.009   1.066 106.260 
+100.858   3.144 152.139 
 
 
