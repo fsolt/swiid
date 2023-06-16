@@ -847,6 +847,7 @@ Hong Kong,1981,0.414,,gross,hh,,Fields1994 Hong Kong gross hh,Fields 1994,399,ht
 Hong Kong,1981,0.453,,gross,hh,,Lin1985 gross hh 1,Lin 1985,395,https://doi.org/10.1111/j.1746-1049.1985.tb00067.x
 Hong Kong,1986,0.388,,gross,hh,,Fields1994 Hong Kong gross hh,Fields 1994,399,http://www.jstor.org/stable/3989956
 Hong Kong,1996,0.43,,con,pc,,FR2008 Hong Kong con pc,Ferreira and Ravallion 2008,37,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
+Hong Kong,2021,0.397,,pc,disp,,Statistics Hong Kong disp pc,Statistics Hong Kong 2023,Figure 6.1,https://www.censtatd.gov.hk/en/data/stat_report/product/B1120108/att/B11201082021XXXXB01.xlsx
 Hungary,1962,0.257,,disp,pc,FALSE,AM1992 Hungary disp pc,Atkinson and Micklewright 1992,HI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Hungary,1967,0.227,,disp,pc,FALSE,AM1992 Hungary disp pc,Atkinson and Micklewright 1992,HI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Hungary,1972,0.236,,disp,pc,FALSE,AM1992 Hungary disp pc,Atkinson and Micklewright 1992,HI1,https://books.google.com/books?id=zaL4CGdjOkUC
@@ -1969,6 +1970,8 @@ Philippines,1994,0.4507,,gross,pc,,PSA gross pc,Philippines Statistical Agency,,
 Philippines,1997,0.4872,,gross,pc,,PSA gross pc,Philippines Statistical Agency,,https://psa.gov.ph/sites/default/files/attachments/hsd/article/Table%20G%20%20Gini%20Concentration%20Ratios%20By%20Region.pdf
 Philippines,2009,0.43,,con,pc,,ZKM2014 Philippines con pc,"Zhuang, Kanbur, and Maligalig 2014",22,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA22
 Philippines,2009,0.474,,gross,pc,,ZKM2014 Philippines gross pc,"Zhuang, Kanbur, and Maligalig 2014",22,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA22
+Philippines,2018,0.4267,,gross,pc,,PSA gross pc,Philippines Statistical Agency,,https://psa.gov.ph/press-releases/id/167973
+Philippines,2021,0.4119,,gross,pc,,PSA gross pc,Philippines Statistical Agency,,https://psa.gov.ph/press-releases/id/167973
 Poland,1983,0.246,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Poland,1984,0.258,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Poland,1985,0.253,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
@@ -2827,6 +2830,8 @@ Venezuela,2010,0.394,,disp,pc,TRUE,CEPAL Venezuela disp pc 2,CEPALStat,National,
 Venezuela,2011,0.397,,disp,pc,TRUE,CEPAL Venezuela disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Venezuela,2012,0.405,,disp,pc,TRUE,CEPAL Venezuela disp pc 3,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Venezuela,2013,0.407,,disp,pc,TRUE,CEPAL Venezuela disp pc 3,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
+Venezuela,2019,0.38,,disp,pc,TRUE,Instituto Nacional de Estadistica Venezuela disp pc,Instituto Nacional de Estadística Venezuela,,http://www.ine.gov.ve/documentos/Social/Pobreza/xls/Serie_%20GINI_1s1997-1s2020.xls
+Venezuela,2020,0.386,,disp,pc,TRUE,Instituto Nacional de Estadistica Venezuela disp pc,Instituto Nacional de Estadística Venezuela,,http://www.ine.gov.ve/documentos/Social/Pobreza/xls/Serie_%20GINI_1s1997-1s2020.xls
 Vietnam,1993,0.357,,con,pc,,FR2008 Vietnam con pc,Ferreira and Ravallion 2008,40,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Vietnam,1999,0.39,,gross,pc,FALSE,GSO Vietnam 2005 gross pc,General Statistics Office of Vietnam 2005,,http://www.gso.gov.vn/default_en.aspx?tabid=508&ItemID=2510
 Vietnam,2002,0.42,,gross,pc,FALSE,GSO Vietnam 2005 gross pc,General Statistics Office of Vietnam 2005,,http://www.gso.gov.vn/default_en.aspx?tabid=508&ItemID=2510
