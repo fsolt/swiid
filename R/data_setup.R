@@ -80,8 +80,8 @@ format_lis_xtra <- function(x) {
 lis_files <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",
                "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", 
                "in", "ie", "il", "it", "jp", "lt", "lu", "ml", "mx", "nl", "no", "pa", "py", 
-               "pe", "pl", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se", 
-               "ch", "tw", "uk", "us", "uy", "vn") # add "la" and "lv" when LIS releases data
+               "pe", "pl", "ps", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se", 
+               "ch", "tw", "uk", "us", "uy", "vn")
 
 lis <- lis_files %>% 
   map_df(format_lis) %>% 
@@ -372,7 +372,8 @@ wb <- read_csv(wb_link, show_col_types = FALSE) %>%
             series = paste("PIP", country, welfare_def, equiv_scale),
             source1 = "World Bank Poverty & Inequality Platform",
             page = "",
-            link = wb_link)
+            link = wb_link) %>% 
+  filter(!is.na(gini))
 
 
 ## National Statistics Offices
@@ -2382,8 +2383,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
               gini_cat_se = ifelse(n_obs == 1,
                                    gini_m_se,
                                    sqrt(mean(gini_m_se^2) + (1+1/n_obs)*var(gini_m))),
-              dplyr.summarise.inform = FALSE) %>%  # per Rubin (1987)
-    ungroup() %>% 
+              .groups = "drop") %>%  # per Rubin (1987)
     select(-n_obs) %>% 
     unite(wdes, welfare_def, equiv_scale) %>% 
     bind_rows(ineq %>%
@@ -2391,8 +2391,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
                 summarize(gini_cat = first(gini_b),
                           gini_cat_se = first(gini_b_se),
                           wdes = "baseline",
-                          dplyr.summarise.inform = FALSE) %>% 
-                ungroup())
+                          .groups = "drop"))
   
   
   ## Generate ratios
@@ -2469,12 +2468,12 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
   })
   
   rho_wd <- rho_wd0 %>% 
-    left_join(rho_wd_se, by = c("kcode", "tcode", "wd")) %>% 
+    bind_cols(rho_wd_se %>% select(rho_wd_se)) %>% 
     group_by(kcode, tcode, wd) %>%
-    summarize(rho_wd = max(rho_wd),
-              rho_wd_se = max(rho_wd_se),
-              dplyr.summarise.inform = FALSE) %>%
-    ungroup() %>%
+    summarize(rho_wd_se = sqrt(mean(rho_wd_se^2) +
+                (1 + 1/n()) * 1/(n() - 1) * sum((rho_wd - mean(rho_wd))^2)),
+              rho_wd = mean(rho_wd),
+              .groups = "drop") %>%
     left_join(ineq %>% select(country, year, kcode, tcode, rcode, kbl) %>% distinct(),
               by = c("kcode", "tcode")) %>% 
     left_join(wecodes %>% select("wd", "wcode") %>% distinct(), by = "wd") %>% 
@@ -2525,12 +2524,12 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
   })
   
   rho_es <- rho_es0 %>%
-    left_join(rho_es_se, by = c("kcode", "tcode", "es")) %>%
+    bind_cols(rho_es_se %>% select(rho_es_se)) %>% 
     group_by(kcode, tcode, es) %>%
-    summarize(rho_es = max(rho_es),
-              rho_es_se = max(rho_es_se),
-              dplyr.summarise.inform = FALSE) %>%
-    ungroup() %>%
+    summarize(rho_es_se = sqrt(mean(rho_es_se^2) +
+                                 (1 + 1/n()) * 1/(n() - 1) * sum((rho_es - mean(rho_es))^2)),
+              rho_es = mean(rho_es),
+              .groups = "drop") %>%
     left_join(ineq %>% select(country, year, kcode, tcode, rcode, kbl) %>% distinct(),
               by = c("kcode", "tcode")) %>%
     left_join(wecodes %>% select("es", "ecode") %>% distinct(), by = "es") %>%
@@ -2571,7 +2570,8 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
     arrange(desc(ibl), desc(bl), desc(s_bl_obs), desc(kbl), desc(kw), desc(ke), 
             desc(r_bl_obs), region, 
             desc(k_bl_obs), desc(country_obs), country,
-            wdes, series)
+            wdes, series) %>% 
+    filter(!is.na(rcode))
   
   return(list(ineq2, rho_we, rho_wd, ineq0))
 }
