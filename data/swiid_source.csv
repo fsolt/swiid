@@ -5840,7 +5840,6 @@ Egypt,2015,0.3182335813028051,,con,pc,FALSE,PIP Egypt con pc,World Bank Poverty 
 Egypt,2015,0.313,,con,pc,,UNESCWA2018 Egypt con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
 Egypt,2018,0.3153395276940044,,con,pc,FALSE,PIP Egypt con pc,World Bank Poverty & Inequality Platform,,https://api.worldbank.org/pip/v1/pip?country=all&year=all&povline=1.9&fill_gaps=false&welfare_type=all&reporting_level=national&format=csv
 Egypt,2019,0.31893558416107903,,con,pc,FALSE,PIP Egypt con pc,World Bank Poverty & Inequality Platform,,https://api.worldbank.org/pip/v1/pip?country=all&year=all&povline=1.9&fill_gaps=false&welfare_type=all&reporting_level=national&format=csv
-El Salvador,1989,,,gross,pc,FALSE,PIP El Salvador gross pc,World Bank Poverty & Inequality Platform,,https://api.worldbank.org/pip/v1/pip?country=all&year=all&povline=1.9&fill_gaps=false&welfare_type=all&reporting_level=national&format=csv
 El Salvador,1991,0.5395189798653132,,gross,pc,FALSE,PIP El Salvador gross pc,World Bank Poverty & Inequality Platform,,https://api.worldbank.org/pip/v1/pip?country=all&year=all&povline=1.9&fill_gaps=false&welfare_type=all&reporting_level=national&format=csv
 El Salvador,1995,0.507,,disp,pc,TRUE,CEPAL El Salvador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 El Salvador,1995,0.4987973706216128,,gross,pc,FALSE,PIP El Salvador gross pc,World Bank Poverty & Inequality Platform,,https://api.worldbank.org/pip/v1/pip?country=all&year=all&povline=1.9&fill_gaps=false&welfare_type=all&reporting_level=national&format=csv
@@ -8664,7 +8663,6 @@ Guatemala,1989,0.582,,disp,pc,TRUE,CEPAL Guatemala disp pc 1,CEPALStat,National,
 Guatemala,1989,0.54,,gross,hh,FALSE,CEPAL SDI Guatemala gross hh ENSD,CEPAL Serie Distribucion del Ingreso 13 (1993),,http://hdl.handle.net/11362/9453
 Guatemala,1989,0.5959877403519491,,gross,pc,FALSE,PIP Guatemala gross pc,World Bank Poverty & Inequality Platform,,https://api.worldbank.org/pip/v1/pip?country=all&year=all&povline=1.9&fill_gaps=false&welfare_type=all&reporting_level=national&format=csv
 Guatemala,1998,0.56,,disp,pc,TRUE,CEPAL Guatemala disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Guatemala,1998,,,gross,pc,FALSE,PIP Guatemala gross pc,World Bank Poverty & Inequality Platform,,https://api.worldbank.org/pip/v1/pip?country=all&year=all&povline=1.9&fill_gaps=false&welfare_type=all&reporting_level=national&format=csv
 Guatemala,2000,0.636,,disp,pc,TRUE,CEPAL Guatemala disp pc 1,CEPALStat,,https://api-cepalstat.cepal.org//cepalstat/api/v1/indicator/3289/data
 Guatemala,2000,0.476,,con,pc,,INE2002 con pc,Instituto Nacional de Estadi_stica de Guatemala 2002,20,https://www.ine.gob.gt/sistema/uploads/2014/01/15/v8ukWQ78M4VJrnYqyN2oCumMy1GiBzaf.pdf
 Guatemala,2000,0.57,,gross,pc,,INE2002 gross pc,Instituto Nacional de Estadi_stica de Guatemala 2002,20,https://www.ine.gob.gt/sistema/uploads/2014/01/15/v8ukWQ78M4VJrnYqyN2oCumMy1GiBzaf.pdf
@@ -8777,7 +8775,6 @@ Guinea,2012,0.317,,con,pc,,INS Guinea con pc,Institut National de la Statistique
 Guinea,2012,0.3372970464882602,,con,pc,FALSE,PIP Guinea con pc,World Bank Poverty & Inequality Platform,,https://api.worldbank.org/pip/v1/pip?country=all&year=all&povline=1.9&fill_gaps=false&welfare_type=all&reporting_level=national&format=csv
 Guinea,2012,0.33490000000000003,,con,sqrt,FALSE,World Bank Africa Poverty Database Guinea con sqrt,"Personal communication, K. Beegle, 2016-08-01",,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
 Guinea,2018,0.2959195300100971,,con,pc,FALSE,PIP Guinea con pc,World Bank Poverty & Inequality Platform,,https://api.worldbank.org/pip/v1/pip?country=all&year=all&povline=1.9&fill_gaps=false&welfare_type=all&reporting_level=national&format=csv
-Guinea-Bissau,1991,,,con,pc,FALSE,PIP Guinea-Bissau con pc,World Bank Poverty & Inequality Platform,,https://api.worldbank.org/pip/v1/pip?country=all&year=all&povline=1.9&fill_gaps=false&welfare_type=all&reporting_level=national&format=csv
 Guinea-Bissau,1993,0.4361022630012482,,con,pc,FALSE,PIP Guinea-Bissau con pc,World Bank Poverty & Inequality Platform,,https://api.worldbank.org/pip/v1/pip?country=all&year=all&povline=1.9&fill_gaps=false&welfare_type=all&reporting_level=national&format=csv
 Guinea-Bissau,2002,0.36,,con,pc,,INE Guinea-Bissau con pc,Instituto Nacional de Estati_stica Guinea-Bissau 2014,13,http://www.stat-guinebissau.com/nada41/index.php/catalog/7/download/34
 Guinea-Bissau,2002,0.3556974589468559,,con,pc,FALSE,PIP Guinea-Bissau con pc,World Bank Poverty & Inequality Platform,,https://api.worldbank.org/pip/v1/pip?country=all&year=all&povline=1.9&fill_gaps=false&welfare_type=all&reporting_level=national&format=csv
@@ -8788,7 +8785,6 @@ Guinea-Bissau,2010,0.506642398909958,,con,pc,FALSE,PIP Guinea-Bissau con pc,Worl
 Guinea-Bissau,2010,0.48950000000000005,,con,sqrt,FALSE,World Bank Africa Poverty Database Guinea-Bissau con sqrt,"Personal communication, K. Beegle, 2016-08-01",,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
 Guinea-Bissau,2018,0.34765230396273794,,con,pc,FALSE,PIP Guinea-Bissau con pc,World Bank Poverty & Inequality Platform,,https://api.worldbank.org/pip/v1/pip?country=all&year=all&povline=1.9&fill_gaps=false&welfare_type=all&reporting_level=national&format=csv
 Guyana,1992,0.399,,con,pc,,GIDD Guyana con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008",,https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
-Guyana,1992,,,gross,pc,FALSE,PIP Guyana gross pc,World Bank Poverty & Inequality Platform,,https://api.worldbank.org/pip/v1/pip?country=all&year=all&povline=1.9&fill_gaps=false&welfare_type=all&reporting_level=national&format=csv
 Guyana,1993,0.467,,con,pc,,Gafar2004,Gafar 2004,66,http://www.jstor.org/stable/20066694
 Guyana,1998,0.45118141677334944,,gross,pc,FALSE,PIP Guyana gross pc,World Bank Poverty & Inequality Platform,,https://api.worldbank.org/pip/v1/pip?country=all&year=all&povline=1.9&fill_gaps=false&welfare_type=all&reporting_level=national&format=csv
 Guyana,1999,0.421,,con,pc,,Gafar2004,Gafar 2004,66,http://www.jstor.org/stable/20066694
@@ -8973,7 +8969,7 @@ Hong Kong,2016,0.473,,disp,hh,FALSE,Statistics Hong Kong disp hh,Statistics Hong
 Hong Kong,2016,0.42,,disp,pc,FALSE,Statistics Hong Kong disp pc,Statistics Hong Kong 2017,KeyStat2,https://www.bycensus2016.gov.hk/data/16BC_Income_Report_Key_Statistics.xlsx
 Hong Kong,2016,0.539,,market,hh,FALSE,Statistics Hong Kong market hh,Statistics Hong Kong 2017,KeyStat2,https://www.bycensus2016.gov.hk/data/16BC_Income_Report_Key_Statistics.xlsx
 Hong Kong,2016,0.499,,market,pc,FALSE,Statistics Hong Kong market pc,Statistics Hong Kong 2017,KeyStat2,https://www.bycensus2016.gov.hk/data/16BC_Income_Report_Key_Statistics.xlsx
-Hong Kong,2021,0.397,,pc,disp,,Statistics Hong Kong disp pc,Statistics Hong Kong 2023,Figure 6.1,https://www.censtatd.gov.hk/en/data/stat_report/product/B1120108/att/B11201082021XXXXB01.xlsx
+Hong Kong,2021,0.397,,disp,pc,,Statistics Hong Kong disp pc,Statistics Hong Kong 2023,Figure 6.1,https://www.censtatd.gov.hk/en/data/stat_report/product/B1120108/att/B11201082021XXXXB01.xlsx
 Hungary,1962,0.257,,disp,pc,FALSE,AM1992 Hungary disp pc,Atkinson and Micklewright 1992,HI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Hungary,1967,0.227,,disp,pc,FALSE,AM1992 Hungary disp pc,Atkinson and Micklewright 1992,HI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Hungary,1972,0.236,,disp,pc,FALSE,AM1992 Hungary disp pc,Atkinson and Micklewright 1992,HI1,https://books.google.com/books?id=zaL4CGdjOkUC
@@ -13957,7 +13953,6 @@ Myanmar,2015,0.38068509204741807,,con,pc,FALSE,PIP Myanmar con pc,World Bank Pov
 Myanmar,2017,0.306968695324388,,con,pc,FALSE,PIP Myanmar con pc,World Bank Poverty & Inequality Platform,,https://api.worldbank.org/pip/v1/pip?country=all&year=all&povline=1.9&fill_gaps=false&welfare_type=all&reporting_level=national&format=csv
 Namibia,1993,0.743,,con,pc,,FR2008 Namibia con pc,Ferreira and Ravallion 2008,38,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Namibia,1994,0.6455,0.0174,con,ae,,NSA Namibia con ae,Namibia Statistics Agency 2012,33,http://cms.my.na/assets/documents/p19dnar71kanl1vfo14gu5rpbkq1.pdf
-Namibia,1994,,,gross,pc,FALSE,PIP Namibia gross pc,World Bank Poverty & Inequality Platform,,https://api.worldbank.org/pip/v1/pip?country=all&year=all&povline=1.9&fill_gaps=false&welfare_type=all&reporting_level=national&format=csv
 Namibia,2004,0.6003,0.0117,con,ae,,NSA Namibia con ae,Namibia Statistics Agency 2012,33,http://cms.my.na/assets/documents/p19dnar71kanl1vfo14gu5rpbkq1.pdf
 Namibia,2004,0.633187597932559,,con,pc,FALSE,PIP Namibia con pc,World Bank Poverty & Inequality Platform,,https://api.worldbank.org/pip/v1/pip?country=all&year=all&povline=1.9&fill_gaps=false&welfare_type=all&reporting_level=national&format=csv
 Namibia,2004,0.5789,,con,sqrt,FALSE,World Bank Africa Poverty Database Namibia con sqrt,"Personal communication, K. Beegle, 2016-08-01",,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
@@ -17560,7 +17555,6 @@ Seychelles,2013,0.4682278790821791,,gross,pc,FALSE,PIP Seychelles gross pc,World
 Seychelles,2018,0.3212531971098883,,gross,pc,FALSE,PIP Seychelles gross pc,World Bank Poverty & Inequality Platform,,https://api.worldbank.org/pip/v1/pip?country=all&year=all&povline=1.9&fill_gaps=false&welfare_type=all&reporting_level=national&format=csv
 Sierra Leone,1969,0.44,,disp,hh,,vGP1984 Sierra Leone disp hh,Tabatabai 1996; van Ginneken and Park 1984,86,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Sierra Leone,1989,0.63,,con,pc,,FR2008 Sierra Leone con pc,Ferreira and Ravallion 2008,39,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
-Sierra Leone,1990,,,con,pc,FALSE,PIP Sierra Leone con pc,World Bank Poverty & Inequality Platform,,https://api.worldbank.org/pip/v1/pip?country=all&year=all&povline=1.9&fill_gaps=false&welfare_type=all&reporting_level=national&format=csv
 Sierra Leone,2003,0.40167732000472545,,con,pc,FALSE,PIP Sierra Leone con pc,World Bank Poverty & Inequality Platform,,https://api.worldbank.org/pip/v1/pip?country=all&year=all&povline=1.9&fill_gaps=false&welfare_type=all&reporting_level=national&format=csv
 Sierra Leone,2003,0.3992,,con,sqrt,FALSE,World Bank Africa Poverty Database Sierra Leone con sqrt,"Personal communication, K. Beegle, 2016-08-01",,https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv
 Sierra Leone,2005,0.422,,con,pc,,GIDD Sierra Leone con pc,"Ackah, Bussolo, De Hoyos, and Medvedev 2008",,https://github.com/fsolt/swiid/raw/master/data-raw/GlobalDistStata.zip
