@@ -16883,6 +16883,10 @@ Puerto Rico,2013,0.547,0.0072,gross,hh,TRUE,USCB Puerto Rico gross hh,U.S. Censu
 Puerto Rico,2014,0.5472,0.0067,gross,hh,TRUE,USCB Puerto Rico gross hh,U.S. Census Bureau,,https://factfinder.census.gov/bkmk/table/1.0/en/ACS/14_1YR/B19083/0400000US72
 Puerto Rico,2015,0.5589,0.0077,gross,hh,TRUE,USCB Puerto Rico gross hh,U.S. Census Bureau,,https://factfinder.census.gov/bkmk/table/1.0/en/ACS/15_1YR/B19083/0400000US72
 Puerto Rico,2016,0.5419,0.0073,gross,hh,TRUE,USCB Puerto Rico gross hh,U.S. Census Bureau,,https://factfinder.census.gov/bkmk/table/1.0/en/ACS/16_1YR/B19083/0400000US72
+Puerto Rico,2017,0.5512,0.0092,gross,hh,TRUE,USCB Puerto Rico gross hh,U.S. Census Bureau,,https://data.census.gov/table?q=gini+Puerto+Rico+2017&tid=ACSDT1Y2017.B19083
+Puerto Rico,2018,0.5424,0.0082,gross,hh,TRUE,USCB Puerto Rico gross hh,U.S. Census Bureau,,https://data.census.gov/table?q=gini+Puerto+Rico+2018&tid=ACSDT1Y2018.B19083
+Puerto Rico,2019,0.5509,0.0069,gross,hh,TRUE,USCB Puerto Rico gross hh,U.S. Census Bureau,,https://data.census.gov/table?q=gini+Puerto+Rico+2019&tid=ACSDT1Y2019.B19083
+Puerto Rico,2021,0.5423,0.0074,gross,hh,TRUE,USCB Puerto Rico gross hh,U.S. Census Bureau,,https://data.census.gov/table?q=gini+Puerto+Rico+2021&tid=ACSDT1Y2021.B19083
 Qatar,1988,0.379,,con,pc,,Park1995 Qatar con pc,Tabatabai 1996; Park 1995,110,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Qatar,2007,0.411,,con,pc,,Shaban2016 Qatar con pc,Povcalnet; Shaban 2016,196,https://link.springer.com/chapter/10.1057/9781137554598_6
 Qatar,2013,0.404,,disp,oecdm,,MDPS Qatar disp oecdm,Ministry of Development Planning and Statistics Qatar 2014,43-3,http://www.mdps.gov.qa/en/statistics/Surveys/Household_Expenditure_Eng.pdf
