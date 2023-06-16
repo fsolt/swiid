@@ -2470,8 +2470,11 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
   rho_wd <- rho_wd0 %>% 
     bind_cols(rho_wd_se %>% select(rho_wd_se)) %>% 
     group_by(kcode, tcode, wd) %>%
-    summarize(rho_wd_se = sqrt(mean(rho_wd_se^2) +
-                (1 + 1/n()) * 1/(n() - 1) * sum((rho_wd - mean(rho_wd))^2)),
+    summarize(rho_wd_se0 = mean(rho_wd_se),
+              rho_wd_se = ifelse(n() > 1,
+                                 sqrt(mean(rho_wd_se^2) +
+                                        (1 + 1/n()) * (1/(n() - 1)) * sum((rho_wd - mean(rho_wd))^2)),
+                                 mean(rho_wd_se)),
               rho_wd = mean(rho_wd),
               .groups = "drop") %>%
     left_join(ineq %>% select(country, year, kcode, tcode, rcode, kbl) %>% distinct(),
