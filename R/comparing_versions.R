@@ -1,13 +1,26 @@
 library(tidyverse)
 
-penultimate0 <- "swiid_summary92"
+penultimate <- "swiid9_4"
 
 swiid_summary_latest <- "data/swiid_summary.csv" %>% 
   read_csv(col_types = "cddddddddd") %>% 
   mutate(decade = floor(year/10) * 10)
-swiid_summary92 <- "https://raw.githubusercontent.com/fsolt/swiid/160428c9b0797bf5d94daf4fd287f713d3ae3aaf/data/swiid_summary.csv" %>%
+swiid_summary_last <- file.path("release",
+                                penultimate,
+                                paste0(penultimate,
+                                       "_summary.csv")) %>%
   read_csv(col_types = "cddddddddd") %>%
   mutate(decade = floor(year/10) * 10)
+ 
+swiid_summary94 <- "https://raw.githubusercontent.com/fsolt/swiid/1a5dcc286e213e6ff1d315bdafc8bae3c0065514/data/swiid_summary.csv" %>% 
+    read_csv(col_types = "cddddddddd") %>%
+    mutate(decade = floor(year/10) * 10)
+# swiid_summary93 <- "https://github.com/fsolt/swiid/raw/47f86801bb626c0777a5ecef98defd5f3eecab73/data/swiid_summary.csv" %>%
+#   read_csv(col_types = "cddddddddd") %>%
+#   mutate(decade = floor(year/10) * 10)
+# swiid_summary92 <- "https://raw.githubusercontent.com/fsolt/swiid/160428c9b0797bf5d94daf4fd287f713d3ae3aaf/data/swiid_summary.csv" %>%
+#   read_csv(col_types = "cddddddddd") %>%
+#   mutate(decade = floor(year/10) * 10)
 # swiid_summary91 <- "https://raw.githubusercontent.com/fsolt/swiid/d884b45fea1309d69c879964e6343dbb148753d6/data/swiid_summary.csv" %>% 
 #   read_csv(col_types = "cddddddddd") %>% 
 #   mutate(decade = floor(year/10) * 10)
@@ -33,13 +46,12 @@ swiid_summary71 <- "https://github.com/fsolt/swiid/raw/master/data/swiid7_1_summ
   # read_csv(col_types = "cddddddddd") %>% 
   # mutate(decade = floor(year/10) * 10)
 
-penultimate <- get(penultimate0)
 
 # Merge data, calculate within country-year differences across versions
 swiid_latest_83_71 <- swiid_summary_latest %>% 
   select(country, year, decade, gini_disp) %>% 
   rename(gini_latest = gini_disp) %>% 
-  left_join(penultimate %>%
+  left_join(swiid_summary_last %>%
               select(country, year, decade, gini_disp) %>% 
               rename(last = gini_disp),
             by = c("country", "year", "decade")) %>% 
@@ -76,7 +88,7 @@ swiid_latest_83_71_mkt <- swiid_summary_latest %>%
   mutate(decade = floor(year/10) * 10) %>% 
   select(country, year, decade, gini_mkt) %>% 
   rename(gini_latest = gini_mkt) %>% 
-  left_join(penultimate %>%
+  left_join(swiid_summary_last %>%
               select(country, year, decade, gini_mkt) %>% 
               rename(last = gini_mkt),
             by = c("country", "year", "decade")) %>% 
@@ -109,7 +121,8 @@ swiid_latest_83_71_mkt %>%
   summarize_at(vars(starts_with("v")), mean, na.rm = TRUE) 
 
 swiid_source_latest <- read_csv("data/swiid_source.csv", col_types = "cdddcclcccc")
-swiid_source_last <- read_csv("https://github.com/fsolt/swiid/raw/160428c9b0797bf5d94daf4fd287f713d3ae3aaf/data/swiid_source.csv", col_types = "cdddcclcccc")
+swiid_source93 <- read_csv("https://github.com/fsolt/swiid/blob/07b5b78ecb6450bacd8f2ca138fd5ee7fde14cdc/data/swiid_source.csv?raw=true", col_types = "cdddcclcccc")
+swiid_source92 <- read_csv("https://github.com/fsolt/swiid/raw/160428c9b0797bf5d94daf4fd287f713d3ae3aaf/data/swiid_source.csv", col_types = "cdddcclcccc")
 swiid_source91 <- read_csv("https://github.com/fsolt/swiid/blob/7ced9cfb2e229be5e95d0bd0fe15aeb0e19a6015/data/swiid_source.csv?raw=true", col_types = "cdddcclcccc")
 swiid_source83 <- read_csv("https://github.com/fsolt/swiid/raw/227cf225cf43de6d01a58df2a6be9a9b86a213e6/data/swiid_source.csv", col_types = "cdddcclcccc")
 # swiid_source82 <- read_csv("https://github.com/fsolt/swiid/raw/f099f92aaf335554844b2af6df77bc5e8db47fd7/data/swiid_source.csv", col_types = "cdddcclcccc")
@@ -185,5 +198,5 @@ check_source2 <- function(cc) {
   anti_join(country_source_last[, 1:10], country_source_latest[, 1:10])
 }
 
-View(check_source("Colombia"))
-View(check_source2("Colombia"))
+View(check_source("Lebanon"))
+View(check_source2("Lebanon"))
