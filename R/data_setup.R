@@ -1842,7 +1842,7 @@ rm(tuik_list, tuik_hh, tuik_oecdm)
 
 # U.K. Office for National Statistics (update links; join with latest file last)
 # https://www.ons.gov.uk/atoz?query=effects+taxes+benefits (new releases in April and January)
-ons_link <- "https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/datasets/theeffectsoftaxesandbenefitsonhouseholdincomefinancialyearending2014/financialyearending2021/etbtables202021.xlsx"
+ons_link <- "https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/datasets/theeffectsoftaxesandbenefitsonhouseholdincomefinancialyearending2014/financialyearending2022/etbreferencetablesfye2022correction.xlsx"
 download.file(ons_link, "data-raw/ons.xlsx")
 
 ons <- read_excel("data-raw/ons.xlsx", sheet = "Table 6a", skip = 3) %>% 
@@ -1908,16 +1908,15 @@ ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3,
 # https://www.cbo.gov/search?search=gini >
 # The Distribution of Household Income, 20xx >
 # Data Underlying Exhibits
-cbo_link <- "https://www.cbo.gov/system/files/2022-11/58353_data_underlying_exhibits.xlsx"
+cbo_link <- "https://www.cbo.gov/system/files/2023-11/59509_data.xlsx"
 download.file(cbo_link, "data-raw/cbo.xlsx")
 
-cbo <- read_excel("data-raw/cbo.xlsx", sheet = "Exhibit 22", col_names = FALSE, skip = 8,
+cbo <- read_excel("data-raw/cbo.xlsx", sheet = "Figure 12", col_names = FALSE, skip = 8,
                   .name_repair = ~ make.names(.x, unique = TRUE)) %>% 
   filter(!is.na(as.numeric(X)) & !is.na(X.1)) %>% 
   transmute(year = as.numeric(X),
             market = as.numeric(X.1),
-            gross = as.numeric(X.3),
-            disp = as.numeric(X.4)) %>% 
+            disp = as.numeric(X.3)) %>% 
   filter(!is.na(year)) %>% 
   gather(key = welfare_def, 
          value = gini,
@@ -1936,7 +1935,7 @@ cbo <- read_excel("data-raw/cbo.xlsx", sheet = "Exhibit 22", col_names = FALSE, 
 # https://www.census.gov/topics/income-poverty/income-inequality/data/data-tables.html
 # Selected Measures of Household Income Dispersion:  1967 to 20xx																																																			
 # Selected Measures of Equivalence-Adjusted Income Dispersion: 1967 to 20xx																																																			
-uscb_links <- paste0("https://www2.census.gov/programs-surveys/demo/tables/p60/276/tableA", 4:5, ".xlsx")
+uscb_links <- paste0("https://www2.census.gov/programs-surveys/demo/tables/p60/279/tableA", 4:5, ".xlsx")
 download.file(uscb_links[1], "data-raw/uscb_hh.xlsx")
 download.file(uscb_links[2], "data-raw/uscb_ae.xlsx")
 
