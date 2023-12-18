@@ -144,7 +144,7 @@ format_sedlac <- function(df, sheet, link, es) {
   return(x)
 }
 
-sedlac_link <- "https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2022_inequality_LAC.xlsx"
+sedlac_link <- "https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2023_inequality_LAC.xlsx"
 download.file(sedlac_link, "data-raw/sedlac.xlsx")
 
 sedlac_pc <- read_excel(path = "data-raw/sedlac.xlsx", 
