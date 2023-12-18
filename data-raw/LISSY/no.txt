@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 1091273 no
-Date: June 15, 2023 at 12:03:25 AM CDT
+Subject: job 1159636 no
+Date: December 18, 2023 at 11:38:33 AM CST
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -386,27 +386,48 @@ no19h,con_ae,NaN,NA,110
 [1] "Loading dataset no20h..."
 no20h,market_hh,0.5771,7e-04,110
 no20h,market_sqrt,0.4788,8e-04,110
-no20h,market_pc,0.4965,7e-04,110
+no20h,market_pc,0.4964,7e-04,110
 no20h,market_oecdm,0.476,8e-04,110
 no20h,market_ae,0.4801,8e-04,110
-no20h,gross_hh,0.3934,6e-04,110
-no20h,gross_sqrt,0.3026,6e-04,110
-no20h,gross_pc,0.3106,6e-04,110
-no20h,gross_oecdm,0.2951,7e-04,110
-no20h,gross_ae,0.2947,6e-04,110
-no20h,disp_hh,0.3588,5e-04,110
-no20h,disp_sqrt,0.2623,5e-04,110
-no20h,disp_pc,0.2752,6e-04,110
-no20h,disp_oecdm,0.254,6e-04,110
-no20h,disp_ae,0.2545,5e-04,110
+no20h,gross_hh,0.3938,6e-04,110
+no20h,gross_sqrt,0.3031,6e-04,110
+no20h,gross_pc,0.311,6e-04,110
+no20h,gross_oecdm,0.2956,7e-04,110
+no20h,gross_ae,0.2951,6e-04,110
+no20h,disp_hh,0.359,5e-04,110
+no20h,disp_sqrt,0.2628,5e-04,110
+no20h,disp_pc,0.2756,6e-04,110
+no20h,disp_oecdm,0.2544,6e-04,110
+no20h,disp_ae,0.255,5e-04,110
 no20h,con_hh,NaN,NA,110
 no20h,con_sqrt,NaN,NA,110
 no20h,con_pc,NaN,NA,110
 no20h,con_oecdm,NaN,NA,110
 no20h,con_ae,NaN,NA,110
+[1] "Loading dataset no21h..."
+no21h,market_hh,0.5877,7e-04,110
+no21h,market_sqrt,0.4923,8e-04,110
+no21h,market_pc,0.5092,8e-04,110
+no21h,market_oecdm,0.4893,9e-04,110
+no21h,market_ae,0.4934,7e-04,110
+no21h,gross_hh,0.4066,7e-04,110
+no21h,gross_sqrt,0.3178,7e-04,110
+no21h,gross_pc,0.3236,6e-04,110
+no21h,gross_oecdm,0.3101,6e-04,110
+no21h,gross_ae,0.309,7e-04,110
+no21h,disp_hh,0.3731,5e-04,110
+no21h,disp_sqrt,0.2786,6e-04,110
+no21h,disp_pc,0.2887,6e-04,110
+no21h,disp_oecdm,0.27,6e-04,110
+no21h,disp_ae,0.2698,6e-04,110
+no21h,con_hh,NaN,NA,110
+no21h,con_sqrt,NaN,NA,110
+no21h,con_pc,NaN,NA,110
+no21h,con_oecdm,NaN,NA,110
+no21h,con_ae,NaN,NA,110
 > 
 > proc.time()
     user   system  elapsed 
-2186.188   13.800 2320.111 
+1778.181   17.779 1935.759 
 
 

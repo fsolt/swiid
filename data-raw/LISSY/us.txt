@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 1091297 us
-Date: June 15, 2023 at 1:56:38 AM CDT
+Subject: job 1159671 us
+Date: December 18, 2023 at 1:22:10 PM CST
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -1195,16 +1195,16 @@ us21h,market_sqrt,0.5338,0.0023,120
 us21h,market_pc,0.5576,0.0023,120
 us21h,market_oecdm,0.5372,0.0023,120
 us21h,market_ae,0.5435,0.0024,120
-us21h,gross_hh,0.4795,0.0018,120
-us21h,gross_sqrt,0.4345,0.0024,120
-us21h,gross_pc,0.457,0.002,120
-us21h,gross_oecdm,0.4362,0.0023,120
-us21h,gross_ae,0.4419,0.002,120
-us21h,disp_hh,0.4382,0.0019,120
-us21h,disp_sqrt,0.39,0.002,120
-us21h,disp_pc,0.416,0.0019,120
-us21h,disp_oecdm,0.3916,0.0019,120
-us21h,disp_ae,0.3982,0.0019,120
+us21h,gross_hh,0.4673,0.0018,120
+us21h,gross_sqrt,0.4184,0.0024,120
+us21h,gross_pc,0.4414,0.002,120
+us21h,gross_oecdm,0.42,0.0023,120
+us21h,gross_ae,0.4257,0.002,120
+us21h,disp_hh,0.4246,0.0019,120
+us21h,disp_sqrt,0.3715,0.002,120
+us21h,disp_pc,0.398,0.0019,120
+us21h,disp_oecdm,0.3727,0.0019,120
+us21h,disp_ae,0.3794,0.0019,120
 us21h,con_hh,NaN,NA,120
 us21h,con_sqrt,NaN,NA,120
 us21h,con_pc,NaN,NA,120
@@ -1213,6 +1213,6 @@ us21h,con_ae,NaN,NA,120
 > 
 > proc.time()
     user   system  elapsed 
-4491.630   28.693 4915.870 
+3344.130   26.237 3763.889 
 
 

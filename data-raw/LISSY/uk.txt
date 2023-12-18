@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 1091296 uk
-Date: June 15, 2023 at 1:01:10 AM CDT
+Subject: job 1159669 uk
+Date: December 18, 2023 at 12:37:19 PM CST
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -1153,24 +1153,45 @@ uk20h,market_sqrt,0.5328,0.0056,110
 uk20h,market_pc,0.5522,0.0058,110
 uk20h,market_oecdm,0.5354,0.0066,110
 uk20h,market_ae,0.54,0.0054,110
-uk20h,gross_hh,0.3957,0.0041,110
-uk20h,gross_sqrt,0.3445,0.0044,110
-uk20h,gross_pc,0.3597,0.0046,110
-uk20h,gross_oecdm,0.3426,0.0043,110
-uk20h,gross_ae,0.3453,0.0043,110
-uk20h,disp_hh,0.3576,0.0035,110
-uk20h,disp_sqrt,0.305,0.0044,110
+uk20h,gross_hh,0.3955,0.0041,110
+uk20h,gross_sqrt,0.3449,0.0044,110
+uk20h,gross_pc,0.3603,0.0046,110
+uk20h,gross_oecdm,0.3431,0.0043,110
+uk20h,gross_ae,0.3459,0.0043,110
+uk20h,disp_hh,0.3565,0.0035,110
+uk20h,disp_sqrt,0.3047,0.0045,110
 uk20h,disp_pc,0.3279,0.0044,110
-uk20h,disp_oecdm,0.3025,0.0041,110
-uk20h,disp_ae,0.3078,0.0038,110
+uk20h,disp_oecdm,0.3023,0.004,110
+uk20h,disp_ae,0.3077,0.0038,110
 uk20h,con_hh,NaN,NA,110
 uk20h,con_sqrt,NaN,NA,110
 uk20h,con_pc,NaN,NA,110
 uk20h,con_oecdm,NaN,NA,110
 uk20h,con_ae,NaN,NA,110
+[1] "Loading dataset uk21h..."
+uk21h,market_hh,0.5978,0.0036,110
+uk21h,market_sqrt,0.532,0.0044,110
+uk21h,market_pc,0.554,0.0043,110
+uk21h,market_oecdm,0.5341,0.0047,110
+uk21h,market_ae,0.5399,0.0042,110
+uk21h,gross_hh,0.3985,0.0035,110
+uk21h,gross_sqrt,0.3454,0.004,110
+uk21h,gross_pc,0.3617,0.0036,110
+uk21h,gross_oecdm,0.3429,0.0034,110
+uk21h,gross_ae,0.3463,0.003,110
+uk21h,disp_hh,0.3584,0.0029,110
+uk21h,disp_sqrt,0.3026,0.0032,110
+uk21h,disp_pc,0.3248,0.0031,110
+uk21h,disp_oecdm,0.2992,0.003,110
+uk21h,disp_ae,0.3045,0.0029,110
+uk21h,con_hh,NaN,NA,110
+uk21h,con_sqrt,NaN,NA,110
+uk21h,con_pc,NaN,NA,110
+uk21h,con_oecdm,NaN,NA,110
+uk21h,con_ae,NaN,NA,110
 > 
 > proc.time()
     user   system  elapsed 
-1335.366   23.037 1750.061 
+ 906.756   15.105 1321.997 
 
 

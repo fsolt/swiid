@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 1091252 fr
-Date: June 14, 2023 at 10:23:17 PM CDT
+Subject: job 1159591 fr
+Date: December 18, 2023 at 10:03:12 AM CST
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -730,6 +730,6 @@ fr18h,con_ae,NaN,NA,100
 > 
 > proc.time()
     user   system  elapsed 
-1850.720   15.175 2103.946 
+1246.567   12.231 1439.920 
 
 
