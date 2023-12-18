@@ -663,7 +663,7 @@ dane <- read_excel("data-raw/dane.xlsx", sheet = "Gini", skip = 14) %>%
 # Costa Rica (update link)
 # https://inec.cr/es/tematicas/listado?filtertext=gini
 # ENAHO. 202x. Coeficiente de Gini por hogar y per cápita, julio 2010 - 202x.
-ineccr_link <- "https://admin.inec.cr/sites/default/files/2022-12/repobrezaenaho2010-2022-01_gini.xlsx"
+ineccr_link <- "https://admin.inec.cr/sites/default/files/2023-11/repobrezaenaho2010-2023-01_gini.xlsx"
   
 download.file(ineccr_link, "data-raw/ineccr.xlsx")
 
