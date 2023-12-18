@@ -751,14 +751,14 @@ statee_con <- pxweb_get(url = statee_con_url,
 
 statee_url <- "https://andmed.stat.ee/api/v1/en/stat/LES25"
 statee <- pxweb_get(url = statee_url,
-                    query = list("Näitaja"=c("6"),
-                                 "Aasta"=c("*"),
-                                 "Rahvus/kodakondsus"=c("1"))) %>% 
+                    query = list("Näitaja"=c("GINI"),
+                                 "Vaatlusperiood"=c("*"),
+                                 "Isikute rühm"=c("EST_NEST"))) %>% 
   as.data.frame(column.name.type = "text", variable.value.type = "text") %>% 
   rename_with(~ tolower(str_replace(.x, ":.*", ""))) %>% 
   filter(!is.na(les25)) %>% 
   transmute(country = "Estonia",
-            year = as.numeric(year),
+            year = as.numeric(`reference period`),
             gini = as.numeric(les25),
             gini_se = NA,
             welfare_def = "disp",
