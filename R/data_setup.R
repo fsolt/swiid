@@ -521,7 +521,23 @@ inebo <- read_excel("data-raw/inebo.xlsx", skip = 3) %>%
   filter(!is.na(gini))
 
 
-# IPEA Brazil (update file; currently to 2014)
+# IPEA Brazil (1976-2014, archived)
+ipea0 <- read_csv("data-raw/ipea0.csv", skip = 1) %>% 
+    select(matches("\\d{4}")) %>% 
+    gather(key = year, value = gini) %>% 
+    transmute(country = "Brazil",
+              year = as.numeric(year),
+              gini = gini,
+              gini_se = NA,
+              welfare_def = "gross",
+              equiv_scale = "pc",
+              monetary = FALSE,
+              series = paste("IPEA Brazil", welfare_def, equiv_scale, "1"),
+              source1 = "Instituto de Pesquisa Económica Aplicada",
+              page = "",
+              link = "http://www.ipeadata.gov.br")
+
+# IPEA Brazil (update file)
 # http://www.ipeadata.gov.br > [Tab] Social > Temas > Renda
 ipea <- read_csv("data-raw/ipea.csv", skip = 1) %>% 
   select(matches("\\d{4}")) %>% 
@@ -533,11 +549,12 @@ ipea <- read_csv("data-raw/ipea.csv", skip = 1) %>%
             welfare_def = "gross",
             equiv_scale = "pc",
             monetary = FALSE,
-            series = paste("IPEA Brazil", welfare_def, equiv_scale),
+            series = paste("IPEA Brazil", welfare_def, equiv_scale, "2"),
             source1 = "Instituto de Pesquisa Económica Aplicada",
             page = "",
-            link = "http://www.ipeadata.gov.br")
-
+            link = "http://www.ipeadata.gov.br") %>% 
+    bind_rows(ipea0) %>% 
+    arrange(country, year)
 
 # Belarus National Statistical Committee (update file)
 belstat_link <- "http://dataportal.belstat.gov.by/Indicators/Preview?key=228371#"
@@ -563,7 +580,7 @@ belstat <- read_excel("data-raw/belstat.xls", skip = 1) %>%
 get_statcan <- function(pid) {
   filename <- paste0(pid, "-eng.zip")
   link <- paste0("https://www150.statcan.gc.ca/n1/tbl/csv/", filename)
-  statcan_zip <- html_session(link)
+  statcan_zip <- session(link)
   statcan_temp <- tempfile(fileext = ".zip")
   writeBin(statcan_zip$response$content, statcan_temp)
   statcan_data <- suppressMessages(read_csv(unz(statcan_temp, paste0(pid, ".csv")), 
