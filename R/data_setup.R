@@ -617,12 +617,31 @@ statcan <- get_statcan(11100134) %>%
             link = link)
 
 
-# DANE Colombia (update link and file; site throws 403 error to R)
+# DANE Colombia (update link)
 # https://www.dane.gov.co/index.php/estadisticas-por-tema/pobreza-y-condiciones-de-vida/pobreza-monetaria >
 # Anexo pobreza monetaria nacional > Descargar
-dane_link <- "https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls"
+dane0_link <- "https://www.dane.gov.co/files/investigaciones/condiciones_vida/pobreza/2021/anexo_pobreza_monetaria_21_nacional.xls"
 
-dane <- read_excel("data-raw/dane.xls", sheet = "Gini", skip = 14) %>% 
+dane0 <- read_excel("data-raw/dane.xls", sheet = "Gini", skip = 14) %>% 
+    rename(region = 1) %>% 
+    filter(region == "Nacional") %>% 
+    gather(key = year, value = gini, -region) %>% 
+    transmute(country = "Colombia",
+              year = as.numeric(year),
+              gini = gini,
+              gini_se = NA,
+              welfare_def = "gross",
+              equiv_scale = "pc",
+              monetary = FALSE,
+              series = paste("DANE Colombia", welfare_def, equiv_scale, "1"),
+              source1 = "Departamento Administrativo Nacional de Estadística Colombia",
+              page = "",
+              link = dane0_link)
+
+dane_link <- "https://www.dane.gov.co/files/operaciones/PM/anex-PM-TotalNacional-2022.xlsx"
+download.file(dane_link, "data-raw/dane.xlsx")
+
+dane <- read_excel("data-raw/dane.xlsx", sheet = "Gini", skip = 14) %>% 
   rename(region = 1) %>% 
   filter(region == "Nacional") %>% 
   gather(key = year, value = gini, -region) %>% 
@@ -633,10 +652,12 @@ dane <- read_excel("data-raw/dane.xls", sheet = "Gini", skip = 14) %>%
             welfare_def = "gross",
             equiv_scale = "pc",
             monetary = FALSE,
-            series = paste("DANE Colombia", welfare_def, equiv_scale),
+            series = paste("DANE Colombia", welfare_def, equiv_scale, "2"),
             source1 = "Departamento Administrativo Nacional de Estadística Colombia",
             page = "",
-            link = dane_link)
+            link = dane_link) %>% 
+    bind_rows(dane0) %>% 
+    arrange(country, year)
 
 
 # Costa Rica (update link)
