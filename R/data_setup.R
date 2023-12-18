@@ -815,12 +815,12 @@ insee1 <- readLines(insee_link1) %>%              # kickin' it old skool . . .
             page = "",
             link = insee_link1)
 
-# https://www.insee.fr/fr/statistiques/5431993
-insee_link2 <- "https://www.insee.fr/fr/statistiques/fichier/5431993/ip1875.xlsx"
+# https://www.insee.fr/fr/statistiques/7710966
+insee_link2 <- "https://www.insee.fr/fr/statistiques/fichier/7710966/donnees_insee_premiere_n1973.xlsx"
 download.file(insee_link2, here::here("data-raw", "insee2.xlsx"))
 
-insee2 <- read_excel("data-raw/insee2.xlsx", sheet = "Figure complémentaire 2", skip = 2) %>% 
-  filter(str_detect(...1, "Gini")) %>% 
+insee2 <- read_excel("data-raw/insee2.xlsx", sheet = "Tableau complémentaire 2", skip = 2) %>% 
+  filter(str_detect(`Indicateur d'inégalités`, "Gini")) %>% 
   mutate(welfare_def = c("disp", "market")) %>% 
   pivot_longer(cols = matches("^[12]"),
                names_to = "year",
@@ -835,14 +835,14 @@ insee2 <- read_excel("data-raw/insee2.xlsx", sheet = "Figure complémentaire 2",
             monetary = FALSE,
             series = paste("Insee", welfare_def, equiv_scale, if_else(welfare_def == "disp", 2, 1)),
             source1 = "Institut National de la Statistique et des Études Économiques France",
-            page = "Figure complémentaire 2",
+            page = "Tableau complémentaire 2",
             link = insee_link2)
 
 insee <- bind_rows(insee1, insee2)
 
 # Statistics Georgia (update link)
-# http://pc-axis.geostat.ge/PXweb/pxweb/en/Database/Database__Social%20Statistics__Living%20Conditions,%20Subsistence%20Minimum/Gini_Coefficients.px/
-geostat_link <- "http://pc-axis.geostat.ge/PXweb/sq/afae9e32-940b-4842-8365-16552a12e7f1"
+# https://pc-axis.geostat.ge/PXweb/pxweb/en/Database/Database__Social%20Statistics__Living%20Conditions,%20Subsistence%20Minimum/Gini_Coefficients.px/
+geostat_link <- "https://pc-axis.geostat.ge/PXweb/sq/afae9e32-940b-4842-8365-16552a12e7f1"
 download.file(geostat_link, "data-raw/geostat.csv")
 geostat <- read_csv("data-raw/geostat.csv", skip = 2) %>% 
   pivot_longer(!matches("Year"), names_to = "indicator", values_to = "gini_coefficients") %>% 
@@ -978,7 +978,7 @@ rm(hk2006, hk2011, hk2016)
 # # may need to update bpsid2_link: check https://www.bps.go.id/statictable/2014/09/08/946/distribusi-pembagian-pengeluaran-per-kapita-dan-indeks-gini-2010-2017.html > Download Table
 # # with http://wheregoes.com/retracer.php to find download link
 
-bpsid1_link <- "https://www.bps.go.id/website/tabelExcelIndo/indo_23_6.xls"
+bpsid1_link <- "https://web.archive.org/web/20150405134743/https://www.bps.go.id/website/tabelExcelIndo/indo_23_6.xls"
 download.file(bpsid1_link, "data-raw/bpsid1.xls")
 bpsid2_link <- "https://www.bps.go.id/statictable/download.html?nrbvfeve=OTQ2&sdfs=sdngrbfjgrdejrh&zxcv=L3dlYnNpdGU%3D&xzmn=aHR0cHM6Ly93d3cuYnBzLmdvLmlkL3N0YXRpY3RhYmxlLzIwMTQvMDkvMDgvOTQ2L2Rpc3RyaWJ1c2ktcGVtYmFnaWFuLXBlbmdlbHVhcmFuLXBlci1rYXBpdGEtZGFuLWluZGVrcy1naW5pLS0yMDEwLTIwMjIuaHRtbA%3D%3D&twoadfnoarfeauf=MjAyMy0wNi0xNiAyMzo0NToyOA%3D%3D"
 download.file(bpsid2_link, "data-raw/bpsid2.xls")
@@ -1025,7 +1025,7 @@ rm(bpsid1, bpsid2)
 
 # Statistical Center of Iran (update link--search site with Google; blocked as of 12-08-2018, so use archive.org version)
 # https://www.google.com/search?hl=en&as_q=gini&as_sitesearch=https%3A%2F%2Fwww.amar.org.ir%2Fenglish
-# Still blocked 6/2023
+# Still blocked 12/2023
 
 amar_link <- "https://web.archive.org/web/20191116072717/https://www.amar.org.ir/Portals/1/releases/heis/total/Gini%20coefficient%20of%20the%20years%201380-1396.xlsx?ver=2019-04-09-101341-147"
 download.file(amar_link, "data-raw/amar.xlsx")
@@ -1047,7 +1047,7 @@ amar <- read_excel("data-raw/amar.xlsx", skip = 2) %>%
 
 
 # CSO Ireland (automated)
-cso_ie <- cso_get_data("SIA47", wide_format = "tall", use_factors = FALSE, cache = FALSE) %>% 
+cso_ie <- cso_get_data("SIA47", pivot_format = "tall", use_factors = FALSE, cache = FALSE) %>% 
   filter(str_detect(Statistic, "Gini")) %>% 
   transmute(country = "Ireland",
             year = as.numeric(as.character(Year)),
