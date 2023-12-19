@@ -20,6 +20,9 @@ format_lis <- function(x) {
     separate(X2, into = c("wd", "es"), sep = "_") %>% 
     pivot_wider(names_from = "wd",
                 values_from = c("X3", "X4")) %>% 
+    {if (!"X3_disp" %in% names(.)) mutate(., X3_disp = 1) else .} %>% 
+    {if (!"X3_gross" %in% names(.)) mutate(., X3_gross = 1) else .} %>% 
+    {if (!"X4_con" %in% names(.)) mutate(., X4_con = 1) else .} %>% 
     mutate(X3_market = if_else(!X3_market==X3_disp, X3_market, NA_real_),
            X3_gross = if_else(!X3_gross==X3_disp, X3_gross, NA_real_)) %>% 
     pivot_longer(cols = X3_market:X4_con,
@@ -28,7 +31,7 @@ format_lis <- function(x) {
                  values_to = "value") %>% 
     pivot_wider(names_from = "var",
                 values_from = "value") %>% 
-    filter(!is.na(X3)) %>% 
+    filter(!is.na(X3) & !X3 == 1 & !X4 == 1) %>% 
     transmute(country = str_extract(X1, "\\D{2}") %>%
                 toupper() %>% 
                 str_replace("UK", "GB") %>% 
@@ -54,7 +57,7 @@ format_lis_xtra <- function(x) {
   paste0("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/", 
          x, ".txt") %>%
     read_lines() %>% 
-    str_subset("^\\D{2}\\d{2},.*") %>%
+    str_subset("^\\D{2}\\d{2}.?,.*") %>%
     paste(collapse = "\n") %>% 
     read_csv(col_names = FALSE, show_col_types = FALSE) %>%
     transmute(country = str_extract(X1, "\\D{2}") %>% 
@@ -827,7 +830,7 @@ insee2 <- read_excel("data-raw/insee2.xlsx", sheet = "Tableau complémentaire 2"
                values_to = "gini") %>% 
   filter(!is.na(gini)) %>%
   transmute(country = "France",
-            year = as.numeric(year),
+            year = as.numeric(str_extract(year, "\\d{4}")),
             gini = gini,
             gini_se = NA,
             welfare_def = welfare_def,
@@ -2337,13 +2340,14 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
            gini_m_se = gini_se) %>%
     mutate(country = countrycode(country, "country.name.en.regex", "swiid.name", custom_dict = cc_swiid),
            region = countrycode(country, "swiid.name", "swiid.region", custom_dict = {cc_swiid %>% distinct(swiid.name, .keep_all = TRUE)})) %>% 
+    filter(!is.na(region)) %>% 
     group_by(country) %>% 
     mutate(country_obs = n()) %>% 
     ungroup() %>% 
     group_by(country, series) %>% 
     mutate(series_obs = n()) %>%
     ungroup() %>% 
-    arrange(desc(country_obs), desc(series_obs))  
+    arrange(desc(country_obs), desc(series_obs)) 
   
   if (str_detect(baseline_series, "market") & nbl == TRUE) {
     ineq0 <- ineq0 %>% 
