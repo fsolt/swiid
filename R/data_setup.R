@@ -1816,31 +1816,42 @@ rm(nesdc_gross, nesdc_con)
 # [Select tab] Statistical Table > first line under Equivalised Household Disposable Income & first line under Household Disposable Income
 tuik_link <- "https://data.tuik.gov.tr/Kategori/GetKategori?p=Income,-Living,-Consumption-and-Poverty-107"
 
-tuik_oecdm <- read_excel("data-raw/tuik_oecdm.xls", skip = 3) 
-tuik_hh <- read_excel("data-raw/tuik_hh.xls", skip = 3) 
-tuik_list <- list(tuik_oecdm = tuik_oecdm, tuik_hh = tuik_hh)
+tuik_oecdm <- read_excel("data-raw/tuik_oecdm.xls", skip = 3) %>% 
+    slice(c(1, 3)) %>% 
+    rename(wd = `...1`) %>% 
+    pivot_longer(-wd, names_to = "year", values_to = "gini") %>% 
+    filter(year!="...1") %>% 
+    transmute(country = "Turkey",
+              year = as.numeric(year),
+              gini = as.numeric(gini),
+              gini_se = NA,
+              welfare_def = if_else(str_detect(wd, "Before"), "market", "disp"),
+              equiv_scale = "oecdm",
+              monetary = FALSE,
+              series = paste("TUIK", welfare_def, equiv_scale),
+              source1 = "Turkish Statistical Institute",
+              page = "",
+              link = tuik_link)
 
-tuik <- pmap_df(list(tuik_list, names(tuik_list), tuik_link),
-                    function(x, name_x, link_x) {
-                      names(x)[1] <- "var" 
-                      es <- str_extract(name_x, "[^_]*$")
-                      x %>% 
-                        filter(str_detect(var, "Gini")) %>% 
-                        gather(key = year, value = gini) %>% 
-                        filter(year!="var") %>% 
-                        transmute(country = "Turkey",
-                                  year = as.numeric(year),
-                                  gini = as.numeric(gini),
-                                  gini_se = NA,
-                                  welfare_def = "disp",
-                                  equiv_scale = es,
-                                  monetary = FALSE,
-                                  series = paste("TUIK", welfare_def, equiv_scale),
-                                  source1 = "Turkish Statistical Institute",
-                                  page = "",
-                                  link = link_x) })
+tuik_hh <- read_excel("data-raw/tuik_hh.xls", skip = 3) %>% 
+    filter(str_detect(`...1`, "Gini")) %>% 
+    gather(key = year, value = gini) %>% 
+    filter(year!="...1") %>% 
+    transmute(country = "Turkey",
+              year = as.numeric(year),
+              gini = as.numeric(gini),
+              gini_se = NA,
+              welfare_def = "disp",
+              equiv_scale = "hh",
+              monetary = FALSE,
+              series = paste("TUIK", welfare_def, equiv_scale),
+              source1 = "Turkish Statistical Institute",
+              page = "",
+              link = tuik_link)
 
-rm(tuik_list, tuik_hh, tuik_oecdm)
+tuik <- bind_rows(tuik_oecdm, tuik_hh)
+
+rm(tuik_hh, tuik_oecdm)
 
 
 # U.K. Office for National Statistics (update links; join with latest file last)
@@ -1919,7 +1930,7 @@ cbo <- read_excel("data-raw/cbo.xlsx", sheet = "Figure 12", col_names = FALSE, s
   filter(!is.na(as.numeric(X)) & !is.na(X.1)) %>% 
   transmute(year = as.numeric(X),
             market = as.numeric(X.1),
-            disp = as.numeric(X.3)) %>% 
+            disp = as.numeric(X.2)) %>% 
   filter(!is.na(year)) %>% 
   gather(key = welfare_def, 
          value = gini,
