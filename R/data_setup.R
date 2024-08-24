@@ -1,8 +1,10 @@
 if (!require(pacman)) install.packages("pacman"); library(pacman)
 p_load(tidyverse, readxl, 
-       eurostat, povcalnetR, rsdmx, xml2, rvest, csodata,
-       countrycode, janitor, pdftools)
-p_load_gh("ropensci/tabulizerjars", "ropensci/tabulizer") # read PDF tables; see https://github.com/ropensci/tabulizer for installation help if needed
+       eurostat, pipr, rsdmx, xml2, rvest, csodata,
+       countrycode, janitor, pdftools, ipeadatar)
+install.packages("tabulapdf", repos = c("https://ropensci.r-universe.dev", "https://cloud.r-project.org"))
+library(tabulapdf)
+p_load_gh("worldbank/pipr")
 p_load_gh("ropengov/dkstat")
 p_load_gh("ropengov/pxweb")
 
@@ -147,7 +149,7 @@ format_sedlac <- function(df, sheet, link, es) {
   return(x)
 }
 
-sedlac_link <- "https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2023_inequality_LAC.xlsx"
+sedlac_link <- "https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2023_Act2_inequality_LAC-web.xlsx"
 download.file(sedlac_link, "data-raw/sedlac.xlsx")
 
 sedlac_pc <- read_excel(path = "data-raw/sedlac.xlsx", 
@@ -255,11 +257,11 @@ cepal_sdi <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data
 
 
 # OECD Income Distribution Database (automated)
-oecd_link <- "https://stats.oecd.org/restsdmx/sdmx.ashx/GetData/IDD/.GINI+STDG+GINIB+GINIG.TOT.CURRENT+PREVIOUS+INCOMPARABLE.METH2012+METH2011/all"
+oecd_link <- "https://sdmx.oecd.org/public/rest/data/OECD.WISE.INE,DSD_WISE_IDD@DF_IDD,1.0/.A.INC_DISP_SE+INC_DISP_GINI..._T.METH2011+METH2012.D_CUR.?startPeriod=1976&endPeriod=2023"
 oecd0 <- oecd_link %>% 
   readSDMX() %>% 
   as_tibble() %>% 
-  transmute(country = countrycode(LOCATION, "iso3c", "swiid.name", custom_dict = cc_swiid),
+  transmute(country = countrycode(REF_AREA, "iso3c", "swiid.name", custom_dict = cc_swiid),
             year = as.numeric(obsTime),
             gini = obsValue,
             welfare_def = ifelse((MEASURE=="GINI" | MEASURE=="STDG"), "disp", 
@@ -267,17 +269,17 @@ oecd0 <- oecd_link %>%
             equiv_scale = "sqrt",   
             monetary = FALSE,
             series = paste("OECD", welfare_def, "sqrt,", tolower(DEFINITION), "def,", 
-                           tolower(str_replace(METHODO, "METH", "")), "method"),
+                           tolower(str_replace(METHODOLOGY, "METH", "")), "method"),
             source1 = "OECD",
             page = "", 
             link = oecd_link,
             measure = MEASURE)
 
-oecd_se <- oecd0 %>% filter(measure=="STDG" & gini!=0) %>% 
+oecd_se <- oecd0 %>% filter(measure=="INC_DISP_SE" & gini!=0) %>% 
   mutate(gini_se = if_else(gini < 0.1, gini, gini/100)) %>%   # data for Chile and China obv on wrong scale
   select(-gini, -measure)
 
-oecd <- oecd0 %>% filter(measure!="STDG") %>% 
+oecd <- oecd0 %>% filter(measure!="INC_DISP_SE") %>% 
   left_join(oecd_se, by = c("country", "year", "equiv_scale", "welfare_def", "monetary", "series", "source1", "page", "link")) %>% 
   select(-measure)
 
@@ -292,7 +294,7 @@ eurostat <- get_eurostat("ilc_di12",
   mutate(geo = as.character(geo) %>% recode("UK" = "GB", "EL" = "GR")) %>% 
   filter(!str_detect(geo, "E[AU]\\d*|NMS10")) %>% 
   transmute(country = countrycode(as.character(geo), "iso2c", "swiid.name", custom_dict = cc_swiid),
-            year = time - (!(country=="United Kingdom" | country=="Ireland")), #eurostat reports survey year not ref year except in UK and IE <http://ec.europa.eu/eurostat/cache/metadata/en/ilc_esms.htm#ref_period>
+            year = TIME_PERIOD - (!(country=="United Kingdom" | (country=="Ireland" & TIME_PERIOD < 2019))), #eurostat reports survey year not ref year except in UK and IE <https://ec.europa.eu/eurostat/cache/metadata/en/ilc_sieusilc.htm#ref_period1718211624296>
             gini = values/100,
             gini_se = NA,
             welfare_def = "disp",
@@ -302,7 +304,7 @@ eurostat <- get_eurostat("ilc_di12",
             series = "",
             source1 = "Eurostat",
             page = "",
-            link = "http://appsso.eurostat.ec.europa.eu/nui/show.do?dataset=ilc_di12&lang=en") %>% 
+            link = "https://ec.europa.eu/eurostat/databrowser/view/tessi190/default/table?lang=en") %>% 
   filter(!(is.na(country) | is.na(gini))) %>% 
   group_by(country) %>% 
   arrange(country, year) %>% 
@@ -361,21 +363,19 @@ afr_gini <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-
             link = "https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/AFR_gini_sqrt.csv")
 
 
-# World Bank Povcalnet (automated)
-wb_link <- "https://api.worldbank.org/pip/v1/pip?country=all&year=all&povline=1.9&fill_gaps=false&welfare_type=all&reporting_level=national&format=csv"
-
-wb <- read_csv(wb_link, show_col_types = FALSE) %>% 
+# World Bank Poverty and Inequality Platform (automated--formerly Povcalnet)
+wb <- pipr::get_stats(reporting_level = "national") %>% 
   transmute(country = countrycode(country_code, origin = "wb_api3c", "swiid.name", custom_dict = cc_swiid),
-            year = round(as.numeric(survey_year)),
+            year = round(as.numeric(year)),
             gini = as.numeric(gini),
             gini_se = NA,
             welfare_def = if_else(str_detect(welfare_type, "income"), "gross", "con"),
             equiv_scale = "pc",
             monetary = FALSE,
-            series = paste("PIP", country, welfare_def, equiv_scale),
+            series = paste("PIP", country, welfare_def, equiv_scale, survey_comparability + 1),
             source1 = "World Bank Poverty & Inequality Platform",
             page = "",
-            link = wb_link) %>% 
+            link = "https://pip.worldbank.org/") %>% 
   filter(!is.na(gini))
 
 
@@ -420,36 +420,35 @@ arm_reports <- tibble(title = arm_page %>% html_text() %>% tolower(),
 get_arm_ginis <- function(link) {
   file_yr <- str_extract(link, "\\d{2,4}") %>% 
     if_else(str_length(.) == 2, str_c("20", .), .)
+  print(file_yr)
   file_name <- paste0("data-raw/armstat", file_yr, ".pdf")
   if (!file.exists(file_name)) download.file(link, file_name)
   ginis <- extract_tables(file_name, pages = 11)[[1]] %>% 
     as_tibble()
-  if (!any(str_detect(ginis$V1, "Gini"))) {
+  if (!any(str_detect(ginis$`...1`, "Gini"))) {
     ginis <- extract_tables(file_name, pages = 12)[[1]]
   }
   ginis1 <- ginis %>% 
-    first_row_to_names() %>% 
-    mutate(v1 = replace(v1, v1=="", NA_character_)) %>% 
-    fill(v1, .direction = "up") %>% 
-    filter(str_detect(v1, "inequality")) %>% 
-    gather(key = year, value = gini, -v1) %>% 
-    filter(!gini=="") %>% 
-    mutate(report = as.numeric(file_yr),
-           link = link)
+      fill(...1, .direction = "up") %>% 
+      filter(str_detect(...1, "inequality")) %>% 
+      gather(key = year, value = gini, -...1) %>% 
+      filter(!is.na(gini)) %>% 
+      mutate(report = as.numeric(file_yr),
+             link = link)
   return(ginis1)
 }
 
 armstat <- arm_reports %>% 
   filter(year >= 2016) %>% 
-  `[[`("link2") %>% 
+  pull("link2") %>% 
   map_df(., ~ get_arm_ginis(.x)) %>% 
-  arrange(desc(report), desc(year), v1) %>% 
-  distinct(year, v1, .keep_all = TRUE) %>% 
+  arrange(desc(report), desc(year), ...1) %>% 
+  distinct(year, ...1, .keep_all = TRUE) %>% 
   transmute(country = "Armenia",
             year = as.numeric(str_extract(year, "\\d{4}")),
             gini = as.numeric(gini),
             gini_se = NA,
-            welfare_def = if_else(str_detect(v1, "consumption"), "con", "gross"),
+            welfare_def = if_else(str_detect(...1, "consumption"), "con", "gross"),
             equiv_scale = "pc",
             monetary = FALSE,
             series = paste("NSS Armenia", welfare_def, equiv_scale),
@@ -504,7 +503,7 @@ rm(abs_de, abs_gh)
 # Instituto Naciónal de Estadística de Bolivia (update file)
 # https://www.ine.gob.bo/index.php/estadisticas-economicas/encuestas-de-hogares/
 # > Pobreza y Desigualdad > BOLIVIA: ÍNDICE DE GINI PARA EL INGRESO PER CÁPITA MENSUAL, SEGÚN ÁREA, 2005 – 202x
-inebo_link <- "https://nube.ine.gob.bo/index.php/s/hEbUGkzh0c16WqH/download"
+inebo_link <- "https://nube.ine.gob.bo/index.php/s/48pjBmqdFIFxwfJ/download"
 download.file(inebo_link, "data-raw/inebo.xlsx")
 inebo <- read_excel("data-raw/inebo.xlsx", skip = 3) %>% 
   filter(INDICADOR=="Bolivia") %>% 
@@ -540,14 +539,12 @@ ipea0 <- read_csv("data-raw/ipea0.csv", skip = 1) %>%
               page = "",
               link = "http://www.ipeadata.gov.br")
 
-# IPEA Brazil (update file)
-# http://www.ipeadata.gov.br > [Tab] Social > Temas > Renda
-ipea <- read_csv("data-raw/ipea.csv", skip = 1) %>% 
-  select(matches("\\d{4}")) %>% 
-  gather(key = year, value = gini) %>% 
-  transmute(country = "Brazil",
-            year = as.numeric(year),
-            gini = gini,
+# IPEA Brazil (automated)
+ipea <- ipeadata("PNADCA_GINIUF", language = "en") %>% 
+    filter(uname=="Brazil") %>% 
+    transmute(country = "Brazil",
+            year = year(date),
+            gini = value,
             gini_se = NA,
             welfare_def = "gross",
             equiv_scale = "pc",
@@ -560,6 +557,7 @@ ipea <- read_csv("data-raw/ipea.csv", skip = 1) %>%
     arrange(country, year)
 
 # Belarus National Statistical Committee (update file)
+# select all years > export > xls
 belstat_link <- "http://dataportal.belstat.gov.by/Indicators/Preview?key=228371#"
 
 belstat <- read_excel("data-raw/belstat.xls", skip = 1) %>%
@@ -592,32 +590,34 @@ get_statcan <- function(pid) {
   return(statcan_data)
 }
 
-statcan <- get_statcan(11100134) %>% 
-  filter(GEO=="Canada") %>% 
-  mutate(equiv_scale = "sqrt") %>%
-  select(REF_DATE, VALUE, `Income concept`, equiv_scale, link) %>% 
-  bind_rows(get_statcan(11100179) %>% 
-              filter(GEO=="Canada" & `Economic family type`=="All family units") %>% 
-              mutate(equiv_scale = "pc") %>% 
-              select(REF_DATE, VALUE, `Income concept`, equiv_scale, link)) %>% 
-  bind_rows(get_statcan(11100175) %>% 
-              filter(GEO=="Canada" & `Economic family type`=="All family units") %>% 
-              mutate(equiv_scale = "hh") %>% 
-              select(REF_DATE, VALUE, `Income concept`, equiv_scale, link)) %>% 
-  transmute(country = "Canada",
-            year = REF_DATE,
-            gini = VALUE,
-            gini_se = gini*.02, # StatCan indicates CV < .02
-            welfare_def = tolower(`Income concept`) %>% 
-              str_extract("market|after-tax|total") %>% 
-              str_replace("after-tax", "disp") %>% 
-              str_replace("total", "gross"),
-            equiv_scale = equiv_scale,
-            monetary = TRUE,
-            series = paste("Statistics Canada", welfare_def, equiv_scale),
-            source1 = "Statistics Canada",
-            page = "",
-            link = link)
+link <- "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1110013401"
+
+tables <- c("11-10-0134-01", "11-10-0179-01", "11-10-0175-01")
+eq_scales <- c("sqrt", "pc", "hh")
+
+statcan <- map2(tables, eq_scales, ~ statcan_data(.x,"eng") %>% 
+                    filter(GEO=="Canada") %>% 
+                    mutate(equiv_scale = .y) %>%
+                    mutate(link = paste0("https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=",
+                                         str_remove(as.character(.x), "-")))) %>%
+    list_rbind() %>% 
+    filter(GEO=="Canada" & (`Economic family type`=="All family units" | is.na(`Economic family type`))) %>% 
+    select(REF_DATE, VALUE, `Income concept`, equiv_scale) %>% 
+    transmute(country = "Canada",
+              year = year(REF_DATE),
+              gini = VALUE,
+              gini_se = gini*.02, # StatCan indicates CV < .02
+              welfare_def = tolower(`Income concept`) %>% 
+                  str_extract("market|after-tax|total") %>% 
+                  str_replace("after-tax", "disp") %>% 
+                  str_replace("total", "gross"),
+              equiv_scale = equiv_scale,
+              monetary = TRUE,
+              series = paste("Statistics Canada", welfare_def, equiv_scale),
+              source1 = "Statistics Canada",
+              page = "",
+              link = link) %>% 
+    arrange(country, year, welfare_def, equiv_scale)
 
 
 # DANE Colombia (update link)
@@ -641,7 +641,7 @@ dane0 <- read_excel("data-raw/dane.xls", sheet = "Gini", skip = 14) %>%
               page = "",
               link = dane0_link)
 
-dane_link <- "https://www.dane.gov.co/files/operaciones/PM/anex-PM-TotalNacional-2022.xlsx"
+dane_link <- "https://www.dane.gov.co/files/operaciones/PM/anex-PM-TotalNacional-2023.xlsx"
 download.file(dane_link, "data-raw/dane.xlsx")
 
 dane <- read_excel("data-raw/dane.xlsx", sheet = "Gini", skip = 14) %>% 
@@ -839,15 +839,44 @@ insee2 <- read_excel("data-raw/insee2.xlsx", sheet = "Tableau complémentaire 2"
             series = paste("Insee", welfare_def, equiv_scale, if_else(welfare_def == "disp", 2, 1)),
             source1 = "Institut National de la Statistique et des Études Économiques France",
             page = "Tableau complémentaire 2",
-            link = insee_link2)
+            link = insee_link2) %>% 
+    filter(welfare_def == "market")
 
-insee <- bind_rows(insee1, insee2)
+insee_link3 <- "https://www.insee.fr/fr/statistiques/fichier/2491918/reve-niv-vie-indic-inegalite.xlsx"
+download.file(insee_link3, here::here("data-raw", "insee3.xlsx"))
+
+insee3 <- read_excel("data-raw/insee3.xlsx", skip = 2) %>% 
+    filter(str_detect(Indicateur, "Gini")) %>% 
+    mutate(welfare_def = "disp") %>% 
+    pivot_longer(cols = matches("^[12]"),
+                 names_to = "year",
+                 values_to = "gini") %>% 
+    filter(!is.na(gini)) %>%
+    mutate(series_no = str_split_i(year, "\\d{4}", -1),
+           series_no = if_else(series_no == "", NA_character_, series_no)) %>%
+    fill(series_no) %>% 
+    mutate(series_no = if_else(is.na(series_no), 
+                               1,
+                               as.numeric(str_extract(series_no, "\\d$"))+2)) %>% 
+    transmute(country = "France",
+              year = as.numeric(str_extract(year, "\\d{4}")),
+              gini = gini,
+              gini_se = NA,
+              welfare_def = welfare_def,
+              equiv_scale = "oecdm",
+              monetary = FALSE,
+              series = paste("Insee", welfare_def, equiv_scale, series_no),
+              source1 = "Institut National de la Statistique et des Études Économiques France",
+              page = "",
+              link = insee_link3)
+
+insee <- bind_rows(insee1, insee2, insee3)
 
 # Statistics Georgia (update link)
 # https://pc-axis.geostat.ge/PXweb/pxweb/en/Database/Database__Social%20Statistics__Living%20Conditions,%20Subsistence%20Minimum/Gini_Coefficients.px/
-geostat_link <- "https://pc-axis.geostat.ge/PXweb/sq/afae9e32-940b-4842-8365-16552a12e7f1"
+geostat_link <- "https://pc-axis.geostat.ge:443/PXweb/sq/760aa273-a7b4-43c1-8b5a-d6badb70a01e"
 download.file(geostat_link, "data-raw/geostat.csv")
-geostat <- read_csv("data-raw/geostat.csv", skip = 2) %>% 
+geostat <- read_csv("data-raw/geostat.csv", skip = 2, col_types = "ccccccc") %>% 
   pivot_longer(!matches("Year"), names_to = "indicator", values_to = "gini_coefficients") %>% 
   transmute(country = "Georgia",
             year = as.numeric(Year),
@@ -919,14 +948,14 @@ hk2016 <- read_excel("data-raw/hk2016.xlsx",
 
 hk2011 <- extract_tables("data-raw/hk2011.pdf", pages = 123)[[1]] %>% 
   as_tibble() %>% 
-  mutate(wd = if_else(cumsum(str_detect(V1, "Post-tax Post-social Transfer Household Income")) == 1,
+  mutate(wd = if_else(cumsum(str_detect(...1, "Post-tax Post-social Transfer Household Income")) == 1,
                       "disp",
-                      if_else(cumsum(str_detect(V1, "Post-tax Household Income")) == 1, 
+                      if_else(cumsum(str_detect(...1, "Post-tax Household Income")) == 1, 
                               "posttax",
                               "market")),
-         es = if_else(V1 == "合計堅尼系數", "hh", "pc")) %>% 
+         es = if_else(...1 == "合計堅尼系數", "hh", "pc")) %>% 
   filter(wd != "posttax" & str_detect(V2, "^\\d")) %>% 
-  select(-V1, -V3) %>% 
+  select(-...1, -V3) %>% 
   separate(V2, into = paste0("v", 1:3), sep = " ") %>% 
   first_row_to_names() %>%
   rename(wd = market, es = pc) %>% 
@@ -946,15 +975,15 @@ hk2011 <- extract_tables("data-raw/hk2011.pdf", pages = 123)[[1]] %>%
 
 hk2006 <- extract_tables("data-raw/hk2006.pdf", pages = 105)[[1]] %>% 
   as_tibble() %>% 
-  mutate(keep = cumsum(str_detect(V1, "Gini")) >= 1) %>% 
-  mutate(wd = if_else(cumsum(str_detect(V1, "Post-tax Post-social Transfer Household Income")) == 1,
+  mutate(keep = cumsum(str_detect(...1, "Gini")) >= 1) %>% 
+  mutate(wd = if_else(cumsum(str_detect(...1, "Post-tax Post-social Transfer Household Income")) == 1,
                       "disp",
-                      if_else(cumsum(str_detect(V1, "Post-tax Household Income")) == 1, 
+                      if_else(cumsum(str_detect(...1, "Post-tax Household Income")) == 1, 
                               "posttax",
                               "market")),
-         es = if_else(V1 == "合計堅尼系數", "hh", "pc")) %>% 
+         es = if_else(...1 == "合計堅尼系數", "hh", "pc")) %>% 
   filter(keep & wd != "posttax" & str_detect(V2, "^\\d")) %>% 
-  select(-V1, - keep) %>% 
+  select(-...1, - keep) %>% 
   separate(V2, into = paste0("v", 1:3), sep = " ") %>% 
   first_row_to_names() %>%
   rename(wd = market, es = pc) %>% 
@@ -1227,7 +1256,7 @@ epumy <- extract_tables("data-raw/epumy.pdf") %>%
   t() %>% 
   as_tibble() %>% 
   transmute(country = "Malaysia",
-            year = as.numeric(str_extract(V1, "\\d{4}")),
+            year = as.numeric(str_extract(...1, "\\d{4}")),
             gini = as.numeric(V2),
             gini_se = NA,
             welfare_def = "gross",
@@ -1246,8 +1275,8 @@ download.file(nbs0_link, "data-raw/nbs0.xls")
 
 nbs0 <- read_excel("data-raw/nbs0.xls", skip = 2, sheet = "Лист1") %>%
   first_row_to_names() %>% 
-  filter(str_detect(v1, "coeficientul Gini")) %>% 
-  select(-v1) %>% 
+  filter(str_detect(...1, "coeficientul Gini")) %>% 
+  select(-...1) %>% 
   gather(key = year, value = gini) %>% 
   transmute(country = "Moldova",
             year = as.numeric(year),
@@ -1348,9 +1377,9 @@ system('soffice --headless --convert-to pdf:"writer_pdf_Export" --outdir ./data-
 nzmsd <- extract_tables("data-raw/nzmsd.pdf", pages = 105) %>% 
   first() %>% 
   as_tibble() %>% 
-  filter(str_detect(V1, "\\d{4}")) %>% 
+  filter(str_detect(...1, "\\d{4}")) %>% 
   transmute(country = "New Zealand",
-            year = as.numeric(V1),
+            year = as.numeric(...1),
             gini = as.numeric(str_extract(V2, "\\d\\d\\.\\d"))/100,
             gini_se = NA,
             welfare_def = "disp",
@@ -1595,7 +1624,7 @@ download.file(statslk_link1, "data-raw/statslk2015.pdf")
 
 statslk <- extract_tables("data-raw/statslk2015.pdf", pages = 22)[[1]] %>%
   as_tibble() %>% 
-  filter(str_detect(V1, "Gini coefficient of household") | V1 == "") %>% 
+  filter(str_detect(...1, "Gini coefficient of household") | ...1 == "") %>% 
   separate(V7, into = c("v7, v7a"), sep = " ") %>% 
   first_row_to_names() %>% 
   filter(v2 == "") %>% 
@@ -2048,7 +2077,7 @@ uscb_fam <- as_tibble(uscb_fam0[4:16,1:2]) %>%
   bind_rows(as_tibble(uscb_fam0[4:16,c(6,8)])) %>% 
   bind_rows(as_tibble(uscb_fam0[4:16,c(9,11)])) %>% 
   transmute(country = "United States",
-            year = as.numeric(str_extract(V1, "^\\d{4}")),
+            year = as.numeric(str_extract(...1, "^\\d{4}")),
             gini = as.numeric(V2),
             gini_se = NA,
             welfare_def = "gross",
@@ -2153,8 +2182,8 @@ gso_vn2_link <- "https://www.gso.gov.vn/en/px-web/?pxid=E1135&theme=Health%2C%20
 
 gso_vn1 <- extract_tables("data-raw/gso_vn2013.pdf", pages = 84)[[1]][-1, ] %>% 
   as_tibble() %>% 
-  filter(str_detect(V1, "TOTAL") | V1 == "") %>% 
-  select(-V1) %>% 
+  filter(str_detect(...1, "TOTAL") | ...1 == "") %>% 
+  select(-...1) %>% 
   first_row_to_names() %>% 
   gather(key = year, value = gini) %>% 
   transmute(country = "Vietnam",
