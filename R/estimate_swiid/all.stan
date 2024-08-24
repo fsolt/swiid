@@ -16,50 +16,50 @@ data{
   int<lower=1> N_bk;                      // number of obs in countries with some baseline data ("baseline countries")
   int<lower=1> N_kw;                      // number of obs with in-country ratios to baseline welfare_def 
 
-  int<lower=1, upper=K> kk[N]; 	          // country for observation n
-  int<lower=1, upper=KT> kktt[N];         // country-year for observation n
-  int<lower=1, upper=R> rr[N];            // region for observation n
-  int<lower=1, upper=SKT> skt[N];         // series-country-year for observation n
-  int<lower=1, upper=S> ss[N];            // series for observation n
-  int<lower=1, upper=KWE> kwen[N];        // country-wd_es for observation n
-  int<lower=0, upper=KW> kwn[N];          // kw for observation n
-  int<lower=1, upper=RWE> rwen[N];        // rwe for region-welfare_def-equiv_sc of observation n
-  int<lower=1, upper=RWE> rwen2[N];       // rwe for region-*baseline_wd*-equiv_sc of observation n
+  array[N] int<lower=1, upper=K> kk; 	          // country for observation n
+  array[N] int<lower=1, upper=KT> kktt;         // country-year for observation n
+  array[N] int<lower=1, upper=R> rr;            // region for observation n
+  array[N] int<lower=1, upper=SKT> skt;         // series-country-year for observation n
+  array[N] int<lower=1, upper=S> ss;            // series for observation n
+  array[N] int<lower=1, upper=KWE> kwen;        // country-wd_es for observation n
+  array[N] int<lower=0, upper=KW> kwn;          // kw for observation n
+  array[N] int<lower=1, upper=RWE> rwen;        // rwe for region-welfare_def-equiv_sc of observation n
+  array[N] int<lower=1, upper=RWE> rwen2;       // rwe for region-*baseline_wd*-equiv_sc of observation n
   
   vector<lower=0, upper=1>[N] gini_m; 	  // measured gini for observation n
   vector<lower=0, upper=1>[N] gini_m_se;  // std error of measured gini for obs n
   vector<lower=0, upper=1>[N_wbl] gini_b; // baseline gini for obs n
   vector<lower=0, upper=1>[N_wbl] gini_b_se; // std error of baseline gini for obs n
   
-  int<lower=0, upper=1> bk[K];            // baseline availability indicator for country k
-  int<lower=1, upper=KT> kt_k_start[K];   // location of first kt for country k
-  int<lower=1, upper=KT> kt_k_end[K];     // location of last kt for country k
-  int<lower=0, upper=N_ibl> nbkt[KT];     // obs n with baseline for country-year kt
+  array[K] int<lower=0, upper=1> bk;            // baseline availability indicator for country k
+  array[K] int<lower=1, upper=KT> kt_k_start;   // location of first kt for country k
+  array[K] int<lower=1, upper=KT> kt_k_end;     // location of last kt for country k
+  array[KT] int<lower=0, upper=N_ibl> nbkt;     // obs n with baseline for country-year kt
   
   int<lower=1> M;                         // number of observed ratios of baseline to wd_es (rho_we)
-  int<lower=1, upper=R> rrm[M];           // region for rho_we observation m
-  int<lower=1, upper=KWE> kwem[M];        // country-wd_es for rho_we observation m
-  int<lower=1, upper=RWE> rwem[M];        // region-wd_es for rho_we observation m
-  real<lower=0> rho_we[M];                // observed ratio of baseline to wd_es
-  real<lower=0> rho_we_se[M];             // std error of rho_we
+  array[M] int<lower=1, upper=R> rrm;           // region for rho_we observation m
+  array[M] int<lower=1, upper=KWE> kwem;        // country-wd_es for rho_we observation m
+  array[M] int<lower=1, upper=RWE> rwem;        // region-wd_es for rho_we observation m
+  array[M] real<lower=0> rho_we;                // observed ratio of baseline to wd_es
+  array[M] real<lower=0> rho_we_se;             // std error of rho_we
   
   int<lower=1> P;                         // number of observed ratios of baseline_wd to wd (rho_w)
-  int<lower=1, upper=KW> kwp[P];          // kw for rho_w observation p
-  real<lower=0> rho_w[P];                 // observed ratio of baseline_wd to wd
-  real<lower=0> rho_w_se[P];              // std error of rho_w
+  array[P] int<lower=1, upper=KW> kwp;          // kw for rho_w observation p
+  array[P] real<lower=0> rho_w;                 // observed ratio of baseline_wd to wd
+  array[P] real<lower=0> rho_w_se;              // std error of rho_w
   
   real prior_m_s;                         // mean for lognormal prior 
   real<lower=0> prior_s_s;                // sigma for lognormal prior
-  real prior_m_kwe[KWE];                  // vector of means for lognormal prior that vary by welfare definition 
-  real<lower=0> prior_s_kwe[KWE];         // vector of sigmas for lognormal prior that vary by welfare definition
-  real prior_m_rwe[RWE];                  // vector of means for lognormal prior that vary by welfare definition 
-  real<lower=0> prior_s_rwe[RWE];         // vector of sigmas for lognormal prior that vary by welfare definition
-  real prior_m_kw[KW];                    // vector of means for lognormal prior that vary by welfare definition 
-  real<lower=0> prior_s_kw[KW];           // vector of sigmas for lognormal prior that vary by welfare definition
+  array[KWE] real prior_m_kwe;                  // vector of means for lognormal prior that vary by welfare definition 
+  array[KWE] real<lower=0> prior_s_kwe;         // vector of sigmas for lognormal prior that vary by welfare definition
+  array[RWE] real prior_m_rwe;                  // vector of means for lognormal prior that vary by welfare definition 
+  array[RWE] real<lower=0> prior_s_rwe;         // vector of sigmas for lognormal prior that vary by welfare definition
+  array[KW] real prior_m_kw;                    // vector of means for lognormal prior that vary by welfare definition 
+  array[KW] real<lower=0> prior_s_kw;           // vector of sigmas for lognormal prior that vary by welfare definition
 }
   
 parameters {
-  real<lower=0, upper=1> gini[KT];        // SWIID gini estimate for baseline in country k at time t
+  array[KT] real<lower=0, upper=1> gini;        // SWIID gini estimate for baseline in country k at time t
   real<lower=0> sigma_gini; 	            // random-walk variance parameter
   vector[N] gini_t;                       // unknown "true" gini given gini_m and gini_m_se
   vector[N_wbl] gini_b_t;                 // unknown "true" gini given gini_b and gini_b_se
@@ -76,12 +76,12 @@ parameters {
   real<lower=0> sigma_kw;                 // rho_kw_hat noise
 
   vector<lower=0>[RWE] rho_rwe_hat;       // estimated rho_we by region
-  real<lower=0> sigma_rwe[R];             // rho_rwe_hat noise (by region)
+  array[R] real<lower=0> sigma_rwe;             // rho_rwe_hat noise (by region)
 }
 
 transformed parameters {
-  real<lower=0> sigma_krcat[R];
-  real<lower=0> sigma_rrcat[R];
+  array[R] real<lower=0> sigma_krcat;
+  array[R] real<lower=0> sigma_rrcat;
 
   for (r in 1:R) {
     sigma_krcat[r] = sqrt(square(sigma_kw) + square(sigma_rwe[r]));
