@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 1159671 us
-Date: December 18, 2023 at 1:22:10 PM CST
+Subject: job 1262374 us
+Date: August 21, 2024 at 10:56:01 AM GMT+9
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -20,8 +20,14 @@ To: <fsolt@mac.com>
                                                                         
 ############################### NOTICE TO USERS ###############################
 
+> 
+> 
+> 
+> 
 > options(echo=FALSE, encoding="UTF-8")
 Loading required package: readstata13
+> 
+> 
 > options(error = expression(q('no')))
 > ## Define functions 
 > gini <- function(df, x) { 
@@ -1195,24 +1201,45 @@ us21h,market_sqrt,0.5338,0.0023,120
 us21h,market_pc,0.5576,0.0023,120
 us21h,market_oecdm,0.5372,0.0023,120
 us21h,market_ae,0.5435,0.0024,120
-us21h,gross_hh,0.4673,0.0018,120
-us21h,gross_sqrt,0.4184,0.0024,120
-us21h,gross_pc,0.4414,0.002,120
-us21h,gross_oecdm,0.42,0.0023,120
-us21h,gross_ae,0.4257,0.002,120
+us21h,gross_hh,0.4672,0.0018,120
+us21h,gross_sqrt,0.4181,0.0024,120
+us21h,gross_pc,0.441,0.002,120
+us21h,gross_oecdm,0.4197,0.0023,120
+us21h,gross_ae,0.4254,0.002,120
 us21h,disp_hh,0.4246,0.0019,120
-us21h,disp_sqrt,0.3715,0.002,120
-us21h,disp_pc,0.398,0.0019,120
-us21h,disp_oecdm,0.3727,0.0019,120
-us21h,disp_ae,0.3794,0.0019,120
+us21h,disp_sqrt,0.3711,0.002,120
+us21h,disp_pc,0.3975,0.0019,120
+us21h,disp_oecdm,0.3724,0.0019,120
+us21h,disp_ae,0.379,0.0019,120
 us21h,con_hh,NaN,NA,120
 us21h,con_sqrt,NaN,NA,120
 us21h,con_pc,NaN,NA,120
 us21h,con_oecdm,NaN,NA,120
 us21h,con_ae,NaN,NA,120
+[1] "Loading dataset us22h..."
+us22h,market_hh,0.5868,0.0023,120
+us22h,market_sqrt,0.5307,0.0025,120
+us22h,market_pc,0.5529,0.0024,120
+us22h,market_oecdm,0.5338,0.0022,120
+us22h,market_ae,0.5395,0.0022,120
+us22h,gross_hh,0.478,0.0021,120
+us22h,gross_sqrt,0.4367,0.0022,120
+us22h,gross_pc,0.4566,0.002,120
+us22h,gross_oecdm,0.4381,0.002,120
+us22h,gross_ae,0.4429,0.002,120
+us22h,disp_hh,0.4371,0.0021,120
+us22h,disp_sqrt,0.391,0.0018,120
+us22h,disp_pc,0.4137,0.0018,120
+us22h,disp_oecdm,0.3923,0.0019,120
+us22h,disp_ae,0.3977,0.0018,120
+us22h,con_hh,NaN,NA,120
+us22h,con_sqrt,NaN,NA,120
+us22h,con_pc,NaN,NA,120
+us22h,con_oecdm,NaN,NA,120
+us22h,con_ae,NaN,NA,120
 > 
 > proc.time()
     user   system  elapsed 
-3344.130   26.237 3763.889 
+2783.584    4.267 4118.746 
 
 

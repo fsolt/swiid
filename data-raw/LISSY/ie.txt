@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 1159617 ie
-Date: December 18, 2023 at 10:37:59 AM CST
+Subject: job 1262078 ie
+Date: August 20, 2024 at 6:27:17 PM GMT+9
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -20,8 +20,14 @@ To: <fsolt@mac.com>
                                                                         
 ############################### NOTICE TO USERS ###############################
 
+> 
+> 
+> 
+> 
 > options(echo=FALSE, encoding="UTF-8")
 Loading required package: readstata13
+> 
+> 
 > options(error = expression(q('no')))
 > ## Define functions 
 > gini <- function(df, x) { 
@@ -635,9 +641,51 @@ ie19h,con_sqrt,NaN,NA,110
 ie19h,con_pc,NaN,NA,110
 ie19h,con_oecdm,NaN,NA,110
 ie19h,con_ae,NaN,NA,110
+[1] "Loading dataset ie20h..."
+ie20h,market_hh,0.5961,0.0063,110
+ie20h,market_sqrt,0.5093,0.0074,110
+ie20h,market_pc,0.5256,0.0072,110
+ie20h,market_oecdm,0.5091,0.0065,110
+ie20h,market_ae,0.5134,0.0064,110
+ie20h,gross_hh,0.4196,0.0059,110
+ie20h,gross_sqrt,0.3481,0.0059,110
+ie20h,gross_pc,0.3548,0.0051,110
+ie20h,gross_oecdm,0.3419,0.0054,110
+ie20h,gross_ae,0.3428,0.005,110
+ie20h,disp_hh,0.361,0.0052,110
+ie20h,disp_sqrt,0.2825,0.0051,110
+ie20h,disp_pc,0.2968,0.0055,110
+ie20h,disp_oecdm,0.2745,0.0052,110
+ie20h,disp_ae,0.2777,0.0056,110
+ie20h,con_hh,NaN,NA,110
+ie20h,con_sqrt,NaN,NA,110
+ie20h,con_pc,NaN,NA,110
+ie20h,con_oecdm,NaN,NA,110
+ie20h,con_ae,NaN,NA,110
+[1] "Loading dataset ie21h..."
+ie21h,market_hh,0.5949,0.0096,110
+ie21h,market_sqrt,0.5121,0.0089,110
+ie21h,market_pc,0.5322,0.0086,110
+ie21h,market_oecdm,0.5126,0.0087,110
+ie21h,market_ae,0.5181,0.0079,110
+ie21h,gross_hh,0.4294,0.0056,110
+ie21h,gross_sqrt,0.3602,0.0061,110
+ie21h,gross_pc,0.3703,0.0073,110
+ie21h,gross_oecdm,0.3552,0.0057,110
+ie21h,gross_ae,0.3572,0.0069,110
+ie21h,disp_hh,0.3671,0.0056,110
+ie21h,disp_sqrt,0.2901,0.0063,110
+ie21h,disp_pc,0.3063,0.0067,110
+ie21h,disp_oecdm,0.2827,0.006,110
+ie21h,disp_ae,0.2866,0.0054,110
+ie21h,con_hh,NaN,NA,110
+ie21h,con_sqrt,NaN,NA,110
+ie21h,con_pc,NaN,NA,110
+ie21h,con_oecdm,NaN,NA,110
+ie21h,con_ae,NaN,NA,110
 > 
 > proc.time()
    user  system elapsed 
-298.413   8.260 492.631 
+211.099   0.347 213.438 
 
 

@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 1159644 pe
-Date: December 18, 2023 at 11:31:52 AM CST
+Subject: job 1262358 pe
+Date: August 21, 2024 at 9:14:57 AM GMT+9
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -20,8 +20,14 @@ To: <fsolt@mac.com>
                                                                         
 ############################### NOTICE TO USERS ###############################
 
+> 
+> 
+> 
+> 
 > options(echo=FALSE, encoding="UTF-8")
 Loading required package: readstata13
+> 
+> 
 > options(error = expression(q('no')))
 > ## Define functions 
 > gini <- function(df, x) { 
@@ -460,13 +466,13 @@ pe18h,market_sqrt,0.485,0.0033,110
 pe18h,market_pc,0.5006,0.003,110
 pe18h,market_oecdm,0.482,0.0033,110
 pe18h,market_ae,0.4874,0.0029,110
-pe18h,gross_hh,0.5045,0.0033,110
+pe18h,gross_hh,0.5044,0.0033,110
 pe18h,gross_sqrt,0.4559,0.0031,110
-pe18h,gross_pc,0.4712,0.0029,110
+pe18h,gross_pc,0.4713,0.0029,110
 pe18h,gross_oecdm,0.4515,0.0028,110
-pe18h,gross_ae,0.457,0.003,110
-pe18h,disp_hh,0.4931,0.0026,110
-pe18h,disp_sqrt,0.4435,0.0031,110
+pe18h,gross_ae,0.4571,0.003,110
+pe18h,disp_hh,0.493,0.0026,110
+pe18h,disp_sqrt,0.4434,0.0031,110
 pe18h,disp_pc,0.4591,0.003,110
 pe18h,disp_oecdm,0.4387,0.003,110
 pe18h,disp_ae,0.4444,0.0028,110
@@ -482,23 +488,44 @@ pe19h,market_pc,0.4921,0.0033,110
 pe19h,market_oecdm,0.4728,0.0035,110
 pe19h,market_ae,0.4786,0.0031,110
 pe19h,gross_hh,0.4972,0.0028,110
-pe19h,gross_sqrt,0.4478,0.0031,110
+pe19h,gross_sqrt,0.4477,0.0031,110
 pe19h,gross_pc,0.4647,0.0032,110
 pe19h,gross_oecdm,0.4444,0.0028,110
 pe19h,gross_ae,0.4503,0.003,110
-pe19h,disp_hh,0.4859,0.0025,110
-pe19h,disp_sqrt,0.4357,0.0027,110
+pe19h,disp_hh,0.4858,0.0025,110
+pe19h,disp_sqrt,0.4356,0.0027,110
 pe19h,disp_pc,0.4528,0.0029,110
-pe19h,disp_oecdm,0.4319,0.0029,110
+pe19h,disp_oecdm,0.4318,0.0029,110
 pe19h,disp_ae,0.4379,0.0031,110
 pe19h,con_hh,0.3821,0.0022,110
 pe19h,con_sqrt,0.3282,0.0021,110
 pe19h,con_pc,0.3514,0.0025,110
 pe19h,con_oecdm,0.3269,0.0022,110
 pe19h,con_ae,0.334,0.0025,110
+[1] "Loading dataset pe21h..."
+pe21h,market_hh,0.5461,0.0029,110
+pe21h,market_sqrt,0.4932,0.0032,110
+pe21h,market_pc,0.508,0.0031,110
+pe21h,market_oecdm,0.4895,0.0035,110
+pe21h,market_ae,0.4948,0.0029,110
+pe21h,gross_hh,0.4956,0.0027,110
+pe21h,gross_sqrt,0.4485,0.0031,110
+pe21h,gross_pc,0.4626,0.0028,110
+pe21h,gross_oecdm,0.4431,0.0031,110
+pe21h,gross_ae,0.4483,0.0031,110
+pe21h,disp_hh,0.4836,0.0026,110
+pe21h,disp_sqrt,0.4358,0.0028,110
+pe21h,disp_pc,0.4504,0.0032,110
+pe21h,disp_oecdm,0.4302,0.0027,110
+pe21h,disp_ae,0.4355,0.0033,110
+pe21h,con_hh,0.3586,0.0022,110
+pe21h,con_sqrt,0.3093,0.0024,110
+pe21h,con_pc,0.3335,0.0023,110
+pe21h,con_oecdm,0.3073,0.0023,110
+pe21h,con_ae,0.3145,0.0026,110
 > 
 > proc.time()
    user  system elapsed 
-428.683  27.972 796.951 
+405.280   1.214 590.684 
 
 
