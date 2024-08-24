@@ -7,7 +7,7 @@ ccs <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",
          "pe", "pl", "ps", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se", 
          "ch", "tw", "uk", "us", "uy", "vn") # la lv here and lissy.R when released
 
-get_lis_ginis <- function(ccs, wait = 240) {
+get_lis_ginis <- function(ccs, wait = 120) {
   yahoo_user <- getOption("yahoo_user")        # set all of these in .Rprofile, e.g.:
   yahoo_password <-getOption("yahoo_password") # options("yahoo_user" = "juanita-herrera@yahoo.com", 
   lis_user <- getOption("lis_user")            #         "yahoo_password" = "app_password")
