@@ -476,6 +476,8 @@ China,2017,0.467,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2018,"""1
 China,2018,0.468,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2019,"""1-4""",http://www.stats.gov.cn/tjsj/ndsj/2019/indexeh.htm
 China,2019,0.465,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2020,"""1-4""",http://www.stats.gov.cn/tjsj/ndsj/2021/indexch.htm
 China,2020,0.468,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2020,"""1-4""",http://www.stats.gov.cn/tjsj/ndsj/2021/indexch.htm
+China,2021,0.466,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2020,"""1-4""",http://www.stats.gov.cn/tjsj/ndsj/2023/indexch.htm
+China,2022,0.467,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2020,"""1-4""",http://www.stats.gov.cn/tjsj/ndsj/2023/indexch.htm
 Colombia,1972,0.618,,gross,pc,FALSE,Altimir1987 Colombia gross pc 1,Altimir 1987,154,https://doi.org/10.1111/j.1475-4991.1987.tb00667.x
 Colombia,1972,0.607,,gross,pc,FALSE,Altimir1987 Colombia gross pc 2,Altimir 1987,154,https://doi.org/10.1111/j.1475-4991.1987.tb00667.x
 Colombia,1978,0.545,,disp,hh,,WorldBank1994 Colombia disp hh,World Bank 1994 ,229,https://web.archive.org/web/20180427221719/http://documents.worldbank.org/curated/en/853931468019216759/pdf/1375710SPANISH.pdf
@@ -1227,6 +1229,8 @@ Iran,2004,0.443,,disp,pc,FALSE,SI2006 disp pc,Salehi-Isfahani 2006,51,https://ww
 Iran,2004,0.435,0.003,con,pc,FALSE,SI2009 con pc,Salehi-Isfahani 2009,17,http://doi.org/10.1007/s10888-007-9071-y
 Iran,2005,0.435,0.004,con,pc,FALSE,SI2009 con pc,Salehi-Isfahani 2009,17,http://doi.org/10.1007/s10888-007-9071-y
 Iran,2013,0.365,,gross,pc,,Statistical Center of Iran gross pc,Statistical Center of Iran 2015,14,https://web.archive.org/web/20171122202936/https://www.amar.org.ir/Portals/1/releases/s_heis_ur_1392.pdf
+Iran,2018,0.3992,,gross,pc,,Statistical Center of Iran gross pc,Statistical Center of Iran 2024,,https://web.archive.org/web/20240824165248/https://www.amar.org.ir/en/home-page
+Iran,2019,0.40993,,gross,pc,,Statistical Center of Iran gross pc,Statistical Center of Iran 2024,,https://web.archive.org/web/20240824165248/https://www.amar.org.ir/en/home-page
 Iraq,2007,0.356,,con,pc,,Hassine2015 Iraq con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Iraq,2007,0.4225,,disp,sqrt,,HCV2020 Iraq disp sqrt,"Hlasny, Ceriani, and Verme 2020",24,https://www.lisdatacenter.org/wps/liswps/792.pdf
 Iraq,2007,0.351,,con,pc,,UNESCWA2018 Iraq con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
@@ -1728,15 +1732,15 @@ Mongolia,2009,0.31,,con,pc,,NSO Mongolia 2004 con pc,National Statistics Office 
 Mongolia,2010,0.33,,con,pc,,NSO Mongolia 2004 con pc,National Statistics Office of Mongolia,24,http://web.nso.mn/nada/index.php/catalog/77/download/710
 Montenegro,2005,0.259,,con,oecdm,,Monstat con oecdm,Statistical Office of Montenegro 2009,4,https://www.monstat.org/userfiles/file/analiza%20siromastva/Siromastvo%20u%20CG_2007_engleska%20verzija.pdf
 Morocco,1985,0.397,,con,pc,,AP2003 Morocco con pc,Adams and Page 2003,2040,https://doi.org/10.1016/j.worlddev.2003.04.004
-Morocco,1985,0.399,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,28,www.hcp.ma/file/174377
+Morocco,1985,0.399,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,28,https://web.archive.org/web/20210702162406/https://www.hcp.ma/file/174377/
 Morocco,1991,0.393,,con,pc,,AP2003 Morocco con pc,Adams and Page 2003,2040,https://doi.org/10.1016/j.worlddev.2003.04.004
-Morocco,1991,0.393,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,www.hcp.ma/file/174377
+Morocco,1991,0.393,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,https://web.archive.org/web/20210702162406/https://www.hcp.ma/file/174377/
 Morocco,1998,0.39,,con,pc,,FR2008 Morocco con pc,Ferreira and Ravallion 2008,38,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Morocco,1999,0.395,,con,pc,,AP2003 Morocco con pc,Adams and Page 2003,2040,https://doi.org/10.1016/j.worlddev.2003.04.004
 Morocco,1999,0.39,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2008,,http://www.hcp.ma/Indices-de-la-pauvrete-vulnerabilite-et-inegalite-selon-le-milieu-de-residence-1985-2007_a658.html
-Morocco,2001,0.406,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,www.hcp.ma/file/174377
-Morocco,2007,0.407,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,www.hcp.ma/file/174377
-Morocco,2014,0.388,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,www.hcp.ma/file/174377
+Morocco,2001,0.406,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,https://web.archive.org/web/20210702162406/https://www.hcp.ma/file/174377/
+Morocco,2007,0.407,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,https://web.archive.org/web/20210702162406/https://www.hcp.ma/file/174377/
+Morocco,2014,0.388,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,https://web.archive.org/web/20210702162406/https://www.hcp.ma/file/174377/
 Mozambique,1997,0.397,0.006,con,pc,,GT2017 con sqrt,Grandín and Tarp 2017,18,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
 Mozambique,1997,0.373,,con,sqrt,,GT2017 con sqrt,Grandín and Tarp 2017,23,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
 Mozambique,2003,0.415,0.013,con,pc,FALSE,AJT2010 Mozambique con,"Arndt, Jones, and Tarp 2010",57,http://curis.ku.dk/ws/files/33629587/Third_National_Poverty_Assessment.pdf
@@ -1968,10 +1972,19 @@ Philippines,1988,0.4446,,gross,pc,,PSA gross pc,Philippines Statistical Agency,,
 Philippines,1991,0.468,,gross,pc,,PSA gross pc,Philippines Statistical Agency,,https://psa.gov.ph/sites/default/files/attachments/hsd/article/Table%20G%20%20Gini%20Concentration%20Ratios%20By%20Region.pdf
 Philippines,1994,0.4507,,gross,pc,,PSA gross pc,Philippines Statistical Agency,,https://psa.gov.ph/sites/default/files/attachments/hsd/article/Table%20G%20%20Gini%20Concentration%20Ratios%20By%20Region.pdf
 Philippines,1997,0.4872,,gross,pc,,PSA gross pc,Philippines Statistical Agency,,https://psa.gov.ph/sites/default/files/attachments/hsd/article/Table%20G%20%20Gini%20Concentration%20Ratios%20By%20Region.pdf
+Philippines,2000,0.4841,,gross,pc,,PSA gross pc,Philippines Statistical Agency,,https://openstat.psa.gov.ph:443/PXWeb/sq/a0eb1e18-e495-49d5-9a5b-7f3d3a5ffff7
+Philippines,2003,0.4769,,gross,pc,,PSA gross pc,Philippines Statistical Agency,,https://openstat.psa.gov.ph:443/PXWeb/sq/a0eb1e18-e495-49d5-9a5b-7f3d3a5ffff7
+Philippines,2006,0.4742,,gross,pc,,PSA gross pc,Philippines Statistical Agency,,https://openstat.psa.gov.ph:443/PXWeb/sq/a0eb1e18-e495-49d5-9a5b-7f3d3a5ffff7
+Philippines,2009,0.4641,,gross,pc,,PSA gross pc,Philippines Statistical Agency,,https://openstat.psa.gov.ph:443/PXWeb/sq/a0eb1e18-e495-49d5-9a5b-7f3d3a5ffff7
 Philippines,2009,0.43,,con,pc,,ZKM2014 Philippines con pc,"Zhuang, Kanbur, and Maligalig 2014",22,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA22
 Philippines,2009,0.474,,gross,pc,,ZKM2014 Philippines gross pc,"Zhuang, Kanbur, and Maligalig 2014",22,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA22
+Philippines,2012,0.4605,,gross,pc,,PSA gross pc,Philippines Statistical Agency,,https://openstat.psa.gov.ph:443/PXWeb/sq/a0eb1e18-e495-49d5-9a5b-7f3d3a5ffff7
+Philippines,2015,0.4439,,gross,pc,,PSA gross pc,Philippines Statistical Agency,,https://openstat.psa.gov.ph:443/PXWeb/sq/a0eb1e18-e495-49d5-9a5b-7f3d3a5ffff7
 Philippines,2018,0.4267,,gross,pc,,PSA gross pc,Philippines Statistical Agency,,https://psa.gov.ph/press-releases/id/167973
+Philippines,2018,0.4191,,gross,pc,,PSA gross pc,Philippines Statistical Agency,,https://web.archive.org/web/20240816231901/https://psa.gov.ph/system/files/iesd/Table%205.%202018%2C%202021%20and%202023p%20Gini%20Coefficient%20and%20Palma%20Ratio%2C%20by%20Region%2C%20Province%20and%20HUC.xlsx
+Philippines,2021,0.4063,,gross,pc,,PSA gross pc,Philippines Statistical Agency,,https://web.archive.org/web/20240816231901/https://psa.gov.ph/system/files/iesd/Table%205.%202018%2C%202021%20and%202023p%20Gini%20Coefficient%20and%20Palma%20Ratio%2C%20by%20Region%2C%20Province%20and%20HUC.xlsx
 Philippines,2021,0.4119,,gross,pc,,PSA gross pc,Philippines Statistical Agency,,https://psa.gov.ph/press-releases/id/167973
+Philippines,2023,0.3909,,gross,pc,,PSA gross pc,Philippines Statistical Agency,,https://web.archive.org/web/20240816231901/https://psa.gov.ph/system/files/iesd/Table%205.%202018%2C%202021%20and%202023p%20Gini%20Coefficient%20and%20Palma%20Ratio%2C%20by%20Region%2C%20Province%20and%20HUC.xlsx
 Poland,1983,0.246,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Poland,1984,0.258,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Poland,1985,0.253,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
@@ -2790,6 +2803,9 @@ Uruguay,2014,0.379,,disp,pc,TRUE,CEPAL Uruguay disp pc 2,CEPALStat,National,http
 Uruguay,2018,0.38,0.004,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2019,10,https://www.ine.gub.uy/c/document_library/get_file?uuid=f605ab36-693d-4975-a919-fe8d5646f409&groupId=10181
 Uruguay,2019,0.383,0.004,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2020,11,https://www.ine.gub.uy/documents/10181/30913/Estimación+de+la+pobreza+por+el+método+de+ingreso+2019/c0c832b4-7e5c-4c2a-92e9-7ea69a75e92a
 Uruguay,2020,0.387,,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2021,9,https://www.ine.gub.uy/documents/10181/30913/Pobreza0321/c18681f1-7aa9-4d0a-bd6b-265049f3e26e
+Uruguay,2021,0.386,,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2021,,https://www5.ine.gub.uy/documents/DemografíayEESS/HTML/ECH/Pobreza/2022/Indicadores%20de%20la%20distribucion%20del%20ingreso%202022.html
+Uruguay,2022,0.389,,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2021,,https://www5.ine.gub.uy/documents/DemografíayEESS/HTML/ECH/Pobreza/2022/Indicadores%20de%20la%20distribucion%20del%20ingreso%202022.html
+Uruguay,2023,0.394,,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2021,,https://www5.ine.gub.uy/documents/DemografíayEESS/HTML/ECH/Pobreza/2023/Desigualdad_informe-2023.html
 USSR,1980,0.29,,gross,pc,,AG1993 USSR gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,122,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 USSR,1980,0.245,,gross,pc,FALSE,AM1992 USSR gross pc,Atkinson and Micklewright 1992,UI1,https://books.google.com/books?id=zaL4CGdjOkUC
 USSR,1985,0.284,,gross,pc,,AG1993 USSR gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,122,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -2855,3 +2871,4 @@ Zimbabwe,1995,0.501,,con,pc,,FR2008 Zimbabwe con pc,Ferreira and Ravallion 2008,
 Zimbabwe,1995,0.501,,con,pc,FALSE,Zimstat  con pc,Zimbabwe National Statistics Agency 2013,42,http://www.zimstat.co.zw/sites/default/files/img/publications/Finance/Poverty2011.pdf
 Zimbabwe,2001,0.489,,con,pc,FALSE,Zimstat  con pc,Zimbabwe National Statistics Agency 2013,42,http://www.zimstat.co.zw/sites/default/files/img/publications/Finance/Poverty2011.pdf
 Zimbabwe,2011,0.423,,con,pc,FALSE,Zimstat  con pc,Zimbabwe National Statistics Agency 2013,42,http://www.zimstat.co.zw/sites/default/files/img/publications/Finance/Poverty2011.pdf
+Morocco,2020,0.385,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2024,,https://web.archive.org/web/20240502002218/https://doc-0g-a8-sheets.googleusercontent.com/export/54bogvaave6cua4cdnls17ksc4/p508gtm240ga2b4elo2acah1vs/1714609335000/109766752092943887866/*/1F7bdC58hMb1tM0JDSwwPMBpYLES2W1wZFudh050nO98?gid=0
