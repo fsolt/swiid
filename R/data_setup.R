@@ -231,7 +231,7 @@ cepal <- cepal0 %>%
             equiv_scale = "pc",
             monetary = TRUE,
             notes = paste(area, series),
-            series = paste("CEPAL", country, "disp pc", as.numeric(factor(notes, levels = unique(notes)))),
+            series = paste("CEPALStat", country, "disp pc", as.numeric(factor(notes, levels = unique(notes)))),
             source1 = "CEPALStat",
             page = NA,
             link = cepal_link) %>% 
@@ -258,15 +258,17 @@ cepal_sdi <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data
 
 
 # OECD Income Distribution Database (automated)
-oecd_link <- "https://sdmx.oecd.org/public/rest/data/OECD.WISE.INE,DSD_WISE_IDD@DF_IDD,1.0/.A.INC_DISP_SE+INC_DISP_GINI..._T.METH2011+METH2012.D_CUR.?startPeriod=1976&endPeriod=2023"
+oecd_link <- "https://sdmx.oecd.org/public/rest/data/OECD.WISE.INE,DSD_WISE_IDD@DF_IDD,1.0/.A.INC_DISP_GINI+INC_DISP_SE+INC_MRKT_GINI+INC_GROSS_GINI..._T...?dimensionAtObservation=AllDimensions"
+
 oecd0 <- oecd_link %>% 
   readSDMX() %>% 
   as_tibble() %>% 
   transmute(country = countrycode(REF_AREA, "iso3c", "swiid.name", custom_dict = cc_swiid),
-            year = as.numeric(obsTime),
+            year = as.numeric(TIME_PERIOD),
             gini = obsValue,
-            welfare_def = ifelse((MEASURE=="GINI" | MEASURE=="STDG"), "disp", 
-                                 ifelse(MEASURE=="GINIB", "market", "gross")),
+            welfare_def = case_when(str_detect(MEASURE, "DISP") ~ "disp",
+                                    str_detect(MEASURE, "MRKT") ~ "market",
+                                    TRUE ~ "gross"),
             equiv_scale = "sqrt",   
             monetary = FALSE,
             series = paste("OECD", welfare_def, "sqrt,", tolower(DEFINITION), "def,", 
@@ -293,7 +295,7 @@ eurostat <- get_eurostat("ilc_di12",
                          update_cache = TRUE,
                          keepFlags = TRUE) %>%
   mutate(geo = as.character(geo) %>% recode("UK" = "GB", "EL" = "GR")) %>% 
-  filter(!str_detect(geo, "E[AU]\\d*|NMS10")) %>% 
+  filter(!str_detect(geo, "E[AU]\\d*|NMS10") & str_detect(age, "TOTAL")) %>% 
   transmute(country = countrycode(as.character(geo), "iso2c", "swiid.name", custom_dict = cc_swiid),
             year = TIME_PERIOD - (!(country=="United Kingdom" | (country=="Ireland" & TIME_PERIOD < 2019))), #eurostat reports survey year not ref year except in UK and IE <https://ec.europa.eu/eurostat/cache/metadata/en/ilc_sieusilc.htm#ref_period1718211624296>
             gini = values/100,
@@ -344,8 +346,8 @@ transmonee <- read_excel("data-raw/transmonee.xls",
 
 
 # Commitment to Equity (update by hand; see http://www.commitmentoequity.org/publications-ceqworkingpapers/ and http://www.commitmentoequity.org/data/ )
-ceq <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/ceq.csv", col_types = "cnnncclcccc") %>% 
-  mutate(series = paste("CEQ", welfare_def, equiv_scale))
+ceq <- read_csv("data-raw/ceq.csv", col_types = "cnnncclcccc") %>% 
+  mutate(series = if_else(is.na(series), paste("CEQ", welfare_def, equiv_scale), series))
 
 
 # World Bank Africa Poverty Database (bespoke analysis of subset of WB surveys; archived)
@@ -840,10 +842,9 @@ insee3 <- read_excel("data-raw/insee3.xlsx", skip = 2) %>%
                  values_to = "gini") %>% 
     filter(!is.na(gini)) %>%
     mutate(series_no = str_split_i(year, "\\d{4}", -1),
-           series_no = if_else(series_no == "", NA_character_, series_no)) %>%
-    fill(series_no) %>% 
+           series_no = cumsum(series_no!="") + 1) %>% 
     mutate(series_no = if_else(is.na(series_no), 
-                               1,
+                               2,
                                as.numeric(str_extract(series_no, "\\d$"))+2)) %>% 
     transmute(country = "France",
               year = as.numeric(str_extract(year, "\\d{4}")),
@@ -1398,14 +1399,9 @@ ssb <- pxweb_get_data(url = "https://data.ssb.no/api/v0/en/table/07756/",
             link = "https://www.ssb.no/en/statbank/table/07756/")
 
 
-# DGEEC Paraguay (automated)
+# DGEEC Paraguay (archived; update fs_data_added)
 # https://www.ine.gov.py > ESTÁDISTICA POR TEMA > Ingresos
-dgeec_link <- "https://www.ine.gov.py/default.php?publicacion=5" %>% 
-    read_html() %>% 
-    html_node(xpath = "//a[contains(@href, 'desigualdad')]") %>% 
-    html_attr("href") %>% 
-    # str_c("https://www.ine.gov.py/", .) %>% 
-    str_replace_all(" ", "%20")
+dgeec_link <- "https://web.archive.org/web/20230420113835/https://www.ine.gov.py/assets/documento/84ccaIngresos_indicadores%20de%20desigualdad_py_EPH%201997-98_2021.xls"
 
 download.file(dgeec_link, "data-raw/dgeec.xls")
 
@@ -1703,17 +1699,17 @@ rm(fso_ch0)
 # Taiwan Directorate General of Budget, Accounting, and Statistics 
 # update file from tdfbas_link2; otherwise automated
 tdgbas_link <- paste0("http://win.dgbas.gov.tw/fies/doc/result/", Sys.Date() %>% str_extract("\\d{4}") %>% as.numeric() %>% "-"(1912), "/a11/Year05.xls")
-tryCatch(download.file(tdgbas_link, "data-raw/tdgbas1.xls"),
-         error = function(e) {
-           tdgbas_link <- paste0("http://win.dgbas.gov.tw/fies/doc/result/", Sys.Date() %>% str_extract("\\d{4}") %>% as.numeric() %>% "-"(1913), "/a11/Year05.xls")
-           download.file(tdgbas_link, "data-raw/tdgbas1.xls")
-         })
-tryCatch(read_excel("data-raw/tdgbas1.xls", col_names = FALSE, skip = 9, 
-                    .name_repair = ~ make.names(.x, unique = TRUE)),
-         error = function(e) {
-           tdgbas_link <- paste0("http://win.dgbas.gov.tw/fies/doc/result/", Sys.Date() %>% str_extract("\\d{4}") %>% as.numeric() %>% "-"(1913), "/a11/Year05.xls")
-           download.file(tdgbas_link, "data-raw/tdgbas1.xls")
-         })
+# tryCatch(download.file(tdgbas_link, "data-raw/tdgbas1.xls"),
+#          error = function(e) {
+#            tdgbas_link <- paste0("http://win.dgbas.gov.tw/fies/doc/result/", Sys.Date() %>% str_extract("\\d{4}") %>% as.numeric() %>% "-"(1913), "/a11/Year05.xls")
+#            download.file(tdgbas_link, "data-raw/tdgbas1.xls")
+#          })
+# tryCatch(read_excel("data-raw/tdgbas1.xls", col_names = FALSE, skip = 9, 
+#                     .name_repair = ~ make.names(.x, unique = TRUE)),
+#          error = function(e) {
+#            tdgbas_link <- paste0("http://win.dgbas.gov.tw/fies/doc/result/", Sys.Date() %>% str_extract("\\d{4}") %>% as.numeric() %>% "-"(1913), "/a11/Year05.xls")
+#            download.file(tdgbas_link, "data-raw/tdgbas1.xls")
+#          })
          
 tdgbas_link2 <- "http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L"
 
@@ -1791,8 +1787,8 @@ nso_thailand <- bind_rows(nso_thailand1, nso_thailand2)
 
 rm(nso_thailand1, nso_thailand2)
 
-# NESDC Thailand (automatic, but might need to update wrangle)
-nesdc_link <- c("https://www.nesdc.go.th/ewt_dl_link.php?nid=3518&filename=social")
+# NESDC Thailand (archived; check for update)
+nesdc_link <- c("https://web.archive.org/web/20231231113955/https://www.nesdc.go.th/ewt_dl_link.php?nid=3518&filename=social")
 download.file(nesdc_link, "data-raw/nesdc.xlsx")
 
 nesdc_gross <- read_excel("data-raw/nesdc.xlsx", sheet = "8.1", skip = 2) %>%
@@ -1988,7 +1984,7 @@ uscb_hh_se <- read_excel("data-raw/uscb_hh_se.xlsx", skip = 3) %>%
   mutate(year = as.numeric(str_extract(year, "\\d{4}")),
          gini = as.numeric(gini),
          gini_se = as.numeric(gini_se),
-         break_yr = (year == 1993 | (year == 2013 & gini_se > .005) | (year == 2017 & gini_se == 0.0036))) %>%
+         break_yr = (year == 1993 | (year == 2013 & gini_se > .005) | (year == 2017 & gini_se == 0.0036) | year == 2020)) %>%
   arrange(year, break_yr) %>% 
   transmute(country = "United States",
             year = year,
@@ -2006,7 +2002,7 @@ uscb_hh <- read_excel("data-raw/uscb_hh.xlsx", sheet = "tableA4b", skip = 6) %>%
   filter(str_detect(x1, "^\\d{4}")) %>% 
   transmute(year = as.numeric(str_extract(x1, "\\d{4}")),
          gini = as.numeric(x14),
-         break_yr = (year == 1993 | (year == 2013 & gini > .48) | (year == 2017 & gini == .489))) %>%
+         break_yr = (year == 1993 | (year == 2013 & gini > .48) | (year == 2017 & gini == .489) | year == 2020)) %>%
   arrange(year, break_yr) %>% 
   transmute(country = "United States",
             year = year,
@@ -2030,7 +2026,7 @@ uscb_ae_se <- read_excel("data-raw/uscb_ae_se.xlsx", skip = 3) %>%
   mutate(year = as.numeric(str_extract(year, "\\d{4}")),
          gini = as.numeric(gini),
          gini_se = as.numeric(gini_se),
-         break_yr = (year == 1993 | (year == 2013 & gini_se == .0064) | (year == 2017 & gini_se == 0.0036))) %>%
+         break_yr = (year == 1993 | (year == 2013 & gini_se == .0064) | (year == 2017 & gini_se == 0.0036) | year == 2020)) %>%
   arrange(year, break_yr) %>% 
   transmute(country = "United States",
             year = year,
@@ -2044,7 +2040,7 @@ uscb_ae <- read_excel("data-raw/uscb_ae.xlsx", skip = 6) %>%
   filter(str_detect(x1, "^\\d{4}")) %>% 
   transmute(year = as.numeric(str_extract(x1, "\\d{4}")),
             gini = as.numeric(x10),
-            break_yr = (year == 1993 | (year == 2013 & gini > .48) | (year == 2017 & gini == .489))) %>%
+            break_yr = (year == 1993 | (year == 2013 & gini > .46) | (year == 2017 & gini == .471) | year == 2020)) %>%
   arrange(year, break_yr) %>% 
   filter(!is.na(gini)) %>% 
   transmute(country = "United States",
@@ -2128,7 +2124,7 @@ uine2 <- read_excel("data-raw/uine2.xlsx", skip = 3) %>%
             welfare_def = "disp",
             equiv_scale = "pc",
             monetary = FALSE,
-            series = paste("Instituto Nacional de Estadistica Uruguay", welfare_def, equiv_scale, "2"),
+            series = paste("Instituto Nacional de Estadistica Uruguay", welfare_def, equiv_scale, "3"),
             source1 = "Instituto Nacional de Estadística Uruguay",
             page = "45",
             link = uine_link2)
@@ -2323,7 +2319,7 @@ rm(gidd_raw)
 
 
 ## Added data
-added_data <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/fs_added_data.csv",
+added_data <- read_csv("data-raw/fs_added_data.csv",
                        col_types = "ciddcclcccc")
 
 ## Combine
