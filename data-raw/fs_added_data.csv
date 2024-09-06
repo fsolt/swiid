@@ -131,7 +131,6 @@ Bahamas,2001,0.5745,,con,pc,TRUE,Statistics Bahamas con pc,Statistics Bahamas 20
 Bahamas,2003,0.48,,market,hh,,Statistics Bahamas market hh,Statistics Bahamas 2005,20,https://web.archive.org/web/20180427210852/http://www.centralbankbahamas.com/download/LFS_report_2004.pdf
 Bahamas,2004,0.43,,market,hh,,Statistics Bahamas market hh,Statistics Bahamas 2005,20,https://web.archive.org/web/20180427210852/http://www.centralbankbahamas.com/download/LFS_report_2004.pdf
 Bahamas,2013,0.414,,con,pc,TRUE,Statistics Bahamas con pc,Statistics Bahamas 2016,21,https://www.bahamas.gov.bs/wps/wcm/connect/5312dd47-5cd9-45f5-bf6c-dea99f3a6226/Bahamas+Household+Expenditure+Survey+2013+Report_v2.pdf?MOD=AJPERES
-Bahamas,2013,0.414,,con,pc,TRUE,Statistics Bahamas con pc,Statistics Bahamas 2016,21,https://www.bahamas.gov.bs/wps/wcm/connect/5312dd47-5cd9-45f5-bf6c-dea99f3a6226/Bahamas+Household+Expenditure+Survey+2013+Report_v2.pdf?MOD=AJPERES
 Bahrain,2014,0.596,,gross,pc,,IGA 2017,Bahrain Information & eGovernment Authority 2017,51,http://www.data.gov.bh/en/ResourceCenter/DownloadFile?id=2484
 Bangladesh,1964,0.359,,gross,hh,,Muqtada1986 Bangladesh gross hh,Tabatabai 1996; Muqtada 1986,90,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Bangladesh,1967,0.304,,con,hh,,A1976 Bangladesh con hh,Azfar 1976,60,https://www.jstor.org/stable/25821355
@@ -162,7 +161,7 @@ Bangladesh,1996,0.432,,gross,hh,,Ahmed2004 gross hh,Ahmed 2004,7,https://www.eco
 Bangladesh,1996,0.33,,con,pc,,FR2008 Bangladesh con pc,Ferreira and Ravallion 2008,35,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Bangladesh,1996,0.432,,gross,pc,,Haque2007 Bangladesh gross pc,Haque 2007,43,https://www.researchgate.net/profile/Ohidul_Haque/publication/268013676_Preliminary_Evaluation_of_Economic_Development_and_its_Effect_on_Income_Distribution_in_Bangladesh/links/561c523708ae6d17308b1685.pdf
 Bangladesh,2000,0.417,,gross,hh,,Ahmed2004 gross hh,Ahmed 2004,7,https://www.econstor.eu/bitstream/10419/109257/1/ewp-054.pdf
-Bangladesh,2000,0.32,,gross,hh,,Ahmed2004 gross hh,Ahmed 2004,9,https://www.econstor.eu/bitstream/10419/109257/1/ewp-054.pdf
+Bangladesh,2000,0.32,,con,hh,,Ahmed2004 con hh,Ahmed 2004,9,https://www.econstor.eu/bitstream/10419/109257/1/ewp-054.pdf
 Bangladesh,2000,0.472,,gross,pc,,Haque2007 Bangladesh gross pc,Haque 2007,43,https://www.researchgate.net/profile/Ohidul_Haque/publication/268013676_Preliminary_Evaluation_of_Economic_Development_and_its_Effect_on_Income_Distribution_in_Bangladesh/links/561c523708ae6d17308b1685.pdf
 Bangladesh,2005,0.467,,gross,hh,,BBS gross hh,Bangladesh Bureau of Statistics 2011,30,http://203.112.218.65/WebTestApplication/userfiles/Image/LatestReports/HIES-10.pdf
 Bangladesh,2010,0.321,,con,hh,,BBS con hh,Bangladesh Bureau of Statistics 2011,xxvii,http://203.112.218.65/WebTestApplication/userfiles/Image/LatestReports/HIES-10.pdf
@@ -598,10 +597,10 @@ Denmark,1987,0.325,,con,hh,,Park1995 Denmark con hh,Tabatabai 1996; Park 1995,12
 Denmark,1987,0.345,,disp,hh,,Park1995 Denmark disp hh,Tabatabai 1996; Park 1995,124,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Denmark,1987,0.203,,disp,ae,TRUE,W1999 Denmark disp ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
 Denmark,1987,0.3023,,gross,ae,TRUE,W1999 Denmark gross ae 1,Wagstaff et al. 1999,82,http://www.sciencedirect.com/science/article/pii/S0047272798000851
-Denmark,1988,0.22,,disp,sqrt,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
+Denmark,1988,0.22,,disp,sqrt,,GACPSU2002 disp sqrt,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
 Denmark,1989,0.208,,disp,ae,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
 Denmark,1992,0.213,,disp,ae,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
-Denmark,1992,0.22,,disp,sqrt,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
+Denmark,1992,0.22,,disp,sqrt,,GACPSU2002 disp sqrt,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
 Denmark,1993,0.21,,disp,ae,,GACPSU2002 disp ae,"Gustafsson, Aaberge, Cappelen, Pedersen, Smith, and Uusitalo 2002",218,https://books.google.com/books?hl=en&lr=&id=SFeGAgAAQBAJ&oi=fnd&pg=PA218
 Denmark,1993,0.26,,disp,sqrt,,NWN2014 disp sqrt,Neamtu and Westergaard-Nielsen 2014,200,https://books.google.com/books?id=9cXRAgAAQBAJ&pg=200
 Denmark,1993,0.49,,market,sqrt,,NWN2014 market sqrt,Neamtu and Westergaard-Nielsen 2014,200,https://books.google.com/books?id=9cXRAgAAQBAJ&pg=200
@@ -629,13 +628,13 @@ Dominican Republic,2011,0.558,,disp,pc,TRUE,CEPAL Dominican Republic disp pc 1,C
 Dominican Republic,2012,0.517,,disp,pc,TRUE,CEPAL Dominican Republic disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Dominican Republic,2013,0.544,,disp,pc,TRUE,CEPAL Dominican Republic disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Dominican Republic,2014,0.519,,disp,pc,TRUE,CEPAL Dominican Republic disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Ecuador,1998,0.443,,con,pc,,INEC con pc,Instituto Nacional de Estadistica y Censos 2015,98,http://www.ecuadorencifras.gob.ec//documentos/web-inec/Bibliotecas/Libros/reportePobreza.pdf
+Ecuador,1998,0.443,,con,pc,,INECE con pc,Instituto Nacional de Estadistica y Censos 2015,98,http://www.ecuadorencifras.gob.ec//documentos/web-inec/Bibliotecas/Libros/reportePobreza.pdf
 Ecuador,2000,0.559,,disp,pc,TRUE,CEPAL Ecuador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Ecuador,2001,0.539,,disp,pc,TRUE,CEPAL Ecuador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Ecuador,2004,0.513,,disp,pc,TRUE,CEPAL Ecuador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Ecuador,2005,0.531,,disp,pc,TRUE,CEPAL Ecuador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Ecuador,2006,0.527,,disp,pc,TRUE,CEPAL Ecuador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Ecuador,2006,0.455,,con,pc,,INEC con pc,Instituto Nacional de Estadistica y Censos 2015,98,http://www.ecuadorencifras.gob.ec//documentos/web-inec/Bibliotecas/Libros/reportePobreza.pdf
+Ecuador,2006,0.455,,con,pc,,INECE con pc,Instituto Nacional de Estadistica y Censos 2015,98,http://www.ecuadorencifras.gob.ec//documentos/web-inec/Bibliotecas/Libros/reportePobreza.pdf
 Ecuador,2007,0.54,,disp,pc,TRUE,CEPAL Ecuador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Ecuador,2008,0.504,,disp,pc,TRUE,CEPAL Ecuador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Ecuador,2009,0.5,,disp,pc,TRUE,CEPAL Ecuador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
@@ -643,7 +642,7 @@ Ecuador,2010,0.495,,disp,pc,TRUE,CEPAL Ecuador disp pc 1,CEPALStat,National,http
 Ecuador,2011,0.46,,disp,pc,TRUE,CEPAL Ecuador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Ecuador,2013,0.477,,disp,pc,TRUE,CEPAL Ecuador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Ecuador,2014,0.452,,disp,pc,TRUE,CEPAL Ecuador disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Ecuador,2014,0.408,,con,pc,,INEC con pc,Instituto Nacional de Estadistica y Censos 2015,98,http://www.ecuadorencifras.gob.ec//documentos/web-inec/Bibliotecas/Libros/reportePobreza.pdf
+Ecuador,2014,0.408,,con,pc,,INECE con pc,Instituto Nacional de Estadistica y Censos 2015,98,http://www.ecuadorencifras.gob.ec//documentos/web-inec/Bibliotecas/Libros/reportePobreza.pdf
 Egypt,1975,0.37,,disp,hh,,vGP1984 Egypt disp hh,Tabatabai 1996; van Ginneken and Park 1984,107,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Egypt,1975,0.34,,disp,pc,,vGP1984 Egypt disp pc,Tabatabai 1996; van Ginneken and Park 1984,107,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Egypt,1991,0.32,,con,pc,,Shaban2016 Egypt con pc,Povcalnet; Shaban 2016,196,https://link.springer.com/chapter/10.1057/9781137554598_6
@@ -1702,29 +1701,29 @@ Moldova,2005,0.3766,,con,hh,,NBS Moldova con hh,National Bureau of Statistics of
 Moldova,2005,0.4105,,disp,hh,,NBS Moldova disp hh,National Bureau of Statistics of Moldova 2007,4,http://www.statistica.md/public/files/SeminareConferinte/Seminar26oct2007/mas_inegal_pop_ro.ppt
 Moldova,2007,0.3287,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2008,56,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_privind_nivelul_de_trai_in_2007.pdf
 Moldova,2007,0.3706,,disp,pc,FALSE,NBS Moldova disp pc,National Bureau of Statistics of Moldova 2008,56,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_privind_nivelul_de_trai_in_2007.pdf
-Moldova,2007,0.4556,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2008,56,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_privind_nivelul_de_trai_in_2007.pdf
+Moldova,2007,0.4556,,disp,pc,TRUE,NBS Moldova disp pc 3,National Bureau of Statistics of Moldova 2008,56,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_privind_nivelul_de_trai_in_2007.pdf
 Moldova,2008,0.2952,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2009,69,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/aspecte_trai_in_2008.zip
 Moldova,2008,0.3615,,disp,pc,FALSE,NBS Moldova disp pc,National Bureau of Statistics of Moldova 2009,69,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/aspecte_trai_in_2008.zip
-Moldova,2008,0.4292,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2009,69,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/aspecte_trai_in_2008.zip
+Moldova,2008,0.4292,,disp,pc,TRUE,NBS Moldova disp pc 3,National Bureau of Statistics of Moldova 2009,69,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/aspecte_trai_in_2008.zip
 Moldova,2009,0.3045,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2010,62,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2009.pdf
 Moldova,2009,0.3712,,disp,pc,FALSE,NBS Moldova disp pc,National Bureau of Statistics of Moldova 2010,62,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2009.pdf
-Moldova,2009,0.4338,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2010,62,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2009.pdf
+Moldova,2009,0.4338,,disp,pc,TRUE,NBS Moldova disp pc 3,National Bureau of Statistics of Moldova 2010,62,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2009.pdf
 Moldova,2010,0.3022,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2011,65,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_trai_in_2010.pdf
-Moldova,2010,0.4154,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2011,65,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_trai_in_2010.pdf
+Moldova,2010,0.4154,,disp,pc,TRUE,NBS Moldova disp pc 3,National Bureau of Statistics of Moldova 2011,65,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_trai_in_2010.pdf
 Moldova,2011,0.2866,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2012,67,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_trai_in_2011.pdf
-Moldova,2011,0.396,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2012,67,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_trai_in_2011.pdf
+Moldova,2011,0.396,,disp,pc,TRUE,NBS Moldova disp pc 3,National Bureau of Statistics of Moldova 2012,67,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_trai_in_2011.pdf
 Moldova,2012,0.3241,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2013,67,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2012.pdf
-Moldova,2012,0.3963,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2008,67,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2012.pdf
+Moldova,2012,0.3963,,disp,pc,TRUE,NBS Moldova disp pc 3,National Bureau of Statistics of Moldova 2008,67,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_Trai_2012.pdf
 Moldova,2013,0.2682,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2014,80,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_trai_2013.pdf
-Moldova,2013,0.3747,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2014,80,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_trai_2013.pdf
+Moldova,2013,0.3747,,disp,pc,TRUE,NBS Moldova disp pc 3,National Bureau of Statistics of Moldova 2014,80,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_trai_2013.pdf
 Moldova,2014,0.2504,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2015,78,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_trai_2014.pdf
-Moldova,2014,0.3758,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2015,78,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_trai_2014.pdf
+Moldova,2014,0.3758,,disp,pc,TRUE,NBS Moldova disp pc 3,National Bureau of Statistics of Moldova 2015,78,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_trai_2014.pdf
 Moldova,2015,0.2535,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2016,78,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_trai_2015.pdf
-Moldova,2015,0.3669,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2016,78,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_trai_2015.pdf
+Moldova,2015,0.3669,,disp,pc,TRUE,NBS Moldova disp pc 3,National Bureau of Statistics of Moldova 2016,78,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_Nivelul_trai_2015.pdf
 Moldova,2016,0.2464,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2017,77,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_nivelul_trai_2016.pdf
-Moldova,2016,0.368,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2017,77,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_nivelul_trai_2016.pdf
+Moldova,2016,0.368,,disp,pc,TRUE,NBS Moldova disp pc 3,National Bureau of Statistics of Moldova 2017,77,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_nivelul_trai_2016.pdf
 Moldova,2017,0.241,,con,pc,FALSE,NBS Moldova con pc 1,National Bureau of Statistics of Moldova 2017,76,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_nivelul_trai_2017.pdf
-Moldova,2017,0.3536,,disp,pc,TRUE,NBS Moldova disp pc 2,National Bureau of Statistics of Moldova 2017,76,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_nivelul_trai_2017.pdf
+Moldova,2017,0.3536,,disp,pc,TRUE,NBS Moldova disp pc 3,National Bureau of Statistics of Moldova 2017,76,http://www.statistica.md/public/files/publicatii_electronice/aspecte_nivelul_trai/Aspecte_nivelul_trai_2017.pdf
 Mongolia,1995,0.332,,con,pc,,FR2008 Mongolia con pc,Ferreira and Ravallion 2008,38,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Mongolia,2003,0.329,,con,pc,,NSO Mongolia 2004 con pc,National Statistics Office of Mongolia 2004,22,http://web.nso.mn/nada/index.php/catalog/65/download/418
 Mongolia,2007,0.365,,con,pc,,ZKM2014 Mongolia con pc,"Zhuang, Kanbur, and Maligalig 2014",24,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA24
@@ -1741,15 +1740,15 @@ Morocco,1999,0.39,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 
 Morocco,2001,0.406,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,https://web.archive.org/web/20210702162406/https://www.hcp.ma/file/174377/
 Morocco,2007,0.407,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,https://web.archive.org/web/20210702162406/https://www.hcp.ma/file/174377/
 Morocco,2014,0.388,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,https://web.archive.org/web/20210702162406/https://www.hcp.ma/file/174377/
-Mozambique,1997,0.397,0.006,con,pc,,GT2017 con sqrt,Grand地 and Tarp 2017,18,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
+Mozambique,1997,0.397,0.006,con,pc,,GT2017 con pc,Grand地 and Tarp 2017,18,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
 Mozambique,1997,0.373,,con,sqrt,,GT2017 con sqrt,Grand地 and Tarp 2017,23,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
 Mozambique,2003,0.415,0.013,con,pc,FALSE,AJT2010 Mozambique con,"Arndt, Jones, and Tarp 2010",57,http://curis.ku.dk/ws/files/33629587/Third_National_Poverty_Assessment.pdf
-Mozambique,2003,0.415,0.008,con,pc,,GT2017 con sqrt,Grand地 and Tarp 2017,18,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
+Mozambique,2003,0.415,0.008,con,pc,,GT2017 con pc,Grand地 and Tarp 2017,18,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
 Mozambique,2003,0.405,,con,sqrt,,GT2017 con sqrt,Grand地 and Tarp 2017,23,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
 Mozambique,2009,0.414,0.009,con,pc,FALSE,AJT2010 Mozambique con,"Arndt, Jones, and Tarp 2010",57,http://curis.ku.dk/ws/files/33629587/Third_National_Poverty_Assessment.pdf
-Mozambique,2009,0.415,0.007,con,pc,,GT2017 con sqrt,Grand地 and Tarp 2017,18,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
+Mozambique,2009,0.415,0.007,con,pc,,GT2017 con pc,Grand地 and Tarp 2017,18,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
 Mozambique,2009,0.397,,con,sqrt,,GT2017 con sqrt,Grand地 and Tarp 2017,23,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
-Mozambique,2015,0.468,0.006,con,pc,,GT2017 con sqrt,Grand地 and Tarp 2017,18,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
+Mozambique,2015,0.468,0.006,con,pc,,GT2017 con pc,Grand地 and Tarp 2017,18,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
 Mozambique,2015,0.439,,con,sqrt,,GT2017 con sqrt,Grand地 and Tarp 2017,23,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
 Myanmar,2010,0.29,,con ,pc,FALSE,WRM2015 Myanmar con pc,"Warr, Rasphone, and Menon 2015",7,https://www.adb.org/sites/default/files/publication/176031/ewp-461.pdf
 Namibia,1993,0.743,,con,pc,,FR2008 Namibia con pc,Ferreira and Ravallion 2008,38,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
@@ -1873,18 +1872,18 @@ Pakistan,2008,0.42,,disp,pc,,Jamal 2014 Pakistan disp pc,Jamal 2014,10,https://m
 Pakistan,2011,0.407,,disp,pc,,Jamal 2014 Pakistan disp pc,Jamal 2014,10,https://mpra.ub.uni-muenchen.de/59897/1/MPRA_paper_59897.pdf
 Palau,2006,0.42,,con,pc,,ZKM2014 Palau con pc,"Zhuang, Kanbur, and Maligalig 2014",25,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA25
 Palau,2014,0.43,,con,hh,FALSE,OPS Palau con hh,Palau Office of Planning and Statistics 2016,69,https://www.palaugov.pw/wp-content/uploads/2016/04/2014-ROP-HIES.pdf
-Palau,2014,0.51,,gross,hh,FALSE,OPS Palau gross hh,Palau Office of Planning and Statistics 2016,69,https://www.palaugov.pw/wp-content/uploads/2016/04/2014-ROP-HIES.pdf
-Palau,2014,0.53,,gross,hh,TRUE,OPS Palau gross hh,Palau Office of Planning and Statistics 2016,69,https://www.palaugov.pw/wp-content/uploads/2016/04/2014-ROP-HIES.pdf
-Palestine,1996,0.353,,con,pc,,Hassine2015 Palestine con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
-Palestine,1997,0.345,,con,pc,,Hassine2015 Palestine con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
-Palestine,1998,0.352,,con,pc,,Hassine2015 Palestine con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
-Palestine,2004,0.362,,con,pc,,Hassine2015 Palestine con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
-Palestine,2005,0.369,,con,pc,,Hassine2015 Palestine con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
-Palestine,2006,0.364,,con,pc,,Hassine2015 Palestine con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
-Palestine,2007,0.391,,con,pc,,Hassine2015 Palestine con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
-Palestine,2009,0.365,,con,pc,,Hassine2015 Palestine con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
-Palestine,2013,0.4252,,disp,sqrt,,HCV2020 Palestine disp sqrt,"Hlasny, Ceriani, and Verme 2020",24,https://www.lisdatacenter.org/wps/liswps/792.pdf
-Palestine,2013,0.4123,,disp,sqrt,,HCV2020 Palestine disp sqrt,"Hlasny, Ceriani, and Verme 2020",24,https://www.lisdatacenter.org/wps/liswps/792.pdf
+Palau,2014,0.51,,gross,hh,FALSE,OPS Palau gross hh 1,Palau Office of Planning and Statistics 2016,69,https://www.palaugov.pw/wp-content/uploads/2016/04/2014-ROP-HIES.pdf
+Palau,2014,0.53,,gross,hh,TRUE,OPS Palau gross hh 2,Palau Office of Planning and Statistics 2016,69,https://www.palaugov.pw/wp-content/uploads/2016/04/2014-ROP-HIES.pdf
+Palestinian Territories,1996,0.353,,con,pc,,Hassine2015 Palestinian Territories con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
+Palestinian Territories,1997,0.345,,con,pc,,Hassine2015 Palestinian Territories con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
+Palestinian Territories,1998,0.352,,con,pc,,Hassine2015 Palestinian Territories con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
+Palestinian Territories,2004,0.362,,con,pc,,Hassine2015 Palestinian Territories con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
+Palestinian Territories,2005,0.369,,con,pc,,Hassine2015 Palestinian Territories con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
+Palestinian Territories,2006,0.364,,con,pc,,Hassine2015 Palestinian Territories con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
+Palestinian Territories,2007,0.391,,con,pc,,Hassine2015 Palestinian Territories con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
+Palestinian Territories,2009,0.365,,con,pc,,Hassine2015 Palestinian Territories con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
+Palestinian Territories,2010,0.4252,,disp,sqrt,,HCV2020 Palestinian Territories disp sqrt,"Hlasny, Ceriani, and Verme 2020",24,https://www.lisdatacenter.org/wps/liswps/792.pdf
+Palestinian Territories,2011,0.4123,,disp,sqrt,,HCV2020 Palestinian Territories disp sqrt,"Hlasny, Ceriani, and Verme 2020",24,https://www.lisdatacenter.org/wps/liswps/792.pdf
 Palestinian Territories,1996,0.355,,con,pc,,UNESCWA2018 Palestinian Territories con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
 Palestinian Territories,1997,0.341,,con,pc,,UNESCWA2018 Palestinian Territories con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
 Palestinian Territories,1998,0.345,,con,pc,,UNESCWA2018 Palestinian Territories con pc,UNESCWA 2018,35,https://www.unescwa.org/sites/www.unescwa.org/files/publications/files/social-development-report-2-english_1.pdf
@@ -1981,11 +1980,6 @@ Philippines,2009,0.43,,con,pc,,ZKM2014 Philippines con pc,"Zhuang, Kanbur, and M
 Philippines,2009,0.474,,gross,pc,,ZKM2014 Philippines gross pc,"Zhuang, Kanbur, and Maligalig 2014",22,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA22
 Philippines,2012,0.4605,,gross,pc,,PSA gross pc,Philippines Statistical Agency,,https://openstat.psa.gov.ph:443/PXWeb/sq/a0eb1e18-e495-49d5-9a5b-7f3d3a5ffff7
 Philippines,2015,0.4439,,gross,pc,,PSA gross pc,Philippines Statistical Agency,,https://openstat.psa.gov.ph:443/PXWeb/sq/a0eb1e18-e495-49d5-9a5b-7f3d3a5ffff7
-Philippines,2018,0.4267,,gross,pc,,PSA gross pc,Philippines Statistical Agency,,https://psa.gov.ph/press-releases/id/167973
-Philippines,2018,0.4191,,gross,pc,,PSA gross pc,Philippines Statistical Agency,,https://web.archive.org/web/20240816231901/https://psa.gov.ph/system/files/iesd/Table%205.%202018%2C%202021%20and%202023p%20Gini%20Coefficient%20and%20Palma%20Ratio%2C%20by%20Region%2C%20Province%20and%20HUC.xlsx
-Philippines,2021,0.4063,,gross,pc,,PSA gross pc,Philippines Statistical Agency,,https://web.archive.org/web/20240816231901/https://psa.gov.ph/system/files/iesd/Table%205.%202018%2C%202021%20and%202023p%20Gini%20Coefficient%20and%20Palma%20Ratio%2C%20by%20Region%2C%20Province%20and%20HUC.xlsx
-Philippines,2021,0.4119,,gross,pc,,PSA gross pc,Philippines Statistical Agency,,https://psa.gov.ph/press-releases/id/167973
-Philippines,2023,0.3909,,gross,pc,,PSA gross pc,Philippines Statistical Agency,,https://web.archive.org/web/20240816231901/https://psa.gov.ph/system/files/iesd/Table%205.%202018%2C%202021%20and%202023p%20Gini%20Coefficient%20and%20Palma%20Ratio%2C%20by%20Region%2C%20Province%20and%20HUC.xlsx
 Poland,1983,0.246,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Poland,1984,0.258,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Poland,1985,0.253,,disp,pc,FALSE,AM1992 Poland disp pc,Atkinson and Micklewright 1992,PI1,https://books.google.com/books?id=zaL4CGdjOkUC
@@ -2045,7 +2039,7 @@ Poland,1990,0.271,,gross,pc,FALSE,KP2002 gross pc,Keane and Prasad 2002,329,http
 Poland,1990,0.389,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1990,0.177,,con,pc,,Park1995 Poland con pc,Tabatabai 1996; Park 1995,121,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Poland,1990,0.257,,disp,pc,,Park1995 Poland disp pc,Tabatabai 1996; Park 1995,121,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
-Poland,1990,0.279,,con,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
+Poland,1990,0.279,,con,ae,,Szulc2000 con ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
 Poland,1990,0.256,,disp,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
 Poland,1991,0.253,,disp,pc,,CB1997 Poland disp pc,Caselli and Battini 1997,2,https://link.springer.com/article/10.1023/A%3A1009541105457
 Poland,1991,0.225,,disp,pc,,Cornia1994 Poland disp pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
@@ -2057,7 +2051,7 @@ Poland,1991,0.235,,gross,ae,FALSE,KP2002 gross ae,Keane and Prasad 2002,329,http
 Poland,1991,0.242,,gross,oecdm,FALSE,KP2002 gross oecdm,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1991,0.266,,gross,pc,FALSE,KP2002 gross pc,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1991,0.404,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
-Poland,1991,0.253,,con,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
+Poland,1991,0.253,,con,ae,,Szulc2000 con ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
 Poland,1991,0.243,,disp,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
 Poland,1992,0.26,,disp,pc,,CB1997 Poland disp pc,Caselli and Battini 1997,2,https://link.springer.com/article/10.1023/A%3A1009541105457
 Poland,1992,0.239,,disp,pc,,Cornia1994 Poland disp pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
@@ -2069,7 +2063,7 @@ Poland,1992,0.23,,gross,ae,FALSE,KP2002 gross ae,Keane and Prasad 2002,329,https
 Poland,1992,0.238,,gross,oecdm,FALSE,KP2002 gross oecdm,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1992,0.264,,gross,pc,FALSE,KP2002 gross pc,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1992,0.416,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
-Poland,1992,0.248,,con,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
+Poland,1992,0.248,,con,ae,,Szulc2000 con ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
 Poland,1992,0.252,,disp,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
 Poland,1993,0.324,,con,pc,,FR2008 Poland con pc,Ferreira and Ravallion 2008,38,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Poland,1993,0.222,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -2079,7 +2073,7 @@ Poland,1993,0.248,,gross,ae,FALSE,KP2002 gross ae,Keane and Prasad 2002,329,http
 Poland,1993,0.257,,gross,oecdm,FALSE,KP2002 gross oecdm,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1993,0.285,,gross,pc,FALSE,KP2002 gross pc,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1993,0.416,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
-Poland,1993,0.292,,con,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
+Poland,1993,0.292,,con,ae,,Szulc2000 con ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
 Poland,1993,0.295,,disp,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
 Poland,1994,0.228,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1994,0.239,,con,oecdm,FALSE,KP2002 con oecdm,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -2090,7 +2084,7 @@ Poland,1994,0.298,,gross,pc,FALSE,KP2002 gross pc,Keane and Prasad 2002,329,http
 Poland,1994,0.437,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1994,0.308,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
 Poland,1994,0.379,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
-Poland,1994,0.306,,con,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
+Poland,1994,0.306,,con,ae,,Szulc2000 con ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
 Poland,1994,0.309,,disp,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
 Poland,1995,0.222,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1995,0.234,,con,oecdm,FALSE,KP2002 con oecdm,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -2101,7 +2095,7 @@ Poland,1995,0.294,,gross,pc,FALSE,KP2002 gross pc,Keane and Prasad 2002,329,http
 Poland,1995,0.432,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1995,0.304,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
 Poland,1995,0.377,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
-Poland,1995,0.284,,con,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
+Poland,1995,0.284,,con,ae,,Szulc2000 con ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
 Poland,1995,0.292,,disp,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
 Poland,1996,0.227,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1996,0.239,,con,oecdm,FALSE,KP2002 con oecdm,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -2113,7 +2107,7 @@ Poland,1996,0.448,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,ht
 Poland,1996,0.268,,con,pc,FALSE,MY2006 Poland con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Poland,1996,0.312,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
 Poland,1996,0.386,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
-Poland,1996,0.303,,con,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
+Poland,1996,0.303,,con,ae,,Szulc2000 con ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
 Poland,1996,0.306,,disp,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
 Poland,1997,0.235,,con,ae,FALSE,KP2002 con ae,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
 Poland,1997,0.247,,con,oecdm,FALSE,KP2002 con oecdm,Keane and Prasad 2002,329,https://www.jstor.org/stable/3211781
@@ -2125,7 +2119,7 @@ Poland,1997,0.451,,market,ae,FALSE,KP2002 market ae,Keane and Prasad 2002,329,ht
 Poland,1997,0.277,,con,pc,FALSE,MY2006 Poland con pc 4,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Poland,1997,0.323,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
 Poland,1997,0.395,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
-Poland,1997,0.314,,con,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
+Poland,1997,0.314,,con,ae,,Szulc2000 con ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
 Poland,1997,0.319,,disp,ae,,Szulc2000 disp ,Szulc 2000,PTS_sit_4_6.pdf:1004,http://stat.gov.pl/download/gfx/portalinformacyjny/en/defaultstronaopisowa/3432/1/1/sit_volume_4-7.zip
 Poland,1998,0.299,,con,ae,,BK2010 con ae,Brzezinski and Kostro 2010,57,http://www.bankandcredit.nbp.pl/content/2010/04/bik_04_2010_03_art.pdf
 Poland,1998,0.286,,disp,ae,,BK2010 disp ae,Brzezinski and Kostro 2010,57,http://www.bankandcredit.nbp.pl/content/2010/04/bik_04_2010_03_art.pdf
@@ -2142,8 +2136,8 @@ Poland,2001,0.307,,con,pc,FALSE,MY2006 Poland con pc 5,Mitra and Yemtsov 2006,10
 Poland,2001,0.308,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
 Poland,2001,0.395,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
 Poland,2002,0.32,,con,pc,FALSE,MY2006 Poland con pc 5,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
-Poland,2002,0.317,,disp,pc,,PSV2004 Poland con pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
-Poland,2002,0.28,,con,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",6,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,2002,0.317,,disp,pc,,PSV2004 Poland disp pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
+Poland,2002,0.28,,con,pc,,PSV2004 Poland con pc,"Paci, Sasin, and Verbeek 2004",6,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
 Poland,2002,0.407,,market,pc,,PSV2004 Poland market pc,"Paci, Sasin, and Verbeek 2004",11,http://documents.worldbank.org/curated/en/442341468776391182/pdf/WPS3467.pdf
 Poland,2003,0.314,,con,ae,,BK2010 con ae,Brzezinski and Kostro 2010,57,http://www.bankandcredit.nbp.pl/content/2010/04/bik_04_2010_03_art.pdf
 Poland,2003,0.31,,disp,ae,,BK2010 disp ae,Brzezinski and Kostro 2010,57,http://www.bankandcredit.nbp.pl/content/2010/04/bik_04_2010_03_art.pdf
@@ -2852,8 +2846,6 @@ Venezuela,2010,0.394,,disp,pc,TRUE,CEPAL Venezuela disp pc 2,CEPALStat,National,
 Venezuela,2011,0.397,,disp,pc,TRUE,CEPAL Venezuela disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Venezuela,2012,0.405,,disp,pc,TRUE,CEPAL Venezuela disp pc 3,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Venezuela,2013,0.407,,disp,pc,TRUE,CEPAL Venezuela disp pc 3,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Venezuela,2019,0.38,,disp,pc,TRUE,Instituto Nacional de Estadistica Venezuela disp pc,Instituto Nacional de Estadﾃｭstica Venezuela,,http://www.ine.gov.ve/documentos/Social/Pobreza/xls/Serie_%20GINI_1s1997-1s2020.xls
-Venezuela,2020,0.386,,disp,pc,TRUE,Instituto Nacional de Estadistica Venezuela disp pc,Instituto Nacional de Estadﾃｭstica Venezuela,,http://www.ine.gov.ve/documentos/Social/Pobreza/xls/Serie_%20GINI_1s1997-1s2020.xls
 Vietnam,1993,0.357,,con,pc,,FR2008 Vietnam con pc,Ferreira and Ravallion 2008,40,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Vietnam,1999,0.39,,gross,pc,FALSE,GSO Vietnam 2005 gross pc,General Statistics Office of Vietnam 2005,,http://www.gso.gov.vn/default_en.aspx?tabid=508&ItemID=2510
 Vietnam,2002,0.42,,gross,pc,FALSE,GSO Vietnam 2005 gross pc,General Statistics Office of Vietnam 2005,,http://www.gso.gov.vn/default_en.aspx?tabid=508&ItemID=2510
