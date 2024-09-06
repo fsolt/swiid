@@ -1,6 +1,6 @@
 library(tidyverse)
 
-penultimate <- "swiid9_5"
+penultimate <- "swiid9_6"
 
 swiid_summary_latest <- "data/swiid_summary.csv" %>% 
   read_csv(col_types = "cddddddddd") %>% 
@@ -65,6 +65,7 @@ swiid_latest_83_71 <- swiid_summary_latest %>%
             by = c("country", "year", "decade")) %>% 
   mutate(vlatest_minus_last = gini_latest - last,
          vlatest_minus83 = gini_latest - gini83,
+         vlast_minus83 = last - gini83,
          vlatest_minus71 = gini_latest - gini71,
          v83minus71 = gini83 - gini71)
 
@@ -121,6 +122,7 @@ swiid_latest_83_71_mkt %>%
   summarize_at(vars(starts_with("v")), mean, na.rm = TRUE) 
 
 swiid_source_latest <- read_csv("data/swiid_source.csv", col_types = "cdddcclcccc")
+swiid_source96 <- read_csv("https://github.com/fsolt/swiid/raw/ab16757710420b5c5a6e5a832802173cd72dddbd/data/swiid_source.csv", col_types = "cdddcclcccc")
 swiid_source93 <- read_csv("https://github.com/fsolt/swiid/blob/07b5b78ecb6450bacd8f2ca138fd5ee7fde14cdc/data/swiid_source.csv?raw=true", col_types = "cdddcclcccc")
 swiid_source92 <- read_csv("https://github.com/fsolt/swiid/raw/160428c9b0797bf5d94daf4fd287f713d3ae3aaf/data/swiid_source.csv", col_types = "cdddcclcccc")
 swiid_source91 <- read_csv("https://github.com/fsolt/swiid/blob/7ced9cfb2e229be5e95d0bd0fe15aeb0e19a6015/data/swiid_source.csv?raw=true", col_types = "cdddcclcccc")
@@ -128,6 +130,8 @@ swiid_source83 <- read_csv("https://github.com/fsolt/swiid/raw/227cf225cf43de6d0
 # swiid_source82 <- read_csv("https://github.com/fsolt/swiid/raw/f099f92aaf335554844b2af6df77bc5e8db47fd7/data/swiid_source.csv", col_types = "cdddcclcccc")
 # swiid_source81 <- read_csv("https://github.com/fsolt/swiid/raw/b85cf28f34897781098fe3b992da8434bf758993/data/swiid_source.csv", col_types = "cdddcclcccc")
 # swiid_source80 <- read_csv("https://github.com/fsolt/swiid/raw/19349a99255f749b2c4634f748def3950e3e8ac4/data/swiid_source.csv", col_types = "cdddcclcccc")
+swiid_source_last <- swiid_source96
+
 lis_mkt <- swiid_source_latest %>% 
   filter(str_detect(source1, "LIS") & welfare_def == "market" & equiv_scale == "sqrt")
 lis_disp <- swiid_source_latest %>% 
@@ -198,5 +202,5 @@ check_source2 <- function(cc) {
   anti_join(country_source_last[, 1:10], country_source_latest[, 1:10])
 }
 
-View(check_source("Lebanon"))
-View(check_source2("Lebanon"))
+View(check_source("Ireland"))
+View(check_source2("Italy"))

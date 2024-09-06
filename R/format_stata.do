@@ -21,7 +21,7 @@ drop redist
 
 order country year gini_disp _*gini_disp gini_mkt _*gini_mkt abs_red _*abs_red rel_red _*rel_red 
 sort country year
-label data "SWIID v9.6, Dec 2023. Refer to the stata_swiid.pdf file for usage instructions." 
-saveold "data/swiid9_6.dta", replace
+label data "SWIID v9.7, Sept 2024. Refer to the stata_swiid.pdf file for usage instructions." 
+saveold "data/swiid9_7.dta", replace
 
 set more on
