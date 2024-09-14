@@ -31,6 +31,8 @@ vignette/*.rda
 vignette/*.dta
 vignette/*.csv
 data/swiid_estimates/*
+data/swiid*.dta
+data/swiid*.rda
 data/lis_only_*.rda
 data/lis_gt*.rda
 data/all_*.rda
