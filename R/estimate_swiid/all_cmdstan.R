@@ -258,7 +258,7 @@ all <- cmdstan_model(here::here("R", "estimate_swiid", "all.stan"))
 out1 <- all$sample(
   data = source_data, 
   max_treedepth = 20,
-  adapt_delta = 0.9,
+  adapt_delta = 0.95,
   seed = 324, 
   chains = 4, 
   parallel_chains = 4,

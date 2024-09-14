@@ -52,7 +52,7 @@ format_lis <- function(x) {
               page = "",
               link = paste0("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/LISSY/",
                             x, ".txt")) %>% 
-    filter(!gini == 0) %>% 
+    filter(!gini == 0 & !(gini>.85 & welfare_def == "con")) %>% 
     arrange(country, year)
 }
 
@@ -240,16 +240,17 @@ cepal <- cepal0 %>%
   arrange(country, year, series)
 
 # CEPAL Serie Distribución del Ingreso (archived)
-cepal_sdi <- read_tsv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/repositorio_cepal.tsv",
+cepal_sdi <- read_tsv("data-raw/repositorio_cepal.tsv",
                       col_types = "ciiccccccc") %>% 
   transmute(country = country,
             year = year,
             gini = gini/100,
             gini_se = NA,
             monetary = str_detect(welfare_def, "Monetary"),
-            welfare_def = ifelse(str_detect(welfare_def, "Disposable"), "disp",
-                                 ifelse(str_detect(welfare_def, "Gross"), "gross",
-                                        "market")),
+            welfare_def = case_when(str_detect(welfare_def, "Disposable") ~ "disp",
+                                 str_detect(welfare_def, "Gross") ~ "gross",
+                                 str_detect(welfare_def, "Consumption") ~ "con",
+                                 TRUE ~ "market"),
             equiv_scale = equiv_scale,
             series = paste("CEPAL SDI", country, welfare_def, equiv_scale, survey),
             source1 = source,

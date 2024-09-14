@@ -1,4 +1,4 @@
-cd "/Users/fredsolt/Documents/Projects/swiid/vignette"
+cd "/Users/fsolt/Documents/Projects/swiid/vignette"
 
 // Get GDP per capita data from the Penn World Tables, Version 9.1 (Feenstra et al. 2015)
 // download from https://www.rug.nl/ggdc/docs/pwt91.dta
@@ -31,7 +31,7 @@ drop _merge
 save wvs_pwt.dta, replace
 
 // Now merge these data *into* the SWIID
-use "../data/swiid9_5.dta", clear
+use "../data/swiid9_7.dta", clear
 
 merge 1:m country year using wvs_pwt.dta
 drop if _merge!=3
@@ -40,7 +40,7 @@ drop _merge
 // mi estimate: mixed religiosity gini_disp gdppc age educ male || country: || country_year:
 
 //import delimited "../data/swiid_summary.csv", clear
-insheet using "/Users/fredsolt/Documents/Projects/swiid/data/swiid_summary.csv", comma clear
+insheet using "/Users/fsolt/Documents/Projects/swiid/data/swiid_summary.csv", comma clear
  
 // Calculate the bounds of the 95% uncertainty intervals
 gen gini_disp_95ub = gini_disp + 1.96*gini_disp_se
@@ -56,5 +56,5 @@ twoway rspike gini_disp_95ub gini_disp_95lb name_length, lstyle(ci) || ///
     scatter gini_disp name_length, msize(small) ///
     legend(order(2 "SWIID Disposable-Income Inequality")) 
 
-graph export "/Users/fredsolt/Documents/Projects/swiid/vignette/stata_scatter.png", as(png) name("Graph") replace
+graph export "/Users/fsolt/Documents/Projects/swiid/vignette/stata_scatter.png", as(png) name("Graph") replace
 
