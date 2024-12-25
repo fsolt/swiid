@@ -83,11 +83,17 @@ format_lis_xtra <- function(x) {
     arrange(country, year)
 }
 
-lis_files <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",
-               "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", 
-               "in", "ie", "il", "it", "jp", "lt", "lu", "ml", "mx", "nl", "no", "pa", "py", 
-               "pe", "pl", "ps", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se", 
-               "ch", "tw", "uk", "us", "uy", "vn")
+lis_files <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co",
+               "cz", "dk",
+               "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt",
+               "hu", "iq", "is", 
+               "in", "ie", "il", "it", "jo", "jp", "lt", "lu", "ml",
+               "mx", "nl", "no", "pa", "ps", "py", 
+               "pe", "pl", "ps", "ro", "ru", "rs", "sd", "sk", "si",
+               "so", "za", "kr", "es", "se", 
+               "ch", "tn", "tw", "uk", "us", "uy", "vn")
+
+c("eg", "iq", "jo", "ps", "so", "sd", "tn")
 
 lis <- lis_files %>% 
   map_df(format_lis) %>% 
