@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 1262368 es
-Date: August 21, 2024 at 9:36:16 AM GMT+9
+Subject: job 1296448 es
+Date: December 12, 2024 at 1:15:37 PM CST
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -118,16 +118,17 @@ Loading required package: readstata13
 > get_ginis <- function(cc, reps = 100) { 
 +   set.seed(324) 
 +   ccs <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",  
-+            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", "in",  
++            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", "in", 
 +            "ie", "il", "it", "jp", "lt", "lu", "ml", "mx", "nl", "no", "pa", "py",  
 +            "pe", "pl", "ps", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
-+            "ch", "tw", "uk", "us", "uy", "vn") 
++            "ch", "tw", "uk", "us", "uy", "vn", 
++            "iq", "jo", "ps", "so", "sd", "tn")  
 +   cc <- tolower(cc) 
 +   if (!cc %in% ccs) { 
 +     stop("Please specify a LIS country in iso2c format") 
 +   } 
 +   last_year_yy <- as.numeric(format(Sys.Date(), "%Y")) - 2001 
-+   yy <- as.character(c(c(67, 69, 71, 73:75, 78:99), paste0("0", 0:9), c(10:last_year_yy))) 
++   yy <- as.character(c(c(63:99), paste0("0", 0:9), c(10:last_year_yy))) 
 +  
 +   datasets <- paste0(rep(cc, each = length(yy)), rep(yy, times = length(cc)), "h") 
 +   vars <- c("dhi", "hitotal", "hifactor", "hiprivate", "hcexp", "hpopwgt", "nhhmem", "nhhmem13", "grossnet") 
@@ -733,9 +734,72 @@ es19h,con_sqrt,NaN,NA,110
 es19h,con_pc,NaN,NA,110
 es19h,con_oecdm,NaN,NA,110
 es19h,con_ae,NaN,NA,110
+[1] "Loading dataset es20h..."
+es20h,market_hh,0.5845,0.0037,110
+es20h,market_sqrt,0.5214,0.0042,110
+es20h,market_pc,0.5353,0.0037,110
+es20h,market_oecdm,0.5229,0.0036,110
+es20h,market_ae,0.5262,0.0034,110
+es20h,gross_hh,0.4043,0.003,110
+es20h,gross_sqrt,0.3671,0.0035,110
+es20h,gross_pc,0.3836,0.0027,110
+es20h,gross_oecdm,0.3667,0.003,110
+es20h,gross_ae,0.3705,0.0032,110
+es20h,disp_hh,0.369,0.0027,110
+es20h,disp_sqrt,0.3284,0.0032,110
+es20h,disp_pc,0.3491,0.003,110
+es20h,disp_oecdm,0.3279,0.0028,110
+es20h,disp_ae,0.333,0.0032,110
+es20h,con_hh,NaN,NA,110
+es20h,con_sqrt,NaN,NA,110
+es20h,con_pc,NaN,NA,110
+es20h,con_oecdm,NaN,NA,110
+es20h,con_ae,NaN,NA,110
+[1] "Loading dataset es21h..."
+es21h,market_hh,0.5669,0.0029,110
+es21h,market_sqrt,0.502,0.0031,110
+es21h,market_pc,0.518,0.0027,110
+es21h,market_oecdm,0.5038,0.0028,110
+es21h,market_ae,0.5077,0.0025,110
+es21h,gross_hh,0.3956,0.0023,110
+es21h,gross_sqrt,0.3572,0.0028,110
+es21h,gross_pc,0.3743,0.0026,110
+es21h,gross_oecdm,0.3567,0.0029,110
+es21h,gross_ae,0.3608,0.0024,110
+es21h,disp_hh,0.3604,0.0024,110
+es21h,disp_sqrt,0.3183,0.0025,110
+es21h,disp_pc,0.3391,0.0022,110
+es21h,disp_oecdm,0.3176,0.0024,110
+es21h,disp_ae,0.3227,0.0028,110
+es21h,con_hh,NaN,NA,110
+es21h,con_sqrt,NaN,NA,110
+es21h,con_pc,NaN,NA,110
+es21h,con_oecdm,NaN,NA,110
+es21h,con_ae,NaN,NA,110
+[1] "Loading dataset es22h..."
+es22h,market_hh,0.5505,0.0028,110
+es22h,market_sqrt,0.485,0.0033,110
+es22h,market_pc,0.5031,0.0028,110
+es22h,market_oecdm,0.4873,0.003,110
+es22h,market_ae,0.4917,0.0027,110
+es22h,gross_hh,0.3921,0.0026,110
+es22h,gross_sqrt,0.3525,0.002,110
+es22h,gross_pc,0.3719,0.0028,110
+es22h,gross_oecdm,0.3527,0.0027,110
+es22h,gross_ae,0.3574,0.0025,110
+es22h,disp_hh,0.358,0.0022,110
+es22h,disp_sqrt,0.3143,0.0021,110
+es22h,disp_pc,0.3372,0.0023,110
+es22h,disp_oecdm,0.3141,0.0022,110
+es22h,disp_ae,0.3198,0.002,110
+es22h,con_hh,NaN,NA,110
+es22h,con_sqrt,NaN,NA,110
+es22h,con_pc,NaN,NA,110
+es22h,con_oecdm,NaN,NA,110
+es22h,con_ae,NaN,NA,110
 > 
 > proc.time()
    user  system elapsed 
-339.083   0.883 343.649 
+385.507   0.722 458.410 
 
 

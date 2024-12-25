@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 1262060 ge
-Date: August 20, 2024 at 6:22:25 PM GMT+9
+Subject: job 1296399 ge
+Date: December 12, 2024 at 12:23:26 PM CST
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -118,16 +118,17 @@ Loading required package: readstata13
 > get_ginis <- function(cc, reps = 100) { 
 +   set.seed(324) 
 +   ccs <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",  
-+            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", "in",  
++            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", "in", 
 +            "ie", "il", "it", "jp", "lt", "lu", "ml", "mx", "nl", "no", "pa", "py",  
 +            "pe", "pl", "ps", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
-+            "ch", "tw", "uk", "us", "uy", "vn") 
++            "ch", "tw", "uk", "us", "uy", "vn", 
++            "iq", "jo", "ps", "so", "sd", "tn")  
 +   cc <- tolower(cc) 
 +   if (!cc %in% ccs) { 
 +     stop("Please specify a LIS country in iso2c format") 
 +   } 
 +   last_year_yy <- as.numeric(format(Sys.Date(), "%Y")) - 2001 
-+   yy <- as.character(c(c(67, 69, 71, 73:75, 78:99), paste0("0", 0:9), c(10:last_year_yy))) 
++   yy <- as.character(c(c(63:99), paste0("0", 0:9), c(10:last_year_yy))) 
 +  
 +   datasets <- paste0(rep(cc, each = length(yy)), rep(yy, times = length(cc)), "h") 
 +   vars <- c("dhi", "hitotal", "hifactor", "hiprivate", "hcexp", "hpopwgt", "nhhmem", "nhhmem13", "grossnet") 
@@ -439,9 +440,30 @@ ge21h,con_sqrt,0.2804,0.0061,200
 ge21h,con_pc,0.3153,0.0062,200
 ge21h,con_oecdm,0.2859,0.0059,200
 ge21h,con_ae,0.2946,0.0055,200
+[1] "Loading dataset ge22h..."
+ge22h,market_hh,0.5173,0.0076,200
+ge22h,market_sqrt,0.4478,0.0078,200
+ge22h,market_pc,0.4673,0.0084,200
+ge22h,market_oecdm,0.4516,0.0078,200
+ge22h,market_ae,0.4561,0.0082,200
+ge22h,gross_hh,0.3991,0.0058,200
+ge22h,gross_sqrt,0.3426,0.0066,200
+ge22h,gross_pc,0.3628,0.007,200
+ge22h,gross_oecdm,0.3433,0.0066,200
+ge22h,gross_ae,0.3479,0.0068,200
+ge22h,disp_hh,0.3991,0.0064,200
+ge22h,disp_sqrt,0.3426,0.0063,200
+ge22h,disp_pc,0.3628,0.007,200
+ge22h,disp_oecdm,0.3433,0.0057,200
+ge22h,disp_ae,0.3479,0.0065,200
+ge22h,con_hh,0.3403,0.006,200
+ge22h,con_sqrt,0.2785,0.0069,200
+ge22h,con_pc,0.3065,0.0056,200
+ge22h,con_oecdm,0.2815,0.006,200
+ge22h,con_ae,0.2877,0.0056,200
 > 
 > proc.time()
    user  system elapsed 
- 95.258   0.267  96.721 
+ 96.079   0.243  98.192 
 
 

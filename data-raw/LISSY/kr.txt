@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 1262367 kr
-Date: August 21, 2024 at 9:30:30 AM GMT+9
+Subject: job 1296447 kr
+Date: December 12, 2024 at 1:11:28 PM CST
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -118,16 +118,17 @@ Loading required package: readstata13
 > get_ginis <- function(cc, reps = 100) { 
 +   set.seed(324) 
 +   ccs <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",  
-+            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", "in",  
++            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", "in", 
 +            "ie", "il", "it", "jp", "lt", "lu", "ml", "mx", "nl", "no", "pa", "py",  
 +            "pe", "pl", "ps", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
-+            "ch", "tw", "uk", "us", "uy", "vn") 
++            "ch", "tw", "uk", "us", "uy", "vn", 
++            "iq", "jo", "ps", "so", "sd", "tn")  
 +   cc <- tolower(cc) 
 +   if (!cc %in% ccs) { 
 +     stop("Please specify a LIS country in iso2c format") 
 +   } 
 +   last_year_yy <- as.numeric(format(Sys.Date(), "%Y")) - 2001 
-+   yy <- as.character(c(c(67, 69, 71, 73:75, 78:99), paste0("0", 0:9), c(10:last_year_yy))) 
++   yy <- as.character(c(c(63:99), paste0("0", 0:9), c(10:last_year_yy))) 
 +  
 +   datasets <- paste0(rep(cc, each = length(yy)), rep(yy, times = length(cc)), "h") 
 +   vars <- c("dhi", "hitotal", "hifactor", "hiprivate", "hcexp", "hpopwgt", "nhhmem", "nhhmem13", "grossnet") 
@@ -400,6 +401,6 @@ kr21h,con_ae,0.2441,0.0018,110
 > 
 > proc.time()
    user  system elapsed 
-155.993   0.823 159.210 
+149.930   0.517 221.721 
 
 
