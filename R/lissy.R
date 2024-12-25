@@ -92,16 +92,17 @@ boot_gini_se <- function(data, var, reps=100) {
 get_ginis <- function(cc, reps = 100) {
   set.seed(324)
   ccs <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk", 
-           "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", "in", 
+           "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", "in",
            "ie", "il", "it", "jp", "lt", "lu", "ml", "mx", "nl", "no", "pa", "py", 
            "pe", "pl", "ps", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se", 
-           "ch", "tw", "uk", "us", "uy", "vn")
+           "ch", "tw", "uk", "us", "uy", "vn",
+           "iq", "jo", "ps", "so", "sd", "tn") 
   cc <- tolower(cc)
   if (!cc %in% ccs) {
     stop("Please specify a LIS country in iso2c format")
   }
   last_year_yy <- as.numeric(format(Sys.Date(), "%Y")) - 2001
-  yy <- as.character(c(c(67, 69, 71, 73:75, 78:99), paste0("0", 0:9), c(10:last_year_yy)))
+  yy <- as.character(c(c(63:99), paste0("0", 0:9), c(10:last_year_yy)))
 
   datasets <- paste0(rep(cc, each = length(yy)), rep(yy, times = length(cc)), "h")
   vars <- c("dhi", "hitotal", "hifactor", "hiprivate", "hcexp", "hpopwgt", "nhhmem", "nhhmem13", "grossnet")
