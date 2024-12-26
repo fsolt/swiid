@@ -12,7 +12,7 @@ swiid_summary_last <- file.path("release",
   read_csv(col_types = "cddddddddd") %>%
   mutate(decade = floor(year/10) * 10)
  
-swiid_summary98 <- "https://raw.githubusercontent.com/fsolt/swiid/1a5dcc286e213e6ff1d315bdafc8bae3c0065514/data/swiid_summary.csv" %>% 
+swiid_summary97 <- "https://raw.githubusercontent.com/fsolt/swiid/1a5dcc286e213e6ff1d315bdafc8bae3c0065514/data/swiid_summary.csv" %>% 
     read_csv(col_types = "cddddddddd") %>%
     mutate(decade = floor(year/10) * 10)
 # swiid_summary93 <- "https://github.com/fsolt/swiid/raw/47f86801bb626c0777a5ecef98defd5f3eecab73/data/swiid_summary.csv" %>%

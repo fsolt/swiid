@@ -47,10 +47,10 @@ The Standardized World Income Inequality Database (SWIID) takes a Bayesian appro
 
 As described in @Solt2020, the SWIID maximizes the comparability of available income inequality data for the broadest possible sample of countries and years.  But incomparability remains, and it is sometimes substantial.  This remaining incomparability is reflected in the standard errors of the SWIID estimates, making it often crucial to take this uncertainty into account when making comparisons across countries or over time [@Solt2009, 238; @Solt2016_nv, 14; @Solt2020, 1196].  It was once the case that incorporating the standard errors into an analysis required considerable effort.  It is now straightforward.
 
-In version 9.7 of the SWIID, the inequality estimates and their associated uncertainty are represented by 100 draws from the posterior distribution: for any given observation, the differences across these imputations capture the uncertainty in the estimate.  The `swiid9_7.zip` includes the file `swiid9_7.rda`, which is pre-formatted to facilitate taking this uncertainty into account.  The following sections describe how to subset the data, merge in additional variables, and do analyses.
+In version 9.8 of the SWIID, the inequality estimates and their associated uncertainty are represented by 100 draws from the posterior distribution: for any given observation, the differences across these imputations capture the uncertainty in the estimate.  The `swiid9_8.zip` includes the file `swiid9_8.rda`, which is pre-formatted to facilitate taking this uncertainty into account.  The following sections describe how to subset the data, merge in additional variables, and do analyses.
 
 # Getting Started
-Loading the file `swiid9_7.rda` adds `swiid`, a list of 100 dataframes, to the global environment.  Each of these dataframes includes, in addition to country and year identifiers, the following four variables:
+Loading the file `swiid9_8.rda` adds `swiid`, a list of 100 dataframes, to the global environment.  Each of these dataframes includes, in addition to country and year identifiers, the following four variables:
 \begin{itemize}
 	\item \verb+gini_disp+: Estimate of Gini index of inequality in equivalized (square root scale) household disposable (post-tax, post-transfer) income, using \href{http://www.lisdatacenter.org}{Luxembourg Income Study} data as the standard.
 	\item \verb+gini_mkt+: Estimate of Gini index of inequality in equivalized (square root scale) household market (pre-tax, pre-transfer) income, using \href{http://www.lisdatacenter.org}{Luxembourg Income Study} data as the standard.	
@@ -58,14 +58,14 @@ Loading the file `swiid9_7.rda` adds `swiid`, a list of 100 dataframes, to the g
 	\item \verb+rel_red+: Estimated relative redistribution, the percentage reduction in market-income inequality due to taxes and transfers: the difference between the \verb+gini_mkt+ and \verb+gini_disp+, divided by \verb+gini_mkt+, multiplied by 100.
 \end{itemize}
 
-The variation in these variables across the 100 dataframes captures the uncertainty in the SWIID estimates.  As described below, this format facilitates taking this uncertainty into account when conducting analyses.  It does not, however, lend itself easily to tasks such plotting.  The mean-plus-standard-error summary format is much better suited to such purposes; for this reason, the object `swiid_summary` is also included in the `swiid9_7.rda`.
+The variation in these variables across the 100 dataframes captures the uncertainty in the SWIID estimates.  As described below, this format facilitates taking this uncertainty into account when conducting analyses.  It does not, however, lend itself easily to tasks such plotting.  The mean-plus-standard-error summary format is much better suited to such purposes; for this reason, the object `swiid_summary` is also included in the `swiid9_8.rda`.
 
 ```{r plot, fig.height=3}
 library(tidyverse)
 library(here)
 
 # Load the SWIID
-load("swiid9_7.rda")
+load("swiid9_8.rda")
 
 # Plot SWIID gini_disp estimates for the United States
 swiid_summary %>% 
@@ -208,5 +208,5 @@ m1_tidy %>%
 Please cite to the SWIID by referring to its article of record and including the version number and date of release:
 
 \begin{hangparas}{.25in}{1}
-Solt, Frederick. 2020. ``Measuring Income Inequality Across Countries and Over Time: The Standardized World Income Inequality Database.'' \emph{Social Science Quarterly}.  SWIID Version 9.7, September 2024.
+Solt, Frederick. 2020. ``Measuring Income Inequality Across Countries and Over Time: The Standardized World Income Inequality Database.'' \emph{Social Science Quarterly}.  SWIID Version 9.8, December 2024.
 \end{hangparas}
