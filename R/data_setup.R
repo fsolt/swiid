@@ -83,20 +83,72 @@ format_lis_xtra <- function(x) {
     arrange(country, year)
 }
 
+format_lis_archived <- function(link) {
+  x <- str_extract(link, "[a-z]{2}(?=\\.txt)")
+  
+  link %>% 
+  readLines() %>% 
+  str_subset("^\\D{2}\\d{2}h,.*") %>%
+  paste(collapse = "\n") %>% 
+  read_csv(col_names = FALSE, col_types = "ccddd") %>%
+  separate(X2, into = c("wd", "es"), sep = "_") %>% 
+  pivot_wider(names_from = "wd",
+              values_from = c("X3", "X4")) %>% 
+  {if (!"X3_disp" %in% names(.)) mutate(., X3_disp = 1) else .} %>% 
+  {if (!"X3_gross" %in% names(.)) mutate(., X3_gross = 1) else .} %>% 
+  {if (!"X4_con" %in% names(.)) mutate(., X4_con = 1) else .} %>% 
+  mutate(X3_market = if_else(!X3_market==X3_disp, X3_market, NA_real_),
+         X3_gross = if_else(!X3_gross==X3_disp, X3_gross, NA_real_)) %>% 
+  pivot_longer(cols = X3_market:X4_con,
+               names_to = c("var", "wd"),
+               names_sep = "_",
+               values_to = "value") %>% 
+  pivot_wider(names_from = "var",
+              values_from = "value") %>% 
+  filter(!is.na(X3) & !X3 == 1 & !X4 == 1) %>% 
+  transmute(country = str_extract(X1, "\\D{2}") %>%
+              toupper() %>% 
+              str_replace("UK", "GB") %>% 
+              countrycode("iso2c", "swiid.name", custom_dict = cc_swiid),
+            year = ifelse(str_extract(X1, "\\d{2}") %>% as.numeric() > 50,
+                          str_extract(X1, "\\d{2}") %>% as.numeric() + 1900,
+                          str_extract(X1, "\\d{2}") %>% as.numeric() + 2000),
+            gini = (str_trim(X3) %>% as.numeric()),
+            gini_se = (str_trim(X4) %>% as.numeric()),
+            welfare_def = wd,
+            equiv_scale = es,
+            monetary = FALSE,
+            series = paste("LIS", welfare_def, equiv_scale),
+            source1 = "LISSY",
+            page = "",
+            link = link) %>% 
+  filter(!gini == 0 & !(gini>.85 & welfare_def == "con")) %>% 
+  arrange(country, year)
+}
+
+lis_eg_link <- "https://raw.githubusercontent.com/fsolt/swiid/5e4ecaca2aa7780f3d6892488d5d61a47bc4869c/data-raw/LISSY/eg.txt"
+
 lis_files <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co",
                "cz", "dk",
-               "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt",
-               "hu", "iq", "is", 
-               "in", "ie", "il", "it", "jo", "jp", "lt", "lu", "ml",
+               "do", "ee", "fi", "fr", "de", "ge", "gr", "gt",
+               "hu", "is", 
+               "in", "ie", "il", "it", "jp", "lt", "lu", "ml",
                "mx", "nl", "no", "pa", "py", 
-               "pe", "pl", "ps", "ro", "ru", "rs", "sd", "sk", "si",
+               "pe", "pl", "ro", "ru", "rs", "sk", "si",
                "za", "kr", "es", "se", 
-               "ch", "tw", "uk", "us", "uy", "vn") # "so", "tn"
+               "ch", "tw", "uk", "us", "uy", "vn") 
+
+erflis_files <- c("eg", "iq", "jo", "ps", "sd") # "so", "tn"
 
 lis <- lis_files %>% 
   map_df(format_lis) %>% 
-  rbind(format_lis_xtra("nz")) %>%
+  bind_rows(format_lis_xtra("nz")) %>%
+  bind_rows(format_lis_archived(lis_eg_link)) %>% 
   arrange(country, year, welfare_def, equiv_scale)
+
+erflis <- erflis_files %>% 
+  map_df(format_lis) %>% 
+  mutate(series = str_replace(series, "LIS", "ERF-LIS"))
 
 ru_lis_old <- format_lis_xtra("ru_old") %>% 
   mutate(series = "LIS Key Figures Russia disp sqrt")
@@ -907,10 +959,10 @@ greenland <- pxweb_get_data(url = greenland_link,
 
 
 # Statistics Hong Kong (2021 census added to fs_added_data 6/2023; update with 2026 census when available)
-# hk2016_link <- "https://www.bycensus2016.gov.hk/data/16BC_Income_Report_Key_Statistics.xlsx"
+hk2016_link <- "https://www.bycensus2016.gov.hk/data/16BC_Income_Report_Key_Statistics.xlsx"
 hk2011_link <- "https://www.statistics.gov.hk/pub/B11200572012XXXXB0100.pdf"
 hk2006_link <- "https://www.statistics.gov.hk/pub/B11200452006XXXXB0400.pdf"
-download.file(hk2016_link, "data-raw/hk2016.xlsx")
+# download.file(hk2016_link, "data-raw/hk2016.xlsx")
 download.file(hk2011_link, "data-raw/hk2011.pdf")
 download.file(hk2006_link, "data-raw/hk2006.pdf")
 
@@ -1433,7 +1485,7 @@ dgeec <- read_excel("data-raw/dgeec.xls", skip = 3) %>%
 
 # Philippines Statistical Agency (update)
 psa_link <- "https://psa.gov.ph/system/files/iesd/Table%205.%202018%2C%202021%20and%202023p%20Gini%20Coefficient%20and%20Palma%20Ratio%2C%20by%20Region%2C%20Province%20and%20HUC.xlsx"
-download.file(psa_link, "data-raw/psa.xlsx")
+# download.file(psa_link, "data-raw/psa.xlsx")
 
 psa <- read_excel("data-raw/psa.xlsx", skip = 1) %>% 
   clean_names() %>% 
@@ -2361,7 +2413,7 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
     mutate(series = paste("LIS", country, str_replace(series, "LIS ", "")))
   
   # then combine with other series ordered by data-richness
-  ineq0 <- bind_rows(lis1, 
+  ineq0 <- bind_rows(lis1, erflis,
                      sedlac, cepal, cepal_sdi, oecd1, eurostat,
                      transmonee, ceq1, afr_gini, wb,
                      armstat, abs, inebo, ipea, belstat, statcan, dane, ineccr, dkstat,
