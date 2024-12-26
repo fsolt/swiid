@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 1267871 lt
-Date: September 3, 2024 at 4:52:40 PM CDT
+Subject: job 1296412 lt
+Date: December 12, 2024 at 12:29:51 PM CST
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -118,16 +118,17 @@ Loading required package: readstata13
 > get_ginis <- function(cc, reps = 100) { 
 +   set.seed(324) 
 +   ccs <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",  
-+            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", "in",  
++            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", "in", 
 +            "ie", "il", "it", "jp", "lt", "lu", "ml", "mx", "nl", "no", "pa", "py",  
 +            "pe", "pl", "ps", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
-+            "ch", "tw", "uk", "us", "uy", "vn") 
++            "ch", "tw", "uk", "us", "uy", "vn", 
++            "iq", "jo", "ps", "so", "sd", "tn")  
 +   cc <- tolower(cc) 
 +   if (!cc %in% ccs) { 
 +     stop("Please specify a LIS country in iso2c format") 
 +   } 
 +   last_year_yy <- as.numeric(format(Sys.Date(), "%Y")) - 2001 
-+   yy <- as.character(c(c(67, 69, 71, 73:75, 78:99), paste0("0", 0:9), c(10:last_year_yy))) 
++   yy <- as.character(c(c(63:99), paste0("0", 0:9), c(10:last_year_yy))) 
 +  
 +   datasets <- paste0(rep(cc, each = length(yy)), rep(yy, times = length(cc)), "h") 
 +   vars <- c("dhi", "hitotal", "hifactor", "hiprivate", "hcexp", "hpopwgt", "nhhmem", "nhhmem13", "grossnet") 
@@ -418,9 +419,30 @@ lt20h,con_sqrt,NaN,NA,110
 lt20h,con_pc,NaN,NA,110
 lt20h,con_oecdm,NaN,NA,110
 lt20h,con_ae,NaN,NA,110
+[1] "Loading dataset lt21h..."
+lt21h,market_hh,0.5966,0.0069,110
+lt21h,market_sqrt,0.5178,0.0068,110
+lt21h,market_pc,0.533,0.008,110
+lt21h,market_oecdm,0.5176,0.0069,110
+lt21h,market_ae,0.5211,0.0079,110
+lt21h,gross_hh,0.48,0.0055,110
+lt21h,gross_sqrt,0.4038,0.0064,110
+lt21h,gross_pc,0.4036,0.0063,110
+lt21h,gross_oecdm,0.4003,0.0066,110
+lt21h,gross_ae,0.3982,0.007,110
+lt21h,disp_hh,0.4421,0.0059,110
+lt21h,disp_sqrt,0.3665,0.0071,110
+lt21h,disp_pc,0.3666,0.0065,110
+lt21h,disp_oecdm,0.3618,0.0067,110
+lt21h,disp_ae,0.3594,0.0073,110
+lt21h,con_hh,NaN,NA,110
+lt21h,con_sqrt,NaN,NA,110
+lt21h,con_pc,NaN,NA,110
+lt21h,con_oecdm,NaN,NA,110
+lt21h,con_ae,NaN,NA,110
 > 
 > proc.time()
    user  system elapsed 
-111.796   0.391 115.556 
+112.498   0.479 115.992 
 
 
