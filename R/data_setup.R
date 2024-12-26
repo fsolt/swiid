@@ -88,12 +88,10 @@ lis_files <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co",
                "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt",
                "hu", "iq", "is", 
                "in", "ie", "il", "it", "jo", "jp", "lt", "lu", "ml",
-               "mx", "nl", "no", "pa", "ps", "py", 
+               "mx", "nl", "no", "pa", "py", 
                "pe", "pl", "ps", "ro", "ru", "rs", "sd", "sk", "si",
-               "so", "za", "kr", "es", "se", 
-               "ch", "tn", "tw", "uk", "us", "uy", "vn")
-
-c("eg", "iq", "jo", "ps", "so", "sd", "tn")
+               "za", "kr", "es", "se", 
+               "ch", "tw", "uk", "us", "uy", "vn") # "so", "tn"
 
 lis <- lis_files %>% 
   map_df(format_lis) %>% 
@@ -909,7 +907,7 @@ greenland <- pxweb_get_data(url = greenland_link,
 
 
 # Statistics Hong Kong (2021 census added to fs_added_data 6/2023; update with 2026 census when available)
-hk2016_link <- "https://www.bycensus2016.gov.hk/data/16BC_Income_Report_Key_Statistics.xlsx"
+# hk2016_link <- "https://www.bycensus2016.gov.hk/data/16BC_Income_Report_Key_Statistics.xlsx"
 hk2011_link <- "https://www.statistics.gov.hk/pub/B11200572012XXXXB0100.pdf"
 hk2006_link <- "https://www.statistics.gov.hk/pub/B11200452006XXXXB0400.pdf"
 download.file(hk2016_link, "data-raw/hk2016.xlsx")
@@ -1149,7 +1147,8 @@ statinja <- read_csv("data-raw/statinja.csv",
 
 
 # Kazakhstan Committee on Statistics (update link; check https://kazstat.github.io/sdg-site-kazstat/en/10-4-2/ also)
-kazstat_page <- "https://stat.gov.kz:443/upload/iblock/503/f4evsgpnv48sldh28ir1od0b6ssujibo/Indicators_of_poverty_and_inequality_by_region.xlsx"
+kazstat_page <- "https://stat.gov.kz/upload/iblock/fd6/cakczbfkz8m76jcf4a6xzl7r3bxyhr19/Indicators_of_poverty_and_inequality_by_region.xlsx"
+
 download.file(kazstat_page, "data-raw/kazstat.xlsx")
 
 kazstat <- read_excel("data-raw/kazstat.xlsx",
@@ -1944,11 +1943,12 @@ ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3,
 # U.S. Congressional Budget Office (update link)
 # https://www.cbo.gov/search?search_api_fulltext=gini >
 # The Distribution of Household Income, 20xx >
-# Data Underlying Exhibits
+# Data Underlying Figures and Tables
 cbo_link <- "https://www.cbo.gov/system/files/2023-11/59509_data.xlsx"
+cbo_link <- "https://www.cbo.gov/system/files/2024-09/60341-data.xlsx"
 download.file(cbo_link, "data-raw/cbo.xlsx")
 
-cbo <- read_excel("data-raw/cbo.xlsx", sheet = "Figure 12", col_names = FALSE, skip = 8,
+cbo <- read_excel("data-raw/cbo.xlsx", sheet = "Figure 14", col_names = FALSE, skip = 8,
                   .name_repair = ~ make.names(.x, unique = TRUE)) %>% 
   filter(!is.na(as.numeric(X)) & !is.na(X.1)) %>% 
   transmute(year = as.numeric(X),
@@ -1972,7 +1972,7 @@ cbo <- read_excel("data-raw/cbo.xlsx", sheet = "Figure 12", col_names = FALSE, s
 # https://www.census.gov/topics/income-poverty/income-inequality/data/data-tables.html
 # Selected Measures of Household Income Dispersion:  1967 to 20xx																																																			
 # Selected Measures of Equivalence-Adjusted Income Dispersion: 1967 to 20xx																																																			
-uscb_links <- paste0("https://www2.census.gov/programs-surveys/demo/tables/p60/279/tableA", 4:5, ".xlsx")
+uscb_links <- paste0("https://www2.census.gov/programs-surveys/demo/tables/p60/282/tableA", c("4b", 5), ".xlsx")
 download.file(uscb_links[1], "data-raw/uscb_hh.xlsx")
 download.file(uscb_links[2], "data-raw/uscb_ae.xlsx")
 
@@ -2004,7 +2004,7 @@ uscb_hh_se <- read_excel("data-raw/uscb_hh_se.xlsx", skip = 3) %>%
             page = "",
             link = uscb_links[1])
 
-uscb_hh <- read_excel("data-raw/uscb_hh.xlsx", sheet = "tableA4b", skip = 6) %>% 
+uscb_hh <- read_excel("data-raw/uscb_hh.xlsx", skip = 6) %>% 
   clean_names() %>% 
   filter(str_detect(x1, "^\\d{4}")) %>% 
   transmute(year = as.numeric(str_extract(x1, "\\d{4}")),
