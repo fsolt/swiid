@@ -1483,6 +1483,7 @@ rosstat1 <- read_excel("data-raw/rosstat/Ретро_2021_Раздел5.xls", ski
 rosstat2_link <- "https://eng.rosstat.gov.ru/storage/mediabank/Year%202023.rar"
 download.file(rosstat2_link, "data-raw/rosstat2.rar")
 untar("data-raw/rosstat2.rar",
+      files = "R_06.docx",
       exdir = "data-raw/rosstat")
 
 rosstat2 <- read_docx("data-raw/rosstat/R_06.docx") %>% 
@@ -2668,7 +2669,7 @@ rho_wd_m <- market[[3]]
 ## Save
 swiid_source <- disp[[4]] %>% 
   rename(gini = gini_m,
-         gini_se = gini_m_se) %>% 
+         gini_se = gini_m_se) %>%
   mutate(year = as.integer(year)) %>% 
   select(-country_obs, -series_obs, -region) %>% 
   arrange(country, year, series)
