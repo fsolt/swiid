@@ -1,25 +1,20 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 1296423 it
-Date: December 12, 2024 at 12:38:05 PM CST
+Subject: job 1362462 it
+Date: June 20, 2025 at 1:12:02 PM CDT
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
-                                                                        
-  Use of the data in the LUXEMBOURG INCOME STUDY DATABASE is governed by
-  regulations which do not allow copying or further distribution of the 
-  survey microdata.                                                     
+                                                                        Use of the data in the LUXEMBOURG INCOME STUDY DATABASES is governed by regulations which do not allow copying or further distribution of the survey microdata.                                                     
 
-  Anyone violating these regulations will lose all privileges to the    
-  databases and may be subject to prosecution under the law. In addition,
-  any attempt to circumvent the LIS processing system or unauthorized entry
-  into the LIS computing system will result in prosecution.             
+Anyone violating these regulations will lose all privileges to the databases and may be subject to prosecution under the law. In addition, any attempt to circumvent the LIS processing system or unauthorized entry into the LIS computing system will result in prosecution.             
+All papers written using the LUXEMBOURG INCOME STUDY DATABASES must be  submitted for entry into the Working Papers Series. Users of the LIS or LWS microdata are required to cite the data source in their list of references.                   
 
-  All papers written using the LUXEMBOURG INCOME STUDY DATABASE must be 
-  submitted for entry into the Working Papers Series.                   
-  Please consult our web site for more information at WWW.LISDATACENTER.ORG
+Please consult our web site for more information at WWW.LISDATACENTER.ORG
                                                                         
 ############################### NOTICE TO USERS ###############################
 
+> 
+> 
 > 
 > 
 > 
@@ -117,7 +112,7 @@ Loading required package: readstata13
 >  
 > get_ginis <- function(cc, reps = 100) { 
 +   set.seed(324) 
-+   ccs <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",  
++   ccs <- c("au", "at", "be", "bg", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",  
 +            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", "in", 
 +            "ie", "il", "it", "jp", "lt", "lu", "ml", "mx", "nl", "no", "pa", "py",  
 +            "pe", "pl", "ps", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
@@ -695,6 +690,6 @@ it20h,con_ae,0.2984,0.0046,120
 > 
 > proc.time()
    user  system elapsed 
-221.872   0.494 327.385 
+190.675   0.347 193.480 
 
 
