@@ -1,25 +1,20 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 1296370 au
-Date: December 12, 2024 at 11:17:14 AM CST
+Subject: job 1362371 au
+Date: June 20, 2025 at 9:29:33 AM CDT
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
-                                                                        
-  Use of the data in the LUXEMBOURG INCOME STUDY DATABASE is governed by
-  regulations which do not allow copying or further distribution of the 
-  survey microdata.                                                     
+                                                                        Use of the data in the LUXEMBOURG INCOME STUDY DATABASES is governed by regulations which do not allow copying or further distribution of the survey microdata.                                                     
 
-  Anyone violating these regulations will lose all privileges to the    
-  databases and may be subject to prosecution under the law. In addition,
-  any attempt to circumvent the LIS processing system or unauthorized entry
-  into the LIS computing system will result in prosecution.             
+Anyone violating these regulations will lose all privileges to the databases and may be subject to prosecution under the law. In addition, any attempt to circumvent the LIS processing system or unauthorized entry into the LIS computing system will result in prosecution.             
+All papers written using the LUXEMBOURG INCOME STUDY DATABASES must be  submitted for entry into the Working Papers Series. Users of the LIS or LWS microdata are required to cite the data source in their list of references.                   
 
-  All papers written using the LUXEMBOURG INCOME STUDY DATABASE must be 
-  submitted for entry into the Working Papers Series.                   
-  Please consult our web site for more information at WWW.LISDATACENTER.ORG
+Please consult our web site for more information at WWW.LISDATACENTER.ORG
                                                                         
 ############################### NOTICE TO USERS ###############################
 
+> 
+> 
 > 
 > 
 > 
@@ -371,9 +366,30 @@ au18h,con_sqrt,NaN,NA,120
 au18h,con_pc,NaN,NA,120
 au18h,con_oecdm,NaN,NA,120
 au18h,con_ae,NaN,NA,120
+[1] "Loading dataset au20h..."
+au20h,market_hh,0.5465,0.0043,120
+au20h,market_sqrt,0.4804,0.0044,120
+au20h,market_pc,0.4993,0.0038,120
+au20h,market_oecdm,0.4801,0.0046,120
+au20h,market_ae,0.4852,0.0051,120
+au20h,gross_hh,0.4323,0.0044,120
+au20h,gross_sqrt,0.3742,0.0041,120
+au20h,gross_pc,0.3844,0.0039,120
+au20h,gross_oecdm,0.3708,0.0043,120
+au20h,gross_ae,0.3728,0.0041,120
+au20h,disp_hh,0.3864,0.0039,120
+au20h,disp_sqrt,0.3253,0.0037,120
+au20h,disp_pc,0.3402,0.004,120
+au20h,disp_oecdm,0.3208,0.0038,120
+au20h,disp_ae,0.3242,0.0041,120
+au20h,con_hh,NaN,NA,120
+au20h,con_sqrt,NaN,NA,120
+au20h,con_pc,NaN,NA,120
+au20h,con_oecdm,NaN,NA,120
+au20h,con_ae,NaN,NA,120
 > 
 > proc.time()
    user  system elapsed 
-120.824   0.443 124.297 
+132.635   0.430 244.658 
 
 

@@ -91,7 +91,7 @@ boot_gini_se <- function(data, var, reps=100) {
 
 get_ginis <- function(cc, reps = 100) {
   set.seed(324)
-  ccs <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk", 
+  ccs <- c("au", "at", "be", "bg", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk", 
            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", "in",
            "ie", "il", "it", "jp", "lt", "lu", "ml", "mx", "nl", "no", "pa", "py", 
            "pe", "pl", "ps", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se", 

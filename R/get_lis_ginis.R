@@ -2,7 +2,7 @@ library(tidyverse)
 library(mailR)
 
 ccs <- c("us", "co", "uy", "uk", # bigger/slower than avg
-        "au", "at", "be", "br", "ca", "ci", "cl", "cn", "cz", "dk", 
+        "au", "at", "be", "bg", "br", "ca", "ci", "cl", "cn", "cz", "dk", 
          "do", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", "in",
          "ie", "il", "it", "jp", "lt", "lu", "ml", "mx", "nl", "no", "pa", "py", 
          "pe", "pl", "ps", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se", 

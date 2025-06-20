@@ -1,7 +1,17 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 1299556 eg
-Date: December 24, 2024 at 6:32:41 PM CST
+Subject: job 1362442 eg
+Date: June 20, 2025 at 11:13:29 AM CDT
 To: <fsolt@mac.com>
+
+############################### NOTICE TO USERS ###############################
+                                                                        Use of the data in the LUXEMBOURG INCOME STUDY DATABASES is governed by regulations which do not allow copying or further distribution of the survey microdata.                                                     
+
+Anyone violating these regulations will lose all privileges to the databases and may be subject to prosecution under the law. In addition, any attempt to circumvent the LIS processing system or unauthorized entry into the LIS computing system will result in prosecution.             
+All papers written using the LUXEMBOURG INCOME STUDY DATABASES must be  submitted for entry into the Working Papers Series. Users of the LIS/ LWS/ERFLIS microdata are required to cite the data source in their list of references.                   
+
+Please consult our web site for more information at WWW.LISDATACENTER.ORG
+                                                                        
+############################### NOTICE TO USERS ###############################
 
 > options(echo=FALSE, encoding="UTF-8")
 Loading required package: readstata13
@@ -315,6 +325,6 @@ eg19h,con_ae,0.2824,0.0037,200
 > 
 > proc.time()
    user  system elapsed 
-125.057   0.747 128.191 
+116.724   0.702 120.590 
 
 

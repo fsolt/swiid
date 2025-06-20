@@ -1,25 +1,20 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 1296407 in
-Date: December 12, 2024 at 12:25:19 PM CST
+Subject: job 1362400 in
+Date: June 20, 2025 at 10:28:39 AM CDT
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
-                                                                        
-  Use of the data in the LUXEMBOURG INCOME STUDY DATABASE is governed by
-  regulations which do not allow copying or further distribution of the 
-  survey microdata.                                                     
+                                                                        Use of the data in the LUXEMBOURG INCOME STUDY DATABASES is governed by regulations which do not allow copying or further distribution of the survey microdata.                                                     
 
-  Anyone violating these regulations will lose all privileges to the    
-  databases and may be subject to prosecution under the law. In addition,
-  any attempt to circumvent the LIS processing system or unauthorized entry
-  into the LIS computing system will result in prosecution.             
+Anyone violating these regulations will lose all privileges to the databases and may be subject to prosecution under the law. In addition, any attempt to circumvent the LIS processing system or unauthorized entry into the LIS computing system will result in prosecution.             
+All papers written using the LUXEMBOURG INCOME STUDY DATABASES must be  submitted for entry into the Working Papers Series. Users of the LIS or LWS microdata are required to cite the data source in their list of references.                   
 
-  All papers written using the LUXEMBOURG INCOME STUDY DATABASE must be 
-  submitted for entry into the Working Papers Series.                   
-  Please consult our web site for more information at WWW.LISDATACENTER.ORG
+Please consult our web site for more information at WWW.LISDATACENTER.ORG
                                                                         
 ############################### NOTICE TO USERS ###############################
 
+> 
+> 
 > 
 > 
 > 
@@ -212,6 +207,6 @@ in11h,con_ae,0.3668,0.0025,200
 > 
 > proc.time()
    user  system elapsed 
- 71.020   0.822 109.969 
+ 68.623   0.794  71.096 
 
 

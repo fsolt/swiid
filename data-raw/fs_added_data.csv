@@ -469,13 +469,14 @@ China,2012,0.474,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2013,,htt
 China,2013,0.473,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2014,,http://www.stats.gov.cn/english/PressRelease/201401/t20140120_502079.html
 China,2014,0.469,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2015,,http://www.stats.gov.cn/english/PressRelease/201501/t20150120_671038.html
 China,2015,0.462,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2015,,http://www.stats.gov.cn/english/PressRelease/201601/t20160119_1306072.html
-China,2016,0.465,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2018,"""1-4""",http://www.stats.gov.cn/tjsj/ndsj/2018/indexeh.htm
-China,2017,0.467,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2018,"""1-4""",http://www.stats.gov.cn/tjsj/ndsj/2018/indexeh.htm
-China,2018,0.468,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2019,"""1-4""",http://www.stats.gov.cn/tjsj/ndsj/2019/indexeh.htm
-China,2019,0.465,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2022,"""1-4""",http://www.stats.gov.cn/tjsj/ndsj/2021/indexch.htm
-China,2020,0.468,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2022,"""1-4""",http://www.stats.gov.cn/tjsj/ndsj/2021/indexch.htm
-China,2021,0.466,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2024,"""1-4""",http://www.stats.gov.cn/tjsj/ndsj/2023/indexch.htm
-China,2022,0.467,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2024,"""1-4""",http://www.stats.gov.cn/tjsj/ndsj/2023/indexch.htm
+China,2016,0.465,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2018,"""1-4""",https://www.stats.gov.cn/sj/ndsj/2018/html/EN0104.jpg
+China,2017,0.467,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2018,"""1-4""",https://www.stats.gov.cn/sj/ndsj/2018/html/EN0104.jpg
+China,2018,0.468,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2019,"""1-4""",https://www.stats.gov.cn/sj/ndsj/2019/html/E0104.jpg
+China,2019,0.465,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2022,"""1-4""",https://www.stats.gov.cn/sj/ndsj/2021/html/E01-04.jpg
+China,2020,0.468,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2022,"""1-4""",https://www.stats.gov.cn/sj/ndsj/2021/html/E01-04.jpg
+China,2021,0.466,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2024,"""1-4""",https://www.stats.gov.cn/sj/ndsj/2023/html/E01-04.jpg
+China,2022,0.467,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2024,"""1-4""",https://www.stats.gov.cn/sj/ndsj/2023/html/E01-04.jpg
+China,2023,0.465,,disp,pc,,NBS disp pc 1,National Bureau of Statistics 2024,"""1-4""",https://www.stats.gov.cn/sj/ndsj/2024/html/E01-04.jpg
 Colombia,1972,0.618,,gross,pc,FALSE,Altimir1987 Colombia gross pc 1,Altimir 1987,154,https://doi.org/10.1111/j.1475-4991.1987.tb00667.x
 Colombia,1972,0.607,,gross,pc,FALSE,Altimir1987 Colombia gross pc 2,Altimir 1987,154,https://doi.org/10.1111/j.1475-4991.1987.tb00667.x
 Colombia,1978,0.545,,disp,hh,,WorldBank1994 Colombia disp hh,World Bank 1994 ,229,https://web.archive.org/web/20180427221719/http://documents.worldbank.org/curated/en/853931468019216759/pdf/1375710SPANISH.pdf
@@ -1834,10 +1835,12 @@ Norway,1988,0.21,,disp,hh,,Park1995 Norway disp hh,Tabatabai 1996; Park 1995,127
 Norway,1988,0.309,,disp,hh,,SSB1993 Norway disp hh,Statistics Norway 1993,41,https://www.ssb.no/a/histstat/nos/nos_c070.pdf
 Norway,1989,0.343,,disp,hh,,SSB1993 Norway disp hh,Statistics Norway 1993,41,https://www.ssb.no/a/histstat/nos/nos_c070.pdf
 Norway,1990,0.334,,disp,hh,,SSB1993 Norway disp hh,Statistics Norway 1993,41,https://www.ssb.no/a/histstat/nos/nos_c070.pdf
-Oman,2000,0.3986,,con,pc,,OMNE2002 con pc,Ali 2003 [OMNE 2002],16,http://www.arab-api.org/jodep/products/delivery/wps0307.pdf
+Oman,2000,0.3986,,con,pc,,OMNE2002 con pc,Ali 2003 [OMNE 2002],16,https://web.archive.org/web/20181103093537/http://www.arab-api.org/jodep/products/delivery/wps0307.pdf
 Oman,2000,0.4649,,disp,hh,,KNBG2014 disp hh,"Kotagama, Nasser Al Jabri, Boughanmi, and Guizani 2014",154-155,https://link.springer.com/content/pdf/10.1007/978-3-319-05768-2.pdf
+Oman,2006,0.383,,con,hh,,NCSI Oman con hh,Oman National Center for Statistics and Information 2012,256,https://web.archive.org/web/20250620152937/https://www.ncsi.gov.om/Elibrary/LibraryContentDoc/ben_The%20Final%20Results%202006%20E%20Part%201_bae76c23-9a23-4d96-9a9e-b92eb344b53f.pdf
 Oman,2008,0.3635,,disp,hh,,KNBG2014 disp hh,"Kotagama, Nasser Al Jabri, Boughanmi, and Guizani 2014",154-155,https://link.springer.com/content/pdf/10.1007/978-3-319-05768-2.pdf
-Oman,2010,0.307,,con,hh,,NCSI2012 Oman con hh,Oman National Center for Statistics and Information 2012,23,https://ncsi.gov.om/Elibrary/LibraryContentDoc/ben_Final%20Findings%20E%202010%20-%202011_964e4334-f010-4f48-aad6-9401454cf803.pdf
+Oman,2010,0.307,,con,hh,,NCSI Oman con hh,Oman National Center for Statistics and Information 2012,23,https://ncsi.gov.om/Elibrary/LibraryContentDoc/ben_Final%20Findings%20E%202010%20-%202011_964e4334-f010-4f48-aad6-9401454cf803.pdf
+Oman,2019,0.301,,con,hh,,NCSI Oman con hh,Oman National Center for Statistics and Information 2020,30,https://web.archive.org/web/20231006100734/https://www.ncsi.gov.om/Elibrary/LibraryContentDoc/ben_En%20HOUSEHOLD%202020_bc5c8ea1-974e-490f-a71b-221f2dfac242.pdf
 Pakistan,1964,0.356,,gross,hh,,Mahmood1984 Pakistan gross hh,Mahmood 1984,372,http://www.jstor.org/stable/41258679
 Pakistan,1964,0.386,,disp,hh,,PBS1995 Pakistan disp hh,Tabatabai 1996; PBS1995,102,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Pakistan,1967,0.337,,con,hh,,A1976 Pakistan con hh,Azfar 1976,60,https://www.jstor.org/stable/25821355
@@ -2868,3 +2871,22 @@ Zimbabwe,1995,0.501,,con,pc,,FR2008 Zimbabwe con pc,Ferreira and Ravallion 2008,
 Zimbabwe,1995,0.501,,con,pc,FALSE,Zimstat  con pc,Zimbabwe National Statistics Agency 2013,42,http://www.zimstat.co.zw/sites/default/files/img/publications/Finance/Poverty2011.pdf
 Zimbabwe,2001,0.489,,con,pc,FALSE,Zimstat  con pc,Zimbabwe National Statistics Agency 2013,42,http://www.zimstat.co.zw/sites/default/files/img/publications/Finance/Poverty2011.pdf
 Zimbabwe,2011,0.423,,con,pc,FALSE,Zimstat  con pc,Zimbabwe National Statistics Agency 2013,42,http://www.zimstat.co.zw/sites/default/files/img/publications/Finance/Poverty2011.pdf
+Peru,2017,0.35,,con,pc,,INEI Peru con pc,INEI 2018,21,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1533/libro.pdf
+Peru,2017,0.43,,gross,pc,FALSE,INEI Peru gross pc,INEI 2018,29,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1533/libro.pdf
+Peru,2004,0.494,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2005,0.509,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2006,0.497,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2007,0.501,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2008,0.477,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2009,0.473,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2010,0.457,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2011,0.449,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2012,0.446,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2013,0.441,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2014,0.436,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2015,0.435,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2016,0.437,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2017,0.433,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2018,0.424,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2019,0.416,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2020,0.449,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
