@@ -276,7 +276,6 @@ results_path <- here::here(file.path("data",
                                            "k-", 
                                            str_replace_all(Sys.time(), "[-:]", "_") %>%
                                              str_replace(" ", "-") %>% 
-                                             str_replace("^\\d{4}_", "") %>% 
                                              str_replace("_\\d{2}$", ""))))
 dir.create(results_path, 
            showWarnings = FALSE, 

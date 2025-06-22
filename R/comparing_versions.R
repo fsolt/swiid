@@ -1,6 +1,6 @@
 library(tidyverse)
 
-penultimate <- "swiid9_7"
+penultimate <- "swiid9_8"
 
 swiid_summary_latest <- "data/swiid_summary.csv" %>% 
   read_csv(col_types = "cddddddddd") %>% 
@@ -12,9 +12,9 @@ swiid_summary_last <- file.path("release",
   read_csv(col_types = "cddddddddd") %>%
   mutate(decade = floor(year/10) * 10)
  
-swiid_summary97 <- "https://raw.githubusercontent.com/fsolt/swiid/1a5dcc286e213e6ff1d315bdafc8bae3c0065514/data/swiid_summary.csv" %>% 
-    read_csv(col_types = "cddddddddd") %>%
-    mutate(decade = floor(year/10) * 10)
+# swiid_summary98 <- "https://github.com/fsolt/swiid/raw/abf570737ecfbf55024a68d251f08c9c6829e00e/data/swiid_summary.csv" %>% 
+#     read_csv(col_types = "cddddddddd") %>%
+#     mutate(decade = floor(year/10) * 10)
 # swiid_summary93 <- "https://github.com/fsolt/swiid/raw/47f86801bb626c0777a5ecef98defd5f3eecab73/data/swiid_summary.csv" %>%
 #   read_csv(col_types = "cddddddddd") %>%
 #   mutate(decade = floor(year/10) * 10)
@@ -122,16 +122,16 @@ swiid_latest_83_71_mkt %>%
   summarize_at(vars(starts_with("v")), mean, na.rm = TRUE) 
 
 swiid_source_latest <- read_csv("data/swiid_source.csv", col_types = "cdddcclcccc")
-swiid_source97 <- read_csv("https://github.com/fsolt/swiid/raw/dd183924138cb3940ee96abf66907d2127fbf1f4/data/swiid_source.csv", col_types = "cdddcclcccc")
-swiid_source96 <- read_csv("https://github.com/fsolt/swiid/raw/ab16757710420b5c5a6e5a832802173cd72dddbd/data/swiid_source.csv", col_types = "cdddcclcccc")
-swiid_source93 <- read_csv("https://github.com/fsolt/swiid/blob/07b5b78ecb6450bacd8f2ca138fd5ee7fde14cdc/data/swiid_source.csv?raw=true", col_types = "cdddcclcccc")
-swiid_source92 <- read_csv("https://github.com/fsolt/swiid/raw/160428c9b0797bf5d94daf4fd287f713d3ae3aaf/data/swiid_source.csv", col_types = "cdddcclcccc")
-swiid_source91 <- read_csv("https://github.com/fsolt/swiid/blob/7ced9cfb2e229be5e95d0bd0fe15aeb0e19a6015/data/swiid_source.csv?raw=true", col_types = "cdddcclcccc")
-swiid_source83 <- read_csv("https://github.com/fsolt/swiid/raw/227cf225cf43de6d01a58df2a6be9a9b86a213e6/data/swiid_source.csv", col_types = "cdddcclcccc")
+swiid_source_last <- read_csv("https://github.com/fsolt/swiid/raw/eb82596c0e3f5f2e6145d455b7494a5290dd889f/data/swiid_source.csv", col_types = "cdddcclcccc")
+# swiid_source97 <- read_csv("https://github.com/fsolt/swiid/raw/dd183924138cb3940ee96abf66907d2127fbf1f4/data/swiid_source.csv", col_types = "cdddcclcccc")
+# swiid_source96 <- read_csv("https://github.com/fsolt/swiid/raw/ab16757710420b5c5a6e5a832802173cd72dddbd/data/swiid_source.csv", col_types = "cdddcclcccc")
+# swiid_source93 <- read_csv("https://github.com/fsolt/swiid/blob/07b5b78ecb6450bacd8f2ca138fd5ee7fde14cdc/data/swiid_source.csv?raw=true", col_types = "cdddcclcccc")
+# swiid_source92 <- read_csv("https://github.com/fsolt/swiid/raw/160428c9b0797bf5d94daf4fd287f713d3ae3aaf/data/swiid_source.csv", col_types = "cdddcclcccc")
+# swiid_source91 <- read_csv("https://github.com/fsolt/swiid/blob/7ced9cfb2e229be5e95d0bd0fe15aeb0e19a6015/data/swiid_source.csv?raw=true", col_types = "cdddcclcccc")
+# swiid_source83 <- read_csv("https://github.com/fsolt/swiid/raw/227cf225cf43de6d01a58df2a6be9a9b86a213e6/data/swiid_source.csv", col_types = "cdddcclcccc")
 # swiid_source82 <- read_csv("https://github.com/fsolt/swiid/raw/f099f92aaf335554844b2af6df77bc5e8db47fd7/data/swiid_source.csv", col_types = "cdddcclcccc")
 # swiid_source81 <- read_csv("https://github.com/fsolt/swiid/raw/b85cf28f34897781098fe3b992da8434bf758993/data/swiid_source.csv", col_types = "cdddcclcccc")
 # swiid_source80 <- read_csv("https://github.com/fsolt/swiid/raw/19349a99255f749b2c4634f748def3950e3e8ac4/data/swiid_source.csv", col_types = "cdddcclcccc")
-swiid_source_last <- swiid_source97
 
 lis_mkt <- swiid_source_latest %>% 
   filter(str_detect(source1, "LIS") & welfare_def == "market" & equiv_scale == "sqrt")
@@ -187,21 +187,28 @@ swiid_latest_83_71 %>%
 
 check_source <- function(cc) {
   country_source_latest <- swiid_source_latest %>% 
-    filter(country == cc)
+    filter(country == cc) %>% 
+    mutate(gini = round(gini, 3))
   country_source_last <- swiid_source_last %>% 
-    filter(country == cc)
+    filter(country == cc) %>% 
+    mutate(gini = round(gini, 3))
   
   anti_join(country_source_latest[, 1:10], country_source_last[, 1:10])
 }
 
 check_source2 <- function(cc) {
   country_source_latest <- swiid_source_latest %>% 
-    filter(country == cc)
+    filter(country == cc) %>% 
+    mutate(gini = round(gini, 3))
   country_source_last <- swiid_source_last %>% 
-    filter(country == cc)
+    filter(country == cc) %>% 
+    mutate(gini = round(gini, 3))
   
   anti_join(country_source_last[, 1:10], country_source_latest[, 1:10])
 }
 
-View(check_source("Ireland"))
+View(check_source("Italy"))
 View(check_source2("Italy"))
+
+View(check_source("Ireland"))
+View(check_source2("Ireland"))

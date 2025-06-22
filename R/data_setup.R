@@ -206,7 +206,7 @@ format_sedlac <- function(df, sheet, link, es) {
   return(x)
 }
 
-sedlac_link <- "https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2023_Act2_inequality_LAC-web.xlsx"
+sedlac_link <- "https://www.cedlas.econo.unlp.edu.ar/wp/wp-content/uploads/2024_Act1_inequality_LAC.xlsx"
 download.file(sedlac_link, "data-raw/sedlac.xlsx")
 
 sedlac_pc <- read_excel(path = "data-raw/sedlac.xlsx", 
@@ -616,9 +616,9 @@ ipea <- ipeadata("PNADCA_GINIUF", language = "en") %>%
     bind_rows(ipea0) %>% 
     arrange(country, year)
 
-# Belarus National Statistical Committee (update file)
+# Belarus National Statistical Committee (archived)
 # select all years > export > xls
-belstat_link <- "http://dataportal.belstat.gov.by/Indicators/Preview?key=228371#"
+belstat_link <- "https://dataportal.belstat.gov.by/osids/indicator-info/10303000014"
 
 belstat <- read_excel("data-raw/belstat.xls", skip = 1) %>%
   select(matches("^[12]")) %>% 
@@ -712,7 +712,7 @@ dane <- read_excel("data-raw/dane.xlsx", sheet = "Gini", skip = 14) %>%
 # Costa Rica (update link)
 # https://inec.cr/es/tematicas/listado?filtertext=gini
 # ENAHO. 202x. Coeficiente de Gini por hogar y per cápita, julio 2010 - 202x.
-ineccr_link <- "https://admin.inec.cr/sites/default/files/2023-11/repobrezaenaho2010-2023-01_gini.xlsx"
+ineccr_link <- "https://admin.inec.cr/sites/default/files/2025-04/seingresosenaho2010-2024-01.xls"
   
 download.file(ineccr_link, "data-raw/ineccr.xlsx")
 
@@ -919,7 +919,7 @@ insee <- bind_rows(insee1, insee2, insee3)
 
 # Statistics Georgia (update link)
 # https://pc-axis.geostat.ge/PXweb/pxweb/en/Database/Database__Social%20Statistics__Living%20Conditions,%20Subsistence%20Minimum/Gini_Coefficients.px/
-geostat_link <- "https://pc-axis.geostat.ge:443/PXweb/sq/29cab2f2-048b-45bf-b2f9-ada5be1bb956"
+geostat_link <- "https://pc-axis.geostat.ge:443/PXweb/sq/af8b0758-39dc-471c-bd90-ceecdaee1fd0"
 download.file(geostat_link, "data-raw/geostat.csv")
 geostat <- read_csv("data-raw/geostat.csv", skip = 2, col_types = "ccccccc") %>% 
   pivot_longer(!matches("Year"), names_to = "indicator", values_to = "gini_coefficients") %>% 
@@ -1074,7 +1074,7 @@ bpsid1 <- read_excel("data-raw/bpsid1.xls", skip = 2) %>%
             page = "",
             link = bpsid1_link)
 
-bpsid2 <- read_excel("data-raw/bpsid2.xlsx", skip = 2) %>% 
+bpsid2 <- read_excel("data-raw/bpsid2.xls", skip = 2) %>% 
   janitor::clean_names() %>% 
   fill(area) %>% 
   filter(area == "Urban + Rural" & !is.na(year_month)) %>% 
@@ -1138,11 +1138,7 @@ cso_ie <- cso_get_data("SIA47", pivot_format = "tall", use_factors = FALSE, cach
             link = "https://data.cso.ie/table/SIA47")
 
 
-# Istat (update istat2 file)
-# http://dati.istat.it/
-# Sidebar: Household Economic Conditions and Disparities > Consumption expenditure > Consumption distribution > Regions
-# Customize > Territory: Italy > Data Type: Gini > Years: all years
-
+# Istat (archived; automated)
 istat1 <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-raw/istat.csv",
                   col_types = "ccccicdc") %>% 
   transmute(country = "Italy",
@@ -1157,11 +1153,14 @@ istat1 <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-ra
             page = "",
             link = "http://dati.istat.it/Index.aspx?DataSetCode=DCCV_INDCONSUMI&Lang=en")
 
-istat2 <- read_csv("data-raw/istat2.csv",
-                   col_types = "ccccccdddcc") %>% 
+istat2_link <- "https://esploradati.istat.it/SDMXWS/rest/data/IT1,31_740_DF_DCCV_SPEMEFAM_COICOP_2018_11,1.0/A.IT........./ALL/?detail=full&dimensionAtObservation=TIME_PERIOD"
+
+istat2 <- rsdmx::readSDMX(istat2_link) %>%
+  as_tibble() %>% 
+  filter(DATA_TYPE == "DISUG_CONSUMI_GINI") %>% 
   transmute(country = "Italy",
-            year = TIME,
-            gini = Value,
+            year = as.integer(obsTime),
+            gini = obsValue,
             gini_se = NA,
             welfare_def = "con",
             equiv_scale = "hh",
@@ -1169,7 +1168,7 @@ istat2 <- read_csv("data-raw/istat2.csv",
             series = paste("Istat", welfare_def, equiv_scale, "2"),
             source1 = "Istat",
             page = "",
-            link = "http://dati.istat.it/")
+            link = istat2_link)
 
 istat <- bind_rows(istat1, istat2)
 rm(istat1, istat2)
@@ -1199,7 +1198,7 @@ statinja <- read_csv("data-raw/statinja.csv",
 
 
 # Kazakhstan Committee on Statistics (update link; check https://kazstat.github.io/sdg-site-kazstat/en/10-4-2/ also)
-kazstat_page <- "https://stat.gov.kz/upload/iblock/fd6/cakczbfkz8m76jcf4a6xzl7r3bxyhr19/Indicators_of_poverty_and_inequality_by_region.xlsx"
+kazstat_page <- "https://stat.gov.kz/upload/iblock/148/wd6nm1mzguzll31r3k1zt2r1n3p9vpwi/Indicators_of_poverty_and_inequality_by_region.xlsx"
 
 download.file(kazstat_page, "data-raw/kazstat.xlsx")
 
@@ -1511,9 +1510,9 @@ psa <- read_excel("data-raw/psa.xlsx", skip = 1) %>%
 # https://rosstat.gov.ru/folder/210/document/13396 > find xls
 
 rosstat1_link <- "https://rosstat.gov.ru/storage/mediabank/pril-year_2021.rar"
-download.file(rosstat1_link, "data-raw/rosstat1.rar")
-untar("data-raw/rosstat1.rar",
-      exdir = "data-raw/rosstat")
+# download.file(rosstat1_link, "data-raw/rosstat1.rar")
+# untar("data-raw/rosstat1.rar",
+#       exdir = "data-raw/rosstat")
 
 rosstat1 <- read_excel("data-raw/rosstat/Ретро_2021_Раздел5.xls", skip = 2) %>% 
   filter(str_detect(ПОКАЗАТЕЛИ, "Джини")) %>% 
@@ -1533,10 +1532,10 @@ rosstat1 <- read_excel("data-raw/rosstat/Ретро_2021_Раздел5.xls", ski
             link = rosstat1_link)
 
 rosstat2_link <- "https://eng.rosstat.gov.ru/storage/mediabank/Year%202023.rar"
-download.file(rosstat2_link, "data-raw/rosstat2.rar")
-untar("data-raw/rosstat2.rar",
-      files = "R_06.docx",
-      exdir = "data-raw/rosstat")
+# download.file(rosstat2_link, "data-raw/rosstat2.rar")
+# untar("data-raw/rosstat2.rar",
+#       files = "R_06.docx",
+#       exdir = "data-raw/rosstat")
 
 rosstat2 <- read_docx("data-raw/rosstat/R_06.docx") %>% 
     docx_extract_tbl(19) %>% 
@@ -1644,7 +1643,7 @@ rm(ssi1, ssi2)
 
 # Instituto Nacional de Estadística Spain (update link?)
 ine_link <- "https://www.ine.es/jaxiT3/files/t/es/csv_bdsc/49149.csv"
-download.file(ine_link, "data-raw/ine.csv")
+# download.file(ine_link, "data-raw/ine.csv")
 
 ine <- read_csv2("data-raw/ine.csv",
                  col_types = "cdd") %>% 
@@ -1720,7 +1719,7 @@ scb <- pxweb_get_data(url = scb_link,
 # Trends in Gini: Details and download >
 # Download icon: 'Get the data'
 
-fso_ch_link <- "https://www.bfs.admin.ch/bfs/en/home/statistics/economic-social-situation-population/economic-and-social-situation-of-the-population/inqualities-income-ditribution/redistribution-income.assetdetail.30092555.html"
+fso_ch_link <- "https://www.bfs.admin.ch/bfs/en/home/statistics/economic-social-situation-population/economic-and-social-situation-of-the-population.assetdetail.33414023.html"
 fso_ch0 <- read_csv("data-raw/fso_ch.csv") %>% 
   filter(!is.na(`primary equivalised income`)) %>%
     mutate(across(everything(), ~ as.numeric(str_replace(.x, ",", ".")))) %>% 
@@ -1756,21 +1755,18 @@ fso_ch <- fso_ch0 %>%
 rm(fso_ch0)
 
 # Taiwan Directorate General of Budget, Accounting, and Statistics 
-# update file from tdfbas_link2; otherwise automated
-tdgbas_link <- paste0("http://win.dgbas.gov.tw/fies/doc/result/", Sys.Date() %>% str_extract("\\d{4}") %>% as.numeric() %>% "-"(1912), "/a11/Year05.xls")
-# tryCatch(download.file(tdgbas_link, "data-raw/tdgbas1.xls"),
-#          error = function(e) {
-#            tdgbas_link <- paste0("http://win.dgbas.gov.tw/fies/doc/result/", Sys.Date() %>% str_extract("\\d{4}") %>% as.numeric() %>% "-"(1913), "/a11/Year05.xls")
-#            download.file(tdgbas_link, "data-raw/tdgbas1.xls")
-#          })
-# tryCatch(read_excel("data-raw/tdgbas1.xls", col_names = FALSE, skip = 9, 
-#                     .name_repair = ~ make.names(.x, unique = TRUE)),
-#          error = function(e) {
-#            tdgbas_link <- paste0("http://win.dgbas.gov.tw/fies/doc/result/", Sys.Date() %>% str_extract("\\d{4}") %>% as.numeric() %>% "-"(1913), "/a11/Year05.xls")
-#            download.file(tdgbas_link, "data-raw/tdgbas1.xls")
-#          })
-         
-tdgbas_link2 <- "http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L"
+# update tdfbas_link:
+# https://eng.stat.gov.tw/News.aspx?n=4218&sms=11711 >
+# Report on the Survey of Family Income and Expenditure, 202[3]
+# 5.Per capita disposable income inequality indices [EXCEL]
+tdgbas_link <- "https://ws.dgbas.gov.tw/001/Upload/463/relfile/11530/233680/Year05.xls"
+# update tdfbas_link2:
+# https://eng.stat.gov.tw/cl.aspx?n=4004 (Data Query)
+# 09. National Economics and Business Activities
+# Average disposable income per household by disposable income quintile
+tdgbas_link2 <- "https://ws.dgbas.gov.tw/001/Upload/464/relfile/10924/232171/y046.xls"
+# archived
+tdgbas_link3 <- "https://web.archive.org/web/20220628200708/http://statdb.dgbas.gov.tw/pxweb/Dialog/varval.asp?ma=FF0004A1A&ti=Percentage%20Share%20of%20Disposable%20Income%20by%20Percentile%20Group%20of%20Households%20and%20Income%20Inequality%20Indexes-Annual&path=../PXfileE/HouseholdFinances/&lang=1&strList=L#expand"
 
 tdgbas <- read_excel("data-raw/tdgbas1.xls", col_names = FALSE, skip = 9, 
                      .name_repair = ~ make.names(.x, unique = TRUE)) %>% 
@@ -1780,13 +1776,21 @@ tdgbas <- read_excel("data-raw/tdgbas1.xls", col_names = FALSE, skip = 9,
   gather(key = equiv_scale, value = gini, -year) %>% 
   filter(!is.na(year)) %>% 
   mutate(link = tdgbas_link) %>% 
-  bind_rows(read_csv("data-raw/tdgbas2.csv", 
+  bind_rows(read_excel("data-raw/tdgbas2.xls", skip = 8, 
+                       .name_repair = ~ make.names(.x, unique = TRUE)) %>% 
+              transmute(year = as.numeric(X),
+                        gini = Gini.s..concentra.tion..coefficient,
+                        equiv_scale = "hh",
+                        link = tdgbas_link2) %>% 
+              filter(!is.na(gini)),
+    read_csv("data-raw/tdgbas3.csv", 
                      col_names = c("year", "gini"), 
                      col_types = "id", 
                      skip = 4) %>% 
               filter(!is.na(year)) %>% 
               mutate(equiv_scale = "hh",
-                     link = tdgbas_link2)) %>% 
+                     link = tdgbas_link3)) %>% 
+  distinct(year, gini, equiv_scale, .keep_all = TRUE) %>% 
   transmute(country = "Taiwan",
             year = year,
             gini = gini,
@@ -1931,10 +1935,14 @@ rm(tuik_hh, tuik_oecdm)
 
 # U.K. Office for National Statistics (update links; join with latest file last)
 # https://www.ons.gov.uk/atoz?query=effects+taxes+benefits (new releases in April and January)
-ons_link <- "https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/datasets/theeffectsoftaxesandbenefitsonhouseholdincomefinancialyearending2014/financialyearending2022/etbreferencetablesfye2022correction.xlsx"
-download.file(ons_link, "data-raw/ons.xlsx")
+ons_link <- "https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/datasets/householddisposableincomeandinequality/financialyearending2024/hdiifye2024final.xlsx"
+# archived
+ons_link2 <- "https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/datasets/theeffectsoftaxesandbenefitsonhouseholdincomefinancialyearending2014/financialyearending2022/etbreferencetablesfye2022correction.xlsx"
 
-ons <- read_excel("data-raw/ons.xlsx", sheet = "Table 6a", skip = 3) %>% 
+download.file(ons_link, "data-raw/ons.xlsx")
+download.file(ons_link2, "data-raw/ons2.xlsx")
+
+ons2 <- read_excel("data-raw/ons2.xlsx", sheet = "Table 6a", skip = 3) %>% 
   janitor::clean_names() %>% 
   select(year, original_income, gross_income, disposable_income, expenditure) %>% 
   pivot_longer(cols = matches("[_x]"), 
@@ -1965,14 +1973,56 @@ ons <- read_excel("data-raw/ons.xlsx", sheet = "Table 6a", skip = 3) %>%
             series = paste("ONS", welfare_def, equiv_scale, series),
             source1 = "UK Office for National Statistics",
             page = "",
-            link = ons_link)
+            link = ons_link) %>% 
+  filter(welfare_def == "con")
 
-# U.K. Institute for Fiscal Studies (automated)
-ifs <- "https://ifs.org.uk/living-standards-poverty-and-inequality-uk" %>% 
-  session() %>% 
-  session_follow_link("spreadsheet")
-writeBin(httr::content(ifs$response, "raw"), "data-raw/ifs.xlsx")
-ifs_link <- ifs$response$url
+ons <- read_excel("data-raw/ons.xlsx", sheet = "Table 9", skip = 6) %>% 
+  janitor::clean_names() %>% 
+  select(year, original_2, gross_3, disposable_4) %>% 
+  pivot_longer(cols = matches("[_x]"), 
+               names_to = c("wd", "series0"),
+               names_sep = "_",
+               values_to = "gini") %>% 
+  mutate(welfare_def = case_when(wd == "original" ~ "market",
+                                 wd == "gross" ~ "gross",
+                                 wd == "disposable" ~ "disp",
+                                 wd == "expenditure" ~ "con",
+                                 TRUE ~ NA_character_),
+         gini = as.numeric(gini)/100,
+         gini_se = case_when(wd == "original" ~ gini * .015, # per Table 11
+                             wd == "gross" ~ gini * .02,
+                             wd == "disposable" ~ gini * .018,
+                             TRUE ~ NA_real_),
+         series = 1) %>% 
+  filter(!is.na(gini) & !is.na(welfare_def)) %>% 
+  transmute(country = "United Kingdom",
+            year = ifelse(str_extract(year, "\\d{2}$") %>% as.numeric() > 70,
+                          str_extract(year, "\\d{2}$") %>% as.numeric() + 1900,
+                          str_extract(year, "\\d{2}$") %>% as.numeric() + 2000),
+            gini = gini,
+            gini_se = gini_se,
+            welfare_def = welfare_def,
+            equiv_scale = "oecdm",
+            monetary = FALSE,
+            series = paste("ONS", welfare_def, equiv_scale, series),
+            source1 = "UK Office for National Statistics",
+            page = "",
+            link = ons_link) %>% 
+  bind_rows(ons2) %>% 
+  distinct(year, gini, welfare_def, equiv_scale, .keep_all = TRUE)
+
+rm(ons2)
+
+# U.K. Institute for Fiscal Studies (update link)
+# user_a <- httr::user_agent("Mozilla/5.0 (Macintosh; Intel Mac OS X 12_0_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36")
+# ifs <- "https://ifs.org.uk/living-standards-poverty-and-inequality-uk" %>%
+#   session(user_a) %>%
+#   session_follow_link("spreadsheet")
+# writeBin(httr::content(ifs$response, "raw"), "data-raw/ifs.xlsx")
+# ifs_link <- ifs$response$url
+
+ifs_link <- "https://ifs.org.uk/sites/default/files/2025-03/Incomes%2C%20poverty%20and%20inequality_0.xlsx"
+download.file(ifs_link, "data-raw/ifs.xlsx")
 
 ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3,
                   .name_repair = ~ make.names(.x, unique = TRUE)) %>%
@@ -1997,7 +2047,6 @@ ifs <- read_excel("data-raw/ifs.xlsx", sheet = 5, col_names = FALSE, skip = 3,
 # https://www.cbo.gov/search?search_api_fulltext=gini >
 # The Distribution of Household Income, 20xx >
 # Data Underlying Figures and Tables
-cbo_link <- "https://www.cbo.gov/system/files/2023-11/59509_data.xlsx"
 cbo_link <- "https://www.cbo.gov/system/files/2024-09/60341-data.xlsx"
 download.file(cbo_link, "data-raw/cbo.xlsx")
 
@@ -2023,8 +2072,9 @@ cbo <- read_excel("data-raw/cbo.xlsx", sheet = "Figure 14", col_names = FALSE, s
 
 # U.S. Census Bureau (update link [probably only /p60/xxx/tableA] and wrangle; updated in Sept)
 # https://www.census.gov/topics/income-poverty/income-inequality/data/data-tables.html
-# Selected Measures of Household Income Dispersion:  1967 to 20xx																																																			
-# Selected Measures of Equivalence-Adjusted Income Dispersion: 1967 to 20xx																																																			
+# Selected Measures of Household Income Dispersion:  1967 to 20xx
+# Selected Measures of Equivalence-Adjusted Income Dispersion: 1967 to 20xx
+
 uscb_links <- paste0("https://www2.census.gov/programs-surveys/demo/tables/p60/282/tableA", c("4b", 5), ".xlsx")
 download.file(uscb_links[1], "data-raw/uscb_hh.xlsx")
 download.file(uscb_links[2], "data-raw/uscb_ae.xlsx")

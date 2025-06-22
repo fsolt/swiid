@@ -182,6 +182,7 @@ Belarus,1999,0.299,,con,pc,FALSE,MY2006 Belarus con pc 3,Mitra and Yemtsov 2006,
 Belarus,2000,0.293,,con,pc,FALSE,MY2006 Belarus con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Belarus,2001,0.301,,con,pc,FALSE,MY2006 Belarus con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Belarus,2002,0.292,,con,pc,FALSE,MY2006 Belarus con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
+Belarus,2024,0.2791,,disp,pc,FALSE,Belstat disp pc,Belarus National Committee of Statistics,,https://dataportal.belstat.gov.by/osids/indicator-info/10303000014
 Belgium,1974,0.306,,disp,hh,,Sawyer1976 Belgium disp hh,"Sawyer 1976; Dryzek1978; Atkinson, Rainwater, and Smeeding 1994",404,https://doi.org/10.1111/j.1475-6765.1978.tb00803.x
 Belgium,1979,0.212,0.003,con,oecdm,FALSE,ZdV2001 Belgium con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
 Belgium,1988,0.236,0.004,con,oecdm,FALSE,ZdV2001 Belgium con oecdm,Zaida and de Vos 2001,381,http://www.jstor.org/stable/20007767
@@ -1967,6 +1968,25 @@ Peru,2015,0.35,,con,pc,,INEI Peru con pc,INEI 2017,23,https://www.inei.gob.pe/me
 Peru,2015,0.44,,gross,pc,FALSE,INEI Peru gross pc,INEI 2017,32,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
 Peru,2016,0.34,,con,pc,,INEI Peru con pc,INEI 2017,23,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
 Peru,2016,0.44,,gross,pc,FALSE,INEI Peru gross pc,INEI 2017,32,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1425/cap01.pdf
+Peru,2017,0.35,,con,pc,,INEI Peru con pc,INEI 2018,21,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1533/libro.pdf
+Peru,2017,0.43,,gross,pc,FALSE,INEI Peru gross pc,INEI 2018,29,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1533/libro.pdf
+Peru,2004,0.494,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2005,0.509,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2006,0.497,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2007,0.501,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2008,0.477,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2009,0.473,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2010,0.457,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2011,0.449,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2012,0.446,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2013,0.441,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2014,0.436,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2015,0.435,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2016,0.437,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2017,0.433,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2018,0.424,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2019,0.416,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
+Peru,2020,0.449,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
 Philippines,1961,0.486,,gross,hh,,Balisacan1992 Philippines gross hh,Tabatabai 1996; Balisacan 1992,103,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Philippines,1965,0.491,,gross,hh,,Balisacan1992 Philippines gross hh,Tabatabai 1996; Balisacan 1992,103,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Philippines,1971,0.478,,gross,hh,,Balisacan1992 Philippines gross hh,Tabatabai 1996; Balisacan 1992,103,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -2807,8 +2827,9 @@ Uruguay,2018,0.38,0.004,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay 
 Uruguay,2019,0.383,0.004,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2020,11,https://www.ine.gub.uy/documents/10181/30913/Estimación+de+la+pobreza+por+el+método+de+ingreso+2019/c0c832b4-7e5c-4c2a-92e9-7ea69a75e92a
 Uruguay,2020,0.387,,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2021,9,https://www.ine.gub.uy/documents/10181/30913/Pobreza0321/c18681f1-7aa9-4d0a-bd6b-265049f3e26e
 Uruguay,2021,0.386,,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2021,,https://www5.ine.gub.uy/documents/DemografíayEESS/HTML/ECH/Pobreza/2022/Indicadores%20de%20la%20distribucion%20del%20ingreso%202022.html
-Uruguay,2022,0.389,,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2021,,https://www5.ine.gub.uy/documents/DemografíayEESS/HTML/ECH/Pobreza/2022/Indicadores%20de%20la%20distribucion%20del%20ingreso%202022.html
-Uruguay,2023,0.394,,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2021,,https://www5.ine.gub.uy/documents/DemografíayEESS/HTML/ECH/Pobreza/2023/Desigualdad_informe-2023.html
+Uruguay,2022,0.389,,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2021,,https://www5.ine.gub.uy/documents/DemografíayEESS/HTML/ECH/Pobreza/2023/Desigualdad_informe-2023.html
+Uruguay,2023,0.417,,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2021,,https://www5.ine.gub.uy/documents/DemografíayEESS/HTML/ECH/Pobreza/2024/Desigualdad_informe-2024.html
+Uruguay,2024,0.405,,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2021,,https://www5.ine.gub.uy/documents/DemografíayEESS/HTML/ECH/Pobreza/2024/Desigualdad_informe-2024.html
 USSR,1980,0.29,,gross,pc,,AG1993 USSR gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,122,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 USSR,1980,0.245,,gross,pc,FALSE,AM1992 USSR gross pc,Atkinson and Micklewright 1992,UI1,https://books.google.com/books?id=zaL4CGdjOkUC
 USSR,1985,0.284,,gross,pc,,AG1993 USSR gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,122,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
@@ -2872,22 +2893,3 @@ Zimbabwe,1995,0.501,,con,pc,,FR2008 Zimbabwe con pc,Ferreira and Ravallion 2008,
 Zimbabwe,1995,0.501,,con,pc,FALSE,Zimstat  con pc,Zimbabwe National Statistics Agency 2013,42,http://www.zimstat.co.zw/sites/default/files/img/publications/Finance/Poverty2011.pdf
 Zimbabwe,2001,0.489,,con,pc,FALSE,Zimstat  con pc,Zimbabwe National Statistics Agency 2013,42,http://www.zimstat.co.zw/sites/default/files/img/publications/Finance/Poverty2011.pdf
 Zimbabwe,2011,0.423,,con,pc,FALSE,Zimstat  con pc,Zimbabwe National Statistics Agency 2013,42,http://www.zimstat.co.zw/sites/default/files/img/publications/Finance/Poverty2011.pdf
-Peru,2017,0.35,,con,pc,,INEI Peru con pc,INEI 2018,21,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1533/libro.pdf
-Peru,2017,0.43,,gross,pc,FALSE,INEI Peru gross pc,INEI 2018,29,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1533/libro.pdf
-Peru,2004,0.494,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
-Peru,2005,0.509,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
-Peru,2006,0.497,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
-Peru,2007,0.501,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
-Peru,2008,0.477,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
-Peru,2009,0.473,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
-Peru,2010,0.457,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
-Peru,2011,0.449,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
-Peru,2012,0.446,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
-Peru,2013,0.441,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
-Peru,2014,0.436,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
-Peru,2015,0.435,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
-Peru,2016,0.437,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
-Peru,2017,0.433,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
-Peru,2018,0.424,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
-Peru,2019,0.416,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf
-Peru,2020,0.449,,gross,pc,FALSE,INEI Peru gross pc,INEI 2021,9,https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1803/libro.pdf

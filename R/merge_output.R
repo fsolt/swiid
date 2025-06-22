@@ -1,7 +1,7 @@
 library(tidyverse)
 library(cmdstanr)
 
-version <- "9_8"
+version <- "9_9"
 ver <- str_replace(version, "_", "")
 
 load("data/ineq.rda")
@@ -195,3 +195,4 @@ file.copy(paste0("swiid", version, ".zip"), paste0("s", str_replace(version, "_"
 zip(paste0("s", ver, ".zip"), paste0("s", ver))
 setwd("..")
 beepr::beep()
+
