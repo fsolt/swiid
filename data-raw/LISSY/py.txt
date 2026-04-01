@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 1362420 py
-Date: June 20, 2025 at 10:48:13 AM CDT
+Subject: job 1461369 py
+Date: March 31, 2026 at 6:57:17 PM CDT
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -18,10 +18,8 @@ Please consult our web site for more information at WWW.LISDATACENTER.O
 > 
 > 
 > 
-> 
-> options(echo=FALSE, encoding="UTF-8")
+> options(echo = FALSE, encoding = "UTF-8")
 Loading required package: readstata13
-> 
 > 
 > options(error = expression(q('no')))
 > ## Define functions 
@@ -112,7 +110,7 @@ Loading required package: readstata13
 >  
 > get_ginis <- function(cc, reps = 100) { 
 +   set.seed(324) 
-+   ccs <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",  
++   ccs <- c("au", "at", "be", "bg", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",  
 +            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", "in", 
 +            "ie", "il", "it", "jp", "lt", "lu", "ml", "mx", "nl", "no", "pa", "py",  
 +            "pe", "pl", "ps", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
@@ -624,9 +622,93 @@ py20h,con_sqrt,NaN,NA,320
 py20h,con_pc,NaN,NA,320
 py20h,con_oecdm,NaN,NA,320
 py20h,con_ae,NaN,NA,320
+[1] "Loading dataset py21h..."
+py21h,market_hh,0.4729,0.0078,320
+py21h,market_sqrt,0.4428,0.0081,320
+py21h,market_pc,0.4667,0.0075,320
+py21h,market_oecdm,0.4439,0.0076,320
+py21h,market_ae,0.4512,0.0078,320
+py21h,gross_hh,0.4587,0.0079,320
+py21h,gross_sqrt,0.4308,0.008,320
+py21h,gross_pc,0.4549,0.0072,320
+py21h,gross_oecdm,0.4308,0.0092,320
+py21h,gross_ae,0.4384,0.008,320
+py21h,disp_hh,0.4587,0.0061,320
+py21h,disp_sqrt,0.4308,0.0079,320
+py21h,disp_pc,0.4549,0.0068,320
+py21h,disp_oecdm,0.4308,0.0067,320
+py21h,disp_ae,0.4384,0.0082,320
+py21h,con_hh,NaN,NA,320
+py21h,con_sqrt,NaN,NA,320
+py21h,con_pc,NaN,NA,320
+py21h,con_oecdm,NaN,NA,320
+py21h,con_ae,NaN,NA,320
+[1] "Loading dataset py22h..."
+py22h,market_hh,0.513,0.005,320
+py22h,market_sqrt,0.4746,0.0052,320
+py22h,market_pc,0.4959,0.0048,320
+py22h,market_oecdm,0.4734,0.0047,320
+py22h,market_ae,0.4803,0.005,320
+py22h,gross_hh,0.4903,0.0047,320
+py22h,gross_sqrt,0.456,0.005,320
+py22h,gross_pc,0.4765,0.0049,320
+py22h,gross_oecdm,0.4535,0.0053,320
+py22h,gross_ae,0.4604,0.0053,320
+py22h,disp_hh,0.4903,0.0046,320
+py22h,disp_sqrt,0.456,0.0052,320
+py22h,disp_pc,0.4765,0.0055,320
+py22h,disp_oecdm,0.4535,0.0048,320
+py22h,disp_ae,0.4604,0.0055,320
+py22h,con_hh,NaN,NA,320
+py22h,con_sqrt,NaN,NA,320
+py22h,con_pc,NaN,NA,320
+py22h,con_oecdm,NaN,NA,320
+py22h,con_ae,NaN,NA,320
+[1] "Loading dataset py23h..."
+py23h,market_hh,0.5028,0.0056,320
+py23h,market_sqrt,0.4667,0.0065,320
+py23h,market_pc,0.4854,0.0053,320
+py23h,market_oecdm,0.4651,0.0055,320
+py23h,market_ae,0.4712,0.0053,320
+py23h,gross_hh,0.4793,0.0054,320
+py23h,gross_sqrt,0.4478,0.0061,320
+py23h,gross_pc,0.4659,0.0051,320
+py23h,gross_oecdm,0.4448,0.0055,320
+py23h,gross_ae,0.4509,0.0055,320
+py23h,disp_hh,0.4793,0.0052,320
+py23h,disp_sqrt,0.4478,0.0063,320
+py23h,disp_pc,0.4659,0.0058,320
+py23h,disp_oecdm,0.4448,0.0054,320
+py23h,disp_ae,0.4509,0.0051,320
+py23h,con_hh,NaN,NA,320
+py23h,con_sqrt,NaN,NA,320
+py23h,con_pc,NaN,NA,320
+py23h,con_oecdm,NaN,NA,320
+py23h,con_ae,NaN,NA,320
+[1] "Loading dataset py24h..."
+py24h,market_hh,0.506,0.0063,320
+py24h,market_sqrt,0.4707,0.0092,320
+py24h,market_pc,0.4911,0.0068,320
+py24h,market_oecdm,0.4686,0.0077,320
+py24h,market_ae,0.4754,0.0066,320
+py24h,gross_hh,0.4812,0.0076,320
+py24h,gross_sqrt,0.4491,0.0081,320
+py24h,gross_pc,0.4686,0.0061,320
+py24h,gross_oecdm,0.4452,0.0069,320
+py24h,gross_ae,0.4521,0.0067,320
+py24h,disp_hh,0.4812,0.0063,320
+py24h,disp_sqrt,0.4491,0.0073,320
+py24h,disp_pc,0.4686,0.0065,320
+py24h,disp_oecdm,0.4452,0.0064,320
+py24h,disp_ae,0.4521,0.0058,320
+py24h,con_hh,NaN,NA,320
+py24h,con_sqrt,NaN,NA,320
+py24h,con_pc,NaN,NA,320
+py24h,con_oecdm,NaN,NA,320
+py24h,con_ae,NaN,NA,320
 > 
 > proc.time()
    user  system elapsed 
-195.159   0.391 199.163 
+234.044   0.565 241.816 
 
 

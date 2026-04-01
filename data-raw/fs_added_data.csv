@@ -1,4 +1,4 @@
-country,year,gini,gini_se,welfare_def,equiv_scale,monetary,series,source1,page,link
+Ôªøcountry,year,gini,gini_se,welfare_def,equiv_scale,monetary,series,source1,page,link
 Afghanistan,2007,0.278,,con,pc,,ZKM2014 Afghanistan con pc,"Zhuang, Kanbur, and Maligalig 2014",24,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA24
 Afghanistan,2008,0.297,,con,pc,,CSO Afghanistan con pc,Central Statistics Organization Afghanistan 2014,52,http://www.af.undp.org/content/dam/afghanistan/docs/MDGs/NRVA%20REPORT-rev-5%202013.pdf
 Afghanistan,2008,0.29,,con,pc,,CSO Afghanistan con pc 2,Central Statistics Organization Afghanistan 2018,106,https://www.nsia.gov.af:8080/wp-content/uploads/2019/04/ALCS-2016-17-Analysis-report-.pdf
@@ -523,12 +523,12 @@ Costa Rica,2010,0.492,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,Nationa
 Costa Rica,2011,0.503,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Costa Rica,2012,0.504,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Costa Rica,2013,0.512,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Costa Rica,2013,0.4632,,con,hh,,INEC  con hh,Instituto Naciónal de Estadística y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-13.xlsx
-Costa Rica,2013,0.4937,,disp,hh,,INEC  disp hh,Instituto Naciónal de Estadística y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-09_0.xlsx
-Costa Rica,2013,0.4801,,con,pc,,INEC con pc,Instituto Naciónal de Estadística y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-13.xlsx
-Costa Rica,2013,0.5094,,disp,pc,,INEC disp pc,Instituto Naciónal de Estadística y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-09_0.xlsx
-Costa Rica,2013,0.5042,,gross,hh,,INEC gross hh 2,Instituto Naciónal de Estadística y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-09_0.xlsx
-Costa Rica,2013,0.5189,,gross,pc,,INEC gross pc 2,Instituto Naciónal de Estadística y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-09_0.xlsx
+Costa Rica,2013,0.4632,,con,hh,,INEC  con hh,Instituto Naci√≥nal de Estad√≠stica y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-13.xlsx
+Costa Rica,2013,0.4937,,disp,hh,,INEC  disp hh,Instituto Naci√≥nal de Estad√≠stica y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-09_0.xlsx
+Costa Rica,2013,0.4801,,con,pc,,INEC con pc,Instituto Naci√≥nal de Estad√≠stica y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-13.xlsx
+Costa Rica,2013,0.5094,,disp,pc,,INEC disp pc,Instituto Naci√≥nal de Estad√≠stica y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-09_0.xlsx
+Costa Rica,2013,0.5042,,gross,hh,,INEC gross hh 2,Instituto Naci√≥nal de Estad√≠stica y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-09_0.xlsx
+Costa Rica,2013,0.5189,,gross,pc,,INEC gross pc 2,Instituto Naci√≥nal de Estad√≠stica y Censos Costa Rica,,http://www.inec.go.cr/sites/default/files/documentos/pobreza_y_presupuesto_de_hogares/gastos_de_los_hogares/estadisticas/resultados/repobrezaenig2013-2014-09_0.xlsx
 Costa Rica,2014,0.505,,disp,pc,TRUE,CEPAL Costa Rica disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Cote d'Ivoire,2002,0.484,,con,pc,,FR2008 Cote D'Ivoire con pc,Ferreira and Ravallion 2008,36,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Croatia,1998,0.279,,con,pc,,MY2006b Croatia con pc,Mitra and Yemtsov 2006b,11,http://siteresources.worldbank.org/INTDECABC2006/Resources/pradeepmitra.PDF
@@ -859,8 +859,8 @@ Hungary,1972,0.236,,disp,pc,FALSE,AM1992 Hungary disp pc,Atkinson and Micklewrig
 Hungary,1977,0.214,,disp,pc,FALSE,AM1992 Hungary disp pc,Atkinson and Micklewright 1992,HI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Hungary,1982,0.209,,disp,pc,FALSE,AM1992 Hungary disp pc,Atkinson and Micklewright 1992,HI1,https://books.google.com/books?id=zaL4CGdjOkUC
 Hungary,1987,0.244,,disp,pc,FALSE,AM1992 Hungary disp pc,Atkinson and Micklewright 1992,HI1,https://books.google.com/books?id=zaL4CGdjOkUC
-Hungary,1987,0.231,,disp,ae,,EH1999 Hungary disp ae,_Éltetö and Havasi 1999,56,http://www.ksh.hu/statszemle_archive/1999/1999_K3/1999_K3_001.pdf#page=50
-Hungary,1987,0.236,,disp,pc,,EH1999 Hungary disp pc,_Éltetö and Havasi 1999,56,http://www.ksh.hu/statszemle_archive/1999/1999_K3/1999_K3_001.pdf#page=50
+Hungary,1987,0.231,,disp,ae,,EH1999 Hungary disp ae,_√âltet√∂ and Havasi 1999,56,http://www.ksh.hu/statszemle_archive/1999/1999_K3/1999_K3_001.pdf#page=50
+Hungary,1987,0.236,,disp,pc,,EH1999 Hungary disp pc,_√âltet√∂ and Havasi 1999,56,http://www.ksh.hu/statszemle_archive/1999/1999_K3/1999_K3_001.pdf#page=50
 Hungary,1987,0.207,,disp,ae,FALSE,KR2001 disp ae,Kattuman and Redmond 2001,46,https://doi.org/10.1006/jcec.2000.1701
 Hungary,1987,0.207,,disp,pc,,Milanovic1999 Hungary disp pc,Milanovic 1999,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
 Hungary,1988,0.21,,disp,pc,FALSE,Milanovic1998 Hungary disp pc,Milanovic 1998,167,https://books.google.com/books?id=cQl9xbuhvNkC
@@ -873,45 +873,45 @@ Hungary,1989,0.228,,disp,pc,,Park1995 Hungary disp pc,Tabatabai 1996; Park 1995,
 Hungary,1991,0.205,,disp,pc,,Cornia1994 Hungary disp pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Hungary,1991,0.273,,market,pc,,Cornia1994 Hungary market pc,Cornia 1994,593,http://doi.org/10.1002/jid.3380060506
 Hungary,1991,0.195,,disp,ae,FALSE,KR2001 disp ae,Kattuman and Redmond 2001,46,https://doi.org/10.1006/jcec.2000.1701
-Hungary,1991,0.295,,gross,pc,,MST2000 gross pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
-Hungary,1991,0.4717,,market,pc,,MST2000 market pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
-Hungary,1992,0.2775,,gross,pc,,MST2000 gross pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
-Hungary,1992,0.4796,,market,pc,,MST2000 market pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
-Hungary,1992,0.295,,disp,ae,,Spéder1998 Hungary disp ae,Spéder 1998,13,https://doi.org/10.1111/j.1468-0351.1998.tb00034.x
+Hungary,1991,0.295,,gross,pc,,MST2000 gross pc,"Medgyesi, Sziv√≥s, and T√≥th 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1991,0.4717,,market,pc,,MST2000 market pc,"Medgyesi, Sziv√≥s, and T√≥th 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1992,0.2775,,gross,pc,,MST2000 gross pc,"Medgyesi, Sziv√≥s, and T√≥th 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1992,0.4796,,market,pc,,MST2000 market pc,"Medgyesi, Sziv√≥s, and T√≥th 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1992,0.295,,disp,ae,,Sp√©der1998 Hungary disp ae,Sp√©der 1998,13,https://doi.org/10.1111/j.1468-0351.1998.tb00034.x
 Hungary,1993,0.261,,con,pc,FALSE,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
 Hungary,1993,0.234,,disp,pc,FALSE,KM2007 disp pc,Kapitany and Molnar 2007,1116,https://doi.org/10.1080/146534204200030884
 Hungary,1993,0.234,,disp,ae,FALSE,KR2001 disp ae,Kattuman and Redmond 2001,46,https://doi.org/10.1006/jcec.2000.1701
 Hungary,1993,0.229,,disp,pc,,Milanovic1999 Hungary disp pc,Milanovic 1999,44,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=156088
-Hungary,1993,0.2947,,gross,pc,,MST2000 gross pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
-Hungary,1993,0.5045,,market,pc,,MST2000 market pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
-Hungary,1993,0.277,,disp,ae,,Spéder1998 Hungary disp ae,Spéder 1998,13,https://doi.org/10.1111/j.1468-0351.1998.tb00034.x
+Hungary,1993,0.2947,,gross,pc,,MST2000 gross pc,"Medgyesi, Sziv√≥s, and T√≥th 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1993,0.5045,,market,pc,,MST2000 market pc,"Medgyesi, Sziv√≥s, and T√≥th 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1993,0.277,,disp,ae,,Sp√©der1998 Hungary disp ae,Sp√©der 1998,13,https://doi.org/10.1111/j.1468-0351.1998.tb00034.x
 Hungary,1994,0.258,,con,pc,FALSE,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
 Hungary,1994,0.218,,disp,pc,FALSE,KM2007 disp pc,Kapitany and Molnar 2007,1116,https://doi.org/10.1080/146534204200030884
-Hungary,1994,0.3162,,gross,pc,,MST2000 gross pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
-Hungary,1994,0.5101,,market,pc,,MST2000 market pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1994,0.3162,,gross,pc,,MST2000 gross pc,"Medgyesi, Sziv√≥s, and T√≥th 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1994,0.5101,,market,pc,,MST2000 market pc,"Medgyesi, Sziv√≥s, and T√≥th 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
 Hungary,1994,0.232,,con,pc,FALSE,MY2006 Hungary con pc 2,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
-Hungary,1994,0.295,,disp,ae,,Spéder1998 Hungary disp ae,Spéder 1998,13,https://doi.org/10.1111/j.1468-0351.1998.tb00034.x
+Hungary,1994,0.295,,disp,ae,,Sp√©der1998 Hungary disp ae,Sp√©der 1998,13,https://doi.org/10.1111/j.1468-0351.1998.tb00034.x
 Hungary,1995,0.261,,con,pc,FALSE,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
 Hungary,1995,0.238,,disp,pc,FALSE,KM2007 disp pc,Kapitany and Molnar 2007,1116,https://doi.org/10.1080/146534204200030884
-Hungary,1995,0.3085,,gross,pc,,MST2000 gross pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
-Hungary,1995,0.5041,,market,pc,,MST2000 market pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
-Hungary,1995,0.316,,disp,ae,,Spéder1998 Hungary disp ae,Spéder 1998,13,https://doi.org/10.1111/j.1468-0351.1998.tb00034.x
-Hungary,1996,0.292,,disp,ae,,EH1999 Hungary disp ae,_Éltetö and Havasi 1999,56,http://www.ksh.hu/statszemle_archive/1999/1999_K3/1999_K3_001.pdf#page=50
-Hungary,1996,0.296,,disp,pc,,EH1999 Hungary disp pc,_Éltetö and Havasi 1999,56,http://www.ksh.hu/statszemle_archive/1999/1999_K3/1999_K3_001.pdf#page=50
+Hungary,1995,0.3085,,gross,pc,,MST2000 gross pc,"Medgyesi, Sziv√≥s, and T√≥th 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1995,0.5041,,market,pc,,MST2000 market pc,"Medgyesi, Sziv√≥s, and T√≥th 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1995,0.316,,disp,ae,,Sp√©der1998 Hungary disp ae,Sp√©der 1998,13,https://doi.org/10.1111/j.1468-0351.1998.tb00034.x
+Hungary,1996,0.292,,disp,ae,,EH1999 Hungary disp ae,_√âltet√∂ and Havasi 1999,56,http://www.ksh.hu/statszemle_archive/1999/1999_K3/1999_K3_001.pdf#page=50
+Hungary,1996,0.296,,disp,pc,,EH1999 Hungary disp pc,_√âltet√∂ and Havasi 1999,56,http://www.ksh.hu/statszemle_archive/1999/1999_K3/1999_K3_001.pdf#page=50
 Hungary,1996,0.283,,con,pc,FALSE,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
 Hungary,1996,0.247,,disp,pc,FALSE,KM2007 disp pc,Kapitany and Molnar 2007,1116,https://doi.org/10.1080/146534204200030884
 Hungary,1996,0.242,,disp,ae,FALSE,KR2001 disp ae,Kattuman and Redmond 2001,46,https://doi.org/10.1006/jcec.2000.1701
-Hungary,1996,0.3085,,gross,pc,,MST2000 gross pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
-Hungary,1996,0.5222,,market,pc,,MST2000 market pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
-Hungary,1996,0.308,,disp,ae,,Spéder1998 Hungary disp ae,Spéder 1998,13,https://doi.org/10.1111/j.1468-0351.1998.tb00034.x
+Hungary,1996,0.3085,,gross,pc,,MST2000 gross pc,"Medgyesi, Sziv√≥s, and T√≥th 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1996,0.5222,,market,pc,,MST2000 market pc,"Medgyesi, Sziv√≥s, and T√≥th 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1996,0.308,,disp,ae,,Sp√©der1998 Hungary disp ae,Sp√©der 1998,13,https://doi.org/10.1111/j.1468-0351.1998.tb00034.x
 Hungary,1997,0.269,,con,pc,FALSE,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
 Hungary,1997,0.229,,disp,pc,FALSE,KM2007 disp pc,Kapitany and Molnar 2007,1116,https://doi.org/10.1080/146534204200030884
-Hungary,1997,0.32,,gross,pc,,MST2000 gross pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
-Hungary,1997,0.5406,,market,pc,,MST2000 market pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1997,0.32,,gross,pc,,MST2000 gross pc,"Medgyesi, Sziv√≥s, and T√≥th 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1997,0.5406,,market,pc,,MST2000 market pc,"Medgyesi, Sziv√≥s, and T√≥th 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
 Hungary,1998,0.268,,con,pc,FALSE,KM2007 con pc,Kapitany and Molnar 2007,1118,https://doi.org/10.1080/146534204200030884
 Hungary,1998,0.242,,disp,pc,FALSE,KM2007 disp pc,Kapitany and Molnar 2007,1116,https://doi.org/10.1080/146534204200030884
-Hungary,1998,0.3432,,gross,pc,,MST2000 gross pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
-Hungary,1998,0.5564,,market,pc,,MST2000 market pc,"Medgyesi, Szivós, and Tóth 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1998,0.3432,,gross,pc,,MST2000 gross pc,"Medgyesi, Sziv√≥s, and T√≥th 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
+Hungary,1998,0.5564,,market,pc,,MST2000 market pc,"Medgyesi, Sziv√≥s, and T√≥th 2000",179,http://old.tarki.hu/adatbank-h/kutjel/pdf/a848.pdf
 Hungary,1998,0.25,,con,pc,FALSE,MY2006 Hungary con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Hungary,1999,0.259,,con,pc,FALSE,MY2006 Hungary con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Hungary,2000,0.254,,con,pc,FALSE,MY2006 Hungary con pc 3,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
@@ -1626,12 +1626,12 @@ Maldives,2003,0.38,,con,pc,,NBS Maldives con pc,National Bureau of Statistics Ma
 Maldives,2004,0.374,,con,pc,,ZKM2014 Maldives con pc,"Zhuang, Kanbur, and Maligalig 2014",24,https://books.google.com/books?id=nqbpAgAAQBAJ&pg=PA24
 Maldives,2010,0.44,,con,pc,,NBS Maldives con pc,National Bureau of Statistics Maldives 2011,35,http://www.planning.gov.mv/en/images/stories/news/2011/June/HIES-Preliminary_Findings-Presentation.pdf
 Mali,2004,0.437,,con,pc,,FR2008 Mali con pc,Ferreira and Ravallion 2008,38,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
-Mali,2014,0.36,,con,pc,,ACCCDKMSS2021 Mali con pc,"Alkemade, Checchi, Cisse_, Coulibaly, David, Koné, Munzi, Sodio, and Sougane 2021i",15,http://www.lisdatacenter.org/wps/liswps/818.pdf
-Mali,2014,0.37,,disp,pc,,ACCCDKMSS2021 Mali disp pc,"Alkemade, Checchi, Cisse_, Coulibaly, David, Koné, Munzi, Sodio, and Sougane 2021i",18,http://www.lisdatacenter.org/wps/liswps/818.pdf
-Mali,2017,0.35,,con,pc,,ACCCDKMSS2021 Mali con pc,"Alkemade, Checchi, Cisse_, Coulibaly, David, Koné, Munzi, Sodio, and Sougane 2021i",15,http://www.lisdatacenter.org/wps/liswps/818.pdf
-Mali,2017,0.36,,disp,pc,,ACCCDKMSS2021 Mali disp pc,"Alkemade, Checchi, Cisse_, Coulibaly, David, Koné, Munzi, Sodio, and Sougane 2021i",18,http://www.lisdatacenter.org/wps/liswps/818.pdf
-Mali,2019,0.4,,con,pc,,ACCCDKMSS2021 Mali con pc,"Alkemade, Checchi, Cisse_, Coulibaly, David, Koné, Munzi, Sodio, and Sougane 2021i",15,http://www.lisdatacenter.org/wps/liswps/818.pdf
-Mali,2019,0.4,,disp,pc,,ACCCDKMSS2021 Mali disp pc,"Alkemade, Checchi, Cisse_, Coulibaly, David, Koné, Munzi, Sodio, and Sougane 2021i",18,http://www.lisdatacenter.org/wps/liswps/818.pdf
+Mali,2014,0.36,,con,pc,,ACCCDKMSS2021 Mali con pc,"Alkemade, Checchi, Cisse_, Coulibaly, David, Kon√©, Munzi, Sodio, and Sougane 2021i",15,http://www.lisdatacenter.org/wps/liswps/818.pdf
+Mali,2014,0.37,,disp,pc,,ACCCDKMSS2021 Mali disp pc,"Alkemade, Checchi, Cisse_, Coulibaly, David, Kon√©, Munzi, Sodio, and Sougane 2021i",18,http://www.lisdatacenter.org/wps/liswps/818.pdf
+Mali,2017,0.35,,con,pc,,ACCCDKMSS2021 Mali con pc,"Alkemade, Checchi, Cisse_, Coulibaly, David, Kon√©, Munzi, Sodio, and Sougane 2021i",15,http://www.lisdatacenter.org/wps/liswps/818.pdf
+Mali,2017,0.36,,disp,pc,,ACCCDKMSS2021 Mali disp pc,"Alkemade, Checchi, Cisse_, Coulibaly, David, Kon√©, Munzi, Sodio, and Sougane 2021i",18,http://www.lisdatacenter.org/wps/liswps/818.pdf
+Mali,2019,0.4,,con,pc,,ACCCDKMSS2021 Mali con pc,"Alkemade, Checchi, Cisse_, Coulibaly, David, Kon√©, Munzi, Sodio, and Sougane 2021i",15,http://www.lisdatacenter.org/wps/liswps/818.pdf
+Mali,2019,0.4,,disp,pc,,ACCCDKMSS2021 Mali disp pc,"Alkemade, Checchi, Cisse_, Coulibaly, David, Kon√©, Munzi, Sodio, and Sougane 2021i",18,http://www.lisdatacenter.org/wps/liswps/818.pdf
 Mauritania,2000,0.408,,con,pc,,Hassine2015 Mauritania con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
 Mauritania,2000,0.39,,con,hh,,ONS Mauritania con hh,Office National de la Statistique Mauritania 2017,46,http://www.ons.mr/images/Archive/doc/publication/2014/Annuaire_Statistique_2015.pdf
 Mauritania,2004,0.45,,con,pc,,Hassine2015 Mauritania con pc,Hassine 2015,537,https://doi.org/10.1016/j.worlddev.2014.09.011
@@ -1745,16 +1745,16 @@ Morocco,2001,0.406,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco
 Morocco,2007,0.407,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,https://web.archive.org/web/20210702162406/https://www.hcp.ma/file/174377/
 Morocco,2014,0.388,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2015,15,https://web.archive.org/web/20210702162406/https://www.hcp.ma/file/174377/
 Morocco,2020,0.385,,con,pc,,HCP Morocco con pc,Haut Commissariat du Plan Morocco 2024,,https://web.archive.org/web/20240502002218/https://doc-0g-a8-sheets.googleusercontent.com/export/54bogvaave6cua4cdnls17ksc4/p508gtm240ga2b4elo2acah1vs/1714609335000/109766752092943887866/*/1F7bdC58hMb1tM0JDSwwPMBpYLES2W1wZFudh050nO98?gid=0
-Mozambique,1997,0.397,0.006,con,pc,,GT2017 con pc,Grandín and Tarp 2017,18,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
-Mozambique,1997,0.373,,con,sqrt,,GT2017 con sqrt,Grandín and Tarp 2017,23,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
+Mozambique,1997,0.397,0.006,con,pc,,GT2017 con pc,Grand√≠n and Tarp 2017,18,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
+Mozambique,1997,0.373,,con,sqrt,,GT2017 con sqrt,Grand√≠n and Tarp 2017,23,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
 Mozambique,2003,0.415,0.013,con,pc,FALSE,AJT2010 Mozambique con,"Arndt, Jones, and Tarp 2010",57,http://curis.ku.dk/ws/files/33629587/Third_National_Poverty_Assessment.pdf
-Mozambique,2003,0.415,0.008,con,pc,,GT2017 con pc,Grandín and Tarp 2017,18,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
-Mozambique,2003,0.405,,con,sqrt,,GT2017 con sqrt,Grandín and Tarp 2017,23,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
+Mozambique,2003,0.415,0.008,con,pc,,GT2017 con pc,Grand√≠n and Tarp 2017,18,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
+Mozambique,2003,0.405,,con,sqrt,,GT2017 con sqrt,Grand√≠n and Tarp 2017,23,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
 Mozambique,2009,0.414,0.009,con,pc,FALSE,AJT2010 Mozambique con,"Arndt, Jones, and Tarp 2010",57,http://curis.ku.dk/ws/files/33629587/Third_National_Poverty_Assessment.pdf
-Mozambique,2009,0.415,0.007,con,pc,,GT2017 con pc,Grandín and Tarp 2017,18,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
-Mozambique,2009,0.397,,con,sqrt,,GT2017 con sqrt,Grandín and Tarp 2017,23,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
-Mozambique,2015,0.468,0.006,con,pc,,GT2017 con pc,Grandín and Tarp 2017,18,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
-Mozambique,2015,0.439,,con,sqrt,,GT2017 con sqrt,Grandín and Tarp 2017,23,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
+Mozambique,2009,0.415,0.007,con,pc,,GT2017 con pc,Grand√≠n and Tarp 2017,18,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
+Mozambique,2009,0.397,,con,sqrt,,GT2017 con sqrt,Grand√≠n and Tarp 2017,23,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
+Mozambique,2015,0.468,0.006,con,pc,,GT2017 con pc,Grand√≠n and Tarp 2017,18,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
+Mozambique,2015,0.439,,con,sqrt,,GT2017 con sqrt,Grand√≠n and Tarp 2017,23,https://www.wider.unu.edu/sites/default/files/Publications/Working-paper/PDF/wp2017-208.pdf
 Myanmar,2010,0.29,,con ,pc,FALSE,WRM2015 Myanmar con pc,"Warr, Rasphone, and Menon 2015",7,https://www.adb.org/sites/default/files/publication/176031/ewp-461.pdf
 Namibia,1993,0.743,,con,pc,,FR2008 Namibia con pc,Ferreira and Ravallion 2008,38,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Namibia,1994,0.6455,0.0174,con,ae,,NSA Namibia con ae,Namibia Statistics Agency 2012,33,http://cms.my.na/assets/documents/p19dnar71kanl1vfo14gu5rpbkq1.pdf
@@ -1929,7 +1929,7 @@ Paraguay,2011,0.546,,disp,pc,TRUE,CEPAL Paraguay disp pc 1,CEPALStat,National,ht
 Paraguay,2012,0.502,,disp,pc,TRUE,CEPAL Paraguay disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Paraguay,2013,0.522,,disp,pc,TRUE,CEPAL Paraguay disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Paraguay,2014,0.536,,disp,pc,TRUE,CEPAL Paraguay disp pc 1,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
-Paraguay,2023,0.446,,gross,pc,TRUE,DGEEC gross pc,"Dirección General de Estadística, Encuestas y Censos",2,https://www.ine.gov.py/Publicaciones/Biblioteca/documento/249/diptico%20DESIGUALDAD%202023%20(1).pdf
+Paraguay,2023,0.446,,gross,pc,TRUE,DGEEC¬†gross¬†pc,"Direcci√≥n¬†General¬†de¬†Estad√≠stica,¬†Encuestas¬†y¬†Censos",2,https://www.ine.gov.py/Publicaciones/Biblioteca/documento/249/diptico%20DESIGUALDAD%202023%20(1).pdf
 Peru,1972,0.568,,gross,pc,FALSE,Altimir1987 Peru gross pc 1,Altimir 1987,154,https://doi.org/10.1111/j.1475-4991.1987.tb00667.x
 Peru,1972,0.603,,gross,pc,FALSE,Altimir1987 Peru gross pc 2,Altimir 1987,154,https://doi.org/10.1111/j.1475-4991.1987.tb00667.x
 Peru,1995,0.46,,con,hh,,GLS2006 Peru con hh,"Goni, Lopez, and Serven 2006",27,http://papers.ssrn.com/sol3/papers.cfm?abstract_id=875741
@@ -2308,17 +2308,17 @@ Serbia,2000,0.373,,disp,pc,FALSE,Transmonee2004 Serbia disp pc,Transmonee 2004,,
 Serbia,2001,0.378,,disp,pc,FALSE,Transmonee2004 Serbia disp pc,Transmonee 2004,,https://web.archive.org/web/20050312070421/http://www.unicef-icdc.org:80/cgi-bin/unicef/main.sql?menu=/resources/menu.html&testo=../../resources/transmonee.html
 Serbia,2002,0.292,,con,pc,FALSE,MY2006 Serbia and Montenegro con pc 1,Mitra and Yemtsov 2006,10,https://wdronline.worldbank.org/bitstream/handle/10986/9269/wps4007.pdf?sequence=1
 Serbia,2003,0.28,,con,pc,,FR2008 Serbia and Montenegro con pc,Ferreira and Ravallion 2008,39,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
-Serbia,2006,0.2794,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-–-2016-–-Revised-and-New-Data.pdf
-Serbia,2007,0.271,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-–-2016-–-Revised-and-New-Data.pdf
-Serbia,2008,0.2605,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-–-2016-–-Revised-and-New-Data.pdf
-Serbia,2009,0.2624,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-–-2016-–-Revised-and-New-Data.pdf
-Serbia,2010,0.2703,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-–-2016-–-Revised-and-New-Data.pdf
-Serbia,2011,0.2538,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-–-2016-–-Revised-and-New-Data.pdf
-Serbia,2012,0.2676,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-–-2016-–-Revised-and-New-Data.pdf
-Serbia,2013,0.269,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-–-2016-–-Revised-and-New-Data.pdf
-Serbia,2014,0.2665,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-–-2016-–-Revised-and-New-Data.pdf
-Serbia,2015,0.2554,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-–-2016-–-Revised-and-New-Data.pdf
-Serbia,2016,0.2613,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-–-2016-–-Revised-and-New-Data.pdf
+Serbia,2006,0.2794,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-‚Äì-2016-‚Äì-Revised-and-New-Data.pdf
+Serbia,2007,0.271,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-‚Äì-2016-‚Äì-Revised-and-New-Data.pdf
+Serbia,2008,0.2605,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-‚Äì-2016-‚Äì-Revised-and-New-Data.pdf
+Serbia,2009,0.2624,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-‚Äì-2016-‚Äì-Revised-and-New-Data.pdf
+Serbia,2010,0.2703,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-‚Äì-2016-‚Äì-Revised-and-New-Data.pdf
+Serbia,2011,0.2538,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-‚Äì-2016-‚Äì-Revised-and-New-Data.pdf
+Serbia,2012,0.2676,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-‚Äì-2016-‚Äì-Revised-and-New-Data.pdf
+Serbia,2013,0.269,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-‚Äì-2016-‚Äì-Revised-and-New-Data.pdf
+Serbia,2014,0.2665,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-‚Äì-2016-‚Äì-Revised-and-New-Data.pdf
+Serbia,2015,0.2554,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-‚Äì-2016-‚Äì-Revised-and-New-Data.pdf
+Serbia,2016,0.2613,,con,pc,,SIPRU2017 con pc,Social Inclusion and Poverty Reduction Unit Serbia 2017,17,http://socijalnoukljucivanje.gov.rs/wp-content/uploads/2017/09/Poverty-in-the-Republic-of-Serbia-for-the-Period-2006-‚Äì-2016-‚Äì-Revised-and-New-Data.pdf
 Sierra Leone,1969,0.44,,disp,hh,,vGP1984 Sierra Leone disp hh,Tabatabai 1996; van Ginneken and Park 1984,86,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 Sierra Leone,1989,0.63,,con,pc,,FR2008 Sierra Leone con pc,Ferreira and Ravallion 2008,39,https://openknowledge.worldbank.org/bitstream/handle/10986/6675/wps4623.pdf
 Singapore,1973,0.495,,gross,hh,,Mukhopadhaya2006 gross hh,Mukhopadhaya 2006,8,http://journals.sagepub.com/doi/abs/10.1177/02601079X06001700403
@@ -2824,12 +2824,12 @@ Uruguay,2013,0.382,,disp,pc,TRUE,CEPAL Uruguay disp pc 2,CEPALStat,National,http
 Uruguay,2014,0.379,,disp,pc,TRUE,CEPAL Uruguay disp pc 1,CEPALStat,Urban,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Uruguay,2014,0.379,,disp,pc,TRUE,CEPAL Uruguay disp pc 2,CEPALStat,National,https://estadisticas.cepal.org/sisgen/ws/cepalstat/getDataMeta.asp?IdIndicator=250
 Uruguay,2018,0.38,0.004,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2019,10,https://www.ine.gub.uy/c/document_library/get_file?uuid=f605ab36-693d-4975-a919-fe8d5646f409&groupId=10181
-Uruguay,2019,0.383,0.004,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2020,11,https://www.ine.gub.uy/documents/10181/30913/Estimación+de+la+pobreza+por+el+método+de+ingreso+2019/c0c832b4-7e5c-4c2a-92e9-7ea69a75e92a
+Uruguay,2019,0.383,0.004,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2020,11,https://www.ine.gub.uy/documents/10181/30913/Estimaci√≥n+de+la+pobreza+por+el+m√©todo+de+ingreso+2019/c0c832b4-7e5c-4c2a-92e9-7ea69a75e92a
 Uruguay,2020,0.387,,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2021,9,https://www.ine.gub.uy/documents/10181/30913/Pobreza0321/c18681f1-7aa9-4d0a-bd6b-265049f3e26e
-Uruguay,2021,0.386,,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2021,,https://www5.ine.gub.uy/documents/DemografíayEESS/HTML/ECH/Pobreza/2022/Indicadores%20de%20la%20distribucion%20del%20ingreso%202022.html
-Uruguay,2022,0.389,,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2021,,https://www5.ine.gub.uy/documents/DemografíayEESS/HTML/ECH/Pobreza/2023/Desigualdad_informe-2023.html
-Uruguay,2023,0.417,,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2021,,https://www5.ine.gub.uy/documents/DemografíayEESS/HTML/ECH/Pobreza/2024/Desigualdad_informe-2024.html
-Uruguay,2024,0.405,,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2021,,https://www5.ine.gub.uy/documents/DemografíayEESS/HTML/ECH/Pobreza/2024/Desigualdad_informe-2024.html
+Uruguay,2021,0.386,,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2021,,https://www5.ine.gub.uy/documents/Demograf√≠ayEESS/HTML/ECH/Pobreza/2022/Indicadores%20de%20la%20distribucion%20del%20ingreso%202022.html
+Uruguay,2022,0.389,,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2021,,https://www5.ine.gub.uy/documents/Demograf√≠ayEESS/HTML/ECH/Pobreza/2023/Desigualdad_informe-2023.html
+Uruguay,2023,0.417,,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2021,,https://www5.ine.gub.uy/documents/Demograf√≠ayEESS/HTML/ECH/Pobreza/2024/Desigualdad_informe-2024.html
+Uruguay,2024,0.405,,disp,pc,FALSE,Instituto Nacional de Estadistica Uruguay disp pc 2,Instituto Nacional de Estadistica Uruguay 2021,,https://www5.ine.gub.uy/documents/Demograf√≠ayEESS/HTML/ECH/Pobreza/2024/Desigualdad_informe-2024.html
 USSR,1980,0.29,,gross,pc,,AG1993 USSR gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,122,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf
 USSR,1980,0.245,,gross,pc,FALSE,AM1992 USSR gross pc,Atkinson and Micklewright 1992,UI1,https://books.google.com/books?id=zaL4CGdjOkUC
 USSR,1985,0.284,,gross,pc,,AG1993 USSR gross pc,Tabatabai 1996; Alexeev and Gaddy 1993,122,http://www.ilo.org/public/libdoc/ilo/1996/96B09_403_engl.pdf

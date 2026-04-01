@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 1362381 ci
-Date: June 20, 2025 at 9:34:59 AM CDT
+Subject: job 1461270 ci
+Date: March 31, 2026 at 9:39:04 AM CDT
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -18,10 +18,8 @@ Please consult our web site for more information at WWW.LISDATACENTER.O
 > 
 > 
 > 
-> 
-> options(echo=FALSE, encoding="UTF-8")
+> options(echo = FALSE, encoding = "UTF-8")
 Loading required package: readstata13
-> 
 > 
 > options(error = expression(q('no')))
 > ## Define functions 
@@ -112,7 +110,7 @@ Loading required package: readstata13
 >  
 > get_ginis <- function(cc, reps = 100) { 
 +   set.seed(324) 
-+   ccs <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",  
++   ccs <- c("au", "at", "be", "bg", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",  
 +            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", "in", 
 +            "ie", "il", "it", "jp", "lt", "lu", "ml", "mx", "nl", "no", "pa", "py",  
 +            "pe", "pl", "ps", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
@@ -228,6 +226,6 @@ ci15h,con_ae,0.4227,0.0058,200
 > 
 > proc.time()
    user  system elapsed 
- 34.621   0.266  71.644 
+ 33.258   0.258  42.204 
 
 

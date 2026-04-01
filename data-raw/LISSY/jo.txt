@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 1362444 jo
-Date: June 20, 2025 at 11:15:20 AM CDT
+Subject: job 1461338 jo
+Date: March 31, 2026 at 11:17:38 AM CDT
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -13,8 +13,14 @@ Please consult our web site for more information at WWW.LISDATACENTER.O
                                                                         
 ############################### NOTICE TO USERS ###############################
 
-> options(echo=FALSE, encoding="UTF-8")
+> 
+> 
+> 
+> 
+> 
+> options(echo = FALSE, encoding = "UTF-8")
 Loading required package: readstata13
+> 
 > options(error = expression(q('no')))
 > ## Define functions 
 > gini <- function(df, x) { 
@@ -262,6 +268,6 @@ jo13h,con_ae,0.3114,0.0055,100
 > 
 > proc.time()
    user  system elapsed 
- 30.232   0.119  31.502 
+ 30.305   0.135  31.287 
 
 

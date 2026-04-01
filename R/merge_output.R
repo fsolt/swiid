@@ -1,7 +1,7 @@
 library(tidyverse)
 library(cmdstanr)
 
-version <- "9_9"
+version <- "9_91"
 ver <- str_replace(version, "_", "")
 
 load("data/ineq.rda")

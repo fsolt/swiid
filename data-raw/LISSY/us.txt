@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 1362365 us
-Date: June 20, 2025 at 10:09:51 AM CDT
+Subject: job 1461257 us
+Date: March 31, 2026 at 10:15:41 AM CDT
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -18,10 +18,8 @@ Please consult our web site for more information at WWW.LISDATACENTER.O
 > 
 > 
 > 
-> 
-> options(echo=FALSE, encoding="UTF-8")
+> options(echo = FALSE, encoding = "UTF-8")
 Loading required package: readstata13
-> 
 > 
 > options(error = expression(q('no')))
 > ## Define functions 
@@ -112,7 +110,7 @@ Loading required package: readstata13
 >  
 > get_ginis <- function(cc, reps = 100) { 
 +   set.seed(324) 
-+   ccs <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",  
++   ccs <- c("au", "at", "be", "bg", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",  
 +            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", "in", 
 +            "ie", "il", "it", "jp", "lt", "lu", "ml", "mx", "nl", "no", "pa", "py",  
 +            "pe", "pl", "ps", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
@@ -1443,9 +1441,30 @@ us23h,con_sqrt,NaN,NA,120
 us23h,con_pc,NaN,NA,120
 us23h,con_oecdm,NaN,NA,120
 us23h,con_ae,NaN,NA,120
+[1] "Loading dataset us24h..."
+us24h,market_hh,0.5823,0.0024,120
+us24h,market_sqrt,0.5255,0.0024,120
+us24h,market_pc,0.5472,0.0024,120
+us24h,market_oecdm,0.5286,0.0025,120
+us24h,market_ae,0.5341,0.0025,120
+us24h,gross_hh,0.4791,0.0024,120
+us24h,gross_sqrt,0.4382,0.0019,120
+us24h,gross_pc,0.4587,0.002,120
+us24h,gross_oecdm,0.4398,0.0023,120
+us24h,gross_ae,0.4448,0.0023,120
+us24h,disp_hh,0.4391,0.002,120
+us24h,disp_sqrt,0.3945,0.0019,120
+us24h,disp_pc,0.4178,0.0017,120
+us24h,disp_oecdm,0.3959,0.002,120
+us24h,disp_ae,0.4017,0.0018,120
+us24h,con_hh,NaN,NA,120
+us24h,con_sqrt,NaN,NA,120
+us24h,con_pc,NaN,NA,120
+us24h,con_oecdm,NaN,NA,120
+us24h,con_ae,NaN,NA,120
 > 
 > proc.time()
     user   system  elapsed 
-3235.943    4.388 3267.950 
+3250.677    4.799 3287.496 
 
 

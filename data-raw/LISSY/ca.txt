@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 1362380 ca
-Date: June 20, 2025 at 9:55:17 AM CDT
+Subject: job 1461267 ca
+Date: March 31, 2026 at 9:56:28 AM CDT
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -18,10 +18,8 @@ Please consult our web site for more information at WWW.LISDATACENTER.O
 > 
 > 
 > 
-> 
-> options(echo=FALSE, encoding="UTF-8")
+> options(echo = FALSE, encoding = "UTF-8")
 Loading required package: readstata13
-> 
 > 
 > options(error = expression(q('no')))
 > ## Define functions 
@@ -112,7 +110,7 @@ Loading required package: readstata13
 >  
 > get_ginis <- function(cc, reps = 100) { 
 +   set.seed(324) 
-+   ccs <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",  
++   ccs <- c("au", "at", "be", "bg", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",  
 +            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", "in", 
 +            "ie", "il", "it", "jp", "lt", "lu", "ml", "mx", "nl", "no", "pa", "py",  
 +            "pe", "pl", "ps", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
@@ -931,9 +929,22 @@ ca21h,disp_pc,0.3113,0.0023,110
 ca21h,con_hh,NaN,NA,110
 ca21h,con_sqrt,NaN,NA,110
 ca21h,con_pc,NaN,NA,110
+[1] "Loading dataset ca22h..."
+ca22h,market_hh,0.5545,0.0023,110
+ca22h,market_sqrt,0.4734,0.003,110
+ca22h,market_pc,0.4913,0.003,110
+ca22h,gross_hh,0.4116,0.0022,110
+ca22h,gross_sqrt,0.3428,0.0027,110
+ca22h,gross_pc,0.356,0.0025,110
+ca22h,disp_hh,0.3735,0.0022,110
+ca22h,disp_sqrt,0.2988,0.0022,110
+ca22h,disp_pc,0.3152,0.0023,110
+ca22h,con_hh,NaN,NA,110
+ca22h,con_sqrt,NaN,NA,110
+ca22h,con_pc,NaN,NA,110
 > 
 > proc.time()
-   user  system elapsed 
-969.992   1.562 989.779 
+    user   system  elapsed 
+1008.542    1.693 1020.697 
 
 

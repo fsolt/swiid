@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 1362439 ch
-Date: June 20, 2025 at 11:08:32 AM CDT
+Subject: job 1461333 ch
+Date: March 31, 2026 at 11:13:00 AM CDT
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -18,10 +18,8 @@ Please consult our web site for more information at WWW.LISDATACENTER.O
 > 
 > 
 > 
-> 
-> options(echo=FALSE, encoding="UTF-8")
+> options(echo = FALSE, encoding = "UTF-8")
 Loading required package: readstata13
-> 
 > 
 > options(error = expression(q('no')))
 > ## Define functions 
@@ -112,7 +110,7 @@ Loading required package: readstata13
 >  
 > get_ginis <- function(cc, reps = 100) { 
 +   set.seed(324) 
-+   ccs <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",  
++   ccs <- c("au", "at", "be", "bg", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",  
 +            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", "in", 
 +            "ie", "il", "it", "jp", "lt", "lu", "ml", "mx", "nl", "no", "pa", "py",  
 +            "pe", "pl", "ps", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
@@ -553,9 +551,72 @@ ch19h,con_sqrt,NaN,NA,110
 ch19h,con_pc,NaN,NA,110
 ch19h,con_oecdm,NaN,NA,110
 ch19h,con_ae,NaN,NA,110
+[1] "Loading dataset ch20h..."
+ch20h,market_hh,0.5236,0.0052,110
+ch20h,market_sqrt,0.4557,0.0064,110
+ch20h,market_pc,0.4842,0.0068,110
+ch20h,market_oecdm,0.4552,0.0068,110
+ch20h,market_ae,0.4637,0.0063,110
+ch20h,gross_hh,0.3648,0.005,110
+ch20h,gross_sqrt,0.3124,0.0058,110
+ch20h,gross_pc,0.3352,0.005,110
+ch20h,gross_oecdm,0.308,0.006,110
+ch20h,gross_ae,0.3139,0.0061,110
+ch20h,disp_hh,0.3656,0.0053,110
+ch20h,disp_sqrt,0.315,0.0069,110
+ch20h,disp_pc,0.3383,0.0058,110
+ch20h,disp_oecdm,0.3105,0.0064,110
+ch20h,disp_ae,0.3166,0.0066,110
+ch20h,con_hh,NaN,NA,110
+ch20h,con_sqrt,NaN,NA,110
+ch20h,con_pc,NaN,NA,110
+ch20h,con_oecdm,NaN,NA,110
+ch20h,con_ae,NaN,NA,110
+[1] "Loading dataset ch21h..."
+ch21h,market_hh,0.5145,0.0054,110
+ch21h,market_sqrt,0.446,0.0061,110
+ch21h,market_pc,0.4777,0.0059,110
+ch21h,market_oecdm,0.4467,0.0066,110
+ch21h,market_ae,0.456,0.0058,110
+ch21h,gross_hh,0.3583,0.0047,110
+ch21h,gross_sqrt,0.3042,0.0058,110
+ch21h,gross_pc,0.332,0.0055,110
+ch21h,gross_oecdm,0.3012,0.0056,110
+ch21h,gross_ae,0.3086,0.0053,110
+ch21h,disp_hh,0.3593,0.0054,110
+ch21h,disp_sqrt,0.3069,0.0064,110
+ch21h,disp_pc,0.3352,0.0057,110
+ch21h,disp_oecdm,0.3042,0.0065,110
+ch21h,disp_ae,0.3116,0.0073,110
+ch21h,con_hh,NaN,NA,110
+ch21h,con_sqrt,NaN,NA,110
+ch21h,con_pc,NaN,NA,110
+ch21h,con_oecdm,NaN,NA,110
+ch21h,con_ae,NaN,NA,110
+[1] "Loading dataset ch22h..."
+ch22h,market_hh,0.5162,0.0058,110
+ch22h,market_sqrt,0.4469,0.0064,110
+ch22h,market_pc,0.4778,0.0063,110
+ch22h,market_oecdm,0.4488,0.0069,110
+ch22h,market_ae,0.4573,0.0072,110
+ch22h,gross_hh,0.3658,0.0053,110
+ch22h,gross_sqrt,0.3118,0.0055,110
+ch22h,gross_pc,0.3373,0.0056,110
+ch22h,gross_oecdm,0.3105,0.0071,110
+ch22h,gross_ae,0.3165,0.0064,110
+ch22h,disp_hh,0.367,0.005,110
+ch22h,disp_sqrt,0.3148,0.0076,110
+ch22h,disp_pc,0.3405,0.0068,110
+ch22h,disp_oecdm,0.3135,0.0068,110
+ch22h,disp_ae,0.3195,0.0068,110
+ch22h,con_hh,NaN,NA,110
+ch22h,con_sqrt,NaN,NA,110
+ch22h,con_pc,NaN,NA,110
+ch22h,con_oecdm,NaN,NA,110
+ch22h,con_ae,NaN,NA,110
 > 
 > proc.time()
    user  system elapsed 
-156.137   0.451 161.785 
+184.344   0.354 187.331 
 
 

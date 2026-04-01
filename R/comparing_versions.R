@@ -1,6 +1,6 @@
 library(tidyverse)
 
-penultimate <- "swiid9_8"
+penultimate <- "swiid9_9"
 
 swiid_summary_latest <- "data/swiid_summary.csv" %>% 
   read_csv(col_types = "cddddddddd") %>% 

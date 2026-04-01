@@ -1,6 +1,6 @@
 From: <postbox@lisdatacenter.org>
-Subject: job 1362404 il
-Date: June 20, 2025 at 10:32:15 AM CDT
+Subject: job 1461299 il
+Date: March 31, 2026 at 10:23:12 AM CDT
 To: <fsolt@mac.com>
 
 ############################### NOTICE TO USERS ###############################
@@ -18,10 +18,8 @@ Please consult our web site for more information at WWW.LISDATACENTER.O
 > 
 > 
 > 
-> 
-> options(echo=FALSE, encoding="UTF-8")
+> options(echo = FALSE, encoding = "UTF-8")
 Loading required package: readstata13
-> 
 > 
 > options(error = expression(q('no')))
 > ## Define functions 
@@ -112,7 +110,7 @@ Loading required package: readstata13
 >  
 > get_ginis <- function(cc, reps = 100) { 
 +   set.seed(324) 
-+   ccs <- c("au", "at", "be", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",  
++   ccs <- c("au", "at", "be", "bg", "br", "ca", "ci", "cl", "cn", "co", "cz", "dk",  
 +            "do", "eg", "ee", "fi", "fr", "de", "ge", "gr", "gt", "hu", "is", "in", 
 +            "ie", "il", "it", "jp", "lt", "lu", "ml", "mx", "nl", "no", "pa", "py",  
 +            "pe", "pl", "ps", "ro", "ru", "rs", "sk", "si", "za", "kr", "es", "se",  
@@ -679,9 +677,30 @@ il21h,con_sqrt,0.3198,0.0043,120
 il21h,con_pc,0.3643,0.0044,120
 il21h,con_oecdm,0.3269,0.0036,120
 il21h,con_ae,0.3376,0.0045,120
+[1] "Loading dataset il22h..."
+il22h,market_hh,0.5304,0.0059,120
+il22h,market_sqrt,0.4691,0.0059,120
+il22h,market_pc,0.4977,0.0065,120
+il22h,market_oecdm,0.4738,0.0061,120
+il22h,market_ae,0.481,0.0062,120
+il22h,gross_hh,0.4202,0.0053,120
+il22h,gross_sqrt,0.389,0.0055,120
+il22h,gross_pc,0.4225,0.0055,120
+il22h,gross_oecdm,0.3939,0.0053,120
+il22h,gross_ae,0.402,0.0053,120
+il22h,disp_hh,0.3721,0.0043,120
+il22h,disp_sqrt,0.3414,0.0051,120
+il22h,disp_pc,0.3848,0.0055,120
+il22h,disp_oecdm,0.347,0.0055,120
+il22h,disp_ae,0.3581,0.0051,120
+il22h,con_hh,0.3614,0.0059,120
+il22h,con_sqrt,0.3266,0.0059,120
+il22h,con_pc,0.3771,0.0061,120
+il22h,con_oecdm,0.3375,0.0063,120
+il22h,con_ae,0.3496,0.0059,120
 > 
 > proc.time()
    user  system elapsed 
-205.443   0.387 210.917 
+193.362   0.419 196.945 
 
 
