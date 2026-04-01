@@ -143,7 +143,6 @@ erflis_files <- c("eg", "iq", "jo", "ps", "sd") # "so", "tn"
 lis <- lis_files %>% 
   map_df(format_lis) %>% 
   bind_rows(format_lis_xtra("nz")) %>%
-  bind_rows(format_lis_archived(lis_eg_link)) %>% 
   arrange(country, year, welfare_def, equiv_scale)
 
 erflis <- erflis_files %>% 
@@ -2722,10 +2721,18 @@ ineq2 <- disp[[1]]
 rho_we <- disp[[2]]
 rho_wd <- disp[[3]]
 
+stopifnot(nrow(ineq2 %>%
+                 group_by(country, year, series) %>%
+                 filter(n() > 1)) == 0)
+
 market <- make_inputs("LIS market sqrt")
 ineq2_m <- market[[1]]
 rho_we_m <- market[[2]]
 rho_wd_m <- market[[3]]
+
+stopifnot(nrow(ineq2_m %>%
+                 group_by(country, year, series) %>%
+                 filter(n() > 1)) == 0)
 
 ## Save
 swiid_source <- disp[[4]] %>% 
