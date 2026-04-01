@@ -76,26 +76,22 @@ parameters {
   real<lower=0> sigma_kw;                 // rho_kw_hat noise
 
   vector<lower=0>[RWE] rho_rwe_hat;       // estimated rho_we by region
-  array[R] real<lower=0> sigma_rwe;             // rho_rwe_hat noise (by region)
+  vector<lower=0>[R] sigma_rwe;                 // rho_rwe_hat noise (by region)
 }
 
 transformed parameters {
-  array[R] real<lower=0> sigma_krcat;
-  array[R] real<lower=0> sigma_rrcat;
+  vector<lower=0>[R] sigma_krcat;
+  vector<lower=0>[R] sigma_rrcat;
 
-  for (r in 1:R) {
-    sigma_krcat[r] = sqrt(square(sigma_kw) + square(sigma_rwe[r]));
-    sigma_rrcat[r] = sqrt(2 * square(sigma_rwe[r]));
-  }
+  sigma_krcat = sqrt(square(sigma_kw) + square(sigma_rwe));
+  sigma_rrcat = sqrt(2.0) * sigma_rwe;
 }
 
 model {
   sigma_gini ~ normal(.01, .0025);
   sigma_s ~ normal(.01, .0025);
   sigma_kwe ~ normal(0, .05);
-  for (r in 1:R) {
-    sigma_rwe[r] ~ normal(.04, .015) T[0,];
-  }
+  sigma_rwe ~ normal(.04, .015) T[0,];
   sigma_kw ~ normal(.01, .0025);
 
   rho_s ~ lognormal(prior_m_s, prior_s_s);
