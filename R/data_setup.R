@@ -2721,9 +2721,11 @@ ineq2 <- disp[[1]]
 rho_we <- disp[[2]]
 rho_wd <- disp[[3]]
 
-stopifnot(nrow(ineq2 %>%
+{if (nrow(ineq2 %>%
                  group_by(country, year, series) %>%
-                 filter(n() > 1)) == 0)
+                 filter(n() > 1)) > 0) {stop()}
+# View(ineq2 %>% group_by(country, year, series) %>% filter(n() > 1)) 
+}
 
 market <- make_inputs("LIS market sqrt")
 ineq2_m <- market[[1]]
