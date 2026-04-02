@@ -1,6 +1,6 @@
 library(tidyverse)
 
-penultimate <- "swiid9_9"
+penultimate <- "swiid9_91"
 
 swiid_summary_latest <- "data/swiid_summary.csv" %>% 
   read_csv(col_types = "cddddddddd") %>% 
@@ -123,6 +123,7 @@ swiid_latest_83_71_mkt %>%
 
 swiid_source_latest <- read_csv("data/swiid_source.csv", col_types = "cdddcclcccc")
 swiid_source_last <- read_csv("https://github.com/fsolt/swiid/raw/eb82596c0e3f5f2e6145d455b7494a5290dd889f/data/swiid_source.csv", col_types = "cdddcclcccc")
+# swiid_source99 <- read_csv("https://github.com/fsolt/swiid/raw/eb82596c0e3f5f2e6145d455b7494a5290dd889f/data/swiid_source.csv", col_types = "cdddcclcccc")
 # swiid_source97 <- read_csv("https://github.com/fsolt/swiid/raw/dd183924138cb3940ee96abf66907d2127fbf1f4/data/swiid_source.csv", col_types = "cdddcclcccc")
 # swiid_source96 <- read_csv("https://github.com/fsolt/swiid/raw/ab16757710420b5c5a6e5a832802173cd72dddbd/data/swiid_source.csv", col_types = "cdddcclcccc")
 # swiid_source93 <- read_csv("https://github.com/fsolt/swiid/blob/07b5b78ecb6450bacd8f2ca138fd5ee7fde14cdc/data/swiid_source.csv?raw=true", col_types = "cdddcclcccc")
