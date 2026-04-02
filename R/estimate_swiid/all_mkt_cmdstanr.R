@@ -250,7 +250,7 @@ source_data <- list(  K = max(x$kcode),
                       prior_s_kw = s_priors_by_wd(x, kwcode)
 )
 
-# Stam
+# Stan
 iter <- 2000
 
 start <- proc.time()

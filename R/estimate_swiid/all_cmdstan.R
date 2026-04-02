@@ -78,6 +78,13 @@ x <- x0 %>%
   left_join(rwe2codes, by = c("wdes2", "rcode")) %>% 
   left_join(skt0, by = c("scode", "year"))                # adds sktcode
 
+# if above throws warning, use the following to identify problems
+# x0 %>% 
+#   left_join(kt, by = c("country", "year")) %>% 
+#   mutate(wdes2 = str_replace(wdes, ".*_", "disp_")) %>% 
+#   left_join(rwe2codes, by = c("wdes2", "rcode")) %>% slice(24337) %>% 
+#   left_join(skt0, by = c("scode", "year")) %>% View()
+
 skt <- skt0 %>% 
   left_join(x %>% select(scode, kwecode, rwecode) %>% distinct(), by = "scode")
 
@@ -250,7 +257,7 @@ source_data <- list(  K = max(x$kcode),
                       prior_s_kw = s_priors_by_wd(x, kwcode)
 )
 
-# Stam
+# Stan
 iter <- 2000
 
 start <- proc.time()
