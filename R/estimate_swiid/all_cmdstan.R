@@ -86,7 +86,7 @@ x <- x0 %>%
 #   left_join(skt0, by = c("scode", "year")) %>% View()
 
 skt <- skt0 %>% 
-  left_join(x %>% select(scode, kwecode, rwecode) %>% distinct(), by = "scode")
+  left_join(x %>% select(country, scode, kwecode, rwecode) %>% distinct(), by = "scode")
 
 skt_kwe <- skt %>% 
   arrange(kwecode) %>% 
@@ -137,7 +137,7 @@ sn <- x %>%
   group_by(scode) %>% 
   summarize(country = first(country),
             series = first(series),
-            shnoo = as.numeric(sum(is.na(gini_b)) > 2),
+            shnoo = as.numeric(sum(is.na(gini_b)) >= 2),
             skt1 = min(sktcode),
             yrspan = max(year) - min(year) + 1,
             s_bl_obs = sum(!is.na(gini_b)),
@@ -145,6 +145,25 @@ sn <- x %>%
   ungroup() %>% 
   left_join(sj, by = c("scode", "country", "series")) %>% 
   mutate(sj1 = if_else(is.na(sj1), as.integer(0), sj1))
+
+mu_priors_by_swd <- function(x, var) {
+  var <- rlang::ensym(var)
+  prior_mu <-  x %>% 
+    select(!!var, series, welfare_def) %>%
+    distinct() %>% 
+    arrange(!!var) %>%  
+    mutate(prior_mu = case_when(welfare_def == "disp" ~ 0,
+                                welfare_def == "con" ~ 
+                                  if_else(str_detect(
+                                    series, 
+                                    "(BBV2022|PIP\\sIndia) con pc"),
+                                    .5,
+                                    .1),
+                                welfare_def == "gross" ~ -.1,
+                                welfare_def == "market" ~ -.5)) %>% 
+    pull(prior_mu)
+  return(prior_mu)
+}
 
 mu_priors_by_wd <- function(x, var) {
   var <- rlang::ensym(var)
@@ -192,8 +211,8 @@ source_data <- list(  K = max(x$kcode),
                       N = nrow(x),
                       N_ibl = nrow(x %>% filter(ibl)),
                       N_wbl = nrow(x %>% filter(!is.na(gini_b))),
-                      N_obl = nrow(x %>% filter(s_bl_obs > 2)),
-                      N_bk = nrow(x %>% filter(k_bl_obs > 0)),
+                      N_obl = nrow(x %>% filter(s_bl_obs >= 2)),
+                      N_bk = nrow(x %>% filter(k_bl_obs >= 1)),
                       N_kw = nrow(x %>% filter(kw)),
                       
                       kk = x$kcode,
@@ -247,8 +266,8 @@ source_data <- list(  K = max(x$kcode),
                       rho_w = rho_wd$rho_wd,
                       rho_w_se = rho_wd$rho_wd_se,
                       
-                      prior_m_s = 0,
-                      prior_s_s = .2,
+                      prior_m_s = mu_priors_by_swd(x, scode),
+                      prior_s_s = s_priors_by_wd(x, scode),
                       prior_m_kwe = mu_priors_by_wd(x, kwecode),
                       prior_s_kwe = s_priors_by_wd(x, kwecode),
                       prior_m_rwe = mu_priors_by_wd(x, rwecode),

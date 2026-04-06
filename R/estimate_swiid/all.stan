@@ -48,8 +48,8 @@ data{
   array[P] real<lower=0> rho_w;                 // observed ratio of baseline_wd to wd
   array[P] real<lower=0> rho_w_se;              // std error of rho_w
   
-  real prior_m_s;                         // mean for lognormal prior 
-  real<lower=0> prior_s_s;                // sigma for lognormal prior
+  array[S] real prior_m_s;                      // mean for lognormal prior by series
+  array[S] real<lower=0> prior_s_s;             // sigma for lognormal prior by series
   array[KWE] real prior_m_kwe;                  // vector of means for lognormal prior that vary by welfare definition 
   array[KWE] real<lower=0> prior_s_kwe;         // vector of sigmas for lognormal prior that vary by welfare definition
   array[RWE] real prior_m_rwe;                  // vector of means for lognormal prior that vary by welfare definition 
@@ -76,7 +76,7 @@ parameters {
   real<lower=0> sigma_kw;                 // rho_kw_hat noise
 
   vector<lower=0>[RWE] rho_rwe_hat;       // estimated rho_we by region
-  vector<lower=0>[R] sigma_rwe;                 // rho_rwe_hat noise (by region)
+  vector<lower=0>[R] sigma_rwe;           // rho_rwe_hat noise (by region)
 }
 
 transformed parameters {
