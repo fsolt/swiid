@@ -251,7 +251,7 @@ source_data <- list(  K = max(x$kcode),
 )
 
 # Stan
-iter <- 2000
+iter <- 2400
 
 start <- proc.time()
 all_mkt <- cmdstan_model(here::here("R", "estimate_swiid", "all.stan"))

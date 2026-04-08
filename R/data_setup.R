@@ -425,7 +425,14 @@ afr_gini <- read_csv("https://raw.githubusercontent.com/fsolt/swiid/master/data-
 
 
 # World Bank Poverty and Inequality Platform (automated--formerly Povcalnet)
+# update: check on India
 wb <- pipr::get_stats(reporting_level = "national") %>% 
+  group_by(country_name) %>% 
+  mutate(survey_comp = as.numeric(as.factor(survey_comparability)),
+         survey_comp = if_else(country_name == "India" & survey_comp > 4,
+                               4,
+                               survey_comp)) %>% 
+  ungroup() %>% 
   transmute(country = countrycode(country_code, origin = "wb_api3c", "swiid.name", custom_dict = cc_swiid),
             year = round(as.numeric(year)),
             gini = as.numeric(gini),
@@ -433,12 +440,12 @@ wb <- pipr::get_stats(reporting_level = "national") %>%
             welfare_def = if_else(str_detect(welfare_type, "income"), "gross", "con"),
             equiv_scale = "pc",
             monetary = FALSE,
-            series = paste("PIP", country, welfare_def, equiv_scale, survey_comparability + 1),
+            series = paste("PIP", country, welfare_def, equiv_scale, survey_comp),
             source1 = "World Bank Poverty & Inequality Platform",
             page = "",
             link = "https://pip.worldbank.org/") %>% 
   filter(!is.na(gini))
-
+  
 
 ## National Statistics Offices
 
@@ -2492,8 +2499,8 @@ make_inputs <- function(baseline_series, nbl = FALSE) {
            wdes = paste(welfare_def, equiv_scale, sep = "_"),
            ibl = (gini_m == gini_b & str_detect(series, paste("LIS .*", baseline_wd, baseline_es))),
            bl = (!is.na(gini_b)),
-           obl = (s_bl_obs >= 2),
-           kbl = (k_bl_obs >= 1),
+           obl = (s_bl_obs > 0),
+           kbl = (k_bl_obs > 0),
            kcode = as.integer(factor(country, levels = unique(country))),
            tcode = tcode0,
            rcode = as.integer(factor(region, levels = unique(region))),

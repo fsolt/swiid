@@ -78,11 +78,11 @@ x <- x0 %>%
   left_join(rwe2codes, by = c("wdes2", "rcode")) %>% 
   left_join(skt0, by = c("scode", "year"))                # adds sktcode
 
-# if above throws warning, use the following to identify problems
+# if above throws warnings, use the following to identify problems
 # x0 %>% 
 #   left_join(kt, by = c("country", "year")) %>% 
 #   mutate(wdes2 = str_replace(wdes, ".*_", "disp_")) %>% 
-#   left_join(rwe2codes, by = c("wdes2", "rcode")) %>% slice(24337) %>% 
+#   left_join(rwe2codes, by = c("wdes2", "rcode")) %>% slice([row]) %>% 
 #   left_join(skt0, by = c("scode", "year")) %>% View()
 
 skt <- skt0 %>% 
@@ -211,8 +211,8 @@ source_data <- list(  K = max(x$kcode),
                       N = nrow(x),
                       N_ibl = nrow(x %>% filter(ibl)),
                       N_wbl = nrow(x %>% filter(!is.na(gini_b))),
-                      N_obl = nrow(x %>% filter(s_bl_obs >= 2)),
-                      N_bk = nrow(x %>% filter(k_bl_obs >= 1)),
+                      N_obl = nrow(x %>% filter(s_bl_obs > 0)),
+                      N_bk = nrow(x %>% filter(k_bl_obs > 0)),
                       N_kw = nrow(x %>% filter(kw)),
                       
                       kk = x$kcode,
@@ -277,7 +277,7 @@ source_data <- list(  K = max(x$kcode),
 )
 
 # Stan
-iter <- 2000
+iter <- 2400
 
 start <- proc.time()
 all <- cmdstan_model(here::here("R", "estimate_swiid", "all.stan"))

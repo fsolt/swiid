@@ -6,21 +6,23 @@ ver <- str_replace(version, "_", "")
 
 load("data/ineq.rda")
 
-all_dir <- list.files("data/swiid_estimates/", "all_[^m]") %>% 
+all_dir <- list.files("data/swiid_estimates/", "all_2.4k") %>% 
   last() %>% 
   file.path("data", "swiid_estimates", .)
 
-all_mkt_dir <- list.files("data/swiid_estimates/", "all_mkt") %>% 
+all_mkt_dir <- list.files("data/swiid_estimates/", "all_mkt2.4") %>% 
   last() %>% 
   file.path("data", "swiid_estimates", .)
 
 all_in <- rio::import(here::here(all_dir,
-                                 "all_in.rda"))
+                                 "all_in.rda"),
+                      trust = TRUE)
 all_out <- as_cmdstan_fit(here::here(all_dir,
                                      list.files(all_dir, pattern = "csv$")))
 
 all_mkt_in <- rio::import(here::here(all_mkt_dir,
-                                 "all_mkt_in.rda"))
+                                 "all_mkt_in.rda"),
+                          trust = TRUE)
 all_mkt_out <- as_cmdstan_fit(here::here(all_mkt_dir,
                                          list.files(all_mkt_dir, pattern = "csv$")))
 

@@ -213,3 +213,22 @@ View(check_source2("Italy"))
 
 View(check_source("Ireland"))
 View(check_source2("Ireland"))
+
+country_plot <- function(cc) {
+  swiid_summary_latest %>% 
+    filter(country == cc) %>% 
+    ggplot(aes(x=year, y=gini_disp)) + 
+    geom_line() +
+    geom_ribbon(aes(ymin = gini_disp-1.96*gini_disp_se,
+                    ymax = gini_disp+1.96*gini_disp_se, 
+                    linetype=NA), alpha = .25) +
+    scale_x_continuous(breaks=seq(1960, 2025, 5)) +
+    theme_bw() + 
+    labs(x = "Year", 
+         y = "SWIID Gini Index, Disposable Income",
+         title = paste("Income Inequality in", cc)) +
+    theme(legend.position="none")
+}
+
+country_plot("India")
+
